@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-10-10T01:37:41+07:00",
+  "catalog_version": "seed-001-images",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "database_unchanged": true,
+  "raw_editorial_manifest_unchanged_since_preview": true,
+  "source_sha256": {
+    "scripts/import_raw/safe_import.py": "2a87eb1e8b72802ae343c788e93dd1767b937e99968a67f023bc8764586d4568",
+    "scripts/import_raw/build_drafts.py": "d0a144eed0812d74bdeb09c56cd28c6160fb7cf54967cf6f04ccb26fbcd20e12",
+    "scripts/import_raw/apply_images.py": "04a69f5acae4b01e0fd42995f3176fecca7f9d2f6060123bbc817e1337f531ef",
+    "scripts/validate_catalog/audit_images.py": "a0cac2acfc04e482154c5b1b631176d38904c0cc49156882ac5285175385a5cf",
+    "backend/tests/test_safe_import.py": "068268a838d111c09e3e607f7e1c11039407014e05a859e3a4b619e4343963ca"
+  },
+  "backend_test": {
+    "command": ".venv/Scripts/python -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+    "passed": 168,
+    "new_import_tests": 31,
+    "warnings": 1,
+    "seconds": 1.26,
+    "exit_code": 0
+  },
+  "real_catalog_checks": [
+    {
+      "name": "draft_import_with_baseline",
+      "status": "no_op",
+      "changes": 0,
+      "conflicts": 0,
+      "exit_code": 0,
+      "report": "reports/data_quality/2026-10-10_013245-858603_import-drafts.json"
+    },
+    {
+      "name": "image_import",
+      "status": "no_op",
+      "changes": 0,
+      "conflicts": 0,
+      "exit_code": 0,
+      "report": "reports/data_quality/2026-10-10_013246-202968_import-images.json"
+    },
+    {
+      "name": "api_image_audit",
+      "report": "reports/data_quality/2026-10-10_013247-044637_image-audit.json",
+      "hash_verified_api_images": 45,
+      "published_visible": 0,
+      "draft_visible": 30,
+      "exit_code": 0
+    }
+  ],
+  "initial_baseline": "data_collection/import_runs/2026-10-10_012920-036113_drafts/baseline.json",
+  "frontend": {
+    "changed_this_batch": false,
+    "rerun_this_batch": false,
+    "last_recorded_e2e_passed": 50,
+    "evidence": "reports/progress/2026-10-10_GD1_dieu-kien-cong-bo-va-toan-du-an.md"
+  },
+  "limitations": [
+    "Optimistic byte check, not an OS editor lock or transaction across DB/baseline/reports",
+    "Arrays merged atomically",
+    "Review dependency guard follows direct product references only",
+    "Image audit still assumes the seed catalog",
+    "No new publication permission, human labels or official benchmark"
+  ],
+  "sandbox": "First targeted run: 17 passed, 7 temp-directory setup errors. Complete approved outside-sandbox run: 168 passed."
+}

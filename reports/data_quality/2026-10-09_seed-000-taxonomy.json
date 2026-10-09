@@ -1,0 +1,73 @@
+{
+  "catalog_version": "seed-000-taxonomy",
+  "generated_at": "2026-10-09T23:48:19+07:00",
+  "counts": {
+    "categories": 22,
+    "brands": 0,
+    "makers": 0,
+    "places": 0,
+    "sources": 0,
+    "products": 0,
+    "variants": 0,
+    "images": 0
+  },
+  "status": {},
+  "products_by_root_category": {},
+  "products_by_category": {},
+  "missing": {
+    "khong_co_gia_bien_the": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_anh": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "duoi_2_anh": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "anh_chua_ro_quyen": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_mo_ta_ngan": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_chat_lieu": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_thuong_hieu": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_nha_san_xuat": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "khong_co_tieu_chi_viet_true": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    },
+    "chua_review": {
+      "count": 0,
+      "total": 0,
+      "pct": 0.0
+    }
+  },
+  "origin_claims": {},
+  "duplicate_images_sha256": {},
+  "perceptual_hash": "chưa chạy (cần Pillow + imagehash; sẽ thêm khi có ảnh thật)",
+  "issues": []
+}

@@ -1,0 +1,72 @@
+{
+  "site": "https://maisonmarou.com",
+  "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+  "source_type": "official_brand",
+  "retrieved_at": "2026-10-10T00:50:00+07:00",
+  "collector": "Claude Code qua Chrome (Shopify /products.json của chính website, giá VND)",
+  "image_rights": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+  "site_facts": [
+    {"url": "https://maisonmarou.com/pages/our-chocolate", "quote": "IN 2011, SAMUEL MARUTA AND VINCENT MOUROU WENT SOUL-SEARCHING INTO THE JUNGLES OF VIETNAM.", "supports": []},
+    {"url": "https://maisonmarou.com/pages/our-chocolate", "quote": "BECOMING VIETNAM’S FIRST BEAN-TO-BAR CHOCOLATE MAKER BY CONTROLLING EVERY STAGE OF PRODUCTION", "supports": []},
+    {"url": "https://maisonmarou.com/pages/our-chocolate", "quote": "USING 100% LOCAL INGREDIENTS, CRAFTED ENTIRELY IN OUR FACTORY", "supports": []},
+    {"url": "https://maisonmarou.com/pages/our-chocolate", "quote": "MAROU CHOCOLATE BARS ARE MADE FROM CACAO BEANS CAREFULLY SELECTED FROM SIX PROVINCES IN SOUTHERN VIETNAM: DAK LAK, LAM DONG, DONG NAI, BA RIA, TIEN GIANG & BEN TRE.", "supports": ["vn_material"]},
+    {"url": "https://maisonmarou.com/pages/our-philosophy", "quote": "VISIT US 167 – 169 Calmette ST, D1, HCMC", "supports": []}
+  ],
+  "notes": "made_in_vn để unknown: trang không nêu địa chỉ nhà máy (chỉ nói 'crafted entirely in our factory' và 'Vietnam's first bean-to-bar chocolate maker') — cần người kiểm tra xác nhận. vn_brand để unknown: thương hiệu do hai người sáng lập lập tại Việt Nam năm 2011, trang không tự nhận là thương hiệu Việt.",
+  "items": [
+    {
+      "url": "https://maisonmarou.com/products/ben-tre-78-single-origin-80g",
+      "title": "Ben Tre 78% Single Origin 80G",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHSO0001", "price_vnd": 140000, "compare_vnd": null, "grams": 80, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ben-tre-78-single-origin-80g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["An intense yet balanced chocolate, from Ben Tre province in the Mekong Delta, where cacao trees are planted among the coconut groves."],
+      "cacao_province": "Bến Tre"
+    },
+    {
+      "url": "https://maisonmarou.com/products/tien-giang-70-single-origin-80g",
+      "title": "Tien Giang 70% Single Origin 80G",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHSO0002", "price_vnd": 140000, "compare_vnd": null, "grams": 80, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/tien-giang-70-single-origin-80g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["Trinitario cocoa beans grown by farmers of the Cho Gao co-op in the Mekong Delta."],
+      "cacao_province": "Tiền Giang"
+    },
+    {
+      "url": "https://maisonmarou.com/products/lam-dong-74-single-origin-80g",
+      "title": "Lam Dong 74% Single Origin 80G",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHSO0006", "price_vnd": 140000, "compare_vnd": null, "grams": 80, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/lam-dong-74-single-origin-80g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["made in micro-batches from cocoa beans cultivated in hilly woodland at the edge of the Vietnamese Central Highlands between Madagui and Bao Loc"],
+      "cacao_province": "Lâm Đồng"
+    },
+    {
+      "url": "https://maisonmarou.com/products/mekong-kumquat-tien-giang-68-80g",
+      "title": "Mekong Kumquat Tien Giang 68% 80G",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHOP0002", "price_vnd": 170000, "compare_vnd": null, "grams": 80, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mekong-kumquat-tien-giang-68-80g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["These small citrus delights grow in the lush orchards of Tien Giang province, and their bright sweetness highlights the warm spicy notes of our well-known Tien Giang chocolate"],
+      "cacao_province": "Tiền Giang"
+    },
+    {
+      "url": "https://maisonmarou.com/products/vietnam-100-cacao-dark-chocolate-bar",
+      "title": "Vietnam 100% Dark Chocolate Bar",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHOR0003", "price_vnd": 170000, "compare_vnd": null, "grams": 60, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/origin-vietnam-100-60g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["made from a select blend of the mildest cacao grown by farmers in the south of Vietnam."],
+      "cacao_province": null
+    },
+    {
+      "url": "https://maisonmarou.com/products/ba-ria-76-single-origin-chocolate-bar",
+      "title": "Ba Ria 76% Single Origin Dark Chocolate Bar",
+      "vendor": "Marou Chocolate",
+      "variants": [{"sku": "CHSO0004", "price_vnd": 140000, "compare_vnd": null, "grams": 80, "available": true}],
+      "images": ["https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ba-ria-76-single-origin-80g.webp", "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg"],
+      "facts": ["A bold and fruity chocolate made from Trinitario cacao sourced directly from family-owned farms in the province of Ba Ria"],
+      "cacao_province": "Bà Rịa"
+    }
+  ]
+}

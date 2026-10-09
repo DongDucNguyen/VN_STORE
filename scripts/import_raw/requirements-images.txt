@@ -1,0 +1,4 @@
+# Optional collection/review dependencies; separate from backend runtime.
+httpx==0.28.1
+beautifulsoup4==4.15.0
+Pillow==12.3.0

@@ -1,0 +1,181 @@
+// Kiểu dữ liệu và lời gọi API. Mọi thông tin hiển thị đến từ backend (snapshot catalog).
+
+export interface Ref { id: string; name: string }
+export interface PlaceRef { id: string; name: string; name_as_sourced: string; place_type: string }
+export interface Price { min_vnd: number | null; max_vnd: number | null; has_unknown: boolean; observed_at: string | null }
+export interface Badge { claim_type: string; label: string; status: string; status_label: string }
+
+export interface ProductSummary {
+  id: string;
+  slug: string;
+  name_vi: string;
+  status: string;
+  category: { id: string; name_vi: string };
+  brand: Ref | null;
+  maker: Ref | null;
+  craft_village: PlaceRef | null;
+  price: Price;
+  image: { id: string; url: string; alt_vi: string } | null;
+  materials: string[];
+  colors: string[];
+  origin_badges: Badge[];
+  score?: number;
+  matched_fields?: string[];
+}
+
+export interface Variant {
+  sku: string;
+  name_vi?: string;
+  attributes?: Record<string, string>;
+  price_vnd: number | null;
+  original_price_vnd?: number | null;
+  observed_at?: string | null;
+  availability: string;
+}
+
+export interface Claim {
+  claim_type: string;
+  value: boolean | "unknown";
+  status: string;
+  label: string;
+  status_label: string;
+  detail_vi?: string;
+  source_ids: string[];
+  checked_at: string | null;
+  places: PlaceRef[];
+}
+
+export interface Source {
+  id: string;
+  url: string | null;
+  title?: string | null;
+  publisher: string;
+  source_type: string;
+  retrieved_at: string;
+}
+
+export interface ProductDetail extends ProductSummary {
+  category_path: { id: string; name_vi: string }[];
+  short_description_vi: string;
+  description_vi: string;
+  tags: string[];
+  intended_uses: string[];
+  dimensions: Record<string, number | null | string[]>;
+  craft_techniques: string[];
+  motifs: string[];
+  variants: Variant[];
+  origin: { places: PlaceRef[]; manufacturing_country: string | null; brand_origin_country: string | null };
+  origin_claims: Claim[];
+  certifications: { name: string; issuer?: string | null; source_ids: string[] }[];
+  images: { id: string; url: string; alt_vi: string; view_type: string }[];
+  sources: Source[];
+  updated_at: string;
+  reviewed_at: string | null;
+}
+
+export interface Facets {
+  categories: { id: string; name: string; count: number }[];
+  root_categories: { id: string; name: string; count: number }[];
+  materials: { value: string; count: number }[];
+  colors: { value: string; count: number }[];
+  brands: { id: string; name: string; count: number }[];
+  craft_villages: { id: string; name: string; count: number }[];
+  claim_types: { id: string; name: string; count: number }[];
+  price: { known: number; unknown: number; min_vnd: number | null; max_vnd: number | null };
+}
+
+export interface Filters {
+  category_ids: string[];
+  brand_ids: string[];
+  place_ids: string[];
+  materials: string[];
+  colors: string[];
+  claim_types: string[];
+  price_min: number | null;
+  price_max: number | null;
+}
+
+export const emptyFilters = (): Filters => ({
+  category_ids: [], brand_ids: [], place_ids: [], materials: [], colors: [], claim_types: [],
+  price_min: null, price_max: null,
+});
+
+export interface SearchResponse {
+  query: string;
+  interpreted_query: {
+    keywords: string;
+    price_label: string | null;
+    exclusions: { field: string; value: string; id: string | null; text: string }[];
+    expansions: { relation: string; term: string; weight: number }[];
+    warnings: string[];
+  };
+  applied_filters: { key: string; label: string; source: "query" | "user"; hard: boolean }[];
+  suggested_filters: { field: string; value: string; id: string | null; text: string }[];
+  total: number;
+  results: ProductSummary[];
+  facets: Facets;
+  unknown_price_excluded: number;
+  relaxations: { key: string; label: string; count: number }[];
+  warnings: string[];
+  catalog_version: string;
+  timings_ms: { total: number };
+}
+
+export interface CategoryNode { id: string; name_vi: string; count: number; children: CategoryNode[] }
+
+export interface Health {
+  status: string;
+  catalog: { version: string; products_visible: number; include_drafts: boolean } | null;
+  search?: { keyword: string; voice: string; image: string };
+}
+
+export class ApiError extends Error {
+  constructor(public status: number, public code: string, message: string) {
+    super(message);
+  }
+}
+
+async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(`/api${path}`, init);
+  } catch {
+    throw new ApiError(0, "network", "Không kết nối được máy chủ. Kiểm tra backend đã chạy chưa.");
+  }
+  if (!res.ok) {
+    let code = "http_error";
+    let message = `Lỗi máy chủ (${res.status})`;
+    try {
+      const body = await res.json();
+      if (body?.detail?.message) {
+        code = body.detail.code ?? code;
+        message = body.detail.message;
+      }
+    } catch {
+      /* giữ thông báo mặc định */
+    }
+    throw new ApiError(res.status, code, message);
+  }
+  return res.json() as Promise<T>;
+}
+
+export const api = {
+  health: () => request<Health>("/health"),
+  categories: () => request<CategoryNode[]>("/categories"),
+  brands: () => request<(Ref & { count: number; official_url: string | null })[]>("/brands"),
+  places: () => request<(PlaceRef & { count: number })[]>("/places?place_type=craft_village"),
+  products: (params: Record<string, string>) =>
+    request<{ total: number; results: ProductSummary[] }>(`/products?${new URLSearchParams(params)}`),
+  product: (id: string) => request<ProductDetail>(`/products/${encodeURIComponent(id)}`),
+  similar: (id: string) => request<{ results: ProductSummary[] }>(`/products/${encodeURIComponent(id)}/similar`),
+  suggest: (q: string) =>
+    request<{ type: string; id: string; text: string }[]>(`/suggest?${new URLSearchParams({ q })}`),
+  search: (query: string, filters: Filters, limit = 24, offset = 0) =>
+    request<SearchResponse>("/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query, filters, limit, offset }),
+    }),
+  searchVoice: () => request<SearchResponse>("/search/voice", { method: "POST" }),
+  searchImage: () => request<SearchResponse>("/search/image", { method: "POST" }),
+};

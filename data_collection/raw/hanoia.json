@@ -1,0 +1,60 @@
+{
+  "site": "https://hanoia.com",
+  "publisher": "Hanoia",
+  "source_type": "official_brand",
+  "retrieved_at": "2026-10-10T01:05:00+07:00",
+  "collector": "Claude Code qua Chrome (JSON-LD Product + bảng 'Chất liệu/Màu sắc/Kích thước' trên trang sản phẩm tiếng Việt)",
+  "image_rights": "Chưa xin phép. Chỉ lưu URL gốc (ảnh thu nhỏ 285x285 do JSON-LD cung cấp), không tải ảnh.",
+  "site_facts": [
+    {"url": "https://hanoia.com/our-story", "quote": "Hanoia ra đời năm 1997 tại tỉnh Bình Dương, gần Sài Gòn, một trong những thủ phủ của sơn mài Việt Nam từ thế kỷ XIV.", "supports": ["vn_brand"]},
+    {"url": "https://hanoia.com/our-story", "quote": "Năm 2013 ... dẫn đến sự ra đời của xưởng sơn mài thứ hai tại một làng nghề sơn mài nổi tiếng được hình thành từ thế kỷ XVI ở gần Hà Nội.", "supports": []},
+    {"url": "https://hanoia.com/our-story", "quote": "Những người thợ sơn mài tài hoa và khéo léo vẫn tiếp tục phát huy các kỹ thuật thủ công truyền thống.", "supports": []}
+  ],
+  "notes": "Trang sản phẩm không có dòng 'Xuất xứ' → made_in_vn = unknown. Chất liệu nhiều sản phẩm là resin/MDF/composite: chỉ ghi 'sơn mài' khi trang sản phẩm nói rõ. Câu 'phủ lớp sơn đen bóng - màu đặc trưng của sơn mài truyền thống' chỉ mô tả màu, không đủ để gắn nhãn sơn mài.",
+  "items": [
+    {
+      "url": "https://hanoia.com/binh-hoa-mystery-a18mt01.html",
+      "title": "Bình hoa Mystery",
+      "sku": "A18MT01",
+      "price_vnd": 16500000,
+      "material": "Resin, đồng",
+      "color": "Đen",
+      "size": "(Dài x Rộng x Cao) 218mm x 218mm x 290 mm",
+      "images": ["https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A18MT01_1_1.webp?sig=454197c856b56aa82c32985dc1d6c7b325c459f9009a16cd4dee231d28101358"],
+      "facts": ["Trên nền sơn mài đen tuyền, hình ảnh chim công"]
+    },
+    {
+      "url": "https://hanoia.com/binh-hoa-vita-pc26vt01.html",
+      "title": "Bình hoa Vita",
+      "sku": "PC26VT01",
+      "price_vnd": 4950000,
+      "material": "Resin",
+      "color": "Đỏ rượu, cam, navy, vàng",
+      "size": "(Đường kính x Chiều cao) 121mm x 168mm",
+      "images": ["https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26VT01_11_1__1789040414.webp?sig=bb0264b320c437bf947e252ce108d423cee0cf86e3930e286029c6e35f4b0d96"],
+      "facts": ["Dáng hình của Vita gợi liên tưởng đến một nụ hoa"]
+    },
+    {
+      "url": "https://hanoia.com/hop-vuong-botanica-size-s-af26bt03.html",
+      "title": "Hộp vuông Botanica size S",
+      "sku": "AF26BT03",
+      "price_vnd": 5500000,
+      "material": "MDF",
+      "color": "Đen",
+      "size": "(Dài x Rộng x Cao) 122mm x 122mm x 36mm",
+      "images": ["https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26BT03_1_1.webp?sig=fe53d4efb538475688420622376712e85caeb0d61fce778eb9fc2ff8ad84a4e7"],
+      "facts": ["Hộp vuông phủ lớp sơn đen bóng - màu đặc trưng của sơn mài truyền thống."]
+    },
+    {
+      "url": "https://hanoia.com/hop-dan-tre-ethnic-size-s-ou17et02.html",
+      "title": "Hộp đan tre Ethnic size S",
+      "sku": "OU17ET02",
+      "price_vnd": 950000,
+      "material": "Tre, đồng",
+      "color": "Vàng",
+      "size": "(Dài x Rộng x Cao) 100mm x 100mm x 75mm",
+      "images": ["https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_OU17ET02_8_1.webp?sig=7a952be166ff4ff1f5f09ebbbd7b4db45a99233d76ad8932db1d9e4c301be904"],
+      "facts": ["Hộp Ethnic sử dụng sợi nan tre được chuốt mảnh, đan theo kỹ thuật nong mốt", "Sản phẩm được hoàn thiện với nắp đồng và đáy đồng."]
+    }
+  ]
+}

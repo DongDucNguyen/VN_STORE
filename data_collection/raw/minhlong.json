@@ -1,0 +1,97 @@
+{
+  "site": "https://minhlong.com",
+  "publisher": "Công ty TNHH Minh Long I",
+  "source_type": "official_brand",
+  "retrieved_at": "2026-10-10T00:18:00+07:00",
+  "collector": "Claude Code qua Chrome (đọc JSON sản phẩm /products/<handle>.js của chính website, giá chia 100)",
+  "image_rights": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+  "site_facts": [
+    {
+      "url": "https://minhlong.com/pages/ve-chung-toi",
+      "quote": "Minh Long thương hiệu gốm sứ hàng đầu Việt nam",
+      "supports": ["vn_brand"]
+    },
+    {
+      "url": "https://minhlong.com/",
+      "quote": "TRỤ SỞ CHÍNH Công ty TNHH Minh Long I Số 333 đường Hưng Định 24, khu phố Hưng Lộc, phường Thuận An, Thành phố Hồ Chí Minh, Việt Nam",
+      "supports": ["maker_address"]
+    },
+    {
+      "url": "https://minhlong.com/",
+      "quote": "gốm sứ Minh Long kết hợp truyền thống Bình Dương và tinh thần sáng tạo",
+      "supports": []
+    },
+    {
+      "url": "https://minhlong.com/pages/thuong-hieu-lys",
+      "quote": "Thương hiệu Ly's Horeca (trang thương hiệu trên website Minh Long); không nêu quốc gia thương hiệu",
+      "supports": []
+    }
+  ],
+  "notes": "Trang sản phẩm và trang giới thiệu không nêu nơi sản xuất của từng sản phẩm → made_in_vn = unknown.",
+  "items": [
+    {
+      "url": "https://minhlong.com/products/chen-com-11-cm-jasmine-thach-van",
+      "title": "Chén cơm 11 cm - Jasmine - Thạch Vân",
+      "vendor": "Minh Long",
+      "collection": "Jamine",
+      "variants": [{"sku": "A001_031106566", "title": "Chén cơm / Thạch Vân / 11 cm", "price_vnd": 63720, "compare_vnd": null, "available": true}],
+      "images": ["https://cdn.hstatic.net/products/200000532849/031106566-sm-01_fdbf99b5baa44db5b31ee7faa5a03bd2.png"],
+      "facts": ["Bộ bàn ăn Thạch Vân đưa vẻ đẹp nguyên bản ấy lên nền sứ trắng thanh khiết của dáng Jasmine.", "Sắc xanh thẳm chuyển động tự do quanh từng sản phẩm"]
+    },
+    {
+      "url": "https://minhlong.com/products/binh-hoa-30-cm-hoa-van-hon-viet",
+      "title": "Bình hoa 30 cm - Bình Hoa - Hồn Việt",
+      "vendor": "Minh Long",
+      "collection": "Bình Hoa",
+      "variants": [{"sku": "A001_113054038", "title": "30 cm", "price_vnd": 4374000, "compare_vnd": null, "available": true}],
+      "images": [
+        "https://cdn.hstatic.net/products/200000532849/113054038-sm-01_f5a8534f9b7c4b1f9fc5a81fca410ae8.png",
+        "https://cdn.hstatic.net/products/200000532849/113054038-sm-02_78fa609b46ea41fdbe619cdddb0e7dc3.png"
+      ],
+      "facts": ["hình ảnh thân thương thấp thoáng nơi làng quê ... mái đình, giếng nước, cổng làng, lũy tre"]
+    },
+    {
+      "url": "https://minhlong.com/products/binh-hoa-27-cm-men-ngoc-hoa-van-sen-vang",
+      "title": "Bình Hoa 27 cm - Bình Hoa - Sen Vàng",
+      "vendor": "Minh Long",
+      "collection": "Bình Hoa",
+      "variants": [{"sku": "A001_112776345", "title": "Sen Vàng / 27 cm", "price_vnd": 2559600, "compare_vnd": null, "available": true}],
+      "images": [
+        "https://cdn.hstatic.net/products/200000532849/112776345-sm-01_10ce622920b14662b81a3740cdb80781.png",
+        "https://cdn.hstatic.net/products/200000532849/112776345-sm-03_8095810e7c83472991a70f9df857c5e6.png"
+      ],
+      "facts": ["cánh sen ... tái hiện sống động bằng màu xanh cobalt", "Nghệ nhân cũng khéo léo tạo nét vương giả bằng những chi tiết vẽ vàng 24k"]
+    },
+    {
+      "url": "https://minhlong.com/products/bo-tra-0-5-l-camellia-chi-vang",
+      "title": "Bộ trà 0.5 L - Camellia - Chỉ Vàng",
+      "vendor": "Minh Long",
+      "collection": "Camellia",
+      "variants": [{"sku": "A001_01503801403", "title": "Bộ trà 0.5 L / Chỉ Vàng / 0.5 L", "price_vnd": 874800, "compare_vnd": null, "available": true}],
+      "images": [
+        "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-01_ab2c61335e7e4259a58cf17547ecc9e7.png",
+        "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-02_990f56ac68f34e828b7ff4beac76d996.png",
+        "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-04_af3c5eec32934a9699d5750bd7591e38.jpg"
+      ],
+      "facts": ["Dãy sản phẩm Camellia đa dạng các kiểu dáng với chất liệu men sứ sáng bóng, láng mịn được nung ở nhiệt độ cao."]
+    },
+    {
+      "url": "https://minhlong.com/products/ly-su-duong-sinh-0-48-l-k1-nap-ong-hut-duong-sinh-bien-xanh",
+      "title": "Ly sứ dưỡng sinh 0.48 L (K1) + nắp ống hút - Dưỡng Sinh - Biển Xanh",
+      "vendor": "Minh Long",
+      "collection": "Dưỡng Sinh",
+      "variants": [{"sku": "A001_214888500H", "title": "Ly (K1) / Biển Xanh", "price_vnd": 333720, "compare_vnd": null, "available": true}],
+      "images": ["https://product.hstatic.net/200000532849/product/u-duong-sinh-048-l-k1-nap-ong-hut-duong-sinh-bien-xanh_214888500h-1-sm_ac14ca748f6d43e3838ac40d7532e5bc.png"],
+      "facts": ["Sản phẩm được làm từ nguyên liệu sứ tinh tuyển", "Thiết kế với nắp sứ đậy kín, có lỗ cắm ống hút", "Ly sứ chịu nhiệt"]
+    },
+    {
+      "url": "https://minhlong.com/products/dia-tron-15-cm-hoa-van-trang-nga",
+      "title": "Dĩa tròn 15 cm - Jasmine Lys - Trắng Ngà",
+      "vendor": "LY'S",
+      "collection": "Jasmine",
+      "variants": [{"sku": "A001_581585000", "title": "Trắng Ngà / 15 cm", "price_vnd": 28080, "compare_vnd": null, "available": true}],
+      "images": ["https://product.hstatic.net/200000532849/product/dia-tron-15-cm-jasmine-lys-trang-nga_581585000-sm-01_ca289bb3952a418ab3f15fcdaf0ffca9.png"],
+      "facts": ["Jasmine Ly's có màu men sứ trắng ngà", "Thân sứ siêu cứng với công nghệ phối liệu đặc biệt"]
+    }
+  ]
+}

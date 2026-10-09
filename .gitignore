@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+artifacts/
+# Audio/ảnh benchmark thô có quyền riêng; chỉ commit manifest.
+benchmarks/**/raw/

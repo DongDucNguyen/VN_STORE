@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-10",
+  "timezone": "Asia/Saigon",
+  "catalog_version": "seed-001-images",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "backend": {
+    "command": ".venv/Scripts/python -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+    "passed": 120,
+    "warnings": 1,
+    "seconds": 0.57,
+    "note": "Includes 26 keyword evaluator cases. Sandbox temp PermissionError resolved by authorized execution outside sandbox."
+  },
+  "review_e2e": {
+    "command": "npx.cmd playwright test e2e/keyword_review.spec.ts --workers=2 --reporter=line",
+    "cwd": "frontend",
+    "passed": 6,
+    "seconds": 4.7,
+    "scope": "desktop + mobile; synthetic label export; local images from generated real catalog packet"
+  },
+  "catalog_validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "review_packet": {
+    "path": "artifacts/keyword_review/2026-10-10_seed-001",
+    "queries": 12,
+    "products": 30,
+    "pairs": 360,
+    "labels_human_verified": false
+  },
+  "smoke_run": "experiments/results/20261010-011005-830106_keyword_bm25-seed-reviewed-protocol/run.json",
+  "baseline_complete": false,
+  "not_rerun": [
+    "44 existing catalog E2E (passed in preceding batch)",
+    "frontend production build (unchanged runtime)"
+  ],
+  "remaining": [
+    "Human review of 360 query/product pairs",
+    "Expand dev queries and group paraphrases",
+    "Review catalog taxonomy and image rights",
+    "Official baseline and locked benchmark splits"
+  ]
+}

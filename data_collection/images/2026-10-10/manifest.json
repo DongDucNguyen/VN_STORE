@@ -1,0 +1,1919 @@
+{
+  "batch": "2026-10-10-official-images",
+  "retrieved_at": "2026-10-10T00:43:14+07:00",
+  "catalog_sha256_before": "8115978300a712e1e1f2336c784ba6c5157c7616c4510e51dc0ece6d6c456d16",
+  "method": "Direct HTTPS from official product pages and their image CDNs; web fallback explicitly authorized by user because Browser was disconnected.",
+  "products": [
+    {
+      "product_id": "p-minhlong-chen-com-thach-van-11cm",
+      "name_vi": "Chén cơm 11 cm Jasmine – Thạch Vân",
+      "source_page": "https://minhlong.com/products/chen-com-11-cm-jasmine-thach-van",
+      "skus": [
+        "A001_031106566"
+      ],
+      "retrieved_at": "2026-10-10T00:42:54+07:00",
+      "images": [
+        {
+          "image_id": "img-minhlong-chen-com-thach-van-11cm-1",
+          "source_url": "https://cdn.hstatic.net/products/200000532849/031106566-sm-01_fdbf99b5baa44db5b31ee7faa5a03bd2.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-chen-com-thach-van-11cm/img-minhlong-chen-com-thach-van-11cm-1.png",
+          "sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+          "bytes": 274833,
+          "width": 1025,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://cdn.hstatic.net/products/200000532849/031106566-sm-01_fdbf99b5baa44db5b31ee7faa5a03bd2.png",
+          "downloaded_at": "2026-10-10T00:42:56+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Chén cơm 11 cm Jasmine – Thạch Vân — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/chen-com-11-cm-jasmine-thach-van",
+      "page_path": "data_collection/images/2026-10-10/pages/p-minhlong-chen-com-thach-van-11cm.html",
+      "page_sha256": "c6568c38f89aadcffc785b7fcf32b18d5b41612e4b9fe5658243389befd3577d",
+      "page_title": "Chén cơm 11 cm - Jasmine - Thạch Vân",
+      "headings": [
+        "Chén cơm 11 cm - Jasmine - Thạch Vân"
+      ],
+      "sku_on_page": {
+        "A001_031106566": true
+      }
+    },
+    {
+      "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+      "name_vi": "Bình hoa 30 cm Hồn Việt",
+      "source_page": "https://minhlong.com/products/binh-hoa-30-cm-hoa-van-hon-viet",
+      "skus": [
+        "A001_113054038"
+      ],
+      "retrieved_at": "2026-10-10T00:42:54+07:00",
+      "images": [
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+          "source_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-01_f5a8534f9b7c4b1f9fc5a81fca410ae8.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-binh-hoa-hon-viet-30cm/img-minhlong-binh-hoa-hon-viet-30cm-1.png",
+          "sha256": "dd1743a99ac4c7fc7b267b75fffcd65a82716643e4a291c5e8b92cbcaed6455d",
+          "bytes": 295540,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-01_f5a8534f9b7c4b1f9fc5a81fca410ae8.png",
+          "downloaded_at": "2026-10-10T00:42:55+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bình hoa 30 cm Hồn Việt — mặt trước"
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-2",
+          "source_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-02_78fa609b46ea41fdbe619cdddb0e7dc3.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-binh-hoa-hon-viet-30cm/img-minhlong-binh-hoa-hon-viet-30cm-2.png",
+          "sha256": "147bba1f957ee46f9e22f9b1efdc415acdecd28e97e14189ab83dd0d653a2fec",
+          "bytes": 304956,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-02_78fa609b46ea41fdbe619cdddb0e7dc3.png",
+          "downloaded_at": "2026-10-10T00:42:55+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "back",
+          "reviewed_alt_vi": "Bình hoa 30 cm Hồn Việt — mặt sau"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/binh-hoa-30-cm-hoa-van-hon-viet",
+      "page_path": "data_collection/images/2026-10-10/pages/p-minhlong-binh-hoa-hon-viet-30cm.html",
+      "page_sha256": "b027acbae8a82555586187247745a94746e973b8b59574175aadbd55b752f0a2",
+      "page_title": "Bình hoa 30 cm - Bình Hoa - Hồn Việt",
+      "headings": [
+        "Bình hoa 30 cm - Bình Hoa - Hồn Việt"
+      ],
+      "sku_on_page": {
+        "A001_113054038": true
+      }
+    },
+    {
+      "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+      "name_vi": "Bình hoa 27 cm Sen Vàng",
+      "source_page": "https://minhlong.com/products/binh-hoa-27-cm-men-ngoc-hoa-van-sen-vang",
+      "skus": [
+        "A001_112776345"
+      ],
+      "retrieved_at": "2026-10-10T00:42:54+07:00",
+      "images": [
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-1",
+          "source_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-01_10ce622920b14662b81a3740cdb80781.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-binh-hoa-sen-vang-27cm/img-minhlong-binh-hoa-sen-vang-27cm-1.png",
+          "sha256": "b3410f020d947b14e4f662e94e6ba3e055cee834b127f3d4a1aa45c411bb5583",
+          "bytes": 283994,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-01_10ce622920b14662b81a3740cdb80781.png",
+          "downloaded_at": "2026-10-10T00:42:55+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bình hoa 27 cm Sen Vàng — mặt trước"
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-2",
+          "source_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-03_8095810e7c83472991a70f9df857c5e6.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-binh-hoa-sen-vang-27cm/img-minhlong-binh-hoa-sen-vang-27cm-2.png",
+          "sha256": "deea859649736808b660ba94db4f2485eaf4ee5b9d9efb28346d5325b8340346",
+          "bytes": 1491971,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-03_8095810e7c83472991a70f9df857c5e6.png",
+          "downloaded_at": "2026-10-10T00:42:55+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Bình hoa 27 cm Sen Vàng — ảnh sử dụng/trưng bày"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/binh-hoa-27-cm-men-ngoc-hoa-van-sen-vang",
+      "page_path": "data_collection/images/2026-10-10/pages/p-minhlong-binh-hoa-sen-vang-27cm.html",
+      "page_sha256": "703b9d66214a7442fff42ddc04432b801e26b53ee9e478e599a185dd2fed3c58",
+      "page_title": "Bình Hoa 27 cm (Men Ngọc) - Bình hoa - Sen Vàng",
+      "headings": [
+        "Bình Hoa 27 cm - Bình Hoa - Sen Vàng"
+      ],
+      "sku_on_page": {
+        "A001_112776345": true
+      }
+    },
+    {
+      "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+      "name_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng",
+      "source_page": "https://minhlong.com/products/bo-tra-0-5-l-camellia-chi-vang",
+      "skus": [
+        "A001_01503801403"
+      ],
+      "retrieved_at": "2026-10-10T00:42:54+07:00",
+      "images": [
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+          "source_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-01_ab2c61335e7e4259a58cf17547ecc9e7.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-bo-tra-camellia-chi-vang-05l/img-minhlong-bo-tra-camellia-chi-vang-05l-1.png",
+          "sha256": "975d6f58025bcc58abdad75d8336bc6d1dba434982e8281152b2a8d5f5c52cd5",
+          "bytes": 227154,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-01_ab2c61335e7e4259a58cf17547ecc9e7.png",
+          "downloaded_at": "2026-10-10T00:42:56+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng — mặt trước"
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-2",
+          "source_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-02_990f56ac68f34e828b7ff4beac76d996.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-bo-tra-camellia-chi-vang-05l/img-minhlong-bo-tra-camellia-chi-vang-05l-2.png",
+          "sha256": "23481d84943cc06057585c60bd8cd1708252f037094e161f810727d785ff6b01",
+          "bytes": 441538,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-02_990f56ac68f34e828b7ff4beac76d996.png",
+          "downloaded_at": "2026-10-10T00:42:56+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng — ảnh sử dụng/trưng bày"
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-3",
+          "source_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-04_af3c5eec32934a9699d5750bd7591e38.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-bo-tra-camellia-chi-vang-05l/img-minhlong-bo-tra-camellia-chi-vang-05l-3.jpg",
+          "sha256": "7859815e781a39aa2ccb4905a04e22b3e40eb14874d0012fa325dc59bd9ac1e9",
+          "bytes": 79782,
+          "width": 2048,
+          "height": 2048,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-04_af3c5eec32934a9699d5750bd7591e38.jpg",
+          "downloaded_at": "2026-10-10T00:42:56+07:00",
+          "decision": "exclude",
+          "decision_reason": "Infographic đặc tính chung, không phải ảnh chụp sản phẩm",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/bo-tra-0-5-l-camellia-chi-vang",
+      "page_path": "data_collection/images/2026-10-10/pages/p-minhlong-bo-tra-camellia-chi-vang-05l.html",
+      "page_sha256": "0cf64c13f37c5a12f3ae545c2f6806b9d3ce1f05b6ec7398afc3cf12b8a602e4",
+      "page_title": "Bộ trà 0.5 L - Camellia - Chỉ Vàng",
+      "headings": [
+        "Bộ trà 0.5 L - Camellia - Chỉ Vàng"
+      ],
+      "sku_on_page": {
+        "A001_01503801403": true
+      }
+    },
+    {
+      "product_id": "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+      "name_vi": "Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh",
+      "source_page": "https://minhlong.com/products/ly-su-duong-sinh-0-48-l-k1-nap-ong-hut-duong-sinh-bien-xanh",
+      "skus": [
+        "A001_214888500H"
+      ],
+      "retrieved_at": "2026-10-10T00:42:55+07:00",
+      "images": [
+        {
+          "image_id": "img-minhlong-ly-su-duong-sinh-bien-xanh-048l-1",
+          "source_url": "https://product.hstatic.net/200000532849/product/u-duong-sinh-048-l-k1-nap-ong-hut-duong-sinh-bien-xanh_214888500h-1-sm_ac14ca748f6d43e3838ac40d7532e5bc.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-minhlong-ly-su-duong-sinh-bien-xanh-048l/img-minhlong-ly-su-duong-sinh-bien-xanh-048l-1.png",
+          "sha256": "4be9378fd007dab390bf029592f109df50e1fa2cae412242df52bc712e76a280",
+          "bytes": 269371,
+          "width": 1024,
+          "height": 1024,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://product.hstatic.net/200000532849/product/u-duong-sinh-048-l-k1-nap-ong-hut-duong-sinh-bien-xanh_214888500h-1-sm_ac14ca748f6d43e3838ac40d7532e5bc.png",
+          "downloaded_at": "2026-10-10T00:42:56+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/ly-su-duong-sinh-0-48-l-k1-nap-ong-hut-duong-sinh-bien-xanh",
+      "page_path": "data_collection/images/2026-10-10/pages/p-minhlong-ly-su-duong-sinh-bien-xanh-048l.html",
+      "page_sha256": "6dcdc9d00dfe5e9d62437d9b96de579e3e03c40309ef02a344ac2e1823d60887",
+      "page_title": "Ly sứ dưỡng sinh 0.48 L (K1) + nắp ống hút - Dưỡng Sinh - Biển Xanh",
+      "headings": [
+        "Ly sứ dưỡng sinh 0.48 L (K1) + nắp ống hút - Dưỡng Sinh - Biển Xanh"
+      ],
+      "sku_on_page": {
+        "A001_214888500H": true
+      }
+    },
+    {
+      "product_id": "p-lys-dia-tron-jasmine-trang-nga-15cm",
+      "name_vi": "Dĩa tròn 15 cm Jasmine Lys – Trắng Ngà",
+      "source_page": "https://minhlong.com/products/dia-tron-15-cm-hoa-van-trang-nga",
+      "skus": [
+        "A001_581585000"
+      ],
+      "retrieved_at": "2026-10-10T00:42:55+07:00",
+      "images": [
+        {
+          "image_id": "img-lys-dia-tron-jasmine-trang-nga-15cm-1",
+          "source_url": "https://product.hstatic.net/200000532849/product/dia-tron-15-cm-jasmine-lys-trang-nga_581585000-sm-01_ca289bb3952a418ab3f15fcdaf0ffca9.png",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-lys-dia-tron-jasmine-trang-nga-15cm/img-lys-dia-tron-jasmine-trang-nga-15cm-1.png",
+          "sha256": "efe2ed01b4400d0d422ca0cac39a64f69e41c17bd625c1bf7c140b54ce984f12",
+          "bytes": 58403,
+          "width": 1200,
+          "height": 1200,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://product.hstatic.net/200000532849/product/dia-tron-15-cm-jasmine-lys-trang-nga_581585000-sm-01_ca289bb3952a418ab3f15fcdaf0ffca9.png",
+          "downloaded_at": "2026-10-10T00:42:58+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Dĩa tròn 15 cm Jasmine Lys – Trắng Ngà — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://minhlong.com/products/dia-tron-15-cm-hoa-van-trang-nga",
+      "page_path": "data_collection/images/2026-10-10/pages/p-lys-dia-tron-jasmine-trang-nga-15cm.html",
+      "page_sha256": "47cd2deca4d0adef6cd5ef12cb2e96b72d04411578ab578fbefc28e90d66f469",
+      "page_title": "Dĩa tròn 15 cm - Jasmine Ly's - Trắng Ngà",
+      "headings": [
+        "Dĩa tròn 15 cm - Jasmine Lys - Trắng Ngà"
+      ],
+      "sku_on_page": {
+        "A001_581585000": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-gio-tre-dan-tron-vh24026",
+      "name_vi": "Giỏ tre đan tròn viền gỗ",
+      "source_page": "https://vietcraft.vn/product/round-bamboo-woven-storage-basket-from-vietnam/",
+      "skus": [
+        "VH24026"
+      ],
+      "retrieved_at": "2026-10-10T00:42:56+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-gio-tre-dan-tron-vh24026-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24026-round-basket-from-Vietnam.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-gio-tre-dan-tron-vh24026/img-vietcraft-gio-tre-dan-tron-vh24026-1.png",
+          "sha256": "39cccecf983bcacbce160fe4161ffb315ccb5f64a0b8102ed420f078ed532d7d",
+          "bytes": 99983,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24026-round-basket-from-Vietnam.jpg",
+          "downloaded_at": "2026-10-10T00:42:59+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Giỏ tre đan tròn viền gỗ — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/round-bamboo-woven-storage-basket-from-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-gio-tre-dan-tron-vh24026.html",
+      "page_sha256": "32928133d0fcbcf23f76ca2309756fcf02c2546f6ddeb888dca188eb483ab5e4",
+      "page_title": "Round Bamboo Woven Storage Basket from Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Round Bamboo Woven Storage Basket from Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24026": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-chup-den-seagrass-vh24028",
+      "name_vi": "Chụp đèn treo đan seagrass",
+      "source_page": "https://vietcraft.vn/product/handwoven-seagrass-pendant-lampshade-made-in-vietnam/",
+      "skus": [
+        "VH24028"
+      ],
+      "retrieved_at": "2026-10-10T00:42:56+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-chup-den-seagrass-vh24028/img-vietcraft-chup-den-seagrass-vh24028-1.png",
+          "sha256": "2c5967690cfacb99d1a65e6f2ca4db2e52ebfaafce82ea23e3bfdc532bc7e06f",
+          "bytes": 252341,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade.jpg",
+          "downloaded_at": "2026-10-10T00:43:00+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Chụp đèn treo đan seagrass — ảnh sử dụng/trưng bày"
+        },
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-2",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade-from-Vietnam.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-chup-den-seagrass-vh24028/img-vietcraft-chup-den-seagrass-vh24028-2.png",
+          "sha256": "0ce716aedca16213387b4c8f66adea2a9af2f87ac2186b8420ef74eb8c35cc04",
+          "bytes": 144752,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade-from-Vietnam.jpg",
+          "downloaded_at": "2026-10-10T00:43:02+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Chụp đèn treo đan seagrass — ảnh sử dụng/trưng bày"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/handwoven-seagrass-pendant-lampshade-made-in-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-chup-den-seagrass-vh24028.html",
+      "page_sha256": "e749eadb4d255afc653a5653b77c262fd150b64c26378be9c0a9a5fd5317a6cf",
+      "page_title": "Handwoven Seagrass Pendant Lampshade made in Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Handwoven Seagrass Pendant Lampshade made in Vietnam",
+        "Handwoven Seagrass Pendant Lampshade on Metal Frame – Rustic Elegance for Modern Spaces"
+      ],
+      "sku_on_page": {
+        "VH24028": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+      "name_vi": "Túi lục bình đan tay đính vỏ sò",
+      "source_page": "https://vietcraft.vn/product/handcrafted-water-hyacinth-handbag-with-seashell-embellishments-from-vietnam/",
+      "skus": [
+        "VH24032"
+      ],
+      "retrieved_at": "2026-10-10T00:42:56+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-tui-luc-binh-vo-so-vh24032-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24032-handbag-made-of-water-hyacinth-from-Vietnam.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-tui-luc-binh-vo-so-vh24032/img-vietcraft-tui-luc-binh-vo-so-vh24032-1.png",
+          "sha256": "78fbbfc973b8a3195ef1d0cbeee8908c65793da08f1fb7c9daa6071615b0d023",
+          "bytes": 127601,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24032-handbag-made-of-water-hyacinth-from-Vietnam.jpg",
+          "downloaded_at": "2026-10-10T00:43:00+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Túi lục bình đan tay đính vỏ sò — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/handcrafted-water-hyacinth-handbag-with-seashell-embellishments-from-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-tui-luc-binh-vo-so-vh24032.html",
+      "page_sha256": "7862653b161516e7d7e7ff89ff1174c6a69812f8d084735c415470c78f37510a",
+      "page_title": "Handcrafted Water Hyacinth Handbag with Seashell Embellishments from Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Handcrafted Water Hyacinth Handbag with Seashell Embellishments from Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24032": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-gio-may-bau-duc-vh24040",
+      "name_vi": "Giỏ mây đan hình bầu dục",
+      "source_page": "https://vietcraft.vn/product/wholesale-hand-woven-oval-rattan-basket-natural-bulk-storage-supplier-vietnam/",
+      "skus": [
+        "VH24040"
+      ],
+      "retrieved_at": "2026-10-10T00:42:58+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/03/VH24040-oval-rattan-fruit-basket.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-gio-may-bau-duc-vh24040/img-vietcraft-gio-may-bau-duc-vh24040-1.png",
+          "sha256": "ca2b056443288088a0c93cf83ef49a3c4a6eb212999b0a962cc165cecfb8a772",
+          "bytes": 105994,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/03/VH24040-oval-rattan-fruit-basket.jpg",
+          "downloaded_at": "2026-10-10T00:43:01+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Giỏ mây đan hình bầu dục — mặt trước"
+        },
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-2",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/12/VH24040-oval-rattan-fruit-basket-Vietnam.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-gio-may-bau-duc-vh24040/img-vietcraft-gio-may-bau-duc-vh24040-2.png",
+          "sha256": "1d215108e4e4f41249e084db519137003aa556cff1bb65399ba5f82f86b65c5e",
+          "bytes": 588702,
+          "width": 1080,
+          "height": 1080,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/12/VH24040-oval-rattan-fruit-basket-Vietnam.jpg",
+          "downloaded_at": "2026-10-10T00:43:04+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Giỏ mây đan hình bầu dục — ảnh sử dụng/trưng bày"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/wholesale-hand-woven-oval-rattan-basket-natural-bulk-storage-supplier-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-gio-may-bau-duc-vh24040.html",
+      "page_sha256": "b1b0ee82903aadee04d07fd68412fd011b40dec142f098cde4c1763d37ab583f",
+      "page_title": "WHOLESALE Hand-Woven Oval Rattan Basket – Natural Bulk Storage Supplier Vietnam - Vietnam Handicraft",
+      "headings": [
+        "WHOLESALE Hand-Woven Oval Rattan Basket – Natural Bulk Storage Supplier Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24040": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-gio-seagrass-vh24046",
+      "name_vi": "Giỏ đan seagrass",
+      "source_page": "https://vietcraft.vn/product/woven-seagrass-basket-from-vietnam/",
+      "skus": [
+        "VH24046"
+      ],
+      "retrieved_at": "2026-10-10T00:42:59+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-gio-seagrass-vh24046-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24046-woven-seagrass-basket.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-gio-seagrass-vh24046/img-vietcraft-gio-seagrass-vh24046-1.png",
+          "sha256": "50a6110ada81d42c090e9a2de7c0a990f5637db0decd16acd42d82064b9efdd9",
+          "bytes": 160256,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24046-woven-seagrass-basket.jpg",
+          "downloaded_at": "2026-10-10T00:43:03+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Giỏ đan seagrass — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/woven-seagrass-basket-from-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-gio-seagrass-vh24046.html",
+      "page_sha256": "4aa313cb0994547bbf1c118c3df09f6b5c1939dbaf65da3c51b90efb90e6ba5b",
+      "page_title": "Woven Seagrass Basket from Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Woven Seagrass Basket from Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24046": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-khay-may-dan-vh24048",
+      "name_vi": "Khay mây đan tay",
+      "source_page": "https://vietcraft.vn/product/woven-rattan-tray-handmade-in-vietnam/",
+      "skus": [
+        "VH24048"
+      ],
+      "retrieved_at": "2026-10-10T00:43:00+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-khay-may-dan-vh24048-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24048-woven-rattan-tray-in-Vietnam.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-khay-may-dan-vh24048/img-vietcraft-khay-may-dan-vh24048-1.png",
+          "sha256": "3e6cbd103c45e809c5047635e2075ff4d1f6b6868836a7500fafc070a7d4a7fa",
+          "bytes": 192347,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24048-woven-rattan-tray-in-Vietnam.jpg",
+          "downloaded_at": "2026-10-10T00:43:03+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Khay mây đan tay — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/woven-rattan-tray-handmade-in-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-khay-may-dan-vh24048.html",
+      "page_sha256": "2a5b21293fe47d648a5d3408da3e87e321923ae34e4a5d712a4e62ec77fcb10a",
+      "page_title": "Woven Rattan Tray – Handmade in Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Woven Rattan Tray – Handmade in Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24048": true
+      }
+    },
+    {
+      "product_id": "p-vietcraft-bat-gao-dua-son-ve-tay",
+      "name_vi": "Bát gáo dừa phủ sơn vẽ tay",
+      "source_page": "https://vietcraft.vn/product/wholesale-hand-painted-lacquer-coconut-bowls-from-vietnam/",
+      "skus": [
+        "VNS-VIETCRAFT-VH2615"
+      ],
+      "retrieved_at": "2026-10-10T00:43:02+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-bat-gao-dua-son-ve-tay-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH2615-Wholesale-Hand-Painted-Lacquer-Coconut-Bowls.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-bat-gao-dua-son-ve-tay/img-vietcraft-bat-gao-dua-son-ve-tay-1.png",
+          "sha256": "6abcd1f921e55ef1f7336d87891de76b745c8044f4f1da7f80a3d82de619a689",
+          "bytes": 359020,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH2615-Wholesale-Hand-Painted-Lacquer-Coconut-Bowls.jpg",
+          "downloaded_at": "2026-10-10T00:43:06+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bát gáo dừa phủ sơn vẽ tay — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/wholesale-hand-painted-lacquer-coconut-bowls-from-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-bat-gao-dua-son-ve-tay.html",
+      "page_sha256": "7b9a373e279d56254a57c1822bdeef789158e9e1485b3a4c4fbd6e8cca13974a",
+      "page_title": "Wholesale Hand-Painted Lacquer Coconut Bowls from Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Wholesale Hand-Painted Lacquer Coconut Bowls from Vietnam",
+        "Wholesale Hand-Painted Lacquer Coconut Bowls – Sustainable Vietnamese Handicrafts"
+      ],
+      "sku_on_page": {
+        "VNS-VIETCRAFT-VH2615": false
+      }
+    },
+    {
+      "product_id": "p-vietcraft-bat-tre-cuon-phu-son-vh24045",
+      "name_vi": "Bát tre cuộn phủ sơn",
+      "source_page": "https://vietcraft.vn/product/lacquer-spun-bamboo-bowl-made-in-vietnam/",
+      "skus": [
+        "VH24045"
+      ],
+      "retrieved_at": "2026-10-10T00:43:03+07:00",
+      "images": [
+        {
+          "image_id": "img-vietcraft-bat-tre-cuon-phu-son-vh24045-1",
+          "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24045-lacquer-spun-bamboo-bowl.jpg",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-vietcraft-bat-tre-cuon-phu-son-vh24045/img-vietcraft-bat-tre-cuon-phu-son-vh24045-1.png",
+          "sha256": "36c2e59febd51665ac38aa9c5141044624ad02cf9f9175be3a0cb47a321d9325",
+          "bytes": 164003,
+          "width": 510,
+          "height": 600,
+          "format": "PNG",
+          "content_type": "image/png",
+          "final_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24045-lacquer-spun-bamboo-bowl.jpg",
+          "downloaded_at": "2026-10-10T00:43:06+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bát tre cuộn phủ sơn — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://vietcraft.vn/product/lacquer-spun-bamboo-bowl-made-in-vietnam/",
+      "page_path": "data_collection/images/2026-10-10/pages/p-vietcraft-bat-tre-cuon-phu-son-vh24045.html",
+      "page_sha256": "717358031423a8f2c63aaae55baca20ef14d91698a389fc30d7308b48531ecc3",
+      "page_title": "Lacquer Spun Bamboo Bowl Made in Vietnam - Vietnam Handicraft",
+      "headings": [
+        "Lacquer Spun Bamboo Bowl Made in Vietnam"
+      ],
+      "sku_on_page": {
+        "VH24045": true
+      }
+    },
+    {
+      "product_id": "p-marou-ben-tre-78-80g",
+      "name_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g",
+      "source_page": "https://maisonmarou.com/products/ben-tre-78-single-origin-80g",
+      "skus": [
+        "CHSO0001"
+      ],
+      "retrieved_at": "2026-10-10T00:43:03+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-ben-tre-78-80g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ben-tre-78-single-origin-80g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-ben-tre-78-80g/img-marou-ben-tre-78-80g-1.jpg",
+          "sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+          "bytes": 595965,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ben-tre-78-single-origin-80g.webp",
+          "downloaded_at": "2026-10-10T00:43:05+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-ben-tre-78-80g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-ben-tre-78-80g/img-marou-ben-tre-78-80g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:06+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/ben-tre-78-single-origin-80g",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-ben-tre-78-80g.html",
+      "page_sha256": "6c43da0827b774b904a5f93eef5d9ef679e958fae9d901848726d403eb3edf2a",
+      "page_title": "Ben Tre 78% Single Origin 80G – Maison Marou",
+      "headings": [
+        "Ben Tre 78% Single Origin 80G"
+      ],
+      "sku_on_page": {
+        "CHSO0001": true
+      }
+    },
+    {
+      "product_id": "p-marou-tien-giang-70-80g",
+      "name_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g",
+      "source_page": "https://maisonmarou.com/products/tien-giang-70-single-origin-80g",
+      "skus": [
+        "CHSO0002"
+      ],
+      "retrieved_at": "2026-10-10T00:43:04+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-tien-giang-70-80g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/tien-giang-70-single-origin-80g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-tien-giang-70-80g/img-marou-tien-giang-70-80g-1.jpg",
+          "sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+          "bytes": 543000,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/tien-giang-70-single-origin-80g.webp",
+          "downloaded_at": "2026-10-10T00:43:05+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-tien-giang-70-80g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-tien-giang-70-80g/img-marou-tien-giang-70-80g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:06+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/tien-giang-70-single-origin-80g",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-tien-giang-70-80g.html",
+      "page_sha256": "edb0b6a50bd2772392a882b7ec459bb4bc16c24a0eb58be589db5be6ae10d5b9",
+      "page_title": "Tien Giang 70% Single Origin 80G – Maison Marou",
+      "headings": [
+        "Tien Giang 70% Single Origin 80G"
+      ],
+      "sku_on_page": {
+        "CHSO0002": true
+      }
+    },
+    {
+      "product_id": "p-marou-lam-dong-74-80g",
+      "name_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g",
+      "source_page": "https://maisonmarou.com/products/lam-dong-74-single-origin-80g",
+      "skus": [
+        "CHSO0006"
+      ],
+      "retrieved_at": "2026-10-10T00:43:06+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-lam-dong-74-80g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/lam-dong-74-single-origin-80g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-lam-dong-74-80g/img-marou-lam-dong-74-80g-1.jpg",
+          "sha256": "5fa87a6925e9879a02e9c788c8fb5022331974ac8cd23e5ce1670b83026ab075",
+          "bytes": 574349,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/lam-dong-74-single-origin-80g.webp",
+          "downloaded_at": "2026-10-10T00:43:07+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-lam-dong-74-80g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-lam-dong-74-80g/img-marou-lam-dong-74-80g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:07+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/lam-dong-74-single-origin-80g",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-lam-dong-74-80g.html",
+      "page_sha256": "9f83c44565b00eaedb6e3b3f855ff98492e5bdb04b24ebe6afc83b79fa0dd3ca",
+      "page_title": "Lam Dong 74% Single Origin 80G – Maison Marou",
+      "headings": [
+        "Lam Dong 74% Single Origin 80G"
+      ],
+      "sku_on_page": {
+        "CHSO0006": true
+      }
+    },
+    {
+      "product_id": "p-marou-quat-tien-giang-68-80g",
+      "name_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g",
+      "source_page": "https://maisonmarou.com/products/mekong-kumquat-tien-giang-68-80g",
+      "skus": [
+        "CHOP0002"
+      ],
+      "retrieved_at": "2026-10-10T00:43:06+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-quat-tien-giang-68-80g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mekong-kumquat-tien-giang-68-80g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-quat-tien-giang-68-80g/img-marou-quat-tien-giang-68-80g-1.jpg",
+          "sha256": "ff0ce89ddeda95f8be901ee280e8ee1af16e8b3b13b896d697c7078d20625089",
+          "bytes": 546243,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mekong-kumquat-tien-giang-68-80g.webp",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-quat-tien-giang-68-80g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-quat-tien-giang-68-80g/img-marou-quat-tien-giang-68-80g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/mekong-kumquat-tien-giang-68-80g",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-quat-tien-giang-68-80g.html",
+      "page_sha256": "d845d14ce4d0a4dbe0c0a688b8e8e6e968d8e0162d90aa7ad152cc55554c18ba",
+      "page_title": "Mekong Kumquat Tien Giang 68% 80G – Maison Marou",
+      "headings": [
+        "Mekong Kumquat Tien Giang 68% 80G"
+      ],
+      "sku_on_page": {
+        "CHOP0002": true
+      }
+    },
+    {
+      "product_id": "p-marou-vietnam-100-60g",
+      "name_vi": "Sô-cô-la đen 100% Vietnam 60g",
+      "source_page": "https://maisonmarou.com/products/vietnam-100-cacao-dark-chocolate-bar",
+      "skus": [
+        "CHOR0003"
+      ],
+      "retrieved_at": "2026-10-10T00:43:06+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-vietnam-100-60g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/origin-vietnam-100-60g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-vietnam-100-60g/img-marou-vietnam-100-60g-1.jpg",
+          "sha256": "69734be2420671bc418a6d28722d1cfa1bed615822e36341b4cbc3a19de776db",
+          "bytes": 590958,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/origin-vietnam-100-60g.webp",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen 100% Vietnam 60g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-vietnam-100-60g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-vietnam-100-60g/img-marou-vietnam-100-60g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen 100% Vietnam 60g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/vietnam-100-cacao-dark-chocolate-bar",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-vietnam-100-60g.html",
+      "page_sha256": "39b1c10d436a9f6ce5beb9c91afd886f49ee01a04d849e4a5b3bd05f92abcffa",
+      "page_title": "Vietnam 100% Dark Chocolate Bar – Maison Marou",
+      "headings": [
+        "Vietnam 100% Dark Chocolate Bar"
+      ],
+      "sku_on_page": {
+        "CHOR0003": true
+      }
+    },
+    {
+      "product_id": "p-marou-ba-ria-76-80g",
+      "name_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g",
+      "source_page": "https://maisonmarou.com/products/ba-ria-76-single-origin-chocolate-bar",
+      "skus": [
+        "CHSO0004"
+      ],
+      "retrieved_at": "2026-10-10T00:43:06+07:00",
+      "images": [
+        {
+          "image_id": "img-marou-ba-ria-76-80g-1",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ba-ria-76-single-origin-80g.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-ba-ria-76-80g/img-marou-ba-ria-76-80g-1.jpg",
+          "sha256": "32511aa1a090df6ddf60b19790cf9f5128dc73d899d352d7bb62dd36cb73f648",
+          "bytes": 548120,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ba-ria-76-single-origin-80g.webp",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "packaging",
+          "reviewed_alt_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g — bao bì riêng của sản phẩm"
+        },
+        {
+          "image_id": "img-marou-ba-ria-76-80g-2",
+          "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "filename_on_page": true,
+          "shared_generic": true,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-marou-ba-ria-76-80g/img-marou-ba-ria-76-80g-2.jpg",
+          "sha256": "8e5db7c3998ade15acb2f51575786bfd27bc78fd29489ba903abfc0281cc3fa5",
+          "bytes": 268821,
+          "width": 2500,
+          "height": 2500,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg",
+          "downloaded_at": "2026-10-10T00:43:08+07:00",
+          "decision": "exclude",
+          "decision_reason": "Ảnh thanh chocolate dùng chung, không nhận diện SKU",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://maisonmarou.com/products/ba-ria-76-single-origin-chocolate-bar",
+      "page_path": "data_collection/images/2026-10-10/pages/p-marou-ba-ria-76-80g.html",
+      "page_sha256": "4655d7549fd664342b41ffa9776f43b59ff5d6144b90a49d2e918dc0c1577f09",
+      "page_title": "Ba Ria 76% Single Origin Dark Chocolate Bar – Maison Marou",
+      "headings": [
+        "Ba Ria 76% Single Origin Dark Chocolate Bar"
+      ],
+      "sku_on_page": {
+        "CHSO0004": true
+      }
+    },
+    {
+      "product_id": "p-hanoia-binh-hoa-mystery-a18mt01",
+      "name_vi": "Bình hoa Mystery",
+      "source_page": "https://hanoia.com/binh-hoa-mystery-a18mt01.html",
+      "skus": [
+        "A18MT01"
+      ],
+      "retrieved_at": "2026-10-10T00:43:07+07:00",
+      "images": [
+        {
+          "image_id": "img-hanoia-binh-hoa-mystery-a18mt01-1",
+          "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A18MT01_1_1.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-hanoia-binh-hoa-mystery-a18mt01/img-hanoia-binh-hoa-mystery-a18mt01-1.webp",
+          "sha256": "6251d34f613d0e8087593e3798d82b9a59a2f0e31365d6d50fb1c4d1ab0cb705",
+          "bytes": 243920,
+          "width": 3000,
+          "height": 3000,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A18MT01_1_1.webp",
+          "downloaded_at": "2026-10-10T00:45:08+07:00",
+          "previous_download": {
+            "image_id": "img-hanoia-binh-hoa-mystery-a18mt01-1",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A18MT01_1_1.webp?sig=454197c856b56aa82c32985dc1d6c7b325c459f9009a16cd4dee231d28101358",
+            "filename_on_page": true,
+            "shared_generic": false,
+            "usage_rights_status": "unknown",
+            "status": "downloaded",
+            "local_path": "assets/products/p-hanoia-binh-hoa-mystery-a18mt01/img-hanoia-binh-hoa-mystery-a18mt01-1.webp",
+            "sha256": "2b069ed96d56244f690b2fa9bb511828ff25808b4293b7249e0ce64cadda3492",
+            "bytes": 4344,
+            "width": 285,
+            "height": 285,
+            "format": "WEBP",
+            "content_type": "image/webp",
+            "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A18MT01_1_1.webp?sig=454197c856b56aa82c32985dc1d6c7b325c459f9009a16cd4dee231d28101358",
+            "downloaded_at": "2026-10-10T00:43:12+07:00"
+          },
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bình hoa Mystery — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://hanoia.com/binh-hoa-mystery-a18mt01.html",
+      "page_path": "data_collection/images/2026-10-10/pages/p-hanoia-binh-hoa-mystery-a18mt01.html",
+      "page_sha256": "2756b786c3aa8087c91dad2b4e0c07699bf87121e3f6b6425ca92d7a8d3e5878",
+      "page_title": "Hanoia | Bình hoa Mystery",
+      "headings": [
+        "Bình hoa Mystery"
+      ],
+      "sku_on_page": {
+        "A18MT01": true
+      }
+    },
+    {
+      "product_id": "p-hanoia-binh-hoa-vita-pc26vt01",
+      "name_vi": "Bình hoa Vita",
+      "source_page": "https://hanoia.com/binh-hoa-vita-pc26vt01.html",
+      "skus": [
+        "PC26VT01"
+      ],
+      "retrieved_at": "2026-10-10T00:43:08+07:00",
+      "images": [
+        {
+          "image_id": "img-hanoia-binh-hoa-vita-pc26vt01-1",
+          "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26VT01_11_1__1789040414.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-hanoia-binh-hoa-vita-pc26vt01/img-hanoia-binh-hoa-vita-pc26vt01-1.webp",
+          "sha256": "e267e1a0db07de0b5b57b7dbc9e520802337c0442028b1951bb470d18e809bfb",
+          "bytes": 7930,
+          "width": 1200,
+          "height": 1200,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26VT01_11_1__1789040414.webp",
+          "downloaded_at": "2026-10-10T00:45:08+07:00",
+          "previous_download": {
+            "image_id": "img-hanoia-binh-hoa-vita-pc26vt01-1",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26VT01_11_1__1789040414.webp?sig=bb0264b320c437bf947e252ce108d423cee0cf86e3930e286029c6e35f4b0d96",
+            "filename_on_page": true,
+            "shared_generic": false,
+            "usage_rights_status": "unknown",
+            "status": "downloaded",
+            "local_path": "assets/products/p-hanoia-binh-hoa-vita-pc26vt01/img-hanoia-binh-hoa-vita-pc26vt01-1.webp",
+            "sha256": "ef7626e5915c830cada29bf491fe8b78a7e3df93b3596e54c9817f9c91f5d06f",
+            "bytes": 1228,
+            "width": 285,
+            "height": 285,
+            "format": "WEBP",
+            "content_type": "image/webp",
+            "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26VT01_11_1__1789040414.webp?sig=bb0264b320c437bf947e252ce108d423cee0cf86e3930e286029c6e35f4b0d96",
+            "downloaded_at": "2026-10-10T00:43:13+07:00"
+          },
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Bình hoa Vita — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://hanoia.com/binh-hoa-vita-pc26vt01.html",
+      "page_path": "data_collection/images/2026-10-10/pages/p-hanoia-binh-hoa-vita-pc26vt01.html",
+      "page_sha256": "6e935a50c0c8f110b8aa597acc093eb48e435be31621d280c0bff2dba06438bc",
+      "page_title": "Hanoia | Bình hoa Vita",
+      "headings": [
+        "Bình hoa Vita"
+      ],
+      "sku_on_page": {
+        "PC26VT01": true
+      }
+    },
+    {
+      "product_id": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+      "name_vi": "Hộp vuông Botanica size S",
+      "source_page": "https://hanoia.com/hop-vuong-botanica-size-s-af26bt03.html",
+      "skus": [
+        "AF26BT03"
+      ],
+      "retrieved_at": "2026-10-10T00:43:08+07:00",
+      "images": [
+        {
+          "image_id": "img-hanoia-hop-vuong-botanica-s-af26bt03-1",
+          "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26BT03_1_1.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-hanoia-hop-vuong-botanica-s-af26bt03/img-hanoia-hop-vuong-botanica-s-af26bt03-1.webp",
+          "sha256": "9db9369d4af501ab73605a273f094358cdb8edb76516ae4a882125e2c410debc",
+          "bytes": 25352,
+          "width": 1200,
+          "height": 1200,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26BT03_1_1.webp",
+          "downloaded_at": "2026-10-10T00:45:08+07:00",
+          "previous_download": {
+            "image_id": "img-hanoia-hop-vuong-botanica-s-af26bt03-1",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26BT03_1_1.webp?sig=fe53d4efb538475688420622376712e85caeb0d61fce778eb9fc2ff8ad84a4e7",
+            "filename_on_page": true,
+            "shared_generic": false,
+            "usage_rights_status": "unknown",
+            "status": "downloaded",
+            "local_path": "assets/products/p-hanoia-hop-vuong-botanica-s-af26bt03/img-hanoia-hop-vuong-botanica-s-af26bt03-1.webp",
+            "sha256": "5fd9c9a5acef0ea9b80bb029dbcd9667fa86cc1d6c0581c87ba361c947f6d041",
+            "bytes": 1860,
+            "width": 285,
+            "height": 285,
+            "format": "WEBP",
+            "content_type": "image/webp",
+            "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26BT03_1_1.webp?sig=fe53d4efb538475688420622376712e85caeb0d61fce778eb9fc2ff8ad84a4e7",
+            "downloaded_at": "2026-10-10T00:43:13+07:00"
+          },
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Hộp vuông Botanica size S — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://hanoia.com/hop-vuong-botanica-size-s-af26bt03.html",
+      "page_path": "data_collection/images/2026-10-10/pages/p-hanoia-hop-vuong-botanica-s-af26bt03.html",
+      "page_sha256": "c2feeb87fafb430a115eec25f43d94b54811d79bd83e50f4a356a83fe5cdcec5",
+      "page_title": "Hanoia | Hộp vuông Botanica size S",
+      "headings": [
+        "Hộp vuông Botanica size S"
+      ],
+      "sku_on_page": {
+        "AF26BT03": true
+      }
+    },
+    {
+      "product_id": "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+      "name_vi": "Hộp đan tre Ethnic size S",
+      "source_page": "https://hanoia.com/hop-dan-tre-ethnic-size-s-ou17et02.html",
+      "skus": [
+        "OU17ET02"
+      ],
+      "retrieved_at": "2026-10-10T00:43:08+07:00",
+      "images": [
+        {
+          "image_id": "img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1",
+          "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET02_8_1.webp",
+          "filename_on_page": true,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-hanoia-hop-dan-tre-ethnic-s-ou17et02/img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1.webp",
+          "sha256": "598fad794926026010f1c73e6ba55a3892e895ca3d4a3592d6e1a9e884fea110",
+          "bytes": 20888,
+          "width": 1200,
+          "height": 1200,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET02_8_1.webp",
+          "downloaded_at": "2026-10-10T00:45:09+07:00",
+          "previous_download": {
+            "image_id": "img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_OU17ET02_8_1.webp?sig=7a952be166ff4ff1f5f09ebbbd7b4db45a99233d76ad8932db1d9e4c301be904",
+            "filename_on_page": true,
+            "shared_generic": false,
+            "usage_rights_status": "unknown",
+            "status": "downloaded",
+            "local_path": "assets/products/p-hanoia-hop-dan-tre-ethnic-s-ou17et02/img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1.webp",
+            "sha256": "c18830a04db0b1bbe6e6208e902477a4296850d05826bc9ae47174936f926e3e",
+            "bytes": 1424,
+            "width": 285,
+            "height": 285,
+            "format": "WEBP",
+            "content_type": "image/webp",
+            "final_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_OU17ET02_8_1.webp?sig=7a952be166ff4ff1f5f09ebbbd7b4db45a99233d76ad8932db1d9e4c301be904",
+            "downloaded_at": "2026-10-10T00:43:13+07:00"
+          },
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Hộp đan tre Ethnic size S — mặt trước"
+        }
+      ],
+      "page_status": 200,
+      "final_page_url": "https://hanoia.com/hop-dan-tre-ethnic-size-s-ou17et02.html",
+      "page_path": "data_collection/images/2026-10-10/pages/p-hanoia-hop-dan-tre-ethnic-s-ou17et02.html",
+      "page_sha256": "71845b5407bf345fac77fd3cf50403b1dfdc593ae5df6901bb3010aedcad4833",
+      "page_title": "Hanoia | Hộp đan tre Ethnic size S",
+      "headings": [
+        "Hộp đan tre Ethnic size S"
+      ],
+      "sku_on_page": {
+        "OU17ET02": true
+      }
+    },
+    {
+      "product_id": "p-kilomet109-ao-khoac-phi-17mjk003",
+      "name_vi": "Áo khoác Phi vải gai dầu nhuộm chàm",
+      "source_page": "https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/",
+      "skus": [
+        "17MJk003"
+      ],
+      "retrieved_at": "2026-10-10T00:43:12+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0402.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-ao-khoac-phi-17mjk003/img-kilomet109-ao-khoac-phi-17mjk003-1.webp",
+          "sha256": "8279abe273214b8ff0cd9031b396336b2949d7fca302481232ed281027235bf1",
+          "bytes": 196066,
+          "width": 1200,
+          "height": 1804,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0402.jpg",
+          "downloaded_at": "2026-10-10T00:43:12+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Áo khoác Phi vải gai dầu nhuộm chàm — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0408.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-ao-khoac-phi-17mjk003/img-kilomet109-ao-khoac-phi-17mjk003-2.webp",
+          "sha256": "5055f4e27e124a216b16979a88803f1f4f9914bbf29903cfa3ef59a6b662197e",
+          "bytes": 192574,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0408.jpg",
+          "downloaded_at": "2026-10-10T00:43:13+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "back",
+          "reviewed_alt_vi": "Áo khoác Phi vải gai dầu nhuộm chàm — mặt sau"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-mans-phi-hemp-jacket",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-ao-khoac-phi-17mjk003.json",
+        "sha256": "65a80c99788ea6901c53c85cdb203414caae4384c0922cea6944e070633003af",
+        "name": "Phi Jacket",
+        "sku": "17MJk003",
+        "permalink": "https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/"
+      }
+    },
+    {
+      "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+      "name_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên",
+      "source_page": "https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/",
+      "skus": [
+        "17MT004"
+      ],
+      "retrieved_at": "2026-10-10T00:43:13+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0423.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-1.webp",
+          "sha256": "12d6c7145c5ea437ca69ec03580796d2a26a3223ac0df1f31072b7819061ead5",
+          "bytes": 256864,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0423.jpg",
+          "downloaded_at": "2026-10-10T00:43:13+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-2.jpg",
+          "sha256": "975be75a701ff5c322e2df94cef327f2ccbb8a19a3893423c1eeba804783e894",
+          "bytes": 221948,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg",
+          "downloaded_at": "2026-10-10T00:45:12+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "side",
+          "reviewed_alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — góc nghiêng"
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-3",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-3.jpg",
+          "sha256": "11b94b373bcd34b17e224edd5990d81d0884a749d648ba9cff56ccd6c6925d0c",
+          "bytes": 194321,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg",
+          "downloaded_at": "2026-10-10T00:45:14+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "detail",
+          "reviewed_alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — chi tiết"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-mens-thong-batik-shirt",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-ao-so-mi-thong-17mt004.json",
+        "sha256": "fa1b9f100548bdcd6e74b4e47e22153379389f01bba2bad4b1b122f813f12e3f",
+        "name": "Thông Shirt",
+        "sku": "17MT004",
+        "permalink": "https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/"
+      }
+    },
+    {
+      "product_id": "p-kilomet109-vay-van-19wdr006",
+      "name_vi": "Váy dài Vân bằng lụa Vân",
+      "source_page": "https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/",
+      "skus": [
+        "19WDr006"
+      ],
+      "retrieved_at": "2026-10-10T00:43:13+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop4-19.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-1.webp",
+          "sha256": "24f51fcf493f36b62f8d38c66b345bb12fd6472ee6d4c7736ba3daf0e7395447",
+          "bytes": 378414,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop4-19.jpg",
+          "downloaded_at": "2026-10-10T00:43:14+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Váy dài Vân bằng lụa Vân — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/untitled-21.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-2.webp",
+          "sha256": "6ecf5b68c235ee86116f66a2d5d5da15f3f9a8e1828f45534b1385994aedd7fa",
+          "bytes": 643344,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/untitled-21.jpg",
+          "downloaded_at": "2026-10-10T00:43:14+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Váy dài Vân bằng lụa Vân — ảnh sử dụng/trưng bày"
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-3",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-19.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-3.webp",
+          "sha256": "c46cc47bc7b018da74ad23ce0fe0a6d2431f6d85471572c9f5c7152feda763e6",
+          "bytes": 455180,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-19.jpg",
+          "downloaded_at": "2026-10-10T00:43:14+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "detail",
+          "reviewed_alt_vi": "Váy dài Vân bằng lụa Vân — chi tiết"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=mien-collection-2019-womans-van-dress",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-vay-van-19wdr006.json",
+        "sha256": "074ab4ca2e2bab994e20c7979a82556e454c47c41e9f5b63fb2313721c76a140",
+        "name": "Vân Dress",
+        "sku": "19WDr006",
+        "permalink": "https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/"
+      }
+    },
+    {
+      "product_id": "p-kilomet109-chan-vay-ha-17wsk001",
+      "name_vi": "Chân váy Hà cotton batik nhuộm chàm",
+      "source_page": "https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/",
+      "skus": [
+        "17WSk001"
+      ],
+      "retrieved_at": "2026-10-10T00:43:13+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9800.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-chan-vay-ha-17wsk001/img-kilomet109-chan-vay-ha-17wsk001-1.webp",
+          "sha256": "5d52bf9b6c6822796ce5c531daf60f0568d4578eb3d96c5e39e42246efc534f4",
+          "bytes": 263168,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9800.jpg",
+          "downloaded_at": "2026-10-10T00:43:13+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Chân váy Hà cotton batik nhuộm chàm — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-chan-vay-ha-17wsk001/img-kilomet109-chan-vay-ha-17wsk001-2.jpg",
+          "sha256": "66c44cb2e60303fa9bce730edc50d5d411c455a2fad1ec78da81ee9c1ef0a5ef",
+          "bytes": 180949,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg",
+          "downloaded_at": "2026-10-10T00:45:15+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "back",
+          "reviewed_alt_vi": "Chân váy Hà cotton batik nhuộm chàm — mặt sau"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-ha-skirt",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-chan-vay-ha-17wsk001.json",
+        "sha256": "6790d97c2ad1426959b2f1c580853160e452f793b8bf2907087f3e868ab5dd2f",
+        "name": "Hà Skirt",
+        "sku": "17WSk001",
+        "permalink": "https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/"
+      }
+    },
+    {
+      "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+      "name_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm",
+      "source_page": "https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/",
+      "skus": [
+        "19MJk001"
+      ],
+      "retrieved_at": "2026-10-10T00:43:13+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-1.jpg",
+          "sha256": "423abeba40cd5d0b96bc3531e53cf6fe11207af723e5d9b45a4537c2dd666327",
+          "bytes": 255236,
+          "width": 1200,
+          "height": 1798,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg",
+          "downloaded_at": "2026-10-10T00:45:15+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-2.jpg",
+          "sha256": "c30fd30fe1ce1c5a64ae677f207175dba9ab776fe850d977941401440250a0bc",
+          "bytes": 273463,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg",
+          "downloaded_at": "2026-10-10T00:45:15+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "detail",
+          "reviewed_alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — chi tiết"
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-3",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-3.jpg",
+          "sha256": "9ffb89e4864d2d9dfe8bb24077f925d5e4d932c859ed49f1eed212172e607d99",
+          "bytes": 295003,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg",
+          "downloaded_at": "2026-10-10T00:45:15+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — ảnh sử dụng/trưng bày"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=mien-collection-2019-mans-vang-1-jacket",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-ao-khoac-vang-1-19mjk001.json",
+        "sha256": "16461a874f347435e0d8853dfeca6312d57dd61fe191dc27bc4b1820ea43afc6",
+        "name": "Vang I Jacket",
+        "sku": "19MJk001",
+        "permalink": "https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/"
+      }
+    },
+    {
+      "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+      "name_vi": "Vòng cổ vải Xoắn",
+      "source_page": "https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/",
+      "skus": [
+        "17WAc001"
+      ],
+      "retrieved_at": "2026-10-10T00:43:13+07:00",
+      "images": [
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-1",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0276.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-1.webp",
+          "sha256": "db5cfd01c8eeb076d94e4f4d64ad36eb7e26ca99801ff032f5fbd4a9a635a0aa",
+          "bytes": 355770,
+          "width": 1200,
+          "height": 1800,
+          "format": "WEBP",
+          "content_type": "image/webp",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0276.jpg",
+          "downloaded_at": "2026-10-10T00:43:14+07:00",
+          "api_image_match": true,
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "front",
+          "reviewed_alt_vi": "Vòng cổ vải Xoắn — mặt trước"
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-2",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-2.jpg",
+          "sha256": "dcb56e3d03f012a971a7736274ff2547fdd1c79b24b8f277bfb8e14f130caee5",
+          "bytes": 223805,
+          "width": 1200,
+          "height": 1800,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg",
+          "downloaded_at": "2026-10-10T00:45:16+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "in_use",
+          "reviewed_alt_vi": "Vòng cổ vải Xoắn — ảnh sử dụng/trưng bày"
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-3",
+          "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg",
+          "filename_on_page": false,
+          "shared_generic": false,
+          "usage_rights_status": "unknown",
+          "status": "downloaded",
+          "api_image_match": true,
+          "previous_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+          "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-3.jpg",
+          "sha256": "f6a2630e6a9e6bf9ff9bb4fcc9e177224069e93c6cb37e87ec74822f8bd10853",
+          "bytes": 218462,
+          "width": 959,
+          "height": 1439,
+          "format": "JPEG",
+          "content_type": "image/jpeg",
+          "final_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg",
+          "downloaded_at": "2026-10-10T00:45:16+07:00",
+          "decision": "accept",
+          "decision_reason": "Khớp trang/API chính thức và đã xem ảnh",
+          "reviewed_view_type": "other",
+          "reviewed_alt_vi": "Vòng cổ vải Xoắn — các phối màu"
+        }
+      ],
+      "page_error": "Client error '403 Forbidden' for url 'https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403",
+      "api_evidence": {
+        "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-womans-xoan-necklaces",
+        "path": "data_collection/images/2026-10-10/pages/p-kilomet109-vong-co-xoan-17wac001.json",
+        "sha256": "62b2a57373cd6be3d79c766d2a7a05f2763f8e69782a9ec8d87a9dac9ccea660",
+        "name": "Xoắn Necklace",
+        "sku": "17WAc001",
+        "permalink": "https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/"
+      }
+    }
+  ],
+  "retry_attempts": [
+    {
+      "url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A18MT01_1_1.webp",
+      "status": 200
+    },
+    {
+      "url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26VT01_11_1__1789040414.webp",
+      "status": 200
+    },
+    {
+      "url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26BT03_1_1.webp",
+      "status": 200
+    },
+    {
+      "url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET02_8_1.webp",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-mans-phi-hemp-jacket",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-mens-thong-batik-shirt",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=mien-collection-2019-womans-van-dress",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-ha-skirt",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=mien-collection-2019-mans-vang-1-jacket",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-json/wc/store/v1/products?slug=phieu-collection-2017-womans-xoan-necklaces",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg",
+      "status": 200
+    },
+    {
+      "url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg",
+      "status": 200
+    }
+  ],
+  "review_completed_at": "2026-10-10T00:46:40+07:00",
+  "catalog_version_after": "seed-001-images",
+  "review_method": "Official page product title/SKU and image URL; Kilomet109 public Store API permalink/SKU/images; visual inspection of all five contact sheets. Image review only, not full product/origin/rights approval."
+}

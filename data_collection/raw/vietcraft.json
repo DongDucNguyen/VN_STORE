@@ -1,0 +1,96 @@
+{
+  "site": "https://vietcraft.vn",
+  "publisher": "Vietnam Handicraft Co., Ltd.",
+  "source_type": "official_maker",
+  "retrieved_at": "2026-10-10T00:35:00+07:00",
+  "collector": "Claude Code qua Chrome (WooCommerce Store API /wp-json/wc/store/v1/products/<id> của chính website)",
+  "image_rights": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+  "price_note": "API trả price = 0 cho mọi sản phẩm (site bán sỉ, không niêm yết giá) → price_vnd = null.",
+  "site_facts": [
+    {"url": "https://vietcraft.vn/about-us/", "quote": "Founded in 2010, Vietnam Handicraft Co., Ltd.", "supports": ["maker"]},
+    {"url": "https://vietcraft.vn/about-us/", "quote": "With a broad network of artisan villages and workshops, we help you source or co-develop unique handmade items", "supports": []}
+  ],
+  "notes": "Công ty vừa sản xuất vừa thu mua từ mạng lưới làng nghề → không xác định được làng nghề cụ thể. Mô tả bằng tiếng Anh; không có kích thước cố định (nhận đặt theo yêu cầu). 'Lacquer' không đủ căn cứ để gọi là sơn mài truyền thống.",
+  "items": [
+    {
+      "url": "https://vietcraft.vn/product/round-bamboo-woven-storage-basket-from-vietnam/",
+      "title": "Round Bamboo Woven Storage Basket from Vietnam",
+      "sku": "VH24026",
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24026-round-basket-from-Vietnam.jpg"],
+      "material_quotes": ["Material: 100% Natural Bamboo"],
+      "origin_quotes": ["Premium handcrafted round bamboo storage basket (VH24026) from Vietnam.", "Each piece is meticulously hand-woven by experienced Vietnamese craftspeople"]
+    },
+    {
+      "url": "https://vietcraft.vn/product/handwoven-seagrass-pendant-lampshade-made-in-vietnam/",
+      "title": "Handwoven Seagrass Pendant Lampshade made in Vietnam",
+      "sku": "VH24028",
+      "price_vnd": null,
+      "images": [
+        "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade.jpg",
+        "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade-from-Vietnam.jpg"
+      ],
+      "material_quotes": ["Crafted from 100% natural seagrass fibers by skilled Vietnamese artisans", "handwoven over a sturdy inner iron frame"],
+      "origin_quotes": ["Origin: Vietnam"]
+    },
+    {
+      "url": "https://vietcraft.vn/product/handcrafted-water-hyacinth-handbag-with-seashell-embellishments-from-vietnam/",
+      "title": "Handcrafted Water Hyacinth Handbag with Seashell Embellishments from Vietnam",
+      "sku": "VH24032",
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24032-handbag-made-of-water-hyacinth-from-Vietnam.jpg"],
+      "material_quotes": ["Crafted from natural water hyacinth—a fast-growing, renewable aquatic plant harvested directly from Vietnam’s waterways", "Woven Round Handles: Sturdy, ergonomically wrapped rattan/bamboo handles", "natural cowrie shell floral motifs and central faux-pearl accents"],
+      "origin_quotes": ["Each bag is individually hand-woven by experienced Vietnamese artisans"]
+    },
+    {
+      "url": "https://vietcraft.vn/product/wholesale-hand-woven-oval-rattan-basket-natural-bulk-storage-supplier-vietnam/",
+      "title": "WHOLESALE Hand-Woven Oval Rattan Basket – Natural Bulk Storage Supplier Vietnam",
+      "sku": "VH24040",
+      "price_vnd": null,
+      "images": [
+        "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/03/VH24040-oval-rattan-fruit-basket.jpg",
+        "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/12/VH24040-oval-rattan-fruit-basket-Vietnam.jpg"
+      ],
+      "material_quotes": ["100% Natural, Sustainably Sourced Rattan"],
+      "origin_quotes": [],
+      "note": "Tên sản phẩm có 'Supplier Vietnam' nhưng mô tả không ghi rõ nơi sản xuất → made_in_vn = unknown."
+    },
+    {
+      "url": "https://vietcraft.vn/product/woven-seagrass-basket-from-vietnam/",
+      "title": "Woven Seagrass Basket from Vietnam",
+      "sku": "VH24046",
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24046-woven-seagrass-basket.jpg"],
+      "material_quotes": ["handmade in Vietnam from 100% natural seagrass, a renewable and eco-friendly material grown in the Mekong Delta"],
+      "origin_quotes": ["Our woven seagrass baskets are handmade in Vietnam"]
+    },
+    {
+      "url": "https://vietcraft.vn/product/woven-rattan-tray-handmade-in-vietnam/",
+      "title": "Woven Rattan Tray – Handmade in Vietnam",
+      "sku": "VH24048",
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24048-woven-rattan-tray-in-Vietnam.jpg"],
+      "material_quotes": ["handcrafted by skilled Vietnamese artisans using 100% natural rattan"],
+      "origin_quotes": ["Origin: Handmade in Vietnam"]
+    },
+    {
+      "url": "https://vietcraft.vn/product/wholesale-hand-painted-lacquer-coconut-bowls-from-vietnam/",
+      "title": "Wholesale Hand-Painted Lacquer Coconut Bowls from Vietnam",
+      "sku": null,
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH2615-Wholesale-Hand-Painted-Lacquer-Coconut-Bowls.jpg"],
+      "material_quotes": ["Base Material: 100% Natural Coconut Shell (Reclaimed & Eco-friendly)", "combining renewable natural raw materials with traditional Vietnamese lacquerware"],
+      "origin_quotes": ["Origin: Proudly Handcrafted in Vietnam"],
+      "note": "API không có SKU; ảnh mang mã VH2615."
+    },
+    {
+      "url": "https://vietcraft.vn/product/lacquer-spun-bamboo-bowl-made-in-vietnam/",
+      "title": "Lacquer Spun Bamboo Bowl Made in Vietnam",
+      "sku": "VH24045",
+      "price_vnd": null,
+      "images": ["https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24045-lacquer-spun-bamboo-bowl.jpg"],
+      "material_quotes": ["handcrafted by Vietnamese artisans using natural bamboo"],
+      "origin_quotes": ["Our lacquer spun bamboo bowls are beautifully handcrafted by Vietnamese artisans"]
+    }
+  ]
+}

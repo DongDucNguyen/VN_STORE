@@ -1,0 +1,72 @@
+{
+  "site": "https://www.kilomet109.com",
+  "publisher": "Kilomet109",
+  "source_type": "official_brand",
+  "retrieved_at": "2026-10-10T01:15:00+07:00",
+  "collector": "Claude Code qua Chrome (WooCommerce Store API /wp-json/wc/store/v1/products/<id> của chính website)",
+  "image_rights": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+  "price_note": "Website niêm yết bằng USD → price_vnd = null trong catalog; giá USD chỉ lưu ở đây để tham khảo.",
+  "site_facts": [
+    {"url": "https://www.kilomet109.com/about/", "quote": "Thao collaborates with several teams of local craft artisans around Vietnam to grow, spin, weave, print and naturally dye Kilomet109 fabrics.", "supports": ["vn_material", "traditional_craft"]},
+    {"url": "https://www.kilomet109.com/about/", "quote": "After that the garments are hand-stitched in her Hanoi design studio.", "supports": ["made_in_vn"]},
+    {"url": "https://www.kilomet109.com/about/", "quote": "The entire production chain is self-contained within the craft communities themselves — using only locally sourced materials and homegrown eco-friendly dyes.", "supports": ["vn_material"]}
+  ],
+  "notes": "vn_brand để unknown: trang nói về nhà thiết kế Thao Vu tại Hà Nội nhưng không tự nhận là 'thương hiệu Việt' — người kiểm tra quyết định.",
+  "items": [
+    {
+      "url": "https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/",
+      "title": "Phi Jacket",
+      "sku": "17MJk003",
+      "price_usd": 450,
+      "price_note": "Thuộc tính trên trang ghi 'Price: 475', API trả 450 USD — lệch nhau.",
+      "attributes": ["Colour: Dark Indigo (aubergine)", "Size: XS, S, M, L, XL"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0402.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0408.jpg"],
+      "facts": ["The unusual shine on this jacket is made of hand woven hemp, indigo dye, and beeswax stone polished by Black H’mong artisans in Vietnam.", "handmade batik cotton lining"]
+    },
+    {
+      "url": "https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/",
+      "title": "Thông Shirt",
+      "sku": "17MT004",
+      "price_usd": 168,
+      "attributes": ["Colour: Stripe Batik", "Fabric: Cotton", "Size: XS, S, M, L, XL"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0423.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg"],
+      "facts": ["crafted with natural dyed soft cotton voile -fabrics developed in-house"]
+    },
+    {
+      "url": "https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/",
+      "title": "Vân Dress",
+      "sku": "19WDr006",
+      "price_usd": 425,
+      "attributes": ["Size: XS, S, M, L, XL", "Color: Charcoal Black, Dawn Indigo"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop4-19.jpg", "https://www.kilomet109.com/wp-content/uploads/2019/12/untitled-21.jpg", "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-19.jpg"],
+      "facts": ["made of luxurious Vân silk, with submerged intricate patterns woven directly into the fabric", "facing on all of the seams and hems is crafted from upcycled fabric from antique Thái ethni[c textiles]", "The charcoal version is dyed with ebony fruit, while the blue is dyed with indigo."]
+    },
+    {
+      "url": "https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/",
+      "title": "Hà Skirt",
+      "sku": "17WSk001",
+      "price_usd": 165,
+      "attributes": ["Size: XS, S, M, L", "Colour: Blue & White stripe", "Fabric: Cotton 100%"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9800.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg"],
+      "facts": ["Hand batik wavy pattern woman’s skirt with front & back pockets.", "Indigo dyed."]
+    },
+    {
+      "url": "https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/",
+      "title": "Vang I Jacket",
+      "sku": "19MJk001",
+      "price_usd": 475,
+      "attributes": ["Colour: Midnight Indigo", "Size: XS, S, M, L, XL"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg", "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg", "https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg"],
+      "facts": ["Hand woven hemp, indigo dye, and stone polished by Black H’mong artisans"]
+    },
+    {
+      "url": "https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/",
+      "title": "Xoắn Necklace",
+      "sku": "17WAc001",
+      "price_usd": 180,
+      "attributes": ["Colour: Brown/Green/Yellow, Dark Indigo/Light Indigo/Batik, Grey/Brick Pink", "Fabric: Cotton & Silk"],
+      "images": ["https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0276.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg", "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg"],
+      "facts": ["These necklaces are completely handmade, including the fabric, weaving, dyeing and hand stitching."]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-10-10T01:23:09+07:00",
+  "catalog_version": "seed-001-images",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "source_sha256": {
+    "backend/app/catalog/validation.py": "2e979b4838fb49b913876d203841bc17aba03b89d63fa27f7534b4026e80685e",
+    "backend/app/catalog/readiness.py": "2c583f96dbc016819b52b622a1eeca3de71489f6433ae6dcde2dbad585c33976",
+    "scripts/validate_catalog/validate.py": "e8856aff3cea3f2a498ff86a85f5a58722dfb7582fcb732b28c671062b794a31",
+    "scripts/validate_catalog/readiness.py": "d87340395dbe2a6c3835267cb8151b7b42b558aad5223b9156c0c6fd03704888",
+    "backend/tests/test_publication_readiness.py": "f80236be194decc7e461c0da70424493a7c09edf363d38423c0a764b45238a7d",
+    "frontend/playwright.config.ts": "0ce08846c9d6f42b45ff8fed434ff6ee7af99bf69523afa7825329a9c63b4735"
+  },
+  "checks": [
+    {
+      "name": "backend_pytest",
+      "command": ".venv/Scripts/python -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+      "exit_code": 0,
+      "passed": 137,
+      "warnings": 1,
+      "seconds": 0.96,
+      "scope": "Functional/regression tests; not retrieval benchmark"
+    },
+    {
+      "name": "fixture_generator_sync",
+      "command": "scripts.run_all_tests.check_fixture_in_sync()",
+      "exit_code": 0
+    },
+    {
+      "name": "frontend_typecheck",
+      "cwd": "frontend",
+      "command": "npx.cmd tsc -b",
+      "exit_code": 0
+    },
+    {
+      "name": "frontend_build",
+      "cwd": "frontend",
+      "command": "npx.cmd vite build --outDir ../artifacts/build --emptyOutDir",
+      "exit_code": 0,
+      "modules": 27,
+      "output": "artifacts/build"
+    },
+    {
+      "name": "playwright",
+      "cwd": "frontend",
+      "command": "npx.cmd playwright test --reporter=line",
+      "exit_code": 0,
+      "passed": 50,
+      "seconds": 16.7,
+      "workers": 2,
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "new_html_report": false
+    },
+    {
+      "name": "publication_readiness",
+      "command": ".venv/Scripts/python -X utf8 scripts/validate_catalog/readiness.py",
+      "exit_code": 0,
+      "report": "reports/data_quality/2026-10-10_011803-480875_publication-readiness.json"
+    },
+    {
+      "name": "quality_markdown_render",
+      "method": "render_markdown(database.json, quality_report, validate_catalog); assert valid image count 45",
+      "passed": true
+    }
+  ],
+  "real_catalog_api_audit": {
+    "method": "Inline Python: FastAPI TestClient, GET product detail and every image; content type image/*; SHA-256 against DB. No report from prior audit overwritten.",
+    "product_details_ok": 30,
+    "hash_verified_api_images": 45,
+    "published_visible": 0,
+    "draft_visible": 30,
+    "keyword_smoke": {
+      "query": "Marou Ben Tre 78%",
+      "expected_rank_1": "p-marou-ben-tre-78-80g",
+      "passed": true,
+      "is_benchmark": false
+    },
+    "reimport_current_catalog_identical": true,
+    "image_import_current_catalog_idempotent": true,
+    "future_editorial_changes_protected": false,
+    "database_unchanged": true
+  },
+  "readiness_summary": {
+    "products": 30,
+    "technical_ready": 0,
+    "review_pending": 30,
+    "passes_recorded_checks": 0,
+    "products_by_blocker_code": {
+      "image_rights": 30,
+      "published_no_image": 30,
+      "published_no_vn_claim": 2
+    },
+    "global_errors": 0
+  },
+  "image_files": {
+    "by_status": {
+      "valid": 45
+    },
+    "with_usable_rights_and_valid_file": 0,
+    "scope": "Kiểm tra đường dẫn, khả năng đọc, file khác rỗng và SHA-256 nếu đã khai báo; không giải mã ảnh hay duyệt nội dung/quyền."
+  },
+  "environment_limitations": [
+    "Initial sandbox pytest: 28 passed, 1 setup error (Windows temp directory access). Full suite approved outside sandbox: 137 passed.",
+    "Initial Vite/Playwright: spawn EPERM in sandbox. Approved runs outside sandbox passed.",
+    "Starlette/httpx deprecation warning remains. Playwright emitted NO_COLOR/FORCE_COLOR warnings."
+  ],
+  "not_claimed": [
+    "Official keyword baseline",
+    "Human-reviewed labels",
+    "Image publication licenses",
+    "Image decoding/perceptual similarity validation",
+    "Voice/image model benchmark"
+  ]
+}

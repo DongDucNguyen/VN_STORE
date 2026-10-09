@@ -1,0 +1,1868 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "fixture-001",
+  "locale": "vi-VN",
+  "currency": "VND",
+  "updated_at": "2026-10-09T00:00:00+07:00",
+  "categories": [
+    {
+      "id": "gom-su",
+      "name_vi": "Gốm sứ",
+      "parent_id": null,
+      "aliases": [
+        "gốm",
+        "sứ",
+        "đồ gốm"
+      ]
+    },
+    {
+      "id": "gom-su-binh-lo",
+      "name_vi": "Bình, lọ",
+      "parent_id": "gom-su",
+      "aliases": [
+        "bình hoa",
+        "lọ hoa",
+        "bình cắm hoa"
+      ]
+    },
+    {
+      "id": "gom-su-bat-dia",
+      "name_vi": "Bát, đĩa, chén ăn",
+      "parent_id": "gom-su",
+      "aliases": [
+        "bát",
+        "đĩa",
+        "dĩa",
+        "chén cơm"
+      ]
+    },
+    {
+      "id": "gom-su-am-chen",
+      "name_vi": "Ấm chén, bộ trà",
+      "parent_id": "gom-su",
+      "aliases": [
+        "ấm trà",
+        "bộ ấm chén",
+        "bình trà"
+      ]
+    },
+    {
+      "id": "gom-su-coc-ly",
+      "name_vi": "Cốc, ly",
+      "parent_id": "gom-su",
+      "aliases": [
+        "cốc",
+        "ly",
+        "tách",
+        "cốc sứ"
+      ]
+    },
+    {
+      "id": "may-tre-coi",
+      "name_vi": "Mây tre đan, cói",
+      "parent_id": null,
+      "aliases": [
+        "mây tre",
+        "đồ đan",
+        "cói",
+        "lục bình"
+      ]
+    },
+    {
+      "id": "may-tre-coi-gio",
+      "name_vi": "Giỏ, rổ, khay đan",
+      "parent_id": "may-tre-coi",
+      "aliases": [
+        "giỏ",
+        "rổ",
+        "khay",
+        "làn"
+      ]
+    },
+    {
+      "id": "may-tre-coi-tui",
+      "name_vi": "Túi đan",
+      "parent_id": "may-tre-coi",
+      "aliases": [
+        "túi cói",
+        "túi mây",
+        "túi đan"
+      ]
+    },
+    {
+      "id": "may-tre-coi-noi-that",
+      "name_vi": "Đồ nội thất, đèn đan",
+      "parent_id": "may-tre-coi",
+      "aliases": [
+        "chụp đèn",
+        "ghế mây"
+      ]
+    },
+    {
+      "id": "det-may",
+      "name_vi": "Dệt may và phụ kiện truyền thống",
+      "parent_id": null,
+      "aliases": [
+        "dệt may",
+        "vải",
+        "thổ cẩm"
+      ]
+    },
+    {
+      "id": "det-may-vai-lua",
+      "name_vi": "Lụa, vải",
+      "parent_id": "det-may",
+      "aliases": [
+        "lụa",
+        "vải lanh",
+        "vải thổ cẩm"
+      ]
+    },
+    {
+      "id": "det-may-khan",
+      "name_vi": "Khăn",
+      "parent_id": "det-may",
+      "aliases": [
+        "khăn lụa",
+        "khăn choàng"
+      ]
+    },
+    {
+      "id": "det-may-thoi-trang",
+      "name_vi": "Trang phục, phụ kiện",
+      "parent_id": "det-may",
+      "aliases": [
+        "áo dài",
+        "nón lá",
+        "ví"
+      ]
+    },
+    {
+      "id": "go-son-mai",
+      "name_vi": "Đồ gỗ, sơn mài, trang trí thủ công",
+      "parent_id": null,
+      "aliases": [
+        "đồ gỗ",
+        "sơn mài",
+        "đồ trang trí"
+      ]
+    },
+    {
+      "id": "go-son-mai-son-mai",
+      "name_vi": "Sơn mài",
+      "parent_id": "go-son-mai",
+      "aliases": [
+        "hộp sơn mài",
+        "tranh sơn mài",
+        "khay sơn mài"
+      ]
+    },
+    {
+      "id": "go-son-mai-do-go",
+      "name_vi": "Đồ gỗ",
+      "parent_id": "go-son-mai",
+      "aliases": [
+        "đồ gỗ mỹ nghệ",
+        "tượng gỗ"
+      ]
+    },
+    {
+      "id": "go-son-mai-tranh",
+      "name_vi": "Tranh, đồ trang trí",
+      "parent_id": "go-son-mai",
+      "aliases": [
+        "tranh Đông Hồ",
+        "tranh dân gian"
+      ]
+    },
+    {
+      "id": "thuc-pham",
+      "name_vi": "Thực phẩm đóng gói, đặc sản",
+      "parent_id": null,
+      "aliases": [
+        "đặc sản",
+        "đồ ăn",
+        "thực phẩm"
+      ]
+    },
+    {
+      "id": "thuc-pham-tra",
+      "name_vi": "Trà",
+      "parent_id": "thuc-pham",
+      "aliases": [
+        "chè",
+        "trà xanh",
+        "chè búp"
+      ]
+    },
+    {
+      "id": "thuc-pham-ca-phe",
+      "name_vi": "Cà phê",
+      "parent_id": "thuc-pham",
+      "aliases": [
+        "cafe",
+        "cà phê hạt",
+        "cà phê bột"
+      ]
+    },
+    {
+      "id": "thuc-pham-banh-keo",
+      "name_vi": "Bánh kẹo",
+      "parent_id": "thuc-pham",
+      "aliases": [
+        "bánh",
+        "kẹo",
+        "mứt"
+      ]
+    },
+    {
+      "id": "thuc-pham-gia-vi",
+      "name_vi": "Gia vị, nước chấm",
+      "parent_id": "thuc-pham",
+      "aliases": [
+        "nước mắm",
+        "tiêu",
+        "muối"
+      ]
+    }
+  ],
+  "search_dictionary": {
+    "synonyms": [
+      {
+        "id": "syn-binh-lo",
+        "relation": "synonym",
+        "terms": [
+          "bình hoa",
+          "lọ hoa"
+        ],
+        "category_ids": [
+          "gom-su-binh-lo"
+        ]
+      },
+      {
+        "id": "syn-tui-gio-xach",
+        "relation": "synonym",
+        "terms": [
+          "túi xách",
+          "giỏ xách"
+        ],
+        "category_ids": [
+          "may-tre-coi-tui"
+        ]
+      },
+      {
+        "id": "brd-gom-su",
+        "relation": "broader",
+        "head": "gốm",
+        "terms": [
+          "gốm",
+          "sứ",
+          "sành"
+        ],
+        "note": "Tìm 'gốm' có thể gồm sứ/sành với trọng số thấp; tìm 'sứ' không mở rộng sang gốm."
+      },
+      {
+        "id": "cfs-may-tre",
+        "relation": "confusable",
+        "terms": [
+          "mây",
+          "tre"
+        ],
+        "note": "Hai vật liệu khác nhau; không mở rộng tự động."
+      },
+      {
+        "id": "cfs-may-coi",
+        "relation": "confusable",
+        "terms": [
+          "mây",
+          "cói",
+          "lục bình"
+        ],
+        "note": "Hai vật liệu khác nhau; không mở rộng tự động."
+      },
+      {
+        "id": "cfs-lua-lua",
+        "relation": "confusable",
+        "terms": [
+          "lụa",
+          "lúa"
+        ],
+        "note": "Không tự sửa giữa hai từ."
+      },
+      {
+        "id": "cfs-son-mai-go-son",
+        "relation": "confusable",
+        "terms": [
+          "sơn mài",
+          "gỗ sơn"
+        ],
+        "note": "Sơn mài là kỹ thuật riêng; gỗ sơn thường không phải sơn mài."
+      },
+      {
+        "id": "cfs-det-theu",
+        "relation": "confusable",
+        "terms": [
+          "dệt",
+          "thêu"
+        ]
+      }
+    ],
+    "regional_terms": [
+      {
+        "id": "reg-coc-ly",
+        "relation": "regional",
+        "terms": [
+          "cốc",
+          "ly"
+        ],
+        "category_ids": [
+          "gom-su-coc-ly"
+        ],
+        "regions": [
+          "bac",
+          "nam"
+        ],
+        "note": "Bắc: cốc; Nam: ly."
+      },
+      {
+        "id": "reg-bat-chen",
+        "relation": "regional",
+        "terms": [
+          "bát",
+          "chén"
+        ],
+        "category_ids": [
+          "gom-su-bat-dia"
+        ],
+        "regions": [
+          "bac",
+          "nam"
+        ],
+        "note": "Bát ăn cơm (Bắc) ~ chén (Nam). Ở miền Bắc 'chén' còn chỉ chén uống trà nên chỉ áp dụng trong danh mục bát đĩa."
+      },
+      {
+        "id": "reg-dia-dia",
+        "relation": "regional",
+        "terms": [
+          "đĩa",
+          "dĩa"
+        ],
+        "category_ids": [
+          "gom-su-bat-dia"
+        ],
+        "regions": [
+          "bac",
+          "nam"
+        ]
+      },
+      {
+        "id": "reg-tra-che",
+        "relation": "regional",
+        "terms": [
+          "trà",
+          "chè"
+        ],
+        "category_ids": [
+          "thuc-pham-tra",
+          "gom-su-am-chen"
+        ],
+        "note": "Ngoài danh mục trà, 'chè' còn là món ăn ngọt."
+      },
+      {
+        "id": "reg-cafe",
+        "relation": "regional",
+        "terms": [
+          "cà phê",
+          "cafe",
+          "cà fê"
+        ],
+        "category_ids": [
+          "thuc-pham-ca-phe"
+        ]
+      }
+    ],
+    "brand_aliases": [],
+    "unit_aliases": [
+      {
+        "unit": "VND",
+        "aliases": [
+          "đ",
+          "đồng",
+          "vnđ",
+          "vnd"
+        ],
+        "factor": 1
+      },
+      {
+        "unit": "VND",
+        "aliases": [
+          "k",
+          "nghìn",
+          "ngàn",
+          "nghìn đồng"
+        ],
+        "factor": 1000
+      },
+      {
+        "unit": "VND",
+        "aliases": [
+          "tr",
+          "triệu",
+          "củ"
+        ],
+        "factor": 1000000
+      },
+      {
+        "unit": "g",
+        "aliases": [
+          "g",
+          "gam",
+          "gram"
+        ],
+        "factor": 1
+      },
+      {
+        "unit": "g",
+        "aliases": [
+          "lạng"
+        ],
+        "factor": 100
+      },
+      {
+        "unit": "kg",
+        "aliases": [
+          "kg",
+          "ký",
+          "cân",
+          "kí"
+        ],
+        "factor": 1
+      },
+      {
+        "unit": "ml",
+        "aliases": [
+          "ml"
+        ],
+        "factor": 1
+      },
+      {
+        "unit": "l",
+        "aliases": [
+          "l",
+          "lít"
+        ],
+        "factor": 1
+      }
+    ]
+  },
+  "brands": [
+    {
+      "id": "brand-fx-a",
+      "name": "Mẫu A Ceramics",
+      "aliases": [],
+      "official_url": null,
+      "origin_country": "VN",
+      "origin_source_ids": [
+        "src-fx-1"
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ]
+    },
+    {
+      "id": "brand-fx-b",
+      "name": "Cói Mẫu B",
+      "aliases": [],
+      "official_url": null,
+      "origin_country": "VN",
+      "origin_source_ids": [
+        "src-fx-1"
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ]
+    }
+  ],
+  "makers": [
+    {
+      "id": "maker-fx-htx",
+      "name": "HTX Mẫu (fixture)",
+      "maker_type": "cooperative",
+      "place_ids": [
+        "lang-may-tre-phu-vinh"
+      ],
+      "official_url": null,
+      "source_ids": [
+        "src-fx-1"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "lang-gom-bat-trang",
+      "place_type": "craft_village",
+      "name_as_sourced": "làng gốm Bát Tràng",
+      "name_normalized": "Bát Tràng",
+      "aliases": [
+        "bat trang"
+      ],
+      "parent_id": null,
+      "admin_code": null,
+      "admin_code_scheme": null,
+      "verified_at": "2026-10-09",
+      "source_ids": [
+        "src-fx-2"
+      ]
+    },
+    {
+      "id": "lang-coi-kim-son",
+      "place_type": "craft_village",
+      "name_as_sourced": "làng cói Kim Sơn",
+      "name_normalized": "Kim Sơn",
+      "aliases": [],
+      "parent_id": null,
+      "admin_code": null,
+      "admin_code_scheme": null,
+      "verified_at": "2026-10-09",
+      "source_ids": [
+        "src-fx-2"
+      ]
+    },
+    {
+      "id": "lang-may-tre-phu-vinh",
+      "place_type": "craft_village",
+      "name_as_sourced": "làng mây tre đan Phú Vinh",
+      "name_normalized": "Phú Vinh",
+      "aliases": [],
+      "parent_id": null,
+      "admin_code": null,
+      "admin_code_scheme": null,
+      "verified_at": "2026-10-09",
+      "source_ids": [
+        "src-fx-2"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-fx-1",
+      "url": "https://example.invalid/src-fx-1",
+      "title": "Nguồn giả src-fx-1",
+      "publisher": "FIXTURE — dữ liệu giả cho kiểm thử",
+      "source_type": "other",
+      "retrieved_at": "2026-10-09T00:00:00+07:00",
+      "usage_rights_note": "Không phải nguồn thật",
+      "supports": [
+        "price",
+        "materials",
+        "made_in_vn"
+      ]
+    },
+    {
+      "id": "src-fx-2",
+      "url": "https://example.invalid/src-fx-2",
+      "title": "Nguồn giả src-fx-2",
+      "publisher": "FIXTURE — dữ liệu giả cho kiểm thử",
+      "source_type": "other",
+      "retrieved_at": "2026-10-09T00:00:00+07:00",
+      "usage_rights_note": "Không phải nguồn thật",
+      "supports": [
+        "place"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "fx-binh-gom-men-lam",
+      "slug": "fx-binh-gom-men-lam",
+      "name_vi": "Bình gốm men lam vẽ sen",
+      "status": "published",
+      "category_id": "gom-su-binh-lo",
+      "brand_id": "brand-fx-a",
+      "maker_id": null,
+      "short_description_vi": "Bình cắm hoa gốm men lam, vẽ tay hoa sen.",
+      "description_vi": "Bình cắm hoa gốm men lam, vẽ tay hoa sen. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [
+        "quà tặng",
+        "trang trí"
+      ],
+      "intended_uses": [],
+      "materials": [
+        "gốm"
+      ],
+      "colors": [
+        "lam",
+        "trắng"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "vẽ tay",
+        "men lam"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-BINH-GOM-MEN-LAM-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 450000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        },
+        {
+          "sku": "FX-FX-BINH-GOM-MEN-LAM-2",
+          "name_vi": "Mẫu 2",
+          "attributes": {},
+          "price_vnd": 520000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-gom-bat-trang"
+        ],
+        "craft_village_id": "lang-gom-bat-trang"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "craft_village",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09",
+          "place_ids": [
+            "lang-gom-bat-trang"
+          ]
+        },
+        {
+          "claim_type": "traditional_craft",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-binh-gom-men-lam-1",
+          "local_path": "assets/img-fx-binh-gom-men-lam-1.svg",
+          "source_url": null,
+          "alt_vi": "Bình gốm men lam vẽ sen — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-binh-gom-men-lam-2",
+          "local_path": "assets/img-fx-binh-gom-men-lam-2.svg",
+          "source_url": null,
+          "alt_vi": "Bình gốm men lam vẽ sen — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-binh-gom-men-ran",
+      "slug": "fx-binh-gom-men-ran",
+      "name_vi": "Lọ hoa gốm men rạn",
+      "status": "published",
+      "category_id": "gom-su-binh-lo",
+      "brand_id": "brand-fx-a",
+      "maker_id": null,
+      "short_description_vi": "Lọ hoa men rạn cổ, dáng cao.",
+      "description_vi": "Lọ hoa men rạn cổ, dáng cao. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "gốm"
+      ],
+      "colors": [
+        "nâu"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "men rạn"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-BINH-GOM-MEN-RAN-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 680000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-gom-bat-trang"
+        ],
+        "craft_village_id": "lang-gom-bat-trang"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "craft_village",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09",
+          "place_ids": [
+            "lang-gom-bat-trang"
+          ]
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-binh-gom-men-ran-1",
+          "local_path": "assets/img-fx-binh-gom-men-ran-1.svg",
+          "source_url": null,
+          "alt_vi": "Lọ hoa gốm men rạn — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-binh-gom-men-ran-2",
+          "local_path": "assets/img-fx-binh-gom-men-ran-2.svg",
+          "source_url": null,
+          "alt_vi": "Lọ hoa gốm men rạn — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-bat-su-trang",
+      "slug": "fx-bat-su-trang",
+      "name_vi": "Bát sứ trắng ăn cơm",
+      "status": "published",
+      "category_id": "gom-su-bat-dia",
+      "brand_id": "brand-fx-a",
+      "maker_id": null,
+      "short_description_vi": "Bát sứ trắng trơn dùng hằng ngày.",
+      "description_vi": "Bát sứ trắng trơn dùng hằng ngày. (Mô tả giả cho kiểm thử.)",
+      "aliases": [
+        "chén cơm"
+      ],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "sứ"
+      ],
+      "colors": [
+        "trắng"
+      ],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-BAT-SU-TRANG-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 45000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "vn_brand",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-bat-su-trang-1",
+          "local_path": "assets/img-fx-bat-su-trang-1.svg",
+          "source_url": null,
+          "alt_vi": "Bát sứ trắng ăn cơm — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-bat-su-trang-2",
+          "local_path": "assets/img-fx-bat-su-trang-2.svg",
+          "source_url": null,
+          "alt_vi": "Bát sứ trắng ăn cơm — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-tui-coi-quai-da",
+      "slug": "fx-tui-coi-quai-da",
+      "name_vi": "Túi cói quai da",
+      "status": "published",
+      "category_id": "may-tre-coi-tui",
+      "brand_id": "brand-fx-b",
+      "maker_id": null,
+      "short_description_vi": "Túi cói đan tay, quai da, có lót trong.",
+      "description_vi": "Túi cói đan tay, quai da, có lót trong. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [
+        "đi biển"
+      ],
+      "intended_uses": [],
+      "materials": [
+        "cói",
+        "da"
+      ],
+      "colors": [
+        "be"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "đan tay"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-TUI-COI-QUAI-DA-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 280000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-coi-kim-son"
+        ],
+        "craft_village_id": "lang-coi-kim-son"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "craft_village",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09",
+          "place_ids": [
+            "lang-coi-kim-son"
+          ]
+        },
+        {
+          "claim_type": "vn_material",
+          "value": true,
+          "status": "source_checked",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-tui-coi-quai-da-1",
+          "local_path": "assets/img-fx-tui-coi-quai-da-1.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói quai da — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-tui-coi-quai-da-2",
+          "local_path": "assets/img-fx-tui-coi-quai-da-2.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói quai da — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-tui-coi-tron",
+      "slug": "fx-tui-coi-tron",
+      "name_vi": "Túi cói tròn thêu hoa",
+      "status": "published",
+      "category_id": "may-tre-coi-tui",
+      "brand_id": "brand-fx-b",
+      "maker_id": null,
+      "short_description_vi": "Túi cói dáng tròn, thêu hoa nhỏ.",
+      "description_vi": "Túi cói dáng tròn, thêu hoa nhỏ. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "cói"
+      ],
+      "colors": [
+        "be",
+        "đỏ"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "đan tay",
+        "thêu"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-TUI-COI-TRON-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 350000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-coi-kim-son"
+        ],
+        "craft_village_id": "lang-coi-kim-son"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "craft_village",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09",
+          "place_ids": [
+            "lang-coi-kim-son"
+          ]
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-tui-coi-tron-1",
+          "local_path": "assets/img-fx-tui-coi-tron-1.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói tròn thêu hoa — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-tui-coi-tron-2",
+          "local_path": "assets/img-fx-tui-coi-tron-2.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói tròn thêu hoa — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-tui-coi-lien-he",
+      "slug": "fx-tui-coi-lien-he",
+      "name_vi": "Túi cói hộp nắp gỗ",
+      "status": "published",
+      "category_id": "may-tre-coi-tui",
+      "brand_id": "brand-fx-b",
+      "maker_id": null,
+      "short_description_vi": "Túi cói dáng hộp, nắp gỗ. Giá liên hệ.",
+      "description_vi": "Túi cói dáng hộp, nắp gỗ. Giá liên hệ. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "cói",
+        "gỗ"
+      ],
+      "colors": [
+        "be"
+      ],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-TUI-COI-LIEN-HE-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": null,
+          "original_price_vnd": null,
+          "price_source_id": null,
+          "observed_at": null,
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-coi-kim-son"
+        ],
+        "craft_village_id": "lang-coi-kim-son"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-tui-coi-lien-he-1",
+          "local_path": "assets/img-fx-tui-coi-lien-he-1.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói hộp nắp gỗ — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-tui-coi-lien-he-2",
+          "local_path": "assets/img-fx-tui-coi-lien-he-2.svg",
+          "source_url": null,
+          "alt_vi": "Túi cói hộp nắp gỗ — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-gio-may-co-quai",
+      "slug": "fx-gio-may-co-quai",
+      "name_vi": "Giỏ mây có quai xách",
+      "status": "published",
+      "category_id": "may-tre-coi-gio",
+      "brand_id": null,
+      "maker_id": "maker-fx-htx",
+      "short_description_vi": "Giỏ mây đan có quai, đựng đồ đi chợ.",
+      "description_vi": "Giỏ mây đan có quai, đựng đồ đi chợ. (Mô tả giả cho kiểm thử.)",
+      "aliases": [
+        "làn mây"
+      ],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "mây"
+      ],
+      "colors": [
+        "nâu"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "đan tay"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-GIO-MAY-CO-QUAI-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 360000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-may-tre-phu-vinh"
+        ],
+        "craft_village_id": "lang-may-tre-phu-vinh"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "craft_village",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09",
+          "place_ids": [
+            "lang-may-tre-phu-vinh"
+          ]
+        },
+        {
+          "claim_type": "traditional_craft",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-gio-may-co-quai-1",
+          "local_path": "assets/img-fx-gio-may-co-quai-1.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ mây có quai xách — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-gio-may-co-quai-2",
+          "local_path": "assets/img-fx-gio-may-co-quai-2.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ mây có quai xách — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-gio-tre-khong-quai",
+      "slug": "fx-gio-tre-khong-quai",
+      "name_vi": "Giỏ tre đựng hoa quả",
+      "status": "published",
+      "category_id": "may-tre-coi-gio",
+      "brand_id": null,
+      "maker_id": "maker-fx-htx",
+      "short_description_vi": "Giỏ tre đan không quai.",
+      "description_vi": "Giỏ tre đan không quai. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "tre"
+      ],
+      "colors": [
+        "vàng"
+      ],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-GIO-TRE-KHONG-QUAI-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 150000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [
+          "lang-may-tre-phu-vinh"
+        ],
+        "craft_village_id": "lang-may-tre-phu-vinh"
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-gio-tre-khong-quai-1",
+          "local_path": "assets/img-fx-gio-tre-khong-quai-1.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ tre đựng hoa quả — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-gio-tre-khong-quai-2",
+          "local_path": "assets/img-fx-gio-tre-khong-quai-2.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ tre đựng hoa quả — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-gio-nhua-dan",
+      "slug": "fx-gio-nhua-dan",
+      "name_vi": "Giỏ nhựa đan giả mây",
+      "status": "published",
+      "category_id": "may-tre-coi-gio",
+      "brand_id": null,
+      "maker_id": "maker-fx-htx",
+      "short_description_vi": "Giỏ nhựa đan giả mây, có quai.",
+      "description_vi": "Giỏ nhựa đan giả mây, có quai. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "nhựa"
+      ],
+      "colors": [
+        "nâu"
+      ],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-GIO-NHUA-DAN-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 120000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "traditional_craft",
+          "value": false,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-gio-nhua-dan-1",
+          "local_path": "assets/img-fx-gio-nhua-dan-1.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ nhựa đan giả mây — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-gio-nhua-dan-2",
+          "local_path": "assets/img-fx-gio-nhua-dan-2.svg",
+          "source_url": null,
+          "alt_vi": "Giỏ nhựa đan giả mây — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-khan-lua-do",
+      "slug": "fx-khan-lua-do",
+      "name_vi": "Khăn lụa tơ tằm màu đỏ",
+      "status": "published",
+      "category_id": "det-may-khan",
+      "brand_id": null,
+      "maker_id": null,
+      "short_description_vi": "Khăn lụa tơ tằm nhuộm đỏ.",
+      "description_vi": "Khăn lụa tơ tằm nhuộm đỏ. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [
+        "quà tặng mẹ"
+      ],
+      "materials": [
+        "lụa"
+      ],
+      "colors": [
+        "đỏ"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "dệt"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-KHAN-LUA-DO-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 890000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "traditional_craft",
+          "value": "unknown",
+          "status": "manufacturer_declared",
+          "source_ids": [],
+          "checked_at": null
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-khan-lua-do-1",
+          "local_path": "assets/img-fx-khan-lua-do-1.svg",
+          "source_url": null,
+          "alt_vi": "Khăn lụa tơ tằm màu đỏ — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-khan-lua-do-2",
+          "local_path": "assets/img-fx-khan-lua-do-2.svg",
+          "source_url": null,
+          "alt_vi": "Khăn lụa tơ tằm màu đỏ — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-hop-son-mai",
+      "slug": "fx-hop-son-mai",
+      "name_vi": "Hộp sơn mài khảm trứng",
+      "status": "published",
+      "category_id": "go-son-mai-son-mai",
+      "brand_id": null,
+      "maker_id": null,
+      "short_description_vi": "Hộp sơn mài khảm vỏ trứng.",
+      "description_vi": "Hộp sơn mài khảm vỏ trứng. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [
+        "quà tặng"
+      ],
+      "intended_uses": [],
+      "materials": [
+        "gỗ",
+        "sơn ta"
+      ],
+      "colors": [
+        "đen",
+        "vàng"
+      ],
+      "dimensions": {},
+      "craft_techniques": [
+        "sơn mài",
+        "khảm trứng"
+      ],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-HOP-SON-MAI-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 1500000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        },
+        {
+          "claim_type": "traditional_craft",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-hop-son-mai-1",
+          "local_path": "assets/img-fx-hop-son-mai-1.svg",
+          "source_url": null,
+          "alt_vi": "Hộp sơn mài khảm trứng — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-hop-son-mai-2",
+          "local_path": "assets/img-fx-hop-son-mai-2.svg",
+          "source_url": null,
+          "alt_vi": "Hộp sơn mài khảm trứng — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-tra-thai-nguyen",
+      "slug": "fx-tra-thai-nguyen",
+      "name_vi": "Trà búp Thái Nguyên 200g",
+      "status": "published",
+      "category_id": "thuc-pham-tra",
+      "brand_id": null,
+      "maker_id": null,
+      "short_description_vi": "Chè búp sao khô, gói 200g.",
+      "description_vi": "Chè búp sao khô, gói 200g. (Mô tả giả cho kiểm thử.)",
+      "aliases": [
+        "chè thái"
+      ],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [],
+      "colors": [],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-TRA-THAI-NGUYEN-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 180000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": null,
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "vn_material",
+          "value": true,
+          "status": "manufacturer_declared",
+          "source_ids": [
+            "src-fx-1"
+          ],
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "certifications": [],
+      "images": [
+        {
+          "id": "img-fx-tra-thai-nguyen-1",
+          "local_path": "assets/img-fx-tra-thai-nguyen-1.svg",
+          "source_url": null,
+          "alt_vi": "Trà búp Thái Nguyên 200g — ảnh placeholder 1",
+          "view_type": "front",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        },
+        {
+          "id": "img-fx-tra-thai-nguyen-2",
+          "local_path": "assets/img-fx-tra-thai-nguyen-2.svg",
+          "source_url": null,
+          "alt_vi": "Trà búp Thái Nguyên 200g — ảnh placeholder 2",
+          "view_type": "side",
+          "variant_sku": null,
+          "sha256": null,
+          "usage_rights": {
+            "status": "owned",
+            "note": "Placeholder tự tạo cho kiểm thử"
+          }
+        }
+      ],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": "2026-10-09T00:00:00+07:00"
+    },
+    {
+      "id": "fx-ban-nhap",
+      "slug": "fx-ban-nhap",
+      "name_vi": "Bình gốm bản nháp chưa duyệt",
+      "status": "draft",
+      "category_id": "gom-su-binh-lo",
+      "brand_id": "brand-fx-a",
+      "maker_id": null,
+      "short_description_vi": "Bản nháp, không được hiển thị.",
+      "description_vi": "Bản nháp, không được hiển thị. (Mô tả giả cho kiểm thử.)",
+      "aliases": [],
+      "tags": [],
+      "intended_uses": [],
+      "materials": [
+        "gốm"
+      ],
+      "colors": [],
+      "dimensions": {},
+      "craft_techniques": [],
+      "motifs": [],
+      "variants": [
+        {
+          "sku": "FX-FX-BAN-NHAP-1",
+          "name_vi": "Mẫu 1",
+          "attributes": {},
+          "price_vnd": 100000,
+          "original_price_vnd": null,
+          "price_source_id": "src-fx-1",
+          "observed_at": "2026-10-09",
+          "availability": "unknown"
+        }
+      ],
+      "origin": {
+        "brand_origin_country": "VN",
+        "manufacturing_country": "VN",
+        "material_origins": [],
+        "place_ids": [],
+        "craft_village_id": null
+      },
+      "origin_claims": [
+        {
+          "claim_type": "made_in_vn",
+          "value": "unknown",
+          "status": "manufacturer_declared",
+          "source_ids": [],
+          "checked_at": null
+        }
+      ],
+      "certifications": [],
+      "images": [],
+      "source_ids": [
+        "src-fx-1"
+      ],
+      "created_at": "2026-10-09T00:00:00+07:00",
+      "updated_at": "2026-10-09T00:00:00+07:00",
+      "reviewed_at": null
+    }
+  ]
+}

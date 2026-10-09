@@ -1,0 +1,361 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vnstore.local/database.schema.json",
+  "title": "VNStore catalog",
+  "description": "Hợp đồng dữ liệu cho database.json (PLAN.md mục 3.2). Kiểm tra tham chiếu chéo nằm trong backend/app/catalog/validation.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "catalog_version", "locale", "currency", "updated_at",
+    "categories", "brands", "makers", "places", "sources", "products", "search_dictionary"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "catalog_version": { "type": "string", "minLength": 1 },
+    "locale": { "const": "vi-VN" },
+    "currency": { "const": "VND" },
+    "updated_at": { "type": ["string", "null"], "format": "date-time" },
+    "categories": { "type": "array", "items": { "$ref": "#/$defs/category" } },
+    "brands": { "type": "array", "items": { "$ref": "#/$defs/brand" } },
+    "makers": { "type": "array", "items": { "$ref": "#/$defs/maker" } },
+    "places": { "type": "array", "items": { "$ref": "#/$defs/place" } },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
+    "products": { "type": "array", "items": { "$ref": "#/$defs/product" } },
+    "search_dictionary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["synonyms", "regional_terms", "brand_aliases", "unit_aliases"],
+      "properties": {
+        "synonyms": { "type": "array", "items": { "$ref": "#/$defs/term_relation" } },
+        "regional_terms": { "type": "array", "items": { "$ref": "#/$defs/term_relation" } },
+        "brand_aliases": { "type": "array", "items": { "$ref": "#/$defs/brand_alias" } },
+        "unit_aliases": { "type": "array", "items": { "$ref": "#/$defs/unit_alias" } }
+      }
+    }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$", "maxLength": 120 },
+    "id_list": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "date": { "type": "string", "format": "date" },
+    "nullable_date": { "type": ["string", "null"], "format": "date" },
+    "nullable_datetime": { "type": ["string", "null"], "format": "date-time" },
+    "non_empty_text": { "type": "string", "minLength": 1 },
+    "text_list": { "type": "array", "items": { "$ref": "#/$defs/non_empty_text" }, "uniqueItems": true },
+    "url": { "type": "string", "pattern": "^https?://" },
+    "tri_state": { "enum": [true, false, "unknown"] },
+
+    "category": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name_vi", "parent_id"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name_vi": { "$ref": "#/$defs/non_empty_text" },
+        "parent_id": { "type": ["string", "null"] },
+        "aliases": { "$ref": "#/$defs/text_list" },
+        "description_vi": { "type": "string" }
+      }
+    },
+
+    "sourced_alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "source_ids"],
+      "properties": {
+        "value": { "$ref": "#/$defs/non_empty_text" },
+        "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+      }
+    },
+
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "source_ids"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "$ref": "#/$defs/non_empty_text" },
+        "aliases": { "type": "array", "items": { "$ref": "#/$defs/sourced_alias" } },
+        "official_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "origin_country": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" },
+        "origin_source_ids": { "$ref": "#/$defs/id_list" },
+        "place_ids": { "$ref": "#/$defs/id_list" },
+        "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+      }
+    },
+
+    "maker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "maker_type", "source_ids"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "$ref": "#/$defs/non_empty_text" },
+        "maker_type": { "enum": ["company", "cooperative", "artisan", "household", "unknown"] },
+        "aliases": { "type": "array", "items": { "$ref": "#/$defs/sourced_alias" } },
+        "brand_ids": { "$ref": "#/$defs/id_list" },
+        "place_ids": { "$ref": "#/$defs/id_list" },
+        "official_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+      }
+    },
+
+    "place": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "place_type", "name_as_sourced", "name_normalized", "source_ids"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "place_type": { "enum": ["country", "province", "district", "commune", "craft_village", "other"] },
+        "name_as_sourced": { "$ref": "#/$defs/non_empty_text", "description": "Tên đúng như nguồn ghi, không ghi đè khi địa danh đổi." },
+        "name_normalized": { "$ref": "#/$defs/non_empty_text" },
+        "aliases": { "$ref": "#/$defs/text_list" },
+        "parent_id": { "type": ["string", "null"] },
+        "admin_code": { "type": ["string", "null"], "description": "Mã đơn vị hành chính chuẩn nếu có." },
+        "admin_code_scheme": { "type": ["string", "null"] },
+        "historical_names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name"],
+            "properties": {
+              "name": { "$ref": "#/$defs/non_empty_text" },
+              "valid_until": { "$ref": "#/$defs/nullable_date" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "verified_at": { "$ref": "#/$defs/nullable_date" },
+        "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+      }
+    },
+
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "url", "publisher", "source_type", "retrieved_at"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "title": { "type": "string" },
+        "publisher": { "$ref": "#/$defs/non_empty_text" },
+        "source_type": {
+          "enum": [
+            "official_brand", "official_maker", "cooperative", "artisan_catalog",
+            "supplier_data", "own_photo", "government", "press", "marketplace", "other"
+          ]
+        },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "usage_rights_note": { "type": "string" },
+        "supports": {
+          "description": "Thuộc tính mà nguồn này hỗ trợ, ví dụ price, materials, made_in_vn.",
+          "$ref": "#/$defs/text_list"
+        },
+        "archived_copy_path": { "type": ["string", "null"] }
+      }
+    },
+
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "length_mm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "width_mm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "height_mm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "diameter_mm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "volume_ml": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "weight_g": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "source_ids": { "$ref": "#/$defs/id_list" }
+      }
+    },
+
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sku", "price_vnd", "availability"],
+      "properties": {
+        "sku": { "$ref": "#/$defs/non_empty_text" },
+        "name_vi": { "type": "string" },
+        "attributes": { "type": "object", "additionalProperties": { "type": "string" } },
+        "price_vnd": { "type": ["integer", "null"], "exclusiveMinimum": 0, "description": "null = chưa biết giá (UI: Liên hệ). Không dùng 0." },
+        "original_price_vnd": { "type": ["integer", "null"], "exclusiveMinimum": 0 },
+        "price_source_id": { "type": ["string", "null"] },
+        "observed_at": { "$ref": "#/$defs/nullable_date" },
+        "availability": { "enum": ["in_stock", "out_of_stock", "unknown"] }
+      },
+      "if": { "properties": { "price_vnd": { "type": "integer" } } },
+      "then": {
+        "required": ["price_source_id", "observed_at"],
+        "properties": { "price_source_id": { "type": "string" }, "observed_at": { "type": "string" } }
+      }
+    },
+
+    "origin_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_type", "value", "status", "source_ids", "checked_at"],
+      "properties": {
+        "claim_type": { "enum": ["vn_brand", "made_in_vn", "vn_material", "traditional_craft", "craft_village"] },
+        "value": { "$ref": "#/$defs/tri_state" },
+        "detail_vi": { "type": "string", "description": "Ví dụ: nguyên liệu nào là của Việt Nam, kỹ thuật nào." },
+        "place_ids": { "$ref": "#/$defs/id_list" },
+        "status": {
+          "enum": ["manufacturer_declared", "source_checked", "unverified"],
+          "description": "manufacturer_declared: nhà sản xuất công bố. source_checked: đã đối chiếu nguồn (không phải xác thực độc lập hàng hóa)."
+        },
+        "source_ids": { "$ref": "#/$defs/id_list" },
+        "checked_at": { "$ref": "#/$defs/nullable_date" },
+        "note": { "type": "string" }
+      },
+      "if": { "properties": { "value": { "type": "boolean" } } },
+      "then": {
+        "properties": { "source_ids": { "minItems": 1 }, "checked_at": { "type": "string" } }
+      }
+    },
+
+    "certification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "source_ids"],
+      "properties": {
+        "name": { "$ref": "#/$defs/non_empty_text" },
+        "issuer": { "type": ["string", "null"] },
+        "certificate_id": { "type": ["string", "null"] },
+        "valid_until": { "$ref": "#/$defs/nullable_date" },
+        "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+      }
+    },
+
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "local_path", "alt_vi", "view_type", "usage_rights"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "local_path": {
+          "anyOf": [{ "type": "string", "pattern": "^[^\\\\:]+$" }, { "type": "null" }],
+          "description": "Đường dẫn tương đối so với thư mục chứa database.json, dùng dấu /. null = chưa tải ảnh (chưa có quyền dùng), chỉ có source_url; chỉ hợp lệ với sản phẩm chưa published."
+        },
+        "source_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+        "alt_vi": { "$ref": "#/$defs/non_empty_text" },
+        "view_type": { "enum": ["front", "side", "back", "top", "detail", "packaging", "label", "in_use", "other"] },
+        "variant_sku": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "width": { "type": ["integer", "null"] },
+        "height": { "type": ["integer", "null"] },
+        "usage_rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["owned", "licensed", "permission_granted", "unknown"] },
+            "license": { "type": ["string", "null"] },
+            "attribution": { "type": ["string", "null"] },
+            "source_id": { "type": ["string", "null"] },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "slug", "name_vi", "status", "category_id", "brand_id", "maker_id",
+        "short_description_vi", "variants", "origin", "origin_claims", "images",
+        "source_ids", "created_at", "updated_at", "reviewed_at"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "slug": { "$ref": "#/$defs/id" },
+        "name_vi": { "$ref": "#/$defs/non_empty_text" },
+        "status": { "enum": ["draft", "published", "archived"] },
+        "category_id": { "$ref": "#/$defs/id" },
+        "brand_id": { "type": ["string", "null"] },
+        "maker_id": { "type": ["string", "null"] },
+        "short_description_vi": { "type": "string", "maxLength": 400 },
+        "description_vi": { "type": "string", "maxLength": 2000 },
+        "aliases": { "$ref": "#/$defs/text_list" },
+        "tags": { "$ref": "#/$defs/text_list" },
+        "intended_uses": { "$ref": "#/$defs/text_list" },
+        "materials": { "$ref": "#/$defs/text_list" },
+        "colors": { "$ref": "#/$defs/text_list" },
+        "dimensions": { "$ref": "#/$defs/dimensions" },
+        "craft_techniques": { "$ref": "#/$defs/text_list" },
+        "motifs": { "$ref": "#/$defs/text_list" },
+        "variants": { "type": "array", "items": { "$ref": "#/$defs/variant" }, "minItems": 1 },
+        "origin": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["brand_origin_country", "manufacturing_country", "material_origins", "place_ids", "craft_village_id"],
+          "properties": {
+            "brand_origin_country": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" },
+            "manufacturing_country": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" },
+            "material_origins": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["material", "country", "source_ids"],
+                "properties": {
+                  "material": { "$ref": "#/$defs/non_empty_text" },
+                  "country": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" },
+                  "place_ids": { "$ref": "#/$defs/id_list" },
+                  "source_ids": { "$ref": "#/$defs/id_list", "minItems": 1 }
+                }
+              }
+            },
+            "place_ids": { "$ref": "#/$defs/id_list" },
+            "craft_village_id": { "type": ["string", "null"] }
+          }
+        },
+        "origin_claims": { "type": "array", "items": { "$ref": "#/$defs/origin_claim" } },
+        "certifications": { "type": "array", "items": { "$ref": "#/$defs/certification" } },
+        "images": { "type": "array", "items": { "$ref": "#/$defs/image" } },
+        "source_ids": { "$ref": "#/$defs/id_list" },
+        "editor_note": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" },
+        "reviewed_at": { "$ref": "#/$defs/nullable_datetime" }
+      }
+    },
+
+    "term_relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "relation", "terms"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "relation": { "enum": ["synonym", "broader", "narrower", "regional", "confusable"] },
+        "terms": { "type": "array", "items": { "$ref": "#/$defs/non_empty_text" }, "minItems": 2 },
+        "head": { "type": "string", "description": "Với broader/narrower: thuật ngữ rộng hơn." },
+        "category_ids": { "$ref": "#/$defs/id_list", "description": "Ngữ cảnh áp dụng; rỗng = mọi danh mục." },
+        "regions": { "type": "array", "items": { "enum": ["bac", "trung", "nam"] }, "uniqueItems": true },
+        "note": { "type": "string" }
+      }
+    },
+
+    "brand_alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["brand_id", "alias"],
+      "properties": {
+        "brand_id": { "$ref": "#/$defs/id" },
+        "alias": { "$ref": "#/$defs/non_empty_text" },
+        "source_ids": { "$ref": "#/$defs/id_list" }
+      }
+    },
+
+    "unit_alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "aliases"],
+      "properties": {
+        "unit": { "enum": ["VND", "g", "kg", "ml", "l", "mm", "cm", "m"] },
+        "aliases": { "type": "array", "items": { "$ref": "#/$defs/non_empty_text" }, "minItems": 1 },
+        "factor": { "type": "number", "description": "Hệ số quy về đơn vị chuẩn." }
+      }
+    }
+  }
+}

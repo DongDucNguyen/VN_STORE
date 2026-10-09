@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-10T01:32:46+07:00",
+  "kind": "images",
+  "dry_run": true,
+  "catalog_sha256_before": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "proposed_sha256": "9c47b0b0b576f1305842c1f074d6bea2e8370cc25ff5f52aedbb6534ef9026e1",
+  "baseline": null,
+  "inputs_sha256": {
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\images\\2026-10-10\\manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+  },
+  "conflicts": [],
+  "validation_issues": [],
+  "changes": [],
+  "status": "no_op",
+  "artifacts": "data_collection/import_runs/2026-10-10_013246-202968_images"
+}

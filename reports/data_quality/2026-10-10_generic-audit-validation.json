@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-10-10T01:44:31+07:00",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "database_unchanged": true,
+  "source_sha256": {
+    "scripts/validate_catalog/audit_images.py": "c746ef6148befabc44723811b09abe7ad961fa0a05f7c51c210bedb4bf324788",
+    "backend/tests/test_image_audit.py": "737e2775cdfae97d5e326da436075dc047917f1e3799a7b30dca2d04608e8256"
+  },
+  "backend": {
+    "command": ".venv/Scripts/python -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+    "passed": 180,
+    "new_tests": 12,
+    "warnings": 1,
+    "seconds": 3.5,
+    "exit_code": 0
+  },
+  "real_catalog_audit": {
+    "report": "reports/data_quality/2026-10-10_014142-102770_image-audit.json",
+    "status": "passed",
+    "api_modes": {
+      "published_only": {
+        "expected_products": 0,
+        "listed_products": 0,
+        "pages": 1,
+        "image_requests": 45
+      },
+      "include_drafts": {
+        "expected_products": 30,
+        "listed_products": 30,
+        "pages": 1,
+        "image_requests": 45
+      }
+    },
+    "hash_verified_api_images": 45,
+    "import_check": "passed",
+    "manifest_check": "passed"
+  },
+  "gallery": {
+    "file": "artifacts/image_review/2026-10-10_generic-audit/index.html",
+    "sha256": "b44ea9362eac6a919c71cdd2061285e0768324dd1211d9a38a08701706484a46",
+    "browser": "Chrome headless",
+    "viewport": [
+      1280,
+      900
+    ],
+    "products": 30,
+    "images": 45,
+    "loaded": 45,
+    "horizontalOverflow": false,
+    "pageErrors": [],
+    "screenshot": "artifacts/image_review/2026-10-10_generic-audit/desktop.png",
+    "first_viewport_visually_inspected": true
+  },
+  "frontend_app_changed": false,
+  "full_frontend_e2e_rerun": false,
+  "raw_editorial_manifest_unchanged": true,
+  "not_claimed": [
+    "New human review of product content",
+    "Image usage permission",
+    "Official keyword benchmark",
+    "Network/server latency benchmark"
+  ]
+}

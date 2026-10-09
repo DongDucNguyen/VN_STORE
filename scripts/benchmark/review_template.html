@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VNStore — Duyệt nhãn keyword</title>
+<style>
+body{font:16px/1.5 system-ui;background:#f3f5f1;color:#203129;margin:0}header,main{max-width:1100px;margin:auto;padding:24px}header{position:sticky;top:0;background:#f3f5f1;z-index:1;border-bottom:1px solid #ccd5cb}h1{font-size:24px;margin:0 0 8px}h2{font-size:22px}button,select,input{font:inherit;padding:8px;margin:4px;border:1px solid #a3b8a8;border-radius:6px}button{background:#1e6043;color:white;cursor:pointer}article{display:grid;grid-template-columns:150px 1fr;gap:20px;background:white;border:1px solid #dce4db;border-radius:12px;padding:18px;margin:16px 0}img{width:150px;height:170px;object-fit:contain}h3{margin:0}small{color:#5a6c5f}#notice{color:#923600}progress{width:200px}a{color:#136043}details{margin-top:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}label{display:inline-block}footer{padding:24px;border-top:1px solid #ccd5cb}@media(max-width:600px){article{grid-template-columns:1fr}header{position:static}}
+</style>
+<header><h1>Duyệt nhãn tìm kiếm trên catalog thật</h1><div id="summary"></div>
+<label>Người kiểm tra <input id="reviewer" placeholder="Tên hoặc mã người kiểm tra"></label>
+<label>Truy vấn <select id="query"></select></label>
+<button id="export" type="button">Xuất nhãn đã duyệt</button><button id="backup" type="button">Lưu bản nháp</button>
+<label>Nạp bản nháp <input type="file" id="restore" accept="application/json,.json"></label>
+<div id="notice" role="status"></div></header>
+<main><p>Chấm theo nhu cầu trong câu và dữ liệu có nguồn. 0 = không liên quan; 1 = liên quan yếu; 2 = phù hợp; 3 = rất phù hợp. Không đoán thuộc tính còn thiếu. Giữ cùng nhóm ý định/paraphrase trong một split.</p>
+<p>Mỗi truy vấn hiển thị toàn bộ catalog theo thứ tự cố định, không theo xếp hạng tìm kiếm. Nhãn nháp của AI chỉ nằm trong mục tham khảo. Trang chạy offline; nhãn chưa được ghi vào DB.</p>
+<h2 id="heading"></h2><label>Nhóm ý định <input id="group"></label><p id="progress"></p>
+<label><input type="checkbox" id="confirmed"> Tôi đã kiểm tra tất cả sản phẩm cho truy vấn này, kể cả trường hợp không có đáp án.</label>
+<div id="products"></div><footer id="foot"></footer></main>
+<script type="application/json" id="packet">__PACKET_JSON__</script>
+<script>
+const packet=JSON.parse(document.getElementById('packet').textContent);
+const key='vnstore-review:'+packet.catalog_sha256+':'+packet.queries_sha256;
+const $=id=>document.getElementById(id);
+let state={reviewer:'',labels:{},confirmed:{},groups:{}};
+function validState(v){return v&&typeof v.reviewer==='string'&&v.labels&&v.confirmed&&v.groups&&packet.queries.every(q=>!v.labels[q.qid]||Object.entries(v.labels[q.qid]).every(([id,n])=>packet.candidate_order[q.qid].includes(id)&&Number.isInteger(n)&&n>=0&&n<=3));}
+try{const saved=JSON.parse(localStorage.getItem(key));if(validState(saved))state=saved;}catch{}
+function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{$('notice').textContent='Trình duyệt không lưu được tự động. Dùng Lưu bản nháp trước khi đóng trang.';}}
+function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;}
+function current(){return packet.queries.find(q=>q.qid===$('query').value);}
+function count(q){return packet.candidate_order[q.qid].filter(id=>Number.isInteger((state.labels[q.qid]||{})[id])).length;}
+function status(){const q=current();$('progress').textContent=`Đã chấm ${count(q)}/${packet.products.length} sản phẩm. ${Object.values(state.labels[q.qid]||{}).some(n=>n>=2)?'Có sản phẩm phù hợp.':'Chưa có nhãn phù hợp (2–3).'} `;}
+function render(){const q=current();$('heading').textContent=q.query;$('group').value=state.groups[q.qid]||q.group_id||q.qid;$('confirmed').checked=state.confirmed[q.qid]===true;$('products').replaceChildren();
+ for(const id of packet.candidate_order[q.qid]){const p=packet.products.find(p=>p.id===id),card=el('article'),photo=el('div'),body=el('div');if(p.image){const img=el('img');img.src=p.image;img.alt=p.name;img.loading='lazy';photo.append(img);}body.append(el('h3',p.name),el('small',p.id+' · '+p.category),el('p',p.description),el('p','Chất liệu: '+(p.materials.join(', ')||'chưa rõ')+' · Màu: '+(p.colors.join(', ')||'chưa rõ')),el('p','Giá VND: '+p.variants.map(v=>v.price_vnd===null?'Liên hệ':v.price_vnd.toLocaleString('vi-VN')).join(', ')));
+ const label=el('label','Mức phù hợp '),select=el('select');select.setAttribute('aria-label','Mức phù hợp: '+p.name);for(const [v,t] of [['','Chưa chấm'],['0','0 — Không liên quan'],['1','1 — Liên quan yếu'],['2','2 — Phù hợp'],['3','3 — Rất phù hợp']]){const o=el('option',t);o.value=v;select.append(o);}select.value=(state.labels[q.qid]||{})[id]??'';select.onchange=()=>{state.labels[q.qid]??={};if(select.value==='')delete state.labels[q.qid][id];else state.labels[q.qid][id]=Number(select.value);state.confirmed[q.qid]=false;$('confirmed').checked=false;save();status();};label.append(select);body.append(label);
+ const details=el('details');details.append(el('summary','Căn cứ, biến thể và nhãn nháp tham khảo'));details.append(el('pre',JSON.stringify({variants:p.variants,origin_claims:p.claims,draft_relevance:q.relevance[id]??'chưa gán'},null,2)));for(const s of p.sources){if(s.url&&/^https?:\/\//.test(s.url)){const a=el('a',s.title||s.url);a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';details.append(a,el('br'));}}body.append(details);card.append(photo,body);$('products').append(card);}status();}
+function download(name,text,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=el('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('summary').textContent=`${packet.queries.length} truy vấn · ${packet.products.length} sản phẩm · Catalog ${packet.catalog_version} · Hash ${packet.catalog_sha256.slice(0,12)}`;
+for(const q of packet.queries){const o=el('option',q.qid+' — '+q.query);o.value=q.qid;$('query').append(o);}
+$('query').onchange=render;$('reviewer').value=state.reviewer;$('reviewer').oninput=()=>{state.reviewer=$('reviewer').value;save();};
+$('group').onchange=()=>{state.groups[current().qid]=$('group').value.trim();state.confirmed[current().qid]=false;$('confirmed').checked=false;save();};
+$('confirmed').onchange=()=>{const q=current();if(count(q)!==packet.products.length){$('confirmed').checked=false;$('notice').textContent='Cần chấm toàn bộ sản phẩm trước khi xác nhận.';}state.confirmed[q.qid]=$('confirmed').checked;save();};
+$('backup').onclick=()=>download('keyword-review-draft.json',JSON.stringify({key,state},null,2),'application/json');
+$('restore').onchange=async()=>{try{const file=$('restore').files[0];if(!file)return;const data=JSON.parse(await file.text());if(data.key!==key||!validState(data.state))throw Error('Bản nháp không khớp catalog/bộ truy vấn hoặc sai định dạng.');state=data.state;$('reviewer').value=state.reviewer;save();render();$('notice').textContent='Đã nạp bản nháp.';}catch(e){$('notice').textContent=e.message;}};
+$('export').onclick=()=>{const pending=packet.queries.filter(q=>count(q)!==packet.products.length||state.confirmed[q.qid]!==true);if(!state.reviewer.trim()||pending.length){$('notice').textContent='Cần tên người kiểm tra và hoàn tất '+pending.length+' truy vấn còn lại.';return;}
+ const groups=new Map();for(const q of packet.queries){const g=state.groups[q.qid]||q.group_id||q.qid;if(groups.has(g)&&groups.get(g)!==q.split){$('notice').textContent='Nhóm ý định xuất hiện trong nhiều split: '+g;return;}groups.set(g,q.split);}
+ const rows=packet.queries.map(q=>({...q,group_id:state.groups[q.qid]||q.group_id||q.qid,relevance:state.labels[q.qid],has_answer:Object.values(state.labels[q.qid]).some(n=>n>=2),labeled_by:state.reviewer.trim(),verified:true,reviewed_at:new Date().toISOString(),catalog_sha256:packet.catalog_sha256}));download('keyword-reviewed.jsonl',rows.map(r=>JSON.stringify(r)).join('\n')+'\n','application/x-ndjson');$('notice').textContent='Đã xuất nhãn do bạn xác nhận. Lưu file vào benchmarks/keyword/ rồi chạy evaluator.';};
+$('foot').textContent='Ảnh phục vụ review nội bộ; quyền sử dụng ảnh vẫn theo catalog. Trang không gửi dữ liệu lên máy chủ.';render();
+</script></html>

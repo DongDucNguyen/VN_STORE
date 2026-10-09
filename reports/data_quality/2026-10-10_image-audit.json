@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-10T00:49:40+07:00",
+  "catalog_version": "seed-001-images",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "products": 30,
+  "products_with_local_images": 30,
+  "downloaded_candidates": 52,
+  "selected_images": 45,
+  "excluded_candidates": 7,
+  "selected_bytes": 14144051,
+  "selected_formats": {
+    ".png": 19,
+    ".jpg": 14,
+    ".webp": 12
+  },
+  "products_with_one_image": 19,
+  "schema_errors": 0,
+  "schema_warnings": 0,
+  "hash_verified_api_images": 45,
+  "reimport_identical": true,
+  "image_import_idempotent": true,
+  "published_visible": 0,
+  "draft_visible": 30,
+  "keyword_smoke": "Marou Bến Tre 78% -> p-marou-ben-tre-78-80g at rank 1; not a benchmark",
+  "source_page_evidence": 24,
+  "official_api_evidence": 6,
+  "visual_review": "All 52 candidate images inspected in five contact sheets; 45 accepted, 7 excluded"
+}
