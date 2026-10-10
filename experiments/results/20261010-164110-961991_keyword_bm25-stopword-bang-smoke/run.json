@@ -1,0 +1,131 @@
+{
+  "name": "bm25-stopword-bang-smoke",
+  "created_at": "2026-10-10T16:41:10+07:00",
+  "queries_file": "benchmarks\\keyword\\seed_unverified.jsonl",
+  "queries_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+  "catalog_version": "seed-002-taxonomy",
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "include_drafts": true,
+  "split": "dev",
+  "unverified_queries": 12,
+  "evaluation_status": "smoke_unverified",
+  "metric_policy": "Unjudged in top K => metric null; averages use eligible queries only. IDCG/Recall denominator uses known labels, not assumed complete relevance of catalog.",
+  "latency_protocol": {
+    "warmup_rounds": 1,
+    "measured_passes": 1,
+    "scope": "in-process search only, excludes loading/index/API",
+    "p50": "median",
+    "p95": "nearest-rank"
+  },
+  "selected_qids": [
+    "kw-seed-001",
+    "kw-seed-002",
+    "kw-seed-003",
+    "kw-seed-004",
+    "kw-seed-005",
+    "kw-seed-006",
+    "kw-seed-007",
+    "kw-seed-008",
+    "kw-seed-009",
+    "kw-seed-010",
+    "kw-seed-011",
+    "kw-seed-012"
+  ],
+  "config": {
+    "TYPE_CHECKING": false,
+    "CLAIM_LABELS": {
+      "vn_brand": "Thương hiệu Việt",
+      "made_in_vn": "Sản xuất tại Việt Nam",
+      "vn_material": "Nguyên liệu Việt",
+      "traditional_craft": "Thủ công/truyền thống",
+      "craft_village": "Làng nghề"
+    },
+    "FIELD_WEIGHTS": {
+      "name": 3.0,
+      "brand": 2.5,
+      "sku": 2.5,
+      "aliases": 2.0,
+      "category": 1.5,
+      "materials": 1.5,
+      "place": 1.5,
+      "attrs": 1.0,
+      "description": 0.5,
+      "category_parent": 0.4
+    },
+    "ACCENT_EXACT_WEIGHT": 0.5,
+    "RELATIVE_CUTOFF": 0.25,
+    "HINT_BOOST": 0.3,
+    "EVIDENCE_BOOST": 0.02,
+    "TEXT_EXCLUSION_PENALTY": 0.3,
+    "EXPANSION_WEIGHTS": {
+      "synonym": 0.6,
+      "regional": 0.6,
+      "broader": 0.4
+    },
+    "EXPANSION_NO_CONTEXT_FACTOR": 0.5,
+    "PHRASE_FIELDS": [
+      "brand",
+      "maker",
+      "place"
+    ],
+    "COVERED_UNIGRAM_WEIGHT": 0.2,
+    "RRF_K": 60,
+    "IMAGE_TOP_K": 50,
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    }
+  },
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "code_commit": null,
+  "code_sha256": "7f7a8a7aa8ebc0dcc3064c74097b0a2a5a9b52e6f090d6ab0bb168c47c98a5f0",
+  "code_files_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/adapters.py": "fc5bf1cf8f73e06283bb2dee917a80eaecd4fcc746d368f591986b68cc03b5b3",
+    "backend/app/catalog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/catalog/present.py": "b8d4c20b7a23eceb8abbe091553629cbedf2f8a485cf4e3c4eecb6556c8480c4",
+    "backend/app/catalog/readiness.py": "2c583f96dbc016819b52b622a1eeca3de71489f6433ae6dcde2dbad585c33976",
+    "backend/app/catalog/store.py": "c653f07cdcf269935ecefee103122045a6d5cc5a15d0165a319d41be1910303c",
+    "backend/app/catalog/validation.py": "2e979b4838fb49b913876d203841bc17aba03b89d63fa27f7534b4026e80685e",
+    "backend/app/image/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/image/index.py": "d699a1935b51192830d44a8f5211de1b032344838627dbe73e99312e2daaf52b",
+    "backend/app/main.py": "4f926ec2c4a10d428f439dd5722344e367dce8a7df8d694a854041d3c161123e",
+    "backend/app/media.py": "8d43f195b0516b42df77f2c3fdbef7a8fa7e6ea13343fe1c682f659a110d5204",
+    "backend/app/ml/__init__.py": "a7315f1c14d361ed28d764afe89a2fafecd321df76db65467b2f7bcdd23f234a",
+    "backend/app/ml/asr.py": "593378528ef1067710974ac39c1595e1a956625d44ccce8528e047a8f797f864",
+    "backend/app/ml/image.py": "9c1bbe404ee795e38a10e09de33fed336114158fa9052613a0d8d0a3540d5e84",
+    "backend/app/ml/vad.py": "91189448f1eaa5c9e76486ac0d889dd55ccf7f48a20aa88f00eefc99af7c9b4e",
+    "backend/app/modalities.py": "829200f873800dc666814f259108b13abb0e0997566455ce9ff5ca806ef978af",
+    "backend/app/search/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/search/bm25.py": "75216baec9086be8e3808096b0a90294bdb75472194249f9889f0cdd47386ed7",
+    "backend/app/search/engine.py": "45457e244b7a689d4eb92fc44672d9351c31c77e59a0148abe10abbc53eabbf3",
+    "backend/app/search/normalize.py": "9313f2473e18c0867770831511139dfff3c7b8acc42881ea607d0357d93636cb",
+    "backend/app/search/query_parser.py": "65e6766b136c871758cd4050f862645b6e4a2075d49b06efedf20baf660676b6",
+    "backend/app/voice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/benchmark/eval_keyword.py": "4265e4a76f948c03d71e116b607176087c15e540c14e58a2b78b80be51588d5e",
+    "database.schema.json": "98520718eaa0e8028961a0ea73c3d6efab9f0a693fce7059c4d0370686452967"
+  },
+  "metrics": {
+    "n_queries": 12,
+    "n_with_answer": 10,
+    "n_no_answer": 2,
+    "ndcg_10": 0.9734,
+    "success_5": 1.0,
+    "mrr_10": 1.0,
+    "recall_20": 1.0,
+    "eligible_queries": {
+      "ndcg_10": 8,
+      "success_5": 8,
+      "rr_10": 8,
+      "recall_20": 8
+    },
+    "queries_with_unjudged_results": 3,
+    "no_match_false_accept_rate": 0.5,
+    "judged_at_10": 0.8485,
+    "latency_ms_p50": 0.651,
+    "latency_ms_p95": 1.89
+  }
+}

@@ -75,6 +75,13 @@ def audit_catalog(path: Path, *, editorial: Path | None = None, baseline: Path |
                     visible = product["id"] in expected
                     response = client.get("/products/" + product["id"])
                     expect(response.status_code == (200 if visible else 404), f"{mode}: product visibility {product['id']}")
+                    if visible and response.status_code == 200:
+                        detail = response.json()
+                        available_ids = [im["id"] for im in product["images"] if checks[im["id"]].status == "valid"]
+                        expect([im["id"] for im in detail["images"]] == available_ids, f"{mode}: gallery file availability {product['id']}")
+                        expect(detail["images_missing_file"] == len(product["images"]) - len(available_ids), f"{mode}: missing-file count {product['id']}")
+                        expected_cover = available_ids[0] if available_ids else None
+                        expect((detail.get("image") or {}).get("id") == expected_cover, f"{mode}: cover file availability {product['id']}")
                     for image in product["images"]:
                         check = checks[image["id"]]
                         available = visible and check.status == "valid"

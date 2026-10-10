@@ -59,6 +59,25 @@ test.describe("Duyệt catalog", () => {
     await expect.poll(() => main.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
   });
 
+  test("đổi sản phẩm không hiện danh sách tương tự cũ khi API mới còn chờ", async ({ page }) => {
+    await page.goto("/#/p/fx-tui-coi-quai-da");
+    await expect(page.getByRole("heading", { name: "Sản phẩm tương tự" })).toBeVisible();
+    let release!: () => void;
+    const gate = new Promise<void>(resolve => { release = resolve; });
+    await page.route("**/api/products/fx-binh-gom-men-lam/similar", async route => {
+      await gate;
+      await route.fulfill({ json: { results: [] } });
+    });
+    try {
+      await page.evaluate(() => { location.hash = "#/p/fx-binh-gom-men-lam"; });
+      await expect(page.getByRole("heading", { level: 1 })).toHaveText("Bình gốm men lam vẽ sen");
+      await expect(page.getByRole("heading", { name: "Sản phẩm tương tự" })).toHaveCount(0);
+      await expect(cards(page)).toHaveCount(0);
+    } finally {
+      release();
+    }
+  });
+
   test("sản phẩm draft hoặc không tồn tại báo không tìm thấy", async ({ page, allowConsoleErrors }) => {
     allowConsoleErrors(); // trình duyệt log 404 của API
     await page.goto("/#/p/fx-ban-nhap");

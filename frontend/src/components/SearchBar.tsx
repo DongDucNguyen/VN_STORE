@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError } from "../api";
+import { api } from "../api";
 import { href, navigate } from "../router";
+import { useVoiceSearch, VoicePanel } from "./VoiceSearch";
 
 type Suggestion = { type: string; id: string; text: string };
 
@@ -24,8 +25,9 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
   const [sugs, setSugs] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
-  const [modeMsg, setModeMsg] = useState<string | null>(null);
   const reqId = useRef(0);
+  // Bản chép lời đi qua trang tìm kiếm chung: hiện trong ô tìm để người dùng sửa được.
+  const voice = useVoiceSearch((text) => navigate("/search", { q: text, via: "voice" }));
 
   useEffect(() => setQ(initial), [initial]);
 
@@ -55,15 +57,6 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
     navigate("/search", { q: q.trim() });
   }
 
-  async function tryMode(kind: "voice" | "image") {
-    setModeMsg(null);
-    try {
-      await (kind === "voice" ? api.searchVoice() : api.searchImage());
-    } catch (e) {
-      setModeMsg(e instanceof ApiError ? e.message : "Chức năng chưa sẵn sàng.");
-    }
-  }
-
   return (
     <div className="searchbar">
       <form role="search" onSubmit={submit} className="searchbar-form">
@@ -88,10 +81,15 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
             else if (e.key === "Escape") setOpen(false);
           }}
         />
-        <button type="button" className="icon-btn" aria-label="Tìm bằng giọng nói" onClick={() => tryMode("voice")}>
+        <button
+          type="button"
+          className={`icon-btn ${voice.state.kind === "recording" ? "icon-btn-live" : ""}`}
+          aria-label={voice.state.kind === "recording" ? "Dừng ghi âm" : "Tìm bằng giọng nói"}
+          onClick={() => void (voice.state.kind === "recording" ? voice.stop() : voice.start())}
+        >
           🎤
         </button>
-        <button type="button" className="icon-btn" aria-label="Tìm bằng ảnh" onClick={() => tryMode("image")}>
+        <button type="button" className="icon-btn" aria-label="Tìm bằng ảnh" onClick={() => navigate("/image")}>
           📷
         </button>
         <button type="submit" className="btn btn-primary">
@@ -110,14 +108,7 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
           ))}
         </ul>
       )}
-      {modeMsg && (
-        <div className="notice notice-warn" role="status">
-          {modeMsg}{" "}
-          <button className="link" onClick={() => setModeMsg(null)}>
-            Đóng
-          </button>
-        </div>
-      )}
+      <VoicePanel voice={voice} />
     </div>
   );
 }

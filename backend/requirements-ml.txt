@@ -1,0 +1,13 @@
+# Môi trường ML riêng cho adapter voice/ảnh (backend/app/ml). Cài SAU requirements.txt:
+#   py -3.14 -m venv .venv-ml
+#   .venv-ml/Scripts/python -m pip install -r backend/requirements.txt -r backend/requirements-ml.txt
+# Không dùng PyTorch: trên máy demo, Windows Application Control chặn DLL của torch. ONNX Runtime và
+# runtime CUDA 13/cuDNN 9 của NVIDIA (gói nvidia-*) nạp được; không có GPU thì tự chạy CPU.
+-r requirements.txt
+onnxruntime-gpu[cuda,cudnn]==1.31.0
+huggingface_hub==2.2.0
+transformers==5.19.0   # chỉ dùng WhisperFeatureExtractor (NumPy), không cần torch
+tokenizers==0.23.3
+numpy==2.5.3
+scipy==1.18.1          # resample audio khác 16 kHz
+pillow==12.3.0

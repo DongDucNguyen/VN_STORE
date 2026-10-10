@@ -2,7 +2,7 @@
 
 Ngày lập: 09/10/2026. Định hướng đã xác nhận: demo trước, ưu tiên mã nguồn mở và chi phí thấp.
 
-Tài liệu này là kế hoạch triển khai, chưa phải hệ thống đã chạy. Chưa thu thập catalog, chưa xây database.json có dữ liệu thực và chưa thực hiện benchmark; mọi ngưỡng dưới đây là mục tiêu đề xuất, không phải kết quả đo. Model chỉ được chọn sau thử nghiệm trên dữ liệu của VNStore.
+Tài liệu này giữ kế hoạch ban đầu ngày 09/10/2026; các quy mô, ngưỡng và model bên dưới là mục tiêu/ứng viên, không phải kết quả đo. Cập nhật 10/10/2026: đã có catalog 30 sản phẩm draft, 45 ảnh thật và API/UI tìm kiếm keyword; chưa có nhãn benchmark chính thức hay model voice/image được chọn. Đã có khung adapter/chỉ mục/evaluator voice-ảnh, UI ghi âm/chọn ảnh, và adapter ONNX cho PhoWhisper/SigLIP2/DINOv2 chạy trên GPU (PyTorch bị chính sách Windows chặn trên máy demo); mới có smoke, chưa có benchmark. Xem [trạng thái hiện hành](reports/progress/README.md) và [hướng dẫn chạy](README.md). Model chỉ được chọn sau thử nghiệm trên dữ liệu của VNStore.
 
 ## 1. Sản phẩm và giới hạn demo
 

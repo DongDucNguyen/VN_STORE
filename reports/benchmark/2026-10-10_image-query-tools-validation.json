@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-10-10T15:24:44+07:00",
+  "tool_validation_status": "passed",
+  "dataset_status": "pending_collection",
+  "benchmark_approved": false,
+  "source_sha256": {
+    "scripts/benchmark/audit_image_queries.py": "f34b9dbfb4dfadc487cfd25725595f88cd1c7a43a694dae76dc6fdae2e6a5e75",
+    "benchmarks/image/manifest.schema.json": "6cf0d084db2597e9b8fda32aa01ba122d600c12fb003d91622f114249f89384e",
+    "backend/tests/test_image_query_audit.py": "956011b33d99d272c817d1920b13fc87889ddef9174a61317d55996e69f25109"
+  },
+  "backend": {
+    "generated_at": "2026-10-10T15:22:13+07:00",
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\VNStore\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "backend/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "seconds": 6.6,
+    "passed": 289,
+    "new_tests": 41,
+    "warnings": 1,
+    "pytest_seconds": 6.26,
+    "log": "artifacts/review/2026-10-10_image-query-audit/backend-tests.log",
+    "log_sha256": "398b3566b438f9915429cc32bd5d43b916e0a2b0c2d31588fa539321911f6908"
+  },
+  "manifest": {
+    "path": "benchmarks/image/manifest.json",
+    "sha256": "1baddf4f27b71d2702a857a537183024966f83022fb53a152380c8d1aac94ea6",
+    "queries": 0,
+    "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16"
+  },
+  "audit": {
+    "path": "reports/benchmark/2026-10-10_152205-756943_image-query-audit.json",
+    "sha256": "b5281b9ad8cd2bbe33819fc9bc41b979b8b7d799db9aba769d3204f9f1cc40d2",
+    "status": "pending_collection",
+    "summary": {
+      "queries": 0,
+      "visible_products": 30,
+      "hash_verified_files": 0,
+      "unique_query_hashes": 0,
+      "splits": {},
+      "tasks": {},
+      "pending": {},
+      "families": 0
+    }
+  },
+  "preserved": {
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "seed": "benchmarks/keyword/seed_unverified.jsonl",
+    "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+    "import_inputs_sha256": {
+      "data_collection/editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+      "data_collection/raw/minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+      "data_collection/raw/vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+      "data_collection/raw/maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+      "data_collection/raw/hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+      "data_collection/raw/kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+      "data_collection/images/2026-10-10/manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+    },
+    "reviewed_label_file_created": false
+  },
+  "catalog_unchanged": true,
+  "gallery_files_sha256_verified": 45,
+  "existing_runtime_keyword_tools_and_fixture_unchanged": true,
+  "previous_frontend_checks": {
+    "e2e_passed": 64,
+    "typecheck_build_passed": true,
+    "rerun_this_round": false,
+    "report": "reports/data_quality/2026-10-10_project-recheck-validation.json"
+  },
+  "dependency_note": "No dependency files changed. Pillow 12.3.0 exists in system Python but not venv; venv pip install found no distribution. Audit uses existing jsonschema and standard library; no decoding claim.",
+  "limits": [
+    "No query images collected or fabricated",
+    "Hash verification does not decode files or verify image content",
+    "No perceptual duplicate check, license verification, human identity check or split approval",
+    "No image model selected or benchmark metrics measured"
+  ]
+}

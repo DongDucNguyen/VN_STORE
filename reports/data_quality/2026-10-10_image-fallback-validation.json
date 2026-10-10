@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-10-10T14:58:45+07:00",
+  "scope": "Missing or broken product image handling in API, UI, review packet and audit",
+  "catalog": {
+    "version": "seed-002-taxonomy",
+    "sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+    "unchanged": true,
+    "products": 30,
+    "images": 45,
+    "draft_products": 30
+  },
+  "source_sha256": {
+    "backend/app/catalog/store.py": "c653f07cdcf269935ecefee103122045a6d5cc5a15d0165a319d41be1910303c",
+    "backend/app/catalog/present.py": "b8d4c20b7a23eceb8abbe091553629cbedf2f8a485cf4e3c4eecb6556c8480c4",
+    "frontend/src/components/ProductImage.tsx": "1021cfd151b3b985512fc92372cfad801d55645b9b99e981d9e7e8155099d38f",
+    "frontend/src/components/ProductCard.tsx": "4afc37956123c3b838893e830f6a496d9f9e1685559883378c46acde262d1ae4",
+    "frontend/src/pages/ProductPage.tsx": "4d7ca8ffd48b15b28f162dc8b39f765f2bd35f589a69da4b46ec6881c78a6de8",
+    "scripts/benchmark/prepare_review.py": "1a61ffa594b1b6b729d07be6ce4c34e95437af7f9fb48f9475b1f7bffef3a816",
+    "scripts/validate_catalog/audit_images.py": "5040ca8aa3d237cf52fd9c95d693217d49dd4d3fd5e6c075c45e898f807d8e68",
+    "backend/tests/test_image_availability.py": "bd97a0e31ce24268b53c614ebf0d204f80cb27fa78eb6928668d900cb167fcf0",
+    "frontend/e2e/image_fallback.spec.ts": "10dd7e6bd57e46d594880f1e2cdecc245c8abdcd2ee78199b949454da92580fe"
+  },
+  "backend": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+    "passed": 215,
+    "new_tests": 9,
+    "warnings": 1,
+    "warning": "Starlette/httpx deprecation",
+    "seconds": 4.43,
+    "exit_code": 0
+  },
+  "frontend_e2e": {
+    "command": "npx.cmd playwright test --workers=2 --reporter=line",
+    "cwd": "frontend",
+    "passed": 58,
+    "new_tests": 8,
+    "seconds": 18.5,
+    "workers": 2,
+    "projects": [
+      "desktop",
+      "mobile"
+    ],
+    "exit_code": 0,
+    "new_html_report": false
+  },
+  "typecheck": {
+    "command": "npx.cmd tsc -b",
+    "cwd": "frontend",
+    "exit_code": 0
+  },
+  "build": {
+    "command": "npx.cmd vite build --outDir ../artifacts/build --emptyOutDir",
+    "cwd": "frontend",
+    "exit_code": 0,
+    "modules": 28,
+    "artifact_sha256": {
+      "artifacts/build/assets/index-Bw7FUnwQ.css": "dff9b2d9a937aa45dc31d54a69fa795e30a6550e92cea0f9843c7f7d8a6eed8b",
+      "artifacts/build/assets/index-D9gJ5tzD.js": "aa473b11af91a7233302f7495259cdd9f605388613f020f883160f13e5aeb8b4",
+      "artifacts/build/favicon.svg": "c878bce080f9b38039e25c2971244bb9fc07ec9d6f7798476859ad84b4e02c4d",
+      "artifacts/build/index.html": "ebb5684a7f69f3a68f0fe41f9d0599491bf64c4a635a1fb89d26b41750800eb8"
+    }
+  },
+  "image_audit": {
+    "path": "reports/data_quality/2026-10-10_145539-586774_image-audit.json",
+    "sha256": "99cbda23e9f8a01a1db14337aeeeef9e9d41b2ec310a5c69223ccf7cecd4e0dc",
+    "status": "passed",
+    "hash_verified_api_images": 45,
+    "cover_gallery_missing_count_checked": true,
+    "import_identical": true,
+    "manifest_idempotent": true
+  },
+  "preserved": {
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "seed": "benchmarks/keyword/seed_unverified.jsonl",
+    "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+    "import_inputs_sha256": {
+      "data_collection/editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+      "data_collection/raw/minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+      "data_collection/raw/vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+      "data_collection/raw/maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+      "data_collection/raw/hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+      "data_collection/raw/kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+      "data_collection/images/2026-10-10/manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+    },
+    "reviewed_label_file_created": false
+  },
+  "limits": [
+    "No new human relevance judgments or official retrieval benchmark",
+    "Image rights remain unknown and products remain draft",
+    "Runtime image availability checks metadata only; checksums verified by catalog load and audit",
+    "File may change between metadata check and response; browser fallback handles image failures",
+    "No new source freshness or visual product verification in this round"
+  ]
+}

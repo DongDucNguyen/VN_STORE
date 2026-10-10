@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-10-10T15:06:32+07:00",
+  "status": "passed",
+  "catalog": {
+    "version": "seed-002-taxonomy",
+    "sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+    "unchanged": true,
+    "products": 30,
+    "images": 45,
+    "draft_products": 30
+  },
+  "findings_fixed": [
+    {
+      "issue": "Stale similar products while the next product request is pending",
+      "regression_reproduced_before_fix": true,
+      "evidence": "artifacts\\review\\2026-10-10_project-recheck\\before-fix",
+      "fix": "Clear similar state when product ID changes"
+    },
+    {
+      "issue": "Fixture lacks new decorative vase category",
+      "fix": "Regenerated fixture with existing generator",
+      "diff": "artifacts\\review\\2026-10-10_project-recheck\\fixture-sync.json",
+      "fixture_svg_files_unchanged": true
+    }
+  ],
+  "full_suite": {
+    "started_at": "2026-10-10T15:04:23+07:00",
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\VNStore\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/run_all_tests.py"
+    ],
+    "exit_code": 0,
+    "seconds": 28.06,
+    "log": "artifacts\\review\\2026-10-10_project-recheck\\final-tests.log",
+    "steps_passed": 7,
+    "steps_total": 7,
+    "backend": {
+      "passed": 216,
+      "warnings": 1,
+      "seconds": 4.46
+    },
+    "e2e": {
+      "passed": 64,
+      "seconds": 20.3,
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "workers": 2
+    },
+    "new_backend_tests": 1,
+    "new_e2e_tests": 6,
+    "typecheck_exit_code": 0,
+    "build_exit_code": 0,
+    "log_sha256": "2c5ed298fb8a8adfb43b42f6602d7f5e9ed4f61997f6f7ce736a912eb63e5c98"
+  },
+  "initial_suite": {
+    "started_at": "2026-10-10T15:01:37+07:00",
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\VNStore\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "scripts/run_all_tests.py"
+    ],
+    "exit_code": 1,
+    "seconds": 27.31,
+    "log": "artifacts\\review\\2026-10-10_project-recheck\\full-tests.log"
+  },
+  "image_audit": {
+    "path": "reports/data_quality/2026-10-10_150156-567231_image-audit.json",
+    "sha256": "55871ec21a2e0ff1259d87a071b3df257cf7784b15f8a9f12a003c49df1d76e6",
+    "hash_verified_api_images": 45,
+    "import_identical": true,
+    "manifest_idempotent": true
+  },
+  "review_audit": {
+    "path": "reports/benchmark/2026-10-10_150155-845183_keyword-review-audit.json",
+    "sha256": "cee65a19a89e01deeeed59c6f11d27cc5dc843a403f1c6258d9d9ae1c10f0527",
+    "status": "pending_review",
+    "pairs": 360
+  },
+  "source_sha256": {
+    "backend/app/catalog/store.py": "c653f07cdcf269935ecefee103122045a6d5cc5a15d0165a319d41be1910303c",
+    "backend/app/catalog/present.py": "b8d4c20b7a23eceb8abbe091553629cbedf2f8a485cf4e3c4eecb6556c8480c4",
+    "frontend/src/components/ProductImage.tsx": "1021cfd151b3b985512fc92372cfad801d55645b9b99e981d9e7e8155099d38f",
+    "frontend/src/components/ProductCard.tsx": "4afc37956123c3b838893e830f6a496d9f9e1685559883378c46acde262d1ae4",
+    "frontend/src/pages/ProductPage.tsx": "ebd497aabeaa5e397d6e0d14fbe72040687f3a029dc53ac600cfc6cac59bf6c3",
+    "scripts/benchmark/prepare_review.py": "1a61ffa594b1b6b729d07be6ce4c34e95437af7f9fb48f9475b1f7bffef3a816",
+    "scripts/validate_catalog/audit_images.py": "5040ca8aa3d237cf52fd9c95d693217d49dd4d3fd5e6c075c45e898f807d8e68",
+    "scripts/import_raw/safe_import.py": "0962d03e4c118b3693ac865aa24a7544c3aa02b7f565ccfab2d8ee648b6ad06a",
+    "scripts/run_all_tests.py": "22ffc52e910ca2d8ca6de86a5fa9186146724095b5a45d7b667a98168ce8aef2",
+    "backend/tests/test_image_availability.py": "2774a5d1d624d6bd931df35df636a1ff6d956025485c2fa60b01a8d59eeadff4",
+    "backend/tests/fixtures/make_fixture.py": "fb5db5bfc640e84b5f32e194a5f6a8ade28a4e26e5365a7f32c9d926b03a5cb5",
+    "backend/tests/fixtures/catalog.fixture.json": "243a91c6388f3123bd434ebb85bb8f5056369107dd13ff91fe179e17efd8a7dd",
+    "frontend/e2e/catalog.spec.ts": "c11f6a216f74332c85f56bc585e0252812948156c71093d9f837c43afedde141",
+    "frontend/e2e/image_fallback.spec.ts": "58be335ff8a940e19482953681e366e39d5b1d0addd3731af5288c09e991deeb"
+  },
+  "preserved": {
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "seed": "benchmarks/keyword/seed_unverified.jsonl",
+    "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+    "import_inputs_sha256": {
+      "data_collection/editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+      "data_collection/raw/minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+      "data_collection/raw/vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+      "data_collection/raw/maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+      "data_collection/raw/hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+      "data_collection/raw/kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+      "data_collection/images/2026-10-10/manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+    },
+    "reviewed_label_file_created": false
+  },
+  "test_artifacts": {
+    "artifacts/review/2026-10-10_project-recheck/before-fix/catalog-Duyệt-catalog-đổi--186d1-g-tự-cũ-khi-API-mới-còn-chờ-desktop/error-context.md": "70e32c4d6bf35423de818ff73022fcc0257778b7268b0ef5df7e8cb8608e079d",
+    "artifacts/review/2026-10-10_project-recheck/before-fix/catalog-Duyệt-catalog-đổi--186d1-g-tự-cũ-khi-API-mới-còn-chờ-desktop/test-failed-1.png": "77ad3f11eaa983ed21f1482b80790e4b48a96be01214de6a3df29dd9dc8a810e",
+    "artifacts/review/2026-10-10_project-recheck/before-fix/catalog-Duyệt-catalog-đổi--186d1-g-tự-cũ-khi-API-mới-còn-chờ-desktop/trace.zip": "176f413cfe9a8992e3538100bdfbce7e1805d99225e75875694c2b3a5bc8098a",
+    "artifacts/review/2026-10-10_project-recheck/final-tests.json": "d2b01332575023e44f34ed71172a457068e05a655d2aa382649b132d60a5274f",
+    "artifacts/review/2026-10-10_project-recheck/final-tests.log": "2c5ed298fb8a8adfb43b42f6602d7f5e9ed4f61997f6f7ce736a912eb63e5c98",
+    "artifacts/review/2026-10-10_project-recheck/fixture-sync.json": "8adf0f1844601d8ef2ccb83a3d987487f88d39d74c7cac86a6739391ec9d77cc",
+    "artifacts/review/2026-10-10_project-recheck/full-tests.json": "2beff064ec4d1440649ea6cf727be355e164736cf057fa5d5e0cbd529a35292d",
+    "artifacts/review/2026-10-10_project-recheck/full-tests.log": "c0c988e4da72c59a0fc2a518b44568172fc15780ca7276bb618f30621eb71f4a"
+  },
+  "build_artifacts": {
+    "artifacts/build/assets/index-Bb1qQoxv.js": "aebb52bc00dedbe4a1a09d44338ecb4cb50525f6ff77b87ec65d4b27d87f19ce",
+    "artifacts/build/assets/index-Bw7FUnwQ.css": "dff9b2d9a937aa45dc31d54a69fa795e30a6550e92cea0f9843c7f7d8a6eed8b",
+    "artifacts/build/favicon.svg": "c878bce080f9b38039e25c2971244bb9fc07ec9d6f7798476859ad84b4e02c4d",
+    "artifacts/build/index.html": "a60bb6f8a34efd5d970f2dc369de31bb664e750ea36db1fb2de9069fc1d6708e"
+  },
+  "limits": [
+    "Functional regression only; no security, load or official retrieval benchmark",
+    "No source freshness, visual product or license re-verification",
+    "30 products remain draft and 45 image rights remain unknown",
+    "Runtime image checks use metadata, not per-request hashing/decoding",
+    "Line reporter does not produce a new HTML E2E report"
+  ],
+  "approval_history": "Previous retry was not executed because approval review quota was exhausted; subsequent user-requested continuation was approved and completed without bypass"
+}

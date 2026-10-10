@@ -1,4 +1,4 @@
-// Router dựa trên hash, đủ cho demo: #/ , #/search?q=..., #/p/:id, #/brands, #/places, #/favorites
+// Router dựa trên hash, đủ cho demo: #/ , #/search?q=..., #/image, #/p/:id, #/brands, #/places, #/favorites
 import { useEffect, useState } from "react";
 
 export interface Route {

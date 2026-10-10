@@ -1,0 +1,21 @@
+{
+  "status": "pending_review",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "queries": 12,
+  "products": 30,
+  "pairs_per_reviewer": 360,
+  "splits": {
+    "dev": 12
+  },
+  "reviewers": [],
+  "scope": "Kiểm tra cấu trúc và tính nhất quán của export đầy đủ; không xác thực danh tính, tính độc lập, nội dung chấm hay quyết định nghiệm thu benchmark.",
+  "exports": [],
+  "generated_at": "2026-10-10T14:38:57+07:00",
+  "inputs": [
+    {
+      "kind": "packet",
+      "path": "artifacts\\keyword_review\\2026-10-10_seed-001\\packet.json",
+      "sha256": "2ab07e29e0b57fe137959b40e06c7c5959b2c12720e350e50eda71dd55538014"
+    }
+  ]
+}

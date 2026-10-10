@@ -21,6 +21,7 @@ export interface ProductSummary {
   origin_badges: Badge[];
   score?: number;
   matched_fields?: string[];
+  similarity?: number | null; // chỉ có khi tìm bằng ảnh; cosine chưa hiệu chỉnh, không hiển thị như %
 }
 
 export interface Variant {
@@ -118,15 +119,25 @@ export interface SearchResponse {
   relaxations: { key: string; label: string; count: number }[];
   warnings: string[];
   catalog_version: string;
-  timings_ms: { total: number };
+  timings_ms: { total: number } & Record<string, number>;
+  mode?: "voice" | "image";
+  transcript?: { text: string; model_id: string; revision: string; duration_s: number; editable: boolean };
+  visual?: { model_id: string; revision: string; top_similarity: number | null; match_label: "similar" };
 }
 
 export interface CategoryNode { id: string; name_vi: string; count: number; children: CategoryNode[] }
 
+export interface ModelStatus {
+  state: string; // ok | unavailable | error | index_missing | index_stale | index_invalid
+  model_id: string | null;
+  revision: string | null;
+  reason: string | null;
+}
+
 export interface Health {
   status: string;
   catalog: { version: string; products_visible: number; include_drafts: boolean } | null;
-  search?: { keyword: string; voice: string; image: string };
+  search?: { keyword: string; voice: string; image: string; models?: { voice: ModelStatus; image: ModelStatus } };
 }
 
 export class ApiError extends Error {
@@ -176,6 +187,40 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, filters, limit, offset }),
     }),
-  searchVoice: () => request<SearchResponse>("/search/voice", { method: "POST" }),
-  searchImage: () => request<SearchResponse>("/search/image", { method: "POST" }),
+  searchVoice: (wav: Blob) =>
+    request<SearchResponse>("/search/voice", { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav }),
+  searchImage: (image: Blob, text = "") =>
+    request<SearchResponse>(`/search/image?${new URLSearchParams({ text })}`, {
+      method: "POST",
+      headers: { "Content-Type": image.type || "image/jpeg" },
+      body: image,
+    }),
 };
+
+let healthCache: Promise<Health> | null = null;
+
+/** /health dùng chung cho các nút giọng nói/ảnh; lỗi thì lần sau hỏi lại. */
+export function cachedHealth(): Promise<Health> {
+  if (!healthCache) {
+    healthCache = api.health();
+    healthCache.catch(() => (healthCache = null));
+  }
+  return healthCache;
+}
+
+export type Modality = "voice" | "image";
+const MODALITY_NAME: Record<Modality, string> = { voice: "giọng nói", image: "ảnh" };
+
+/** null nếu sẵn sàng; ngược lại là thông báo cho người dùng. */
+export async function modalityProblem(kind: Modality): Promise<string | null> {
+  let h: Health;
+  try {
+    h = await cachedHealth();
+  } catch (e) {
+    return e instanceof ApiError ? e.message : "Không kiểm tra được trạng thái máy chủ.";
+  }
+  const st = h.search?.models?.[kind];
+  if (h.search?.[kind] === "ok") return null;
+  const reason = st?.reason ?? "model chưa được chọn qua benchmark";
+  return `Tìm bằng ${MODALITY_NAME[kind]} chưa sẵn sàng: ${reason}. Bạn vẫn có thể tìm bằng chữ.`;
+}

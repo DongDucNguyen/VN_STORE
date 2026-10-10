@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import stat
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -65,11 +66,19 @@ class CatalogSnapshot:
         hit = self.images.get(image_id)
         if not hit or hit[1]["local_path"] is None:
             return None
-        fp = (self.base_dir / hit[1]["local_path"]).resolve()
-        # Không cho thoát khỏi thư mục catalog.
-        if self.base_dir.resolve() not in fp.parents or not fp.is_file():
+        try:
+            relative = Path(hit[1]["local_path"])
+            root = self.base_dir.resolve()
+            fp = (root / relative).resolve()
+            if relative.is_absolute() or root not in fp.parents:
+                return None
+            info = fp.stat()
+            if not stat.S_ISREG(info.st_mode) or info.st_size == 0:
+                return None
+            return fp
+        except (OSError, ValueError, RuntimeError):
+            # Files can disappear or become inaccessible after the snapshot loads.
             return None
-        return fp
 
 
 def load_snapshot(path: Path, include_drafts: bool = False) -> CatalogSnapshot:

@@ -1,0 +1,120 @@
+{
+  "name": "bm25-taxonomy-smoke",
+  "created_at": "2026-10-10T14:44:58+07:00",
+  "queries_file": "benchmarks\\keyword\\seed_unverified.jsonl",
+  "queries_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+  "catalog_version": "seed-002-taxonomy",
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "include_drafts": true,
+  "split": "dev",
+  "unverified_queries": 12,
+  "evaluation_status": "smoke_unverified",
+  "metric_policy": "Unjudged in top K => metric null; averages use eligible queries only. IDCG/Recall denominator uses known labels, not assumed complete relevance of catalog.",
+  "latency_protocol": {
+    "warmup_rounds": 1,
+    "measured_passes": 1,
+    "scope": "in-process search only, excludes loading/index/API",
+    "p50": "median",
+    "p95": "nearest-rank"
+  },
+  "selected_qids": [
+    "kw-seed-001",
+    "kw-seed-002",
+    "kw-seed-003",
+    "kw-seed-004",
+    "kw-seed-005",
+    "kw-seed-006",
+    "kw-seed-007",
+    "kw-seed-008",
+    "kw-seed-009",
+    "kw-seed-010",
+    "kw-seed-011",
+    "kw-seed-012"
+  ],
+  "config": {
+    "CLAIM_LABELS": {
+      "vn_brand": "Thương hiệu Việt",
+      "made_in_vn": "Sản xuất tại Việt Nam",
+      "vn_material": "Nguyên liệu Việt",
+      "traditional_craft": "Thủ công/truyền thống",
+      "craft_village": "Làng nghề"
+    },
+    "FIELD_WEIGHTS": {
+      "name": 3.0,
+      "brand": 2.5,
+      "sku": 2.5,
+      "aliases": 2.0,
+      "category": 1.5,
+      "materials": 1.5,
+      "place": 1.5,
+      "attrs": 1.0,
+      "description": 0.5,
+      "category_parent": 0.4
+    },
+    "ACCENT_EXACT_WEIGHT": 0.5,
+    "RELATIVE_CUTOFF": 0.25,
+    "HINT_BOOST": 0.3,
+    "EVIDENCE_BOOST": 0.02,
+    "TEXT_EXCLUSION_PENALTY": 0.3,
+    "EXPANSION_WEIGHTS": {
+      "synonym": 0.6,
+      "regional": 0.6,
+      "broader": 0.4
+    },
+    "EXPANSION_NO_CONTEXT_FACTOR": 0.5,
+    "PHRASE_FIELDS": [
+      "brand",
+      "maker",
+      "place"
+    ],
+    "COVERED_UNIGRAM_WEIGHT": 0.2,
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    }
+  },
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "code_commit": null,
+  "code_sha256": "744f7ea26702ad90c141d3a026d61d3ad5779ce91c2cd1b6e42ffb66c80c48de",
+  "code_files_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/catalog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/catalog/present.py": "2b4e6aec1dc19c9e2474f022f3a1e31eea595f9026940bfe9fe848dad7f89e5f",
+    "backend/app/catalog/readiness.py": "2c583f96dbc016819b52b622a1eeca3de71489f6433ae6dcde2dbad585c33976",
+    "backend/app/catalog/store.py": "f365014934840e0899a81b06741644d393ed2828ddcc6000e4d7fa3f3d528f82",
+    "backend/app/catalog/validation.py": "2e979b4838fb49b913876d203841bc17aba03b89d63fa27f7534b4026e80685e",
+    "backend/app/image/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/main.py": "3c9cb9bb3fb932bf8b376f4c303a94ee27cfb359b62c53ac25f56666ce89b1a6",
+    "backend/app/search/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/search/bm25.py": "75216baec9086be8e3808096b0a90294bdb75472194249f9889f0cdd47386ed7",
+    "backend/app/search/engine.py": "bbbec3f5c7a87e38b122df0d550e01e6def2b62f5d09707039a36ec8ba9268e3",
+    "backend/app/search/normalize.py": "ec3591b26c949919dc083797634b7b9a4c924e2f2f765ff1c103744623be79b6",
+    "backend/app/search/query_parser.py": "65e6766b136c871758cd4050f862645b6e4a2075d49b06efedf20baf660676b6",
+    "backend/app/voice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/benchmark/eval_keyword.py": "4265e4a76f948c03d71e116b607176087c15e540c14e58a2b78b80be51588d5e",
+    "database.schema.json": "98520718eaa0e8028961a0ea73c3d6efab9f0a693fce7059c4d0370686452967"
+  },
+  "metrics": {
+    "n_queries": 12,
+    "n_with_answer": 10,
+    "n_no_answer": 2,
+    "ndcg_10": 0.9734,
+    "success_5": 1.0,
+    "mrr_10": 1.0,
+    "recall_20": 1.0,
+    "eligible_queries": {
+      "ndcg_10": 8,
+      "success_5": 8,
+      "rr_10": 8,
+      "recall_20": 8
+    },
+    "queries_with_unjudged_results": 3,
+    "no_match_false_accept_rate": 0.5,
+    "judged_at_10": 0.8485,
+    "latency_ms_p50": 0.218,
+    "latency_ms_p95": 0.335
+  }
+}

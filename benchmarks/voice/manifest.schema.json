@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VNStore voice query collection manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "samples"],
+  "properties": {
+    "manifest_version": {"const": "1.0.0"},
+    "samples": {"type": "array", "items": {"$ref": "#/$defs/sample"}}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,119}$"},
+    "text": {"type": "string", "pattern": "\\S", "maxLength": 2000},
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["qid", "audio_path", "sha256", "reference_text", "speaker_id", "region", "device",
+                   "environment", "split", "consent", "transcript_review"],
+      "properties": {
+        "qid": {"$ref": "#/$defs/id"},
+        "audio_path": {"type": "string", "pattern": "^raw/[^\\\\:]+\\.wav$", "maxLength": 500},
+        "sha256": {"$ref": "#/$defs/hash"},
+        "reference_text": {"anyOf": [{"$ref": "#/$defs/text"}, {"type": "null"}],
+                           "description": "Bản chép lời chuẩn; null cho clip im lặng/chỉ tiếng ồn"},
+        "speaker_id": {"$ref": "#/$defs/id"},
+        "region": {"enum": ["bac", "trung", "nam", "khac", "unknown"]},
+        "device": {"$ref": "#/$defs/id"},
+        "environment": {"enum": ["quiet", "noisy", "cafe", "street", "unknown"]},
+        "split": {"enum": ["train", "dev", "test"]},
+        "tags": {"type": "array", "items": {"$ref": "#/$defs/id"}, "uniqueItems": true},
+        "keyword_qid": {"anyOf": [{"type": "string", "pattern": "\\S"}, {"type": "null"}],
+                        "description": "Liên kết nhãn relevance của bộ keyword để đo end-to-end"},
+        "consent": {
+          "type": "object", "additionalProperties": false, "required": ["status", "evidence"],
+          "properties": {
+            "status": {"enum": ["unknown", "granted"]},
+            "evidence": {"anyOf": [{"$ref": "#/$defs/text"}, {"type": "null"}]}
+          }
+        },
+        "transcript_review": {
+          "anyOf": [{"type": "null"}, {
+            "type": "object", "additionalProperties": false, "required": ["reviewed_by", "reviewed_at"],
+            "properties": {
+              "reviewed_by": {"$ref": "#/$defs/text"},
+              "reviewed_at": {"type": "string", "format": "date-time"}
+            }
+          }]
+        }
+      }
+    }
+  }
+}

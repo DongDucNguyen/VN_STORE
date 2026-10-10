@@ -4,6 +4,9 @@
   "image_manifest": "images/2026-10-10/manifest.json",
   "observed_at": "2026-10-10",
   "timestamp": "2026-10-10T01:30:00+07:00",
+  "categories": [
+    {"id": "go-son-mai-binh-lo", "name_vi": "Bình, lọ trang trí", "parent_id": "go-son-mai", "aliases": ["bình hoa", "lọ hoa", "bình trang trí", "lọ trang trí"]}
+  ],
   "sites": {
     "minhlong": {"raw": "raw/minhlong.json", "id_prefix": "minhlong"},
     "vietcraft": {"raw": "raw/vietcraft.json", "id_prefix": "vietcraft"},
@@ -226,7 +229,7 @@
     {
       "site": "hanoia", "url": "https://hanoia.com/binh-hoa-mystery-a18mt01.html",
       "id": "p-hanoia-binh-hoa-mystery-a18mt01", "name_vi": "Bình hoa Mystery",
-      "category_id": "go-son-mai-tranh", "brand_id": "brand-hanoia", "maker_id": null,
+      "category_id": "go-son-mai-binh-lo", "brand_id": "brand-hanoia", "maker_id": null,
       "short_description_vi": "Bình hoa nền sơn mài đen tuyền với hình chim công; chất liệu resin và đồng.",
       "aliases": ["bình chim công"], "materials": ["resin", "đồng"], "colors": ["đen"], "motifs": ["chim công"], "craft_techniques": ["sơn mài"],
       "dimensions": {"length_mm": 218, "width_mm": 218, "height_mm": 290},
@@ -235,7 +238,7 @@
     {
       "site": "hanoia", "url": "https://hanoia.com/binh-hoa-vita-pc26vt01.html",
       "id": "p-hanoia-binh-hoa-vita-pc26vt01", "name_vi": "Bình hoa Vita",
-      "category_id": "go-son-mai-tranh", "brand_id": "brand-hanoia", "maker_id": null,
+      "category_id": "go-son-mai-binh-lo", "brand_id": "brand-hanoia", "maker_id": null,
       "short_description_vi": "Bình hoa nhỏ dáng nụ hoa, chất liệu resin, có các màu đỏ rượu, cam, navy, vàng.",
       "aliases": [], "materials": ["resin"], "colors": ["đỏ rượu", "cam", "navy", "vàng"],
       "dimensions": {"diameter_mm": 121, "height_mm": 168},

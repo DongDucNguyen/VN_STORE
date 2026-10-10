@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-10T14:41:03+07:00",
+  "catalog_sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+  "packet_sha256": "2ab07e29e0b57fe137959b40e06c7c5959b2c12720e350e50eda71dd55538014",
+  "source_sha256": {
+    "scripts/benchmark/audit_reviews.py": "4984d89fc8292c296be7f18772256370297aef663b8e6e1f4788daed20247ac8",
+    "backend/tests/test_review_audit.py": "8320eb9de8c1ddee8fd96b37e2ccf9b1e585156f3948cc294ab0884209206c9c"
+  },
+  "backend": {
+    "command": ".venv/Scripts/python -X utf8 -m pytest backend/tests -q -p no:cacheprovider",
+    "passed": 200,
+    "new_review_audit_cases": 20,
+    "warnings": 1,
+    "seconds": 3.48,
+    "exit_code": 0
+  },
+  "real_packet": {
+    "status": "pending_review",
+    "queries": 12,
+    "products": 30,
+    "pairs_per_reviewer": 360,
+    "review_files": 0,
+    "command": ".venv/Scripts/python -X utf8 scripts/benchmark/audit_reviews.py --packet artifacts/keyword_review/2026-10-10_seed-001/packet.json --include-drafts",
+    "report": "reports/benchmark/2026-10-10_143857-188484_keyword-review-audit.json"
+  },
+  "preservation": {
+    "catalog_matches_previous_run": true,
+    "seed_matches_previous_run_and_packet": true,
+    "packet_matches_audit_input_hash": true,
+    "reviewed_label_file_created": false
+  },
+  "frontend_changed": false,
+  "frontend_e2e_rerun": false,
+  "not_claimed": [
+    "Human-reviewed labels",
+    "Human identity or independence verification",
+    "Official benchmark",
+    "Locked splits",
+    "Real inter-reviewer agreement metrics"
+  ],
+  "scope": "Tests use synthetic labels only; real packet audit remains pending_review."
+}

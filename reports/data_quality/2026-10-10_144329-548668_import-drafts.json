@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-10-10T14:43:29+07:00",
+  "kind": "drafts",
+  "dry_run": false,
+  "catalog_sha256_before": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062",
+  "proposed_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "baseline": "data_collection\\import_runs\\2026-10-10_012920-036113_drafts\\baseline.json",
+  "inputs_sha256": {
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\images\\2026-10-10\\manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+  },
+  "conflicts": [],
+  "validation_issues": [],
+  "changes": [
+    {
+      "path": "$.catalog_version",
+      "before": {
+        "present": true,
+        "value": "seed-001-images"
+      },
+      "after": {
+        "present": true,
+        "value": "seed-002-taxonomy"
+      }
+    },
+    {
+      "path": "$.categories[id=go-son-mai-binh-lo]",
+      "before": {
+        "present": false
+      },
+      "after": {
+        "present": true,
+        "value": {
+          "id": "go-son-mai-binh-lo",
+          "name_vi": "Bình, lọ trang trí",
+          "parent_id": "go-son-mai",
+          "aliases": [
+            "bình hoa",
+            "lọ hoa",
+            "bình trang trí",
+            "lọ trang trí"
+          ]
+        }
+      }
+    },
+    {
+      "path": "$.products[id=p-hanoia-binh-hoa-mystery-a18mt01].category_id",
+      "before": {
+        "present": true,
+        "value": "go-son-mai-tranh"
+      },
+      "after": {
+        "present": true,
+        "value": "go-son-mai-binh-lo"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanoia-binh-hoa-mystery-a18mt01].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T01:30:00+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-10T14:43:29+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanoia-binh-hoa-vita-pc26vt01].category_id",
+      "before": {
+        "present": true,
+        "value": "go-son-mai-tranh"
+      },
+      "after": {
+        "present": true,
+        "value": "go-son-mai-binh-lo"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanoia-binh-hoa-vita-pc26vt01].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T01:30:00+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-10T14:43:29+07:00"
+      }
+    },
+    {
+      "path": "$.updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T01:30:00+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-10T14:43:29+07:00"
+      }
+    }
+  ],
+  "status": "applied",
+  "artifacts": "data_collection/import_runs/2026-10-10_144329-548668_drafts"
+}

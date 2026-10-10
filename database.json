@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "catalog_version": "seed-001-images",
+  "catalog_version": "seed-002-taxonomy",
   "locale": "vi-VN",
   "currency": "VND",
-  "updated_at": "2026-10-10T01:30:00+07:00",
+  "updated_at": "2026-10-10T14:43:29+07:00",
   "categories": [
     {
       "id": "gom-su",
@@ -223,6 +223,17 @@
         "nước mắm",
         "tiêu",
         "muối"
+      ]
+    },
+    {
+      "id": "go-son-mai-binh-lo",
+      "name_vi": "Bình, lọ trang trí",
+      "parent_id": "go-son-mai",
+      "aliases": [
+        "bình hoa",
+        "lọ hoa",
+        "bình trang trí",
+        "lọ trang trí"
       ]
     }
   ],
@@ -2914,7 +2925,7 @@
       "slug": "hanoia-binh-hoa-mystery-a18mt01",
       "name_vi": "Bình hoa Mystery",
       "status": "draft",
-      "category_id": "go-son-mai-tranh",
+      "category_id": "go-son-mai-binh-lo",
       "brand_id": "brand-hanoia",
       "maker_id": null,
       "short_description_vi": "Bình hoa nền sơn mài đen tuyền với hình chim công; chất liệu resin và đồng.",
@@ -3019,7 +3030,7 @@
       ],
       "editor_note": "Nhập tự động từ https://hanoia.com/binh-hoa-mystery-a18mt01.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
       "created_at": "2026-10-10T01:30:00+07:00",
-      "updated_at": "2026-10-10T01:30:00+07:00",
+      "updated_at": "2026-10-10T14:43:29+07:00",
       "reviewed_at": null
     },
     {
@@ -3027,7 +3038,7 @@
       "slug": "hanoia-binh-hoa-vita-pc26vt01",
       "name_vi": "Bình hoa Vita",
       "status": "draft",
-      "category_id": "go-son-mai-tranh",
+      "category_id": "go-son-mai-binh-lo",
       "brand_id": "brand-hanoia",
       "maker_id": null,
       "short_description_vi": "Bình hoa nhỏ dáng nụ hoa, chất liệu resin, có các màu đỏ rượu, cam, navy, vàng.",
@@ -3116,7 +3127,7 @@
       ],
       "editor_note": "Trang không nói sản phẩm là sơn mài; chất liệu resin. Nhập tự động từ https://hanoia.com/binh-hoa-vita-pc26vt01.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
       "created_at": "2026-10-10T01:30:00+07:00",
-      "updated_at": "2026-10-10T01:30:00+07:00",
+      "updated_at": "2026-10-10T14:43:29+07:00",
       "reviewed_at": null
     },
     {

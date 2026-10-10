@@ -9,7 +9,7 @@ import tempfile
 from datetime import datetime
 from pathlib import Path
 
-COLLECTIONS = ("sources", "brands", "makers", "places", "products")
+COLLECTIONS = ("categories", "sources", "brands", "makers", "places", "products")
 ABSENT = object()
 
 
@@ -74,7 +74,7 @@ def merge_catalog(current: dict, generated: dict, baseline: dict | None = None):
     for coll in COLLECTIONS:
         old = indexed((baseline or {}).get(coll, []), f"baseline.{coll}")
         local = indexed(current[coll], f"current.{coll}")
-        remote = indexed(generated[coll], f"generated.{coll}")
+        remote = indexed(generated.get(coll, []), f"generated.{coll}")
         merged = dict(local)
         for key, incoming in remote.items():
             path = f"$.{coll}[id={key}]"
@@ -137,7 +137,8 @@ def load_baseline(path: Path | None) -> dict | None:
     if (not isinstance(value, dict) or value.get("format") != "vnstore-import-baseline-v1"
             or value.get("eligible") is not True):
         raise ValueError("Baseline phải từ lần nhập đã áp dụng thành công hoặc no-op hợp lệ")
-    if not isinstance(value.get("generated"), dict) or not all(c in value["generated"] for c in COLLECTIONS):
+    # Baselines created before category import remain valid; their checksum is unchanged.
+    if not isinstance(value.get("generated"), dict) or not all(c in value["generated"] for c in COLLECTIONS if c != "categories"):
         raise ValueError("Baseline không có đủ collection từ importer draft")
     if digest(encoded(value["generated"])) != value.get("generated_sha256"):
         raise ValueError("Baseline checksum mismatch")

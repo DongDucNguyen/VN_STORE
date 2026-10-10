@@ -3,6 +3,7 @@ import { api, type Health } from "./api";
 import { useFavorites } from "./favorites";
 import { BrandsPage, FavoritesPage, PlacesPage } from "./pages/BrowsePages";
 import { HomePage } from "./pages/HomePage";
+import { ImageSearchPage } from "./pages/ImageSearchPage";
 import { ProductPage } from "./pages/ProductPage";
 import { SearchPage } from "./pages/SearchPage";
 import { useRoute } from "./router";
@@ -14,6 +15,8 @@ function Page() {
   switch (route.path) {
     case "/search":
       return <SearchPage route={route} />;
+    case "/image":
+      return <ImageSearchPage />;
     case "/brands":
       return <BrandsPage />;
     case "/places":

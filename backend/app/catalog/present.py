@@ -59,14 +59,17 @@ def origin_badges(p: dict[str, Any]) -> list[dict[str, Any]]:
     return out
 
 
-def _local_images(p: dict[str, Any]) -> list[dict[str, Any]]:
+def _local_images(snap: CatalogSnapshot, p: dict[str, Any]) -> list[dict[str, Any]]:
     """Chỉ ảnh đã có file mới được phục vụ; ảnh chỉ có source_url (chưa có quyền) không hotlink."""
-    return [i for i in p["images"] if i["local_path"] is not None]
+    return [i for i in p["images"] if snap.image_path(i["id"]) is not None]
 
 
 def product_summary(snap: CatalogSnapshot, p: dict[str, Any]) -> dict[str, Any]:
+    return _summary(snap, p, _local_images(snap, p))
+
+
+def _summary(snap: CatalogSnapshot, p: dict[str, Any], local: list[dict[str, Any]]) -> dict[str, Any]:
     cat = snap.categories.get(p["category_id"])
-    local = _local_images(p)
     img = local[0] if local else None
     return {
         "id": p["id"],
@@ -92,6 +95,7 @@ def _source(snap: CatalogSnapshot, sid: str) -> dict[str, Any]:
 
 
 def product_detail(snap: CatalogSnapshot, p: dict[str, Any]) -> dict[str, Any]:
+    local = _local_images(snap, p)
     used_sources: list[str] = list(p["source_ids"])
 
     def collect(ids: list[str]) -> None:
@@ -115,7 +119,7 @@ def product_detail(snap: CatalogSnapshot, p: dict[str, Any]) -> dict[str, Any]:
         collect(cert["source_ids"])
 
     return {
-        **product_summary(snap, p),
+        **_summary(snap, p, local),
         "category_path": snap.category_path(p["category_id"]),
         "short_description_vi": p["short_description_vi"],
         "description_vi": p.get("description_vi", ""),
@@ -133,9 +137,9 @@ def product_detail(snap: CatalogSnapshot, p: dict[str, Any]) -> dict[str, Any]:
         "origin_claims": claims,
         "certifications": p.get("certifications", []),
         "images": [{"id": i["id"], "url": image_url(i["id"]), "alt_vi": i["alt_vi"], "view_type": i["view_type"],
-                    "variant_sku": i.get("variant_sku"), "usage_rights": i["usage_rights"]} for i in _local_images(p)],
+                    "variant_sku": i.get("variant_sku"), "usage_rights": i["usage_rights"]} for i in local],
         # Tách rõ: ảnh chưa tải file và ảnh đã có file nhưng chưa rõ quyền dùng.
-        "images_missing_file": len(p["images"]) - len(_local_images(p)),
+        "images_missing_file": len(p["images"]) - len(local),
         "images_pending_rights": sum(1 for i in p["images"] if i["usage_rights"]["status"] == "unknown"),
         "sources": [_source(snap, s) for s in used_sources if s in snap.sources],
         "updated_at": p["updated_at"],

@@ -1,0 +1,12 @@
+{
+  "status": "invalid",
+  "error": "ValueError: Packet thuộc snapshot catalog khác; tạo packet mới và đối chiếu lại",
+  "generated_at": "2026-10-10T14:44:57+07:00",
+  "inputs": [
+    {
+      "kind": "packet",
+      "path": "artifacts\\keyword_review\\2026-10-10_seed-001\\packet.json",
+      "sha256": "2ab07e29e0b57fe137959b40e06c7c5959b2c12720e350e50eda71dd55538014"
+    }
+  ]
+}

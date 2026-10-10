@@ -106,11 +106,20 @@ test.describe("Tìm kiếm keyword — ba hành trình trong PLAN.md", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Hộp sơn mài khảm trứng");
   });
 
-  test("giọng nói và ảnh báo chưa sẵn sàng, tìm chữ vẫn chạy", async ({ page, allowConsoleErrors }) => {
-    allowConsoleErrors(); // API trả 503 có chủ đích; trình duyệt tự log lỗi tải tài nguyên
+  test("giọng nói và ảnh báo chưa sẵn sàng, tìm chữ vẫn chạy", async ({ page }) => {
+    // Backend E2E bật adapter giả; mô phỏng trạng thái mặc định khi chưa chọn model.
+    await page.route("**/api/health", async (route) => {
+      const res = await route.fetch();
+      const body = await res.json();
+      const off = { state: "unavailable", model_id: null, revision: null, detail: null,
+                    reason: "model chưa được chọn qua benchmark (PLAN.md mục 8)" };
+      body.search = { ...body.search, voice: "unavailable", image: "unavailable", models: { voice: off, image: off } };
+      await route.fulfill({ response: res, json: body });
+    });
     await page.goto("/");
     await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
     await expect(page.getByText(/Tìm bằng giọng nói chưa sẵn sàng/)).toBeVisible();
+    await expect(page.getByRole("button", { name: "Ghi lại" })).toHaveCount(0);
     await page.getByRole("button", { name: "Đóng" }).click();
     await page.getByRole("button", { name: "Tìm bằng ảnh" }).click();
     await expect(page.getByText(/Tìm bằng ảnh chưa sẵn sàng/)).toBeVisible();

@@ -3,6 +3,7 @@ import { useFavorites } from "../favorites";
 import { formatPrice } from "../format";
 import { href } from "../router";
 import { OriginBadges } from "./common";
+import { ProductImage } from "./ProductImage";
 
 export function ProductCard({ p }: { p: ProductSummary }) {
   const fav = useFavorites();
@@ -12,7 +13,7 @@ export function ProductCard({ p }: { p: ProductSummary }) {
       <a className="card-link" href={href(`/p/${p.id}`)}>
         <div className="card-img">
           {p.image ? (
-            <img src={p.image.url} alt={p.image.alt_vi} loading="lazy" />
+            <ProductImage key={p.image.url} src={p.image.url} alt={p.image.alt_vi} />
           ) : (
             <div className="img-missing">Chưa có ảnh</div>
           )}

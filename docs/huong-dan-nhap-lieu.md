@@ -50,6 +50,8 @@ Lệnh tạo cặp Markdown/JSON có timestamp trong `reports/data_quality/`, k�
 
 File ảnh hợp lệ ở đây nghĩa là nằm trong thư mục catalog, đọc được, khác rỗng và khớp SHA-256 nếu có khai báo. Công cụ không giải mã định dạng, nhận diện nội dung hoặc xác minh giấy phép. Mọi ảnh gắn với sản phẩm `published` phải có quyền được chấp nhận; ảnh còn `unknown` cần xử lý quyền hoặc loại khỏi gallery trước khi công bố.
 
+Khi file mất/rỗng sau lúc nạp catalog, API bỏ ảnh đó khỏi gallery và chọn ảnh còn file làm đại diện; `images_missing_file` phản ánh cả đường dẫn đã khai báo nhưng hiện không có file khả dụng. Nếu browser tải ảnh lỗi, gallery chuyển sang ảnh khác hoặc cho tải lại. Cơ chế hiển thị này không sửa dữ liệu hay thay validator: vẫn cần phục hồi file hoặc cập nhật metadata/hash đúng rồi chạy audit.
+
 Mã thoát `0` nghĩa là catalog hiện tại hợp lệ; không đồng nghĩa có sản phẩm đủ điều kiện công bố. Catalog sai schema trả mã `1` và không đánh giá từng sản phẩm. Dùng `--catalog` và `--report-dir` để chọn đầu vào và thư mục báo cáo.
 
 ## Quy ước ID

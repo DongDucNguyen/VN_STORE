@@ -1,5 +1,13 @@
 # Thu thập dữ liệu sản phẩm
 
+## Snapshot hiện tại — seed-002-taxonomy
+
+Ngày 10/10/2026 đã thêm nhánh `go-son-mai-binh-lo` (Bình, lọ trang trí) và chuyển hai bình Mystery/Vita theo tên, chất liệu có trong `raw/hanoia.json`. Catalog có 23 danh mục, vẫn 30 draft/45 ảnh; không đổi giá, claim hay quyền ảnh.
+
+**Baseline dùng cho lần nhập tiếp theo:** [baseline của run đã áp dụng](import_runs/2026-10-10_144329-548668_drafts/baseline.json). [Báo cáo thay đổi](../reports/progress/2026-10-10_GD1_taxonomy-va-snapshot.md) và [packet nhãn mới](../artifacts/keyword_review/2026-10-10_seed-002-taxonomy/index.html).
+
+Importer nhận `categories` tùy chọn trong editorial và ghép theo ID với cùng chính sách xung đột như các collection khác. Danh mục không có trong editorial vẫn được giữ; baseline cũ chưa có collection categories vẫn đọc được. Không sửa raw/manifest lịch sử chỉ để đổi taxonomy.
+
 ## Cập nhật ảnh — 10/10/2026
 
 Đã tải **52 ảnh ứng viên cho 30/30 sản phẩm**, chọn **45 ảnh** vào `database.json` (`seed-001-images`).
@@ -52,12 +60,12 @@ Importer hiện ghép ba phía: bản đã sinh ở lần nhập trước (**bas
 - Bản ghi không có trong batch mới được giữ nguyên; bản ghi đã xóa khỏi DB không tự xuất hiện lại nếu nguồn không đổi.
 - Chặn cập nhật bản ghi sản phẩm đã review hoặc không còn `draft`, và chặn thay đổi nguồn/metadata được sản phẩm đó tham chiếu trực tiếp. Việc biên tập lại cần được xử lý có chủ đích.
 
-Baseline khởi tạo đã được kiểm chứng trên catalog `seed-001-images`: [baseline.json](import_runs/2026-10-10_012920-036113_drafts/baseline.json). Nó là đầu ra generator, không phải bản sao các chỉnh sửa thủ công. Không sửa baseline hoặc tự cập nhật checksum của nó.
+Baseline khởi tạo của `seed-001-images` được giữ tại [baseline lịch sử](import_runs/2026-10-10_012920-036113_drafts/baseline.json); baseline hiện hành được dẫn ở đầu tài liệu. Baseline là đầu ra generator, không phải bản sao các chỉnh sửa thủ công. Không sửa baseline hoặc tự cập nhật checksum của nó.
 
 Xem trước sau khi sửa `editorial.json` hoặc raw:
 
 ```bash
-.venv/Scripts/python scripts/import_raw/build_drafts.py --dry-run --baseline data_collection/import_runs/2026-10-10_012920-036113_drafts/baseline.json --catalog-version seed-002-draft
+.venv/Scripts/python scripts/import_raw/build_drafts.py --dry-run --baseline data_collection/import_runs/2026-10-10_144329-548668_drafts/baseline.json --catalog-version seed-003-draft
 ```
 
 Đọc báo cáo Markdown/JSON được in ra: `changes` có giá trị trước/sau, `conflicts` có giá trị baseline/DB/nguồn. Lệnh trả mã `1` khi có xung đột, validation lỗi hoặc ghi thất bại; mã `0` cho preview hợp lệ, no-op hoặc ghi thành công. `--dry-run` vẫn lưu báo cáo và bản xem trước nhưng không ghi catalog.
@@ -83,7 +91,7 @@ Audit lấy số lượng từ DB, hỗ trợ catalog rỗng, hơn 100 sản ph�
 Bật thêm kiểm tra raw/editorial, baseline và manifest cụ thể:
 
 ```bash
-.venv/Scripts/python scripts/validate_catalog/audit_images.py --editorial data_collection/editorial.json --baseline data_collection/import_runs/2026-10-10_012920-036113_drafts/baseline.json --manifest data_collection/images/2026-10-10/manifest.json
+.venv/Scripts/python scripts/validate_catalog/audit_images.py --editorial data_collection/editorial.json --baseline data_collection/import_runs/2026-10-10_144329-548668_drafts/baseline.json --manifest data_collection/images/2026-10-10/manifest.json
 ```
 
 `--manifest` lặp được cho nhiều batch và không phụ thuộc thứ tự sản phẩm. `--baseline` cần đi cùng `--editorial`. Nếu không truyền, các kiểm tra bổ sung được ghi là bỏ qua, không tự suy đoán đã đạt.

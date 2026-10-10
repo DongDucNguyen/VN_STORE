@@ -5,22 +5,31 @@ Biến môi trường:
     VNSTORE_CATALOG         đường dẫn catalog (mặc định ../database.json)
     VNSTORE_INCLUDE_DRAFTS  1 = hiển thị cả sản phẩm draft (chỉ dùng khi phát triển)
     VNSTORE_CORS_ORIGINS    danh sách origin, phân tách bằng dấu phẩy
+    VNSTORE_ASR_ADAPTER     adapter ASR dạng module:thuộc_tính (mặc định: chưa có → 503)
+    VNSTORE_IMAGE_ADAPTER   adapter embedding ảnh dạng module:thuộc_tính (mặc định: chưa có → 503)
+    VNSTORE_IMAGE_INDEX_DIR thư mục chỉ mục ảnh (mặc định ../artifacts/indexes/image)
+    VNSTORE_IMAGE_INDEX_AUTOBUILD  1 = tự dựng chỉ mục ảnh trong bộ nhớ khi thiếu/cũ (chỉ khi phát triển)
 """
 from __future__ import annotations
 
 import os
+import time
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field
 
+from .adapters import Busy, ImageEmbedder
 from .catalog.present import product_detail, product_summary
 from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot
+from .media import MAX_AUDIO_BYTES, MAX_IMAGE_BYTES, MediaError
+from .modalities import STATE_MESSAGES, ImageService, Status, VoiceService, adapter_from_env
 from .search.engine import SearchEngine, SearchFilters
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -31,11 +40,15 @@ class Bundle:
     """Catalog và chỉ mục cùng phiên bản; thay nguyên khối, không ghép lẫn."""
     snap: CatalogSnapshot
     engine: SearchEngine
+    images: ImageService | None = None  # chỉ mục ảnh đã kiểm tra khớp đúng snapshot này
 
 
 class AppState:
     bundle: Bundle | None = None
     error: CatalogError | None = None
+    voice: VoiceService = VoiceService(None, Status("unavailable"))
+    image_embedder: ImageEmbedder | None = None
+    image_status: Status = Status("unavailable")
 
 
 state = AppState()
@@ -49,7 +62,10 @@ def reload_catalog(path: Path | None = None) -> None:
     """Dựng snapshot mới; chỉ thay khi thành công, giữ bản cũ nếu lỗi."""
     try:
         snap = load_snapshot(path or catalog_path(), include_drafts=os.environ.get("VNSTORE_INCLUDE_DRAFTS") == "1")
-        state.bundle = Bundle(snap, SearchEngine(snap))
+        old = state.bundle.images if isinstance(state.bundle, Bundle) else None
+        images = ImageService.for_snapshot(snap, state.image_embedder, state.image_status,
+                                           old.gate if old else None)
+        state.bundle = Bundle(snap, SearchEngine(snap), images)
         state.error = None
     except CatalogError as e:
         state.error = e
@@ -60,6 +76,9 @@ def reload_catalog(path: Path | None = None) -> None:
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    # Adapter khởi tạo rẻ (chưa nạp trọng số); trọng số nạp ở lần dùng đầu.
+    state.voice = VoiceService.from_env()
+    state.image_embedder, state.image_status = adapter_from_env("VNSTORE_IMAGE_ADAPTER", ImageEmbedder)
     reload_catalog()
     yield
 
@@ -110,7 +129,8 @@ def health() -> dict[str, Any]:
             "warnings": len(s.warnings),
         },
         "search": {"keyword": "ok", "index_build_ms": state.bundle.engine.build_ms,
-                   "voice": "unavailable", "image": "unavailable"},
+                   "voice": state.voice.status.state, "image": _image_status().state,
+                   "models": {"voice": state.voice.status.public(), "image": _image_status().public()}},
     }
 
 
@@ -261,22 +281,90 @@ def search(body: SearchIn) -> dict[str, Any]:
     return bundle().engine.search(body.query, SearchFilters(**body.filters.model_dump()), body.limit, body.offset)
 
 
-def _model_unavailable(kind: str) -> JSONResponse:
-    return JSONResponse(status_code=503, content={"detail": {
-        "code": "model_unavailable",
-        "message": f"Tìm bằng {kind} chưa sẵn sàng: model chưa được chọn qua benchmark (PLAN.md mục 8). "
-                   f"Bạn vẫn có thể tìm bằng chữ.",
-    }})
+def _image_status() -> Status:
+    b = state.bundle
+    return b.images.status if b and b.images else state.image_status
+
+
+def _error(status: int, code: str, message: str, **extra: Any) -> JSONResponse:
+    return JSONResponse(status_code=status, content={"detail": {"code": code, "message": message, **extra}})
+
+
+def _model_unavailable(kind: str, st: Status) -> JSONResponse:
+    reason = STATE_MESSAGES.get(st.state, st.state)
+    return _error(503, "model_unavailable", f"Tìm bằng {kind} chưa sẵn sàng: {reason}. Bạn vẫn có thể tìm bằng chữ.",
+                  state=st.state)
+
+
+async def _read_body(request: Request, limit: int) -> bytes:
+    """Đọc body có giới hạn; không tin Content-Length, dừng ngay khi vượt."""
+    declared = request.headers.get("content-length")
+    if declared and declared.isdigit() and int(declared) > limit:
+        raise MediaError("too_large", f"File vượt {limit // (1024 * 1024)} MB.", 413)
+    chunks, size = [], 0
+    async for chunk in request.stream():
+        size += len(chunk)
+        if size > limit:
+            raise MediaError("too_large", f"File vượt {limit // (1024 * 1024)} MB.", 413)
+        chunks.append(chunk)
+    return b"".join(chunks)
+
+
+BUSY_MESSAGE = "Máy chủ đang xử lý yêu cầu khác. Thử lại sau vài giây."
 
 
 @app.post("/search/voice")
-def search_voice() -> JSONResponse:
-    return _model_unavailable("giọng nói")
+async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -> Any:
+    """Body: WAV PCM 16-bit (trình duyệt tự mã hóa). Trả bản chép lời + kết quả tìm theo bản chép lời."""
+    voice = state.voice
+    if not voice.status.ok:
+        return _model_unavailable("giọng nói", voice.status)
+    b = bundle()
+    t0 = time.perf_counter()
+    try:
+        data = await _read_body(request, MAX_AUDIO_BYTES)
+        text, clip, timings = await run_in_threadpool(voice.transcribe, data)
+    except MediaError as e:
+        return _error(e.status, e.code, e.message)
+    except Busy:
+        return _error(429, "busy", BUSY_MESSAGE)
+    except Exception as e:  # noqa: BLE001 — lỗi model không làm sập API
+        return _error(503, "model_error", f"Model giọng nói gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
+    out = b.engine.search(text, limit=limit)
+    out["mode"] = "voice"
+    out["transcript"] = {"text": text, "model_id": voice.status.model_id, "revision": voice.status.revision,
+                         "duration_s": round(clip.duration_s, 2), "editable": True}
+    out["timings_ms"] = {**out["timings_ms"], **timings, "total": round((time.perf_counter() - t0) * 1000, 2)}
+    return out
 
 
 @app.post("/search/image")
-def search_image() -> JSONResponse:
-    return _model_unavailable("ảnh")
+async def search_image(request: Request, text: str = Query("", max_length=300),
+                       limit: int = Query(24, ge=1, le=100)) -> Any:
+    """Body: ảnh JPEG/PNG/WebP (giao diện cắt vùng và bỏ metadata trước khi gửi). Tham số text là yêu cầu
+    bổ sung tiếng Việt, ví dụ "có quai, dưới 400k": giá/phủ định là bộ lọc cứng như tìm bằng chữ."""
+    b = bundle()
+    images = b.images
+    if images is None or not images.status.ok:
+        return _model_unavailable("ảnh", _image_status())
+    t0 = time.perf_counter()
+    try:
+        data = await _read_body(request, MAX_IMAGE_BYTES)
+        hits, timings = await run_in_threadpool(images.query, data, set(b.snap.products))
+    except MediaError as e:
+        return _error(e.status, e.code, e.message)
+    except Busy:
+        return _error(429, "busy", BUSY_MESSAGE)
+    except Exception as e:  # noqa: BLE001
+        return _error(503, "model_error", f"Model ảnh gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
+    out = b.engine.search_visual(hits, text, limit=limit)
+    out["mode"] = "image"
+    out["visual"] = {"model_id": images.status.model_id, "revision": images.status.revision,
+                     "top_similarity": hits[0].similarity if hits else None, "match_label": "similar"}
+    out["warnings"].append("Kết quả là mẫu giống về hình ảnh, không khẳng định đúng sản phẩm; "
+                           "nhãn nguồn gốc lấy từ catalog, không suy ra từ ảnh.")
+    out["timings_ms"] = {**out["timings_ms"], **timings, "total": round((time.perf_counter() - t0) * 1000, 2)}
+    return out
 
 
 @app.get("/images/{image_id}")

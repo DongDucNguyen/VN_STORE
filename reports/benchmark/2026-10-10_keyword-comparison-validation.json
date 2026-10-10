@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-10-10T15:13:44+07:00",
+  "status": "passed",
+  "source_sha256": {
+    "scripts/benchmark/compare_keyword.py": "a7080788e579b06a7acfe46db58306b195f0b95e4c1b10643cc68312731ae943",
+    "backend/tests/test_keyword_comparison.py": "21c1c45162300791478b9f02834dca7bb8caa8e54bcfc838f0252467bab13e7a"
+  },
+  "backend": {
+    "generated_at": "2026-10-10T15:11:51+07:00",
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\VNStore\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "pytest",
+      "backend/tests",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "seconds": 4.89,
+    "passed": 248,
+    "new_tests": 32,
+    "warnings": 1,
+    "pytest_seconds": 4.51,
+    "log": "artifacts/review/2026-10-10_keyword-comparison/final-backend-tests.log",
+    "log_sha256": "8664d660a7748442f778ca9066e26b3593798e717eea7d47b36e8d89db3bc282"
+  },
+  "cli_cases": [
+    {
+      "case": "compatible",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "report": "reports/benchmark/2026-10-10_151144-191058_keyword-comparison.json",
+      "status": "comparable_descriptive",
+      "reasons": [],
+      "error": null
+    },
+    {
+      "case": "different_catalog",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "report": "reports/benchmark/2026-10-10_151144-251564_keyword-comparison.json",
+      "status": "incompatible",
+      "reasons": [
+        "Different catalog_sha256"
+      ],
+      "error": null
+    },
+    {
+      "case": "legacy",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "report": "reports/benchmark/2026-10-10_151144-312866_keyword-comparison.json",
+      "status": "invalid",
+      "reasons": [],
+      "error": "ValueError: Missing metric_policy"
+    }
+  ],
+  "smoke_run": {
+    "path": "experiments/results/20261010-151043-179191_keyword_bm25-comparison-smoke/run.json",
+    "sha256": "e10f853dedd90c549fd723b30eea010af8e1334f040ea42cf540b9f059406b27",
+    "status": "smoke_unverified",
+    "unverified_queries": 12,
+    "ranking_changes_vs_taxonomy_run": 0
+  },
+  "catalog_unchanged": true,
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "local_images_sha256_verified": 45,
+  "existing_runtime_and_test_files_unchanged": true,
+  "preserved": {
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "seed": "benchmarks/keyword/seed_unverified.jsonl",
+    "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+    "import_inputs_sha256": {
+      "data_collection/editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+      "data_collection/raw/minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+      "data_collection/raw/vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+      "data_collection/raw/maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+      "data_collection/raw/hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+      "data_collection/raw/kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+      "data_collection/images/2026-10-10/manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+    },
+    "reviewed_label_file_created": false
+  },
+  "previous_frontend_checks": {
+    "report": "reports/data_quality/2026-10-10_project-recheck-validation.json",
+    "e2e_passed": 64,
+    "typecheck_and_build_passed": true,
+    "rerun_this_round": false
+  },
+  "limits": [
+    "Seed labels remain unverified; comparison is exploratory, not an official baseline",
+    "No latency comparison, statistical significance or model winner",
+    "Validates consistency of saved runs, not label content authenticity; hashes are not signatures"
+  ]
+}

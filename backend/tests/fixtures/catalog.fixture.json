@@ -224,6 +224,17 @@
         "tiêu",
         "muối"
       ]
+    },
+    {
+      "id": "go-son-mai-binh-lo",
+      "name_vi": "Bình, lọ trang trí",
+      "parent_id": "go-son-mai",
+      "aliases": [
+        "bình hoa",
+        "lọ hoa",
+        "bình trang trí",
+        "lọ trang trí"
+      ]
     }
   ],
   "search_dictionary": {

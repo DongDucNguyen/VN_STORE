@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-10-10T15:34:21+07:00",
+  "tool_validation_status": "passed",
+  "dataset_status": "pending_collection",
+  "benchmark_approved": false,
+  "code_sha256": {
+    "scripts/benchmark/audit_image_pixels.py": "c52181985688bc7060dfab9039839ebd7342c2a4c4c7ca61eedf4c942aa17e13",
+    "scripts/benchmark/requirements-images.txt": "0658ee92cfeabea2c3c766a2eaecb576723d861aa3db6eb2d1b03245afe1fe02",
+    "scripts/benchmark/tests/test_image_pixels.py": "596d30b88bde307ccab1924d25e12b17e6714f04f090f2057e2a080c4d736572"
+  },
+  "pixel_tests": {
+    "generated_at": "2026-10-10T15:31:37+07:00",
+    "command": [
+      "C:\\Users\\Admin\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/benchmark/tests",
+      "-p",
+      "test_image_pixels.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 1.12,
+    "log": "artifacts/review/2026-10-10_image-pixels/pixel-tests.log",
+    "passed": 22,
+    "unittest_seconds": 0.321,
+    "log_sha256": "2de2029990be0e9308c73f65dac19b4859e379bb90f6487b8ee1f1fe60f7b7bf"
+  },
+  "real_scan": {
+    "path": "reports/benchmark/2026-10-10_152959-680994_image-pixels.json",
+    "sha256": "ad2bf73d94833ff806188bdb3bc0c4c2f54cb7f3d49bca8e25bd5d0197e63fef",
+    "summary": {
+      "gallery_images": 45,
+      "query_images": 0,
+      "decoded": 45,
+      "failed": 0,
+      "candidate_pairs": 19,
+      "by_relationship": {
+        "gallery_same_product": 1,
+        "gallery_cross_product": 18
+      },
+      "high_priority_pairs": 0
+    },
+    "formats": {
+      "JPEG": 14,
+      "PNG": 19,
+      "WEBP": 12
+    },
+    "normalized_pixel_duplicate_pairs": 0,
+    "environment": {
+      "python": "3.14.6",
+      "executable": "C:\\Users\\Admin\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "pillow": "12.3.0"
+    }
+  },
+  "review_page": {
+    "path": "artifacts/image_review/2026-10-10_pixel-audit/index.html",
+    "sha256": "2cb1e9662cc3e5122667fafae31cc26f7607f6499423b2add092497c6c7506bd",
+    "image_references": 83,
+    "all_local_targets_exist": true,
+    "browser_layout_checked": false
+  },
+  "visual_spot_checks": {
+    "reviewer": "Codex",
+    "not_human_benchmark_review": true,
+    "pairs": [
+      {
+        "ids": [
+          "img-minhlong-binh-hoa-hon-viet-30cm-1",
+          "img-minhlong-binh-hoa-hon-viet-30cm-2"
+        ],
+        "distance": 0,
+        "observation": "Same vase form, visibly different decorative scenes; no removal made"
+      },
+      {
+        "ids": [
+          "img-marou-ben-tre-78-80g-1",
+          "img-marou-ba-ria-76-80g-1"
+        ],
+        "distance": 1,
+        "observation": "Different packaging colors and visible labels: Ben Tre 78% vs Ba Ria 76%; no removal made"
+      }
+    ],
+    "images_viewed": 4,
+    "remaining_candidate_pairs_not_visually_reviewed": 17
+  },
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "catalog_and_gallery_unchanged": true,
+  "query_manifest_unchanged": true,
+  "preserved": {
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "seed": "benchmarks/keyword/seed_unverified.jsonl",
+    "seed_sha256": "c8b78b939d48114211b4f8df6968b3a3306bdd47ddbf99f400840d3ef7ae6ee8",
+    "import_inputs_sha256": {
+      "data_collection/editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+      "data_collection/raw/minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+      "data_collection/raw/vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+      "data_collection/raw/maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+      "data_collection/raw/hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+      "data_collection/raw/kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+      "data_collection/images/2026-10-10/manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+    },
+    "reviewed_label_file_created": false
+  },
+  "prior_checks_not_rerun": {
+    "backend_passed": 289,
+    "e2e_passed": 64,
+    "typecheck_build_passed": true,
+    "reason": "Optional standalone image tool; runtime and existing audit code unchanged"
+  },
+  "limits": [
+    "dHash threshold 6 is heuristic, not calibrated; 19 candidates are not confirmed duplicates",
+    "No ICC transform, crop matching, OCR or embedding",
+    "Zero real independent image queries collected",
+    "No license or human label approval; no automatic data changes",
+    "Optional tests require separate Pillow environment, not included in run_all_tests.py"
+  ]
+}

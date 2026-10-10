@@ -13,7 +13,8 @@ _TOKEN = re.compile(r"[0-9a-zà-ỹđ]+(?:[.,][0-9]+)*", re.IGNORECASE)
 # Từ đệm trong truy vấn hội thoại, so trên dạng có dấu.
 STOPWORDS = frozenset(
     """tìm cho mình tôi em anh chị bạn giúp xin hãy muốn mua cần có của và với là nhé nha ạ
-    cái chiếc một vài những các loại sản phẩm hàng món đồ kiếm coi xem nào gì ở tại""".split()
+    cái chiếc một vài những các loại sản phẩm hàng món đồ kiếm coi xem nào gì ở tại
+    bằng này nhưng giống""".split()
 )
 # Khi người dùng gõ không dấu chỉ bỏ những từ không trùng với từ có nghĩa:
 # "do" (đỏ), "coi" (cói), "la" (lá), "vai" (vải), "ban" (bàn), "nhung" (nhung), "tim" (tím),

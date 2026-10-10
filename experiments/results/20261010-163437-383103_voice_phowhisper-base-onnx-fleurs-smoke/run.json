@@ -1,0 +1,122 @@
+{
+  "name": "phowhisper-base-onnx-fleurs-smoke",
+  "created_at": "2026-10-10T16:34:37+07:00",
+  "evaluation_status": "smoke_unreviewed",
+  "model": {
+    "adapter": "app.ml.asr:PhoWhisperBase",
+    "model_id": "vinai/PhoWhisper-base",
+    "revision": "41a94b878c46ec2ab28e0ebea0915369f0758380",
+    "license": "bsd-3-clause",
+    "config": {
+      "runtime": "onnxruntime",
+      "onnx_repo": "onnx-community/PhoWhisper-base-ONNX",
+      "onnx_variant": "fp32",
+      "upstream": "vinai/PhoWhisper-base@7ebdb9e88f5cc5271fb88f4d642c82ff9388650e",
+      "config_repo": "onnx-community/PhoWhisper-base-ONNX@41a94b878c46ec2ab28e0ebea0915369f0758380",
+      "decoder": "greedy",
+      "language": "vi",
+      "task": "transcribe",
+      "timestamps": false,
+      "max_new_tokens": 96
+    }
+  },
+  "manifest_sha256": "b6be89b80cfccc81c40d7c867bc416c7b7b892d1c39350922685b7f8b1a663b5",
+  "catalog_version": "seed-002-taxonomy",
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "split": "dev",
+  "unreviewed_clips": 31,
+  "selected_qids": [
+    "fleurs-10056093347220194289",
+    "fleurs-10096143719994033924",
+    "fleurs-10282809127467658620",
+    "fleurs-10330493063020763016",
+    "fleurs-10345338034048705315",
+    "fleurs-1034691046874497805",
+    "fleurs-10364262111328509853",
+    "fleurs-1037921397326591554",
+    "fleurs-10398673072244472767",
+    "fleurs-10467396475561744099",
+    "fleurs-10571565832044041622",
+    "fleurs-10574881695268175717",
+    "fleurs-10613851996114903534",
+    "fleurs-10668675586953055114",
+    "fleurs-10699438014069845122",
+    "fleurs-10734584756155989470",
+    "fleurs-10736975338715267742",
+    "fleurs-10897165480379223873",
+    "fleurs-10959203197012192023",
+    "fleurs-10965755017487041216",
+    "fleurs-11024498478308479354",
+    "fleurs-11025013104549101811",
+    "fleurs-11157776223844529887",
+    "fleurs-11192806831650408893",
+    "fleurs-11197898549057582029",
+    "fleurs-11221223857413660920",
+    "fleurs-1125250268280639805",
+    "fleurs-113201345179903004",
+    "fleurs-11356869827794671517",
+    "fleurs-11416600578316126877",
+    "noise-white-35dbfs"
+  ],
+  "metric_policy": "vi-asr-v1: syllable WER, CER without spaces keeping diacritics, micro average; price/negation via query_parser on reference vs hypothesis",
+  "latency_protocol": {
+    "warmup_clips": 1,
+    "batch": 1,
+    "scope": "adapter.transcribe only",
+    "p50/p95": "nearest-rank"
+  },
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "code_files_sha256": {
+    "scripts/benchmark/eval_voice.py": "6772bbd6a13464044c9a36f8ff766a8dfb737b70bf70520498f5f4595c8fac27",
+    "scripts/benchmark/asr_metrics.py": "269c50acd83a9e627d1e52d841836df0955edd57eeae6b13bf24d078ae772e11",
+    "backend/app/media.py": "f8b0c5f3d501a6ef3d6d2d9a556700a1b170cbbc3f14c00fb74e082c208d9487",
+    "backend/app/search/query_parser.py": "65e6766b136c871758cd4050f862645b6e4a2075d49b06efedf20baf660676b6"
+  },
+  "metrics": {
+    "n_clips": 31,
+    "n_speech": 30,
+    "n_silence": 1,
+    "n_speakers": 2,
+    "wer_raw": 0.2547,
+    "cer_raw": 0.1591,
+    "wer_normalized": 0.1606,
+    "cer_normalized": 0.1279,
+    "price_accuracy": 1.0,
+    "n_price": 4,
+    "spurious_price": 1,
+    "negation_accuracy": 0.8,
+    "n_negation": 5,
+    "silence_hallucination_rate": 1.0,
+    "speech_rejected_by_gate": 1,
+    "asr_ms_p50": 351.59,
+    "asr_ms_p95": 506.0,
+    "rtf_p50": 0.0339,
+    "rtf_p95": 0.0496,
+    "by_group": {
+      "region": {
+        "unknown": {
+          "n": 30,
+          "wer_normalized": 0.1606,
+          "cer_normalized": 0.1279
+        }
+      },
+      "device": {
+        "fleurs": {
+          "n": 30,
+          "wer_normalized": 0.1606,
+          "cer_normalized": 0.1279
+        }
+      },
+      "environment": {
+        "unknown": {
+          "n": 30,
+          "wer_normalized": 0.1606,
+          "cer_normalized": 0.1279
+        }
+      }
+    }
+  }
+}

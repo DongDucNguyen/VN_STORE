@@ -198,8 +198,39 @@ def real():
 
 def test_real_generator_is_noop_with_safe_merge(real):
     editorial = json.loads((REPO_ROOT / "data_collection/editorial.json").read_bytes())
-    out, conflicts = merge_catalog(real, generate(editorial))
+    generated = generate(editorial)
+    # Import timestamps can differ from collection timestamps after a real import.
+    out, conflicts = merge_catalog(real, generated, generated)
     assert not conflicts and out == real
+
+
+def test_import_adds_category_and_moves_product_together(catalog):
+    incoming = copy.deepcopy(catalog)
+    incoming["categories"] = [{"id": "decor-vase", "name_vi": "Bình trang trí", "parent_id": None}]
+    incoming["products"][0]["category_id"] = "decor-vase"
+    out, conflicts = merge_catalog(catalog, incoming, catalog)
+    assert not conflicts and out["categories"] == incoming["categories"]
+    assert out["products"][0]["category_id"] == "decor-vase"
+
+
+def test_legacy_baseline_without_categories_can_be_loaded(tmp_path, catalog):
+    old = copy.deepcopy(catalog)
+    del old["categories"]
+    path = tmp_path / "baseline.json"
+    path.write_bytes(encoded({"format": "vnstore-import-baseline-v1", "eligible": True,
+                             "generated": old, "generated_sha256": digest(encoded(old))}))
+    assert load_baseline(path) == old
+    out, conflicts = merge_catalog(catalog, old, old)
+    assert not conflicts and out == catalog
+
+
+def test_category_change_referenced_by_reviewed_product_is_blocked(catalog):
+    catalog["categories"] = [{"id": "decor", "name_vi": "Trang trí"}]
+    catalog["products"][0].update(category_id="decor", reviewed_at="2026-10-10T01:00:00+07:00")
+    incoming = copy.deepcopy(catalog)
+    incoming["categories"][0]["name_vi"] = "Đổi tên"
+    _, conflicts = merge_catalog(catalog, incoming, catalog)
+    assert conflicts[0]["code"] == "reviewed_product_reference_changed"
 
 
 def test_image_reimport_preserves_rights_caption_and_new_version(real):

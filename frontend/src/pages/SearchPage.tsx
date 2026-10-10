@@ -100,6 +100,11 @@ export function SearchPage({ route }: { route: Route }) {
   return (
     <div className="page search-page">
       <SearchBar initial={q} />
+      {route.params.get("via") === "voice" && q && (
+        <Notice>
+          Đã chép lời từ giọng nói: “{q}”. Nếu chưa đúng, sửa trong ô tìm rồi bấm Tìm, hoặc bấm 🎤 để nói lại.
+        </Notice>
+      )}
 
       {data && iq && (q || userFilters.length > 0) && (
         <section className="interpret" aria-label="Cách hệ thống hiểu truy vấn">

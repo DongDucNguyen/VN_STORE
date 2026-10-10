@@ -20,7 +20,7 @@ def make_packet(queries, snap, output: Path):
         raise ValueError("Catalog không có sản phẩm hiển thị; kiểm tra --include-drafts")
     products = []
     for p in snap.products.values():
-        image = next((i for i in p["images"] if i["local_path"]), None)
+        image = next((i for i in p["images"] if snap.image_path(i["id"]) is not None), None)
         image_path = snap.image_path(image["id"]) if image else None
         products.append({
             "id": p["id"], "name": p["name_vi"], "description": p["short_description_vi"],

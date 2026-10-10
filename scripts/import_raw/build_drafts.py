@@ -153,7 +153,8 @@ def build(ed: dict, data_dir: Path = DATA) -> dict:
               for p in ed["places"]]
     brands = [{"aliases": [], **b} for b in ed["brands"]]
     makers = [{"aliases": [], **m} for m in ed["makers"]]
-    return {"sources": sources, "brands": brands, "makers": makers, "places": places, "products": products}
+    return {"categories": ed.get("categories", []), "sources": sources, "brands": brands,
+            "makers": makers, "places": places, "products": products}
 
 
 def generate(ed: dict, data_dir: Path = DATA) -> dict:

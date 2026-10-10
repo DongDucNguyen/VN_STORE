@@ -124,3 +124,9 @@ def test_latency_under_target(engine):
         times.append(time.perf_counter() - t)
     times.sort()
     assert times[int(0.95 * len(times)) - 1] < 0.5
+
+
+def test_material_preposition_and_image_refinement_words_are_not_keywords(engine):
+    # "bằng" (làm bằng) từng khớp BM25 với tên "… bằng lụa" khi tinh chỉnh tìm bằng ảnh.
+    assert engine.search("túi bằng cói")["interpreted_query"]["keywords"] == "túi cói"
+    assert engine.search("giống mẫu này nhưng màu đỏ")["interpreted_query"]["keywords"] == "mẫu màu đỏ"

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VNStore independent image query collection manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "catalog_sha256", "include_drafts", "samples"],
+  "properties": {
+    "manifest_version": {"const": "1.0.0"},
+    "catalog_sha256": {"$ref": "#/$defs/hash"},
+    "include_drafts": {"type": "boolean"},
+    "samples": {"type": "array", "items": {"$ref": "#/$defs/sample"}}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "text": {"type": "string", "pattern": "\\S", "maxLength": 2000},
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,119}$"},
+    "nullable_text": {"anyOf": [{"$ref": "#/$defs/text"}, {"type": "null"}]},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["independent", "reviewed_by", "reviewed_at", "note"],
+      "properties": {
+        "independent": {"type": "boolean"},
+        "reviewed_by": {"$ref": "#/$defs/text"},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "note": {"$ref": "#/$defs/text"}
+      }
+    },
+    "judgment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["has_answer", "relevance", "exact_product_id", "exact_variant_sku", "reviewed_by", "reviewed_at"],
+      "properties": {
+        "has_answer": {"type": "boolean"},
+        "relevance": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 3}},
+        "exact_product_id": {"$ref": "#/$defs/nullable_text"},
+        "exact_variant_sku": {"$ref": "#/$defs/nullable_text"},
+        "reviewed_by": {"$ref": "#/$defs/text"},
+        "reviewed_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "sample": {
+      "type": "object", "additionalProperties": false,
+      "required": ["qid", "task", "text_vi", "split", "family_id", "capture_session_id", "source_asset_id", "source_asset_sha256", "image_path", "sha256", "source_url", "usage_rights", "independence_review", "judgment"],
+      "properties": {
+        "qid": {"$ref": "#/$defs/id"},
+        "task": {"enum": ["exact", "similar", "image_text"]},
+        "text_vi": {"$ref": "#/$defs/nullable_text"},
+        "split": {"enum": ["train", "dev", "test"]},
+        "family_id": {"$ref": "#/$defs/id"},
+        "capture_session_id": {"$ref": "#/$defs/id"},
+        "source_asset_id": {"$ref": "#/$defs/id"},
+        "source_asset_sha256": {"$ref": "#/$defs/hash"},
+        "image_path": {"type": "string", "pattern": "^raw/", "maxLength": 500},
+        "sha256": {"$ref": "#/$defs/hash"},
+        "source_url": {"type": ["string", "null"], "pattern": "^https?://\\S+$"},
+        "usage_rights": {
+          "type": "object", "additionalProperties": false,
+          "required": ["status", "evidence"],
+          "properties": {
+            "status": {"enum": ["unknown", "owned", "licensed", "permission_granted"]},
+            "evidence": {"$ref": "#/$defs/nullable_text"}
+          }
+        },
+        "independence_review": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/review"}]},
+        "judgment": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/judgment"}]}
+      }
+    }
+  }
+}

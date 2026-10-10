@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-10-10T14:44:31+07:00",
+  "kind": "drafts",
+  "dry_run": true,
+  "catalog_sha256_before": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "proposed_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "baseline": "data_collection\\import_runs\\2026-10-10_144329-548668_drafts\\baseline.json",
+  "inputs_sha256": {
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\images\\2026-10-10\\manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+  },
+  "conflicts": [],
+  "validation_issues": [],
+  "changes": [],
+  "status": "no_op",
+  "artifacts": "data_collection/import_runs/2026-10-10_144431-632780_drafts"
+}

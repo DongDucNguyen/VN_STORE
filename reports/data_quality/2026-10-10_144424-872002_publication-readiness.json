@@ -1,0 +1,1490 @@
+{
+  "catalog_version": "seed-002-taxonomy",
+  "generated_at": "2026-10-10T14:44:24+07:00",
+  "scope": "Mô phỏng published trên bản sao, kiểm tra file và quy tắc validator. Không sửa DB, không xác nhận nội dung hay cấp quyền sử dụng ảnh.",
+  "current_validation": {
+    "ok": true,
+    "errors": 0,
+    "warnings": 0,
+    "issues": []
+  },
+  "assessment_complete": true,
+  "products": [
+    {
+      "id": "p-minhlong-chen-com-thach-van-11cm",
+      "name_vi": "Chén cơm 11 cm Jasmine – Thạch Vân",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[0].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[0].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[0].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-minhlong-binh-hoa-hon-viet-30cm",
+      "name_vi": "Bình hoa 30 cm Hồn Việt",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[1].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[1].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[1].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[1].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": true,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-minhlong-binh-hoa-sen-vang-27cm",
+      "name_vi": "Bình hoa 27 cm Sen Vàng",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[2].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[2].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[2].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[2].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": true,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+      "name_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[3].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[3].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[3].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[3].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+      "name_vi": "Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[4].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[4].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[4].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-lys-dia-tron-jasmine-trang-nga-15cm",
+      "name_vi": "Dĩa tròn 15 cm Jasmine Lys – Trắng Ngà",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image",
+        "published_no_vn_claim"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[5].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[5].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        },
+        {
+          "level": "error",
+          "code": "published_no_vn_claim",
+          "path": "$.products[5].origin_claims",
+          "message": "Catalog chỉ nhận sản phẩm có ít nhất một tiêu chí Việt (value=true) có nguồn"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[5].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-gio-tre-dan-tron-vh24026",
+      "name_vi": "Giỏ tre đan tròn viền gỗ",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[6].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[6].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[6].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-chup-den-seagrass-vh24028",
+      "name_vi": "Chụp đèn treo đan seagrass",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[7].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[7].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[7].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[7].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+      "name_vi": "Túi lục bình đan tay đính vỏ sò",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[8].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[8].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[8].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-gio-may-bau-duc-vh24040",
+      "name_vi": "Giỏ mây đan hình bầu dục",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image",
+        "published_no_vn_claim"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[9].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[9].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[9].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        },
+        {
+          "level": "error",
+          "code": "published_no_vn_claim",
+          "path": "$.products[9].origin_claims",
+          "message": "Catalog chỉ nhận sản phẩm có ít nhất một tiêu chí Việt (value=true) có nguồn"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[9].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-vietcraft-gio-seagrass-vh24046",
+      "name_vi": "Giỏ đan seagrass",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[10].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[10].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[10].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-khay-may-dan-vh24048",
+      "name_vi": "Khay mây đan tay",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[11].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[11].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[11].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-bat-gao-dua-son-ve-tay",
+      "name_vi": "Bát gáo dừa phủ sơn vẽ tay",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[12].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[12].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[12].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-vietcraft-bat-tre-cuon-phu-son-vh24045",
+      "name_vi": "Bát tre cuộn phủ sơn",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[13].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[13].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[13].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": true,
+        "missing_maker": false,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-ben-tre-78-80g",
+      "name_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[14].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[14].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[14].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-tien-giang-70-80g",
+      "name_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[15].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[15].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[15].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-lam-dong-74-80g",
+      "name_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[16].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[16].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[16].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-quat-tien-giang-68-80g",
+      "name_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[17].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[17].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[17].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-vietnam-100-60g",
+      "name_vi": "Sô-cô-la đen 100% Vietnam 60g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[18].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[18].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[18].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-marou-ba-ria-76-80g",
+      "name_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[19].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[19].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[19].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-hanoia-binh-hoa-mystery-a18mt01",
+      "name_vi": "Bình hoa Mystery",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[20].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[20].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[20].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-hanoia-binh-hoa-vita-pc26vt01",
+      "name_vi": "Bình hoa Vita",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[21].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[21].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[21].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+      "name_vi": "Hộp vuông Botanica size S",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[22].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[22].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[22].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+      "name_vi": "Hộp đan tre Ethnic size S",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[23].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[23].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[23].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 0,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": true
+      }
+    },
+    {
+      "id": "p-kilomet109-ao-khoac-phi-17mjk003",
+      "name_vi": "Áo khoác Phi vải gai dầu nhuộm chàm",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[24].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[24].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[24].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[24].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-kilomet109-ao-so-mi-thong-17mt004",
+      "name_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[25].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[25].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[25].images[2].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[25].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[25].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-kilomet109-vay-van-19wdr006",
+      "name_vi": "Váy dài Vân bằng lụa Vân",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[26].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[26].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[26].images[2].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[26].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[26].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-kilomet109-chan-vay-ha-17wsk001",
+      "name_vi": "Chân váy Hà cotton batik nhuộm chàm",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[27].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[27].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[27].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[27].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+      "name_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[28].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[28].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[28].images[2].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[28].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[28].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    },
+    {
+      "id": "p-kilomet109-vong-co-xoan-17wac001",
+      "name_vi": "Vòng cổ vải Xoắn",
+      "current_status": "draft",
+      "technical_ready": false,
+      "review_recorded": false,
+      "passes_recorded_checks": false,
+      "blocker_codes": [
+        "image_rights",
+        "published_no_image"
+      ],
+      "blockers": [
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[29].images[0].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[29].images[1].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "image_rights",
+          "path": "$.products[29].images[2].usage_rights",
+          "message": "Sản phẩm published không được dùng ảnh chưa rõ quyền"
+        },
+        {
+          "level": "error",
+          "code": "published_no_image",
+          "path": "$.products[29].images",
+          "message": "Sản phẩm published cần ít nhất một ảnh hợp lệ"
+        }
+      ],
+      "warnings": [
+        {
+          "level": "warning",
+          "code": "published_not_reviewed",
+          "path": "$.products[29].reviewed_at",
+          "message": "Sản phẩm published chưa có reviewed_at"
+        }
+      ],
+      "editorial_gaps": {
+        "variants_without_price": 1,
+        "missing_materials": false,
+        "missing_brand": false,
+        "missing_maker": true,
+        "fewer_than_two_images": false
+      }
+    }
+  ],
+  "global_issues": [],
+  "summary": {
+    "products": 30,
+    "technical_ready": 0,
+    "review_pending": 30,
+    "passes_recorded_checks": 0,
+    "products_by_blocker_code": {
+      "image_rights": 30,
+      "published_no_image": 30,
+      "published_no_vn_claim": 2
+    },
+    "global_errors": 0
+  },
+  "quality": {
+    "catalog_version": "seed-002-taxonomy",
+    "generated_at": "2026-10-10T14:44:24+07:00",
+    "counts": {
+      "categories": 23,
+      "brands": 5,
+      "makers": 2,
+      "places": 6,
+      "sources": 37,
+      "products": 30,
+      "variants": 30,
+      "images": 45
+    },
+    "status": {
+      "draft": 30
+    },
+    "image_files": {
+      "by_status": {
+        "valid": 45
+      },
+      "with_usable_rights_and_valid_file": 0,
+      "scope": "Kiểm tra đường dẫn, khả năng đọc, file khác rỗng và SHA-256 nếu đã khai báo; không giải mã ảnh hay duyệt nội dung/quyền."
+    },
+    "products_by_root_category": {
+      "gom-su": 6,
+      "may-tre-coi": 7,
+      "go-son-mai": 5,
+      "thuc-pham": 6,
+      "det-may": 6
+    },
+    "products_by_category": {
+      "gom-su-bat-dia": 2,
+      "gom-su-binh-lo": 2,
+      "gom-su-am-chen": 1,
+      "gom-su-coc-ly": 1,
+      "may-tre-coi-gio": 4,
+      "may-tre-coi-noi-that": 1,
+      "may-tre-coi-tui": 1,
+      "go-son-mai": 3,
+      "thuc-pham-banh-keo": 6,
+      "go-son-mai-binh-lo": 2,
+      "may-tre-coi": 1,
+      "det-may-thoi-trang": 6
+    },
+    "missing": {
+      "khong_co_gia_bien_the": {
+        "count": 14,
+        "total": 30,
+        "pct": 46.7
+      },
+      "khong_co_anh": {
+        "count": 0,
+        "total": 30,
+        "pct": 0.0
+      },
+      "khong_co_file_anh_hop_le": {
+        "count": 0,
+        "total": 30,
+        "pct": 0.0
+      },
+      "khong_co_anh_du_quyen_va_file": {
+        "count": 30,
+        "total": 30,
+        "pct": 100.0
+      },
+      "duoi_2_anh": {
+        "count": 19,
+        "total": 30,
+        "pct": 63.3
+      },
+      "anh_chua_ro_quyen": {
+        "count": 45,
+        "total": 45,
+        "pct": 100.0
+      },
+      "khong_co_mo_ta_ngan": {
+        "count": 0,
+        "total": 30,
+        "pct": 0.0
+      },
+      "khong_co_chat_lieu": {
+        "count": 2,
+        "total": 30,
+        "pct": 6.7
+      },
+      "khong_co_thuong_hieu": {
+        "count": 8,
+        "total": 30,
+        "pct": 26.7
+      },
+      "khong_co_nha_san_xuat": {
+        "count": 16,
+        "total": 30,
+        "pct": 53.3
+      },
+      "khong_co_tieu_chi_viet_true": {
+        "count": 2,
+        "total": 30,
+        "pct": 6.7
+      },
+      "chua_review": {
+        "count": 30,
+        "total": 30,
+        "pct": 100.0
+      }
+    },
+    "origin_claims": {
+      "vn_brand": {
+        "true": 9,
+        "unknown": 1
+      },
+      "made_in_vn": {
+        "unknown": 17,
+        "true": 13
+      },
+      "vn_material": {
+        "true": 14
+      },
+      "traditional_craft": {
+        "true": 4,
+        "unknown": 1
+      }
+    },
+    "duplicate_images_sha256": {},
+    "duplicate_image_urls": {},
+    "perceptual_hash": "chưa chạy; SHA-256 chỉ phát hiện file trùng byte, chưa phát hiện ảnh gần giống"
+  },
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "catalog_file": "database.json"
+}

@@ -4,13 +4,16 @@ from __future__ import annotations
 import time
 from collections import Counter
 from dataclasses import dataclass, field
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from ..catalog.present import CLAIM_LABELS, price_summary, product_summary
 from ..catalog.store import CatalogSnapshot
 from .bm25 import MultiFieldBM25
 from .normalize import analyze, has_accents, is_stopword, strip_accents, tokens
 from .query_parser import ParsedQuery, PriceConstraint, Vocabulary, VocabEntry, parse_query
+
+if TYPE_CHECKING:
+    from ..image.index import VisualHit
 
 FIELD_WEIGHTS = {
     "name": 3.0, "brand": 2.5, "sku": 2.5, "aliases": 2.0, "category": 1.5,
@@ -28,6 +31,8 @@ EXPANSION_WEIGHTS = {"synonym": 0.6, "regional": 0.6, "broader": 0.4}
 EXPANSION_NO_CONTEXT_FACTOR = 0.5
 PHRASE_FIELDS = {"place", "brand", "maker"}
 COVERED_UNIGRAM_WEIGHT = 0.2
+RRF_K = 60                      # Reciprocal Rank Fusion; tinh chỉnh trên dev khi có nhãn ảnh
+IMAGE_TOP_K = 50               # số sản phẩm giống ảnh nhất đưa vào gộp hạng
 
 
 def fmt_vnd(v: int) -> str:
@@ -422,8 +427,36 @@ class SearchEngine:
                       "min_vnd": min(prices) if prices else None, "max_vnd": max(prices) if prices else None},
         }
 
+    def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc
+              ) -> list[tuple[str, float, set[str]]]:
+        """Ảnh (+ chữ): gộp thứ hạng bằng RRF, không cộng cosine với điểm BM25 (PLAN.md mục 4).
+        Bộ lọc cứng đã áp dụng lên candidates; gợi ý thuộc tính trong chữ chỉ boost mềm."""
+        vis = [h.product_id for h in visual if h.product_id in candidates][:IMAGE_TOP_K]
+        text = self._rank(parsed, candidates, q_plain, q_acc) if q_plain else []
+        fused: Counter[str] = Counter()
+        fields: dict[str, set[str]] = {}
+        for rank, d in enumerate(vis, 1):
+            fused[d] += 1 / (RRF_K + rank)
+            fields[d] = {"image"}
+        for rank, (d, _, fs) in enumerate(text, 1):
+            fused[d] += 1 / (RRF_K + rank)
+            fields[d] = fields.get(d, set()) | fs
+        ranked = [(d, s * (1 + HINT_BOOST * self._hint_matches(self.snap.products[d], parsed)), fields[d])
+                  for d, s in fused.items()]
+        ranked.sort(key=lambda x: (-x[1], self.snap.products[x[0]]["name_vi"]))
+        return ranked
+
     def search(self, query: str, filters: SearchFilters | None = None, limit: int = 24, offset: int = 0
                ) -> dict[str, Any]:
+        return self._execute(query, filters, limit, offset)
+
+    def search_visual(self, visual: list[VisualHit], text: str = "", filters: SearchFilters | None = None,
+                      limit: int = 24, offset: int = 0) -> dict[str, Any]:
+        """Kết quả cho ảnh truy vấn: cùng bộ lọc, diễn giải và định dạng với tìm bằng chữ."""
+        return self._execute(text, filters, limit, offset, visual)
+
+    def _execute(self, query: str, filters: SearchFilters | None, limit: int, offset: int,
+                 visual: list[VisualHit] | None = None) -> dict[str, Any]:
         t0 = time.perf_counter()
         filters = filters or SearchFilters()
         parsed = parse_query(query or "", self.vocab)
@@ -438,16 +471,21 @@ class SearchEngine:
         def passing(cs: list[_Constraint], ids: set[str]) -> set[str]:
             return {d for d in ids if all(c.test(self.snap.products[d]) for c in cs)}
 
+        def rank(ids: set[str]) -> list[tuple[str, float, set[str]]]:
+            if visual is None:
+                return self._rank(parsed, ids, q_plain, q_acc)
+            return self._fuse(parsed, ids, visual, q_plain, q_acc)
+
         base = passing(non_price, all_ids)
         candidates = passing(price_cs, base)
-        ranked = self._rank(parsed, candidates, q_plain, q_acc)
+        ranked = rank(candidates)
 
         warnings = list(parsed.warnings)
         unknown_price_excluded = 0
         if price_cs:
             unknown = {d for d in base if price_summary(self.snap.products[d])["min_vnd"] is None}
             if unknown:
-                unknown_price_excluded = len(self._rank(parsed, unknown, q_plain, q_acc))
+                unknown_price_excluded = len(rank(unknown))
                 if unknown_price_excluded:
                     warnings.append(f"{unknown_price_excluded} sản phẩm phù hợp chưa có giá nên không nằm trong "
                                     f"kết quả lọc theo giá")
@@ -459,16 +497,22 @@ class SearchEngine:
         if not ranked and constraints:
             for c in constraints:
                 rest = [x for x in constraints if x is not c]
-                n = len(self._rank(parsed, passing(rest, all_ids), q_plain, q_acc))
+                n = len(rank(passing(rest, all_ids)))
                 if n:
                     relaxations.append({"key": c.key, "label": c.label, "count": n})
 
         t_rank = time.perf_counter()
         page = ranked[offset:offset + limit]
+        best = {h.product_id: h for h in visual or []}
         results = []
         for d, score, fields in page:
-            results.append({**product_summary(self.snap, self.snap.products[d]),
-                            "score": round(score, 4), "matched_fields": sorted(fields)})
+            item = {**product_summary(self.snap, self.snap.products[d]),
+                    "score": round(score, 4), "matched_fields": sorted(fields)}
+            if visual is not None:
+                hit = best.get(d)
+                item["similarity"] = hit.similarity if hit else None
+                item["matched_image_id"] = hit.image_id if hit else None
+            results.append(item)
 
         return {
             "query": query,

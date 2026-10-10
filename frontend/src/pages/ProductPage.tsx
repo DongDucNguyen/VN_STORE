@@ -21,13 +21,16 @@ export function ProductPage({ id }: { id: string }) {
   const [similar, setSimilar] = useState<ProductSummary[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [img, setImg] = useState(0);
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
   const fav = useFavorites();
 
   useEffect(() => {
     let alive = true;
     setP(null);
+    setSimilar([]);
     setError(null);
     setImg(0);
+    setFailedImages(new Set());
     api
       .product(id)
       .then((r) => alive && setP(r))
@@ -46,7 +49,10 @@ export function ProductPage({ id }: { id: string }) {
 
   const sourceById = Object.fromEntries(p.sources.map((s) => [s.id, s]));
   const dims = Object.entries(p.dimensions).filter(([k, v]) => k in DIM_LABELS && typeof v === "number");
-  const current = p.images[img];
+  const availableImages = p.images.filter((im) => !failedImages.has(im.url));
+  const selected = p.images[img];
+  const current = availableImages.find((im) => im.id === selected?.id) ?? availableImages[0];
+  const imageFailed = (url: string) => setFailedImages((old) => new Set([...old, url]));
 
   return (
     <div className="page product-page">
@@ -62,13 +68,22 @@ export function ProductPage({ id }: { id: string }) {
       <div className="product-top">
         <div className="gallery">
           <div className="gallery-main">
-            {current ? <img src={current.url} alt={current.alt_vi} /> : <div className="img-missing">Chưa có ảnh</div>}
+            {current ? (
+              <img key={current.url} src={current.url} alt={current.alt_vi} onError={() => imageFailed(current.url)} />
+            ) : (
+              <div className="img-missing">
+                {p.images.length ? <div><p>Ảnh tạm thời không tải được</p><button className="btn" onClick={() => {
+                  setFailedImages(new Set()); setImg(0);
+                }}>Tải lại ảnh</button></div> : "Chưa có ảnh"}
+              </div>
+            )}
           </div>
-          {p.images.length > 1 && (
+          {availableImages.length > 1 && (
             <div className="thumbs">
-              {p.images.map((im, i) => (
-                <button key={im.id} className={i === img ? "on" : ""} onClick={() => setImg(i)} aria-label={im.alt_vi}>
-                  <img src={im.url} alt="" />
+              {availableImages.map((im) => (
+                <button key={im.id} className={im.id === current?.id ? "on" : ""}
+                  onClick={() => setImg(p.images.findIndex((candidate) => candidate.id === im.id))} aria-label={im.alt_vi}>
+                  <img src={im.url} alt="" onError={() => imageFailed(im.url)} />
                 </button>
               ))}
             </div>

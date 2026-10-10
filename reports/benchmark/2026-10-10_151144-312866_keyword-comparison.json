@@ -1,0 +1,33 @@
+{
+  "status": "invalid",
+  "error": "ValueError: Missing metric_policy",
+  "generated_at": "2026-10-10T15:11:44+07:00",
+  "inputs": [
+    {
+      "side": "left",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-005339_keyword_bm25-seed-smoke\\run.json",
+      "sha256": "790dddb6d44df5ea668c70cf7012af8a7db4298d1905db445601d3e26403d308"
+    },
+    {
+      "side": "left",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-005339_keyword_bm25-seed-smoke\\predictions.jsonl",
+      "sha256": "bf374ac8c294382494ad5ea092460d1f3c6416b57227298a47c47fcc5d8575ba"
+    },
+    {
+      "side": "right",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\run.json",
+      "sha256": "e10f853dedd90c549fd723b30eea010af8e1334f040ea42cf540b9f059406b27"
+    },
+    {
+      "side": "right",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\predictions.jsonl",
+      "sha256": "928bef4f1b6c9fb9aaf1acaa7defb17db9bf7163a249dd2a1f7dfdf72979109c"
+    }
+  ],
+  "comparison_policy": "keyword-comparison-v1",
+  "comparison_code_sha256": "a7080788e579b06a7acfe46db58306b195f0b95e4c1b10643cc68312731ae943"
+}

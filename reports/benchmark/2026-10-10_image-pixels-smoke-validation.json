@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-10-10T15:36:34+07:00",
+  "tests_exit_code": 0,
+  "tests_passed": 22,
+  "scan_exit_code": 0,
+  "scan_status": "pending_collection",
+  "summary": {
+    "gallery_images": 45,
+    "query_images": 0,
+    "decoded": 45,
+    "failed": 0,
+    "candidate_pairs": 19,
+    "by_relationship": {
+      "gallery_same_product": 1,
+      "gallery_cross_product": 18
+    },
+    "high_priority_pairs": 0
+  },
+  "inputs_unchanged": true,
+  "total_seconds": 4.04,
+  "test_log": "artifacts/review/2026-10-10_image-pixels-smoke/tests.log",
+  "scan_report": "artifacts/review/2026-10-10_image-pixels-smoke/2026-10-10_153634-290445_image-pixels.json",
+  "code_sha256": "c52181985688bc7060dfab9039839ebd7342c2a4c4c7ca61eedf4c942aa17e13"
+}

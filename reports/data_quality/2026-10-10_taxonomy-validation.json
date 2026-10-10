@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-10-10T14:48:07+07:00",
+  "catalog_before": {
+    "version": "seed-001-images",
+    "sha256": "459d5237b5ef5b47de2d2abeee88de4f15ace707f0b63f766b7df27705598062"
+  },
+  "catalog_after": {
+    "version": "seed-002-taxonomy",
+    "sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+    "categories": 23,
+    "products": 30,
+    "images": 45
+  },
+  "change_scope": {
+    "new_category": "go-son-mai-binh-lo",
+    "moved_products": [
+      "p-hanoia-binh-hoa-mystery-a18mt01",
+      "p-hanoia-binh-hoa-vita-pc26vt01"
+    ],
+    "per_product_changed_fields": [
+      "category_id",
+      "updated_at"
+    ],
+    "other_products_identical": 28,
+    "all_other_collection_data_identical": true,
+    "raw_and_image_manifest_unchanged": true,
+    "seed_labels_unchanged": true,
+    "old_packet_unchanged": true
+  },
+  "source_sha256": {
+    "scripts/import_raw/safe_import.py": "0962d03e4c118b3693ac865aa24a7544c3aa02b7f565ccfab2d8ee648b6ad06a",
+    "scripts/import_raw/build_drafts.py": "fd4215d08732f8327b5984f6dd7a4ea7d597c6ee9ae8b3593dd3dc379d29e775",
+    "backend/tests/test_safe_import.py": "7a9536e952fac57cab5319c627c58943c588b774317b90937a39bfd4746a3043",
+    "backend/tests/test_review_audit.py": "931e533b0bc5284ed77d769c4fa8e1d233e70d5ce31d7c67e7254ab83189fe9b",
+    "backend/tests/test_catalog_taxonomy.py": "fe0ca95e4ec0dd3357de0f495930d72b2daee3dc90e87858f9acfa0be5b0f5d2"
+  },
+  "backend": {
+    "passed": 206,
+    "new_tests": 6,
+    "warnings": 1,
+    "seconds": 3.74,
+    "exit_code": 0
+  },
+  "review_e2e": {
+    "passed": 6,
+    "seconds": 4.6,
+    "workers": 2,
+    "projects": [
+      "desktop",
+      "mobile"
+    ],
+    "exit_code": 0
+  },
+  "artifacts": {
+    "applied_import": "reports/data_quality/2026-10-10_144329-548668_import-drafts.json",
+    "baseline": "data_collection/import_runs/2026-10-10_144329-548668_drafts/baseline.json",
+    "reimport": "reports/data_quality/2026-10-10_144431-632780_import-drafts.json",
+    "packet": "artifacts/keyword_review/2026-10-10_seed-002-taxonomy/packet.json",
+    "packet_sha256": "d1ffaca151612f9fd8d441cbbda1b5b42ccf3549910401badce0e5232d01242a",
+    "image_audit": "reports/data_quality/2026-10-10_144425-419770_image-audit.json",
+    "readiness": "reports/data_quality/2026-10-10_144424-872002_publication-readiness.json",
+    "quality": "reports/data_quality/2026-10-10_seed-002-taxonomy.json",
+    "packet_audit": "reports/benchmark/2026-10-10_144424-806545_keyword-review-audit.json",
+    "old_packet_rejection": "reports/benchmark/2026-10-10_144457-924409_keyword-review-audit.json",
+    "smoke_run": "experiments/results/20261010-144458-271248_keyword_bm25-taxonomy-smoke/run.json"
+  },
+  "verified": {
+    "schema_errors": 0,
+    "schema_warnings": 0,
+    "hash_verified_api_images": 45,
+    "reimport_no_op": true,
+    "new_packet_status": "pending_review",
+    "old_packet_rejected": true,
+    "reviewed_label_file_created": false
+  },
+  "limits": [
+    "Uses archived source evidence, no new price/source freshness check",
+    "No new licenses or human product review",
+    "Smoke unverified is not an official benchmark",
+    "Full frontend E2E and build not repeated; review E2E rerun"
+  ]
+}

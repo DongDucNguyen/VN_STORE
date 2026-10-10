@@ -1,0 +1,143 @@
+{
+  "status": "incompatible",
+  "reasons": [
+    "Different catalog_sha256"
+  ],
+  "eligible_qids": {
+    "ndcg_10": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "success_5": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "mrr_10": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "recall_20": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "no_match_false_accept_rate": {
+      "left": [
+        "kw-seed-011",
+        "kw-seed-012"
+      ],
+      "right": [
+        "kw-seed-011",
+        "kw-seed-012"
+      ]
+    }
+  },
+  "scope": "Descriptive comparison only; not statistical significance, model selection or official baseline approval.",
+  "unverified_labels": true,
+  "latency": {
+    "status": "not_compared",
+    "reason": "Runs lack a hardware/load record adequate for latency comparison."
+  },
+  "metrics": {},
+  "per_query": [],
+  "generated_at": "2026-10-10T15:11:22+07:00",
+  "inputs": [
+    {
+      "side": "left",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-011005-830106_keyword_bm25-seed-reviewed-protocol\\run.json",
+      "sha256": "1da2b67c89db950692b02fb24af025f758f8ba0eec91055c0740b31df3efba65"
+    },
+    {
+      "side": "left",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-011005-830106_keyword_bm25-seed-reviewed-protocol\\predictions.jsonl",
+      "sha256": "5f6e89912b66c34236ab793820eb076ca06e62833554b71f996559195ebf4d4e"
+    },
+    {
+      "side": "right",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\run.json",
+      "sha256": "e10f853dedd90c549fd723b30eea010af8e1334f040ea42cf540b9f059406b27"
+    },
+    {
+      "side": "right",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\predictions.jsonl",
+      "sha256": "928bef4f1b6c9fb9aaf1acaa7defb17db9bf7163a249dd2a1f7dfdf72979109c"
+    }
+  ],
+  "comparison_policy": "keyword-comparison-v1",
+  "comparison_code_sha256": "a7080788e579b06a7acfe46db58306b195f0b95e4c1b10643cc68312731ae943"
+}

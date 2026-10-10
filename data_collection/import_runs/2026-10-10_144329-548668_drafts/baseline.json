@@ -1,0 +1,3917 @@
+{
+  "format": "vnstore-import-baseline-v1",
+  "eligible": true,
+  "generated_sha256": "4d282763a86a6c738fb51500fc75a848165e0a5a139baa01fcc5f0097889ed8b",
+  "generated": {
+    "categories": [
+      {
+        "id": "go-son-mai-binh-lo",
+        "name_vi": "Bình, lọ trang trí",
+        "parent_id": "go-son-mai",
+        "aliases": [
+          "bình hoa",
+          "lọ hoa",
+          "bình trang trí",
+          "lọ trang trí"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "src-minhlong-ve-chung-toi",
+        "url": "https://minhlong.com/pages/ve-chung-toi",
+        "title": "Về chúng tôi — Gốm sứ Minh Long",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "vn_brand"
+        ]
+      },
+      {
+        "id": "src-minhlong-trang-chu",
+        "url": "https://minhlong.com/",
+        "title": "Trang chủ Gốm sứ Minh Long (footer: trụ sở chính)",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "maker"
+        ]
+      },
+      {
+        "id": "src-minhlong-thuong-hieu-lys",
+        "url": "https://minhlong.com/pages/thuong-hieu-lys",
+        "title": "Thương hiệu Ly's Horeca",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "brand"
+        ]
+      },
+      {
+        "id": "src-vietcraft-about",
+        "url": "https://vietcraft.vn/about-us/",
+        "title": "About us — Vietnam Handicraft",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "maker"
+        ]
+      },
+      {
+        "id": "src-marou-our-chocolate",
+        "url": "https://maisonmarou.com/pages/our-chocolate",
+        "title": "Our Chocolate — Maison Marou",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-hanoia-our-story",
+        "url": "https://hanoia.com/our-story",
+        "title": "Câu chuyện Hanoia",
+        "publisher": "Hanoia",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:05:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "vn_brand"
+        ]
+      },
+      {
+        "id": "src-kilomet109-about",
+        "url": "https://www.kilomet109.com/about/",
+        "title": "About — Kilomet109",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chỉ dùng làm căn cứ thông tin; không sao chép nội dung.",
+        "supports": [
+          "made_in_vn",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-minhlong-chen-com-thach-van-11cm",
+        "url": "https://minhlong.com/products/chen-com-11-cm-jasmine-thach-van",
+        "title": "Chén cơm 11 cm - Jasmine - Thạch Vân",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-minhlong-binh-hoa-hon-viet-30cm",
+        "url": "https://minhlong.com/products/binh-hoa-30-cm-hoa-van-hon-viet",
+        "title": "Bình hoa 30 cm - Bình Hoa - Hồn Việt",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-minhlong-binh-hoa-sen-vang-27cm",
+        "url": "https://minhlong.com/products/binh-hoa-27-cm-men-ngoc-hoa-van-sen-vang",
+        "title": "Bình Hoa 27 cm - Bình Hoa - Sen Vàng",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-minhlong-bo-tra-camellia-chi-vang-05l",
+        "url": "https://minhlong.com/products/bo-tra-0-5-l-camellia-chi-vang",
+        "title": "Bộ trà 0.5 L - Camellia - Chỉ Vàng",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+        "url": "https://minhlong.com/products/ly-su-duong-sinh-0-48-l-k1-nap-ong-hut-duong-sinh-bien-xanh",
+        "title": "Ly sứ dưỡng sinh 0.48 L (K1) + nắp ống hút - Dưỡng Sinh - Biển Xanh",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-lys-dia-tron-jasmine-trang-nga-15cm",
+        "url": "https://minhlong.com/products/dia-tron-15-cm-hoa-van-trang-nga",
+        "title": "Dĩa tròn 15 cm - Jasmine Lys - Trắng Ngà",
+        "publisher": "Công ty TNHH Minh Long I",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:18:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-vietcraft-gio-tre-dan-tron-vh24026",
+        "url": "https://vietcraft.vn/product/round-bamboo-woven-storage-basket-from-vietnam/",
+        "title": "Round Bamboo Woven Storage Basket from Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name"
+        ]
+      },
+      {
+        "id": "src-vietcraft-chup-den-seagrass-vh24028",
+        "url": "https://vietcraft.vn/product/handwoven-seagrass-pendant-lampshade-made-in-vietnam/",
+        "title": "Handwoven Seagrass Pendant Lampshade made in Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name"
+        ]
+      },
+      {
+        "id": "src-vietcraft-tui-luc-binh-vo-so-vh24032",
+        "url": "https://vietcraft.vn/product/handcrafted-water-hyacinth-handbag-with-seashell-embellishments-from-vietnam/",
+        "title": "Handcrafted Water Hyacinth Handbag with Seashell Embellishments from Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-vietcraft-gio-may-bau-duc-vh24040",
+        "url": "https://vietcraft.vn/product/wholesale-hand-woven-oval-rattan-basket-natural-bulk-storage-supplier-vietnam/",
+        "title": "WHOLESALE Hand-Woven Oval Rattan Basket – Natural Bulk Storage Supplier Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name"
+        ]
+      },
+      {
+        "id": "src-vietcraft-gio-seagrass-vh24046",
+        "url": "https://vietcraft.vn/product/woven-seagrass-basket-from-vietnam/",
+        "title": "Woven Seagrass Basket from Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-vietcraft-khay-may-dan-vh24048",
+        "url": "https://vietcraft.vn/product/woven-rattan-tray-handmade-in-vietnam/",
+        "title": "Woven Rattan Tray – Handmade in Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name"
+        ]
+      },
+      {
+        "id": "src-vietcraft-bat-gao-dua-son-ve-tay",
+        "url": "https://vietcraft.vn/product/wholesale-hand-painted-lacquer-coconut-bowls-from-vietnam/",
+        "title": "Wholesale Hand-Painted Lacquer Coconut Bowls from Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name",
+          "traditional_craft"
+        ]
+      },
+      {
+        "id": "src-vietcraft-bat-tre-cuon-phu-son-vh24045",
+        "url": "https://vietcraft.vn/product/lacquer-spun-bamboo-bowl-made-in-vietnam/",
+        "title": "Lacquer Spun Bamboo Bowl Made in Vietnam",
+        "publisher": "Vietnam Handicraft Co., Ltd.",
+        "source_type": "official_maker",
+        "retrieved_at": "2026-10-10T00:35:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "made_in_vn",
+          "name"
+        ]
+      },
+      {
+        "id": "src-marou-ben-tre-78-80g",
+        "url": "https://maisonmarou.com/products/ben-tre-78-single-origin-80g",
+        "title": "Ben Tre 78% Single Origin 80G",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-marou-tien-giang-70-80g",
+        "url": "https://maisonmarou.com/products/tien-giang-70-single-origin-80g",
+        "title": "Tien Giang 70% Single Origin 80G",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-marou-lam-dong-74-80g",
+        "url": "https://maisonmarou.com/products/lam-dong-74-single-origin-80g",
+        "title": "Lam Dong 74% Single Origin 80G",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-marou-quat-tien-giang-68-80g",
+        "url": "https://maisonmarou.com/products/mekong-kumquat-tien-giang-68-80g",
+        "title": "Mekong Kumquat Tien Giang 68% 80G",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-marou-vietnam-100-60g",
+        "url": "https://maisonmarou.com/products/vietnam-100-cacao-dark-chocolate-bar",
+        "title": "Vietnam 100% Dark Chocolate Bar",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-marou-ba-ria-76-80g",
+        "url": "https://maisonmarou.com/products/ba-ria-76-single-origin-chocolate-bar",
+        "title": "Ba Ria 76% Single Origin Dark Chocolate Bar",
+        "publisher": "Maison Marou (Marou Faiseurs de Chocolat)",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T00:50:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-hanoia-binh-hoa-mystery-a18mt01",
+        "url": "https://hanoia.com/binh-hoa-mystery-a18mt01.html",
+        "title": "Bình hoa Mystery",
+        "publisher": "Hanoia",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:05:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc (ảnh thu nhỏ 285x285 do JSON-LD cung cấp), không tải ảnh.",
+        "supports": [
+          "name",
+          "price",
+          "traditional_craft"
+        ]
+      },
+      {
+        "id": "src-hanoia-binh-hoa-vita-pc26vt01",
+        "url": "https://hanoia.com/binh-hoa-vita-pc26vt01.html",
+        "title": "Bình hoa Vita",
+        "publisher": "Hanoia",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:05:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc (ảnh thu nhỏ 285x285 do JSON-LD cung cấp), không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-hanoia-hop-vuong-botanica-s-af26bt03",
+        "url": "https://hanoia.com/hop-vuong-botanica-size-s-af26bt03.html",
+        "title": "Hộp vuông Botanica size S",
+        "publisher": "Hanoia",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:05:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc (ảnh thu nhỏ 285x285 do JSON-LD cung cấp), không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+        "url": "https://hanoia.com/hop-dan-tre-ethnic-size-s-ou17et02.html",
+        "title": "Hộp đan tre Ethnic size S",
+        "publisher": "Hanoia",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:05:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc (ảnh thu nhỏ 285x285 do JSON-LD cung cấp), không tải ảnh.",
+        "supports": [
+          "name",
+          "price"
+        ]
+      },
+      {
+        "id": "src-kilomet109-ao-khoac-phi-17mjk003",
+        "url": "https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/",
+        "title": "Phi Jacket",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "traditional_craft",
+          "vn_material"
+        ]
+      },
+      {
+        "id": "src-kilomet109-ao-so-mi-thong-17mt004",
+        "url": "https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/",
+        "title": "Thông Shirt",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name"
+        ]
+      },
+      {
+        "id": "src-kilomet109-vay-van-19wdr006",
+        "url": "https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/",
+        "title": "Vân Dress",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name"
+        ]
+      },
+      {
+        "id": "src-kilomet109-chan-vay-ha-17wsk001",
+        "url": "https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/",
+        "title": "Hà Skirt",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name"
+        ]
+      },
+      {
+        "id": "src-kilomet109-ao-khoac-vang-1-19mjk001",
+        "url": "https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/",
+        "title": "Vang I Jacket",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name",
+          "traditional_craft"
+        ]
+      },
+      {
+        "id": "src-kilomet109-vong-co-xoan-17wac001",
+        "url": "https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/",
+        "title": "Xoắn Necklace",
+        "publisher": "Kilomet109",
+        "source_type": "official_brand",
+        "retrieved_at": "2026-10-10T01:15:00+07:00",
+        "usage_rights_note": "Chưa xin phép. Chỉ lưu URL gốc, không tải ảnh.",
+        "supports": [
+          "name"
+        ]
+      }
+    ],
+    "brands": [
+      {
+        "aliases": [],
+        "id": "brand-minh-long",
+        "name": "Minh Long",
+        "official_url": "https://minhlong.com/",
+        "origin_country": "VN",
+        "origin_source_ids": [
+          "src-minhlong-ve-chung-toi"
+        ],
+        "source_ids": [
+          "src-minhlong-ve-chung-toi"
+        ]
+      },
+      {
+        "aliases": [],
+        "id": "brand-lys",
+        "name": "LY'S",
+        "official_url": "https://minhlong.com/pages/thuong-hieu-lys",
+        "origin_country": null,
+        "source_ids": [
+          "src-minhlong-thuong-hieu-lys"
+        ]
+      },
+      {
+        "aliases": [
+          {
+            "value": "Marou Faiseurs de Chocolat",
+            "source_ids": [
+              "src-marou-our-chocolate"
+            ]
+          },
+          {
+            "value": "Maison Marou",
+            "source_ids": [
+              "src-marou-our-chocolate"
+            ]
+          }
+        ],
+        "id": "brand-marou",
+        "name": "Marou",
+        "official_url": "https://maisonmarou.com/",
+        "origin_country": null,
+        "source_ids": [
+          "src-marou-our-chocolate"
+        ]
+      },
+      {
+        "aliases": [],
+        "id": "brand-hanoia",
+        "name": "Hanoia",
+        "official_url": "https://hanoia.com/",
+        "origin_country": "VN",
+        "origin_source_ids": [
+          "src-hanoia-our-story"
+        ],
+        "place_ids": [
+          "place-binh-duong"
+        ],
+        "source_ids": [
+          "src-hanoia-our-story"
+        ]
+      },
+      {
+        "aliases": [
+          {
+            "value": "Kilomet 109",
+            "source_ids": [
+              "src-kilomet109-about"
+            ]
+          }
+        ],
+        "id": "brand-kilomet109",
+        "name": "Kilomet109",
+        "official_url": "https://www.kilomet109.com/",
+        "origin_country": null,
+        "source_ids": [
+          "src-kilomet109-about"
+        ]
+      }
+    ],
+    "makers": [
+      {
+        "aliases": [],
+        "id": "maker-minh-long-i",
+        "name": "Công ty TNHH Minh Long I",
+        "maker_type": "company",
+        "brand_ids": [
+          "brand-minh-long",
+          "brand-lys"
+        ],
+        "official_url": "https://minhlong.com/",
+        "source_ids": [
+          "src-minhlong-trang-chu"
+        ]
+      },
+      {
+        "aliases": [],
+        "id": "maker-vietnam-handicraft",
+        "name": "Vietnam Handicraft Co., Ltd.",
+        "maker_type": "company",
+        "official_url": "https://vietcraft.vn/",
+        "source_ids": [
+          "src-vietcraft-about"
+        ]
+      }
+    ],
+    "places": [
+      {
+        "id": "place-ben-tre",
+        "place_type": "province",
+        "name_as_sourced": "Ben Tre province",
+        "name_normalized": "Bến Tre",
+        "aliases": [
+          "ben tre"
+        ],
+        "source_ids": [
+          "src-marou-ben-tre-78-80g"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      },
+      {
+        "id": "place-tien-giang",
+        "place_type": "province",
+        "name_as_sourced": "Tien Giang province",
+        "name_normalized": "Tiền Giang",
+        "aliases": [
+          "tien giang"
+        ],
+        "source_ids": [
+          "src-marou-quat-tien-giang-68-80g",
+          "src-marou-our-chocolate"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      },
+      {
+        "id": "place-lam-dong",
+        "place_type": "province",
+        "name_as_sourced": "Lam Dong",
+        "name_normalized": "Lâm Đồng",
+        "aliases": [
+          "lam dong"
+        ],
+        "source_ids": [
+          "src-marou-our-chocolate"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      },
+      {
+        "id": "place-ba-ria",
+        "place_type": "province",
+        "name_as_sourced": "province of Ba Ria",
+        "name_normalized": "Bà Rịa",
+        "aliases": [
+          "ba ria"
+        ],
+        "source_ids": [
+          "src-marou-ba-ria-76-80g"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      },
+      {
+        "id": "place-ha-noi",
+        "place_type": "province",
+        "name_as_sourced": "Hanoi",
+        "name_normalized": "Hà Nội",
+        "aliases": [
+          "ha noi",
+          "hanoi"
+        ],
+        "source_ids": [
+          "src-kilomet109-about"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      },
+      {
+        "id": "place-binh-duong",
+        "place_type": "province",
+        "name_as_sourced": "tỉnh Bình Dương",
+        "name_normalized": "Bình Dương",
+        "aliases": [
+          "binh duong"
+        ],
+        "source_ids": [
+          "src-hanoia-our-story"
+        ],
+        "parent_id": null,
+        "admin_code": null,
+        "admin_code_scheme": null,
+        "verified_at": null
+      }
+    ],
+    "products": [
+      {
+        "id": "p-minhlong-chen-com-thach-van-11cm",
+        "slug": "minhlong-chen-com-thach-van-11cm",
+        "name_vi": "Chén cơm 11 cm Jasmine – Thạch Vân",
+        "status": "draft",
+        "category_id": "gom-su-bat-dia",
+        "brand_id": "brand-minh-long",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Chén cơm sứ trắng dáng Jasmine, men vân xanh mỗi chiếc một khác thuộc bộ Thạch Vân.",
+        "description_vi": "",
+        "aliases": [
+          "chén Thạch Vân",
+          "bát cơm Minh Long"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "sứ"
+        ],
+        "colors": [
+          "trắng",
+          "xanh"
+        ],
+        "dimensions": {},
+        "craft_techniques": [],
+        "motifs": [
+          "vân đá"
+        ],
+        "variants": [
+          {
+            "sku": "A001_031106566",
+            "name_vi": "Chén cơm / Thạch Vân / 11 cm",
+            "attributes": {},
+            "price_vnd": 63720,
+            "original_price_vnd": null,
+            "price_source_id": "src-minhlong-chen-com-thach-van-11cm",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-minhlong-ve-chung-toi"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang giới thiệu: 'thương hiệu gốm sứ hàng đầu Việt nam'"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Trang sản phẩm không ghi nơi sản xuất"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-minhlong-chen-com-thach-van-11cm-1",
+            "local_path": "assets/products/p-minhlong-chen-com-thach-van-11cm/img-minhlong-chen-com-thach-van-11cm-1.png",
+            "source_url": "https://cdn.hstatic.net/products/200000532849/031106566-sm-01_fdbf99b5baa44db5b31ee7faa5a03bd2.png",
+            "alt_vi": "Chén cơm 11 cm Jasmine – Thạch Vân — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-chen-com-thach-van-11cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1025,
+            "height": 1024
+          }
+        ],
+        "source_ids": [
+          "src-minhlong-chen-com-thach-van-11cm",
+          "src-minhlong-ve-chung-toi"
+        ],
+        "editor_note": "Kích thước '11 cm' lấy từ tên sản phẩm, chưa rõ là đường kính. Nhập tự động từ https://minhlong.com/products/chen-com-11-cm-jasmine-thach-van lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-minhlong-binh-hoa-hon-viet-30cm",
+        "slug": "minhlong-binh-hoa-hon-viet-30cm",
+        "name_vi": "Bình hoa 30 cm Hồn Việt",
+        "status": "draft",
+        "category_id": "gom-su-binh-lo",
+        "brand_id": "brand-minh-long",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Bình hoa trang trí cao 30 cm (theo tên), họa tiết cảnh làng quê: mái đình, giếng nước, cổng làng, lũy tre.",
+        "description_vi": "",
+        "aliases": [
+          "bình hoa Hồn Việt"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [],
+        "motifs": [
+          "làng quê",
+          "mái đình",
+          "giếng nước",
+          "cổng làng",
+          "lũy tre"
+        ],
+        "variants": [
+          {
+            "sku": "A001_113054038",
+            "name_vi": "30 cm",
+            "attributes": {},
+            "price_vnd": 4374000,
+            "original_price_vnd": null,
+            "price_source_id": "src-minhlong-binh-hoa-hon-viet-30cm",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-minhlong-ve-chung-toi"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang giới thiệu Minh Long"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+            "local_path": "assets/products/p-minhlong-binh-hoa-hon-viet-30cm/img-minhlong-binh-hoa-hon-viet-30cm-1.png",
+            "source_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-01_f5a8534f9b7c4b1f9fc5a81fca410ae8.png",
+            "alt_vi": "Bình hoa 30 cm Hồn Việt — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "dd1743a99ac4c7fc7b267b75fffcd65a82716643e4a291c5e8b92cbcaed6455d",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-binh-hoa-hon-viet-30cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "id": "img-minhlong-binh-hoa-hon-viet-30cm-2",
+            "local_path": "assets/products/p-minhlong-binh-hoa-hon-viet-30cm/img-minhlong-binh-hoa-hon-viet-30cm-2.png",
+            "source_url": "https://cdn.hstatic.net/products/200000532849/113054038-sm-02_78fa609b46ea41fdbe619cdddb0e7dc3.png",
+            "alt_vi": "Bình hoa 30 cm Hồn Việt — mặt sau",
+            "view_type": "back",
+            "variant_sku": null,
+            "sha256": "147bba1f957ee46f9e22f9b1efdc415acdecd28e97e14189ab83dd0d653a2fec",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-binh-hoa-hon-viet-30cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "source_ids": [
+          "src-minhlong-binh-hoa-hon-viet-30cm",
+          "src-minhlong-ve-chung-toi"
+        ],
+        "editor_note": "Trang sản phẩm không ghi chất liệu → để trống, không suy ra 'sứ' từ tên thương hiệu. Nhập tự động từ https://minhlong.com/products/binh-hoa-30-cm-hoa-van-hon-viet lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-minhlong-binh-hoa-sen-vang-27cm",
+        "slug": "minhlong-binh-hoa-sen-vang-27cm",
+        "name_vi": "Bình hoa 27 cm Sen Vàng",
+        "status": "draft",
+        "category_id": "gom-su-binh-lo",
+        "brand_id": "brand-minh-long",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Bình hoa 27 cm vẽ sen màu xanh cobalt, điểm chi tiết vàng 24k trên cánh hoa.",
+        "description_vi": "",
+        "aliases": [
+          "bình sen vàng"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [],
+        "colors": [
+          "xanh cobalt",
+          "vàng"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "vẽ vàng 24k"
+        ],
+        "motifs": [
+          "hoa sen"
+        ],
+        "variants": [
+          {
+            "sku": "A001_112776345",
+            "name_vi": "Sen Vàng / 27 cm",
+            "attributes": {},
+            "price_vnd": 2559600,
+            "original_price_vnd": null,
+            "price_source_id": "src-minhlong-binh-hoa-sen-vang-27cm",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-minhlong-ve-chung-toi"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang giới thiệu Minh Long"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-minhlong-binh-hoa-sen-vang-27cm-1",
+            "local_path": "assets/products/p-minhlong-binh-hoa-sen-vang-27cm/img-minhlong-binh-hoa-sen-vang-27cm-1.png",
+            "source_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-01_10ce622920b14662b81a3740cdb80781.png",
+            "alt_vi": "Bình hoa 27 cm Sen Vàng — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "b3410f020d947b14e4f662e94e6ba3e055cee834b127f3d4a1aa45c411bb5583",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-binh-hoa-sen-vang-27cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "id": "img-minhlong-binh-hoa-sen-vang-27cm-2",
+            "local_path": "assets/products/p-minhlong-binh-hoa-sen-vang-27cm/img-minhlong-binh-hoa-sen-vang-27cm-2.png",
+            "source_url": "https://cdn.hstatic.net/products/200000532849/112776345-sm-03_8095810e7c83472991a70f9df857c5e6.png",
+            "alt_vi": "Bình hoa 27 cm Sen Vàng — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "deea859649736808b660ba94db4f2485eaf4ee5b9d9efb28346d5325b8340346",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-binh-hoa-sen-vang-27cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "source_ids": [
+          "src-minhlong-binh-hoa-sen-vang-27cm",
+          "src-minhlong-ve-chung-toi"
+        ],
+        "editor_note": "Trang không ghi chất liệu thân bình. Nhập tự động từ https://minhlong.com/products/binh-hoa-27-cm-men-ngoc-hoa-van-sen-vang lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+        "slug": "minhlong-bo-tra-camellia-chi-vang-05l",
+        "name_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng",
+        "status": "draft",
+        "category_id": "gom-su-am-chen",
+        "brand_id": "brand-minh-long",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Bộ ấm chén dòng Camellia, men sứ bóng nung nhiệt độ cao, viền chỉ vàng; ấm 0.5 L theo tên sản phẩm.",
+        "description_vi": "",
+        "aliases": [
+          "bộ ấm chén Camellia",
+          "bộ trà Minh Long"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "sứ"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [],
+        "motifs": [
+          "chỉ vàng"
+        ],
+        "variants": [
+          {
+            "sku": "A001_01503801403",
+            "name_vi": "Bộ trà 0.5 L / Chỉ Vàng / 0.5 L",
+            "attributes": {},
+            "price_vnd": 874800,
+            "original_price_vnd": null,
+            "price_source_id": "src-minhlong-bo-tra-camellia-chi-vang-05l",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-minhlong-ve-chung-toi"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang giới thiệu Minh Long"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+            "local_path": "assets/products/p-minhlong-bo-tra-camellia-chi-vang-05l/img-minhlong-bo-tra-camellia-chi-vang-05l-1.png",
+            "source_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-01_ab2c61335e7e4259a58cf17547ecc9e7.png",
+            "alt_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "975d6f58025bcc58abdad75d8336bc6d1dba434982e8281152b2a8d5f5c52cd5",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-bo-tra-camellia-chi-vang-05l",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          },
+          {
+            "id": "img-minhlong-bo-tra-camellia-chi-vang-05l-2",
+            "local_path": "assets/products/p-minhlong-bo-tra-camellia-chi-vang-05l/img-minhlong-bo-tra-camellia-chi-vang-05l-2.png",
+            "source_url": "https://product.hstatic.net/200000532849/product/bo-tra-05-l-camellia-chi-vang_01503801403-sm-02_990f56ac68f34e828b7ff4beac76d996.png",
+            "alt_vi": "Bộ trà 0.5 L Camellia – Chỉ Vàng — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "23481d84943cc06057585c60bd8cd1708252f037094e161f810727d785ff6b01",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-bo-tra-camellia-chi-vang-05l",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "source_ids": [
+          "src-minhlong-bo-tra-camellia-chi-vang-05l",
+          "src-minhlong-ve-chung-toi"
+        ],
+        "editor_note": "Trang không liệt kê số món trong bộ. Nhập tự động từ https://minhlong.com/products/bo-tra-0-5-l-camellia-chi-vang lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+        "slug": "minhlong-ly-su-duong-sinh-bien-xanh-048l",
+        "name_vi": "Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh",
+        "status": "draft",
+        "category_id": "gom-su-coc-ly",
+        "brand_id": "brand-minh-long",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Ly sứ 0.48 L kèm nắp sứ có lỗ cắm ống hút, họa tiết Biển Xanh, chịu nhiệt.",
+        "description_vi": "",
+        "aliases": [
+          "cốc sứ có nắp",
+          "ly dưỡng sinh"
+        ],
+        "tags": [
+          "có nắp",
+          "ống hút"
+        ],
+        "intended_uses": [],
+        "materials": [
+          "sứ"
+        ],
+        "colors": [],
+        "dimensions": {
+          "volume_ml": 480,
+          "source_ids": [
+            "src-minhlong-ly-su-duong-sinh-bien-xanh-048l"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [
+          "biển"
+        ],
+        "variants": [
+          {
+            "sku": "A001_214888500H",
+            "name_vi": "Ly (K1) / Biển Xanh",
+            "attributes": {},
+            "price_vnd": 333720,
+            "original_price_vnd": null,
+            "price_source_id": "src-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-minhlong-ve-chung-toi"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang giới thiệu Minh Long"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-minhlong-ly-su-duong-sinh-bien-xanh-048l-1",
+            "local_path": "assets/products/p-minhlong-ly-su-duong-sinh-bien-xanh-048l/img-minhlong-ly-su-duong-sinh-bien-xanh-048l-1.png",
+            "source_url": "https://product.hstatic.net/200000532849/product/u-duong-sinh-048-l-k1-nap-ong-hut-duong-sinh-bien-xanh_214888500h-1-sm_ac14ca748f6d43e3838ac40d7532e5bc.png",
+            "alt_vi": "Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "4be9378fd007dab390bf029592f109df50e1fa2cae412242df52bc712e76a280",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1024,
+            "height": 1024
+          }
+        ],
+        "source_ids": [
+          "src-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+          "src-minhlong-ve-chung-toi"
+        ],
+        "editor_note": "Dung tích 0.48 L lấy từ tên sản phẩm. Nhập tự động từ https://minhlong.com/products/ly-su-duong-sinh-0-48-l-k1-nap-ong-hut-duong-sinh-bien-xanh lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-lys-dia-tron-jasmine-trang-nga-15cm",
+        "slug": "lys-dia-tron-jasmine-trang-nga-15cm",
+        "name_vi": "Dĩa tròn 15 cm Jasmine Lys – Trắng Ngà",
+        "status": "draft",
+        "category_id": "gom-su-bat-dia",
+        "brand_id": "brand-lys",
+        "maker_id": "maker-minh-long-i",
+        "short_description_vi": "Dĩa tròn sứ màu trắng ngà dòng Jasmine Lys, mặt men cứng, bề mặt men nano khó bám bẩn.",
+        "description_vi": "",
+        "aliases": [
+          "đĩa tròn 15 cm",
+          "đĩa sứ trắng ngà"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "sứ"
+        ],
+        "colors": [
+          "trắng ngà"
+        ],
+        "dimensions": {},
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "A001_581585000",
+            "name_vi": "Trắng Ngà / 15 cm",
+            "attributes": {},
+            "price_vnd": 28080,
+            "original_price_vnd": null,
+            "price_source_id": "src-lys-dia-tron-jasmine-trang-nga-15cm",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Trang thương hiệu LY'S không nêu quốc gia thương hiệu"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-lys-dia-tron-jasmine-trang-nga-15cm-1",
+            "local_path": "assets/products/p-lys-dia-tron-jasmine-trang-nga-15cm/img-lys-dia-tron-jasmine-trang-nga-15cm-1.png",
+            "source_url": "https://product.hstatic.net/200000532849/product/dia-tron-15-cm-jasmine-lys-trang-nga_581585000-sm-01_ca289bb3952a418ab3f15fcdaf0ffca9.png",
+            "alt_vi": "Dĩa tròn 15 cm Jasmine Lys – Trắng Ngà — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "efe2ed01b4400d0d422ca0cac39a64f69e41c17bd625c1bf7c140b54ce984f12",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-lys-dia-tron-jasmine-trang-nga-15cm",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1200
+          }
+        ],
+        "source_ids": [
+          "src-lys-dia-tron-jasmine-trang-nga-15cm"
+        ],
+        "editor_note": "Chưa có tiêu chí Việt nào = true → chưa đủ điều kiện published. vendor trên site là LY'S. Nhập tự động từ https://minhlong.com/products/dia-tron-15-cm-hoa-van-trang-nga lúc 2026-10-10T00:18:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-gio-tre-dan-tron-vh24026",
+        "slug": "vietcraft-gio-tre-dan-tron-vh24026",
+        "name_vi": "Giỏ tre đan tròn viền gỗ",
+        "status": "draft",
+        "category_id": "may-tre-coi-gio",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Giỏ tròn đan tay từ tre tự nhiên, viền gỗ sẫm màu; nhận đặt kích thước theo yêu cầu (bán sỉ).",
+        "description_vi": "",
+        "aliases": [
+          "Round Bamboo Woven Storage Basket"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "tre",
+          "gỗ"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24026",
+            "name_vi": "Giỏ tre đan tròn viền gỗ",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-gio-tre-dan-tron-vh24026"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'from Vietnam', 'hand-woven by experienced Vietnamese craftspeople'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-gio-tre-dan-tron-vh24026-1",
+            "local_path": "assets/products/p-vietcraft-gio-tre-dan-tron-vh24026/img-vietcraft-gio-tre-dan-tron-vh24026-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24026-round-basket-from-Vietnam.jpg",
+            "alt_vi": "Giỏ tre đan tròn viền gỗ — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "39cccecf983bcacbce160fe4161ffb315ccb5f64a0b8102ed420f078ed532d7d",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-gio-tre-dan-tron-vh24026",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-gio-tre-dan-tron-vh24026"
+        ],
+        "editor_note": "Site bán sỉ, không niêm yết giá. Viền gỗ lấy từ mô tả 'dark wooden rim'. Nhập tự động từ https://vietcraft.vn/product/round-bamboo-woven-storage-basket-from-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-chup-den-seagrass-vh24028",
+        "slug": "vietcraft-chup-den-seagrass-vh24028",
+        "name_vi": "Chụp đèn treo đan seagrass",
+        "status": "draft",
+        "category_id": "may-tre-coi-noi-that",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Chụp đèn treo vành rộng đan tay bằng sợi seagrass trên khung sắt.",
+        "description_vi": "",
+        "aliases": [
+          "Handwoven Seagrass Pendant Lampshade"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "seagrass",
+          "sắt"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24028",
+            "name_vi": "Chụp đèn treo đan seagrass",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-chup-den-seagrass-vh24028"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'Origin: Vietnam'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-chup-den-seagrass-vh24028-1",
+            "local_path": "assets/products/p-vietcraft-chup-den-seagrass-vh24028/img-vietcraft-chup-den-seagrass-vh24028-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade.jpg",
+            "alt_vi": "Chụp đèn treo đan seagrass — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "2c5967690cfacb99d1a65e6f2ca4db2e52ebfaafce82ea23e3bfdc532bc7e06f",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-chup-den-seagrass-vh24028",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          },
+          {
+            "id": "img-vietcraft-chup-den-seagrass-vh24028-2",
+            "local_path": "assets/products/p-vietcraft-chup-den-seagrass-vh24028/img-vietcraft-chup-den-seagrass-vh24028-2.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24028-seagrass-lampshade-from-Vietnam.jpg",
+            "alt_vi": "Chụp đèn treo đan seagrass — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "0ce716aedca16213387b4c8f66adea2a9af2f87ac2186b8420ef74eb8c35cc04",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-chup-den-seagrass-vh24028",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-chup-den-seagrass-vh24028"
+        ],
+        "editor_note": "Giữ nguyên 'seagrass' theo nguồn; chưa xác minh tương ứng tiếng Việt (cói hay cỏ biển). Nhập tự động từ https://vietcraft.vn/product/handwoven-seagrass-pendant-lampshade-made-in-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+        "slug": "vietcraft-tui-luc-binh-vo-so-vh24032",
+        "name_vi": "Túi lục bình đan tay đính vỏ sò",
+        "status": "draft",
+        "category_id": "may-tre-coi-tui",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Túi xách đan tay từ lục bình, quai tròn, thêu hoa bằng vỏ ốc và hạt ngọc trai giả.",
+        "description_vi": "",
+        "aliases": [
+          "Water Hyacinth Handbag",
+          "túi bèo"
+        ],
+        "tags": [
+          "có quai"
+        ],
+        "intended_uses": [],
+        "materials": [
+          "lục bình",
+          "vỏ sò"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay",
+          "thêu tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24032",
+            "name_vi": "Túi lục bình đan tay đính vỏ sò",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-tui-luc-binh-vo-so-vh24032"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'hand-woven by experienced Vietnamese artisans'"
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-tui-luc-binh-vo-so-vh24032"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: lục bình 'harvested directly from Vietnam’s waterways'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-tui-luc-binh-vo-so-vh24032-1",
+            "local_path": "assets/products/p-vietcraft-tui-luc-binh-vo-so-vh24032/img-vietcraft-tui-luc-binh-vo-so-vh24032-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH24032-handbag-made-of-water-hyacinth-from-Vietnam.jpg",
+            "alt_vi": "Túi lục bình đan tay đính vỏ sò — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "78fbbfc973b8a3195ef1d0cbeee8908c65793da08f1fb7c9daa6071615b0d023",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-tui-luc-binh-vo-so-vh24032",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-tui-luc-binh-vo-so-vh24032"
+        ],
+        "editor_note": "Quai ghi 'rattan/bamboo' (không rõ loại nào) nên không đưa vào chất liệu. Nhập tự động từ https://vietcraft.vn/product/handcrafted-water-hyacinth-handbag-with-seashell-embellishments-from-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-gio-may-bau-duc-vh24040",
+        "slug": "vietcraft-gio-may-bau-duc-vh24040",
+        "name_vi": "Giỏ mây đan hình bầu dục",
+        "status": "draft",
+        "category_id": "may-tre-coi-gio",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Giỏ bầu dục đan tay từ mây tự nhiên, dùng đựng trái cây hoặc đồ dùng.",
+        "description_vi": "",
+        "aliases": [
+          "Oval Rattan Basket"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "mây"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24040",
+            "name_vi": "Giỏ mây đan hình bầu dục",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Mô tả không nêu nơi sản xuất (chỉ có 'Supplier Vietnam' trong tên)"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-gio-may-bau-duc-vh24040-1",
+            "local_path": "assets/products/p-vietcraft-gio-may-bau-duc-vh24040/img-vietcraft-gio-may-bau-duc-vh24040-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/03/VH24040-oval-rattan-fruit-basket.jpg",
+            "alt_vi": "Giỏ mây đan hình bầu dục — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "ca2b056443288088a0c93cf83ef49a3c4a6eb212999b0a962cc165cecfb8a772",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-gio-may-bau-duc-vh24040",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          },
+          {
+            "id": "img-vietcraft-gio-may-bau-duc-vh24040-2",
+            "local_path": "assets/products/p-vietcraft-gio-may-bau-duc-vh24040/img-vietcraft-gio-may-bau-duc-vh24040-2.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/12/VH24040-oval-rattan-fruit-basket-Vietnam.jpg",
+            "alt_vi": "Giỏ mây đan hình bầu dục — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "1d215108e4e4f41249e084db519137003aa556cff1bb65399ba5f82f86b65c5e",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-gio-may-bau-duc-vh24040",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1080,
+            "height": 1080
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-gio-may-bau-duc-vh24040"
+        ],
+        "editor_note": "Chưa có tiêu chí Việt = true → chưa đủ điều kiện published. Nhập tự động từ https://vietcraft.vn/product/wholesale-hand-woven-oval-rattan-basket-natural-bulk-storage-supplier-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-gio-seagrass-vh24046",
+        "slug": "vietcraft-gio-seagrass-vh24046",
+        "name_vi": "Giỏ đan seagrass",
+        "status": "draft",
+        "category_id": "may-tre-coi-gio",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Giỏ đựng đồ đan tay từ sợi seagrass tự nhiên trồng ở đồng bằng sông Cửu Long.",
+        "description_vi": "",
+        "aliases": [
+          "Woven Seagrass Basket"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "seagrass"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24046",
+            "name_vi": "Giỏ đan seagrass",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-gio-seagrass-vh24046"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'handmade in Vietnam'"
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-gio-seagrass-vh24046"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: seagrass 'grown in the Mekong Delta'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-gio-seagrass-vh24046-1",
+            "local_path": "assets/products/p-vietcraft-gio-seagrass-vh24046/img-vietcraft-gio-seagrass-vh24046-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24046-woven-seagrass-basket.jpg",
+            "alt_vi": "Giỏ đan seagrass — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "50a6110ada81d42c090e9a2de7c0a990f5637db0decd16acd42d82064b9efdd9",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-gio-seagrass-vh24046",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-gio-seagrass-vh24046"
+        ],
+        "editor_note": "Giữ nguyên 'seagrass' theo nguồn. Nhập tự động từ https://vietcraft.vn/product/woven-seagrass-basket-from-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-khay-may-dan-vh24048",
+        "slug": "vietcraft-khay-may-dan-vh24048",
+        "name_vi": "Khay mây đan tay",
+        "status": "draft",
+        "category_id": "may-tre-coi-gio",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Khay đan tay từ mây tự nhiên, dùng để bày đồ hoặc phục vụ.",
+        "description_vi": "",
+        "aliases": [
+          "Woven Rattan Tray"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "mây"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "đan tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24048",
+            "name_vi": "Khay mây đan tay",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-khay-may-dan-vh24048"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'Origin: Handmade in Vietnam'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-khay-may-dan-vh24048-1",
+            "local_path": "assets/products/p-vietcraft-khay-may-dan-vh24048/img-vietcraft-khay-may-dan-vh24048-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24048-woven-rattan-tray-in-Vietnam.jpg",
+            "alt_vi": "Khay mây đan tay — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "3e6cbd103c45e809c5047635e2075ff4d1f6b6868836a7500fafc070a7d4a7fa",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-khay-may-dan-vh24048",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-khay-may-dan-vh24048"
+        ],
+        "editor_note": "Nhập tự động từ https://vietcraft.vn/product/woven-rattan-tray-handmade-in-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-bat-gao-dua-son-ve-tay",
+        "slug": "vietcraft-bat-gao-dua-son-ve-tay",
+        "name_vi": "Bát gáo dừa phủ sơn vẽ tay",
+        "status": "draft",
+        "category_id": "go-son-mai",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Bát làm từ gáo dừa tái sử dụng, phủ sơn (lacquer) và vẽ tay.",
+        "description_vi": "",
+        "aliases": [
+          "Hand-Painted Lacquer Coconut Bowl"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "gáo dừa"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "vẽ tay",
+          "phủ sơn"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VNS-VIETCRAFT-VH2615",
+            "name_vi": "Bát gáo dừa phủ sơn vẽ tay",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-bat-gao-dua-son-ve-tay"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'Origin: Proudly Handcrafted in Vietnam'"
+          },
+          {
+            "claim_type": "traditional_craft",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-bat-gao-dua-son-ve-tay"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'traditional Vietnamese lacquerware'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-bat-gao-dua-son-ve-tay-1",
+            "local_path": "assets/products/p-vietcraft-bat-gao-dua-son-ve-tay/img-vietcraft-bat-gao-dua-son-ve-tay-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/09/VH2615-Wholesale-Hand-Painted-Lacquer-Coconut-Bowls.jpg",
+            "alt_vi": "Bát gáo dừa phủ sơn vẽ tay — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "6abcd1f921e55ef1f7336d87891de76b745c8044f4f1da7f80a3d82de619a689",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-bat-gao-dua-son-ve-tay",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-bat-gao-dua-son-ve-tay"
+        ],
+        "editor_note": "API không có SKU; mã VH2615 lấy từ tên file ảnh → SKU nội bộ VNS-VIETCRAFT-VH2615. 'Lacquer' chưa xác nhận là sơn mài (sơn ta) nên không gắn kỹ thuật 'sơn mài'. Nhập tự động từ https://vietcraft.vn/product/wholesale-hand-painted-lacquer-coconut-bowls-from-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-vietcraft-bat-tre-cuon-phu-son-vh24045",
+        "slug": "vietcraft-bat-tre-cuon-phu-son-vh24045",
+        "name_vi": "Bát tre cuộn phủ sơn",
+        "status": "draft",
+        "category_id": "go-son-mai",
+        "brand_id": null,
+        "maker_id": "maker-vietnam-handicraft",
+        "short_description_vi": "Bát làm từ tre cuộn thủ công, phủ sơn (lacquer).",
+        "description_vi": "",
+        "aliases": [
+          "Lacquer Spun Bamboo Bowl"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "tre"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "tre cuộn",
+          "phủ sơn"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "VH24045",
+            "name_vi": "Bát tre cuộn phủ sơn",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-vietcraft-bat-tre-cuon-phu-son-vh24045"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Tên sản phẩm 'Made in Vietnam'; mô tả 'handcrafted by Vietnamese artisans'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-vietcraft-bat-tre-cuon-phu-son-vh24045-1",
+            "local_path": "assets/products/p-vietcraft-bat-tre-cuon-phu-son-vh24045/img-vietcraft-bat-tre-cuon-phu-son-vh24045-1.png",
+            "source_url": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2025/10/VH24045-lacquer-spun-bamboo-bowl.jpg",
+            "alt_vi": "Bát tre cuộn phủ sơn — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "36c2e59febd51665ac38aa9c5141044624ad02cf9f9175be3a0cb47a321d9325",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-vietcraft-bat-tre-cuon-phu-son-vh24045",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 510,
+            "height": 600
+          }
+        ],
+        "source_ids": [
+          "src-vietcraft-bat-tre-cuon-phu-son-vh24045"
+        ],
+        "editor_note": "'Lacquer' chưa xác nhận là sơn mài. Nhập tự động từ https://vietcraft.vn/product/lacquer-spun-bamboo-bowl-made-in-vietnam/ lúc 2026-10-10T00:35:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-ben-tre-78-80g",
+        "slug": "marou-ben-tre-78-80g",
+        "name_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Thanh sô-cô-la đen 78% từ cacao Bến Tre, nơi cây cacao trồng xen trong vườn dừa.",
+        "description_vi": "",
+        "aliases": [
+          "Ben Tre 78% Single Origin",
+          "socola Bến Tre"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 80,
+          "source_ids": [
+            "src-marou-ben-tre-78-80g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHSO0001",
+            "name_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g",
+            "attributes": {},
+            "price_vnd": 140000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-ben-tre-78-80g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "cacao",
+              "country": "VN",
+              "place_ids": [
+                "place-ben-tre"
+              ],
+              "source_ids": [
+                "src-marou-ben-tre-78-80g",
+                "src-marou-our-chocolate"
+              ]
+            }
+          ],
+          "place_ids": [
+            "place-ben-tre"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-ben-tre-78-80g",
+              "src-marou-our-chocolate"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Cacao từ tỉnh Bến Tre",
+            "place_ids": [
+              "place-ben-tre"
+            ]
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Trang không nêu địa chỉ nhà máy"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-ben-tre-78-80g-1",
+            "local_path": "assets/products/p-marou-ben-tre-78-80g/img-marou-ben-tre-78-80g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ben-tre-78-single-origin-80g.webp",
+            "alt_vi": "Sô-cô-la đen Bến Tre 78% Single Origin 80g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-ben-tre-78-80g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-ben-tre-78-80g",
+          "src-marou-our-chocolate"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/ben-tre-78-single-origin-80g lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-tien-giang-70-80g",
+        "slug": "marou-tien-giang-70-80g",
+        "name_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Thanh sô-cô-la đen 70% từ hạt cacao Trinitario của nông dân hợp tác xã Chợ Gạo.",
+        "description_vi": "",
+        "aliases": [
+          "Tien Giang 70% Single Origin",
+          "socola Tiền Giang"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 80,
+          "source_ids": [
+            "src-marou-tien-giang-70-80g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHSO0002",
+            "name_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g",
+            "attributes": {},
+            "price_vnd": 140000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-tien-giang-70-80g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "cacao",
+              "country": "VN",
+              "place_ids": [
+                "place-tien-giang"
+              ],
+              "source_ids": [
+                "src-marou-tien-giang-70-80g",
+                "src-marou-our-chocolate"
+              ]
+            }
+          ],
+          "place_ids": [
+            "place-tien-giang"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-tien-giang-70-80g",
+              "src-marou-our-chocolate"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Cacao của nông dân HTX Chợ Gạo (Tiền Giang)",
+            "place_ids": [
+              "place-tien-giang"
+            ]
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-tien-giang-70-80g-1",
+            "local_path": "assets/products/p-marou-tien-giang-70-80g/img-marou-tien-giang-70-80g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/tien-giang-70-single-origin-80g.webp",
+            "alt_vi": "Sô-cô-la đen Tiền Giang 70% Single Origin 80g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-tien-giang-70-80g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-tien-giang-70-80g",
+          "src-marou-our-chocolate"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/tien-giang-70-single-origin-80g lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-lam-dong-74-80g",
+        "slug": "marou-lam-dong-74-80g",
+        "name_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Thanh sô-cô-la đen 74% làm theo mẻ nhỏ từ cacao trồng giữa Madagui và Bảo Lộc.",
+        "description_vi": "",
+        "aliases": [
+          "Lam Dong 74% Single Origin",
+          "socola Lâm Đồng"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 80,
+          "source_ids": [
+            "src-marou-lam-dong-74-80g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHSO0006",
+            "name_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g",
+            "attributes": {},
+            "price_vnd": 140000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-lam-dong-74-80g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "cacao",
+              "country": "VN",
+              "place_ids": [
+                "place-lam-dong"
+              ],
+              "source_ids": [
+                "src-marou-lam-dong-74-80g",
+                "src-marou-our-chocolate"
+              ]
+            }
+          ],
+          "place_ids": [
+            "place-lam-dong"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-lam-dong-74-80g",
+              "src-marou-our-chocolate"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Cacao trồng giữa Madagui và Bảo Lộc",
+            "place_ids": [
+              "place-lam-dong"
+            ]
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-lam-dong-74-80g-1",
+            "local_path": "assets/products/p-marou-lam-dong-74-80g/img-marou-lam-dong-74-80g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/lam-dong-74-single-origin-80g.webp",
+            "alt_vi": "Sô-cô-la đen Lâm Đồng 74% Single Origin 80g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "5fa87a6925e9879a02e9c788c8fb5022331974ac8cd23e5ce1670b83026ab075",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-lam-dong-74-80g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-lam-dong-74-80g",
+          "src-marou-our-chocolate"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/lam-dong-74-single-origin-80g lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-quat-tien-giang-68-80g",
+        "slug": "marou-quat-tien-giang-68-80g",
+        "name_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Sô-cô-la Tiền Giang 68% kết hợp quất trồng tại các vườn ở Tiền Giang.",
+        "description_vi": "",
+        "aliases": [
+          "Mekong Kumquat Tien Giang 68%",
+          "socola tắc"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao",
+          "quất"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 80,
+          "source_ids": [
+            "src-marou-quat-tien-giang-68-80g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHOP0002",
+            "name_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g",
+            "attributes": {},
+            "price_vnd": 170000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-quat-tien-giang-68-80g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "quất",
+              "country": "VN",
+              "place_ids": [
+                "place-tien-giang"
+              ],
+              "source_ids": [
+                "src-marou-quat-tien-giang-68-80g"
+              ]
+            }
+          ],
+          "place_ids": [
+            "place-tien-giang"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-quat-tien-giang-68-80g"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Quất trồng tại vườn ở tỉnh Tiền Giang",
+            "place_ids": [
+              "place-tien-giang"
+            ]
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-quat-tien-giang-68-80g-1",
+            "local_path": "assets/products/p-marou-quat-tien-giang-68-80g/img-marou-quat-tien-giang-68-80g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mekong-kumquat-tien-giang-68-80g.webp",
+            "alt_vi": "Sô-cô-la đen 68% quất Mekong – Tiền Giang 80g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "ff0ce89ddeda95f8be901ee280e8ee1af16e8b3b13b896d697c7078d20625089",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-quat-tien-giang-68-80g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-quat-tien-giang-68-80g"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/mekong-kumquat-tien-giang-68-80g lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-vietnam-100-60g",
+        "slug": "marou-vietnam-100-60g",
+        "name_vi": "Sô-cô-la đen 100% Vietnam 60g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Thanh sô-cô-la 100% cacao, phối từ cacao vị dịu do nông dân miền Nam Việt Nam trồng.",
+        "description_vi": "",
+        "aliases": [
+          "Vietnam 100% Dark Chocolate",
+          "socola 100%"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 60,
+          "source_ids": [
+            "src-marou-vietnam-100-60g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHOR0003",
+            "name_vi": "Sô-cô-la đen 100% Vietnam 60g",
+            "attributes": {},
+            "price_vnd": 170000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-vietnam-100-60g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "cacao",
+              "country": "VN",
+              "place_ids": [],
+              "source_ids": [
+                "src-marou-vietnam-100-60g"
+              ]
+            }
+          ],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-vietnam-100-60g"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Cacao 'grown by farmers in the south of Vietnam'"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-vietnam-100-60g-1",
+            "local_path": "assets/products/p-marou-vietnam-100-60g/img-marou-vietnam-100-60g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/origin-vietnam-100-60g.webp",
+            "alt_vi": "Sô-cô-la đen 100% Vietnam 60g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "69734be2420671bc418a6d28722d1cfa1bed615822e36341b4cbc3a19de776db",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-vietnam-100-60g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-vietnam-100-60g"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/vietnam-100-cacao-dark-chocolate-bar lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-marou-ba-ria-76-80g",
+        "slug": "marou-ba-ria-76-80g",
+        "name_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g",
+        "status": "draft",
+        "category_id": "thuc-pham-banh-keo",
+        "brand_id": "brand-marou",
+        "maker_id": null,
+        "short_description_vi": "Thanh sô-cô-la đen 76% từ cacao Trinitario của các trang trại gia đình ở Bà Rịa.",
+        "description_vi": "",
+        "aliases": [
+          "Ba Ria 76% Single Origin",
+          "socola Bà Rịa"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cacao"
+        ],
+        "colors": [],
+        "dimensions": {
+          "weight_g": 80,
+          "source_ids": [
+            "src-marou-ba-ria-76-80g"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "CHSO0004",
+            "name_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g",
+            "attributes": {},
+            "price_vnd": 140000,
+            "original_price_vnd": null,
+            "price_source_id": "src-marou-ba-ria-76-80g",
+            "observed_at": "2026-10-10",
+            "availability": "in_stock"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": null,
+          "material_origins": [
+            {
+              "material": "cacao",
+              "country": "VN",
+              "place_ids": [
+                "place-ba-ria"
+              ],
+              "source_ids": [
+                "src-marou-ba-ria-76-80g",
+                "src-marou-our-chocolate"
+              ]
+            }
+          ],
+          "place_ids": [
+            "place-ba-ria"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-marou-ba-ria-76-80g",
+              "src-marou-our-chocolate"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Cacao từ trang trại gia đình ở Bà Rịa",
+            "place_ids": [
+              "place-ba-ria"
+            ]
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-marou-ba-ria-76-80g-1",
+            "local_path": "assets/products/p-marou-ba-ria-76-80g/img-marou-ba-ria-76-80g-1.jpg",
+            "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ba-ria-76-single-origin-80g.webp",
+            "alt_vi": "Sô-cô-la đen Bà Rịa 76% Single Origin 80g — bao bì riêng của sản phẩm",
+            "view_type": "packaging",
+            "variant_sku": null,
+            "sha256": "32511aa1a090df6ddf60b19790cf9f5128dc73d899d352d7bb62dd36cb73f648",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-marou-ba-ria-76-80g",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 2500,
+            "height": 2500
+          }
+        ],
+        "source_ids": [
+          "src-marou-ba-ria-76-80g",
+          "src-marou-our-chocolate"
+        ],
+        "editor_note": "Nhập tự động từ https://maisonmarou.com/products/ba-ria-76-single-origin-chocolate-bar lúc 2026-10-10T00:50:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-hanoia-binh-hoa-mystery-a18mt01",
+        "slug": "hanoia-binh-hoa-mystery-a18mt01",
+        "name_vi": "Bình hoa Mystery",
+        "status": "draft",
+        "category_id": "go-son-mai-binh-lo",
+        "brand_id": "brand-hanoia",
+        "maker_id": null,
+        "short_description_vi": "Bình hoa nền sơn mài đen tuyền với hình chim công; chất liệu resin và đồng.",
+        "description_vi": "",
+        "aliases": [
+          "bình chim công"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "resin",
+          "đồng"
+        ],
+        "colors": [
+          "đen"
+        ],
+        "dimensions": {
+          "length_mm": 218,
+          "width_mm": 218,
+          "height_mm": 290,
+          "source_ids": [
+            "src-hanoia-binh-hoa-mystery-a18mt01"
+          ]
+        },
+        "craft_techniques": [
+          "sơn mài"
+        ],
+        "motifs": [
+          "chim công"
+        ],
+        "variants": [
+          {
+            "sku": "A18MT01",
+            "name_vi": "Bình hoa Mystery",
+            "attributes": {},
+            "price_vnd": 16500000,
+            "original_price_vnd": null,
+            "price_source_id": "src-hanoia-binh-hoa-mystery-a18mt01",
+            "observed_at": "2026-10-10",
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-hanoia-our-story"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Hanoia 'ra đời năm 1997 tại tỉnh Bình Dương'"
+          },
+          {
+            "claim_type": "traditional_craft",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-hanoia-binh-hoa-mystery-a18mt01"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang sản phẩm: 'Trên nền sơn mài đen tuyền'"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Trang sản phẩm không có dòng xuất xứ"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-hanoia-binh-hoa-mystery-a18mt01-1",
+            "local_path": "assets/products/p-hanoia-binh-hoa-mystery-a18mt01/img-hanoia-binh-hoa-mystery-a18mt01-1.webp",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A18MT01_1_1.webp",
+            "alt_vi": "Bình hoa Mystery — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "6251d34f613d0e8087593e3798d82b9a59a2f0e31365d6d50fb1c4d1ab0cb705",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-hanoia-binh-hoa-mystery-a18mt01",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 3000,
+            "height": 3000
+          }
+        ],
+        "source_ids": [
+          "src-hanoia-binh-hoa-mystery-a18mt01",
+          "src-hanoia-our-story"
+        ],
+        "editor_note": "Nhập tự động từ https://hanoia.com/binh-hoa-mystery-a18mt01.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-hanoia-binh-hoa-vita-pc26vt01",
+        "slug": "hanoia-binh-hoa-vita-pc26vt01",
+        "name_vi": "Bình hoa Vita",
+        "status": "draft",
+        "category_id": "go-son-mai-binh-lo",
+        "brand_id": "brand-hanoia",
+        "maker_id": null,
+        "short_description_vi": "Bình hoa nhỏ dáng nụ hoa, chất liệu resin, có các màu đỏ rượu, cam, navy, vàng.",
+        "description_vi": "",
+        "aliases": [],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "resin"
+        ],
+        "colors": [
+          "đỏ rượu",
+          "cam",
+          "navy",
+          "vàng"
+        ],
+        "dimensions": {
+          "diameter_mm": 121,
+          "height_mm": 168,
+          "source_ids": [
+            "src-hanoia-binh-hoa-vita-pc26vt01"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "PC26VT01",
+            "name_vi": "Bình hoa Vita",
+            "attributes": {},
+            "price_vnd": 4950000,
+            "original_price_vnd": null,
+            "price_source_id": "src-hanoia-binh-hoa-vita-pc26vt01",
+            "observed_at": "2026-10-10",
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-hanoia-our-story"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Hanoia 'ra đời năm 1997 tại tỉnh Bình Dương'"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-hanoia-binh-hoa-vita-pc26vt01-1",
+            "local_path": "assets/products/p-hanoia-binh-hoa-vita-pc26vt01/img-hanoia-binh-hoa-vita-pc26vt01-1.webp",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26VT01_11_1__1789040414.webp",
+            "alt_vi": "Bình hoa Vita — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "e267e1a0db07de0b5b57b7dbc9e520802337c0442028b1951bb470d18e809bfb",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-hanoia-binh-hoa-vita-pc26vt01",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1200
+          }
+        ],
+        "source_ids": [
+          "src-hanoia-binh-hoa-vita-pc26vt01",
+          "src-hanoia-our-story"
+        ],
+        "editor_note": "Trang không nói sản phẩm là sơn mài; chất liệu resin. Nhập tự động từ https://hanoia.com/binh-hoa-vita-pc26vt01.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+        "slug": "hanoia-hop-vuong-botanica-s-af26bt03",
+        "name_vi": "Hộp vuông Botanica size S",
+        "status": "draft",
+        "category_id": "go-son-mai",
+        "brand_id": "brand-hanoia",
+        "maker_id": null,
+        "short_description_vi": "Hộp vuông nhỏ bằng MDF phủ sơn đen bóng, họa tiết rừng nhiệt đới về đêm.",
+        "description_vi": "",
+        "aliases": [],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "MDF"
+        ],
+        "colors": [
+          "đen"
+        ],
+        "dimensions": {
+          "length_mm": 122,
+          "width_mm": 122,
+          "height_mm": 36,
+          "source_ids": [
+            "src-hanoia-hop-vuong-botanica-s-af26bt03"
+          ]
+        },
+        "craft_techniques": [],
+        "motifs": [
+          "rừng nhiệt đới"
+        ],
+        "variants": [
+          {
+            "sku": "AF26BT03",
+            "name_vi": "Hộp vuông Botanica size S",
+            "attributes": {},
+            "price_vnd": 5500000,
+            "original_price_vnd": null,
+            "price_source_id": "src-hanoia-hop-vuong-botanica-s-af26bt03",
+            "observed_at": "2026-10-10",
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-hanoia-our-story"
+            ],
+            "checked_at": "2026-10-10"
+          },
+          {
+            "claim_type": "traditional_craft",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null,
+            "detail_vi": "Trang chỉ nói 'sơn đen bóng - màu đặc trưng của sơn mài truyền thống' (mô tả màu, không khẳng định là sơn mài)"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-hanoia-hop-vuong-botanica-s-af26bt03-1",
+            "local_path": "assets/products/p-hanoia-hop-vuong-botanica-s-af26bt03/img-hanoia-hop-vuong-botanica-s-af26bt03-1.webp",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26BT03_1_1.webp",
+            "alt_vi": "Hộp vuông Botanica size S — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "9db9369d4af501ab73605a273f094358cdb8edb76516ae4a882125e2c410debc",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-hanoia-hop-vuong-botanica-s-af26bt03",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1200
+          }
+        ],
+        "source_ids": [
+          "src-hanoia-hop-vuong-botanica-s-af26bt03",
+          "src-hanoia-our-story"
+        ],
+        "editor_note": "Nhập tự động từ https://hanoia.com/hop-vuong-botanica-size-s-af26bt03.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+        "slug": "hanoia-hop-dan-tre-ethnic-s-ou17et02",
+        "name_vi": "Hộp đan tre Ethnic size S",
+        "status": "draft",
+        "category_id": "may-tre-coi",
+        "brand_id": "brand-hanoia",
+        "maker_id": null,
+        "short_description_vi": "Hộp đan từ nan tre chuốt mảnh theo kỹ thuật nong mốt, nắp và đáy bằng đồng.",
+        "description_vi": "",
+        "aliases": [
+          "hộp tre"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "tre",
+          "đồng"
+        ],
+        "colors": [
+          "vàng"
+        ],
+        "dimensions": {
+          "length_mm": 100,
+          "width_mm": 100,
+          "height_mm": 75,
+          "source_ids": [
+            "src-hanoia-hop-dan-tre-ethnic-s-ou17et02"
+          ]
+        },
+        "craft_techniques": [
+          "đan nong mốt"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "OU17ET02",
+            "name_vi": "Hộp đan tre Ethnic size S",
+            "attributes": {},
+            "price_vnd": 950000,
+            "original_price_vnd": null,
+            "price_source_id": "src-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+            "observed_at": "2026-10-10",
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": "VN",
+          "manufacturing_country": null,
+          "material_origins": [],
+          "place_ids": [],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "vn_brand",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-hanoia-our-story"
+            ],
+            "checked_at": "2026-10-10"
+          },
+          {
+            "claim_type": "made_in_vn",
+            "value": "unknown",
+            "status": "unverified",
+            "source_ids": [],
+            "checked_at": null
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1",
+            "local_path": "assets/products/p-hanoia-hop-dan-tre-ethnic-s-ou17et02/img-hanoia-hop-dan-tre-ethnic-s-ou17et02-1.webp",
+            "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET02_8_1.webp",
+            "alt_vi": "Hộp đan tre Ethnic size S — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "598fad794926026010f1c73e6ba55a3892e895ca3d4a3592d6e1a9e884fea110",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1200
+          }
+        ],
+        "source_ids": [
+          "src-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+          "src-hanoia-our-story"
+        ],
+        "editor_note": "Nhập tự động từ https://hanoia.com/hop-dan-tre-ethnic-size-s-ou17et02.html lúc 2026-10-10T01:05:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-ao-khoac-phi-17mjk003",
+        "slug": "kilomet109-ao-khoac-phi-17mjk003",
+        "name_vi": "Áo khoác Phi vải gai dầu nhuộm chàm",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Áo khoác nam có mũ, vải gai dầu dệt tay nhuộm chàm, đánh bóng sáp ong; lót cotton batik.",
+        "description_vi": "",
+        "aliases": [
+          "Phi Jacket",
+          "áo khoác vải lanh H'Mông"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "gai dầu",
+          "cotton"
+        ],
+        "colors": [
+          "chàm đậm"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "dệt tay",
+          "nhuộm chàm",
+          "đánh sáp ong",
+          "batik"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "17MJk003",
+            "name_vi": "Áo khoác Phi vải gai dầu nhuộm chàm",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang About: may tay tại studio ở Hà Nội",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-ao-khoac-phi-17mjk003",
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Vải gai dầu dệt tay bởi nghệ nhân H'Mông Đen ở Việt Nam"
+          },
+          {
+            "claim_type": "traditional_craft",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-ao-khoac-phi-17mjk003"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Dệt tay, nhuộm chàm, đánh bóng sáp ong bởi nghệ nhân H'Mông Đen"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-ao-khoac-phi-17mjk003-1",
+            "local_path": "assets/products/p-kilomet109-ao-khoac-phi-17mjk003/img-kilomet109-ao-khoac-phi-17mjk003-1.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0402.jpg",
+            "alt_vi": "Áo khoác Phi vải gai dầu nhuộm chàm — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "8279abe273214b8ff0cd9031b396336b2949d7fca302481232ed281027235bf1",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-khoac-phi-17mjk003",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1804
+          },
+          {
+            "id": "img-kilomet109-ao-khoac-phi-17mjk003-2",
+            "local_path": "assets/products/p-kilomet109-ao-khoac-phi-17mjk003/img-kilomet109-ao-khoac-phi-17mjk003-2.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0408.jpg",
+            "alt_vi": "Áo khoác Phi vải gai dầu nhuộm chàm — mặt sau",
+            "view_type": "back",
+            "variant_sku": null,
+            "sha256": "5055f4e27e124a216b16979a88803f1f4f9914bbf29903cfa3ef59a6b662197e",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-khoac-phi-17mjk003",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-ao-khoac-phi-17mjk003",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "Giá niêm yết 450 USD (thuộc tính trang ghi 475) — không quy đổi sang VND. Nhập tự động từ https://www.kilomet109.com/shop/phieu-collection-2017-mans-phi-hemp-jacket/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-ao-so-mi-thong-17mt004",
+        "slug": "kilomet109-ao-so-mi-thong-17mt004",
+        "name_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Áo sơ mi nam dáng ôm, cổ tàu, vải cotton voile nhuộm tự nhiên kẻ sọc batik.",
+        "description_vi": "",
+        "aliases": [
+          "Thông Shirt"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "sọc batik"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "nhuộm tự nhiên"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "17MT004",
+            "name_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang About: may tay tại studio ở Hà Nội",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang About: 'using only locally sourced materials'"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-ao-so-mi-thong-17mt004-1",
+            "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-1.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0423.jpg",
+            "alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "12d6c7145c5ea437ca69ec03580796d2a26a3223ac0df1f31072b7819061ead5",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-so-mi-thong-17mt004",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-ao-so-mi-thong-17mt004-2",
+            "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-2.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0429.jpg",
+            "alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — góc nghiêng",
+            "view_type": "side",
+            "variant_sku": null,
+            "sha256": "975be75a701ff5c322e2df94cef327f2ccbb8a19a3893423c1eeba804783e894",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-so-mi-thong-17mt004",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-ao-so-mi-thong-17mt004-3",
+            "local_path": "assets/products/p-kilomet109-ao-so-mi-thong-17mt004/img-kilomet109-ao-so-mi-thong-17mt004-3.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0431.jpg",
+            "alt_vi": "Áo sơ mi Thông cotton nhuộm tự nhiên — chi tiết",
+            "view_type": "detail",
+            "variant_sku": null,
+            "sha256": "11b94b373bcd34b17e224edd5990d81d0884a749d648ba9cff56ccd6c6925d0c",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-so-mi-thong-17mt004",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-ao-so-mi-thong-17mt004",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "168 USD. Nhập tự động từ https://www.kilomet109.com/shop/phieu-collection-2017-mens-thong-batik-shirt/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-vay-van-19wdr006",
+        "slug": "kilomet109-vay-van-19wdr006",
+        "name_vi": "Váy dài Vân bằng lụa Vân",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Váy dài lụa Vân dệt hoa văn chìm; bản đen nhuộm quả mun, bản xanh nhuộm chàm.",
+        "description_vi": "",
+        "aliases": [
+          "Vân Dress"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "lụa"
+        ],
+        "colors": [
+          "đen than",
+          "chàm"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "dệt hoa văn chìm",
+          "nhuộm quả mun",
+          "nhuộm chàm",
+          "móc tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "19WDr006",
+            "name_vi": "Váy dài Vân bằng lụa Vân",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Trang About: nguyên liệu địa phương"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-vay-van-19wdr006-1",
+            "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-1.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop4-19.jpg",
+            "alt_vi": "Váy dài Vân bằng lụa Vân — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "24f51fcf493f36b62f8d38c66b345bb12fd6472ee6d4c7736ba3daf0e7395447",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vay-van-19wdr006",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-vay-van-19wdr006-2",
+            "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-2.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/untitled-21.jpg",
+            "alt_vi": "Váy dài Vân bằng lụa Vân — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "6ecf5b68c235ee86116f66a2d5d5da15f3f9a8e1828f45534b1385994aedd7fa",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vay-van-19wdr006",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-vay-van-19wdr006-3",
+            "local_path": "assets/products/p-kilomet109-vay-van-19wdr006/img-kilomet109-vay-van-19wdr006-3.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-19.jpg",
+            "alt_vi": "Váy dài Vân bằng lụa Vân — chi tiết",
+            "view_type": "detail",
+            "variant_sku": null,
+            "sha256": "c46cc47bc7b018da74ad23ce0fe0a6d2431f6d85471572c9f5c7152feda763e6",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vay-van-19wdr006",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-vay-van-19wdr006",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "Không suy ra 'lụa Vân Phúc' từ tên 'Vân silk'. 425 USD. Nhập tự động từ https://www.kilomet109.com/shop/mien-collection-2019-womans-van-dress/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-chan-vay-ha-17wsk001",
+        "slug": "kilomet109-chan-vay-ha-17wsk001",
+        "name_vi": "Chân váy Hà cotton batik nhuộm chàm",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Chân váy 100% cotton vẽ sáp batik tay họa tiết sóng, nhuộm chàm, có túi trước và sau.",
+        "description_vi": "",
+        "aliases": [
+          "Hà Skirt"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cotton"
+        ],
+        "colors": [
+          "xanh",
+          "trắng"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "batik thủ công",
+          "nhuộm chàm"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "17WSk001",
+            "name_vi": "Chân váy Hà cotton batik nhuộm chàm",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-chan-vay-ha-17wsk001-1",
+            "local_path": "assets/products/p-kilomet109-chan-vay-ha-17wsk001/img-kilomet109-chan-vay-ha-17wsk001-1.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9800.jpg",
+            "alt_vi": "Chân váy Hà cotton batik nhuộm chàm — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "5d52bf9b6c6822796ce5c531daf60f0568d4578eb3d96c5e39e42246efc534f4",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-chan-vay-ha-17wsk001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-chan-vay-ha-17wsk001-2",
+            "local_path": "assets/products/p-kilomet109-chan-vay-ha-17wsk001/img-kilomet109-chan-vay-ha-17wsk001-2.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-9828.jpg",
+            "alt_vi": "Chân váy Hà cotton batik nhuộm chàm — mặt sau",
+            "view_type": "back",
+            "variant_sku": null,
+            "sha256": "66c44cb2e60303fa9bce730edc50d5d411c455a2fad1ec78da81ee9c1ef0a5ef",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-chan-vay-ha-17wsk001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-chan-vay-ha-17wsk001",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "165 USD. Nhập tự động từ https://www.kilomet109.com/shop/phieu-collection-2017-ha-skirt/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+        "slug": "kilomet109-ao-khoac-vang-1-19mjk001",
+        "name_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Áo khoác nam vải gai dầu dệt tay, nhuộm chàm, đánh bóng bằng đá cho bề mặt ánh kim.",
+        "description_vi": "",
+        "aliases": [
+          "Vang I Jacket"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "gai dầu"
+        ],
+        "colors": [
+          "chàm đêm"
+        ],
+        "dimensions": {},
+        "craft_techniques": [
+          "dệt tay",
+          "nhuộm chàm",
+          "đánh bóng đá"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "19MJk001",
+            "name_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10"
+          },
+          {
+            "claim_type": "traditional_craft",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-ao-khoac-vang-1-19mjk001"
+            ],
+            "checked_at": "2026-10-10",
+            "detail_vi": "Dệt tay, nhuộm chàm, đánh bóng đá bởi nghệ nhân H'Mông Đen"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-ao-khoac-vang-1-19mjk001-1",
+            "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-1.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Ecommerce-43.jpg",
+            "alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "423abeba40cd5d0b96bc3531e53cf6fe11207af723e5d9b45a4537c2dd666327",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-khoac-vang-1-19mjk001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1798
+          },
+          {
+            "id": "img-kilomet109-ao-khoac-vang-1-19mjk001-2",
+            "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-2.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2019/12/Eshop3-3.jpg",
+            "alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — chi tiết",
+            "view_type": "detail",
+            "variant_sku": null,
+            "sha256": "c30fd30fe1ce1c5a64ae677f207175dba9ab776fe850d977941401440250a0bc",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-khoac-vang-1-19mjk001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-ao-khoac-vang-1-19mjk001-3",
+            "local_path": "assets/products/p-kilomet109-ao-khoac-vang-1-19mjk001/img-kilomet109-ao-khoac-vang-1-19mjk001-3.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2020/02/Eshop1-3.jpg",
+            "alt_vi": "Áo khoác Vang I vải gai dầu nhuộm chàm — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "9ffb89e4864d2d9dfe8bb24077f925d5e4d932c859ed49f1eed212172e607d99",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-ao-khoac-vang-1-19mjk001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-ao-khoac-vang-1-19mjk001",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "475 USD. Nhập tự động từ https://www.kilomet109.com/shop/mien-collection-2019-mans-vang-1-jacket/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      },
+      {
+        "id": "p-kilomet109-vong-co-xoan-17wac001",
+        "slug": "kilomet109-vong-co-xoan-17wac001",
+        "name_vi": "Vòng cổ vải Xoắn",
+        "status": "draft",
+        "category_id": "det-may-thoi-trang",
+        "brand_id": "brand-kilomet109",
+        "maker_id": null,
+        "short_description_vi": "Vòng cổ bằng vải cotton và lụa, làm thủ công hoàn toàn từ dệt, nhuộm đến khâu.",
+        "description_vi": "",
+        "aliases": [
+          "Xoắn Necklace"
+        ],
+        "tags": [],
+        "intended_uses": [],
+        "materials": [
+          "cotton",
+          "lụa"
+        ],
+        "colors": [],
+        "dimensions": {},
+        "craft_techniques": [
+          "dệt tay",
+          "nhuộm",
+          "khâu tay"
+        ],
+        "motifs": [],
+        "variants": [
+          {
+            "sku": "17WAc001",
+            "name_vi": "Vòng cổ vải Xoắn",
+            "attributes": {},
+            "price_vnd": null,
+            "original_price_vnd": null,
+            "price_source_id": null,
+            "observed_at": null,
+            "availability": "unknown"
+          }
+        ],
+        "origin": {
+          "brand_origin_country": null,
+          "manufacturing_country": "VN",
+          "material_origins": [],
+          "place_ids": [
+            "place-ha-noi"
+          ],
+          "craft_village_id": null
+        },
+        "origin_claims": [
+          {
+            "claim_type": "made_in_vn",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10",
+            "place_ids": [
+              "place-ha-noi"
+            ]
+          },
+          {
+            "claim_type": "vn_material",
+            "value": true,
+            "status": "manufacturer_declared",
+            "source_ids": [
+              "src-kilomet109-about"
+            ],
+            "checked_at": "2026-10-10"
+          }
+        ],
+        "certifications": [],
+        "images": [
+          {
+            "id": "img-kilomet109-vong-co-xoan-17wac001-1",
+            "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-1.webp",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0276.jpg",
+            "alt_vi": "Vòng cổ vải Xoắn — mặt trước",
+            "view_type": "front",
+            "variant_sku": null,
+            "sha256": "db5cfd01c8eeb076d94e4f4d64ad36eb7e26ca99801ff032f5fbd4a9a635a0aa",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vong-co-xoan-17wac001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-vong-co-xoan-17wac001-2",
+            "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-2.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_Y17_NS-0265.jpg",
+            "alt_vi": "Vòng cổ vải Xoắn — ảnh sử dụng/trưng bày",
+            "view_type": "in_use",
+            "variant_sku": null,
+            "sha256": "dcb56e3d03f012a971a7736274ff2547fdd1c79b24b8f277bfb8e14f130caee5",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vong-co-xoan-17wac001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 1200,
+            "height": 1800
+          },
+          {
+            "id": "img-kilomet109-vong-co-xoan-17wac001-3",
+            "local_path": "assets/products/p-kilomet109-vong-co-xoan-17wac001/img-kilomet109-vong-co-xoan-17wac001-3.jpg",
+            "source_url": "https://www.kilomet109.com/wp-content/uploads/2017/06/K109_ECOM_SEPT_NS-163-copy.jpg",
+            "alt_vi": "Vòng cổ vải Xoắn — các phối màu",
+            "view_type": "other",
+            "variant_sku": null,
+            "sha256": "f6a2630e6a9e6bf9ff9bb4fcc9e177224069e93c6cb37e87ec74822f8bd10853",
+            "usage_rights": {
+              "status": "unknown",
+              "source_id": "src-kilomet109-vong-co-xoan-17wac001",
+              "note": "Đã tải từ nguồn chính thức theo yêu cầu người dùng để đối chiếu nội bộ. Chưa có bằng chứng cấp phép công bố/tái sử dụng ảnh."
+            },
+            "width": 959,
+            "height": 1439
+          }
+        ],
+        "source_ids": [
+          "src-kilomet109-vong-co-xoan-17wac001",
+          "src-kilomet109-about"
+        ],
+        "editor_note": "180 USD. Có 3 phối màu. Nhập tự động từ https://www.kilomet109.com/shop/phieu-collection-2017-womans-xoan-necklaces/ lúc 2026-10-10T01:15:00+07:00; chưa review.",
+        "created_at": "2026-10-10T01:30:00+07:00",
+        "updated_at": "2026-10-10T01:30:00+07:00",
+        "reviewed_at": null
+      }
+    ],
+    "catalog_version": "seed-001-images",
+    "updated_at": "2026-10-10T01:30:00+07:00"
+  },
+  "input_hashes": {
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\editorial.json": "2498769621f2d7359bb49d1086ffc0558f330c8de839760a7dde0629d976f912",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\minhlong.json": "495bf60261cb987e58c4b615d2f692bd7f4280cf33191e9b06e6723738fe0c65",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\vietcraft.json": "36a90eab8b572355af078385050d2244a2389645f48cac22b19e814e53b09af6",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\maisonmarou.json": "9c66dce2b7b713fc160eb6a35c2ed5d669ea69f8ef392731e9e8c7818b1bf721",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\hanoia.json": "3c7d8384ad76ed2b8b9567d56b2b98a154cc8f1cf0ce0beeb60118da1715981e",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\raw\\kilomet109.json": "d71d80f44a78f14e7de3b0f97052e2dc95050594ea709699d938a2ff20b3c170",
+    "C:\\Users\\Admin\\Desktop\\VNStore\\data_collection\\images\\2026-10-10\\manifest.json": "2ae58cd8ba5589d481fd12a69549ef16aa0f969a453ad024eb1963a40354c688"
+  },
+  "run_status": "applied"
+}

@@ -1,0 +1,304 @@
+{
+  "status": "comparable_descriptive",
+  "reasons": [],
+  "eligible_qids": {
+    "ndcg_10": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "success_5": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "mrr_10": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "recall_20": {
+      "left": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ],
+      "right": [
+        "kw-seed-001",
+        "kw-seed-002",
+        "kw-seed-003",
+        "kw-seed-006",
+        "kw-seed-007",
+        "kw-seed-008",
+        "kw-seed-009",
+        "kw-seed-010"
+      ]
+    },
+    "no_match_false_accept_rate": {
+      "left": [
+        "kw-seed-011",
+        "kw-seed-012"
+      ],
+      "right": [
+        "kw-seed-011",
+        "kw-seed-012"
+      ]
+    }
+  },
+  "scope": "Descriptive comparison only; not statistical significance, model selection or official baseline approval.",
+  "unverified_labels": true,
+  "latency": {
+    "status": "not_compared",
+    "reason": "Runs lack a hardware/load record adequate for latency comparison."
+  },
+  "metrics": {
+    "ndcg_10": {
+      "left": 0.9734,
+      "right": 0.9734,
+      "delta_right_minus_left": 0.0,
+      "eligible_queries": 8,
+      "better": "higher"
+    },
+    "success_5": {
+      "left": 1.0,
+      "right": 1.0,
+      "delta_right_minus_left": 0.0,
+      "eligible_queries": 8,
+      "better": "higher"
+    },
+    "mrr_10": {
+      "left": 1.0,
+      "right": 1.0,
+      "delta_right_minus_left": 0.0,
+      "eligible_queries": 8,
+      "better": "higher"
+    },
+    "recall_20": {
+      "left": 1.0,
+      "right": 1.0,
+      "delta_right_minus_left": 0.0,
+      "eligible_queries": 8,
+      "better": "higher"
+    },
+    "no_match_false_accept_rate": {
+      "left": 0.5,
+      "right": 0.5,
+      "delta_right_minus_left": 0.0,
+      "eligible_queries": 2,
+      "better": "lower"
+    }
+  },
+  "per_query": [
+    {
+      "qid": "kw-seed-001",
+      "query": "socola Bến Tre",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-002",
+      "query": "bình hoa dưới 5 triệu",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-003",
+      "query": "túi lục bình có quai",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-004",
+      "query": "chén cơm sứ",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": null,
+        "success_5": null,
+        "rr_10": null,
+        "recall_20": null
+      }
+    },
+    {
+      "qid": "kw-seed-005",
+      "query": "do son mai",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": null,
+        "success_5": null,
+        "rr_10": null,
+        "recall_20": null
+      }
+    },
+    {
+      "qid": "kw-seed-006",
+      "query": "áo nhuộm chàm",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-007",
+      "query": "giỏ mây",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-008",
+      "query": "bộ ấm trà",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-009",
+      "query": "cốc sứ có nắp",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-010",
+      "query": "váy lụa",
+      "ranking_changed": false,
+      "deltas": {
+        "ndcg_10": 0.0,
+        "success_5": 0.0,
+        "rr_10": 0.0,
+        "recall_20": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-011",
+      "query": "nồi cơm điện",
+      "ranking_changed": false,
+      "deltas": {
+        "false_accept": 0.0
+      }
+    },
+    {
+      "qid": "kw-seed-012",
+      "query": "giày thể thao",
+      "ranking_changed": false,
+      "deltas": {
+        "false_accept": 0.0
+      }
+    }
+  ],
+  "generated_at": "2026-10-10T15:11:22+07:00",
+  "inputs": [
+    {
+      "side": "left",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-144458-271248_keyword_bm25-taxonomy-smoke\\run.json",
+      "sha256": "3042474bf019afcaec410d3c33a57bdc1333fc34f900a71b6f05197af03f1330"
+    },
+    {
+      "side": "left",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-144458-271248_keyword_bm25-taxonomy-smoke\\predictions.jsonl",
+      "sha256": "9e5d69bd97a012e5b96fbf3bc2e2834dc7e8984140b7217809802c0b07e54ec2"
+    },
+    {
+      "side": "right",
+      "kind": "run",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\run.json",
+      "sha256": "e10f853dedd90c549fd723b30eea010af8e1334f040ea42cf540b9f059406b27"
+    },
+    {
+      "side": "right",
+      "kind": "predictions",
+      "path": "experiments\\results\\20261010-151043-179191_keyword_bm25-comparison-smoke\\predictions.jsonl",
+      "sha256": "928bef4f1b6c9fb9aaf1acaa7defb17db9bf7163a249dd2a1f7dfdf72979109c"
+    }
+  ],
+  "comparison_policy": "keyword-comparison-v1",
+  "comparison_code_sha256": "a7080788e579b06a7acfe46db58306b195f0b95e4c1b10643cc68312731ae943"
+}
