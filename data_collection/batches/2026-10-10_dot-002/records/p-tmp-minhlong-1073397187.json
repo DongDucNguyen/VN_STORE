@@ -1,0 +1,99 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/041582308-sm-01_34c46a178d9d490281b124bf9e03d01a.png",
+  "handle": "dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen",
+  "id": 1073397187,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/041582308-sm-01_34c46a178d9d490281b124bf9e03d01a.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1679695446,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/041582308-sm-01_34c46a178d9d490281b124bf9e03d01a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/041582308-sm-01_34c46a178d9d490281b124bf9e03d01a.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Vườn Thượng Uyển"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "15.5 cm"
+      ]
+    }
+  ],
+  "price": 18684000,
+  "price_max": 18684000,
+  "price_min": 18684000,
+  "price_varies": false,
+  "tags": [
+    "color:bo-tach-VuonThuongUyen",
+    "ecom",
+    "combo Tulip Ngà"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót 15.5 cm - Tulip Ngà - Vườn Thượng Uyển",
+  "type": "Tulip Ngà",
+  "url": "/products/dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen",
+  "pagetitle": "Dĩa lót 15.5 cm - Tulip Ngà - Vườn Thượng Uyển",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1166390780,
+      "barcode": "A001_041582308",
+      "available": false,
+      "price": 18684000,
+      "sku": "A001_041582308",
+      "option1": "Dĩa lót",
+      "option2": "Vườn Thượng Uyển",
+      "option3": "15.5 cm",
+      "options": [
+        "Dĩa lót",
+        "Vườn Thượng Uyển",
+        "15.5 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Dĩa lót / Vườn Thượng Uyển / 15.5 cm",
+      "weight": 186,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-05T04:38:00Z",
+  "created_at": "2026-03-02T08:50:42.412Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-60-cm-hoa-tay-cobalt.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-60-cm-hoa-tay-cobalt.js",
+  "retrieved_at": "2026-10-10T20:54:39.238844+07:00",
+  "sha256": "052f9ffd4d5919c6efc0074a225015043a1d2c5aa55ef9f9aaf68c048e88b9e2",
+  "bytes": 2844,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"2fbd4d627ddc42f3bbda6c3e68cbc5be\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "22846732367a62b92a7b291372259e89",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

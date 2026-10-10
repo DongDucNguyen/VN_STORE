@@ -1,0 +1,31 @@
+{
+  "url": "https://vietcraft.vn/wp-json/wc/store/v1/products?per_page=100&page=1",
+  "final_url": "https://vietcraft.vn/wp-json/wc/store/v1/products?per_page=100&page=1",
+  "retrieved_at": "2026-10-10T20:34:35.405212+07:00",
+  "sha256": "1e1f5b5e3c8fba0040e7c26ecb142ea31a26859aeb46213e71c65c56cd24e2df",
+  "bytes": 1076524,
+  "headers": {
+    "Date": "Sat, 10 Oct 2026 13:34:33 GMT",
+    "Server": "Apache",
+    "X-Robots-Tag": "noindex",
+    "X-Content-Type-Options": "nosniff",
+    "Access-Control-Expose-Headers": "X-WP-Total, X-WP-TotalPages, Link, Cart-Token",
+    "Access-Control-Allow-Headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type, Cart-Token, Nonce, X-OptinMonster-ApiKey",
+    "X-WP-Total": "121",
+    "X-WP-TotalPages": "2",
+    "Link": "<https://vietcraft.vn/wp-json/wc/store/v1/products?per_page=100&page=2#038;page=1>; rel=\"next\"",
+    "Allow": "GET",
+    "Access-Control-Allow-Methods": "OPTIONS, GET, POST, PUT, PATCH, DELETE",
+    "Access-Control-Allow-Credentials": "true",
+    "Vary": "Origin,Accept-Encoding",
+    "Cache-Control": "no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "Upgrade": "h2,h2c",
+    "Connection": "Upgrade",
+    "Last-Modified": "Thu, 17 Sep 2026 03:32:01 GMT",
+    "X-Endurance-Cache-Level": "0",
+    "X-nginx-cache": "WordPress",
+    "Transfer-Encoding": "chunked",
+    "Content-Type": "application/json; charset=UTF-8"
+  }
+}

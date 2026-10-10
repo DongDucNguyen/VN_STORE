@@ -1,0 +1,123 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-01_08da118f1e5a47b1b61d82589fd3957c.png",
+  "handle": "binh-hoa-60-cm-hoa-tay-cobalt",
+  "id": 1071699660,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/11605400401-sm-01_08da118f1e5a47b1b61d82589fd3957c.png",
+    "https://cdn.hstatic.net/products/200000532849/11605400401-sm-02_5b8dd636ccf247c09237b1db15f4627f.png",
+    "https://cdn.hstatic.net/products/200000532849/11605400401-sm-03_129300444dee4d8cbc3b72b150947df2.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1643448550,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-01_08da118f1e5a47b1b61d82589fd3957c.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-01_08da118f1e5a47b1b61d82589fd3957c.png"
+    },
+    {
+      "alt": null,
+      "id": 1643448549,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-02_5b8dd636ccf247c09237b1db15f4627f.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-02_5b8dd636ccf247c09237b1db15f4627f.png"
+    },
+    {
+      "alt": null,
+      "id": 1643448552,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-03_129300444dee4d8cbc3b72b150947df2.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/11605400401-sm-03_129300444dee4d8cbc3b72b150947df2.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Hoa tây cobalt"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "60 cm"
+      ]
+    }
+  ],
+  "price": 9936000000,
+  "price_max": 9936000000,
+  "price_min": 9936000000,
+  "price_varies": false,
+  "tags": [
+    "Marketing"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 60 cm - Hoa tây cobalt",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-60-cm-hoa-tay-cobalt",
+  "pagetitle": "Bình hoa 60 cm - Hoa tây cobalt",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1162530862,
+      "barcode": "A001_11605400401",
+      "available": false,
+      "price": 9936000000,
+      "sku": "A001_11605400401",
+      "option1": "Bình hoa",
+      "option2": "Hoa tây cobalt",
+      "option3": "60 cm",
+      "options": [
+        "Bình hoa",
+        "Hoa tây cobalt",
+        "60 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Bình hoa / Hoa tây cobalt / 60 cm",
+      "weight": 6000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2025-12-03T06:43:00Z",
+  "created_at": "2025-11-28T08:39:38.871Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

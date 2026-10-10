@@ -1,0 +1,57 @@
+{
+  "id": 8249803964624,
+  "title": "Set Of 6 The Faiseurs Collection Chocolate Bars",
+  "handle": "the-faiseurs-collection-6-x-80g-set",
+  "body_html": "Delight in the enchanting flavors of The Faiseurs Collection. Savor a delightful range of dark chocolate treats, perfect for this Valentine.",
+  "published_at": "2025-02-10T22:39:56+07:00",
+  "created_at": "2025-02-10T22:39:55+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Gifts"
+  ],
+  "variants": [
+    {
+      "id": 44411051737296,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0077",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "910000",
+      "grams": 480,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249803964624,
+      "created_at": "2025-02-10T22:39:55+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265680056528,
+      "created_at": "2025-02-10T22:40:03+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T22:40:07+07:00",
+      "product_id": 8249803964624,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mfdc_product_faiseurs_80g_sleeves.jpg?v=1739202007",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

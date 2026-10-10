@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tach-0-20-l-tulip-nga-mau-vang.js",
+  "final_url": "https://minhlong.com/products/tach-0-20-l-tulip-nga-mau-vang.js",
+  "retrieved_at": "2026-10-10T20:54:38.620190+07:00",
+  "sha256": "0244761916018d824ec851cd733792274c603b8e2ab1cf79684654ef1defbd18",
+  "bytes": 2015,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"e61fa4a290f248e0b2139c7e87df5762\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "537053f1b135796260b38e15d30aef74",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

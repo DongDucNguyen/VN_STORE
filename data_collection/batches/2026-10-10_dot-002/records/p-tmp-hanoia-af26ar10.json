@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bộ cờ tướng Aurify",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26AR10_16_1.webp?sig=80d55956aaede6b446959b7e6ab65a65c3f2c5fb16d4aabf93b27da13c967573",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 52500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/bo-co-tuong-aurify-af26ar10.html",
+      "sku": "AF26AR10",
+      "mpn": "AF26AR10"
+    }
+  ],
+  "url": "https://hanoia.com/bo-co-tuong-aurify-af26ar10.html",
+  "sku": "AF26AR10",
+  "mpn": "AF26AR10"
+}

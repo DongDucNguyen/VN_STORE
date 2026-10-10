@@ -1,0 +1,99 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/041582084-sm-01_df6ba272e8fa477d8cc35dc59409272f.png",
+  "handle": "dia-lot-15-5-cm-tulip-nga-mau-cam",
+  "id": 1073396034,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/041582084-sm-01_df6ba272e8fa477d8cc35dc59409272f.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1679693955,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/041582084-sm-01_df6ba272e8fa477d8cc35dc59409272f.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/041582084-sm-01_df6ba272e8fa477d8cc35dc59409272f.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 2,
+      "values": [
+        "15.5 cm"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 3,
+      "values": [
+        "Màu Cam"
+      ]
+    }
+  ],
+  "price": 51408000,
+  "price_max": 51408000,
+  "price_min": 51408000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "color:bo-tach-maucam",
+    "combo Tulip Ngà"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót 15.5 cm - Tulip Ngà - Màu Cam",
+  "type": "Tulip Ngà",
+  "url": "/products/dia-lot-15-5-cm-tulip-nga-mau-cam",
+  "pagetitle": "Dĩa lót 15.5 cm - Tulip Ngà - Màu Cam",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1166387715,
+      "barcode": "A001_041582084",
+      "available": true,
+      "price": 51408000,
+      "sku": "A001_041582084",
+      "option1": "Dĩa lót",
+      "option2": "15.5 cm",
+      "option3": "Màu Cam",
+      "options": [
+        "Dĩa lót",
+        "15.5 cm",
+        "Màu Cam"
+      ],
+      "inventory_quantity": 1,
+      "old_inventory_quantity": 1,
+      "title": "Dĩa lót / 15.5 cm / Màu Cam",
+      "weight": 186,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-05T04:33:00Z",
+  "created_at": "2026-03-02T07:43:21.822Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

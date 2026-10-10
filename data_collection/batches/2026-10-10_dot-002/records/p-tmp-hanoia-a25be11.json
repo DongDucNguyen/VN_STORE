@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trà tròn Bellus",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A25BE11_3_1.webp?sig=813dec3d1a0b2826402a3a850bb6bca22a95c4cd6860aad68f0ba04efc2197e2",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 5500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-tra-tron-bellus-a25be11.html",
+      "sku": "A25BE11",
+      "mpn": "A25BE11"
+    }
+  ],
+  "url": "https://hanoia.com/hop-tra-tron-bellus-a25be11.html",
+  "sku": "A25BE11",
+  "mpn": "A25BE11"
+}

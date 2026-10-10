@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-lot-tach-12-5-cm-camellia-chim-lac.js",
+  "final_url": "https://minhlong.com/products/dia-lot-tach-12-5-cm-camellia-chim-lac.js",
+  "retrieved_at": "2026-10-10T20:37:16.254332+07:00",
+  "sha256": "cd4eb36e94d254e60bb34142cb13cdd2ec1df15b61ea3dde4358ef16dea9922f",
+  "bytes": 2053,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"16e738998c744fb39ca9ddf0a77380fb\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "8dae8290e8ba1d42d7fedf489f6588a2",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

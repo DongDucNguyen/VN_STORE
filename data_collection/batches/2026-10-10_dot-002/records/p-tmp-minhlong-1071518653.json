@@ -1,0 +1,98 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/45-cm-hoa-dien-vy-dinh-hoachim-canh-binh-hoa-hoa-van_11453700900-sm-01_5d725874fbe74fcfb0d033e26f65b049.png",
+  "handle": "binh-hoa-45-cm-hoa-dien-vu-dinh-hoa-chim-canh-binh-hoa-ve-tay",
+  "id": 1071518653,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/45-cm-hoa-dien-vy-dinh-hoachim-canh-binh-hoa-hoa-van_11453700900-sm-01_5d725874fbe74fcfb0d033e26f65b049.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1638075801,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/45-cm-hoa-dien-vy-dinh-hoachim-canh-binh-hoa-hoa-van_11453700900-sm-01_5d725874fbe74fcfb0d033e26f65b049.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/45-cm-hoa-dien-vy-dinh-hoachim-canh-binh-hoa-hoa-van_11453700900-sm-01_5d725874fbe74fcfb0d033e26f65b049.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Hoa Diên Vỹ đính hoa/ Chim Cảnh"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "45 cm"
+      ]
+    }
+  ],
+  "price": 4860000000,
+  "price_max": 4860000000,
+  "price_min": 4860000000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Vẽ tay"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 45 cm - Hoa Diên Vỹ đính hoa/ Chim Cảnh - Bình Hoa - Vẽ tay",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-45-cm-hoa-dien-vu-dinh-hoa-chim-canh-binh-hoa-ve-tay",
+  "pagetitle": "Bình hoa 45 cm - Hoa Diên Vũ đính hoa/ Chim Cảnh - Bình Hoa - Vẽ tay",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1162084389,
+      "barcode": "A001_11453700900",
+      "available": true,
+      "price": 4860000000,
+      "sku": "A001_11453700900",
+      "option1": "Bình hoa",
+      "option2": "Hoa Diên Vỹ đính hoa/ Chim Cảnh",
+      "option3": "45 cm",
+      "options": [
+        "Bình hoa",
+        "Hoa Diên Vỹ đính hoa/ Chim Cảnh",
+        "45 cm"
+      ],
+      "inventory_quantity": 10,
+      "old_inventory_quantity": 10,
+      "title": "Bình hoa / Hoa Diên Vỹ đính hoa/ Chim Cảnh / 45 cm",
+      "weight": 6000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2025-12-03T07:04:00Z",
+  "created_at": "2025-11-14T09:31:59.148Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

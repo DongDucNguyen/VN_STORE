@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp đồng hồ Keras",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26KR04_13_1.webp?sig=612734dac763db64f954a0b7c366c702a62c9f05b3b8f9da6e4ffadc4e9782fb",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 22500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-dong-ho-keras-af26kr04.html",
+      "sku": "AF26KR04",
+      "mpn": "AF26KR04"
+    }
+  ],
+  "url": "https://hanoia.com/hop-dong-ho-keras-af26kr04.html",
+  "sku": "AF26KR04",
+  "mpn": "AF26KR04"
+}

@@ -1,0 +1,97 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/042281000-sm-01_9c6fe9a70e4d489dbdd839ab31e258f3.png",
+  "handle": "dia-tron-22cm-tulip-ifp-trang-nga",
+  "id": 1073434927,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/042281000-sm-01_9c6fe9a70e4d489dbdd839ab31e258f3.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1678892970,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/042281000-sm-01_9c6fe9a70e4d489dbdd839ab31e258f3.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/042281000-sm-01_9c6fe9a70e4d489dbdd839ab31e258f3.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa tròn"
+      ]
+    },
+    {
+      "name": "Màu sắc",
+      "position": 2,
+      "values": [
+        "Trắng Ngà"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "22 cm"
+      ]
+    }
+  ],
+  "price": 12096000,
+  "price_max": 12096000,
+  "price_min": 12096000,
+  "price_varies": false,
+  "tags": [
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa tròn 22 cm - Tulip IFP - Trắng Ngà",
+  "type": "Tulip IFP",
+  "url": "/products/dia-tron-22cm-tulip-ifp-trang-nga",
+  "pagetitle": "Dĩa tròn 22cm - Tulip IFP - Trắng Ngà",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1166457553,
+      "barcode": "A001_042281000",
+      "available": true,
+      "price": 12096000,
+      "sku": "A001_042281000",
+      "option1": "Dĩa tròn",
+      "option2": "Trắng Ngà",
+      "option3": "22 cm",
+      "options": [
+        "Dĩa tròn",
+        "Trắng Ngà",
+        "22 cm"
+      ],
+      "inventory_quantity": 5,
+      "old_inventory_quantity": 5,
+      "title": "Dĩa tròn / Trắng Ngà / 22 cm",
+      "weight": 710,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-05T02:51:00Z",
+  "created_at": "2026-03-04T02:29:26.968Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 2
+}

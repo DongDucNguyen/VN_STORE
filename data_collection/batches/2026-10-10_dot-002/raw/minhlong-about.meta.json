@@ -1,0 +1,31 @@
+{
+  "url": "https://minhlong.com/pages/ve-chung-toi",
+  "final_url": "https://minhlong.com/pages/ve-chung-toi",
+  "retrieved_at": "2026-10-10T20:35:00.629250+07:00",
+  "sha256": "6c879987676a9f9eb0a00ee46b4b1f29003627e36fdcb75533b17e281009b14a",
+  "bytes": 218219,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:35:01 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "218219",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "no-cache, no-store",
+    "ETag": "W/\"f8da4dbe750b44ceb456678632295f31\"",
+    "Pragma": "no-cache",
+    "Set-Cookie": ".AspNetCore.Antiforgery.IM8xoGDf8MU=CfDJ8FyFPV59mBtNhmQGz0fYZt_MY_QJezKgl_L1c9Uunh9A9bEjV2xjID2BPSYHw9BKjAAg2JshWmZ1jG1Xj5qNl4qtWB2f3oneEEQFqeSMGvI0t5YuW27BN_5lcIJPN9GqXVljqqi1uUGjyAj3lBZ34aw; path=/; samesite=strict; httponly",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-PIndex": "190",
+    "X-RequestId": "3882906d3c0e6a1e87a03cc132dc04f7",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

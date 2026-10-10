@@ -1,0 +1,125 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p style=\"text-align: justify;\">Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p style=\"text-align: justify;\">Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p style=\"text-align: justify;\">Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p style=\"text-align: justify;\"><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-01_aa5eea3b4ebb4eaaa0a1469c2d32ef42.png",
+  "handle": "binh-hoa-42cm-hue-do",
+  "id": 1074964896,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024222002-sm-01_aa5eea3b4ebb4eaaa0a1469c2d32ef42.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222002-sm-02_85aa4b8485374215b3aab65be7f5b9f4.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222002-sm-03_e4b0c380e9724531a93d0618c1faaf67.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1703223908,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-01_aa5eea3b4ebb4eaaa0a1469c2d32ef42.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-01_aa5eea3b4ebb4eaaa0a1469c2d32ef42.png"
+    },
+    {
+      "alt": null,
+      "id": 1703223907,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-02_85aa4b8485374215b3aab65be7f5b9f4.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-02_85aa4b8485374215b3aab65be7f5b9f4.png"
+    },
+    {
+      "alt": null,
+      "id": 1703223909,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-03_e4b0c380e9724531a93d0618c1faaf67.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222002-sm-03_e4b0c380e9724531a93d0618c1faaf67.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Huệ Đỏ"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "42 cm"
+      ]
+    }
+  ],
+  "price": 2872800000,
+  "price_max": 2872800000,
+  "price_min": 2872800000,
+  "price_varies": false,
+  "tags": [
+    "Bình Hoa",
+    "ecom",
+    "Vẽ tay"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 42 cm - Huệ Đỏ",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-42cm-hue-do",
+  "pagetitle": "Bình hoa 42cm - Huệ Đỏ",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1170569244,
+      "barcode": "A001_R024222002",
+      "available": false,
+      "price": 2872800000,
+      "sku": "A001_R024222002",
+      "option1": "Bình hoa",
+      "option2": "Huệ Đỏ",
+      "option3": "42 cm",
+      "options": [
+        "Bình hoa",
+        "Huệ Đỏ",
+        "42 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Bình hoa / Huệ Đỏ / 42 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-06-09T04:11:00Z",
+  "created_at": "2026-06-08T02:28:06.857Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

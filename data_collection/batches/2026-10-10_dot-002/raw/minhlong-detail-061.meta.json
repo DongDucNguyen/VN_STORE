@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/nen-thom-k1-huong-dong-trang-bong-mo-1.js",
+  "final_url": "https://minhlong.com/products/nen-thom-k1-huong-dong-trang-bong-mo-1.js",
+  "retrieved_at": "2026-10-10T20:37:15.768846+07:00",
+  "sha256": "54daa2693f129aa36fe7973bfa62c13808420506cb3b6ae8de093b337a97dac9",
+  "bytes": 3894,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"966684ec0c6544ceac63dad0710d24b0\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "52ec51f93f1f2fe71ca3afd190a3bc83",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

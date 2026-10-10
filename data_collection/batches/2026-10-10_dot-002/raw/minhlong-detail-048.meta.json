@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/daisy-sung-tuc.js",
+  "final_url": "https://minhlong.com/products/daisy-sung-tuc.js",
+  "retrieved_at": "2026-10-10T20:37:15.203400+07:00",
+  "sha256": "5086afc1bac26ad9ffda399f7dc8c324a809a4409f68b339bc784c7f34cc3bb1",
+  "bytes": 3554,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"b0f3f6c86b284e1b989f10e2ea6e9fb1\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "6872567b8df43945199f76cedb4fb212",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

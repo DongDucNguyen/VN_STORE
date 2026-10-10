@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tuong-bao-ma-10-5cm-tuong-luu-ly-xanh.js",
+  "final_url": "https://minhlong.com/products/tuong-bao-ma-10-5cm-tuong-luu-ly-xanh.js",
+  "retrieved_at": "2026-10-10T20:37:13.350255+07:00",
+  "sha256": "9a4300f97f0b630c9b39fcda723e2d9ac5a2373acac0c49d5fe20f9f3c7b933f",
+  "bytes": 9859,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"eb5c8001878046bb8861f18fb87e8790\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "44e7becf0766baeb77c0ea7fa2118b6a",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

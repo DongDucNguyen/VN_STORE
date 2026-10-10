@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Đĩa xà phòng Mountain",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MT03_2_1.webp?sig=99df0106b0d5a040cf759b9282703a98847eee0ff8da48381510cf91f15baff3",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 1100000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/dia-xa-phong-mountain-af26mt03.html",
+      "sku": "AF26MT03",
+      "mpn": "AF26MT03"
+    }
+  ],
+  "url": "https://hanoia.com/dia-xa-phong-mountain-af26mt03.html",
+  "sku": "AF26MT03",
+  "mpn": "AF26MT03"
+}

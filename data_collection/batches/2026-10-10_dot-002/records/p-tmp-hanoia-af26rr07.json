@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay chữ nhật Red River",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26RR07_3_1.webp?sig=615a76ff4aadd388a607a2832910133bd1a55d7d5645129c3f54862ad1a88e59",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 17950000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-chu-nhat-red-river-af26rr07.html",
+      "sku": "AF26RR07",
+      "mpn": "AF26RR07"
+    }
+  ],
+  "url": "https://hanoia.com/khay-chu-nhat-red-river-af26rr07.html",
+  "sku": "AF26RR07",
+  "mpn": "AF26RR07"
+}

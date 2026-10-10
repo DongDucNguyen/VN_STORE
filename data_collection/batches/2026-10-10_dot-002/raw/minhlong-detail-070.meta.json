@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-den-de-ban-chim-tri.js",
+  "final_url": "https://minhlong.com/products/bo-den-de-ban-chim-tri.js",
+  "retrieved_at": "2026-10-10T20:37:16.375266+07:00",
+  "sha256": "f5bb6d6324f284263c98182b92352a30cc150ed8d628b1efc84a625e87447d61",
+  "bytes": 1952,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"ef292e9389f84f4e8e1a9c0627e5b392\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "5166beffb1e6f421b4f1ca7e07760949",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

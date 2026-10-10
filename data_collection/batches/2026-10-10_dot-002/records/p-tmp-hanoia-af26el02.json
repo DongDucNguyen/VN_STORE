@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Giá đỡ điện thoại Elephone",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26EL02_16_1.webp?sig=d2b859d3add9c6cbd7d3d6b9c96d7bd4d2ef09151648753a7e0c084867b48b26",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 5650000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/gia-do-dien-thoai-elephone-af26el02.html",
+      "sku": "AF26EL02",
+      "mpn": "AF26EL02"
+    }
+  ],
+  "url": "https://hanoia.com/gia-do-dien-thoai-elephone-af26el02.html",
+  "sku": "AF26EL02",
+  "mpn": "AF26EL02"
+}

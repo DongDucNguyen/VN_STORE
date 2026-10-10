@@ -233,7 +233,7 @@ export function SearchPage({ route }: { route: Route }) {
   );
 }
 
-function FilterPanel({
+export function FilterPanel({
   data,
   filters,
   toggle,

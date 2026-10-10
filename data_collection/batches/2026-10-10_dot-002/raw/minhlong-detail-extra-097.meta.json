@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tui-day-40-x-40-x-23-cm.js",
+  "final_url": "https://minhlong.com/products/tui-day-40-x-40-x-23-cm.js",
+  "retrieved_at": "2026-10-10T20:54:40.984341+07:00",
+  "sha256": "f0444154621a6bab356e0835c5e459400cccbb70b959a212a6fd6be8a1b18904",
+  "bytes": 1875,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:41 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"e33666f57d80460a965fc7acc2905171\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "ecfbd0bb95605f51ae70534022f966d5",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/to-thap-20-cm-daisy-lys-trang-nga.js",
+  "final_url": "https://minhlong.com/products/to-thap-20-cm-daisy-lys-trang-nga.js",
+  "retrieved_at": "2026-10-10T20:37:13.520025+07:00",
+  "sha256": "2668229980c67897119f5ddd3e48cce01be341e7ff485445076b683863d80361",
+  "bytes": 2010,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"53be50c85eb9453698b9735cd12482c5\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "add65b143ea79b90dd130aec807833ee",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

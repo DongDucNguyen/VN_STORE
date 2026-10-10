@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cards": 300,
+  "checks": [
+    "all cards",
+    "five group filters",
+    "source filter",
+    "Vietnamese accent-insensitive search",
+    "empty result",
+    "reset"
+  ],
+  "limitation": "Tests embedded filter logic using DOM stubs; does not claim browser visual QA."
+}

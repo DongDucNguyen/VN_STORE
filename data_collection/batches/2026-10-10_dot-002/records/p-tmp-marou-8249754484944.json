@@ -1,0 +1,68 @@
+{
+  "id": 8249754484944,
+  "title": "Maison Marou Exclusive Bar - Feuillantine 80G",
+  "handle": "maison-marou-exclusive-bar-feuillantine-80g",
+  "body_html": "Paper thin French cookie flakes folded into our dark chocolate.",
+  "published_at": "2025-02-10T20:36:53+07:00",
+  "created_at": "2025-02-10T20:36:51+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "tablets"
+  ],
+  "variants": [
+    {
+      "id": 44410937770192,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHEB0005",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "210000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249754484944,
+      "created_at": "2025-02-10T20:36:51+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41418248290512,
+      "created_at": "2025-03-25T10:06:40+07:00",
+      "position": 1,
+      "updated_at": "2025-03-25T10:08:54+07:00",
+      "product_id": 8249754484944,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/maison-marou-exclusive-bar-feuillantine-80g-front.webp?v=1742872134",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 41418248192208,
+      "created_at": "2025-03-25T10:06:40+07:00",
+      "position": 2,
+      "updated_at": "2025-03-25T10:08:40+07:00",
+      "product_id": 8249754484944,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/maison-marou-exclusive-bar-feuillantine-80g-naked.webp?v=1742872120",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

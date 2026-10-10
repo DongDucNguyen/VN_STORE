@@ -1,0 +1,40 @@
+{
+  "status": "pending_collection",
+  "issues": [],
+  "files": [],
+  "inputs": [
+    {
+      "kind": "manifest",
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\benchmarks\\image\\manifest.json",
+      "sha256": "b0f499ba81dd880ee0bb9a85847c18702bb626f7f6a422443251b91703d8df2a"
+    },
+    {
+      "kind": "catalog",
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\database.json",
+      "sha256": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc"
+    },
+    {
+      "kind": "schema",
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\benchmarks\\image\\manifest.schema.json",
+      "sha256": "6cf0d084db2597e9b8fda32aa01ba122d600c12fb003d91622f114249f89384e"
+    }
+  ],
+  "scope": "File bytes/hash and declared provenance only; no decoding, perceptual dedup, rights verification or benchmark approval.",
+  "benchmark_approved": false,
+  "catalog_validation": {
+    "errors": 0,
+    "warnings": []
+  },
+  "summary": {
+    "queries": 0,
+    "visible_products": 330,
+    "hash_verified_files": 0,
+    "unique_query_hashes": 0,
+    "splits": {},
+    "tasks": {},
+    "pending": {},
+    "families": 0
+  },
+  "generated_at": "2026-10-10T21:27:53+07:00",
+  "audit_code_sha256": "f34b9dbfb4dfadc487cfd25725595f88cd1c7a43a694dae76dc6fdae2e6a5e75"
+}

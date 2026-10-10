@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Vịnh size L",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A23VI03_3_1.webp?sig=672ef1028f847861a8dc29df22a4b4b49f453511f081f51c5823b33faa8c9b05",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 16200000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-vinh-size-l-a23vi03.html",
+      "sku": "A23VI03",
+      "mpn": "A23VI03"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-vinh-size-l-a23vi03.html",
+  "sku": "A23VI03",
+  "mpn": "A23VI03"
+}

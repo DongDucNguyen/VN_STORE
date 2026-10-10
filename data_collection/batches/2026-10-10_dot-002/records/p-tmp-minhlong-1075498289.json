@@ -1,0 +1,82 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/00492225-sm-01_417d4dc06a5a435a90f13aae3046ef7a.png",
+  "handle": "hoa-chuong-mau-do-de-phang",
+  "id": 1075498289,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/00492225-sm-01_417d4dc06a5a435a90f13aae3046ef7a.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706784838,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/00492225-sm-01_417d4dc06a5a435a90f13aae3046ef7a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/00492225-sm-01_417d4dc06a5a435a90f13aae3046ef7a.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Hoa chuông màu đỏ đế phẳng"
+      ]
+    }
+  ],
+  "price": 356400000,
+  "price_max": 356400000,
+  "price_min": 356400000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Sứ nội thất"
+  ],
+  "template_suffix": null,
+  "title": "Hoa chuông màu đỏ đế phẳng",
+  "type": "Khác",
+  "url": "/products/hoa-chuong-mau-do-de-phang",
+  "pagetitle": "Hoa chuông màu đỏ đế phẳng",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172108401,
+      "barcode": "A001_00492225",
+      "available": true,
+      "price": 356400000,
+      "sku": "A001_00492225",
+      "option1": "Hoa chuông màu đỏ đế phẳng",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Hoa chuông màu đỏ đế phẳng"
+      ],
+      "inventory_quantity": 4,
+      "old_inventory_quantity": 4,
+      "title": "Hoa chuông màu đỏ đế phẳng",
+      "weight": 4000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:41:26.89Z",
+  "created_at": "2026-07-09T08:59:19.354Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

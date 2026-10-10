@@ -1,0 +1,554 @@
+[
+  {
+    "product_id": "p-tmp-hanoia-af26el01",
+    "image_id": "img-tmp-hanoia-af26el01-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26EL01_5_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26el01/img-tmp-hanoia-af26el01-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26el02",
+    "image_id": "img-tmp-hanoia-af26el02-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26EL02_16_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26el02/img-tmp-hanoia-af26el02-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26et01",
+    "image_id": "img-tmp-hanoia-af26et01-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26ET01_8_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26et01/img-tmp-hanoia-af26et01-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26et02",
+    "image_id": "img-tmp-hanoia-af26et02-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26ET02_8_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26et02/img-tmp-hanoia-af26et02-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26ex08",
+    "image_id": "img-tmp-hanoia-af26ex08-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26EX08_4_3.webp",
+    "local_path": null,
+    "reason": "download_failed",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26ex09",
+    "image_id": "img-tmp-hanoia-af26ex09-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26EX09_4_2.webp",
+    "local_path": "images/p-tmp-hanoia-af26ex09/img-tmp-hanoia-af26ex09-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26ex10",
+    "image_id": "img-tmp-hanoia-af26ex10-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26EX10_4_2.webp",
+    "local_path": "images/p-tmp-hanoia-af26ex10/img-tmp-hanoia-af26ex10-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo04",
+    "image_id": "img-tmp-hanoia-af26mo04-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO04_4_4.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo04/img-tmp-hanoia-af26mo04-4.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo06",
+    "image_id": "img-tmp-hanoia-af26mo06-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO06_5P_2.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo06/img-tmp-hanoia-af26mo06-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo06",
+    "image_id": "img-tmp-hanoia-af26mo06-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO06_5P_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo06/img-tmp-hanoia-af26mo06-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo07",
+    "image_id": "img-tmp-hanoia-af26mo07-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO07_5_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo07/img-tmp-hanoia-af26mo07-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo10",
+    "image_id": "img-tmp-hanoia-af26mo10-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO10_5_4.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo10/img-tmp-hanoia-af26mo10-4.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo11",
+    "image_id": "img-tmp-hanoia-af26mo11-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO11_5P_4.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo11/img-tmp-hanoia-af26mo11-4.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo12",
+    "image_id": "img-tmp-hanoia-af26mo12-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO12_5P_4.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo12/img-tmp-hanoia-af26mo12-4.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo13",
+    "image_id": "img-tmp-hanoia-af26mo13-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO13_5P_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mo13/img-tmp-hanoia-af26mo13-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mo13",
+    "image_id": "img-tmp-hanoia-af26mo13-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MO13_5P_4.webp",
+    "local_path": null,
+    "reason": "download_failed",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt01",
+    "image_id": "img-tmp-hanoia-af26mt01-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT01_9_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt01/img-tmp-hanoia-af26mt01-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt02",
+    "image_id": "img-tmp-hanoia-af26mt02-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT02_9_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt02/img-tmp-hanoia-af26mt02-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt03",
+    "image_id": "img-tmp-hanoia-af26mt03-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT03_2_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt03/img-tmp-hanoia-af26mt03-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt04",
+    "image_id": "img-tmp-hanoia-af26mt04-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT04_9_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt04/img-tmp-hanoia-af26mt04-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt05",
+    "image_id": "img-tmp-hanoia-af26mt05-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT05_9_3.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt05/img-tmp-hanoia-af26mt05-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-af26mt07",
+    "image_id": "img-tmp-hanoia-af26mt07-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_AF26MT07_2_2.webp",
+    "local_path": "images/p-tmp-hanoia-af26mt07/img-tmp-hanoia-af26mt07-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-ou17et01",
+    "image_id": "img-tmp-hanoia-ou17et01-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET01_8_3.webp",
+    "local_path": "images/p-tmp-hanoia-ou17et01/img-tmp-hanoia-ou17et01-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-ou17et03",
+    "image_id": "img-tmp-hanoia-ou17et03-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_OU17ET03_8_3.webp",
+    "local_path": "images/p-tmp-hanoia-ou17et03/img-tmp-hanoia-ou17et03-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26ax01",
+    "image_id": "img-tmp-hanoia-pc26ax01-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26AX01_7_2__1789040408.webp",
+    "local_path": "images/p-tmp-hanoia-pc26ax01/img-tmp-hanoia-pc26ax01-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26ax01",
+    "image_id": "img-tmp-hanoia-pc26ax01-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26AX01_7_3__1789040409.webp",
+    "local_path": "images/p-tmp-hanoia-pc26ax01/img-tmp-hanoia-pc26ax01-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26ax02",
+    "image_id": "img-tmp-hanoia-pc26ax02-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26AX02_7_2__1789040406.webp",
+    "local_path": "images/p-tmp-hanoia-pc26ax02/img-tmp-hanoia-pc26ax02-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26ax02",
+    "image_id": "img-tmp-hanoia-pc26ax02-4",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26AX02_27_2__1789040408.webp",
+    "local_path": "images/p-tmp-hanoia-pc26ax02/img-tmp-hanoia-pc26ax02-4.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26od01",
+    "image_id": "img-tmp-hanoia-pc26od01-2",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26OD01_3B_2__1789359629.webp",
+    "local_path": "images/p-tmp-hanoia-pc26od01/img-tmp-hanoia-pc26od01-2.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-pc26od02",
+    "image_id": "img-tmp-hanoia-pc26od02-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_PC26OD02_3B_3__1790652018.webp",
+    "local_path": "images/p-tmp-hanoia-pc26od02/img-tmp-hanoia-pc26od02-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249753993424",
+    "image_id": "img-tmp-marou-8249753993424-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg?v=1776667944",
+    "local_path": "images/p-tmp-marou-8249753993424/img-tmp-marou-8249753993424-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249758777552",
+    "image_id": "img-tmp-marou-8249758777552-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg?v=1776667944",
+    "local_path": "images/p-tmp-marou-8249753993424/img-tmp-marou-8249753993424-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249759170768",
+    "image_id": "img-tmp-marou-8249759170768-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249759367376",
+    "image_id": "img-tmp-marou-8249759367376-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249759596752",
+    "image_id": "img-tmp-marou-8249759596752-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249759891664",
+    "image_id": "img-tmp-marou-8249759891664-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249760088272",
+    "image_id": "img-tmp-marou-8249760088272-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249760284880",
+    "image_id": "img-tmp-marou-8249760284880-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249760448720",
+    "image_id": "img-tmp-marou-8249760448720-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+    "local_path": "images/p-tmp-marou-8249759170768/img-tmp-marou-8249759170768-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249760710864",
+    "image_id": "img-tmp-marou-8249760710864-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-protein-bar-65-peanuts-pumpkin-seeds-cash.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760710864/img-tmp-marou-8249760710864-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249760907472",
+    "image_id": "img-tmp-marou-8249760907472-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760907472/img-tmp-marou-8249760907472-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249761071312",
+    "image_id": "img-tmp-marou-8249761071312-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-64-tropical-fruits-cashews-styl.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249761071312/img-tmp-marou-8249761071312-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249761333456",
+    "image_id": "img-tmp-marou-8249761333456-4",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760907472/img-tmp-marou-8249760907472-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249764118736",
+    "image_id": "img-tmp-marou-8249764118736-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/iron-bar.webp?v=1739195974",
+    "local_path": "images/p-tmp-marou-8249763889360/img-tmp-marou-8249763889360-1.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249764118736",
+    "image_id": "img-tmp-marou-8249764118736-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/ironbar-65-dark-chocolate-energy-bar-40g.webp?v=1758880350",
+    "local_path": "images/p-tmp-marou-8249763889360/img-tmp-marou-8249763889360-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249780371664",
+    "image_id": "img-tmp-marou-8249780371664-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-64-tropical-fruits-cashews-styl.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249761071312/img-tmp-marou-8249761071312-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249780371664",
+    "image_id": "img-tmp-marou-8249780371664-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-protein-bar-65-peanuts-pumpkin-seeds-cash.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760710864/img-tmp-marou-8249760710864-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249780371664",
+    "image_id": "img-tmp-marou-8249780371664-4",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760907472/img-tmp-marou-8249760907472-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249791480016",
+    "image_id": "img-tmp-marou-8249791480016-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-64-tropical-fruits-cashews-styl.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249761071312/img-tmp-marou-8249761071312-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249791480016",
+    "image_id": "img-tmp-marou-8249791480016-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-protein-bar-65-peanuts-pumpkin-seeds-cash.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760710864/img-tmp-marou-8249760710864-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249791480016",
+    "image_id": "img-tmp-marou-8249791480016-4",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+    "local_path": "images/p-tmp-marou-8249760907472/img-tmp-marou-8249760907472-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249791840464",
+    "image_id": "img-tmp-marou-8249791840464-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vegan-bar.webp?v=1739199370",
+    "local_path": "images/p-tmp-marou-8249791676624/img-tmp-marou-8249791676624-1.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249791840464",
+    "image_id": "img-tmp-marou-8249791840464-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/iron-bar-65-dark-chocolate-protein-bar-55g.webp?v=1758880362",
+    "local_path": "images/p-tmp-marou-8249791676624/img-tmp-marou-8249791676624-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249792037072",
+    "image_id": "img-tmp-marou-8249792037072-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg?v=1776667944",
+    "local_path": "images/p-tmp-marou-8249753993424/img-tmp-marou-8249753993424-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249806356688",
+    "image_id": "img-tmp-marou-8249806356688-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg?v=1776667944",
+    "local_path": "images/p-tmp-marou-8249753993424/img-tmp-marou-8249753993424-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8441716441296",
+    "image_id": "img-tmp-marou-8441716441296-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+    "local_path": "images/p-tmp-marou-8441716441296/img-tmp-marou-8441716441296-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8441716441296",
+    "image_id": "img-tmp-marou-8441716441296-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/Vanilla_24G_EN.webp?v=1771994112",
+    "local_path": "images/p-tmp-marou-8441716441296/img-tmp-marou-8441716441296-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8441717817552",
+    "image_id": "img-tmp-marou-8441717817552-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo_naked.jpg?v=1776668285",
+    "local_path": "images/p-tmp-marou-8441717817552/img-tmp-marou-8441717817552-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8450595881168",
+    "image_id": "img-tmp-marou-8450595881168-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo_naked.jpg?v=1776668285",
+    "local_path": "images/p-tmp-marou-8441717817552/img-tmp-marou-8441717817552-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8450595913936",
+    "image_id": "img-tmp-marou-8450595913936-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo_naked.jpg?v=1776668285",
+    "local_path": "images/p-tmp-marou-8441717817552/img-tmp-marou-8441717817552-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-minhlong-1076574969",
+    "image_id": "img-tmp-minhlong-1076574969-4",
+    "source_url": "https://cdn.hstatic.net/products/200000532849/3_copy_e0c446dfee5141e0afa3b79042eb0267.jpg",
+    "local_path": "images/p-tmp-minhlong-1076574969/img-tmp-minhlong-1076574969-4.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-minhlong-1076590972",
+    "image_id": "img-tmp-minhlong-1076590972-4",
+    "source_url": "https://cdn.hstatic.net/products/200000532849/3_copy_2a0b65fe2bb044f09aa266ade498aaa1.jpg",
+    "local_path": "images/p-tmp-minhlong-1076590972/img-tmp-minhlong-1076590972-4.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249801703632",
+    "image_id": "img-tmp-marou-8249801703632-2",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+    "local_path": "images/p-tmp-marou-8441716441296/img-tmp-marou-8441716441296-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249801703632",
+    "image_id": "img-tmp-marou-8249801703632-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/Vanilla_24G_EN.webp?v=1771994112",
+    "local_path": "images/p-tmp-marou-8441716441296/img-tmp-marou-8441716441296-3.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8249801703632",
+    "image_id": "img-tmp-marou-8249801703632-4",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnam-48-dark-milk-chocolate-mini-bar-halloween-front.jpg?v=1789704646",
+    "local_path": "images/p-tmp-marou-8249801703632/img-tmp-marou-8249801703632-4.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8352337199312",
+    "image_id": "img-tmp-marou-8352337199312-1",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnam-48-dark-milk-chocolate-mini-bar-halloween-front.jpg?v=1789704646",
+    "local_path": "images/p-tmp-marou-8249801703632/img-tmp-marou-8249801703632-4.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-marou-8352337199312",
+    "image_id": "img-tmp-marou-8352337199312-3",
+    "source_url": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+    "local_path": "images/p-tmp-marou-8441716441296/img-tmp-marou-8441716441296-2.jpg",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-a23vi02",
+    "image_id": "img-tmp-hanoia-a23vi02-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A23VI02_3_3.webp",
+    "local_path": "images/p-tmp-hanoia-a23vi02/img-tmp-hanoia-a23vi02-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  },
+  {
+    "product_id": "p-tmp-hanoia-a23vi03",
+    "image_id": "img-tmp-hanoia-a23vi03-3",
+    "source_url": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/Hanoia/HNA_A23VI03_3_3.webp",
+    "local_path": "images/p-tmp-hanoia-a23vi03/img-tmp-hanoia-a23vi03-3.webp",
+    "reason": "shared_bytes_across_products_with_unique_alternative",
+    "action": "excluded_from_catalog_gallery"
+  }
+]

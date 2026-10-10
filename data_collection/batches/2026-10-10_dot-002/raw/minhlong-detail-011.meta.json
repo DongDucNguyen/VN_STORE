@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/ho-kha-t-vo-ng-sa-c-xanh-ngo-c-bi-ch.js",
+  "final_url": "https://minhlong.com/products/ho-kha-t-vo-ng-sa-c-xanh-ngo-c-bi-ch.js",
+  "retrieved_at": "2026-10-10T20:37:13.638495+07:00",
+  "sha256": "4349c5c949aa665b45d121939d5f471cbfd3d687d85aaa25c350fda73452bff6",
+  "bytes": 1965,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"2eba45ad98484281a6b3f8af42e5010e\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "f4be26d66fae55a74ac1557747aed4cd",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": 8249799770320,
+  "title": "6 Single Origin Mini Bars Gift Box - Halloween Edition",
+  "handle": "6-single-origin-mini-chocolate-bars-gift-box-halloween",
+  "body_html": "<p>Indulge in the authentic flavors of our Single Origin chocolate bars, crafted from the finest cacao beans to capture the essence of each cacao terroir.</p>",
+  "published_at": "2026-10-02T09:06:08+07:00",
+  "created_at": "2025-02-10T22:14:17+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Chocolate Gifts",
+    "Halloween",
+    "seasonal"
+  ],
+  "variants": [
+    {
+      "id": 44411037188304,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0011",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "485000",
+      "grams": 144,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249799770320,
+      "created_at": "2025-02-10T22:14:17+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 47731597017296,
+      "created_at": "2026-09-18T11:10:48+07:00",
+      "position": 1,
+      "updated_at": "2026-09-18T11:10:50+07:00",
+      "product_id": 8249799770320,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-mini-chocolate-bars-gift-box-halloween.jpg?v=1789704650",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

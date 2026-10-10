@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp vuông Moonbow size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MO10_5_1.webp?sig=c35387fd4cb767fb0409e92bbd2aa6d5f2bf2ee14e0e9ead4859f7ce2e5c6efd",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 5700000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-vuong-moonbow-size-m-af26mo10.html",
+      "sku": "AF26MO10",
+      "mpn": "AF26MO10"
+    }
+  ],
+  "url": "https://hanoia.com/hop-vuong-moonbow-size-m-af26mo10.html",
+  "sku": "AF26MO10",
+  "mpn": "AF26MO10"
+}

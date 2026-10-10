@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/to-trai-cay-khong-tuoc-trang-tri-vang.js",
+  "final_url": "https://minhlong.com/products/to-trai-cay-khong-tuoc-trang-tri-vang.js",
+  "retrieved_at": "2026-10-10T20:54:37.428764+07:00",
+  "sha256": "5b444a87f9f515a13a9b30096a0d2e0f56fbfbce17c69701874da90e09fc29bc",
+  "bytes": 1855,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"e0b363ea75b94a6a977dd70ee0d9a7ca\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "ceaf84b9e8932094cc297bc817837ceb",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

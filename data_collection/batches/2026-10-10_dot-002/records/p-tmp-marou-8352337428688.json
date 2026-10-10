@@ -1,0 +1,82 @@
+{
+  "id": 8352337428688,
+  "title": "Vietnamese Vanilla 44% White Chocolate Mini Bar - Halloween Edition",
+  "handle": "vietnamese-vanilla-44-white-chocolate-mini-bar-halloween",
+  "body_html": "<p>Share the love with our mini chocolate collection,  featuring the exclusive Vanilla 44% White Chocolate bar.</p>",
+  "published_at": "2026-10-02T09:05:51+07:00",
+  "created_at": "2025-09-17T13:59:33+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Halloween",
+    "seasonal",
+    "Tablets"
+  ],
+  "variants": [
+    {
+      "id": 44702033379536,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHWH0003",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "77000",
+      "grams": 24,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8352337428688,
+      "created_at": "2025-09-17T13:59:33+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 47731595608272,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 1,
+      "updated_at": "2026-09-18T11:10:45+07:00",
+      "product_id": 8352337428688,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnamese-vanilla-44-white-chocolate-mini-bar-halloween-front.jpg?v=1789704645",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 47731595641040,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 2,
+      "updated_at": "2026-09-18T11:10:46+07:00",
+      "product_id": 8352337428688,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnamese-vanilla-44-white-chocolate-mini-bar-halloween-back.jpg?v=1789704646",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017648394448,
+      "created_at": "2026-04-20T13:52:22+07:00",
+      "position": 3,
+      "updated_at": "2026-04-20T13:52:24+07:00",
+      "product_id": 8352337428688,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/socola_24g_BK_Shadow.jpg?v=1776667944",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

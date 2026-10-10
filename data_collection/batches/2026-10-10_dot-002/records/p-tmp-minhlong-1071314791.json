@@ -1,0 +1,112 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024222026-sm-01_cef5158828af48d7a371cb603eacb108.png",
+  "handle": "binh-hoa-42-cm-binh-hoa-dam-sen",
+  "id": 1071314791,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024222026-sm-01_cef5158828af48d7a371cb603eacb108.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222026-sm-02_e9cabb4c02b143b9a816e94c3a98dcdb.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1633315673,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222026-sm-01_cef5158828af48d7a371cb603eacb108.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222026-sm-01_cef5158828af48d7a371cb603eacb108.png"
+    },
+    {
+      "alt": null,
+      "id": 1633315676,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222026-sm-02_e9cabb4c02b143b9a816e94c3a98dcdb.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222026-sm-02_e9cabb4c02b143b9a816e94c3a98dcdb.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Đầm Sen"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "42 cm"
+      ]
+    }
+  ],
+  "price": 1620000000,
+  "price_max": 1620000000,
+  "price_min": 1620000000,
+  "price_varies": false,
+  "tags": [
+    "Vẽ tay",
+    "ecom",
+    "Bình Hoa"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 42 cm - Bình Hoa - Đầm Sen",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-42-cm-binh-hoa-dam-sen",
+  "pagetitle": "Bình hoa 42 cm - Bình Hoa - Đầm Sen",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1161462315,
+      "barcode": "A001_R024222026",
+      "available": true,
+      "price": 1620000000,
+      "sku": "A001_R024222026",
+      "option1": "Bình hoa",
+      "option2": "Đầm Sen",
+      "option3": "42 cm",
+      "options": [
+        "Bình hoa",
+        "Đầm Sen",
+        "42 cm"
+      ],
+      "inventory_quantity": 13,
+      "old_inventory_quantity": 13,
+      "title": "Bình hoa / Đầm Sen / 42 cm",
+      "weight": 4850,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2025-11-11T04:40:45.153Z",
+  "created_at": "2025-10-31T04:09:30.394Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

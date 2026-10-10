@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-trai-cay-dai-cac-chi-vang.js",
+  "final_url": "https://minhlong.com/products/dia-trai-cay-dai-cac-chi-vang.js",
+  "retrieved_at": "2026-10-10T20:54:37.442399+07:00",
+  "sha256": "78e14235f2f0331f0d5505af663e1f18ad245494971004c2adcfaeab687a3225",
+  "bytes": 1842,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"4961dfa357b4422cb76ab5e394034b6b\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "78de2cf26e38c628e3d821bc8a9a98fa",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

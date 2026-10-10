@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-sau-long-23-cm-chi-xanh-duong.js",
+  "final_url": "https://minhlong.com/products/dia-sau-long-23-cm-chi-xanh-duong.js",
+  "retrieved_at": "2026-10-10T20:54:39.202503+07:00",
+  "sha256": "d28e7c9426fbda4706a8006e0d2d8cf82c085d4f4cc18b20026ca6e9903b6e1c",
+  "bytes": 2077,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"3ccf4c5a6b564d71aea9b21133c0dd72\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "f5b3a96854f86b4a1bd720d21344d342",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": 8327525302480,
+  "title": "Caramelized Cashew 65% Dark Chocolate Bar - Socola Trail Edition",
+  "handle": "cashew-praline-65-dark-chocolate-bar-socola-trail",
+  "body_html": "<p>Roasted cashews, coated in crisp caramel and wrapped in smooth dark chocolate. This treat strikes a perfect balance between the sweet and nutty flavors of Nha Trang, all rooted in the richness of Vietnamese cacao.</p>",
+  "published_at": "2026-05-29T09:14:27+07:00",
+  "created_at": "2025-06-23T15:11:40+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "seasonal",
+    "Socola Trail",
+    "tablets"
+  ],
+  "variants": [
+    {
+      "id": 44614341329104,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHSB0035",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "210000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8327525302480,
+      "created_at": "2025-06-23T15:11:40+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 46382106640592,
+      "created_at": "2026-05-26T10:32:21+07:00",
+      "position": 1,
+      "updated_at": "2026-05-26T10:32:23+07:00",
+      "product_id": 8327525302480,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/cashew-praline-65-dark-chocolate-bar-socola-trail.jpg?v=1779766343",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46382107590864,
+      "created_at": "2026-05-26T10:32:22+07:00",
+      "position": 2,
+      "updated_at": "2026-05-26T10:32:23+07:00",
+      "product_id": 8327525302480,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/MR_Trail_BrokenBar_HatDieu.jpg?v=1779766343",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

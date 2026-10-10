@@ -130,6 +130,7 @@ Kết quả gallery hiện tại: [45 ảnh giải mã được, 19 cặp gợi 
 - Query đi đúng đường của API: embedding → cosine gộp theo sản phẩm → `SearchEngine.search_visual` với `text_vi`. Do đó giá/phủ định trong `text_vi` là bộ lọc cứng.
 - Metric dùng [retrieval_metrics.py](../../scripts/benchmark/retrieval_metrics.py): exact Recall@1/5/10 và MRR@10 theo product; similar/image_text nDCG@10, mAP@10 và Success@5. Có sản phẩm chưa chấm trong top K thì metric là `null`.
 - No-match chưa có ngưỡng; báo trung vị `top_similarity` của query có/không có đáp án để chọn ngưỡng trên dev.
+- Độ trễ theo [latency_protocol.py](../../scripts/benchmark/latency_protocol.py): `--latency-rounds` lượt đo embedding, cold start tách riêng (nạp adapter, dựng/nạp chỉ mục, lần embed đầu), GPU/driver/provider ORT, đỉnh VRAM, cảnh báo máy bận.
 - Ghi `run.json` + `predictions.jsonl` vào `experiments/results/<thời điểm>_image_<tên>/`. Mọi run vẫn có `benchmark_approved=false`.
 
 ## Thu ảnh bằng trang `#/collect/image` (thêm 10/10/2026)
@@ -145,7 +146,37 @@ Mở `http://localhost:5173/#/collect/image`. Nếu backend đang chạy, trang 
 .venv/Scripts/python scripts/benchmark/import_image_session.py image-<...>.zip
 ```
 
-Script kiểm tên file, hash và qid, rồi chạy `audit()` trên manifest đã gộp. Audit `invalid` (ví dụ cùng họ sản phẩm ở hai split, ảnh trùng gallery) thì xóa file vừa ghi và giữ nguyên manifest. Sau khi nhập, trạng thái là `pending_review`: người duyệt điền `independence_review` và `judgment` trước khi chạy `eval_image.py`.
+Script kiểm tên file, hash và qid, rồi chạy `audit()` trên manifest đã gộp. Audit `invalid` (ví dụ cùng họ sản phẩm ở hai split, ảnh trùng gallery) thì xóa file vừa ghi và giữ nguyên manifest. Sau khi nhập, trạng thái là `pending_review`: người duyệt điền `independence_review` và `judgment` trước khi chạy `eval_image.py` (dùng packet chấm bên dưới).
+
+## Chấm judgment bằng packet pool (thêm 10/10/2026)
+
+PLAN §8.1 yêu cầu gom top kết quả của mọi baseline, cộng mẫu ngẫu nhiên, rồi mới chấm.
+
+```bash
+.venv-ml/Scripts/python scripts/benchmark/prepare_image_review.py --split dev \
+    --adapter app.ml.image:SigLIP2Base --adapter app.ml.image:DINOv2Base \
+    --out artifacts/image_judgment/<thu-muc-moi>
+```
+
+- Với mỗi query chưa có `judgment` (thêm `--include-judged` để chấm lại): lấy top `--top-k` (mặc định 10) theo cosine ảnh của từng adapter. Với `image_text`, thêm top của ảnh + chữ (bộ lọc cứng) và BM25 trên `text_vi`. Cộng `--random` (mặc định 5) sản phẩm ngẫu nhiên, cố định theo `--seed` và qid. Chỉ mục nạp từ `artifacts/indexes/image/` nếu khớp, không thì dựng trong bộ nhớ.
+- Pool được xáo theo hash: người chấm không thấy thứ hạng hay model nào tìm ra (nguồn chỉ lưu trong `packet.json` → `pool_sources`). Phần còn lại của gallery vẫn có trong trang, vì no-match cần nhãn cho toàn bộ gallery.
+- Mở `index.html` (offline, tự lưu nháp trong trình duyệt, có Lưu/Nạp bản nháp). Mỗi query: chấm 0–3 hết danh sách chính. Nếu chưa có sản phẩm đạt 2–3 thì phải chấm cả phần còn lại. Query `exact` có đáp án phải chọn sản phẩm đúng (và SKU nếu biết). Ô đánh giá **độc lập với gallery** bắt buộc kèm ghi chú. Đổi nhãn sau khi xác nhận sẽ bỏ xác nhận.
+- **Xuất judgment đã xác nhận** tạo file JSON gồm các query đã xác nhận hoặc đã đánh giá độc lập. Áp vào manifest:
+
+```bash
+.venv/Scripts/python scripts/benchmark/apply_image_judgments.py image-judgments-<id>.json --dry-run
+.venv/Scripts/python scripts/benchmark/apply_image_judgments.py image-judgments-<id>.json
+```
+
+Script yêu cầu `catalog_sha256` của file chấm = manifest = `database.json` hiện tại, qid có trong manifest và `sha256` ảnh không đổi. Judgment/independence_review đã có chỉ được thay khi thêm `--replace-judged`. Sau khi gộp, script chạy `audit()` trên bản tạm; nếu `invalid` (no-match thiếu nhãn gallery, exact chưa được chấm ≥2, sản phẩm ẩn…) thì không ghi gì. Packet chỉ dùng để chấm nhãn; với split test, không xem kết quả model để chỉnh cấu hình.
+
+Hai người chấm độc lập cùng packet (profile trình duyệt riêng để không chung nháp) thì đối chiếu:
+
+```bash
+.venv/Scripts/python scripts/benchmark/compare_reviews.py image <image-judgments-A.json> <image-judgments-B.json>
+```
+
+So `has_answer`, sản phẩm/SKU exact, đánh giá độc lập và điểm trên các sản phẩm cả hai cùng chấm; sản phẩm chỉ một người chấm được đếm riêng. Exit 2 = cần phân xử.
 
 ## So sánh hai run (paired bootstrap)
 

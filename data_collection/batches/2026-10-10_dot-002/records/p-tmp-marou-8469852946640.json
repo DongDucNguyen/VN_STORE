@@ -1,0 +1,69 @@
+{
+  "id": 8469852946640,
+  "title": "Vietnamese Matcha & Coconut 40% White Chocolate Bar",
+  "handle": "vietnamese-matcha-coconut-40-white-chocolate-bar",
+  "body_html": "<p>A terroir-driven, 40% cacao white chocolate that replaces conventional sweetness with sophisticated depth. Unlike mass-market white chocolate which often relies heavily on sugar, this bar utilizes a high cacao butter percentage to carry the fresh, bright, and vegetal profile of ceremonial Northern Highlands matcha.</p>",
+  "published_at": "2026-07-15T09:14:11+07:00",
+  "created_at": "2026-07-13T11:32:44+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "New arrivals",
+    "tablets"
+  ],
+  "variants": [
+    {
+      "id": 45069312327888,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHMI0067",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "140000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8469852946640,
+      "created_at": "2026-07-13T11:32:44+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 46859709448400,
+      "created_at": "2026-07-13T11:38:01+07:00",
+      "position": 1,
+      "updated_at": "2026-07-13T11:38:03+07:00",
+      "product_id": 8469852946640,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnamese-matcha-coconut-40-white-chocolate-bar.jpg?v=1783917483",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46859709481168,
+      "created_at": "2026-07-13T11:38:01+07:00",
+      "position": 2,
+      "updated_at": "2026-07-13T11:38:03+07:00",
+      "product_id": 8469852946640,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnamese-matcha-coconut-40-white-chocolate-bar-naked.jpg?v=1783917483",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

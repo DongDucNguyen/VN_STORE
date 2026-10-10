@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1.js",
+  "retrieved_at": "2026-10-10T20:54:40.117855+07:00",
+  "sha256": "9844016c158c28e24e958b9458770adfeac5af916e29cdfd793f9098c34582d2",
+  "bytes": 4475,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:41 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"f75b4466a8e64c179c001d83358009ef\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "a460bba29253d5e44b44c588797808da",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": 8450595913936,
+  "title": "6 Single Origin Napolitains Chocolate 36-Piece Gift Box",
+  "handle": "6-single-origin-napolitains-chocolate-36-piece-gift-box",
+  "body_html": "<p>Our Single Origin dark chocolates are made from cacao beans selected bag by bag from six provinces in Southern Vietnam: Đắk Lắk, Lâm Đồng, Đồng Nai, Bà Rịa, Tiền Giang &amp; Bến Tre. This premium Napolitain chocolate gift box features individually wrapped chocolate pieces, neatly organized by flavor for an enjoyable tasting experience. Presented in a luxurious box with gold-foil accents.</p>",
+  "published_at": "2026-04-20T16:26:58+07:00",
+  "created_at": "2026-04-20T13:55:35+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Chocolate Gifts",
+    "napolitain",
+    "New arrivals",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44993168802000,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0085",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "810000",
+      "grams": 144,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8450595913936,
+      "created_at": "2026-04-20T13:55:35+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 46017653735632,
+      "created_at": "2026-04-20T13:53:00+07:00",
+      "position": 1,
+      "updated_at": "2026-04-20T13:53:01+07:00",
+      "product_id": 8450595913936,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6x6_SO.jpg?v=1776667981",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017656029392,
+      "created_at": "2026-04-20T13:53:07+07:00",
+      "position": 2,
+      "updated_at": "2026-08-25T15:35:49+07:00",
+      "product_id": 8450595913936,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/envelope_SO_napolitain_36pcs.jpg?v=1787646949",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017654554832,
+      "created_at": "2026-04-20T13:53:03+07:00",
+      "position": 3,
+      "updated_at": "2026-04-20T13:58:05+07:00",
+      "product_id": 8450595913936,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo_naked.jpg?v=1776668285",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017654489296,
+      "created_at": "2026-04-20T13:53:02+07:00",
+      "position": 4,
+      "updated_at": "2026-04-20T13:53:04+07:00",
+      "product_id": 8450595913936,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/envelope_SO.jpg?v=1776667984",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

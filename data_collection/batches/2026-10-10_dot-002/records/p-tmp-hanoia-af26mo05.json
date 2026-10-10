@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay vuông Moonbow",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MO05_5_1.webp?sig=59d05bcb3cb88ef17ce9beb649e609e687f70f728b7fa3e35852f4859a8eb2dc",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 4200000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-vuong-moonbow-af26mo05.html",
+      "sku": "AF26MO05",
+      "mpn": "AF26MO05"
+    }
+  ],
+  "url": "https://hanoia.com/khay-vuong-moonbow-af26mo05.html",
+  "sku": "AF26MO05",
+  "mpn": "AF26MO05"
+}

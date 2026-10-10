@@ -220,6 +220,11 @@ td a + a::before { content: ", "; }
 .prompt-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .prompt-actions audio { height: 32px; max-width: 100%; }
 .collect-export { position: sticky; bottom: 0; background: var(--bg); padding: 8px 0; border-top: 1px solid var(--line); }
+.review-done { border-color: var(--ok) !important; background: var(--ok-soft) !important; }
+.review-text { display: grid; gap: 4px; font-size: 0.9rem; margin: 6px 0; }
+.review-text textarea { padding: 8px; font: inherit; font-size: 1rem; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--text); width: 100%; }
+.review-hint { margin: 6px 0 0; padding: 4px 8px; border-left: 3px solid var(--line); color: var(--muted); }
 .shot { display: flex; gap: 10px; align-items: center; }
 .shot img { width: 72px; height: 72px; object-fit: cover; border-radius: 6px; flex: none; }
 .btn-disabled { opacity: 0.6; cursor: default; }

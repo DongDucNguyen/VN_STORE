@@ -23,7 +23,7 @@ from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ValidationError
 
 from .adapters import Busy, ImageEmbedder
 from .catalog.present import product_detail, product_summary
@@ -340,9 +340,14 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -
 
 @app.post("/search/image")
 async def search_image(request: Request, text: str = Query("", max_length=300),
-                       limit: int = Query(24, ge=1, le=100)) -> Any:
+                       filters: str = Query("", max_length=4000), limit: int = Query(24, ge=1, le=100)) -> Any:
     """Body: ảnh JPEG/PNG/WebP (giao diện cắt vùng và bỏ metadata trước khi gửi). Tham số text là yêu cầu
-    bổ sung tiếng Việt, ví dụ "có quai, dưới 400k": giá/phủ định là bộ lọc cứng như tìm bằng chữ."""
+    bổ sung tiếng Việt, ví dụ "có quai, dưới 400k": giá/phủ định là bộ lọc cứng như tìm bằng chữ.
+    filters là JSON cùng dạng với bộ lọc của POST /search (body đã dành cho ảnh nên đi qua query)."""
+    try:
+        chosen = SearchFilters(**FiltersIn.model_validate_json(filters or "{}").model_dump())
+    except ValidationError:
+        return _error(422, "invalid_filters", "Bộ lọc không hợp lệ.")
     b = bundle()
     images = b.images
     if images is None or not images.status.ok:
@@ -357,7 +362,7 @@ async def search_image(request: Request, text: str = Query("", max_length=300),
         return _error(429, "busy", BUSY_MESSAGE)
     except Exception as e:  # noqa: BLE001
         return _error(503, "model_error", f"Model ảnh gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
-    out = b.engine.search_visual(hits, text, limit=limit)
+    out = b.engine.search_visual(hits, text, chosen, limit=limit)
     out["mode"] = "image"
     out["visual"] = {"model_id": images.status.model_id, "revision": images.status.revision,
                      "top_similarity": hits[0].similarity if hits else None, "match_label": "similar"}

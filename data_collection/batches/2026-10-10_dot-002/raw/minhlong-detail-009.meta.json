@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/hu-dung-tra-14-cm-nap-misc-assortment-ifp-an-nhien.js",
+  "final_url": "https://minhlong.com/products/hu-dung-tra-14-cm-nap-misc-assortment-ifp-an-nhien.js",
+  "retrieved_at": "2026-10-10T20:37:13.523463+07:00",
+  "sha256": "3b4a940e92c15b00ae1416b9e4eb197205feb4819021139ccffd5b0272ab3a26",
+  "bytes": 4391,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"014d8f14bfab4c448afc6139c3b72db9\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "64b2885f5bc6dc9152ea4f29c269f410",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

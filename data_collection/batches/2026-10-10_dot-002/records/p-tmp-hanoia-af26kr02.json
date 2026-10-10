@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp gạt tàn Keras",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26KR02_13_1.webp?sig=f53a946cd9db65bef1f8201dc1ddb74fc57edd9c4a457daaf64ec68bb3472c25",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 10500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-gat-tan-keras-af26kr02.html",
+      "sku": "AF26KR02",
+      "mpn": "AF26KR02"
+    }
+  ],
+  "url": "https://hanoia.com/hop-gat-tan-keras-af26kr02.html",
+  "sku": "AF26KR02",
+  "mpn": "AF26KR02"
+}

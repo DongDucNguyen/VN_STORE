@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-tra-cao-1-2-l-13-san-pham-royal-chi-vang-1.js",
+  "final_url": "https://minhlong.com/products/bo-tra-cao-1-2-l-13-san-pham-royal-chi-vang-1.js",
+  "retrieved_at": "2026-10-10T20:54:36.435138+07:00",
+  "sha256": "910d9c6801d51aab048c028ca966e30476d10869a416217d11218eddc9595c98",
+  "bytes": 3125,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"8d99cbf34445486d8dcf89b06300c8b2\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "79992e8eda4760fb59997a4f3970701a",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

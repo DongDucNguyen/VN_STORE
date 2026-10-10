@@ -1,0 +1,69 @@
+{
+  "id": 8249792299216,
+  "title": "Ca Phe Sua Bar 44% - 24G",
+  "handle": "ca-phe-sua-bar-24g",
+  "body_html": "<div>\n<div>Alongside every early morning cacao sourcing departure, there is Ca Phe Sua. On every street corner in Vietnam, there is Ca Phe Sua. Inspired by this institution of conversation &amp; coming together, we created its expression in a bar. This perfect union of organic Vietnamese Robusta, milk &amp; single-origin dark chocolate delivers rich creaminess balanced with the boldness of Vietnam's finest coffee &amp; cacao.\r\nIn collaboration with our Creative Partner since 2011 - RICE</div>\n</div>",
+  "published_at": "2025-02-10T21:57:14+07:00",
+  "created_at": "2025-02-10T21:57:13+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "awards",
+    "tablets"
+  ],
+  "variants": [
+    {
+      "id": 44411028504784,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHMI0010",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "77000",
+      "grams": 24,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249792299216,
+      "created_at": "2025-02-10T21:57:13+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265586438352,
+      "created_at": "2025-02-10T21:57:21+07:00",
+      "position": 1,
+      "updated_at": "2025-04-17T09:25:11+07:00",
+      "product_id": 8249792299216,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mfdc-caphe-sua-bar-24g-1.jpg?v=1744856711",
+      "width": 4000,
+      "height": 4000
+    },
+    {
+      "id": 46017648427216,
+      "created_at": "2026-04-20T13:52:22+07:00",
+      "position": 2,
+      "updated_at": "2026-04-20T13:52:24+07:00",
+      "product_id": 8249792299216,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/24g_BK_Shadow.jpg?v=1776667944",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

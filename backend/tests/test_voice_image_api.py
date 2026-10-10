@@ -1,4 +1,5 @@
 """API tìm bằng giọng nói/ảnh với adapter GIẢ (tests/fakes.py): kiểm tra luồng, không đo chất lượng."""
+import json
 import threading
 
 import pytest
@@ -126,6 +127,23 @@ def test_image_adapter_decode_failure_is_422(client, monkeypatch):
     monkeypatch.setattr(api.state.bundle.images.embedder, "embed", broken)
     r = client.post("/search/image", content=jpeg_header(), headers={"Content-Type": "image/jpeg"})
     assert r.status_code == 422 and r.json()["detail"]["code"] == "image_invalid"
+
+
+def test_image_search_user_filters_are_hard(client):
+    f = {"materials": ["cói"], "price_max": 500000}
+    r = client.post("/search/image", params={"filters": json.dumps(f, ensure_ascii=False)}, content=png(), headers=PNG)
+    assert r.status_code == 200, r.text
+    body = r.json()
+    assert body["total"] > 0 and all("cói" in x["materials"] for x in body["results"])
+    assert all(x["price"]["max_vnd"] is not None and x["price"]["max_vnd"] <= 500000 for x in body["results"])
+    assert {a["source"] for a in body["applied_filters"]} == {"user"}
+    assert any(m["value"] == "cói" for m in body["facets"]["materials"])
+
+
+@pytest.mark.parametrize("bad", ["{không phải json", '{"price_min": -1}', '{"materials": "cói"}'])
+def test_image_search_rejects_bad_filters(client, bad):
+    r = client.post("/search/image", params={"filters": bad}, content=png(), headers=PNG)
+    assert r.status_code == 422 and r.json()["detail"]["code"] == "invalid_filters"
 
 
 def test_image_text_too_long(client):

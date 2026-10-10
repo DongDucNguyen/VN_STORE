@@ -1,0 +1,28 @@
+{
+  "url": "https://hanhsilk.com/",
+  "final_url": "https://hanhsilk.com/",
+  "retrieved_at": "2026-10-10T20:36:01.207717+07:00",
+  "sha256": "cb2b2d28853545d7e84bfd993ef8d80cb99d80561d409792541fddcbb90b35fb",
+  "bytes": 289564,
+  "headers": {
+    "Connection": "close",
+    "X-Powered-By": "PHP/7.4.33",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Link": "<https://hanhsilk.com/wp-json/>; rel=\"https://api.w.org/\"",
+    "Cache-Control": "public, max-age=0",
+    "Expires": "Sat, 10 Oct 2026 13:35:59 GMT",
+    "Transfer-Encoding": "chunked",
+    "Date": "Sat, 10 Oct 2026 13:35:59 GMT",
+    "Server": "LiteSpeed",
+    "Vary": "Accept-Encoding",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Content-Security-Policy": "upgrade-insecure-requests",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Expect-CT": "max-age=7776000, enforce",
+    "Referrer-Policy": "no-referrer-when-downgrade",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Permissions-Policy": "",
+    "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000"
+  }
+}

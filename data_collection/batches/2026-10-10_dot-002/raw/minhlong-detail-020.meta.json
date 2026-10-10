@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/sen-do.js",
+  "final_url": "https://minhlong.com/products/sen-do.js",
+  "retrieved_at": "2026-10-10T20:37:14.038145+07:00",
+  "sha256": "87f26225c7724f6ebda9dfa0b858850f06f3f45554dd7f21abc2a3b35d699970",
+  "bytes": 1667,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"76fb15701cc04addb4fffb5000dd11ec\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "7473559a846da1adf408023d6d02b600",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

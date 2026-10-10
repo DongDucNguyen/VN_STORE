@@ -1,0 +1,82 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/00394038-sm-01_694f03703eb448379c4452a4ab0f5c73.png",
+  "handle": "bo-den-de-ban-cay-nam-mau-do",
+  "id": 1075498087,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/00394038-sm-01_694f03703eb448379c4452a4ab0f5c73.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706782365,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/00394038-sm-01_694f03703eb448379c4452a4ab0f5c73.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/00394038-sm-01_694f03703eb448379c4452a4ab0f5c73.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bộ đèn để bàn cây nấm màu đỏ"
+      ]
+    }
+  ],
+  "price": 2350080000,
+  "price_max": 2350080000,
+  "price_min": 2350080000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Sứ nội thất"
+  ],
+  "template_suffix": null,
+  "title": "Bộ đèn để bàn cây nấm màu đỏ",
+  "type": "Khác",
+  "url": "/products/bo-den-de-ban-cay-nam-mau-do",
+  "pagetitle": "Bộ đèn để bàn cây nấm màu đỏ",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172107848,
+      "barcode": "A001_00394038",
+      "available": true,
+      "price": 2350080000,
+      "sku": "A001_00394038",
+      "option1": "Bộ đèn để bàn cây nấm màu đỏ",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Bộ đèn để bàn cây nấm màu đỏ"
+      ],
+      "inventory_quantity": 9,
+      "old_inventory_quantity": 9,
+      "title": "Bộ đèn để bàn cây nấm màu đỏ",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:43:02.956Z",
+  "created_at": "2026-07-09T08:51:17.454Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

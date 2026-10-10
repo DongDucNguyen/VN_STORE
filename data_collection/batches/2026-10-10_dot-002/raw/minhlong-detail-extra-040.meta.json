@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tuong-ngua-hoang-gia-38-6-cm-pb-2025-kv-luu-ly-xanh.js",
+  "final_url": "https://minhlong.com/products/tuong-ngua-hoang-gia-38-6-cm-pb-2025-kv-luu-ly-xanh.js",
+  "retrieved_at": "2026-10-10T20:54:37.592286+07:00",
+  "sha256": "a4886453097c0b2d848fd9425e5fadad40340a5f7a7e70cadd90e5e1c571c7dc",
+  "bytes": 7939,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"869b7ef96cbe4239a300780bd01a7932\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "5d54b769d2900893c89961df9ca10a79",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

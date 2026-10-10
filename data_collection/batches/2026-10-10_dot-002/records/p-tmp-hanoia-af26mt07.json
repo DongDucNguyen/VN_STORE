@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Lọ đá Mountain",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MT07_2_1.webp?sig=577895ec07b75bb8e59f89e39dd048f40b653307ed0eb2510a7b0ad7fac6bcd5",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 1650000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/lo-da-mountain-af26mt07.html",
+      "sku": "AF26MT07",
+      "mpn": "AF26MT07"
+    }
+  ],
+  "url": "https://hanoia.com/lo-da-mountain-af26mt07.html",
+  "sku": "AF26MT07",
+  "mpn": "AF26MT07"
+}

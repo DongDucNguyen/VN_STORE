@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "BÌNH HOA MONUMENT",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A22MO01_6_1.webp?sig=708dc41bfbf5dab5a8c5e6d469f2d8dcfdcbd51003be579ea1dcd21f90d5201a",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 7950000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-monument-size-s-a22mo01.html",
+      "sku": "A22MO01",
+      "mpn": "A22MO01"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-monument-size-s-a22mo01.html",
+  "sku": "A22MO01",
+  "mpn": "A22MO01"
+}

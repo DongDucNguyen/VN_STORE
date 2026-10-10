@@ -1,0 +1,138 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-01_57d4f61895aa40a7b43a373dfb95130d.png",
+  "handle": "binh-hoa-42-cm-tinh-yeu",
+  "id": 1075497760,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-01_57d4f61895aa40a7b43a373dfb95130d.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-02_23597ea9fc01403bbe538a4d06a8fbe4.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-03_57452cd2a96d4ddea5fd93da317e552a.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-04_c94e761a238e48dcb4c0ab86079c6817.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706776956,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-01_57d4f61895aa40a7b43a373dfb95130d.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-01_57d4f61895aa40a7b43a373dfb95130d.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776957,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-02_23597ea9fc01403bbe538a4d06a8fbe4.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-02_23597ea9fc01403bbe538a4d06a8fbe4.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776960,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-03_57452cd2a96d4ddea5fd93da317e552a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-03_57452cd2a96d4ddea5fd93da317e552a.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776959,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-04_c94e761a238e48dcb4c0ab86079c6817.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222043v-sm-04_c94e761a238e48dcb4c0ab86079c6817.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Tình yêu"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "42 cm"
+      ]
+    }
+  ],
+  "price": 1998000000,
+  "price_max": 1998000000,
+  "price_min": 1998000000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Bình Hoa",
+    "Vẽ tay"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 42 cm - Tình yêu",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-42-cm-tinh-yeu",
+  "pagetitle": "Bình hoa 42 cm - Tình yêu",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1172106711,
+      "barcode": "A001_R024222043V",
+      "available": false,
+      "price": 1998000000,
+      "sku": "A001_R024222043V",
+      "option1": "Bình hoa",
+      "option2": "Tình yêu",
+      "option3": "42 cm",
+      "options": [
+        "Bình hoa",
+        "Tình yêu",
+        "42 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Bình hoa / Tình yêu / 42 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:46:48.364Z",
+  "created_at": "2026-07-09T08:28:46.94Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

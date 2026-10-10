@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-sup-23-cm-nha-hang-jasmine-trang.js",
+  "final_url": "https://minhlong.com/products/dia-sup-23-cm-nha-hang-jasmine-trang.js",
+  "retrieved_at": "2026-10-10T20:54:36.154485+07:00",
+  "sha256": "67d9ae6d14eef038d3cae83b8f3357be74c0987e863e8e87b5f88456106fa2e8",
+  "bytes": 1953,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"4d5f4815d12b48a2a89919f2202b93f3\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "d9a2d75799b5b71243f9b66c01c30b9f",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

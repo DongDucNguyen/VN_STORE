@@ -1,0 +1,6 @@
+{
+  "p-tmp-hanoia-af26er01": {
+    "colors": ["nâu"],
+    "reason": "Collector tách nhầm đoạn mô tả theo dấu phẩy thành 2 giá trị màu. Bảng thông số trên trang nguồn (raw/hanoia-product-af26er01.raw, product_pages/p-tmp-hanoia-af26er01.html) ghi 'Màu sắc Nâu'; giá trị cũ là đoạn văn mô tả."
+  }
+}

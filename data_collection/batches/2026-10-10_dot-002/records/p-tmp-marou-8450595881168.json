@@ -1,0 +1,94 @@
+{
+  "id": 8450595881168,
+  "title": "6 Flavors Of Vietnam Napolitains Chocolate 36-Piece Gift Box",
+  "handle": "6-flavors-of-vietnam-napolitains-chocolate-36-piece-gift-box",
+  "body_html": "<p>Our Flavors of Vietnam dark chocolates are made from cacao beans selected bag by bag from six provinces in Southern Vietnam harmoniously blended with local ingredients that captures the terroir essence of each region across Vietnam.</p>\n<p>This premium Napolitain chocolate gift box features individually wrapped chocolate pieces, neatly organized by flavor for an enjoyable tasting experience. Presented in a luxurious box with gold-foil accents.<br></p>",
+  "published_at": "2026-04-20T16:26:58+07:00",
+  "created_at": "2026-04-20T13:54:39+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Chocolate Gifts",
+    "napolitain",
+    "New arrivals",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44993168769232,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0086",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "895000",
+      "grams": 144,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8450595881168,
+      "created_at": "2026-04-20T13:54:40+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 46017653768400,
+      "created_at": "2026-04-20T13:53:00+07:00",
+      "position": 1,
+      "updated_at": "2026-04-20T13:53:01+07:00",
+      "product_id": 8450595881168,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6x6_OP.jpg?v=1776667981",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017655996624,
+      "created_at": "2026-04-20T13:53:07+07:00",
+      "position": 2,
+      "updated_at": "2026-04-20T13:58:05+07:00",
+      "product_id": 8450595881168,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/OP_napo_envelops.jpg?v=1776668285",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017654554832,
+      "created_at": "2026-04-20T13:53:03+07:00",
+      "position": 3,
+      "updated_at": "2026-04-20T13:58:05+07:00",
+      "product_id": 8450595881168,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo_naked.jpg?v=1776668285",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017654325456,
+      "created_at": "2026-04-20T13:53:01+07:00",
+      "position": 4,
+      "updated_at": "2026-04-20T13:58:05+07:00",
+      "product_id": 8450595881168,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/envelope_OP.jpg?v=1776668285",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

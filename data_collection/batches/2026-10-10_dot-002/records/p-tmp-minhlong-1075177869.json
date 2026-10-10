@@ -1,0 +1,125 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-01_a8250053acc449d7bf014912acae391c.png",
+  "handle": "binh-hoa-26cm-dan-ga",
+  "id": 1075177869,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r022618027-sm-01_a8250053acc449d7bf014912acae391c.png",
+    "https://cdn.hstatic.net/products/200000532849/r022618027-sm-02_720556c4acc94a189efc202d2b6f3f0f.png",
+    "https://cdn.hstatic.net/products/200000532849/r022618027-sm-03_8dfb4f9d95cc4f43ba918da39ca411e5.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1704487416,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-01_a8250053acc449d7bf014912acae391c.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-01_a8250053acc449d7bf014912acae391c.png"
+    },
+    {
+      "alt": null,
+      "id": 1704487417,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-02_720556c4acc94a189efc202d2b6f3f0f.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-02_720556c4acc94a189efc202d2b6f3f0f.png"
+    },
+    {
+      "alt": null,
+      "id": 1704487418,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-03_8dfb4f9d95cc4f43ba918da39ca411e5.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r022618027-sm-03_8dfb4f9d95cc4f43ba918da39ca411e5.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Đàn Gà"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "26 cm"
+      ]
+    }
+  ],
+  "price": 918000000,
+  "price_max": 918000000,
+  "price_min": 918000000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Bình Hoa",
+    "Vẽ tay"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 26 cm - Đàn Gà",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-26cm-dan-ga",
+  "pagetitle": "Bình hoa 26cm - Đàn Gà",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1171290586,
+      "barcode": "A001_R022618027",
+      "available": true,
+      "price": 918000000,
+      "sku": "A001_R022618027",
+      "option1": "Bình hoa",
+      "option2": "Đàn Gà",
+      "option3": "26 cm",
+      "options": [
+        "Bình hoa",
+        "Đàn Gà",
+        "26 cm"
+      ],
+      "inventory_quantity": 10,
+      "old_inventory_quantity": 10,
+      "title": "Bình hoa / Đàn Gà / 26 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-06-24T03:13:38.187Z",
+  "created_at": "2026-06-22T04:38:47.616Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

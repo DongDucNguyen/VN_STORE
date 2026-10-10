@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": {
+    "archived_record_matches_response": 300,
+    "price_matches_vendor_units": 302,
+    "image_url_in_source_response": 769,
+    "product_page_http_200": 300,
+    "product_page_redirect": 300,
+    "canonical_product_url": 300,
+    "product_page_hash": 300,
+    "source_name_on_product_page": 300,
+    "source_sku_preserved": 267,
+    "variant_found": 122,
+    "review_local_link": 1842,
+    "review_offline_assets": 769,
+    "review_300_cards": 1,
+    "five_groups_60_each": 1
+  },
+  "total_checks": 5873,
+  "failures": [],
+  "scope": "Independent payload → record/SKU/price/image checks; 300 live pages; static review link integrity. Not human editorial approval or a browser rendering test."
+}

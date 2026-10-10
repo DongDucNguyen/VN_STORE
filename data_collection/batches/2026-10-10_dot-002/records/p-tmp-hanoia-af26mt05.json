@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay chữ nhật Mountain size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MT05_9_1.webp?sig=8cf2a6bf1204480b109ce84ecfeabf2ce7972ef62fe91d3a705d6b65781072f8",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 4550000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-chu-nhat-mountain-size-m-af26mt05.html",
+      "sku": "AF26MT05",
+      "mpn": "AF26MT05"
+    }
+  ],
+  "url": "https://hanoia.com/khay-chu-nhat-mountain-size-m-af26mt05.html",
+  "sku": "AF26MT05",
+  "mpn": "AF26MT05"
+}

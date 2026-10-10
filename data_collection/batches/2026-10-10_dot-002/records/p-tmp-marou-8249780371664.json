@@ -1,0 +1,91 @@
+{
+  "id": 8249780371664,
+  "title": "Gift Box Marou Bar 6X35G",
+  "handle": "gift-box-marou-bar-6x35g",
+  "body_html": "<p>Marou Bars represent an evolution to our craft. Our bean-to-bar dark chocolate is paired with a delectable harvest of Vietnam's finest fruits &amp;amp; nuts for serious on-the-go deliciousness. Discover our tropical flavors available in this pack:</p>\n<ul>\n<li>Coconut Milk Chocolate 53% &amp; Popped Rice</li>\n<li>Dark Chocolate 65% &amp; Peanuts, Ginger &amp; Salted Caramel</li>\n<li>Dark Chocolate 64% &amp; Tropical Fruits &amp; Cashews</li>\n</ul>",
+  "published_at": "2025-02-10T21:33:15+07:00",
+  "created_at": "2025-02-10T21:33:14+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Gifts",
+    "snack"
+  ],
+  "variants": [
+    {
+      "id": 44411009204432,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0034",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "345000",
+      "grams": 210,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249780371664,
+      "created_at": "2025-02-10T21:33:14+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41507261382864,
+      "created_at": "2025-04-17T09:21:52+07:00",
+      "position": 1,
+      "updated_at": "2025-04-17T09:22:53+07:00",
+      "product_id": 8249780371664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/gift-box-marou-bar-6x35g.webp?v=1744856573",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 43567805595856,
+      "created_at": "2025-09-26T16:39:42+07:00",
+      "position": 2,
+      "updated_at": "2025-09-26T16:47:55+07:00",
+      "product_id": 8249780371664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-64-tropical-fruits-cashews-styl.webp?v=1758880075",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": 43567805563088,
+      "created_at": "2025-09-26T16:39:42+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:47:55+07:00",
+      "product_id": 8249780371664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-protein-bar-65-peanuts-pumpkin-seeds-cash.webp?v=1758880075",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": 43567805530320,
+      "created_at": "2025-09-26T16:39:42+07:00",
+      "position": 4,
+      "updated_at": "2025-09-26T16:47:55+07:00",
+      "product_id": 8249780371664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+      "width": 960,
+      "height": 960
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Red River size S",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A20RR04_3_2.webp?sig=4e28ab62e0964e9861b1c0d927e30cb0422ef3bdde9d7060f796d687a4cfda63",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 10260000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-red-river-size-s-a20rr04.html",
+      "sku": "A20RR04",
+      "mpn": "A20RR04"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-red-river-size-s-a20rr04.html",
+  "sku": "A20RR04",
+  "mpn": "A20RR04"
+}

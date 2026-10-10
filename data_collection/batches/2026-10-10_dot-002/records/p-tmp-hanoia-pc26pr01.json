@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Prism size S",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26PR01_3B_1__1790652022.webp?sig=2496e0d767b6b62377120fa0473488fd4382f16398ddeafde9fb10cdf1368cad",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 23250000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-prism-size-s-pc26pr01.html",
+      "sku": "PC26PR01",
+      "mpn": "PC26PR01"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-prism-size-s-pc26pr01.html",
+  "sku": "PC26PR01",
+  "mpn": "PC26PR01"
+}

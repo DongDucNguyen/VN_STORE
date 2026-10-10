@@ -1,0 +1,22 @@
+{
+  "products": 300,
+  "groups": {
+    "det-may": 60,
+    "go-son-mai": 60,
+    "may-tre-coi": 60,
+    "thuc-pham": 60,
+    "gom-su": 60
+  },
+  "sites": {
+    "hanhsilk": 30,
+    "hanoia": 64,
+    "marou": 60,
+    "minhlong": 60,
+    "sensilk": 30,
+    "vietcraft": 56
+  },
+  "candidate_records": 467,
+  "excluded_records": 117,
+  "target": 300,
+  "quota_per_group": 60
+}

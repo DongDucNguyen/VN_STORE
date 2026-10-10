@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/heo-ta-i-lo-c-da-t-va-ng.js",
+  "final_url": "https://minhlong.com/products/heo-ta-i-lo-c-da-t-va-ng.js",
+  "retrieved_at": "2026-10-10T20:37:13.793554+07:00",
+  "sha256": "e13068a92f107aefbb28068a1f5179c7d7be4d39ecbbdbb9c9cc99475b86b54e",
+  "bytes": 1839,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"86a160733b204cff96f0ad4abaa81e97\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "9588eb40388eb6aa7bf7199b19bca7fd",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

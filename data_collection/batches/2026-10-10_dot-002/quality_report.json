@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "errors": [],
+  "warnings": [],
+  "catalog_sha256": "9cb80a2eb1e4f56ac87d7b2f1f1b8cdabb5a8dca08d0695de2acf486a228951f",
+  "products": 300,
+  "groups": {
+    "det-may": 60,
+    "go-son-mai": 60,
+    "may-tre-coi": 60,
+    "thuc-pham": 60,
+    "gom-su": 60
+  },
+  "sites": {
+    "hanhsilk": 30,
+    "hanoia": 64,
+    "marou": 60,
+    "minhlong": 60,
+    "sensilk": 30,
+    "vietcraft": 56
+  },
+  "variants": 302,
+  "local_gallery_images": 769,
+  "unique_gallery_image_hashes": 769,
+  "products_without_price": 60,
+  "products_with_2_to_4_images": 223,
+  "products_with_one_image": 77,
+  "products_without_materials": 135,
+  "draft_products": 300,
+  "human_reviewed_products": 0,
+  "images_with_unknown_rights": 769,
+  "shared_image_hashes_before_selection": 0,
+  "excluded_images": 63,
+  "overlap_existing_urls": 0,
+  "overlap_existing_skus": 0,
+  "original_input_hashes": {
+    "database.json": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+    "database.schema.json": "98520718eaa0e8028961a0ea73c3d6efab9f0a693fce7059c4d0370686452967",
+    "PLAN.md": "983b46c7fe3a98dd7933c2096987592e958730545befc22e664be8357c4e4f7f",
+    "docs/huong-dan-nhap-lieu.md": "9b5523f360bbef2ed69a21bc7f595291c54967d35c0ca81aa80ace7ac82cbbb4"
+  },
+  "current_input_hashes": {
+    "database.json": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+    "database.schema.json": "98520718eaa0e8028961a0ea73c3d6efab9f0a693fce7059c4d0370686452967",
+    "PLAN.md": "983b46c7fe3a98dd7933c2096987592e958730545befc22e664be8357c4e4f7f",
+    "docs/huong-dan-nhap-lieu.md": "9b5523f360bbef2ed69a21bc7f595291c54967d35c0ca81aa80ace7ac82cbbb4"
+  },
+  "original_catalog_unchanged": true,
+  "validation_scope": "Schema frozen at start; current project validator read-only. No full-project tests or index builds.",
+  "disclaimer": "Source declarations, not independent authenticity verification. All human review and image permission pending.",
+  "shared_image_hashes_history": 22,
+  "shared_image_hashes_current_gallery": 0,
+  "excluded_images_history": 69
+}

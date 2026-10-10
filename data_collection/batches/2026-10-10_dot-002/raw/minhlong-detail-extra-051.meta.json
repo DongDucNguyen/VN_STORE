@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tuong-ngua-bao-ma.js",
+  "final_url": "https://minhlong.com/products/tuong-ngua-bao-ma.js",
+  "retrieved_at": "2026-10-10T20:54:38.092892+07:00",
+  "sha256": "1b857dad11945d753628d3d6ce6e50869da04d8af56d7b2922f42979bc23b8d1",
+  "bytes": 2538,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"dc2a758e9de447a78f9fb8943b837176\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "242e83872e9f6ce34bff580ec865301a",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

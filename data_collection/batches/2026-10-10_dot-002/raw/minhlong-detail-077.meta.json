@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-41-cm-rung-ket.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-41-cm-rung-ket.js",
+  "retrieved_at": "2026-10-10T20:37:16.712251+07:00",
+  "sha256": "e6b3d42d83bb7c829072830019d6ee8d0d7913a320610d692436ccc9b382775e",
+  "bytes": 5306,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"01d40eef3bc5468786159160cb1197ec\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "e8a33e4b1526f4141ab190a3050e00f0",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

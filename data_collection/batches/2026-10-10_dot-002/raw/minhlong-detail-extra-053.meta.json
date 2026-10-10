@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/thien-ly-ma-26-cm-tuong-trang-suong-mo.js",
+  "final_url": "https://minhlong.com/products/thien-ly-ma-26-cm-tuong-trang-suong-mo.js",
+  "retrieved_at": "2026-10-10T20:54:38.177904+07:00",
+  "sha256": "ba0cb51e2cfb77a0665e90457d2098b320a7025ab9e78b4a48c197f8ce6d1885",
+  "bytes": 8161,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"96659ad38c0b44bf8e21ed9eee060566\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "7744130f165edac56b11f23a6ece64db",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

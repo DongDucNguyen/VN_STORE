@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/ran-thanh-xa-men-ngoc-suong-mo-vang.js",
+  "final_url": "https://minhlong.com/products/ran-thanh-xa-men-ngoc-suong-mo-vang.js",
+  "retrieved_at": "2026-10-10T20:37:14.954243+07:00",
+  "sha256": "62ff8c10399e96012d855925354dea7f2c4ee356aa58b6d87dc4522ee03c7bf1",
+  "bytes": 6964,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:15 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"8e76c70c44bc4b939fa246487035a1b3\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "17947e2502a913ef557e50fc821560c4",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

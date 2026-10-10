@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-tra-0-5-l-camellia-huong-bien-kem.js",
+  "final_url": "https://minhlong.com/products/bo-tra-0-5-l-camellia-huong-bien-kem.js",
+  "retrieved_at": "2026-10-10T20:54:38.926950+07:00",
+  "sha256": "57ba4baddffd418ed2221aee1fbfb4edf0eaa8332befd94aaedbf7433c9d408f",
+  "bytes": 3439,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"95557cc131c34ec3815a66671740fae8\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "3083a812827d82f33581357a94dd4a93",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/avatar__1__d7466ec0ab0f41d683e0a55d64c49ad5.png",
+  "handle": "dia-lot-chen-15-cm-jas-chim-lac",
+  "id": 1074723211,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/avatar__1__d7466ec0ab0f41d683e0a55d64c49ad5.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1701036842,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/avatar__1__d7466ec0ab0f41d683e0a55d64c49ad5.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/avatar__1__d7466ec0ab0f41d683e0a55d64c49ad5.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót chén"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Chim Lạc"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "15 cm"
+      ]
+    }
+  ],
+  "price": 5616000,
+  "price_max": 5616000,
+  "price_min": 5616000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "color:bo-do-an-chim-lac"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót chén 15 cm - Jasmine - Chim Lạc",
+  "type": "Jasmine",
+  "url": "/products/dia-lot-chen-15-cm-jas-chim-lac",
+  "pagetitle": "Dĩa lót chén 15 cm JAS Chim Lạc",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1169931635,
+      "barcode": "A001_041550385",
+      "available": true,
+      "price": 5616000,
+      "sku": "A001_041550385",
+      "option1": "Dĩa lót chén",
+      "option2": "Chim Lạc",
+      "option3": "15 cm",
+      "options": [
+        "Dĩa lót chén",
+        "Chim Lạc",
+        "15 cm"
+      ],
+      "inventory_quantity": 1737,
+      "old_inventory_quantity": 1737,
+      "title": "Dĩa lót chén / Chim Lạc / 15 cm",
+      "weight": 200,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-05-26T01:20:08.554Z",
+  "created_at": "2026-05-22T08:29:15.288Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 62
+}

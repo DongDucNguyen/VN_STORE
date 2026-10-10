@@ -1,0 +1,110 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "Chắt chiu chút nồng ấm từ đất lành, thêm cái nồng nàn của hương cúc độ giao mùa, để nâng niu từng tách Trà Việt thêm phần ngọt lành, thơm hương đậm vị. Một tặng phẩm từ sứ trọn vẹn sắc – hương – tình bung nở sức sống trong hình dáng độc đáo, phá cách và hiện đại. “Hương cúc” cho ta khoảnh khắc an nhiên lắng đọng, khắc sâu tri ân giữa “Ta” với “Người”, để trân quý giây phút đoàn viên, để mỗi câu chuyện bên nhau thêm rôm rả, đầy ắp yêu thương và niềm vui sum vầy.",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/-assortment-ifp-an-nhien_211455475-sm_4482796746b04f5ba8e37a97ad7dd5c7_65b9c53c248c4ebda2b43cd828cad76a.png",
+  "handle": "hu-dung-tra-14-cm-nap-misc-assortment-ifp-an-nhien",
+  "id": 1077030227,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/-assortment-ifp-an-nhien_211455475-sm_4482796746b04f5ba8e37a97ad7dd5c7_65b9c53c248c4ebda2b43cd828cad76a.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1718354493,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/-assortment-ifp-an-nhien_211455475-sm_4482796746b04f5ba8e37a97ad7dd5c7_65b9c53c248c4ebda2b43cd828cad76a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/-assortment-ifp-an-nhien_211455475-sm_4482796746b04f5ba8e37a97ad7dd5c7_65b9c53c248c4ebda2b43cd828cad76a.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Hũ trà"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "An Nhiên"
+      ]
+    },
+    {
+      "name": "Dung tích/Kích thước",
+      "position": 3,
+      "values": [
+        "14 cm"
+      ]
+    }
+  ],
+  "price": 146880000,
+  "price_max": 146880000,
+  "price_min": 146880000,
+  "price_varies": false,
+  "tags": [
+    "Sản phẩm thông dụng",
+    "color:bo-tra-elip-anna-ifp-an-nhien-mkt",
+    "hoavan:An Nhiên",
+    "ecom",
+    "Gia dụng ẩm thực",
+    "Phụ kiện gia dụng khác"
+  ],
+  "template_suffix": null,
+  "title": "Hủ đựng trà 14 cm + nắp - Misc Assortment IFP - An Nhiên",
+  "type": "Misc Assortment IFP",
+  "url": "/products/hu-dung-tra-14-cm-nap-misc-assortment-ifp-an-nhien",
+  "pagetitle": "Hủ đựng trà 14 cm + nắp - Misc-Assortment IFP - An Nhiên",
+  "metadescription": "Hủ đựng trà 14 cm + nắp - Misc-Assortment IFP - An NhiênTuyển chọn từ những nguyên liệu quý hiếm mỗi sản phẩm của Misc Assortment đảm bảo những tiêu chí cao nhất về chất lượng. Sở hữu nhiều tính năng vượt trội siêu cứng chắc, mặt men sáng bóng, khó trầy xước. Misc Assortment được nhiều người ưa chuộng và lựa chọn bởi s",
+  "variants": [
+    {
+      "id": 1175610072,
+      "barcode": "A001_211418475",
+      "available": false,
+      "price": 146880000,
+      "sku": "A001_211418475",
+      "option1": "Hũ trà",
+      "option2": "An Nhiên",
+      "option3": "14 cm",
+      "options": [
+        "Hũ trà",
+        "An Nhiên",
+        "14 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Hũ trà / An Nhiên / 14 cm",
+      "weight": 417,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": {
+        "id": 1718354493,
+        "position": 1,
+        "src": "https://cdn.hstatic.net/products/200000532849/-assortment-ifp-an-nhien_211455475-sm_4482796746b04f5ba8e37a97ad7dd5c7_65b9c53c248c4ebda2b43cd828cad76a.png",
+        "alt": null,
+        "variant_ids": [
+          1175610072
+        ]
+      }
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2022-12-03T10:17:50.926Z",
+  "created_at": "2026-10-09T04:07:52.177Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

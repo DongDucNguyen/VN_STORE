@@ -1,0 +1,138 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p style=\"text-align: justify;\">Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p style=\"text-align: justify;\">Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p style=\"text-align: justify;\">Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p style=\"text-align: justify;\"><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-01_7ea4ab24c7854214846b773621946b29.png",
+  "handle": "binh-hoa-41cm-sen-hot",
+  "id": 1074964446,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024124044-sm-01_7ea4ab24c7854214846b773621946b29.png",
+    "https://cdn.hstatic.net/products/200000532849/r024124044-sm-02_2b32a6a6216b485b82b19419367d2c9a.png",
+    "https://cdn.hstatic.net/products/200000532849/r024124044-sm-03_3d4304e281114fae9ab3906d6362a888.png",
+    "https://cdn.hstatic.net/products/200000532849/r024124044-sm-04_6245cc15f65c42b2a4c0ff20546291e9.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1703225792,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-01_7ea4ab24c7854214846b773621946b29.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-01_7ea4ab24c7854214846b773621946b29.png"
+    },
+    {
+      "alt": null,
+      "id": 1703225795,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-02_2b32a6a6216b485b82b19419367d2c9a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-02_2b32a6a6216b485b82b19419367d2c9a.png"
+    },
+    {
+      "alt": null,
+      "id": 1703225796,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-03_3d4304e281114fae9ab3906d6362a888.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-03_3d4304e281114fae9ab3906d6362a888.png"
+    },
+    {
+      "alt": null,
+      "id": 1703225794,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-04_6245cc15f65c42b2a4c0ff20546291e9.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024124044-sm-04_6245cc15f65c42b2a4c0ff20546291e9.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Sen Hột"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "41 cm"
+      ]
+    }
+  ],
+  "price": 1998000000,
+  "price_max": 1998000000,
+  "price_min": 1998000000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Vẽ tay",
+    "Bình Hoa"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 41 cm - Sen Hột",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-41cm-sen-hot",
+  "pagetitle": "Bình hoa 41cm - Sen Hột",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1170567689,
+      "barcode": "A001_R024124044",
+      "available": true,
+      "price": 1998000000,
+      "sku": "A001_R024124044",
+      "option1": "Bình hoa",
+      "option2": "Sen Hột",
+      "option3": "41 cm",
+      "options": [
+        "Bình hoa",
+        "Sen Hột",
+        "41 cm"
+      ],
+      "inventory_quantity": 1,
+      "old_inventory_quantity": 1,
+      "title": "Bình hoa / Sen Hột / 41 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-06-09T04:23:00Z",
+  "created_at": "2026-06-08T01:57:46.707Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

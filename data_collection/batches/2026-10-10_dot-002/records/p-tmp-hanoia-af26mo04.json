@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay chữ nhật Moonbow size S",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MO04_4_1.webp?sig=84071aaea5bbada4516179b2c2de67f37c8f9fc7c9a7276fa13462ba766e57ba",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 3350000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-chu-nhat-moonbow-size-s-af26mo04.html",
+      "sku": "AF26MO04",
+      "mpn": "AF26MO04"
+    }
+  ],
+  "url": "https://hanoia.com/khay-chu-nhat-moonbow-size-s-af26mo04.html",
+  "sku": "AF26MO04",
+  "mpn": "AF26MO04"
+}

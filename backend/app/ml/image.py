@@ -13,7 +13,7 @@ import io
 from collections.abc import Sequence
 
 from ..media import MediaError
-from . import LazyModel, hf_file, hf_json, session
+from . import LazyModel, fill_dims, hf_file, hf_json, session
 
 FORMATS = {"JPEG", "PNG", "WEBP"}
 DECODE = "pillow; exif_transpose; alpha->white; RGB"
@@ -88,7 +88,13 @@ class _OnnxVision:
 
     def _load(self):
         cfg = hf_json(self.onnx_repo, self.revision, "preprocessor_config.json")
-        sess = session(hf_file(self.onnx_repo, self.revision, self.onnx_file))
+        from PIL import Image
+        _, h, w = pixel_values(Image.new("RGB", (512, 512)), cfg).shape  # kích thước sau tiền xử lý
+
+        def shapes(name, dims):  # chỉ batch đổi (1 khi tìm, tới batch_size khi dựng chỉ mục)
+            return tuple(fill_dims(dims, {0: b, 1: 3, 2: h, 3: w}) for b in (1, 1, self.batch_size))
+
+        sess = session(hf_file(self.onnx_repo, self.revision, self.onnx_file), shapes)
         names = [o.name for o in sess.get_outputs()]
         if self.output not in names:
             raise RuntimeError(f"{self.onnx_file} không có output {self.output}; có {names}")

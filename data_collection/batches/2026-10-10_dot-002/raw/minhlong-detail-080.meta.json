@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-40-cm-chim-va-la-moi.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-40-cm-chim-va-la-moi.js",
+  "retrieved_at": "2026-10-10T20:37:16.823245+07:00",
+  "sha256": "1c20c6502e69b1300fb65f68e17d63743771c3259f0088df7423fe8251604745",
+  "bytes": 4968,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"0b856649613149d988ac1ec49c2f517d\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "bd12519b4342963a830ca8a33bcb5b8d",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

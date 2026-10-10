@@ -1,0 +1,32 @@
+{
+  "url": "https://sensilk.vn/wp-json/wc/store/v1/products?per_page=100&page=1",
+  "final_url": "https://sensilk.vn/wp-json/wc/store/v1/products?per_page=100&page=1",
+  "retrieved_at": "2026-10-10T20:35:59.124519+07:00",
+  "sha256": "d1775818ab4448dabcc33bd8aabb755b12263d61a1fe03c1fd964590615f2580",
+  "bytes": 2800123,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Sat, 10 Oct 2026 13:35:59 GMT",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "X-Robots-Tag": "noindex",
+    "X-Content-Type-Options": "nosniff",
+    "Access-Control-Expose-Headers": "X-WP-Total, X-WP-TotalPages, Link, Cart-Token",
+    "Access-Control-Allow-Headers": "Authorization, X-WP-Nonce, Content-Disposition, Content-MD5, Content-Type, Cart-Token, Nonce",
+    "X-WP-Total": "334",
+    "X-WP-TotalPages": "4",
+    "Link": "<https://sensilk.vn/wp-json/wc/store/v1/products?per_page=100&page=2#038;page=1>; rel=\"next\"",
+    "Last-Modified": "Saturday, 10-Oct-2026 13:35:59 GMT",
+    "Allow": "GET",
+    "Access-Control-Allow-Methods": "OPTIONS, GET, POST, PUT, PATCH, DELETE",
+    "Access-Control-Allow-Credentials": "true",
+    "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
+    "X-Cache": "BYPASS From sensilk.vn",
+    "Cache-Control": "max-age=0",
+    "Nginx-Cache": "BYPASS",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

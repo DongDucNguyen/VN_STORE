@@ -1,0 +1,99 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/041582086-sm-01_6834c21e21a84106a4572e42db34f0dc.png",
+  "handle": "dia-lot-15-5-cm-tulip-nga-xanh-non",
+  "id": 1073397709,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/041582086-sm-01_6834c21e21a84106a4572e42db34f0dc.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1679694578,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/041582086-sm-01_6834c21e21a84106a4572e42db34f0dc.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/041582086-sm-01_6834c21e21a84106a4572e42db34f0dc.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót"
+      ]
+    },
+    {
+      "name": "Màu sắc",
+      "position": 2,
+      "values": [
+        "Xanh Non"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "15.5 cm"
+      ]
+    }
+  ],
+  "price": 51408000,
+  "price_max": 51408000,
+  "price_min": 51408000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "color:bo-tach-xanhnon",
+    "combo Tulip Ngà"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót 15.5 cm - Tulip Ngà - Xanh Non",
+  "type": "Tulip Ngà",
+  "url": "/products/dia-lot-15-5-cm-tulip-nga-xanh-non",
+  "pagetitle": "Dĩa lót 15.5 cm - Tulip Ngà - Xanh Non",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1166392680,
+      "barcode": "A001_041582086",
+      "available": false,
+      "price": 51408000,
+      "sku": "A001_041582086",
+      "option1": "Dĩa lót",
+      "option2": "Xanh Non",
+      "option3": "15.5 cm",
+      "options": [
+        "Dĩa lót",
+        "Xanh Non",
+        "15.5 cm"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Dĩa lót / Xanh Non / 15.5 cm",
+      "weight": 186,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-05T04:36:00Z",
+  "created_at": "2026-03-02T09:24:40.425Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

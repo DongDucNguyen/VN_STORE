@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/chen-com-11-5-cm-mau-don-doi-ban.js",
+  "final_url": "https://minhlong.com/products/chen-com-11-5-cm-mau-don-doi-ban.js",
+  "retrieved_at": "2026-10-10T20:37:16.977206+07:00",
+  "sha256": "6aee692fab3e2b8d034f098168ba3267a3a5877f6cca1496408e5245ff7679d6",
+  "bytes": 2101,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"6928043eaf9f4ec6b2d29feca3555c46\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "b3189e9c2048f5402a8d1298271c8c6d",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Đèn bàn Ondine size S",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26OD01_3B_1__1789359629.webp?sig=42ef7c7080d76a2a96828007eb92f0d3dcdacc5111b883fd649d644a81acfcdb",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 21250000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/den-ban-ondine-size-s-pc26od01.html",
+      "sku": "PC26OD01",
+      "mpn": "PC26OD01"
+    }
+  ],
+  "url": "https://hanoia.com/den-ban-ondine-size-s-pc26od01.html",
+  "sku": "PC26OD01",
+  "mpn": "PC26OD01"
+}

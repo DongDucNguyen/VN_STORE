@@ -1,6 +1,13 @@
 # Thu thập dữ liệu sản phẩm
 
-## Snapshot hiện tại — seed-002-taxonomy
+## Snapshot hiện tại — seed-003-dot-002 (10/10/2026)
+
+**330 sản phẩm draft, 814 ảnh, 7 thương hiệu + 2 nhà sản xuất, 23 danh mục.** Đợt 002 thêm 300 sản phẩm từ 6 website chính thức (Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk), 60 mỗi nhóm PLAN, do một collector riêng thu trong thư mục staging rồi nhập bằng `scripts/import_raw/import_staging.py` (chỉ thêm bản ghi mới qua `safe_import`). Hồ sơ nguồn, ánh xạ ID và sửa đổi: [batches/2026-10-10_dot-002/](batches/2026-10-10_dot-002/README.md). Báo cáo: [GĐ1 — nhập đợt 002](../reports/progress/2026-10-10_GD1_nhap-dot-002.md).
+
+- 300 sản phẩm mới **không** nằm trong `raw/<site>.json` + `editorial.json`. Nguồn sự thật của chúng là `batches/2026-10-10_dot-002/catalog.staging.json` + `id_map.json`; `build_drafts.py` chỉ quản lý 30 sản phẩm đợt 001 và bỏ qua bản ghi ngoài batch (đã kiểm: `no_op`, 0 xung đột).
+- Ảnh mới nằm ở `assets/products/<product-id>/img-<…>-<n>.<ext>`, giữ nguyên bytes gốc (277,7 MB). Quyền vẫn `unknown`.
+
+## Snapshot trước — seed-002-taxonomy
 
 Ngày 10/10/2026 đã thêm nhánh `go-son-mai-binh-lo` (Bình, lọ trang trí) và chuyển hai bình Mystery/Vita theo tên, chất liệu có trong `raw/hanoia.json`. Catalog có 23 danh mục, vẫn 30 draft/45 ảnh; không đổi giá, claim hay quyền ảnh.
 

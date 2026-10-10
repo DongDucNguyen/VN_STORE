@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-tra-0-65-l-daisy-qua-oliu.js",
+  "final_url": "https://minhlong.com/products/bo-tra-0-65-l-daisy-qua-oliu.js",
+  "retrieved_at": "2026-10-10T20:54:40.945249+07:00",
+  "sha256": "e0a268c0855850a2b502567873a4b3392736ab5a961611bcbd7e1ddde9f9eb30",
+  "bytes": 2862,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:41 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"58105395968d402583a9943b4dbb5f1a\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "a150c2e07d34e40fd3499aeebb363663",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

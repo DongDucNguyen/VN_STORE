@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/banh-sinh-nhat.js",
+  "final_url": "https://minhlong.com/products/banh-sinh-nhat.js",
+  "retrieved_at": "2026-10-10T20:37:16.572273+07:00",
+  "sha256": "d6af95029bc1f106b3be0e2cbb1a2fbf58892399a04941174d557e644c589604",
+  "bytes": 1752,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"7a65610c3a304c1da9bd0a912fdaf10e\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "02bcba2bd06d05b7a736732626214955",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

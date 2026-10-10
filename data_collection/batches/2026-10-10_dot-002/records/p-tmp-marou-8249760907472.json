@@ -1,0 +1,79 @@
+{
+  "id": 8249760907472,
+  "title": "Marou Bar - 53% Coconut Milk Chocolate & Popped Rice - 35G",
+  "handle": "marou-bar-53-coconut-milk-chocolate-popped-rice-35g",
+  "body_html": "Crafted for serious on-the-go deliciousness! The perfect bite-size treat that takes you on  a trip to the tropics.\r<br>Crispy flakes of popped rice in a 53% creamy coconut milk chocolate.",
+  "published_at": "2025-02-10T20:52:05+07:00",
+  "created_at": "2025-02-10T20:52:03+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "snack"
+  ],
+  "variants": [
+    {
+      "id": 44410945011920,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHMB0001",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "57000",
+      "grams": 35,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249760907472,
+      "created_at": "2025-02-10T20:52:03+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265432068304,
+      "created_at": "2025-02-10T20:52:12+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T20:52:15+07:00",
+      "product_id": 8249760907472,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/coconut.webp?v=1739195535",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 43567796355280,
+      "created_at": "2025-09-26T16:15:59+07:00",
+      "position": 2,
+      "updated_at": "2025-09-26T16:51:51+07:00",
+      "product_id": 8249760907472,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/marou-bar-53-coconut-milk-chocolate-popped-rice-35g-naked.webp?v=1758880311",
+      "width": 4611,
+      "height": 4611
+    },
+    {
+      "id": 43567805530320,
+      "created_at": "2025-09-26T16:39:42+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:47:55+07:00",
+      "product_id": 8249760907472,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/chocolate-snack-bar-53-coconut-milk-puffed-rice-sty.webp?v=1758880075",
+      "width": 960,
+      "height": 960
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

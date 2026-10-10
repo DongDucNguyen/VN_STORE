@@ -1,0 +1,99 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/041582000-sm-01_ed56bb49c327446c9845879b53832d8d.png",
+  "handle": "dia-lot-15-5cm-tulip-nga-trang-nga",
+  "id": 1073397147,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/041582000-sm-01_ed56bb49c327446c9845879b53832d8d.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1679693173,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/041582000-sm-01_ed56bb49c327446c9845879b53832d8d.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/041582000-sm-01_ed56bb49c327446c9845879b53832d8d.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót"
+      ]
+    },
+    {
+      "name": "Màu sắc",
+      "position": 2,
+      "values": [
+        "Trắng Ngà"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "15.5 cm"
+      ]
+    }
+  ],
+  "price": 5508000,
+  "price_max": 5508000,
+  "price_min": 5508000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "color:bo-tach-Trangnga",
+    "combo Tulip Ngà"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót 15.5 cm - Tulip Ngà - Trắng Ngà",
+  "type": "Tulip Ngà",
+  "url": "/products/dia-lot-15-5cm-tulip-nga-trang-nga",
+  "pagetitle": "Dĩa lót 15,5cm\t- Tulip Ngà - Trắng Ngà",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1166390664,
+      "barcode": "A001_041582000",
+      "available": true,
+      "price": 5508000,
+      "sku": "A001_041582000",
+      "option1": "Dĩa lót",
+      "option2": "Trắng Ngà",
+      "option3": "15.5 cm",
+      "options": [
+        "Dĩa lót",
+        "Trắng Ngà",
+        "15.5 cm"
+      ],
+      "inventory_quantity": 6,
+      "old_inventory_quantity": 6,
+      "title": "Dĩa lót / Trắng Ngà / 15.5 cm",
+      "weight": 372,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-05T04:32:00Z",
+  "created_at": "2026-03-02T08:44:27.7Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

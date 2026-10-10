@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay tròn Exotic",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26EX03_4_1.webp?sig=44a2fd4a75a01696fb3e0bb14162661bf4f5912e0ad3773d80f57f7213a46d15",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 9990000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-tron-exotic-af26ex03.html",
+      "sku": "AF26EX03",
+      "mpn": "AF26EX03"
+    }
+  ],
+  "url": "https://hanoia.com/khay-tron-exotic-af26ex03.html",
+  "sku": "AF26EX03",
+  "mpn": "AF26EX03"
+}

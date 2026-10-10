@@ -1,0 +1,174 @@
+{
+  "id": 1384,
+  "name": "Coiled Bamboo Vase made in Vietnam",
+  "slug": "coiled-bamboo-vase-made-in-vietnam",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://vietcraft.vn/product/coiled-bamboo-vase-made-in-vietnam/",
+  "sku": "VH2602",
+  "short_description": "<p>Exquisite Coiled Bamboo Vase: Sustainable Craftsmanship Meets Timeless Elegance</p>",
+  "description": "<p data-path-to-node=\"3\">Elevate your living space with the natural warmth and refined beauty of our <b data-path-to-node=\"3\" data-index-in-node=\"76\">Coiled Bamboo Vase</b>. Handcrafted with precision and care, this vase is more than just a home decor piece—it is a celebration of eco-friendly design, rich cultural heritage, and traditional artistry.</p>\n<h3 data-path-to-node=\"5\"><b data-path-to-node=\"5\" data-index-in-node=\"0\">Key Features &amp; Highlights</b></h3>\n<ul data-path-to-node=\"6\">\n<li>\n<p data-path-to-node=\"6,0,0\"><b data-path-to-node=\"6,0,0\" data-index-in-node=\"0\">100% Eco-Friendly &amp; Natural Materials</b></p>\n<p data-path-to-node=\"6,0,1\">Crafted entirely from natural, sustainably sourced bamboo, this vase brings an authentic, earthy charm to modern interiors. The beautiful variation between natural bamboo tones and dark accent lines reflects the raw, organic beauty of nature.</p>\n</li>\n<li>\n<p data-path-to-node=\"6,1,0\"><b data-path-to-node=\"6,1,0\" data-index-in-node=\"0\">Masterfully Handcrafted by Skilled Artisans</b></p>\n<p data-path-to-node=\"6,1,1\">Each vase is meticulously shaped using traditional bamboo-coiling techniques. Our skilled artisans devote hours to coiling, shaping, smoothing, and finishing every single piece, ensuring exceptional quality and durability.</p>\n</li>\n<li>\n<p data-path-to-node=\"6,2,0\"><b data-path-to-node=\"6,2,0\" data-index-in-node=\"0\">Supporting Rural Communities &amp; Preserving Tradition</b></p>\n<p data-path-to-node=\"6,2,1\">By choosing our products, you directly empower rural craftspeople—providing sustainable income and meaningful employment for agricultural workers during off-peak seasons. Furthermore, your support helps keep centuries-old Vietnamese craft village traditions alive for generations to come.</p>\n</li>\n<li>\n<p data-path-to-node=\"6,3,0\"><b data-path-to-node=\"6,3,0\" data-index-in-node=\"0\">Versatile Decor Statement</b></p>\n<p data-path-to-node=\"6,3,1\">With its sleek, graceful silhouette, this vase serves as a stunning standalone accent piece or a striking container for dried floral arrangements and pampas grass.</p>\n</li>\n</ul>\n<h3 data-path-to-node=\"8\"><b data-path-to-node=\"8\" data-index-in-node=\"0\">Custom Production &amp; OEM/ODM Services</b></h3>\n<p data-path-to-node=\"9\">Looking for a custom size, unique color combination, or bespoke design tailored to your brand’s collection? <b data-path-to-node=\"9\" data-index-in-node=\"108\">We’ve got you covered.</b></p>\n<p data-path-to-node=\"10\">We specialize in custom manufacturing to meet the specific requirements of wholesalers, retailers, hotels, and interior designers worldwide. Whether you need minor modifications or a completely new line of handcrafted home decor, our experienced production team is ready to bring your vision to life.</p>\n<p data-path-to-node=\"11\">📩 <b data-path-to-node=\"11\" data-index-in-node=\"3\">Interested in working together or placing a custom order?</b></p>\n<p data-path-to-node=\"12\">Contact us to discuss your project requirements, request a quote, or explore our full catalog!</p>",
+  "on_sale": false,
+  "prices": {
+    "price": "0",
+    "regular_price": "0",
+    "sale_price": "0",
+    "price_range": null,
+    "currency_code": "VND",
+    "currency_symbol": "₫",
+    "currency_minor_unit": 0,
+    "currency_decimal_separator": ",",
+    "currency_thousand_separator": ".",
+    "currency_prefix": "",
+    "currency_suffix": " ₫"
+  },
+  "price_html": "",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+    {
+      "id": 1388,
+      "src": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?fit=510%2C600&ssl=1",
+      "thumbnail": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?resize=300%2C300&ssl=1",
+      "srcset": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?w=510&ssl=1 510w, https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?resize=340%2C400&ssl=1 340w",
+      "sizes": "(max-width: 510px) 100vw, 510px",
+      "thumbnail_srcset": "https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?resize=280%2C280&ssl=1 280w, https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?resize=300%2C300&ssl=1 300w, https://i0.wp.com/vietcraft.vn/wp-content/uploads/2026/08/VH2602-coiled-bamboo-vase.jpg?resize=100%2C100&ssl=1 100w",
+      "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+      "name": "VH2602-coiled-bamboo-vase",
+      "alt": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": 71,
+      "name": "Bamboo",
+      "slug": "bamboo",
+      "link": "https://vietcraft.vn/product-category/materials/bamboo/"
+    },
+    {
+      "id": 170,
+      "name": "Home &amp; Decor",
+      "slug": "home-decor",
+      "link": "https://vietcraft.vn/product-category/product-type/home-decor/"
+    },
+    {
+      "id": 202,
+      "name": "Home Living",
+      "slug": "home-living",
+      "link": "https://vietcraft.vn/product-category/home-living/"
+    },
+    {
+      "id": 207,
+      "name": "Hotel &amp; Restaurant",
+      "slug": "hotel-restaurant",
+      "link": "https://vietcraft.vn/product-category/home-living/hotel-restaurant/"
+    },
+    {
+      "id": 70,
+      "name": "Materials",
+      "slug": "materials",
+      "link": "https://vietcraft.vn/product-category/materials/"
+    },
+    {
+      "id": 167,
+      "name": "Product Type",
+      "slug": "product-type",
+      "link": "https://vietcraft.vn/product-category/product-type/"
+    },
+    {
+      "id": 185,
+      "name": "Vase",
+      "slug": "vase",
+      "link": "https://vietcraft.vn/product-category/product-type/home-decor/vase/"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1253,
+      "name": "Coiled Bamboo Vase",
+      "slug": "coiled-bamboo-vase",
+      "link": "https://vietcraft.vn/product-tag/coiled-bamboo-vase/"
+    },
+    {
+      "id": 1254,
+      "name": "Coiled Bamboo Vase factory",
+      "slug": "coiled-bamboo-vase-factory",
+      "link": "https://vietcraft.vn/product-tag/coiled-bamboo-vase-factory/"
+    },
+    {
+      "id": 1255,
+      "name": "Coiled Bamboo Vase made in Vietnam",
+      "slug": "coiled-bamboo-vase-made-in-vietnam",
+      "link": "https://vietcraft.vn/product-tag/coiled-bamboo-vase-made-in-vietnam/"
+    },
+    {
+      "id": 1257,
+      "name": "Coiled Bamboo Vase manufacturer",
+      "slug": "coiled-bamboo-vase-manufacturer",
+      "link": "https://vietcraft.vn/product-tag/coiled-bamboo-vase-manufacturer/"
+    },
+    {
+      "id": 1256,
+      "name": "Coiled Bamboo Vase supplier",
+      "slug": "coiled-bamboo-vase-supplier",
+      "link": "https://vietcraft.vn/product-tag/coiled-bamboo-vase-supplier/"
+    }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+    "text": "",
+    "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+    "length": "",
+    "width": "",
+    "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+    "text": "Read more",
+    "description": "Read more about &ldquo;Coiled Bamboo Vase made in Vietnam&rdquo;",
+    "url": "https://vietcraft.vn/product/coiled-bamboo-vase-made-in-vietnam/",
+    "single_text": "Add to cart",
+    "minimum": 1,
+    "maximum": 9999,
+    "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+    "self": [
+      {
+        "href": "https://vietcraft.vn/wp-json/wc/store/v1/products/1384",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://vietcraft.vn/wp-json/wc/store/v1/products"
+      }
+    ],
+    "related": [
+      {
+        "embeddable": true,
+        "href": "https://vietcraft.vn/wp-json/wc/store/v1/products?related=1384&per_page=10"
+      }
+    ]
+  }
+}

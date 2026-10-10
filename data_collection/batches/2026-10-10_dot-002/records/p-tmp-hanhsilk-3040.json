@@ -1,0 +1,137 @@
+{
+  "id": 3040,
+  "name": "ÁO LỤA 2 DÂY",
+  "slug": "ao-lua-2-day",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://hanhsilk.com/san-pham/ao-lua-2-day/",
+  "sku": "",
+  "short_description": "<div class=\"product-short-description\">\n<p>🌿 Vải lụa tơ tằm 100% – thoáng nhẹ, mát lành, thân thiện với làn da.<br />\n🧵 Thêu tay thủ công – mỗi bông hoa, cánh chim, nét rồng phượng đều mang hơi thở riêng biệt của người nghệ nhân làng nghề Nam Cao.<br />\n👗 Dáng áo 2 dây trẻ trung – dễ mặc, dễ phối, tôn lên nét nữ tính mà vẫn đầy phóng khoáng.<br />\n📏 Có đủ size và nhiều mẫu dáng – từ áo ngắn đến váy dài, từ đơn giản đến nhấn nhá bèo nhún nhẹ nhàng.</p>\n</div>",
+  "description": "<p><strong>Hướng dẫn sử dụng và bảo quản sản phẩm:</strong></p>\n<p>– Nên giặt khô, hoặc giặt bằng tay với dầu gội đầu (nhỏ 1 ít giấm vào nước giặt cuối để giữ màu sản phẩm);</p>\n<p>– Không giặt chung với sản phẩm khác;</p>\n<p>– Không phơi trực tiếp dưới ánh nắng mặt trời;</p>\n<p>– Nên dùng bàn là hơi và là ủi khi còn ẩm.</p>\n<p>&nbsp;</p>",
+  "on_sale": false,
+  "prices": {
+    "price": "900000",
+    "regular_price": "900000",
+    "sale_price": "900000",
+    "price_range": null,
+    "currency_code": "VND",
+    "currency_symbol": "₫",
+    "currency_minor_unit": 0,
+    "currency_decimal_separator": ".",
+    "currency_thousand_separator": ",",
+    "currency_prefix": "",
+    "currency_suffix": "₫"
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\">900,000<span class=\"woocommerce-Price-currencySymbol\">&#8363;</span></span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+    {
+      "id": 3043,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/3-scaled.png",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/3-300x300.png",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-scaled.png 1810w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-212x300.png 212w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-724x1024.png 724w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-768x1086.png 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-1086x1536.png 1086w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-1448x2048.png 1448w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-8x12.png 8w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/3-600x849.png 600w",
+      "sizes": "(max-width: 1810px) 100vw, 1810px",
+      "name": "3",
+      "alt": ""
+    },
+    {
+      "id": 3044,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/4-scaled.png",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/4-300x300.png",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-scaled.png 1810w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-212x300.png 212w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-724x1024.png 724w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-768x1086.png 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-1086x1536.png 1086w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-1448x2048.png 1448w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-8x12.png 8w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/4-600x849.png 600w",
+      "sizes": "(max-width: 1810px) 100vw, 1810px",
+      "name": "4",
+      "alt": ""
+    },
+    {
+      "id": 3045,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/1-scaled.png",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/1-300x300.png",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-scaled.png 1810w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-212x300.png 212w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-724x1024.png 724w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-768x1086.png 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-1086x1536.png 1086w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-1448x2048.png 1448w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-8x12.png 8w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/1-600x849.png 600w",
+      "sizes": "(max-width: 1810px) 100vw, 1810px",
+      "name": "1",
+      "alt": ""
+    },
+    {
+      "id": 3046,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/2-scaled.png",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2025/05/2-300x300.png",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-scaled.png 1810w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-212x300.png 212w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-724x1024.png 724w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-768x1086.png 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-1086x1536.png 1086w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-1448x2048.png 1448w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-8x12.png 8w, https://hanhsilk.com/wp-content/uploads/sites/273/2025/05/2-600x849.png 600w",
+      "sizes": "(max-width: 1810px) 100vw, 1810px",
+      "name": "2",
+      "alt": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": 158,
+      "name": "Áo nữ",
+      "slug": "ao-nu",
+      "link": "https://hanhsilk.com/danh-muc-san-pham/thoi-trang-nu/ao-nu/"
+    },
+    {
+      "id": 80,
+      "name": "Thời trang nữ",
+      "slug": "thoi-trang-nu",
+      "link": "https://hanhsilk.com/danh-muc-san-pham/thoi-trang-nu/"
+    }
+  ],
+  "tags": [
+    {
+      "id": 335,
+      "name": "áo lụa hai dây",
+      "slug": "ao-lua-hai-day",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/ao-lua-hai-day/"
+    },
+    {
+      "id": 45,
+      "name": "hanhsilk",
+      "slug": "hanhsilk",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/hanhsilk/"
+    },
+    {
+      "id": 37,
+      "name": "tơ tằm 100%",
+      "slug": "to-tam-100",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/to-tam-100/"
+    }
+  ],
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Độ dài váy",
+      "taxonomy": null,
+      "has_variations": true,
+      "terms": [
+        {
+          "id": 0,
+          "name": "Dài",
+          "slug": "Dài"
+        },
+        {
+          "id": 0,
+          "name": "Ngắn",
+          "slug": "Ngắn"
+        }
+      ]
+    }
+  ],
+  "variations": [],
+  "has_options": false,
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "sold_individually": false,
+  "add_to_cart": {
+    "text": "Thêm vào giỏ hàng",
+    "description": "Thêm &ldquo;ÁO LỤA 2 DÂY&rdquo; vào giỏ hàng",
+    "url": "?add-to-cart=3040",
+    "minimum": 1,
+    "maximum": 9999,
+    "multiple_of": 1
+  },
+  "extensions": {}
+}

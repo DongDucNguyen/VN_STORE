@@ -1,0 +1,149 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<strong>Bộ trà - Hoàng Cung - Thiên Hương</strong><div>&nbsp;<div><table cellspacing=\"0\"><tbody><tr><td>Hoàng Cung là dãy sản phẩm cao cấp của Minh Long, mang phong cách cung đình, vương tộc nhưng vẫn đậm đà hình ảnh văn hóa dân gian Việt Nam. Sự sáng tạo nghệ thuật thể hiện ở từng nét vẽ có tính thẩm mỹ riêng tạo nên phần hồn, chiều sâu văn hóa của từng sản phẩm.<br>Hoàng Cung Thiên Hương mang đậm phong cách hoàng gia, được thiết kế và trang trí hài hòa, với các đường nét thanh thoát, sắc sảo, họa tiết sen và dương xỉ được trang trí nền nã trên nền men vàng/xanh lá quý phái và sang trọng. Sản phẩm không chỉ tôn lên phong cách thưởng thức cao sang của chủ sở hữu mà còn là món quà giá trị gửi tặng cho nhau với bao lời chúc tốt đẹp.&nbsp;</td></tr></tbody></table></div></div>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-01_945331cd72c94c489b2db3bb04600685.png",
+  "handle": "bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la",
+  "id": 1074176799,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/01084038703-sm-01_945331cd72c94c489b2db3bb04600685.png",
+    "https://cdn.hstatic.net/products/200000532849/01084038703-sm-02_1fc04a3355904cdfb7433728e0ac431d.png",
+    "https://cdn.hstatic.net/products/200000532849/01084038703-sm-03_12b4b0198f3b4c7bb5714989c00692a4.png",
+    "https://cdn.hstatic.net/products/200000532849/01084038703-sm-05_b43b3dbd69e4432f8503b8190f90d871.png",
+    "https://cdn.hstatic.net/products/200000532849/01084038703-sm-04_4f3524fde74347b2a328ada42d2dd7cf.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1697433302,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-01_945331cd72c94c489b2db3bb04600685.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-01_945331cd72c94c489b2db3bb04600685.png"
+    },
+    {
+      "alt": null,
+      "id": 1697433304,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-02_1fc04a3355904cdfb7433728e0ac431d.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-02_1fc04a3355904cdfb7433728e0ac431d.png"
+    },
+    {
+      "alt": null,
+      "id": 1697433308,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-03_12b4b0198f3b4c7bb5714989c00692a4.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-03_12b4b0198f3b4c7bb5714989c00692a4.png"
+    },
+    {
+      "alt": null,
+      "id": 1697433307,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-05_b43b3dbd69e4432f8503b8190f90d871.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-05_b43b3dbd69e4432f8503b8190f90d871.png"
+    },
+    {
+      "alt": null,
+      "id": 1697433309,
+      "position": 5,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-04_4f3524fde74347b2a328ada42d2dd7cf.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/01084038703-sm-04_4f3524fde74347b2a328ada42d2dd7cf.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bộ trà"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Thiên Hương (Xanh Lá)"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "0.8 L"
+      ]
+    }
+  ],
+  "price": 1658880000,
+  "price_max": 1658880000,
+  "price_min": 1658880000,
+  "price_varies": false,
+  "tags": [
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Bộ trà 0.8 L - Hoàng Cung - Thiên Hương (Xanh Lá)",
+  "type": "Hoàng Cung",
+  "url": "/products/bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la",
+  "pagetitle": "Bộ trà 0.8 L - Hoàng Cung - Thiên Hương (Xanh Lá)",
+  "metadescription": "Bộ trà - Hoàng Cung - Thiên Hương Hoàng Cung là dãy sản phẩm cao cấp của Minh Long, mang phong cách cung đình, vương tộc nhưng vẫn đậm đà hình ảnh văn hóa dân gian Việt Nam. Sự sáng tạo nghệ thuật thể hiện ở từng nét vẽ có tính thẩm mỹ riêng tạo nên phần hồn, chiều sâu văn hóa của từng sản phẩm.Hoàng Cung Thiên Hương m",
+  "variants": [
+    {
+      "id": 1168303830,
+      "barcode": "A001_01084038703",
+      "available": true,
+      "price": 1658880000,
+      "sku": "A001_01084038703",
+      "option1": "Bộ trà",
+      "option2": "Thiên Hương (Xanh Lá)",
+      "option3": "0.8 L",
+      "options": [
+        "Bộ trà",
+        "Thiên Hương (Xanh Lá)",
+        "0.8 L"
+      ],
+      "inventory_quantity": 20,
+      "old_inventory_quantity": 20,
+      "title": "Bộ trà / Thiên Hương (Xanh Lá) / 0.8 L",
+      "weight": 1819,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-04-22T07:57:00Z",
+  "created_at": "2026-04-17T04:28:16.431Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

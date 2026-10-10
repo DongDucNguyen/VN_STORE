@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trà tròn Thong Dong",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A24TD04_8_1.webp?sig=2e60bc23e61755147af0aeb1ab2436e56ad986c46cc82da13064fd4f5ca09f01",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 5500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-tra-tron-thong-dong-a24td04.html",
+      "sku": "A24TD04",
+      "mpn": "A24TD04"
+    }
+  ],
+  "url": "https://hanoia.com/hop-tra-tron-thong-dong-a24td04.html",
+  "sku": "A24TD04",
+  "mpn": "A24TD04"
+}

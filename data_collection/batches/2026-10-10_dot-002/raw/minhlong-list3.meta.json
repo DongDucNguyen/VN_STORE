@@ -1,0 +1,31 @@
+{
+  "url": "https://minhlong.com/collections/all?page=3",
+  "final_url": "https://minhlong.com/collections/all?page=3",
+  "retrieved_at": "2026-10-10T20:35:55.166536+07:00",
+  "sha256": "a572cc99a4091c9667ca551c3a50961e24ed64c88623460f3a1861d8cb72e33f",
+  "bytes": 746208,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:35:55 GMT",
+    "Content-Type": "text/html; charset=utf-8",
+    "Content-Length": "746208",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "no-cache, no-store",
+    "ETag": "W/\"ec282707a9e14a71a8239a5b5ef24d6b\"",
+    "Pragma": "no-cache",
+    "Set-Cookie": ".AspNetCore.Antiforgery.IM8xoGDf8MU=CfDJ8FyFPV59mBtNhmQGz0fYZt-hmZT4_0TuBPvasLwOg-vU1HK373m7IpFnOYjQt4J6YUH0AqBApYKoLvrf_kuzyWQESB07B7R7PqUNkJSQS9IBBBtQNgQ9Idc9PVVsFlOtEwKxa9qTWrFrtBcDyfwcFkc; path=/; samesite=strict; httponly",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-PIndex": "2025",
+    "X-RequestId": "f0674f5bf596aefd60201d2297b83fe4",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

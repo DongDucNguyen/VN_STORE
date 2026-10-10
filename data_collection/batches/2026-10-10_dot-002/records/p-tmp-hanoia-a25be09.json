@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Bellus size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A25BE09_3_1.webp?sig=f25b5bad3775e67f76af4d314ca64071d5165bbe731fe4932b46c0e69528d9d9",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 16500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-bellus-size-m-a25be09.html",
+      "sku": "A25BE09",
+      "mpn": "A25BE09"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-bellus-size-m-a25be09.html",
+  "sku": "A25BE09",
+  "mpn": "A25BE09"
+}

@@ -1,0 +1,5 @@
+# Tùy chọn: TensorRT EP cho adapter ONNX (VNSTORE_ML_TRT=1). Cài SAU requirements-ml.txt, ~1,9 GB:
+#   .venv-ml/Scripts/python -m pip install -r backend/requirements-ml-trt.txt
+# onnxruntime-gpu 1.31 nạp nvinfer_10.dll → cần TensorRT 10.x bản CUDA 13; bản 11.x đổi tên DLL nên không dùng được.
+# Chỉ gói thư viện (DLL), không cần binding Python của TensorRT.
+tensorrt-cu13-libs==10.16.1.11

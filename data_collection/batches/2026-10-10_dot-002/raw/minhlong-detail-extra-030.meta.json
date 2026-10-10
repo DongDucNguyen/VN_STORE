@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/khay-mut-5-ngan-vien-chi-vang-1.js",
+  "final_url": "https://minhlong.com/products/khay-mut-5-ngan-vien-chi-vang-1.js",
+  "retrieved_at": "2026-10-10T20:54:37.122774+07:00",
+  "sha256": "9ed36a96c87a9942af3d704bfcaf33dc9f8aeb6a00004e6de53f98e01f0639e4",
+  "bytes": 1809,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"03dbb3fa513e4d839e2c98bd23c04b93\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "cb8fb6daa10a8b1db0e1a5091460b21a",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

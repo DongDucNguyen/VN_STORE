@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-52-cm-rong-do.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-52-cm-rong-do.js",
+  "retrieved_at": "2026-10-10T20:54:35.709905+07:00",
+  "sha256": "6d915cd61506a164937866ebd6017f4c568386867689bdf06de214017d603d15",
+  "bytes": 5051,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:36 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"fcf9a7da0fc242a1befb87f5c4740590\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "a6993cd464f10d7f6fe33ad0727f983b",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

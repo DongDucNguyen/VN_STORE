@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-do-an-09-san-pham-jasmine-thach-van.js",
+  "final_url": "https://minhlong.com/products/bo-do-an-09-san-pham-jasmine-thach-van.js",
+  "retrieved_at": "2026-10-10T20:37:13.222272+07:00",
+  "sha256": "d6498b81f6e66bd5a8d7e579a22ababaf6c3e742bb4dd0ad9395e2336a5896a2",
+  "bytes": 8628,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"67c5b76fbdf949969cfd53226542667c\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "18c2601e3b4a53decf61265c996845e3",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

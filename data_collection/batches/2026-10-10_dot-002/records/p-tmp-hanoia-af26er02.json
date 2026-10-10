@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Tượng chim vẹt Ether",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26ER02_5_1.webp?sig=710562b3fd92ea5e629396a9f1f01cb2af639c8c316738b74e01efe2a1947462",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 7950000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/tuong-chim-vet-ether-af26er02.html",
+      "sku": "AF26ER02",
+      "mpn": "AF26ER02"
+    }
+  ],
+  "url": "https://hanoia.com/tuong-chim-vet-ether-af26er02.html",
+  "sku": "AF26ER02",
+  "mpn": "AF26ER02"
+}

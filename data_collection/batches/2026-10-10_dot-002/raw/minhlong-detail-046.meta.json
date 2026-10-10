@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tulip-vuon-thuong-uyen.js",
+  "final_url": "https://minhlong.com/products/tulip-vuon-thuong-uyen.js",
+  "retrieved_at": "2026-10-10T20:37:15.140132+07:00",
+  "sha256": "3e6626a3ea91554491514c0c744fa6136ea2f658d98d417ba396358c173f0dbe",
+  "bytes": 3682,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"66b73988df12457c933c35563dd313e6\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "2910a354ef7f414ccd6ade32e5d5989f",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -4,6 +4,7 @@
     .venv/Scripts/python scripts/run_all_tests.py --skip-e2e # bỏ test trình duyệt
 
 Các bước: validate catalog thật + fixture → fixture khớp generator → pytest backend
+→ test giải mã ảnh (Pillow, chỉ khi có .venv-ml; không có thì BỎ QUA)
 → typecheck + build frontend → Playwright E2E (desktop + mobile, dữ liệu fixture).
 Mã thoát khác 0 nếu có bước thất bại.
 """
@@ -21,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PY = sys.executable
 NPX = shutil.which("npx") or "npx"
 FIXTURE = ROOT / "backend" / "tests" / "fixtures" / "catalog.fixture.json"
+# Môi trường ML riêng (backend/requirements-ml.txt) có Pillow; .venv của API thì không.
+ML_PY = ROOT / ".venv-ml" / ("Scripts/python.exe" if sys.platform == "win32" else "bin/python")
 
 
 def check_fixture_in_sync() -> int:
@@ -44,6 +47,8 @@ STEPS: list[tuple[str, list[str] | None, Path, bool]] = [
                           "--catalog", str(FIXTURE)], ROOT, False),
     ("Fixture khớp generator", None, ROOT, False),
     ("Backend pytest", [PY, "-m", "pytest", "-q"], ROOT / "backend", False),
+    ("Giải mã ảnh (Pillow, .venv-ml)", [str(ML_PY), "-X", "utf8", "-m", "unittest", "discover", "-s",
+                                         "scripts/benchmark/tests", "-p", "test_image_pixels.py"], ROOT, False),
     ("Frontend typecheck", [NPX, "tsc", "-b"], ROOT / "frontend", False),
     ("Frontend build", [NPX, "vite", "build", "--outDir", str(ROOT / "artifacts" / "build"), "--emptyOutDir"],
      ROOT / "frontend", False),
@@ -59,7 +64,7 @@ def main() -> int:
 
     results = []
     for name, cmd, cwd, e2e in STEPS:
-        if e2e and args.skip_e2e:
+        if (e2e and args.skip_e2e) or (cmd and cmd[0] == str(ML_PY) and not ML_PY.exists()):
             results.append((name, "BỎ QUA", 0.0))
             continue
         print(f"\n=== {name} ===", flush=True)

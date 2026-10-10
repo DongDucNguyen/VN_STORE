@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-vang.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-vang.js",
+  "retrieved_at": "2026-10-10T20:54:39.767242+07:00",
+  "sha256": "f88c0b413db045c779a35e66ba5bc49903463069809af467ba2cd24cb3148ebe",
+  "bytes": 2607,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"c2fbe6c2a6374f9ea817ec0a02df49af\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "3961fbcf07511cbdb07268005cb6e140",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

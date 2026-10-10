@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-tra-0-8-l-camellia-van-lang.js",
+  "final_url": "https://minhlong.com/products/bo-tra-0-8-l-camellia-van-lang.js",
+  "retrieved_at": "2026-10-10T20:54:41.086429+07:00",
+  "sha256": "dc74f99323ce97e0203ca4509adc1e83e8d7ebada29cfc98254f7357941e8ed0",
+  "bytes": 6474,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:42 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"a17bc52825d8421c93e76f2f05bd0bd8\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "be145d2be14a38238fc540ab7c37f565",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

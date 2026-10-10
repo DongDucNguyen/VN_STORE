@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/daisy-qua-o-liu.js",
+  "final_url": "https://minhlong.com/products/daisy-qua-o-liu.js",
+  "retrieved_at": "2026-10-10T20:37:15.185367+07:00",
+  "sha256": "4ae6c8be71b60904f62c904335b936ddc5dae08f4d15f637b062aa6a7e9bc970",
+  "bytes": 3546,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"e83f8e7bc25342adb1197bea1b5f0306\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "10c1d82159a6d289b186fae2005387c5",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

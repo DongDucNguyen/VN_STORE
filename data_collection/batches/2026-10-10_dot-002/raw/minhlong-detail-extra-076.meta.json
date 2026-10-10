@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-40-cm-buom-luon.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-40-cm-buom-luon.js",
+  "retrieved_at": "2026-10-10T20:54:39.250270+07:00",
+  "sha256": "ace13eae42caa8792de13b876339e15b8b4c3fddfbff6e232b12c469b6ffcde0",
+  "bytes": 4958,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:40 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"3130143309b54ef9a1ea4f306203b5ab\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "0bb5749f9a4e2bab171c04a444dfec41",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

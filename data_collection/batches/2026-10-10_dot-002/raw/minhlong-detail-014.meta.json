@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/heo-ta-i-lo-c-ma-u-cam.js",
+  "final_url": "https://minhlong.com/products/heo-ta-i-lo-c-ma-u-cam.js",
+  "retrieved_at": "2026-10-10T20:37:13.782621+07:00",
+  "sha256": "3f12e4389be53a8f13a3e72f6c24288fcc8ee791a7cf43893be464b0460fbc62",
+  "bytes": 1817,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"8309083239674915a4c809b0b37b9640\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "b20508922f98bd155c15a0df458cba97",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

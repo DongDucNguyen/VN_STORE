@@ -17,6 +17,7 @@ Chạy: `.venv/Scripts/python scripts/benchmark/eval_keyword.py --queries benchm
 Kết quả (run.json + predictions.jsonl) ghi vào `experiments/results/`.
 
 - `seed_unverified.jsonl`: 12 truy vấn do Claude gán nhãn nháp trên 30 sản phẩm draft, **chưa duyệt**. Chỉ dùng để kiểm tra pipeline, **không phải baseline** và không được dùng làm tập test.
+- `dev_candidates_unverified.jsonl` (thêm 10/10/2026): **107 truy vấn ứng viên** cho split dev, nhóm theo `group_id` (câu diễn đạt lại cùng nhóm), có thêm trường `intent`. Phân bố: món cụ thể 23, không dấu 10, nhu cầu 9, giá 9, xen tiếng Anh 7, vùng miền (chén/bát, ly/cốc/tách, dĩa/đĩa, tô, đầm) 6, thương hiệu 6, phủ định 6, thuộc tính 5, lỗi gõ/Telex 5, nguồn gốc 3, địa danh 2, đơn vị 2, đồng nghĩa 2, **không có đáp án 12 (11%)**. `relevance` chỉ là nhãn nháp một phần của Claude (`labeled_by=claude-draft`, `verified=false`), hiện trong mục tham khảo của trang duyệt. Packet chờ chấm: `artifacts/keyword_review/2026-10-10_dev-candidates-107/` (107 × 30 = 3.210 cặp, `--include-drafts`).
 - Bộ chính thức (mục tiêu 600 truy vấn, PLAN.md mục 8.1) cần người viết và gán nhãn. Hai người gán độc lập một phần dữ liệu và phân xử khi bất đồng. Pool nhãn lấy từ top kết quả của mọi baseline cộng mẫu ngẫu nhiên.
 
 ## Duyệt 12 truy vấn trên 30 sản phẩm hiện tại
@@ -76,7 +77,23 @@ Tên file trên chỉ là ví dụ, chưa được tạo. Hai người nên ch�
 | `requires_adjudication` | Có bất đồng cần người phân xử | 2 |
 | `invalid` | Sai dữ liệu, thiếu file hoặc lệch snapshot | 1 |
 
-Mã 0 không đồng nghĩa đã có benchmark chính thức. Công cụ dành cho export đầy đủ từ trang review hiện tại, chưa hỗ trợ hai người chỉ chấm các tập con khác nhau hoặc pool nhãn không đầy đủ. Evaluator vẫn hỗ trợ nhãn pool theo chính sách riêng.
+Mã 0 không đồng nghĩa đã có benchmark chính thức. Công cụ nhận export từ packet toàn catalog hoặc packet pool (mục dưới); với pool, hai người chỉ được so trên các cặp cả hai cùng chấm, cặp chỉ một người chấm được đếm riêng (`pairs_labeled_by_one_reviewer`).
+
+## Packet theo pool (thêm 10/10/2026)
+
+Khi catalog lớn, chấm toàn catalog cho mỗi truy vấn không khả thi. PLAN §8.1: pool top kết quả của các baseline cộng mẫu ngẫu nhiên.
+
+```bash
+.venv/Scripts/python scripts/benchmark/prepare_review.py --queries benchmarks/keyword/<file>.jsonl --include-drafts \
+    --pool-top 10 --random 5 --out artifacts/keyword_review/<thu-muc-moi>
+```
+
+- Pool mỗi truy vấn = top K của BM25 trên câu gốc + top K của BM25 trên phần từ khóa (bỏ bộ lọc giá/phủ định, để người chấm thấy cả sản phẩm gần đúng nhưng vi phạm ràng buộc) + N sản phẩm ngẫu nhiên cố định theo `--seed` và qid. Pool xáo theo hash; nguồn chỉ lưu trong `packet.json` → `pool_sources`.
+- Trang duyệt hiện danh sách chính trước. Phải chấm hết danh sách chính mới xác nhận được. Nếu không có sản phẩm nào đạt 2–3, phải mở "phần còn lại của catalog" và chấm đủ để ghi nhận không có đáp án. Export có `label_scope: "pool"`.
+- `audit_reviews.py` yêu cầu đủ nhãn pool, và đủ catalog với truy vấn `has_answer=false`.
+- Pool hiện chỉ có BM25. Khi thêm hệ thống mới (ví dụ BGE-M3), sản phẩm nó đưa lên top chưa có nhãn sẽ làm metric `null` (evaluator không coi chưa chấm là 0); cần tạo pool bổ sung và chấm thêm.
+
+Ví dụ trên 107 truy vấn dev hiện tại: pool 917 cặp bắt buộc (khoảng 1.167 nếu no-match chấm đủ catalog) so với 3.210 cặp toàn catalog. Packet: `artifacts/keyword_review/2026-10-10_dev-candidates-107-pool/`.
 
 Xem [quy trình phân xử](review_protocol.md) trước khi hợp nhất các nhãn bất đồng. Đừng lấy trung bình/làm tròn hai điểm rồi coi là nhãn chuẩn.
 

@@ -1,0 +1,82 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/00394037-sm-01_51666cc1ef854991a495adbc371c865e.png",
+  "handle": "bo-den-de-ban-sua-bien-xa-cu",
+  "id": 1075498068,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/00394037-sm-01_51666cc1ef854991a495adbc371c865e.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706781746,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/00394037-sm-01_51666cc1ef854991a495adbc371c865e.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/00394037-sm-01_51666cc1ef854991a495adbc371c865e.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Tiêu đề",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "price": 2487240000,
+  "price_max": 2487240000,
+  "price_min": 2487240000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Sứ nội thất"
+  ],
+  "template_suffix": null,
+  "title": "Bộ đèn để bàn sứa biển xà cừ",
+  "type": "Khác",
+  "url": "/products/bo-den-de-ban-sua-bien-xa-cu",
+  "pagetitle": "Bộ đèn để bàn sứa biển xà cừ",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172107774,
+      "barcode": "A001_00394037",
+      "available": true,
+      "price": 2487240000,
+      "sku": "A001_00394037",
+      "option1": "Default Title",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Default Title"
+      ],
+      "inventory_quantity": 4,
+      "old_inventory_quantity": 4,
+      "title": "Default Title",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:43:13.585Z",
+  "created_at": "2026-07-09T08:50:08.466Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,0 +1,58 @@
+{
+  "id": 8249796985040,
+  "title": "Dark Milk Chocolate 48% Drops - 3Kg",
+  "handle": "dark-milk-chocolate-48-drops-3kg",
+  "body_html": "<p>When our hand-selected Vietnamese cacao meets creamy grass-fed milk from the green pastures of Waikato, New Zealand - an unbelievably smooth symphony erupts. The pairing creates an indulgence of honey and caramel notes that will leave you reaching for more. ​</p>\n<p>Our Dark Milk Chocolate 48% Drops from Vietnam are the perfect ingredient for pastry chefs, bakeries, chocolatiers, and chocolate snackers alike! Crafted for a wide range of uses, our dark milk chocolate drops melt smoothly and evenly, providing the perfect consistency to elevate your favorite chocolate recipes.</p>",
+  "published_at": "2025-02-10T22:07:54+07:00",
+  "created_at": "2025-02-10T22:07:52+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "baking",
+    "provisions"
+  ],
+  "variants": [
+    {
+      "id": 44411033878736,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHMI0006",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": false,
+      "price": "2150000",
+      "grams": 3000,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249796985040,
+      "created_at": "2025-02-10T22:07:52+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265607704784,
+      "created_at": "2025-02-10T22:08:00+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T22:08:03+07:00",
+      "product_id": 8249796985040,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mfdc-couverture-VN48-3kg-e1693231530564.jpg?v=1739200083",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

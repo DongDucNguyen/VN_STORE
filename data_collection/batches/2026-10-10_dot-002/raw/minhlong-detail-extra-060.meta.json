@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen.js",
+  "final_url": "https://minhlong.com/products/dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen.js",
+  "retrieved_at": "2026-10-10T20:54:38.540229+07:00",
+  "sha256": "fe35cd2c28f9d7ba08f8ad03f6b8aa40109e4f7393d23ad56616f779efbf7250",
+  "bytes": 2235,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"046b363e50f44623904c1b16a28d20c4\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "c000768a40f0d61fda2e0b85a8e2f43b",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p style=\"line-height:1.2\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial,sans-serif\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Những nhành trái ngọt sum suê trải mình trên nền sứ trắng, điểm sắc xanh, đỏ và tím như một khu vườn đang độ trĩu quả. Từ hình dáng tự nhiên của từng loại trái đến những cành lá mảnh mai, hoa văn được thể hiện giàu sức sống, gợi nên ý niệm về mùa màng đủ đầy, cuộc sống sung túc và những bữa cơm sum vầy.</span></span></span></span></span></span></p><br>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/daisy_sung_tuc_b9758cbc286f4189833b7451872fca39.png",
+  "handle": "daisy-sung-tuc",
+  "id": 1076294245,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/daisy_sung_tuc_b9758cbc286f4189833b7451872fca39.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1712020385,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/daisy_sung_tuc_b9758cbc286f4189833b7451872fca39.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/daisy_sung_tuc_b9758cbc286f4189833b7451872fca39.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Tiêu đề",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "price": 0,
+  "price_max": 0,
+  "price_min": 0,
+  "price_varies": false,
+  "tags": [
+    "B2B",
+    "mucdich:Quà tặng đối tác_sự kiện_cuối năm_Lễ Tết"
+  ],
+  "template_suffix": null,
+  "title": "Daisy Sung Túc",
+  "type": "Daisy",
+  "url": "/products/daisy-sung-tuc",
+  "pagetitle": "Daisy Sung Túc",
+  "metadescription": "Những nhành trái ngọt sum suê trải mình trên nền sứ trắng, điểm sắc xanh, đỏ và tím như một khu vườn đang độ trĩu quả. Từ hình dáng tự nhiên của từng loại trái đến những cành lá mảnh mai, hoa văn được thể hiện giàu sức sống, gợi nên ý niệm về mùa màng đủ đầy, cuộc sống sung túc và những bữa cơm sum vầy.",
+  "variants": [
+    {
+      "id": 1174041437,
+      "barcode": null,
+      "available": false,
+      "price": 0,
+      "sku": null,
+      "option1": "Default Title",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Default Title"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Default Title",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-08-31T03:14:30.921Z",
+  "created_at": "2026-08-31T03:15:11.824Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

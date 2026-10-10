@@ -1,0 +1,122 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "Bộ trà Văn Lang khởi nguồn từ cảm hứng về thuở sơ khai dựng nước và giữ nước của các vua Hùng, nhà nước cổ đại đầu tiên trong lịch sử Việt Nam. Trên nền men sứ cao cấp, một bản trường ca về nghìn năm đất Việt được tái hiện sống động, chắt lọc tinh hoa văn hóa và khí phách dân tộc.<div>&nbsp;</div><div>Nổi bật là hình ảnh Vua Hùng nâng chiếc trống đồng, biểu tượng thiêng liêng của thời kỳ Văn Lang. Trên mặt trống, những họa tiết chim lạc, muông thú, mặt trời, ngọn lửa hiện lên vừa cổ kính vừa uy nghiêm, như nhịp thở của một nền văn minh lúa nước buổi đầu. Đồng hành là hình tượng Voi vạm vỡ, ánh mắt điềm tĩnh, như điểm tựa bền vững cho cả cộng đồng. Đan xen giữa hai biểu tượng thiêng liêng, nhịp sống thường ngày của người dân hiện ra mộc mạc, chan hòa cùng thiên nhiên và tín ngưỡng sơ khai.</div><div>&nbsp;</div><div>Mỗi họa tiết được thể hiện bằng màu xanh cobalt đặc trưng của gốm sứ, vừa trang nhã vừa gợi nhớ tinh thần Văn Lang xưa. Nung ở nhiệt độ cao 1.380°C, từng chi tiết trở nên tinh xảo, bền vững như chính mạch nguồn văn hóa không ngừng chảy.</div><div>&nbsp;</div><div>Thưởng trà cùng bộ trà Văn Lang không chỉ là thưởng thức trọn vẹn hương vị, mà còn chạm đến cội nguồn của dân tộc. Một món quà tinh tế, mang theo niềm tự hào bản sắc Việt trong từng khoảnh khắc.</div>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-01_6abf2ccf291d4b859bcc83ead0a0d19f.png",
+  "handle": "bo-tra-0-8-l-camellia-van-lang",
+  "id": 1070622558,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/012803856203-sm-01_6abf2ccf291d4b859bcc83ead0a0d19f.png",
+    "https://cdn.hstatic.net/products/200000532849/012803856203-sm-02_d771d4f6ad304ace8bdbb2e1ab13921f.png",
+    "https://cdn.hstatic.net/products/200000532849/012803856203-sm-04_eb7495a8c9684860bb7d57afcd9a3795.png",
+    "https://cdn.hstatic.net/products/200000532849/012803856203-sm-05_4779f61f47ba4385b7e784ebad8f5cbb.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1629401617,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-01_6abf2ccf291d4b859bcc83ead0a0d19f.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-01_6abf2ccf291d4b859bcc83ead0a0d19f.png"
+    },
+    {
+      "alt": null,
+      "id": 1629401618,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-02_d771d4f6ad304ace8bdbb2e1ab13921f.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-02_d771d4f6ad304ace8bdbb2e1ab13921f.png"
+    },
+    {
+      "alt": null,
+      "id": 1629401613,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-04_eb7495a8c9684860bb7d57afcd9a3795.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-04_eb7495a8c9684860bb7d57afcd9a3795.png"
+    },
+    {
+      "alt": null,
+      "id": 1629401614,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-05_4779f61f47ba4385b7e784ebad8f5cbb.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/012803856203-sm-05_4779f61f47ba4385b7e784ebad8f5cbb.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Kích thước",
+      "position": 1,
+      "values": [
+        "0.8 L"
+      ]
+    }
+  ],
+  "price": 132840000,
+  "price_max": 132840000,
+  "price_min": 132840000,
+  "price_varies": false,
+  "tags": [
+    "Văn Lang",
+    "color:van-lang",
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Bộ trà 0.8 L - Camellia - Văn Lang",
+  "type": "Camellia",
+  "url": "/products/bo-tra-0-8-l-camellia-van-lang",
+  "pagetitle": "Bộ trà 0.8 L - Camellia - Văn Lang",
+  "metadescription": "Bộ trà Văn Lang khởi nguồn từ cảm hứng về thuở sơ khai dựng nước và giữ nước của các vua Hùng, nhà nước cổ đại đầu tiên trong lịch sử Việt Nam. Trên nền men sứ cao cấp, một bản trường ca về nghìn năm đất Việt được tái hiện sống động, chắt lọc tinh hoa văn hóa và khí phách dân tộc. Nổi bật là hình ảnh Vua Hùng nâng chiế",
+  "variants": [
+    {
+      "id": 1160438813,
+      "barcode": "A001_01803856203",
+      "available": true,
+      "price": 132840000,
+      "sku": "A001_01803856203",
+      "option1": "0.8 L",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "0.8 L"
+      ],
+      "inventory_quantity": 64,
+      "old_inventory_quantity": 64,
+      "title": "0.8 L",
+      "weight": 1819,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2025-12-07T01:48:00Z",
+  "created_at": "2025-10-16T08:18:08.162Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 118
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/meo-van-phuc-mau-do.js",
+  "final_url": "https://minhlong.com/products/meo-van-phuc-mau-do.js",
+  "retrieved_at": "2026-10-10T20:37:14.577445+07:00",
+  "sha256": "fb70b7e3d052a2cd955da74b1240540097a24d82a8ce2694a566ab08b1893ffe",
+  "bytes": 1823,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:15 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"b84a1fd89a124a74bdc04c08aff09170\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "d05c65d9f0c727a3135a4b684cbd803c",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp vuông Botanica size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26BT04_1_1.webp?sig=3a6a096fcf250ad85017607b0967ea5f507441a13476ac35b8b129f855a914a3",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 8000000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-vuong-botanica-size-m-af26bt04.html",
+      "sku": "AF26BT04",
+      "mpn": "AF26BT04"
+    }
+  ],
+  "url": "https://hanoia.com/hop-vuong-botanica-size-m-af26bt04.html",
+  "sku": "AF26BT04",
+  "mpn": "AF26BT04"
+}

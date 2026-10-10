@@ -1,0 +1,82 @@
+{
+  "available": false,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p style=\"line-height:1.2\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial,sans-serif\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Những trái dâu rừng nhỏ xinh nép mình bên cành lá, trải nhẹ trên nền sứ trắng, gợi nhớ một khu vườn mùa hè đầy sức sống. Từng quả dâu, nhành lá và đường nét được thể hiện mềm mại, mang đến cho Dâu Rừng vẻ đẹp trong trẻo, gần gũi - như đem một chút hương vị của thiên nhiên vào mỗi bữa ăn.</span></span></span></span></span></span></p><br>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/dau_rung_e3cee80f14014f95a78059c553734176.png",
+  "handle": "tulip-dau-rung",
+  "id": 1076294344,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/dau_rung_e3cee80f14014f95a78059c553734176.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1712030886,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/dau_rung_e3cee80f14014f95a78059c553734176.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/dau_rung_e3cee80f14014f95a78059c553734176.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Tiêu đề",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "price": 0,
+  "price_max": 0,
+  "price_min": 0,
+  "price_varies": false,
+  "tags": [
+    "mucdich:Quà tặng đối tác_sự kiện_cuối năm_Lễ Tết",
+    "B2B"
+  ],
+  "template_suffix": null,
+  "title": "Tulip Dâu Rừng",
+  "type": "Tulip",
+  "url": "/products/tulip-dau-rung",
+  "pagetitle": "Tulip Dâu Rừng",
+  "metadescription": "Những trái dâu rừng nhỏ xinh nép mình bên cành lá, trải nhẹ trên nền sứ trắng, gợi nhớ một khu vườn mùa hè đầy sức sống. Từng quả dâu, nhành lá và đường nét được thể hiện mềm mại, mang đến cho Dâu Rừng vẻ đẹp trong trẻo, gần gũi - như đem một chút hương vị của thiên nhiên vào mỗi bữa ăn.",
+  "variants": [
+    {
+      "id": 1174041573,
+      "barcode": null,
+      "available": false,
+      "price": 0,
+      "sku": null,
+      "option1": "Default Title",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Default Title"
+      ],
+      "inventory_quantity": 0,
+      "old_inventory_quantity": 0,
+      "title": "Default Title",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-08-31T03:19:18.397Z",
+  "created_at": "2026-08-31T03:20:15.675Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

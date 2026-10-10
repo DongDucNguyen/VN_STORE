@@ -1,0 +1,81 @@
+{
+  "id": 8441716441296,
+  "title": "Set Of 3 Mini Milk By Marou Chocolate Bars",
+  "handle": "set-of-3-mini-milk-by-marou-chocolate-bars",
+  "body_html": "<p>Created for those with a sweet tooth, this trio of Ca Phe Sua, Vietnamese Vanilla, and Milk Chocolate 48% chocolate bars blends carefully selected Vietnamese cacao with creamy milk for a smooth and irresistible experience.</p>",
+  "published_at": "2026-03-27T17:15:42+07:00",
+  "created_at": "2026-03-26T15:26:03+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Chocolate Gifts",
+    "New arrivals"
+  ],
+  "variants": [
+    {
+      "id": 44970303979728,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0002",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "220000",
+      "grams": 72,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8441716441296,
+      "created_at": "2026-03-26T15:26:03+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 45218086781136,
+      "created_at": "2026-02-10T16:51:17+07:00",
+      "position": 1,
+      "updated_at": "2026-02-10T16:51:18+07:00",
+      "product_id": 8441716441296,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/milk_24_2.jpg?v=1770717078",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 44258107261136,
+      "created_at": "2025-11-17T11:31:42+07:00",
+      "position": 2,
+      "updated_at": "2026-02-25T11:35:12+07:00",
+      "product_id": 8441716441296,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 41390316617936,
+      "created_at": "2025-03-17T08:35:32+07:00",
+      "position": 3,
+      "updated_at": "2026-02-25T11:35:12+07:00",
+      "product_id": 8441716441296,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/Vanilla_24G_EN.webp?v=1771994112",
+      "width": 1600,
+      "height": 1600
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

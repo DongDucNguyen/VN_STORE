@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Tượng chim chào mào Ether",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26ER01_9_1.webp?sig=ed9615b3a7a45e959d9e33661a1fa4df4c2cc0c9b52cae1bf9018411b9f89537",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 5190000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/tuong-chim-chao-mao-ether-af26er01.html",
+      "sku": "AF26ER01",
+      "mpn": "AF26ER01"
+    }
+  ],
+  "url": "https://hanoia.com/tuong-chim-chao-mao-ether-af26er01.html",
+  "sku": "AF26ER01",
+  "mpn": "AF26ER01"
+}

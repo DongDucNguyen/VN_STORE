@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError, modalityProblem, type SearchResponse } from "../api";
+import { api, ApiError, emptyFilters, type Filters, hasFilters, modalityProblem, type SearchResponse } from "../api";
 import { ErrorBox, Loading, Notice } from "../components/common";
 import { ProductGrid } from "../components/ProductCard";
 import { SearchBar } from "../components/SearchBar";
 import { ACCEPT_ATTR, type Crop, decodeImage, ImageInputError, prepareImage } from "../media";
+import { FilterPanel } from "./SearchPage";
 
 const MIN_CROP = 0.05;
 
@@ -17,6 +18,10 @@ export function ImageSearchPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<SearchResponse | null>(null);
+  // Bộ lọc người dùng chọn sau khi có kết quả; đổi bộ lọc thì gửi lại đúng ảnh đã chuẩn bị (không cắt/mã hóa lại).
+  const [filters, setFilters] = useState<Filters>(emptyFilters);
+  const lastBlob = useRef<Blob | null>(null);
+  const [filtersOpen, setFiltersOpen] = useState(() => window.innerWidth > 800);
 
   useEffect(() => {
     let alive = true;
@@ -36,6 +41,8 @@ export function ImageSearchPage() {
     setData(null);
     setError(null);
     setCrop(null);
+    setFilters(emptyFilters());
+    lastBlob.current = null;
     try {
       const decoded = await decodeImage(file);
       setBmp(decoded);
@@ -47,21 +54,44 @@ export function ImageSearchPage() {
     }
   }
 
-  async function run(e?: React.FormEvent) {
-    e?.preventDefault();
-    if (!bmp) return;
+  async function search(blob: Blob, f: Filters) {
     setLoading(true);
     setError(null);
     setInputError(null);
     try {
-      const blob = await prepareImage(bmp, crop);
-      setData(await api.searchImage(blob, text.trim()));
+      setData(await api.searchImage(blob, text.trim(), f));
     } catch (err) {
-      if (err instanceof ImageInputError) setInputError(err.message);
-      else setError(err instanceof ApiError ? err.message : String(err));
+      setError(err instanceof ApiError ? err.message : String(err));
     } finally {
       setLoading(false);
     }
+  }
+
+  async function run(e?: React.FormEvent) {
+    e?.preventDefault();
+    if (!bmp) return;
+    try {
+      lastBlob.current = await prepareImage(bmp, crop);
+    } catch (err) {
+      if (err instanceof ImageInputError) setInputError(err.message);
+      else setError(String(err));
+      return;
+    }
+    await search(lastBlob.current, filters);
+  }
+
+  function update(mut: (f: Filters) => void) {
+    const next = structuredClone(filters);
+    mut(next);
+    setFilters(next);
+    if (lastBlob.current) void search(lastBlob.current, next);
+  }
+
+  function toggle(key: keyof Filters, value: string) {
+    update((f) => {
+      const arr = f[key] as string[];
+      (f[key] as string[]) = arr.includes(value) ? arr.filter((x) => x !== value) : [...arr, value];
+    });
   }
 
   return (
@@ -123,16 +153,28 @@ export function ImageSearchPage() {
         </>
       )}
 
-      <section className="results" aria-live="polite">
-        {loading && <Loading label="Đang tìm mẫu tương tự…" />}
-        {error && <ErrorBox message={error} onRetry={() => void run()} />}
-        {data && !loading && !error && <ImageResults data={data} />}
-      </section>
+      <div className={data ? "search-layout" : undefined}>
+        {data && (
+          <details className="filters" open={filtersOpen}
+                   onToggle={(e) => setFiltersOpen((e.currentTarget as HTMLDetailsElement).open)}>
+            <summary>Bộ lọc</summary>
+            <FilterPanel key={JSON.stringify(filters)} data={data} filters={filters} toggle={toggle} update={update} />
+          </details>
+        )}
+        <section className="results" aria-live="polite">
+          {loading && <Loading label="Đang tìm mẫu tương tự…" />}
+          {error && <ErrorBox message={error} onRetry={() => void run()} />}
+          {data && !loading && !error && (
+            <ImageResults data={data} onClear={hasFilters(filters) ? () => update((f) => Object.assign(f, emptyFilters()))
+                                                                   : undefined} />
+          )}
+        </section>
+      </div>
     </div>
   );
 }
 
-function ImageResults({ data }: { data: SearchResponse }) {
+function ImageResults({ data, onClear }: { data: SearchResponse; onClear?: () => void }) {
   return (
     <>
       <section className="interpret" aria-label="Cách hệ thống hiểu truy vấn">
@@ -148,6 +190,11 @@ function ImageResults({ data }: { data: SearchResponse }) {
               {a.label}
             </span>
           ))}
+          {onClear && (
+            <button className="chip chip-clear" onClick={onClear}>
+              Xóa bộ lọc
+            </button>
+          )}
         </div>
         {data.warnings.map((w) => (
           <Notice key={w} tone="warn">

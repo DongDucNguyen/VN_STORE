@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp bút Innate",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26IN16_2_1.webp?sig=0e19cc1706879790c577cfab1bec40b2978dd8b1e01c27cfe9454ad3bcdbcff9",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 3600000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-but-innate-af26in16.html",
+      "sku": "AF26IN16",
+      "mpn": "AF26IN16"
+    }
+  ],
+  "url": "https://hanoia.com/hop-but-innate-af26in16.html",
+  "sku": "AF26IN16",
+  "mpn": "AF26IN16"
+}

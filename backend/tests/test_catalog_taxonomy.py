@@ -30,7 +30,9 @@ def test_decorative_vases_have_own_category_consistent_with_editorial(real):
 def test_vase_filter_excludes_ceramics_and_paintings(real):
     engine = SearchEngine(real)
     results = engine.search("", SearchFilters(category_ids=[CATEGORY]), limit=100)["results"]
-    assert {p["id"] for p in results} == VASES
+    # Catalog đã mở rộng (seed-003): nhánh có thêm bình khác, nhưng chỉ gồm sản phẩm thuộc đúng nhánh.
+    assert VASES <= {p["id"] for p in results}
+    assert all(real.products[p["id"]]["category_id"] == CATEGORY for p in results)
     for category in ("go-son-mai-tranh", "gom-su"):
         results = engine.search("", SearchFilters(category_ids=[category]), limit=100)["results"]
         assert not VASES.intersection(p["id"] for p in results)

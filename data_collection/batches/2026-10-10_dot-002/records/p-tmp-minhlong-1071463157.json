@@ -1,0 +1,137 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Không chỉ gợi nhắc đến sự sum vầy, Hội Tựu còn là biểu tượng của đất nước gấm hoa – nơi núi sông, văn hóa và con người cùng hòa quyện. Trên dáng vẻ thanh nhã và đường nét tinh xảo, chiếc bình trở thành nơi hội tụ hương sắc đất trời, để mỗi bông hoa khoe sắc cũng là lời chúc về một năm mới tròn đầy, thịnh vượng và bền lâu cùng cội nguồn dân tộc.</p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/694068555-sm-01_01602130c2234c04ab83bf19fbe28acf.png",
+  "handle": "binh-hoa-thai-hoa-nap-binh-hoa-hoi-tuu",
+  "id": 1071463157,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/694068555-sm-01_01602130c2234c04ab83bf19fbe28acf.png",
+    "https://cdn.hstatic.net/products/200000532849/694068555-sm-02_6678cd0a0c2149f9b9aa1334991f0fd7.png",
+    "https://cdn.hstatic.net/products/200000532849/694068555-sm-03_dbacb98bba29452fbf5c9d1f4fe72ca3.png",
+    "https://cdn.hstatic.net/products/200000532849/694068555-sm-04_41dd4d3e659c4714894107176c133b91.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1637179618,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-01_01602130c2234c04ab83bf19fbe28acf.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-01_01602130c2234c04ab83bf19fbe28acf.png"
+    },
+    {
+      "alt": null,
+      "id": 1637179623,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-02_6678cd0a0c2149f9b9aa1334991f0fd7.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-02_6678cd0a0c2149f9b9aa1334991f0fd7.png"
+    },
+    {
+      "alt": null,
+      "id": 1637179626,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-03_dbacb98bba29452fbf5c9d1f4fe72ca3.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-03_dbacb98bba29452fbf5c9d1f4fe72ca3.png"
+    },
+    {
+      "alt": null,
+      "id": 1637179625,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-04_41dd4d3e659c4714894107176c133b91.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/694068555-sm-04_41dd4d3e659c4714894107176c133b91.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa Thái Hoà"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Hội Tựu"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "40 cm"
+      ]
+    }
+  ],
+  "price": 3672000000,
+  "price_max": 3672000000,
+  "price_min": 3672000000,
+  "price_varies": false,
+  "tags": [
+    "BH decal/màu",
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa Thái Hoà 40 cm + nắp - Bình Hoa - Hội Tựu",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-thai-hoa-nap-binh-hoa-hoi-tuu",
+  "pagetitle": "Bình hoa Thái Hoa + nắp - Bình Hoa - Hội Tựu",
+  "metadescription": "Không chỉ gợi nhắc đến sự sum vầy, Hội Tựu còn là biểu tượng của đất nước gấm hoa – nơi núi sông, văn hóa và con người cùng hòa quyện. Trên dáng vẻ thanh nhã và đường nét tinh xảo, chiếc bình trở thành nơi hội tụ hương sắc đất trời, để mỗi bông hoa khoe sắc cũng l",
+  "variants": [
+    {
+      "id": 1161924409,
+      "barcode": "A001_694068555",
+      "available": true,
+      "price": 3672000000,
+      "sku": "A001_694068555",
+      "option1": "Bình hoa Thái Hoà",
+      "option2": "Hội Tựu",
+      "option3": "40 cm",
+      "options": [
+        "Bình hoa Thái Hoà",
+        "Hội Tựu",
+        "40 cm"
+      ],
+      "inventory_quantity": 3,
+      "old_inventory_quantity": 3,
+      "title": "Bình hoa Thái Hoà / Hội Tựu / 40 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-03-24T03:15:00Z",
+  "created_at": "2025-11-12T03:43:49.841Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

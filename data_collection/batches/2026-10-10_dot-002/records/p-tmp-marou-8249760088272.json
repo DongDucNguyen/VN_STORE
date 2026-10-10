@@ -1,0 +1,81 @@
+{
+  "id": 8249760088272,
+  "title": "Dak Lak 70% Single Origin Napolitain (20X4G)",
+  "handle": "napolitain-dak-lak-70-single-origin",
+  "body_html": "A wonderfully complex bar with a long spicy finish, made with a selection of the finest cacao from the highland districts of Dak Lak province",
+  "published_at": "2025-02-10T20:50:02+07:00",
+  "created_at": "2025-02-10T20:50:01+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Bites",
+    "Napo",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44410944061648,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHSO0018",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "170000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249760088272,
+      "created_at": "2025-02-10T20:50:01+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265429512400,
+      "created_at": "2025-02-10T20:50:09+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T20:50:12+07:00",
+      "product_id": 8249760088272,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-dl.webp?v=1739195412",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 41265429545168,
+      "created_at": "2025-02-10T20:50:09+07:00",
+      "position": 2,
+      "updated_at": "2025-02-10T20:50:13+07:00",
+      "product_id": 8249760088272,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-dk-naked.webp?v=1739195413",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 43567813001424,
+      "created_at": "2025-09-26T16:55:19+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:55:21+07:00",
+      "product_id": 8249760088272,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

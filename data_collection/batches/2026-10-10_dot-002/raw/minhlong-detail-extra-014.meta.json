@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tui-vai-canvas-40x36-cm-bien-xanh-khac-su.js",
+  "final_url": "https://minhlong.com/products/tui-vai-canvas-40x36-cm-bien-xanh-khac-su.js",
+  "retrieved_at": "2026-10-10T20:54:36.930124+07:00",
+  "sha256": "acb0d7f11ef79b1c6e18228c6a4f621cce337316f08067f87b66361a8f230822",
+  "bytes": 2072,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"cb2ad5cccc744950a33930f9b89a2956\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "91a15bfebf947bcc06e41e1e5b51f032",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

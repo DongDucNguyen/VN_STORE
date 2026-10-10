@@ -7,6 +7,7 @@ import { CollectVoicePage } from "./pages/CollectVoicePage";
 import { HomePage } from "./pages/HomePage";
 import { ImageSearchPage } from "./pages/ImageSearchPage";
 import { ProductPage } from "./pages/ProductPage";
+import { ReviewVoicePage } from "./pages/ReviewVoicePage";
 import { SearchPage } from "./pages/SearchPage";
 import { useRoute } from "./router";
 
@@ -23,6 +24,8 @@ function Page() {
       return <CollectVoicePage />;
     case "/collect/image":
       return <CollectImagePage />;
+    case "/review/voice":
+      return <ReviewVoicePage />;
     case "/brands":
       return <BrandsPage />;
     case "/places":

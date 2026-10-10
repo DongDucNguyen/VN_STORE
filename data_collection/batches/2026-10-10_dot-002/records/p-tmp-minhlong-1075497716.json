@@ -1,0 +1,138 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-01_d1039c5cb8c94128bd9271c1c9beae2a.png",
+  "handle": "binh-hoa-41-cm-song-ngu",
+  "id": 1075497716,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024123048-sm-01_d1039c5cb8c94128bd9271c1c9beae2a.png",
+    "https://cdn.hstatic.net/products/200000532849/r024123048-sm-02_4ef312c5d427492bbeeccc7fb0f0f991.png",
+    "https://cdn.hstatic.net/products/200000532849/r024123048-sm-03_12852c1ed6034acdbf10fba1f19ca990.png",
+    "https://cdn.hstatic.net/products/200000532849/r024123048-sm-04_cbc936c109fe41d289ffb7ea1b667a8e.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706776571,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-01_d1039c5cb8c94128bd9271c1c9beae2a.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-01_d1039c5cb8c94128bd9271c1c9beae2a.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776570,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-02_4ef312c5d427492bbeeccc7fb0f0f991.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-02_4ef312c5d427492bbeeccc7fb0f0f991.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776573,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-03_12852c1ed6034acdbf10fba1f19ca990.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-03_12852c1ed6034acdbf10fba1f19ca990.png"
+    },
+    {
+      "alt": null,
+      "id": 1706776572,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-04_cbc936c109fe41d289ffb7ea1b667a8e.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024123048-sm-04_cbc936c109fe41d289ffb7ea1b667a8e.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Song Ngư"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "41 cm"
+      ]
+    }
+  ],
+  "price": 1598400000,
+  "price_max": 1598400000,
+  "price_min": 1598400000,
+  "price_varies": false,
+  "tags": [
+    "Vẽ tay",
+    "ecom",
+    "Bình Hoa"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 41 cm - Song Ngư",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-41-cm-song-ngu",
+  "pagetitle": "Bình hoa 41 cm - Song Ngư",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1172106571,
+      "barcode": "A001_R024123048",
+      "available": true,
+      "price": 1598400000,
+      "sku": "A001_R024123048",
+      "option1": "Bình hoa",
+      "option2": "Song Ngư",
+      "option3": "41 cm",
+      "options": [
+        "Bình hoa",
+        "Song Ngư",
+        "41 cm"
+      ],
+      "inventory_quantity": 1,
+      "old_inventory_quantity": 1,
+      "title": "Bình hoa / Song Ngư / 41 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:46:58.275Z",
+  "created_at": "2026-07-09T08:26:12.041Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

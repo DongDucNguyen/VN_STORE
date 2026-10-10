@@ -235,6 +235,85 @@ def test_import_voice_session_rejects_unexpected_files(tmp_path, extra):
     assert not (tmp_path / "evil.wav").exists() and not (target.parent / "raw").exists()
 
 
+# ---------- apply_voice_review ----------
+
+import apply_voice_review as avr  # noqa: E402
+
+
+def reviewed_zip(src, dest, edits):
+    """Giả lập zip do người duyệt xuất từ #/review/voice: sửa reference_text/transcript_review theo qid."""
+    import zipfile
+    with zipfile.ZipFile(src) as z:
+        files = {i.filename: z.read(i) for i in z.infolist()}
+    manifest = json.loads(files["manifest.json"])
+    for s in manifest["samples"]:
+        s.update(edits.get(s["qid"], {}))
+    files["manifest.json"] = json.dumps(manifest, ensure_ascii=False).encode()
+    with zipfile.ZipFile(dest, "w") as z:
+        for name, data in files.items():
+            z.writestr(name, data)
+    return dest
+
+
+def imported_target(tmp_path):
+    target = empty_target(tmp_path)
+    shutil.copy(ROOT / "benchmarks/voice/manifest.schema.json", target.parent / "manifest.schema.json")
+    src = session_zip(tmp_path / "s.zip")
+    assert ivs.main([str(src), "--manifest", str(target)]) == 0
+    return target, src
+
+
+REVIEW = {"reviewed_by": "người duyệt A", "reviewed_at": "2026-10-11T09:00:00Z"}
+
+
+def test_apply_voice_review_updates_only_review_fields(tmp_path):
+    target, src = imported_target(tmp_path)
+    q1, q2 = "s01-20261010t1700-p01", "s01-20261010t1700-p02"
+    z = reviewed_zip(src, tmp_path / "r.zip", {q1: {"reference_text": "tìm túi cói dưới ba trăm",
+                                                    "transcript_review": REVIEW}})
+    before = target.read_bytes()
+    assert avr.main([str(z), "--manifest", str(target), "--dry-run"]) == 0
+    assert target.read_bytes() == before
+    assert avr.main([str(z), "--manifest", str(target)]) == 0
+    rows = {s["qid"]: s for s in json.loads(target.read_text(encoding="utf-8"))["samples"]}
+    assert rows[q1]["reference_text"] == "tìm túi cói dưới ba trăm" and rows[q1]["transcript_review"] == REVIEW
+    assert rows[q2]["transcript_review"] is None  # clip chưa xác nhận giữ nguyên
+    assert rows[q2]["reference_text"] == "túi cói dưới ba trăm nghìn"
+    assert ev.load_manifest(target)  # vẫn đúng schema, file, hash
+
+    # Đã duyệt: lượt duyệt khác chỉ được ghi đè khi yêu cầu rõ.
+    again = reviewed_zip(src, tmp_path / "r2.zip", {q1: {"reference_text": None, "transcript_review": {
+        "reviewed_by": "người duyệt B", "reviewed_at": "2026-10-12T09:00:00Z"}}})
+    assert avr.main([str(again), "--manifest", str(target)]) == 1
+    assert avr.main([str(again), "--manifest", str(target), "--replace-reviewed"]) == 0
+    assert json.loads(target.read_text(encoding="utf-8"))["samples"][0]["reference_text"] is None
+
+
+@pytest.mark.parametrize("edit", [{"split": "test"}, {"consent": {"status": "unknown", "evidence": None}}],
+                         ids=["split", "consent"])
+def test_apply_voice_review_rejects_changed_metadata(tmp_path, edit):
+    target, src = imported_target(tmp_path)
+    before = target.read_bytes()
+    z = reviewed_zip(src, tmp_path / "r.zip", {"s01-20261010t1700-p01": {**edit, "transcript_review": REVIEW}})
+    assert avr.main([str(z), "--manifest", str(target)]) == 1
+    assert target.read_bytes() == before
+
+
+def test_apply_voice_review_requires_imported_session(tmp_path):
+    target, _ = imported_target(tmp_path)
+    other = session_zip(tmp_path / "o.zip", speaker="s02")
+    z = reviewed_zip(other, tmp_path / "r.zip", {"s02-20261010t1700-p01": {"transcript_review": REVIEW}})
+    assert avr.main([str(z), "--manifest", str(target)]) == 1
+
+
+def test_reviewed_zip_imports_directly(tmp_path):
+    target = empty_target(tmp_path)
+    z = reviewed_zip(session_zip(tmp_path / "s.zip"), tmp_path / "r.zip",
+                     {"s01-20261010t1700-p01": {"transcript_review": REVIEW}})
+    assert ivs.main([str(z), "--manifest", str(target)]) == 0
+    assert json.loads(target.read_text(encoding="utf-8"))["samples"][0]["transcript_review"] == REVIEW
+
+
 # ---------- import_image_session ----------
 
 import import_image_session as iis  # noqa: E402
@@ -342,3 +421,96 @@ def test_compare_image_runs_pairs_only_judged_queries():
     m = cr.compare(left, right, samples=300)["metrics"]["ndcg_10"]
     assert m["queries"] == 10 and m["clusters"] == 6  # q2, q7 thiếu ở một bên → loại cả cặp
     assert m["delta"] > 0 and m["ci95"][0] > 0
+
+
+# ---------- latency_protocol ----------
+
+import latency_protocol as lp  # noqa: E402
+
+
+def test_rounds_summary_reports_spread():
+    s = lp.rounds_summary([[10, 20, 30, 40], [12, 22, 32, 44]])
+    assert s["n_rounds"] == 2 and [r["p95"] for r in s["rounds"]] == [40, 44]
+    assert s["p95_spread_pct"] == pytest.approx(10.0) and s["p95"] == 44 and s["p50"] == 22
+    assert lp.rounds_summary([[5]])["p95_spread_pct"] is None
+
+
+def test_idle_check_warns_when_gpu_busy(monkeypatch):
+    busy = [{"name": "g", "driver_version": "1", "memory_total_mb": 16000, "memory_used_mb": 9000,
+             "utilization_pct": 80}]
+    monkeypatch.setattr(lp, "gpu_status", lambda: busy)
+    report = lp.idle_check(samples=2, interval_s=0)
+    assert report["checked"] and len(report["warnings"]) == 2
+    monkeypatch.setattr(lp, "gpu_status", lambda: None)
+    assert lp.idle_check(samples=2, interval_s=0) == {"checked": False, "warnings": []}
+
+
+def test_vram_peak_without_nvidia_smi(monkeypatch):
+    monkeypatch.setattr(lp, "_nvidia_smi", lambda: None)
+    with lp.VramPeak() as v:
+        pass
+    assert v.peak is None
+
+
+def test_eval_voice_records_latency_protocol(tmp_path, monkeypatch):
+    monkeypatch.setattr(lp, "gpu_status", lambda: None)
+    monkeypatch.setattr(lp, "_nvidia_smi", lambda: None)
+    m = voice_manifest(tmp_path, [("v1", wav(1.0), "giỏ mây", "s1", "dev"), ("v2", wav(1.0), "túi cói", "s2", "dev")])
+    out = tmp_path / "out"
+    assert ev.main(["--adapter", "tests.fakes:FakeASR", "--manifest", str(m), "--catalog", str(FIXTURE), "--split",
+                    "dev", "--out-root", str(out), "--allow-unreviewed", "--latency-rounds", "3"]) == 0
+    run = json.loads((next(out.iterdir()) / "run.json").read_text(encoding="utf-8"))
+    lat = run["metrics"]["latency"]
+    assert lat["asr_ms"]["n_rounds"] == 3 and lat["cold_first_call_ms"] >= 0 and lat["adapter_load_ms"] >= 0
+    assert lat["peak_vram_mb"] is None and lat["machine_busy_warnings"] == []
+    assert run["latency_protocol"]["rounds"] == 3 and "gpus" in run["environment"]
+    with pytest.raises(SystemExit):
+        ev.main(["--adapter", "tests.fakes:FakeASR", "--manifest", str(m), "--split", "dev", "--latency-rounds", "0"])
+
+
+# ---------- compare_reviews (hai người duyệt độc lập) ----------
+
+import compare_reviews as crv  # noqa: E402
+
+
+def test_compare_voice_reviews(tmp_path):
+    src = session_zip(tmp_path / "s.zip")
+    q1, q2 = "s01-20261010t1700-p01", "s01-20261010t1700-p02"
+    a = reviewed_zip(src, tmp_path / "a.zip", {q1: {"transcript_review": REVIEW},
+                                               q2: {"reference_text": "túi cói dưới ba trăm", "transcript_review": REVIEW}})
+    rb = {**REVIEW, "reviewed_by": "người duyệt B"}
+    b = reviewed_zip(src, tmp_path / "b.zip", {q1: {"transcript_review": rb},
+                                               q2: {"reference_text": "túi cói dưới  ba trăm nghìn", "transcript_review": rb}})
+    out = tmp_path / "rep"
+    assert crv.main(["voice", str(a), str(b), "--report-dir", str(out)]) == 2
+    r = json.loads(next(out.glob("*.json")).read_text(encoding="utf-8"))
+    assert r["compared"] == 2 and r["agreement"] == 0.5 and [d["qid"] for d in r["disagreements"]] == [q2]
+    assert r["disagreements"][0]["cer_between"] > 0
+    assert crv.main(["voice", str(a), str(a), "--report-dir", str(out)]) == 1  # cùng người duyệt
+    other = reviewed_zip(session_zip(tmp_path / "o.zip", speaker="s02"), tmp_path / "o2.zip", {})
+    assert crv.main(["voice", str(a), str(other), "--report-dir", str(out)]) == 1  # khác phiên
+
+
+def image_export(who, items, packet_id="p" * 64):
+    def j(rel, exact=None):
+        return {"has_answer": any(v >= 2 for v in rel.values()), "relevance": rel, "exact_product_id": exact,
+                "exact_variant_sku": None, "reviewed_by": who, "reviewed_at": "2026-10-11T09:00:00+07:00"}
+    return {"kind": "image_judgment_export", "packet_id": packet_id, "catalog_sha256": "c" * 64,
+            "items": [{"qid": q, "sha256": "s" * 64, "judgment": j(rel, ex)} for q, rel, ex in items]}
+
+
+def test_compare_image_judgments(tmp_path):
+    a = image_export("A", [("q1", {"x": 3, "y": 0}, "x"), ("q2", {"x": 0, "y": 1}, None)])
+    b = image_export("B", [("q1", {"x": 3, "y": 2, "z": 0}, "y"), ("q2", {"x": 0, "y": 1}, None)])
+    r = crv.compare_image(a, b)
+    assert r["pairs_compared"] == 4 and r["exact_grade_agreement"] == 0.75
+    assert r["grades_disagreements"][0]["crosses_relevant_threshold"] is True
+    assert r["exact_disagreements"] == [{"qid": "q1", "left": ["x", None], "right": ["y", None]}]
+    assert r["coverage_differences"] == [{"qid": "q1", "labeled_by_one_reviewer": ["z"]}]
+    assert r["requires_adjudication"] is True
+    assert crv.compare_image(a, image_export("B", [("q1", {"x": 3, "y": 0}, "x"), ("q2", {"x": 0, "y": 1}, None)])
+                             )["requires_adjudication"] is False
+    with pytest.raises(crv.CompareError, match="packet"):
+        crv.compare_image(a, image_export("B", [], packet_id="q" * 64))
+    with pytest.raises(crv.CompareError, match="cùng người"):
+        crv.compare_image(a, image_export("a", [("q1", {"x": 3}, "x")]))

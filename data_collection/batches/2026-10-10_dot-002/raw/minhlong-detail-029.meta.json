@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/meo-dai-cat-xanh-ngoc.js",
+  "final_url": "https://minhlong.com/products/meo-dai-cat-xanh-ngoc.js",
+  "retrieved_at": "2026-10-10T20:37:14.552989+07:00",
+  "sha256": "8d79746a7c33546f543f9d4fd1a9fa7ca22da46100a67497a6f761454b4d860b",
+  "bytes": 1837,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:15 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"f0c065a8b4804c0ba908d35a9ce7f2c5\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "416a3cf5c46cf85e3d00db7bfac1ffe9",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

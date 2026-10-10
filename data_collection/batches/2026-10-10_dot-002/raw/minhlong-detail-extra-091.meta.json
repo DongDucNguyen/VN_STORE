@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-khong-tuoc-su-ve-tay-trang-tri.js",
+  "final_url": "https://minhlong.com/products/binh-khong-tuoc-su-ve-tay-trang-tri.js",
+  "retrieved_at": "2026-10-10T20:54:40.790432+07:00",
+  "sha256": "646aeb8d0aee3dd229ad343492ace4da46fc356d4bbce9dee5f209a55d084c09",
+  "bytes": 4056,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:41 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"d30e64ca4f5d4d53a385d3fd9e20c5a4\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "c257b55e1a9a49fe006d2ae6f9460dcb",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

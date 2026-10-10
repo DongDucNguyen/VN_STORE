@@ -161,6 +161,25 @@ test.describe("Tìm bằng ảnh", () => {
     }
   });
 
+  test("bộ lọc sau khi có kết quả: gửi lại cùng ảnh kèm bộ lọc, gỡ được", async ({ page }) => {
+    await pickImage(page);
+    await page.getByRole("button", { name: "Tìm mẫu tương tự" }).click();
+    await expect(cards(page).first()).toBeVisible();
+    const panel = page.locator("details.filters");
+    if (!(await panel.evaluate((d) => (d as HTMLDetailsElement).open))) await panel.locator("summary").click();
+    const sent = page.waitForRequest((r) => r.url().includes("/api/search/image") && r.url().includes("filters="));
+    await panel.getByRole("checkbox", { name: /^cói/ }).check();
+    const req = await sent;
+    expect(JSON.parse(new URL(req.url()).searchParams.get("filters")!).materials).toEqual(["cói"]);
+    await expect(page.getByRole("region", { name: "Cách hệ thống hiểu truy vấn" }).getByText("Chất liệu: cói"))
+      .toBeVisible();
+    await expect(cardTitles(page).filter({ hasText: "Khăn lụa" })).toHaveCount(0);
+    await expect(cardTitles(page).filter({ hasText: /Túi cói/ }).first()).toBeVisible();
+    await page.getByRole("button", { name: "Xóa bộ lọc" }).click();
+    await expect(page.getByRole("button", { name: "Xóa bộ lọc" })).toHaveCount(0);
+    await expect(cards(page).first()).toBeVisible();
+  });
+
   test("kéo để chọn vùng rồi bỏ vùng chọn", async ({ page }) => {
     await pickImage(page);
     const box = page.getByTestId("crop-box");

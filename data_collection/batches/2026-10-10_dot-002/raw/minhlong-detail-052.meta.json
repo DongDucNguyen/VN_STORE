@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/to-cao-20-cm-jasmine-phuoc-loc-tho.js",
+  "final_url": "https://minhlong.com/products/to-cao-20-cm-jasmine-phuoc-loc-tho.js",
+  "retrieved_at": "2026-10-10T20:37:15.366490+07:00",
+  "sha256": "d93608f92156eb5d61e77902ffe4831c6ad108fc82cc4d7eb4840ce352829c94",
+  "bytes": 2084,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"8bfa4ab939654486921ada0b4bdff114\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "ba9943fab4ac9b9ecd7f438e75aad9cc",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

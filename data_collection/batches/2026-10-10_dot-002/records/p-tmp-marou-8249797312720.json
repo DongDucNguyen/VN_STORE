@@ -1,0 +1,59 @@
+{
+  "id": 8249797312720,
+  "title": "Marou Dark Chocolate 65% Drops - 3Kg",
+  "handle": "marou-dark-chocolate-65-drops-3kg",
+  "body_html": "Marou Dark Chocolate 65% Drops from Vietnam is the perfect ingredient for pastry chefs, bakeries, chocolatiers, and chocolate snackers alike! Made at origin from the finest cacao beans, this authentic dark chocolate offers a fresh, well-rounded chocolate with hints of citrus and caramel. ​\r<br>\r<br>​​Crafted for a wide range of uses, our dark chocolate drops melt smoothly and evenly, providing the perfect consistency to elevate your favorite chocolate recipes.",
+  "published_at": "2025-02-10T22:08:39+07:00",
+  "created_at": "2025-02-10T22:08:38+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "baking",
+    "provisions",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44411034206416,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHOR0004",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "2150000",
+      "grams": 3000,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249797312720,
+      "created_at": "2025-02-10T22:08:38+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265609343184,
+      "created_at": "2025-02-10T22:08:46+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T22:08:49+07:00",
+      "product_id": 8249797312720,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/mfdc-couverture-VN65-3kg-e1693231569728.jpg?v=1739200129",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

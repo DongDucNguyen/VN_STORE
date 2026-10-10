@@ -1,0 +1,121 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p style=\"text-align: justify;\">Khoác lên vẻ truyền thống, nền nã của loài hoa Á Đông nhưng lại không kém phần tinh tế hiện đại, những cánh sen bung tròn, phúc hậu ôm lấy nhụy đã được tái hiện sống động bằng màu xanh cobalt đặc trưng của cung đình Huế. Bức tranh chân thực và sống động về lá, cỏ và hoa sen như đưa người ngắm về với một làng quê Việt Nam vốn yên bình, trù phú... &nbsp;Nghệ nhân cũng khéo léo tạo nét vương giả bằng những chi tiết vẽ vàng 24k uyển chuyển trên từng cánh hoa, vành, tay cầm và nắp tạo nên sắc màu lấp lánh dưới sự phản chiếu của ánh sáng. Bộ sản phẩm thích hợp cho những buổi sum họp thân tình trong không gian yên bình, thư giãn vừa gần gũi vừa sang trọng.</p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/114554345-sm-01_469cc01a9c144a098865f4a728a00877.png",
+  "handle": "binh-hoa-45-cm-binh-hoa-sen-vang",
+  "id": 1071462741,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/114554345-sm-01_469cc01a9c144a098865f4a728a00877.png",
+    "https://cdn.hstatic.net/products/200000532849/114554345-sm-02_3114b332d6474dfbb819899b64ac340e.png",
+    "https://cdn.hstatic.net/products/200000532849/114554345-sm-03_312c66b10b6d48c797f44ba894dee3e0.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1637166053,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-01_469cc01a9c144a098865f4a728a00877.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-01_469cc01a9c144a098865f4a728a00877.png"
+    },
+    {
+      "alt": null,
+      "id": 1637166054,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-02_3114b332d6474dfbb819899b64ac340e.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-02_3114b332d6474dfbb819899b64ac340e.png"
+    },
+    {
+      "alt": null,
+      "id": 1637166056,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-03_312c66b10b6d48c797f44ba894dee3e0.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/114554345-sm-03_312c66b10b6d48c797f44ba894dee3e0.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Sen Vàng"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "45 cm"
+      ]
+    }
+  ],
+  "price": 1730160000,
+  "price_max": 1730160000,
+  "price_min": 1730160000,
+  "price_varies": false,
+  "tags": [],
+  "template_suffix": null,
+  "title": "Bình hoa 45 cm - Bình Hoa - Sen Vàng",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-45-cm-binh-hoa-sen-vang",
+  "pagetitle": "Bình hoa 45 cm - Bình Hoa - Sen Vàng",
+  "metadescription": "Khoác lên vẻ truyền thống, nền nã của loài hoa Á Đông nhưng lại không kém phần tinh tế hiện đại, những cánh sen bung tròn, phúc hậu ôm lấy nhụy đã được tái hiện sống động bằng màu xanh cobalt đặc trưng của cung đình Huế. Bức tranh chân thực và sống động về lá, cỏ và hoa sen như đưa người ngắm về với một làng quê Việt N",
+  "variants": [
+    {
+      "id": 1161923219,
+      "barcode": "A001_114554345",
+      "available": true,
+      "price": 1730160000,
+      "sku": "A001_114554345",
+      "option1": "Bình hoa",
+      "option2": "Sen Vàng",
+      "option3": "45 cm",
+      "options": [
+        "Bình hoa",
+        "Sen Vàng",
+        "45 cm"
+      ],
+      "inventory_quantity": 19,
+      "old_inventory_quantity": 19,
+      "title": "Bình hoa / Sen Vàng / 45 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-05-28T08:30:06.438Z",
+  "created_at": "2025-11-12T03:08:21.245Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

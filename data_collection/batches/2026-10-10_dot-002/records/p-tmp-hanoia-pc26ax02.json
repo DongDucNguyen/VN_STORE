@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Axis size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_PC26AX02_7_1__1789040406.webp?sig=49db6f5ca32cc0eed97abbc446f06e4d40a3a29644490b55aef29a9ba0199019",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 14700000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-axis-size-m-pc26ax02.html",
+      "sku": "PC26AX02",
+      "mpn": "PC26AX02"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-axis-size-m-pc26ax02.html",
+  "sku": "PC26AX02",
+  "mpn": "PC26AX02"
+}

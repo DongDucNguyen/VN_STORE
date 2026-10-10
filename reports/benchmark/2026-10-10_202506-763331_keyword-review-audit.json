@@ -1,0 +1,22 @@
+{
+  "status": "pending_review",
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "queries": 107,
+  "products": 30,
+  "label_scope": "pool",
+  "pairs_per_reviewer": 917,
+  "splits": {
+    "dev": 107
+  },
+  "reviewers": [],
+  "scope": "Kiểm tra cấu trúc và tính nhất quán của export đầy đủ; không xác thực danh tính, tính độc lập, nội dung chấm hay quyết định nghiệm thu benchmark.",
+  "exports": [],
+  "generated_at": "2026-10-10T20:25:06+07:00",
+  "inputs": [
+    {
+      "kind": "packet",
+      "path": "artifacts\\keyword_review\\2026-10-10_dev-candidates-107-pool\\packet.json",
+      "sha256": "7ff12641b0bad82c2b5704c2013f4547cacb34a38b4bb4929dc22545399be936"
+    }
+  ]
+}

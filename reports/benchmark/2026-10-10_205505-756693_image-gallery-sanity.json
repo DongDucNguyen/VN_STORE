@@ -1,0 +1,859 @@
+{
+  "kind": "gallery_leave_one_out_sanity",
+  "benchmark_approved": false,
+  "created_at": "2026-10-10T20:55:05+07:00",
+  "catalog_version": "seed-002-taxonomy",
+  "catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "transform": {
+    "center_crop": 0.85,
+    "scale": 0.6,
+    "jpeg_quality": 75
+  },
+  "code_sha256": "d16571b9cb8bfc930fc6e49b09093a75f5971a3bc4354f93cf9b08c5c922e83b",
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "runs": [
+    {
+      "adapter": "app.ml.image:SigLIP2Base",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "license": "apache-2.0",
+      "preprocess": {
+        "decode": "pillow; exif_transpose; alpha->white; RGB",
+        "runtime": "onnxruntime",
+        "onnx": "onnx-community/siglip2-base-patch16-224-ONNX/onnx/vision_model.onnx",
+        "processor": "preprocessor_config.json (numpy)",
+        "output": "pooler_output",
+        "dtype": "float32"
+      },
+      "gallery_images": 45,
+      "dim": 768,
+      "index_build_s": 2.19,
+      "queries": 26,
+      "products_with_2plus_views": 11,
+      "hit_1": 0.9615,
+      "hit_5": 1.0,
+      "mrr_10": 0.9808,
+      "same_root_category_1": 1.0,
+      "embed_ms_p50": 7.817999998223968,
+      "embed_ms_p95": 10.816100009833463,
+      "gpu": {
+        "torch": null
+      },
+      "rows": [
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-1",
+          "product_id": "p-kilomet109-ao-khoac-phi-17mjk003",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-2",
+          "product_id": "p-kilomet109-ao-khoac-phi-17mjk003",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-1",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-2",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-3",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-1",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-2",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-3",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-1",
+          "product_id": "p-kilomet109-chan-vay-ha-17wsk001",
+          "top5": [
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-2",
+          "product_id": "p-kilomet109-chan-vay-ha-17wsk001",
+          "top5": [
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-1",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vong-co-xoan-17wac001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-2",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-3",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-1",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-2",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-3",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+          "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-chen-com-thach-van-11cm",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-2",
+          "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-chen-com-thach-van-11cm",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-1",
+          "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-minhlong-chen-com-thach-van-11cm"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.5,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-2",
+          "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+          "top5": [
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-minhlong-chen-com-thach-van-11cm"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+          "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "top5": [
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-lys-dia-tron-jasmine-trang-nga-15cm",
+            "p-minhlong-chen-com-thach-van-11cm",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-minhlong-binh-hoa-hon-viet-30cm"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-2",
+          "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "top5": [
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-lys-dia-tron-jasmine-trang-nga-15cm",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-minhlong-chen-com-thach-van-11cm"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-1",
+          "product_id": "p-vietcraft-chup-den-seagrass-vh24028",
+          "top5": [
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-gio-tre-dan-tron-vh24026",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-vietcraft-khay-may-dan-vh24048"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-2",
+          "product_id": "p-vietcraft-chup-den-seagrass-vh24028",
+          "top5": [
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-lys-dia-tron-jasmine-trang-nga-15cm"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-1",
+          "product_id": "p-vietcraft-gio-may-bau-duc-vh24040",
+          "top5": [
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+            "p-vietcraft-bat-tre-cuon-phu-son-vh24045"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-2",
+          "product_id": "p-vietcraft-gio-may-bau-duc-vh24040",
+          "top5": [
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+            "p-vietcraft-bat-tre-cuon-phu-son-vh24045"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        }
+      ]
+    },
+    {
+      "adapter": "app.ml.image:DINOv2Base",
+      "model_id": "facebook/dinov2-base",
+      "revision": "9a1732c724ef0847dcedf00d3d5a93f61dea0370",
+      "license": "apache-2.0",
+      "preprocess": {
+        "decode": "pillow; exif_transpose; alpha->white; RGB",
+        "runtime": "onnxruntime",
+        "onnx": "onnx-community/dinov2-base-ONNX/onnx/model.onnx",
+        "processor": "preprocessor_config.json (numpy)",
+        "output": "last_hidden_state[:, 0]",
+        "dtype": "float32"
+      },
+      "gallery_images": 45,
+      "dim": 768,
+      "index_build_s": 1.73,
+      "queries": 26,
+      "products_with_2plus_views": 11,
+      "hit_1": 0.8077,
+      "hit_5": 1.0,
+      "mrr_10": 0.891,
+      "same_root_category_1": 1.0,
+      "embed_ms_p50": 9.05619999684859,
+      "embed_ms_p95": 10.891199999605305,
+      "gpu": {
+        "torch": null
+      },
+      "rows": [
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-1",
+          "product_id": "p-kilomet109-ao-khoac-phi-17mjk003",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-phi-17mjk003-2",
+          "product_id": "p-kilomet109-ao-khoac-phi-17mjk003",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-1",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-2",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-khoac-vang-1-19mjk001-3",
+          "product_id": "p-kilomet109-ao-khoac-vang-1-19mjk001",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.3333333333333333,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-1",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-2",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-ao-so-mi-thong-17mt004-3",
+          "product_id": "p-kilomet109-ao-so-mi-thong-17mt004",
+          "top5": [
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-1",
+          "product_id": "p-kilomet109-chan-vay-ha-17wsk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-vong-co-xoan-17wac001"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.5,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-chan-vay-ha-17wsk001-2",
+          "product_id": "p-kilomet109-chan-vay-ha-17wsk001",
+          "top5": [
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-vong-co-xoan-17wac001"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.5,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-1",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-vietcraft-gio-tre-dan-tron-vh24026"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.5,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-2",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-vong-co-xoan-17wac001"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vay-van-19wdr006-3",
+          "product_id": "p-kilomet109-vay-van-19wdr006",
+          "top5": [
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-khoac-vang-1-19mjk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-1",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-khoac-phi-17mjk003",
+            "p-kilomet109-ao-so-mi-thong-17mt004"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-2",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-kilomet109-vay-van-19wdr006",
+            "p-kilomet109-chan-vay-ha-17wsk001",
+            "p-kilomet109-ao-so-mi-thong-17mt004",
+            "p-kilomet109-ao-khoac-phi-17mjk003"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-kilomet109-vong-co-xoan-17wac001-3",
+          "product_id": "p-kilomet109-vong-co-xoan-17wac001",
+          "top5": [
+            "p-kilomet109-vong-co-xoan-17wac001",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-chen-com-thach-van-11cm"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+          "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-2",
+          "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-1",
+          "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+          "top5": [
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-vietcraft-bat-gao-dua-son-ve-tay"
+          ],
+          "hit_1": false,
+          "hit_5": true,
+          "rr_10": 0.3333333333333333,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-binh-hoa-sen-vang-27cm-2",
+          "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+          "top5": [
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-vietcraft-bat-gao-dua-son-ve-tay",
+            "p-hanoia-hop-vuong-botanica-s-af26bt03",
+            "p-minhlong-ly-su-duong-sinh-bien-xanh-048l"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+          "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "top5": [
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-hanoia-binh-hoa-vita-pc26vt01",
+            "p-minhlong-binh-hoa-hon-viet-30cm",
+            "p-lys-dia-tron-jasmine-trang-nga-15cm",
+            "p-hanoia-binh-hoa-mystery-a18mt01"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-2",
+          "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "top5": [
+            "p-minhlong-bo-tra-camellia-chi-vang-05l",
+            "p-minhlong-binh-hoa-sen-vang-27cm",
+            "p-hanoia-binh-hoa-vita-pc26vt01",
+            "p-hanoia-binh-hoa-mystery-a18mt01",
+            "p-vietcraft-chup-den-seagrass-vh24028"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-1",
+          "product_id": "p-vietcraft-chup-den-seagrass-vh24028",
+          "top5": [
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-hanoia-hop-dan-tre-ethnic-s-ou17et02"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-chup-den-seagrass-vh24028-2",
+          "product_id": "p-vietcraft-chup-den-seagrass-vh24028",
+          "top5": [
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-hanoia-hop-dan-tre-ethnic-s-ou17et02"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-1",
+          "product_id": "p-vietcraft-gio-may-bau-duc-vh24040",
+          "top5": [
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-vietcraft-tui-luc-binh-vo-so-vh24032"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        },
+        {
+          "image_id": "img-vietcraft-gio-may-bau-duc-vh24040-2",
+          "product_id": "p-vietcraft-gio-may-bau-duc-vh24040",
+          "top5": [
+            "p-vietcraft-gio-may-bau-duc-vh24040",
+            "p-vietcraft-khay-may-dan-vh24048",
+            "p-vietcraft-gio-seagrass-vh24046",
+            "p-vietcraft-chup-den-seagrass-vh24028",
+            "p-vietcraft-tui-luc-binh-vo-so-vh24032"
+          ],
+          "hit_1": true,
+          "hit_5": true,
+          "rr_10": 1.0,
+          "same_root_category_1": true
+        }
+      ]
+    }
+  ]
+}

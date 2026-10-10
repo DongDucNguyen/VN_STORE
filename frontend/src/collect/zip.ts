@@ -60,3 +60,52 @@ export async function sha256Hex(data: Uint8Array): Promise<string> {
   const h = new Uint8Array(await crypto.subtle.digest("SHA-256", data as BufferSource));
   return [...h].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
+
+export class ZipError extends Error {}
+
+/** Đọc zip qua central directory. Nhận "store" (file do makeZip tạo) và "deflate" (zip được nén lại bằng
+ *  công cụ hệ điều hành); kiểm tra CRC32 từng file. Không hỗ trợ ZIP64 và zip mã hóa. */
+export async function readZip(buf: ArrayBuffer): Promise<{ name: string; data: Uint8Array }[]> {
+  const bytes = new Uint8Array(buf);
+  const view = new DataView(buf);
+  let eocd = -1;
+  for (let i = bytes.length - 22; i >= Math.max(0, bytes.length - 22 - 0xffff); i--) {
+    if (view.getUint32(i, true) === 0x06054b50) {
+      eocd = i;
+      break;
+    }
+  }
+  if (eocd < 0) throw new ZipError("Không phải file zip hợp lệ.");
+  const count = view.getUint16(eocd + 10, true);
+  let p = view.getUint32(eocd + 16, true);
+  if (count === 0xffff || p === 0xffffffff) throw new ZipError("Không hỗ trợ ZIP64.");
+  const dec = new TextDecoder();
+  const out: { name: string; data: Uint8Array }[] = [];
+  for (let n = 0; n < count; n++) {
+    if (p + 46 > bytes.length || view.getUint32(p, true) !== 0x02014b50) throw new ZipError("Zip bị hỏng.");
+    const flags = view.getUint16(p + 8, true);
+    const method = view.getUint16(p + 10, true);
+    const crc = view.getUint32(p + 16, true);
+    const csize = view.getUint32(p + 20, true);
+    const nameLen = view.getUint16(p + 28, true);
+    const skip = view.getUint16(p + 30, true) + view.getUint16(p + 32, true);
+    const local = view.getUint32(p + 42, true);
+    const name = dec.decode(bytes.subarray(p + 46, p + 46 + nameLen));
+    p += 46 + nameLen + skip;
+    if (name.endsWith("/")) continue;
+    if (flags & 1) throw new ZipError("Không hỗ trợ zip có mật khẩu.");
+    if (local + 30 > bytes.length || view.getUint32(local, true) !== 0x04034b50) throw new ZipError("Zip bị hỏng.");
+    const start = local + 30 + view.getUint16(local + 26, true) + view.getUint16(local + 28, true);
+    if (start + csize > bytes.length) throw new ZipError("Zip bị cắt cụt.");
+    const raw = bytes.subarray(start, start + csize);
+    let data: Uint8Array;
+    if (method === 0) data = raw.slice();
+    else if (method === 8) {
+      const stream = new Blob([raw as BlobPart]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+      data = new Uint8Array(await new Response(stream).arrayBuffer());
+    } else throw new ZipError(`${name}: phương thức nén ${method} không được hỗ trợ.`);
+    if (crc32(data) !== crc) throw new ZipError(`${name}: CRC không khớp, file bị hỏng.`);
+    out.push({ name, data });
+  }
+  return out;
+}

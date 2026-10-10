@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trà tròn Red River",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A20RR02_3_1.webp?sig=f3895cbbbb1618da173b9b207c1a1daafaa8916c4a5b600204dad4a016941f63",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 6545000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-tra-tron-red-river-a20rr02.html",
+      "sku": "A20RR02",
+      "mpn": "A20RR02"
+    }
+  ],
+  "url": "https://hanoia.com/hop-tra-tron-red-river-a20rr02.html",
+  "sku": "A20RR02",
+  "mpn": "A20RR02"
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "HỘP ĐỰNG GIẤY RED RIVER",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A20RR06_3_1.webp?sig=5f1744bfa89b3a777f0d4f4addfebae31607fcceba928f626e4a3d1e6cccb6ee",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 9450000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-khan-giay-a20rr06.html",
+      "sku": "A20RR06",
+      "mpn": "A20RR06"
+    }
+  ],
+  "url": "https://hanoia.com/hop-khan-giay-a20rr06.html",
+  "sku": "A20RR06",
+  "mpn": "A20RR06"
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/khay-mut-tron-5-ngan-24cm-nap-misc-assortment.js",
+  "final_url": "https://minhlong.com/products/khay-mut-tron-5-ngan-24cm-nap-misc-assortment.js",
+  "retrieved_at": "2026-10-10T20:54:39.081991+07:00",
+  "sha256": "962c4d28cef776035a37de5d3a1f6204aa1d510115bef0796aec7f4b6250ab68",
+  "bytes": 1921,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"d18c0cdfe34d439783994834620be69a\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "323ae3a940e423ef4f5b5a7dfc81dc02",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

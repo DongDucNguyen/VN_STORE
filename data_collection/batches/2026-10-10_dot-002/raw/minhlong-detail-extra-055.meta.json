@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dia-tron-22-cm-tulip-ifp-trang-nga.js",
+  "final_url": "https://minhlong.com/products/dia-tron-22-cm-tulip-ifp-trang-nga.js",
+  "retrieved_at": "2026-10-10T20:54:38.296544+07:00",
+  "sha256": "9c68aeaddeb2e78cf324299150f4e3f50d242ee282be00abfdbe0c6cf1281aae",
+  "bytes": 2001,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:39 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"70fe1f6c1e5e4e8d90debc4f5938fd0c\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "b666263bffdb3a345d185df8aaacf232",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

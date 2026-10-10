@@ -1,0 +1,100 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "Bình Tứ Linh với họa tiết là hình dáng của các linh vật có ý nghĩa tốt lành, may mắn, được đội ngũ nghệ nhân của Minh Long I phác họa tỉ mỉ, khéo léo. Từng bộ phận đến các chi tiết nhỏ nhất của linh vật đều được đặc tả sinh động bằng nét vẽ uyển chuyển, dáng di chuyển với thần thái linh hoạt. Tác phẩm vừa mang nét truyền thống nhờ cách sử dụng màu xanh blue Huế đặc trưng, vừa sang trọng từ những nét vẽ vàng trên nhiều họa tiết.",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-01_8282afb17e6e423aa0a70d05adfd2ae3.png",
+  "handle": "binh-hoa-50-cm-binh-hoa-tu-linh",
+  "id": 1070579715,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-01_8282afb17e6e423aa0a70d05adfd2ae3.png",
+    "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-02_bd59fa1e0fb44ce29f587eabe81308aa.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1628224524,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-01_8282afb17e6e423aa0a70d05adfd2ae3.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-01_8282afb17e6e423aa0a70d05adfd2ae3.png"
+    },
+    {
+      "alt": null,
+      "id": 1628224547,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-02_bd59fa1e0fb44ce29f587eabe81308aa.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/binh-hoa-50-cm-binh-hoa-tu-linh_115054074-sm-02_bd59fa1e0fb44ce29f587eabe81308aa.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Kích thước",
+      "position": 1,
+      "values": [
+        "50 cm"
+      ]
+    }
+  ],
+  "price": 4092120000,
+  "price_max": 4092120000,
+  "price_min": 4092120000,
+  "price_varies": false,
+  "tags": [
+    "hoavan:Tứ Linh",
+    "color:binh-hoa-tu-linh",
+    "ecom",
+    "BH decal/màu",
+    "bình hoa",
+    "Phòng khách",
+    "TT Nội thất"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 50 cm - Bình hoa - Tứ Linh",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-50-cm-binh-hoa-tu-linh",
+  "pagetitle": "Bình hoa 50 cm - Bình hoa - Tứ Linh",
+  "metadescription": "Bình Tứ Linh với họa tiết là hình dáng của các linh vật có ý nghĩa tốt lành, may mắn, được đội ngũ nghệ nhân của Minh Long I phác họa tỉ mỉ, khéo léo. Từng bộ phận đến các chi tiết nhỏ nhất của linh vật đều được đặc tả sinh động bằng nét vẽ uyển chuyển, dáng di chuyển với thần thái linh hoạt. Tác phẩm vừa mang nét truy",
+  "variants": [
+    {
+      "id": 1160372843,
+      "barcode": "A001_115054074",
+      "available": true,
+      "price": 4092120000,
+      "sku": "A001_115054074",
+      "option1": "50 cm",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "50 cm"
+      ],
+      "inventory_quantity": 10,
+      "old_inventory_quantity": 10,
+      "title": "50 cm",
+      "weight": 6000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2025-11-11T04:42:30.909Z",
+  "created_at": "2025-10-15T02:21:04.887Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,6 +1,7 @@
 """Adapter ASR họ PhoWhisper (vinai, BSD-3-Clause) chạy ONNX Runtime.
 
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperBase        (onnx-community, chuyển từ vinai/PhoWhisper-base)
+    VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperBaseFp16    (cùng repo, bản fp16 chính thức; vào/ra vẫn float32)
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmall       (bản ONNX cộng đồng huuquyet/PhoWhisper-small)
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmallInt8   (cùng repo, bản lượng tử hóa int8)
 
@@ -18,11 +19,32 @@ import os
 from typing import Any
 
 from ..media import AudioClip
-from . import LazyModel, hf_file, hf_json, session
+from . import LazyModel, fill_dims, hf_file, hf_json, session, tensorrt_mode
 from .vad import SileroVAD
 
 TARGET_RATE = 16000
 CONFIG_FILES = ("preprocessor_config.json", "tokenizer.json", "generation_config.json", "added_tokens.json")
+PROMPT_LEN = 4      # <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>
+ENCODER_FRAMES = 1500  # 30 giây audio sau encoder Whisper
+
+
+def whisper_shapes(kind: str, max_new_tokens: int, n_mels: int = 80):
+    """Profile TensorRT cho encoder/decoder Whisper: chỉ cache decoder có độ dài đổi theo số token."""
+    def shapes(name: str, dims: list):
+        if name == "input_ids":
+            fixed = "1x1" if kind == "decoder_with_past_model" else f"1x{PROMPT_LEN}"
+            return fixed, fixed, fixed
+        if name == "encoder_hidden_states" or ".encoder." in name:
+            fixed = fill_dims(dims, {1: ENCODER_FRAMES, 2: ENCODER_FRAMES})
+            return fixed, fixed, fixed
+        if ".decoder." in name:  # [batch, heads, past_len, head_dim]
+            return tuple(fill_dims(dims, {2: n}) for n in (1, 24, PROMPT_LEN + max_new_tokens))
+        if name == "input_features":  # [batch, mel, frames]; có bản ONNX để cả mel/frames là chiều tượng trưng
+            fixed = fill_dims(dims, {1: n_mels, 2: 2 * ENCODER_FRAMES})
+            return fixed, fixed, fixed
+        fixed = fill_dims(dims, {})
+        return fixed, fixed, fixed
+    return shapes
 
 
 def to_float_16k(clip: AudioClip):
@@ -60,9 +82,12 @@ class _OnnxWhisper:
                 "upstream": f"{self.model_id}@{self.upstream_revision}",
                 "config_repo": f"{self.config_repo}@{self.config_revision}", "decoder": "greedy",
                 "language": "vi", "task": "transcribe", "timestamps": False, "max_new_tokens": self.max_new_tokens,
-                "vad": self.detect_speech.config if self.detect_speech else None}
+                "vad": self.detect_speech.config if self.detect_speech else None, "tensorrt": tensorrt_mode()}
 
     def _load(self):
+        if tensorrt_mode() == "fp16":
+            # Đo 10/10/2026: PhoWhisper-base với TensorRT fp16 sinh chuỗi vô nghĩa (tràn số), không dùng được.
+            raise RuntimeError("VNSTORE_ML_TRT=fp16 cho kết quả hỏng với PhoWhisper; dùng VNSTORE_ML_TRT=1 (fp32)")
         from tokenizers import Tokenizer
         from transformers import WhisperFeatureExtractor
         for name in CONFIG_FILES:
@@ -75,7 +100,8 @@ class _OnnxWhisper:
                ("<|startoftranscript|>", "<|vi|>", "<|transcribe|>", "<|notimestamps|>", "<|endoftext|>")}
         if None in ids.values():
             raise RuntimeError(f"Tokenizer thiếu token đặc biệt: {ids}")
-        sessions = [session(hf_file(self.onnx_repo, self.onnx_revision, f"onnx/{name}{self.suffix}.onnx"))
+        sessions = [session(hf_file(self.onnx_repo, self.onnx_revision, f"onnx/{name}{self.suffix}.onnx"),
+                            whisper_shapes(name, self.max_new_tokens, fe.feature_size))
                     for name in ("encoder_model", "decoder_model", "decoder_with_past_model")]
         return fe, tok, gen, ids, sessions
 
@@ -122,6 +148,12 @@ class PhoWhisperBase(_OnnxWhisper):
     upstream_revision = "7ebdb9e88f5cc5271fb88f4d642c82ff9388650e"
     onnx_repo = config_repo = "onnx-community/PhoWhisper-base-ONNX"
     onnx_revision = revision = config_revision = "41a94b878c46ec2ab28e0ebea0915369f0758380"
+
+
+class PhoWhisperBaseFp16(PhoWhisperBase):
+    # Trọng số fp16, cast nội bộ; phải đo lại chất lượng, không dùng điểm của bản fp32 (PLAN.md 8.3).
+    suffix = "_fp16"
+    revision = PhoWhisperBase.onnx_revision + "+fp16"
 
 
 class PhoWhisperSmall(_OnnxWhisper):

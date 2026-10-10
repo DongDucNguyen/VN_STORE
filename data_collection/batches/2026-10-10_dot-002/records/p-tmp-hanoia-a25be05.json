@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trang sức chữ nhật Bellus",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A25BE05_3_1.webp?sig=055c289521556d6251c52a14cd07703535722c4d39fc03b63f3ff3c70c9e83b6",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 25000000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-trang-suc-chu-nhat-bellus-a25be05.html",
+      "sku": "A25BE05",
+      "mpn": "A25BE05"
+    }
+  ],
+  "url": "https://hanoia.com/hop-trang-suc-chu-nhat-bellus-a25be05.html",
+  "sku": "A25BE05",
+  "mpn": "A25BE05"
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Giỏ đan tre Ethnic thấp size S",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_OU17ET03_8_1.webp?sig=81a36f9c7a4f825c0d923965c974eca360dd70811bcc2d72aaf47c32356febcb",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 2350000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/gio-dan-tre-ethnic-thap-size-s-ou17et03.html",
+      "sku": "OU17ET03",
+      "mpn": "OU17ET03"
+    }
+  ],
+  "url": "https://hanoia.com/gio-dan-tre-ethnic-thap-size-s-ou17et03.html",
+  "sku": "OU17ET03",
+  "mpn": "OU17ET03"
+}

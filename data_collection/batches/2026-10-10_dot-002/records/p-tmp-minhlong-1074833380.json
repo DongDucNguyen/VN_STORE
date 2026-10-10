@@ -1,0 +1,97 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/612001000-sm-01_8b15f5753ad24fdda69c178f2afaa7ce.png",
+  "handle": "dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga",
+  "id": 1074833380,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/612001000-sm-01_8b15f5753ad24fdda69c178f2afaa7ce.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1701471228,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/612001000-sm-01_8b15f5753ad24fdda69c178f2afaa7ce.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/612001000-sm-01_8b15f5753ad24fdda69c178f2afaa7ce.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa ăn sáng"
+      ]
+    },
+    {
+      "name": "Màu sắc",
+      "position": 2,
+      "values": [
+        "Trắng Ngà"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "20x18 cm"
+      ]
+    }
+  ],
+  "price": 18036000,
+  "price_max": 18036000,
+  "price_min": 18036000,
+  "price_varies": false,
+  "tags": [
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa ăn sáng 20x18 cm - Ngọc Biển IFP - Trắng Ngà",
+  "type": "Ngọc Biển IFP",
+  "url": "/products/dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga",
+  "pagetitle": "Dĩa ăn sáng 20x18 cm - Ngọc Biển IFP - Trắng Ngà",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1170198242,
+      "barcode": "A001_612001000",
+      "available": true,
+      "price": 18036000,
+      "sku": "A001_612001000",
+      "option1": "Dĩa ăn sáng",
+      "option2": "Trắng Ngà",
+      "option3": "20x18 cm",
+      "options": [
+        "Dĩa ăn sáng",
+        "Trắng Ngà",
+        "20x18 cm"
+      ],
+      "inventory_quantity": 106,
+      "old_inventory_quantity": 106,
+      "title": "Dĩa ăn sáng / Trắng Ngà / 20x18 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T07:54:30.733Z",
+  "created_at": "2026-05-29T01:51:19.174Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/khay-mut-5-ngan-hoa-dao-thinh-vuong-vien-vang.js",
+  "final_url": "https://minhlong.com/products/khay-mut-5-ngan-hoa-dao-thinh-vuong-vien-vang.js",
+  "retrieved_at": "2026-10-10T20:54:37.294328+07:00",
+  "sha256": "3fb248b1ebb35795a550f94f3d3654b7372129018452a809a3f1b0a94ff00979",
+  "bytes": 1909,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"0f2ab101d47d434fa4e303aa53dfd776\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "7533aeae409a716adbf37d7fad57d347",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

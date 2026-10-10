@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tuong-bao-ma-23-9-cm-tuong-men-ngoc-bong.js",
+  "final_url": "https://minhlong.com/products/tuong-bao-ma-23-9-cm-tuong-men-ngoc-bong.js",
+  "retrieved_at": "2026-10-10T20:37:13.390922+07:00",
+  "sha256": "2f6b0e992293dc16534f4bb37150041db3c7ca67989a422c6282c0eb49b76007",
+  "bytes": 8238,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:14 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"6c9413488c1045338ac7aacf857d9ceb\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "c3acfc657aea4642700fcef8e0107bae",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

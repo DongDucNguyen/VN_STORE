@@ -1,0 +1,82 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/00492226-sm-01_9fa7de67a5e545f5a8c8118c3b0c5628.png",
+  "handle": "hoa-chuong-mau-tim-de-phang",
+  "id": 1075498319,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/00492226-sm-01_9fa7de67a5e545f5a8c8118c3b0c5628.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706784958,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/00492226-sm-01_9fa7de67a5e545f5a8c8118c3b0c5628.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/00492226-sm-01_9fa7de67a5e545f5a8c8118c3b0c5628.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Hoa chuông màu tím đế phẳng"
+      ]
+    }
+  ],
+  "price": 356400000,
+  "price_max": 356400000,
+  "price_min": 356400000,
+  "price_varies": false,
+  "tags": [
+    "Sứ nội thất",
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Hoa chuông màu tím đế phẳng",
+  "type": "Khác",
+  "url": "/products/hoa-chuong-mau-tim-de-phang",
+  "pagetitle": "Hoa chuông màu tím đế phẳng",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172108457,
+      "barcode": "A001_00492226",
+      "available": true,
+      "price": 356400000,
+      "sku": "A001_00492226",
+      "option1": "Hoa chuông màu tím đế phẳng",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Hoa chuông màu tím đế phẳng"
+      ],
+      "inventory_quantity": 2,
+      "old_inventory_quantity": 2,
+      "title": "Hoa chuông màu tím đế phẳng",
+      "weight": 4000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:41:02.791Z",
+  "created_at": "2026-07-09T09:01:05.302Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,0 +1,22 @@
+{
+  "url": "https://vietcraft.vn/about-us/",
+  "final_url": "https://vietcraft.vn/about-us/",
+  "retrieved_at": "2026-10-10T20:35:04.173600+07:00",
+  "sha256": "50f7017cb2b66258c3650b8619c7d6fbbf5f4de08c0548696397047ceeffe16f",
+  "bytes": 218689,
+  "headers": {
+    "Date": "Sat, 10 Oct 2026 13:35:04 GMT",
+    "Server": "nginx/1.29.8",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Vary": "accept,content-type,Accept-Encoding",
+    "Permissions-Policy": "private-state-token-redemption=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\"), private-state-token-issuance=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\")",
+    "Link": "<https://vietcraft.vn/wp-json/>; rel=\"https://api.w.org/\", <https://vietcraft.vn/wp-json/wp/v2/pages/390>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://vietcraft.vn/?p=390>; rel=shortlink",
+    "Cache-Control": "max-age=7200",
+    "Expires": "Sat, 10 Oct 2026 15:35:03 GMT",
+    "X-Endurance-Cache-Level": "0",
+    "X-nginx-cache": "WordPress",
+    "X-Server-Cache": "true",
+    "X-Proxy-Cache": "MISS",
+    "Transfer-Encoding": "chunked"
+  }
+}

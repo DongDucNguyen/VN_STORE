@@ -1,0 +1,82 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/0081004-sm-01_1a3c830165d44763b10cd477cdc1a5ec.png",
+  "handle": "chau-10-cm-cau-vong-vang",
+  "id": 1075498037,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/0081004-sm-01_1a3c830165d44763b10cd477cdc1a5ec.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706781581,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/0081004-sm-01_1a3c830165d44763b10cd477cdc1a5ec.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/0081004-sm-01_1a3c830165d44763b10cd477cdc1a5ec.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Chậu 10 cm + Cầu vòng vàng"
+      ]
+    }
+  ],
+  "price": 831600000,
+  "price_max": 831600000,
+  "price_min": 831600000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Sứ nội thất"
+  ],
+  "template_suffix": null,
+  "title": "Chậu 10 cm + Cầu vòng vàng",
+  "type": "Khác",
+  "url": "/products/chau-10-cm-cau-vong-vang",
+  "pagetitle": "Chậu 10 cm + Cầu vòng vàng",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172107697,
+      "barcode": "A001_00081004",
+      "available": true,
+      "price": 831600000,
+      "sku": "A001_00081004",
+      "option1": "Chậu 10 cm + Cầu vòng vàng",
+      "option2": "",
+      "option3": "",
+      "options": [
+        "Chậu 10 cm + Cầu vòng vàng"
+      ],
+      "inventory_quantity": 1,
+      "old_inventory_quantity": 1,
+      "title": "Chậu 10 cm + Cầu vòng vàng",
+      "weight": 5000,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-13T01:29:02.727Z",
+  "created_at": "2026-07-09T08:48:09.926Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

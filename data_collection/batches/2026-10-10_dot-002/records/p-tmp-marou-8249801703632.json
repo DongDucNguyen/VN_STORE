@@ -1,0 +1,115 @@
+{
+  "id": 8249801703632,
+  "title": "Set Of 3 Mini Chocolate Bars - Halloween Edition",
+  "handle": "set-3-mini-chocolate-bars-halloween",
+  "body_html": "<p>Our mini chocolate collection, wrapped in a festive designs, makes a perfect gift for chocolate lovers ones this Halloween Edition.</p>",
+  "published_at": "2026-10-02T09:05:59+07:00",
+  "created_at": "2025-02-10T22:26:12+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Chocolate Gifts",
+    "Halloween",
+    "seasonal"
+  ],
+  "variants": [
+    {
+      "id": 44411042562256,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0009",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "215000",
+      "grams": 72,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249801703632,
+      "created_at": "2025-02-10T22:26:12+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 47731596132560,
+      "created_at": "2026-09-18T11:10:46+07:00",
+      "position": 1,
+      "updated_at": "2026-09-18T11:10:47+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/set-3-mini-chocolate-bars-halloween.jpg?v=1789704647",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 44258107261136,
+      "created_at": "2025-11-17T11:31:42+07:00",
+      "position": 2,
+      "updated_at": "2026-02-25T11:35:12+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 41390316617936,
+      "created_at": "2025-03-17T08:35:32+07:00",
+      "position": 3,
+      "updated_at": "2026-02-25T11:35:12+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/Vanilla_24G_EN.webp?v=1771994112",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 47731595706576,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 4,
+      "updated_at": "2026-09-18T11:10:46+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnam-48-dark-milk-chocolate-mini-bar-halloween-front.jpg?v=1789704646",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 47731595608272,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 5,
+      "updated_at": "2026-09-18T11:10:45+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnamese-vanilla-44-white-chocolate-mini-bar-halloween-front.jpg?v=1789704645",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 47731595542736,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 6,
+      "updated_at": "2026-09-18T11:10:45+07:00",
+      "product_id": 8249801703632,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/tien-giang-70-dark-chocolate-mini-bar-halloween-front.jpg?v=1789704645",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

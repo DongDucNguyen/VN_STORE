@@ -1,6 +1,6 @@
 # VNStore — Việc ưu tiên tiếp theo (backlog sống)
 
-Cập nhật: 10/10/2026, sau [so sánh bootstrap](2026-10-10_GD4_so-sanh-bootstrap.md).
+Cập nhật: 10/10/2026 (khuya), sau khi nhập đợt 002 — 330 sản phẩm ([báo cáo](2026-10-10_GD1_nhap-dot-002.md)); trước đó TensorRT ([báo cáo](2026-10-10_GD4_tensorrt.md)); trước đó P1.6/P1.7 + bộ lọc tìm ảnh ([pool + đối chiếu](2026-10-10_GD3_pool-keyword-va-doi-chieu.md), [profile int8/fp16](2026-10-10_GD4_profile-int8-fp16.md), [bộ lọc ảnh](2026-10-10_GD6_bo-loc-tim-anh.md)).
 
 Khác với các báo cáo theo đợt (không sửa lại), file này **được sửa mỗi phiên**: đánh dấu việc xong, thêm việc mới phát hiện, sắp lại thứ tự. Khi làm một mục thì ghi báo cáo đợt như thường lệ ([TEMPLATE](TEMPLATE.md)), rồi cập nhật mục đó ở đây kèm link báo cáo.
 
@@ -9,13 +9,14 @@ Khác với các báo cáo theo đợt (không sửa lại), file này **đượ
 Toàn bộ phần **mã nguồn** cho demo đã có:
 - catalog/API/UI tìm bằng chữ;
 - tìm bằng giọng nói/ảnh với 5 adapter ONNX chạy trên GPU (PhoWhisper base/small/small-int8 + Silero VAD, SigLIP2-base, DINOv2-base);
-- công cụ thu dữ liệu (`#/collect/voice`, `#/collect/image`), nhập, audit, đánh giá và so sánh có CI.
+- công cụ thu dữ liệu (`#/collect/voice`, `#/collect/image`), nhập, audit, đánh giá và so sánh có CI;
+- công cụ duyệt nhãn: `#/review/voice` (bản chép lời), packet pool + trang chấm judgment ảnh, packet keyword toàn catalog hoặc theo pool (107 truy vấn dev), `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh; protocol latency cố định.
 
 Điểm nghẽn là **dữ liệu do con người tạo**, chưa có gì:
-- 30/30 sản phẩm còn `draft`, 0 published;
-- 45/45 ảnh có quyền `unknown`;
-- 14/30 sản phẩm chưa có giá;
-- 12 truy vấn keyword seed chưa duyệt, packet 360 cặp chờ chấm;
+- 330/330 sản phẩm còn `draft`, 0 published (catalog `seed-003-dot-002`);
+- 814/814 ảnh có quyền `unknown`;
+- 74/330 sản phẩm chưa có giá;
+- 12 truy vấn keyword seed + 107 truy vấn dev ứng viên chưa duyệt; packet pool trên catalog mới: seed 138 cặp, dev 1.361 cặp (+ no-match chấm đủ catalog) chờ chấm;
 - **0 clip giọng nói, 0 ảnh query thật**.
 
 Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), chưa chọn được model theo PLAN §8.3.
@@ -24,14 +25,15 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 | Việc | Lệnh / ghi chú |
 |---|---|
-| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — mốc gần nhất: 7/7, 348 backend (+1 skip), 88 E2E |
+| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — mốc gần nhất: 8/8, 380 backend (+1 skip), 22 test Pillow (qua `.venv-ml`), 98 E2E |
 | Test model thật (tùy chọn) | `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py` — 6/6 |
 | Hai môi trường Python | `.venv` (API, test, script; không có Pillow/ML) và `.venv-ml` (thêm onnxruntime-gpu, Pillow…, theo `backend/requirements-ml.txt`) |
-| **PyTorch bị chặn** | Windows Application Control chặn DLL của torch trên máy này. **Không tìm cách vượt chính sách.** Chỉ dùng ONNX Runtime; việc cần torch (fine-tune, tự export ONNX) phải làm trên máy khác |
+| **PyTorch bị chặn** | Windows Application Control chặn DLL của torch trên máy này. **Không tìm cách vượt chính sách.** Chỉ dùng ONNX Runtime; việc cần torch (fine-tune, tự export ONNX) phải làm trên máy khác. TensorRT 10.16 (`backend/requirements-ml-trt.txt`) nạp được; bật bằng `VNSTORE_ML_TRT=1` (fp16 bị chặn với ASR vì cho kết quả hỏng) |
 | E2E dùng adapter GIẢ | `tests.fakes:FakeASR`, `ByteHistogramEmbedder` + micro giả của Chrome; số đo E2E không phải benchmark |
 | Chạy demo với model thật | Xem README mục "Model thật (ONNX Runtime)"; chỉ mục ảnh ở `artifacts/indexes/image/` (dựng lại bằng `scripts/build_indexes/build_image_index.py` khi ảnh/model đổi) |
-| Shell trên Windows | Heredoc chứa một số ký tự đặc biệt có thể lỗi trong Bash tool; khi đó ghi script Python vào thư mục scratchpad rồi chạy. Thêm `-X utf8` khi in tiếng Việt |
-| Working tree | Đầu phiên 10/10 còn **rất nhiều thay đổi chưa commit** (chỉ có commit "Upload version 1"). Kiểm tra `git status`, nhắc người dùng commit trước khi làm việc lớn |
+| Shell trên Windows | Heredoc chứa một số ký tự đặc biệt (ví dụ `'` trong văn bản tiếng Việt, `\\`) có thể lỗi trong Bash tool; khi đó ghi script Python vào thư mục scratchpad rồi chạy. Thêm `-X utf8` khi in tiếng Việt |
+| Commit | **Chỉ người dùng được commit** (yêu cầu 10/10). Claude không `git commit`/push/amend, không stage; chỉ báo những gì đã đổi |
+| Thư mục staging của collector khác | `tmp_data/` (đợt 002) đã được kiểm tra, nhập và xóa ngày 10/10 theo yêu cầu. Nếu lại có thư mục do chương trình khác đang ghi: **không chạm vào** cho tới khi người dùng cho phép; nhập bằng `scripts/import_raw/import_staging.py` |
 
 **Quy tắc không được vi phạm** (PLAN + các đợt trước):
 - Không tự tạo nhãn/judgment/transcript_review, không ghi tên người duyệt thay người, không đổi `usage_rights` sang trạng thái có quyền, không chuyển `draft` sang `published` khi chưa có người duyệt.
@@ -42,21 +44,19 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 ## 2. P0 — Đang chặn tiến độ (cần người; Claude chỉ hỗ trợ)
 
 ### P0.1 Commit working tree
-- **Vì sao**: rủi ro mất việc; phiên sau khó biết thay đổi nào của đợt nào.
-- **Ai**: người dùng. Message gợi ý có trong lịch sử hội thoại 10/10; có thể tách commit theo đợt (taxonomy/công cụ GĐ2–3 và voice/ảnh GĐ4).
-- **Xong khi**: `git status` sạch (trừ file sinh ra trong `artifacts/`, vốn bị `.gitignore`).
+- Commit `e89cfd0`, `08320a6` đã làm sạch working tree đầu phiên tối 10/10. Các đợt sau đó chưa commit; **người dùng tự commit**, Claude không commit.
 
-### P0.2 Duyệt 30 sản phẩm draft + quyền ảnh → published đầu tiên
+### P0.2 Duyệt 330 sản phẩm draft + quyền ảnh → published đầu tiên
 - **Vì sao**: chế độ mặc định hiện hiển thị 0 sản phẩm; baseline keyword và benchmark ảnh cần catalog ổn định.
-- **Ai**: nhóm dữ liệu (xin phép 5 thương hiệu: Minh Long/Lys, Marou, Hanoia, Kilomet109, Vietcraft).
+- **Ai**: nhóm dữ liệu (xin phép 7 thương hiệu/nhà sản xuất: Minh Long/Lys, Marou, Hanoia, Kilomet109, Vietcraft, Hanhsilk, SenSilk). Có thể publish dần từng phần, không cần chờ đủ 330.
 - **Cách**: checklist [data_collection/README.md](../../data_collection/README.md) và [docs/huong-dan-nhap-lieu.md](../../docs/huong-dan-nhap-lieu.md). Chạy `.venv/Scripts/python scripts/validate_catalog/readiness.py` để xem từng sản phẩm còn thiếu gì.
 - **Xong khi**: ≥1 sản phẩm `published` có `reviewed_at`, ảnh có quyền kèm bằng chứng; readiness báo đạt.
 - **Lưu ý**: đổi DB sẽ làm lệch `catalog_sha256` của packet keyword và manifest ảnh, nên phải đối chiếu lại nhãn, không chỉ thay hash. Chỉ mục ảnh sẽ báo `index_stale`, cần dựng lại.
 
-### P0.3 Chấm packet keyword 360 cặp → baseline keyword đầu tiên
+### P0.3 Chấm packet keyword → baseline keyword đầu tiên
 - **Ai**: 2 người chấm + 1 người phân xử.
 - **Cách**:
-  1. Mở [trang duyệt](../../artifacts/keyword_review/2026-10-10_seed-002-taxonomy/index.html), chấm, rồi xuất JSONL.
+  1. Mở packet pool trên catalog `seed-003-dot-002`: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-10_seed-003_seed-12-pool/index.html) và [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-10_seed-003_dev-candidates-107-pool/index.html). Packet cũ (seed-002) đã lệch hash, audit từ chối. Tạo lại bằng `prepare_review.py --pool-top 10 --random 5` nếu mất. Chấm rồi xuất JSONL; hai người dùng cùng một packet. Nhãn nháp chỉ xét 30 sản phẩm cũ; một số truy vấn "no-match" nháp (ví dụ "bàn ghế mây", "áo dài cưới") nay có thể có đáp án.
   2. `scripts/benchmark/audit_reviews.py` → phân xử theo [review_protocol.md](../../benchmarks/keyword/review_protocol.md).
   3. `eval_keyword.py --split dev`.
 - **Xong khi**: có run keyword `evaluation_status` khác `smoke_unverified` trên dev, kèm nDCG@10/Success@5 (mục tiêu PLAN: Success@5 ≥ 85%).
@@ -66,7 +66,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 - **Cách**:
   1. Thu bằng `#/collect/voice` (24 câu mẫu, [prompts.ts](../../frontend/src/collect/prompts.ts)).
   2. Nhập: `scripts/benchmark/import_voice_session.py <zip> --dry-run`, rồi nhập thật.
-  3. Người duyệt nghe lại, sửa `reference_text`, điền `transcript_review`.
+  3. Người duyệt mở zip ở `#/review/voice`, nghe lại, sửa câu, xác nhận, xuất zip đã duyệt; nhập bằng `import_voice_session.py` (phiên mới) hoặc `apply_voice_review.py` (phiên đã nhập).
   4. Xem [benchmarks/voice/README.md](../../benchmarks/voice/README.md).
 - **Xong khi (pilot)**: 2–3 người nói, ~60 clip dev đã duyệt. **Mục tiêu PLAN**: 600 clip / 40 người, cân đối Bắc/Trung/Nam, có clip ồn/im lặng/ngoài catalog.
 
@@ -76,43 +76,17 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
   1. Thu bằng `#/collect/image`.
   2. Nhập: `scripts/benchmark/import_image_session.py <zip>`; script tự chạy audit.
   3. Chạy `python scripts/benchmark/audit_image_pixels.py` để tìm ảnh gần trùng.
-  4. Người duyệt điền `independence_review` và `judgment`.
+  4. Tạo packet `prepare_image_review.py --split dev --adapter app.ml.image:SigLIP2Base --adapter app.ml.image:DINOv2Base --out …`, người chấm điền judgment + đánh giá độc lập trên trang, áp bằng `apply_image_judgments.py`.
 - **Xong khi (pilot)**: ~60 query dev có judgment, gồm ảnh no-match và ảnh khó (nền phức tạp, nhiều vật, ánh sáng vàng, bao bì có chữ).
 
 ## 3. P1 — Claude làm được ngay, giảm việc tay cho P0
 
-### P1.1 Trang duyệt bản chép lời (`#/review/voice`)
-- **Vì sao**: P0.4 hiện phải sửa `reference_text` và `transcript_review` trực tiếp trong JSON.
-- **Làm**: mở zip của phiên (đọc định dạng zip "store" do [zip.ts](../../frontend/src/collect/zip.ts) tạo, chỉ cần đọc local header), phát từng clip, sửa câu, nhập tên người duyệt, xuất zip mới. Tùy chọn: hiện bản chép lời của PhoWhisper làm gợi ý nhưng **không tự điền**. `import_voice_session.py` cần nhận thêm bản đã duyệt, hoặc thêm script áp review vào manifest theo qid.
-- **Xong khi**: E2E ghi → duyệt → nhập đạt; manifest có `transcript_review` do người nhập.
+P1.1–P1.8 đã xong — xem "Đã xong gần đây". Mục mới phát sinh sau khi nhập đợt 002: P1.9.
 
-### P1.2 Pool + trang chấm judgment cho ảnh query
-- **Vì sao**: PLAN §8.1 yêu cầu gom top kết quả của mọi baseline cộng mẫu ngẫu nhiên để chấm; hiện chưa có công cụ.
-- **Làm**:
-  1. Script tạo packet: với mỗi query trong `benchmarks/image/manifest.json`, lấy top 10 của SigLIP2, DINOv2 và baseline giả, cộng vài sản phẩm ngẫu nhiên, rồi sinh trang HTML chấm offline, tương tự `scripts/benchmark/prepare_review.py` + `review_template.html` của keyword.
-  2. Script áp kết quả chấm vào `judgment`, chạy audit.
-- **Xong khi**: chấm xong một packet thử trên dữ liệu tổng hợp (E2E/pytest), audit `recorded_checks_passed` với judgment do người nhập.
-
-### P1.3 Mở rộng bộ truy vấn keyword (12 → ~100 dev → 600)
-- **Làm**:
-  1. Soạn truy vấn ứng viên theo ý định: tìm món cụ thể, nhu cầu ("quà tặng mẹ"), giá, phủ định, không dấu/Telex, vùng miền ("ly/cốc", "chén/bát"), thương hiệu/làng nghề, no-match ~10–15%.
-  2. Ghi `verified=false`, nhóm `group_id` cho các câu diễn đạt lại.
-  3. Sinh packet bằng `prepare_review.py`.
-- **Xong khi**: file JSONL mới + packet chờ chấm; tuyệt đối không tự ghi nhãn đã duyệt.
-
-### P1.4 Mở rộng catalog 30 → 300 (đợt 002+)
-- **Hiện trạng**: 30 sản phẩm thuộc 5 nhóm gốc (mây tre cói 7, gốm sứ 6, thực phẩm 6, dệt may 6, gỗ/sơn mài 5); 8 sản phẩm không có brand; 19/30 chỉ có 1 ảnh. Mục tiêu PLAN: ~60/nhóm, 2–4 ảnh/sản phẩm.
-- **Làm**: theo pipeline sẵn có: `data_collection/raw/*.json` → `scripts/import_raw/build_drafts.py` → `safe_import.py` (giữ chỉnh sửa biên tập, diff, snapshot) → `collect_images.py`/`apply_images.py`. Nguồn ưu tiên là website chính thức. Không bịa giá; thiếu giá thì để `null`.
-- **Xong khi**: catalog mới validate đạt, báo cáo thiếu dữ liệu, chỉ mục ảnh dựng lại, `run_all_tests` đạt. Mọi sản phẩm mới vẫn là `draft`.
-- **Lưu ý**: đổi catalog sẽ vô hiệu hóa packet/manifest đang gắn hash cũ; nên chốt với người dùng trước khi làm, nếu P0.3/P0.5 đang chấm dở.
-
-### P1.5 Protocol đo latency cố định
-- **Vì sao**: hai lượt cùng cấu hình PhoWhisper-base cho p95 506 so với 916 ms; chưa so được độ trễ.
-- **Làm**:
-  - Thêm vào `eval_voice.py`/`eval_image.py`: số lượt lặp, warm-up, ghi tên GPU/driver/provider ORT và peak VRAM (`nvidia-smi --query-gpu=memory.used`), cảnh báo khi máy đang tải.
-  - Đo riêng cold start.
-  - Profile bản int8 (chậm ~3 lần trên CUDA EP); thử `PhoWhisperSmall` fp16 hoặc TensorRT EP.
-- **Xong khi**: hai lượt liên tiếp cùng cấu hình cho p95 chênh <10%.
+### P1.9 Gom họ sản phẩm cho catalog 330 (trước khi chia split benchmark)
+- **Vì sao**: đợt 002 có nhiều SKU anh em (size S/M/L, màu, hộp quà cùng dòng). Smoke gallery: SigLIP2 Hit@1 0,58, mọi lần sai đều cùng nhóm gốc. Benchmark ảnh/keyword phải giữ cùng họ trong một split (PLAN §8.1).
+- **Làm**: script đề xuất `family_id` (cùng nguồn + tên bỏ size/màu/mã, cụm ảnh dHash gần), xuất bảng cho người xác nhận; không tự ghi vào catalog.
+- **Xong khi**: file đề xuất họ + trang duyệt; người xác nhận trước khi dùng cho split.
 
 ## 4. P2 — Sau khi có dữ liệu dev
 
@@ -120,6 +94,8 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 |---|---|
 | Sàng lọc model trên dev (PLAN §8.3 bước 2–3) | `eval_voice.py`/`eval_image.py` cho mọi adapter, rồi `compare_runs.py` (CI theo người nói/họ, cần ≥5 cụm). Chọn 2 ứng viên mỗi modality |
 | Hiệu chỉnh ngưỡng trên dev | VAD (0,5; 250 ms), năng lượng −60 dBFS, `RRF_K=60`, `IMAGE_TOP_K=50`, ngưỡng no-match ảnh (dựa vào `top_similarity` mà `eval_image.py` ghi) |
+| Gộp hạng ảnh + chữ (RRF) | Catalog 330: ảnh gallery của một giỏ mây chỉ ảnh → hạng 1, thêm chữ "bằng mây" → hạng 7, vì BM25 với từ chung xếp hàng chục giỏ mây khác ngang ảnh. Thử RRF có trọng số/`RRF_K` khác, chỉ dùng chữ làm bộ lọc/boost khi từ quá chung; đo trên dev có nhãn ([báo cáo](2026-10-10_GD1_nhap-dot-002.md)) |
+| No-match keyword: khớp lỏng qua trường không dấu | Smoke trên nhãn nháp: 10/12 truy vấn no-match vẫn có kết quả, ví dụ "nước mắm Phú Quốc" → "bát tre cuộn phủ sơn", "gạo ST25" → "bát gáo dừa" ([báo cáo](2026-10-10_GD3_truy-van-keyword-dev.md)). Thử tỉ lệ âm tiết tối thiểu phải khớp, hạ trọng số khớp không dấu khi bản có dấu khác nghĩa, hoặc ngưỡng điểm; **chỉ đánh giá trên dev đã duyệt** (Success@5 không được giảm, false accept no-match giảm) |
 | OCR bao bì (PLAN §7.2 bước 3) | Thử RapidOCR/PaddleOCR bản ONNX (chạy được không cần torch), đo trên ảnh bao bì Marou/Minh Long; gộp hạng bằng RRF như ảnh+chữ |
 | Semantic retrieval BGE-M3 (PLAN §5 bước 7) | Chỉ sau khi có baseline keyword; dùng bản ONNX; giữ nếu cải thiện nDCG trên dev đủ bù độ trễ |
 | Thêm ứng viên model | OpenCLIP, ViCLIP-OT, Qwen3-ASR, PhoWhisper-medium: chưa có bản ONNX tin cậy; cần máy chạy được torch để export, hoặc tìm export chính thức. Ghi provenance như PhoWhisper-small (so hash trọng số) |
@@ -127,11 +103,16 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 ## 5. Nợ kỹ thuật nhỏ (làm khi tiện)
 
-- Trang `#/image` chưa có bảng bộ lọc như trang tìm chữ (chỉ có ô "Yêu cầu thêm").
-- `cachedHealth()` ở frontend không làm mới trạng thái model cho đến khi tải lại trang.
 - Tiền xử lý ảnh (NumPy) chưa được đối chiếu số học với image processor của Transformers; cần máy có torch để so.
 - Bản ONNX PhoWhisper-small là của bên thứ ba (`huuquyet`); nên tự export lại và so đầu ra khi có môi trường torch hợp lệ.
-- Bộ test Pillow `scripts/benchmark/tests/test_image_pixels.py` chưa nằm trong `run_all_tests.py`; có thể thêm bước tùy chọn chạy bằng `.venv-ml`.
+- 26 thư mục `artifacts/keyword-review-test-*` do E2E cũ để lại (test nay đã tự dọn); xóa tay được.
+- Trang `#/image` gửi lại ảnh mỗi lần đổi bộ lọc (một lượt embedding mới); có thể cache embedding của ảnh truy vấn nếu cần.
+- Pool keyword/ảnh hiện chỉ gồm các baseline đang có; khi thêm hệ thống mới (BGE-M3, OCR…) cần pool bổ sung và chấm thêm.
+- Protocol latency chưa đo RAM CPU (peak RSS); đỉnh VRAM là của toàn máy.
+- `assets/` 283 MB sau đợt 002 (ảnh gốc, vài PNG 5 MB) + hồ sơ đợt 65 MB: cân nhắc Git LFS/lưu ngoài repo (người dùng quyết định khi commit).
+- 9 tên sản phẩm viết hoa toàn bộ và nhiều tên song ngữ/Anh (Marou, Vietcraft) giữ như nguồn; cần biên tập khi duyệt.
+- Truy vấn "sản phẩm đang giảm giá" khớp "Giá đỡ điện thoại" qua từ "giá"; cân nhắc khi xử lý no-match.
+- TensorRT: chưa đo hai lượt lặp và cold start có cache cho small; `artifacts/trt-cache` không tự dọn engine cũ khi đổi model/driver.
 - Starlette cảnh báo `httpx` deprecated trong test (1 warning); cân nhắc `httpx2` khi nâng cấp phụ thuộc.
 
 ## 6. Khi xong một mục
@@ -142,4 +123,8 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 ## Đã xong gần đây
 
+- 10/10 (khuya): P1.4 nhập đợt 002 — 300 sản phẩm từ collector riêng, kiểm tra kỹ (checksum, trùng, đối chiếu record, lỗi bóc tách) rồi nhập bằng `import_staging.py` qua `safe_import`; catalog `seed-003-dot-002` 330 sản phẩm; dựng lại chỉ mục ảnh, packet pool mới; xóa `tmp_data/` ([báo cáo](2026-10-10_GD1_nhap-dot-002.md)).
+- 10/10 (khuya): P1.8 TensorRT EP tùy chọn (`VNSTORE_ML_TRT=1`, profile shape động, cache engine): cùng WER/Hit@1, p95 ASR −2–9%, ảnh −6–7%, cold start 37–42 giây khi dựng engine; fp16 hỏng với PhoWhisper nên bị chặn; không bật mặc định ([báo cáo](2026-10-10_GD4_tensorrt.md)).
+- 10/10 (khuya): P1.6 packet keyword theo pool + trang duyệt/audit hỗ trợ pool, `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh ([báo cáo](2026-10-10_GD3_pool-keyword-va-doi-chieu.md)); P1.7 profile: int8 chậm trên CUDA vì `MatMulInteger` chạy CPU, fp16 (`PhoWhisperBaseFp16`) không nhanh hơn, small fp32 trên CPU p95 2,4 giây ([báo cáo](2026-10-10_GD4_profile-int8-fp16.md)); bộ lọc trên `#/image` + `filters` cho `/search/image` ([báo cáo](2026-10-10_GD6_bo-loc-tim-anh.md)).
+- 10/10 (tối): P1.1 trang duyệt bản chép lời `#/review/voice` + `apply_voice_review.py` ([báo cáo](2026-10-10_GD3_duyet-ban-chep-loi.md)); P1.2 packet pool + trang chấm judgment ảnh + `apply_image_judgments.py` ([báo cáo](2026-10-10_GD3_cham-judgment-anh.md)); P1.3 107 truy vấn keyword dev ứng viên + packet ([báo cáo](2026-10-10_GD3_truy-van-keyword-dev.md)); P1.5 protocol latency, 2 lượt chênh p95 1,7% ([báo cáo](2026-10-10_GD4_protocol-latency.md)); nợ nhỏ: `cachedHealth` TTL 15 giây, bước test Pillow trong `run_all_tests.py`, E2E tự dọn packet tạm.
 - 10/10: khung voice/ảnh ([báo cáo](2026-10-10_GD4_khung-adapter-voice-anh.md)), adapter ONNX + smoke ([báo cáo](2026-10-10_GD4_adapter-onnx-model-that.md)), công cụ thu âm ([báo cáo](2026-10-10_GD3_cong-cu-thu-am.md)) và thu ảnh ([báo cáo](2026-10-10_GD3_cong-cu-thu-anh.md)), so sánh bootstrap ([báo cáo](2026-10-10_GD4_so-sanh-bootstrap.md)).

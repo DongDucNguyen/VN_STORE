@@ -1,0 +1,81 @@
+{
+  "id": 8249791840464,
+  "title": "Ironbar - 65% Dark Chocolate Protein Bar - 10X55G Vegan",
+  "handle": "iron-bar-65-dark-chocolate-protein-bar-10-x-55g",
+  "body_html": "12G PLANT-BASED PROTEIN | GLUTEN FREE | NO PRESERVATIVES\r<br>Power on with Marou's new plant-based choc protein bar. Vegan, gluten-free and clean from preservatives, each bar is coated with our award-winning 65% dark chocolate and packs in 12g of nutrient-dense plant protein. Toasted pumpkin seeds and peanuts, crunchy cashews and pea protein make a guilt-free on the go indulgence.",
+  "published_at": "2025-02-10T21:56:22+07:00",
+  "created_at": "2025-02-10T21:56:21+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Gifts",
+    "snack",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44411027882192,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0901",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "850000",
+      "grams": 550,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249791840464,
+      "created_at": "2025-02-10T21:56:21+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41445532008656,
+      "created_at": "2025-04-01T09:37:57+07:00",
+      "position": 1,
+      "updated_at": "2025-04-01T09:39:01+07:00",
+      "product_id": 8249791840464,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/iron-bar-65-dark-chocolate-protein-bar-10-x-55g.webp?v=1743475141",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 41265584341200,
+      "created_at": "2025-02-10T21:56:06+07:00",
+      "position": 2,
+      "updated_at": "2025-02-10T21:56:10+07:00",
+      "product_id": 8249791840464,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vegan-bar.webp?v=1739199370",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 43567796256976,
+      "created_at": "2025-09-26T16:15:58+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:52:42+07:00",
+      "product_id": 8249791840464,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/iron-bar-65-dark-chocolate-protein-bar-55g.webp?v=1758880362",
+      "width": 4634,
+      "height": 4630
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

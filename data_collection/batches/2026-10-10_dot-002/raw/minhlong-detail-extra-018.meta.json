@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la.js",
+  "final_url": "https://minhlong.com/products/bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la.js",
+  "retrieved_at": "2026-10-10T20:54:36.388572+07:00",
+  "sha256": "2e885a796ac3b529db3ed9987fcb5ce3c5665e5e221e9e44af8c3c2257451250",
+  "bytes": 6183,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"da77c798384a4cfc8656771b9b264323\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "be40dba5ae4ddc054be7d70498b85241",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/nen-thom-k1-huong-ha-mau-xanh-duong-1.js",
+  "final_url": "https://minhlong.com/products/nen-thom-k1-huong-ha-mau-xanh-duong-1.js",
+  "retrieved_at": "2026-10-10T20:37:15.615086+07:00",
+  "sha256": "d4f543a7d40fbf60e95047545eab2fbf44bed714928ad4720f5f943b86016126",
+  "bytes": 3868,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:16 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"453221f08a474db0b1c5fe4fc0ad4c9d\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "31a41157ec9e38d24c6f847a399eaf38",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": 8352337199312,
+  "title": "Vietnam Dark Milk 48% Chocolate Mini Bar - Halloween Edition",
+  "handle": "vietnam-48-dark-milk-chocolate-mini-bar-halloween",
+  "body_html": "<p>Share the love with our mini chocolate collection,  featuring the delicately enchanting Vietnamese Dark Milk 48% Chocolate bar.</p>",
+  "published_at": "2026-10-02T09:05:52+07:00",
+  "created_at": "2025-09-17T13:58:47+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Maison Marou",
+  "product_type": "",
+  "tags": [
+    "best sellers",
+    "Halloween",
+    "seasonal",
+    "Tablets"
+  ],
+  "variants": [
+    {
+      "id": 44702033150160,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHMI0005",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "66000",
+      "grams": 24,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8352337199312,
+      "created_at": "2025-09-17T13:58:48+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 47731595706576,
+      "created_at": "2026-09-18T11:10:44+07:00",
+      "position": 1,
+      "updated_at": "2026-09-18T11:10:46+07:00",
+      "product_id": 8352337199312,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnam-48-dark-milk-chocolate-mini-bar-halloween-front.jpg?v=1789704646",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 47731596001488,
+      "created_at": "2026-09-18T11:10:45+07:00",
+      "position": 2,
+      "updated_at": "2026-09-18T11:10:47+07:00",
+      "product_id": 8352337199312,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/vietnam-48-dark-milk-chocolate-mini-bar-halloween-back.jpg?v=1789704647",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 44258107261136,
+      "created_at": "2025-11-17T11:31:42+07:00",
+      "position": 3,
+      "updated_at": "2026-02-25T11:35:12+07:00",
+      "product_id": 8352337199312,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/naked-chocolate-bar-24g.webp?v=1771994112",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

@@ -101,6 +101,10 @@ export const emptyFilters = (): Filters => ({
   price_min: null, price_max: null,
 });
 
+export const hasFilters = (f: Filters): boolean =>
+  f.price_min != null || f.price_max != null ||
+  [f.category_ids, f.brand_ids, f.place_ids, f.materials, f.colors, f.claim_types].some((x) => x.length > 0);
+
 export interface SearchResponse {
   query: string;
   interpreted_query: {
@@ -189,23 +193,30 @@ export const api = {
     }),
   searchVoice: (wav: Blob) =>
     request<SearchResponse>("/search/voice", { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav }),
-  searchImage: (image: Blob, text = "") =>
-    request<SearchResponse>(`/search/image?${new URLSearchParams({ text })}`, {
+  searchImage: (image: Blob, text = "", filters?: Filters) =>
+    request<SearchResponse>(`/search/image?${new URLSearchParams({
+      text, ...(filters && hasFilters(filters) ? { filters: JSON.stringify(filters) } : {}),
+    })}`, {
       method: "POST",
       headers: { "Content-Type": image.type || "image/jpeg" },
       body: image,
     }),
 };
 
-let healthCache: Promise<Health> | null = null;
+let healthCache: { at: number; value: Promise<Health> } | null = null;
+const HEALTH_TTL_MS = 15_000;
 
-/** /health dùng chung cho các nút giọng nói/ảnh; lỗi thì lần sau hỏi lại. */
+/** /health dùng chung cho các nút giọng nói/ảnh. Hỏi lại sau HEALTH_TTL_MS để thấy model vừa bật/tắt
+ *  mà không cần tải lại trang; lỗi thì lần sau hỏi lại ngay. */
 export function cachedHealth(): Promise<Health> {
-  if (!healthCache) {
-    healthCache = api.health();
-    healthCache.catch(() => (healthCache = null));
+  if (!healthCache || Date.now() - healthCache.at > HEALTH_TTL_MS) {
+    const value = api.health();
+    healthCache = { at: Date.now(), value };
+    value.catch(() => {
+      if (healthCache?.value === value) healthCache = null;
+    });
   }
-  return healthCache;
+  return healthCache.value;
 }
 
 export type Modality = "voice" | "image";

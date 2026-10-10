@@ -1,0 +1,98 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/031134484-sm-01_42a381f8409447159c294853a23af1d5.png",
+  "handle": "chen-com-11-5-cm-mau-don-doi-ban",
+  "id": 1075180629,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/031134484-sm-01_42a381f8409447159c294853a23af1d5.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1704924826,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/031134484-sm-01_42a381f8409447159c294853a23af1d5.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/031134484-sm-01_42a381f8409447159c294853a23af1d5.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Chén cơm"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Đôi Bạn"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "11.5 cm"
+      ]
+    }
+  ],
+  "price": 8964000,
+  "price_max": 8964000,
+  "price_min": 8964000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "Chén cơm"
+  ],
+  "template_suffix": null,
+  "title": "Chén cơm 11.5 cm - Mẫu Đơn - Đôi Bạn",
+  "type": "Mẫu Đơn",
+  "url": "/products/chen-com-11-5-cm-mau-don-doi-ban",
+  "pagetitle": "Chén cơm 11.5 cm - Mẫu Đơn - Đôi Bạn",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1171301252,
+      "barcode": "A001_031134484",
+      "available": true,
+      "price": 8964000,
+      "sku": "A001_031134484",
+      "option1": "Chén cơm",
+      "option2": "Đôi Bạn",
+      "option3": "11.5 cm",
+      "options": [
+        "Chén cơm",
+        "Đôi Bạn",
+        "11.5 cm"
+      ],
+      "inventory_quantity": 623,
+      "old_inventory_quantity": 623,
+      "title": "Chén cơm / Đôi Bạn / 11.5 cm",
+      "weight": 330,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-06-26T07:21:21.231Z",
+  "created_at": "2026-06-22T07:33:20.48Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 140
+}

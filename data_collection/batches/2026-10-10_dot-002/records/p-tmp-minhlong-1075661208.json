@@ -1,0 +1,98 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/avatar__10__dbda6c1e642a4d98aec846b494d02e98.png",
+  "handle": "dia-lot-tach-12-5-cm-camellia-chim-lac",
+  "id": 1075661208,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/avatar__10__dbda6c1e642a4d98aec846b494d02e98.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1708015093,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/avatar__10__dbda6c1e642a4d98aec846b494d02e98.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/avatar__10__dbda6c1e642a4d98aec846b494d02e98.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Dĩa lót tách"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Chim Lạc"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "12.5 cm"
+      ]
+    }
+  ],
+  "price": 4320000,
+  "price_max": 4320000,
+  "price_min": 4320000,
+  "price_varies": false,
+  "tags": [
+    "ecom",
+    "color:bo-tra-chim-lac"
+  ],
+  "template_suffix": null,
+  "title": "Dĩa lót tách 12.5 cm - Camellia - Chim Lạc",
+  "type": "Camellia",
+  "url": "/products/dia-lot-tach-12-5-cm-camellia-chim-lac",
+  "pagetitle": "Dĩa lót tách 12.5 cm - Camellia - Chim Lạc",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1172522998,
+      "barcode": "A001_041264385",
+      "available": true,
+      "price": 4320000,
+      "sku": "A001_041264385",
+      "option1": "Dĩa lót tách",
+      "option2": "Chim Lạc",
+      "option3": "12.5 cm",
+      "options": [
+        "Dĩa lót tách",
+        "Chim Lạc",
+        "12.5 cm"
+      ],
+      "inventory_quantity": 7,
+      "old_inventory_quantity": 7,
+      "title": "Dĩa lót tách / Chim Lạc / 12.5 cm",
+      "weight": 220,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-22T02:03:31.664Z",
+  "created_at": "2026-07-21T06:25:36.978Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/chen-com-11-2-cm-jasmine-lys-chi-vang.js",
+  "final_url": "https://minhlong.com/products/chen-com-11-2-cm-jasmine-lys-chi-vang.js",
+  "retrieved_at": "2026-10-10T20:54:37.709526+07:00",
+  "sha256": "1b13997cda154b641cc64a5aefd5391c9e7845ddc29f5d8411163ce7793cf591",
+  "bytes": 1994,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"31a2cd84977b42ddbd4c6ca872be3435\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "1267b57e0adc1308fc25fa26d96a4f4f",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

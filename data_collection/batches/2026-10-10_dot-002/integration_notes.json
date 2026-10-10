@@ -1,0 +1,26 @@
+{
+  "apply_status": "not_applied",
+  "catalog_path": "tmp_data/catalog.json",
+  "catalog_sha256": "9cb80a2eb1e4f56ac87d7b2f1f1b8cdabb5a8dca08d0695de2acf486a228951f",
+  "base_catalog_sha256": "41ac0dfdc090af7981773dd4689179d0ca47bfe992deed3c2713c7628c801f16",
+  "brand_id_mapping": {
+    "brand-tmp-minhlong": "brand-minh-long",
+    "brand-tmp-hanoia": "brand-hanoia",
+    "brand-tmp-marou": "brand-marou",
+    "brand-tmp-hanhsilk": null,
+    "brand-tmp-sensilk": null
+  },
+  "maker_id_mapping": {
+    "maker-tmp-vietcraft": "maker-vietnam-handicraft"
+  },
+  "category_ids": "All category IDs reuse original taxonomy. No schema change.",
+  "new_entities": "Hanhsilk and SenSilk require reviewed new brand records; existing brand metadata must not be overwritten.",
+  "image_paths": "Relative to tmp_data/catalog.json; rewrite only in a separate authorized integration step.",
+  "procedure": [
+    "Review records and source evidence; keep unresolved facts null/unknown.",
+    "Resolve permission per image and have a person review each product.",
+    "Re-read current main catalog and compare against baseline; use existing safe_import pipeline with explicit editorial mapping and review the diff.",
+    "Do not overwrite main database with this standalone 300-product catalog: it intentionally excludes the original 30 products.",
+    "Rebuild indexes and regenerate/reconcile benchmark packets only in the integration task after catalog changes."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Moonbow",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26MO06_5P_1.webp?sig=bac3c33c16b779bc00888950b4514e0906949695f75bac64a7b4540dc025b29a",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 6500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-moonbow-af26mo06.html",
+      "sku": "AF26MO06",
+      "mpn": "AF26MO06"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-moonbow-af26mo06.html",
+  "sku": "AF26MO06",
+  "mpn": "AF26MO06"
+}

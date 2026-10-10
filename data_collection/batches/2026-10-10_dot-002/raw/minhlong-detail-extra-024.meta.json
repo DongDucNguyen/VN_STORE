@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/tuong-rong-khai-duc-23-9-cm-men-ngoc-bong.js",
+  "final_url": "https://minhlong.com/products/tuong-rong-khai-duc-23-9-cm-men-ngoc-bong.js",
+  "retrieved_at": "2026-10-10T20:54:36.822657+07:00",
+  "sha256": "98a76d39cc25bab2295349e8a39ecd1b07bf8a5767e1a5050935ff4b4120597a",
+  "bytes": 1879,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"6bd36af766034f819ae118510d37df75\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "08ec15a744edb40edd7a2ccf918cb89c",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

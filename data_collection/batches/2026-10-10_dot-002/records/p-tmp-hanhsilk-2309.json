@@ -1,0 +1,219 @@
+{
+  "id": 2309,
+  "name": "GỐI BÍ LỤA TRÒN",
+  "slug": "goi-bi-lua-tron",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://hanhsilk.com/san-pham/goi-bi-lua-tron/",
+  "sku": "",
+  "short_description": "<p>Gối bí lụa tròn trang trí phòng khách</p>\n<p>Hình tròn</p>\n<p>Kích thước: đường kính 45cm, cao 17cm</p>\n<p>Màu sắc: Nhiều màu</p>\n<p>Khách hàng chọn kiểu, màu vui lòng ghi lại chú thích hoặc gọi điện đến số Hotline: 0985969864 – 0977241182 để được tư vấn.</p>",
+  "description": "<p>Gối bí tơ tằm Việt Nam với tiêu chuẩn xuất đi châu âu. Có thể dùng trang trí sofa, gối ôm, nằm, để trên xe ôtô, ngồi&#8230;. Làm hoàn toàn thủ công, ghép tỉ mỉ từng mảnh vải khâu, bông gòn&#8230;.</p>\n<p>Những chiếc gối bí lụa màu sắc tươi vui, thú vị sẽ mang đến cho tổ ấm của bạn một không gian thật xinh đẹp và tươi sáng!</p>",
+  "on_sale": false,
+  "prices": {
+    "price": "800000",
+    "regular_price": "800000",
+    "sale_price": "800000",
+    "price_range": null,
+    "currency_code": "VND",
+    "currency_symbol": "₫",
+    "currency_minor_unit": 0,
+    "currency_decimal_separator": ".",
+    "currency_thousand_separator": ",",
+    "currency_prefix": "",
+    "currency_suffix": "₫"
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\">800,000<span class=\"woocommerce-Price-currencySymbol\">&#8363;</span></span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+    {
+      "id": 2317,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1-300x225.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1-768x576.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146215467_463024581734323_6590098900330003550_n-1-600x450.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "146215467_463024581734323_6590098900330003550_n",
+      "alt": ""
+    },
+    {
+      "id": 2301,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n-300x225.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n-768x576.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/148309258_463024638400984_4737225267685760453_n-600x450.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "148309258_463024638400984_4737225267685760453_n",
+      "alt": ""
+    },
+    {
+      "id": 2300,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n-300x225.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n-768x576.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/147416797_463024678400980_80145560625638136_n-600x450.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "147416797_463024678400980_80145560625638136_n",
+      "alt": ""
+    },
+    {
+      "id": 2299,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n-300x225.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n-768x576.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/146672981_463024595067655_5046076156520993560_n-600x450.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "146672981_463024595067655_5046076156520993560_n",
+      "alt": ""
+    },
+    {
+      "id": 2310,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90249263_3589315921143628_1318902457085984768_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90249263_3589315921143628_1318902457085984768_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90249263_3589315921143628_1318902457085984768_n.jpg 720w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90249263_3589315921143628_1318902457085984768_n-225x300.jpg 225w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90249263_3589315921143628_1318902457085984768_n-600x800.jpg 600w",
+      "sizes": "(max-width: 720px) 100vw, 720px",
+      "name": "90249263_3589315921143628_1318902457085984768_n",
+      "alt": ""
+    },
+    {
+      "id": 2311,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90255530_3589316111143609_7350180135842086912_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90255530_3589316111143609_7350180135842086912_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90255530_3589316111143609_7350180135842086912_n.jpg 720w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90255530_3589316111143609_7350180135842086912_n-225x300.jpg 225w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90255530_3589316111143609_7350180135842086912_n-600x800.jpg 600w",
+      "sizes": "(max-width: 720px) 100vw, 720px",
+      "name": "90255530_3589316111143609_7350180135842086912_n",
+      "alt": ""
+    },
+    {
+      "id": 2312,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90337578_3589315621143658_9135066525701505024_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90337578_3589315621143658_9135066525701505024_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90337578_3589315621143658_9135066525701505024_n.jpg 720w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90337578_3589315621143658_9135066525701505024_n-225x300.jpg 225w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90337578_3589315621143658_9135066525701505024_n-600x800.jpg 600w",
+      "sizes": "(max-width: 720px) 100vw, 720px",
+      "name": "90337578_3589315621143658_9135066525701505024_n",
+      "alt": ""
+    },
+    {
+      "id": 2314,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n-300x198.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n-768x507.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90350598_3589315324477021_8068099793567612928_n-600x396.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "90350598_3589315324477021_8068099793567612928_n",
+      "alt": ""
+    },
+    {
+      "id": 2315,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90844765_3589315737810313_3955682961428316160_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/90844765_3589315737810313_3955682961428316160_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90844765_3589315737810313_3955682961428316160_n.jpg 720w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90844765_3589315737810313_3955682961428316160_n-225x300.jpg 225w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/90844765_3589315737810313_3955682961428316160_n-600x800.jpg 600w",
+      "sizes": "(max-width: 720px) 100vw, 720px",
+      "name": "90844765_3589315737810313_3955682961428316160_n",
+      "alt": ""
+    },
+    {
+      "id": 2316,
+      "src": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n.jpg",
+      "thumbnail": "https://hanhsilk.giahanweb.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n-300x300.jpg",
+      "srcset": "https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n.jpg 960w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n-300x225.jpg 300w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n-768x576.jpg 768w, https://hanhsilk.com/wp-content/uploads/sites/273/2023/11/91046686_3589316314476922_774548556710150144_n-600x450.jpg 600w",
+      "sizes": "(max-width: 960px) 100vw, 960px",
+      "name": "91046686_3589316314476922_774548556710150144_n",
+      "alt": ""
+    }
+  ],
+  "categories": [
+    {
+      "id": 81,
+      "name": "Decor",
+      "slug": "decor",
+      "link": "https://hanhsilk.com/danh-muc-san-pham/decor/"
+    },
+    {
+      "id": 154,
+      "name": "Gối bí/ Gối vuông",
+      "slug": "goi-bi-goi-vuong",
+      "link": "https://hanhsilk.com/danh-muc-san-pham/decor/goi-bi-goi-vuong/"
+    }
+  ],
+  "tags": [
+    {
+      "id": 213,
+      "name": "gối bí lụa",
+      "slug": "goi-bi-lua",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/goi-bi-lua/"
+    },
+    {
+      "id": 212,
+      "name": "gối bí nhung",
+      "slug": "goi-bi-nhung",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/goi-bi-nhung/"
+    },
+    {
+      "id": 214,
+      "name": "gối bí tơ tằm",
+      "slug": "goi-bi-to-tam",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/goi-bi-to-tam/"
+    },
+    {
+      "id": 90,
+      "name": "gối đũi tơ tằm",
+      "slug": "goi-dui-to-tam",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/goi-dui-to-tam/"
+    },
+    {
+      "id": 45,
+      "name": "hanhsilk",
+      "slug": "hanhsilk",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/hanhsilk/"
+    },
+    {
+      "id": 37,
+      "name": "tơ tằm 100%",
+      "slug": "to-tam-100",
+      "link": "https://hanhsilk.com/tu-khoa-san-pham/to-tam-100/"
+    }
+  ],
+  "attributes": [
+    {
+      "id": 0,
+      "name": "Màu sắc",
+      "taxonomy": null,
+      "has_variations": true,
+      "terms": [
+        {
+          "id": 0,
+          "name": "xanh nước biển",
+          "slug": "xanh nước biển"
+        },
+        {
+          "id": 0,
+          "name": "hồng",
+          "slug": "hồng"
+        },
+        {
+          "id": 0,
+          "name": "vàng",
+          "slug": "vàng"
+        },
+        {
+          "id": 0,
+          "name": "xanh lá cây",
+          "slug": "xanh lá cây"
+        }
+      ]
+    }
+  ],
+  "variations": [],
+  "has_options": false,
+  "is_purchasable": true,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "sold_individually": false,
+  "add_to_cart": {
+    "text": "Thêm vào giỏ hàng",
+    "description": "Thêm &ldquo;GỐI BÍ LỤA TRÒN&rdquo; vào giỏ hàng",
+    "url": "?add-to-cart=2309",
+    "minimum": 1,
+    "maximum": 9999,
+    "multiple_of": 1
+  },
+  "extensions": {}
+}

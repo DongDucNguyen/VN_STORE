@@ -1,0 +1,81 @@
+{
+  "id": 8249759170768,
+  "title": "Set Of 6 Chocolate Napolitain",
+  "handle": "set-6-chocolate-napolitain",
+  "body_html": "Makes for a great gift. Also, a great way to discover our origin Vietnam bars.",
+  "published_at": "2025-02-10T20:47:54+07:00",
+  "created_at": "2025-02-10T20:47:52+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Gifts",
+    "Napo",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44410943013072,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHGS0078",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "1020000",
+      "grams": 480,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249759170768,
+      "created_at": "2025-02-10T20:47:52+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265426399440,
+      "created_at": "2025-02-10T20:48:00+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T20:48:04+07:00",
+      "product_id": 8249759170768,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-set.webp?v=1739195284",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 41265426432208,
+      "created_at": "2025-02-10T20:48:00+07:00",
+      "position": 2,
+      "updated_at": "2025-02-10T20:48:05+07:00",
+      "product_id": 8249759170768,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-set-2.webp?v=1739195285",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 43567813001424,
+      "created_at": "2025-09-26T16:55:19+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:55:21+07:00",
+      "product_id": 8249759170768,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

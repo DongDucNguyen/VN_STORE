@@ -1,0 +1,24 @@
+{
+  "url": "https://sensilk.vn/sensilk-4/",
+  "final_url": "https://sensilk.vn/sensilk-4/",
+  "retrieved_at": "2026-10-10T20:35:59.373220+07:00",
+  "sha256": "dd62ca02c7c9efc293380ee3e27461a7ad0ceb2eb73872fa1c1e7c00763acf3e",
+  "bytes": 138289,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Sat, 10 Oct 2026 13:36:00 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Link": "<https://sensilk.vn/wp-json/>; rel=\"https://api.w.org/\"",
+    "Strict-Transport-Security": "max-age=63072000; includeSubdomains; preload",
+    "X-Cache": "MISS From sensilk.vn",
+    "Cache-Control": "max-age=0",
+    "Nginx-Cache": "MISS",
+    "Last-Modified": "Saturday, 10-Oct-2026 13:36:00 GMT",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/dlot-tach-12-cm-phuoc-loc-tho-jas.js",
+  "final_url": "https://minhlong.com/products/dlot-tach-12-cm-phuoc-loc-tho-jas.js",
+  "retrieved_at": "2026-10-10T20:54:36.905205+07:00",
+  "sha256": "f2ab7d2c859c8e9f2bef6ab5e310ab20f3b7e5f2999d48f62a9a539f261af0cb",
+  "bytes": 2146,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:37 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"634d2f8f178843f68f3d07716daf78fd\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "582f86270a5ef0d0a59dfcb9b8a0c229",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-40-cm-sen-nen-cam.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-40-cm-sen-nen-cam.js",
+  "retrieved_at": "2026-10-10T20:37:16.859084+07:00",
+  "sha256": "40a1345085c1762b93acce51c3c9f33f2c0c4b61c755122ea2c214edc9743ea7",
+  "bytes": 4872,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:37:17 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"afa5ee3c4c184d78a5d36cfa2a79a11d\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266667",
+    "X-RequestId": "032e17a0be2d5162dab1cf8bad0e938a",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

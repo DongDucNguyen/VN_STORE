@@ -1,0 +1,81 @@
+{
+  "id": 8249759891664,
+  "title": "Dong Nai 72% Single Origin Napolitain (20X4G)",
+  "handle": "dong-nai-72-single-origin-napolitan-20x4g",
+  "body_html": "Our own fermentation station near Cat Tien National Park in the Upper Dong Nai region produces, from locally grown pods, the cacao beans used to make this finely balanced dark chocolate with hints of spice.",
+  "published_at": "2025-02-10T20:49:35+07:00",
+  "created_at": "2025-02-10T20:49:34+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "Chocolate Bites",
+    "Napo",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44410943865040,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHSO0016",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "170000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249759891664,
+      "created_at": "2025-02-10T20:49:34+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41265428857040,
+      "created_at": "2025-02-10T20:49:42+07:00",
+      "position": 1,
+      "updated_at": "2025-02-10T20:49:46+07:00",
+      "product_id": 8249759891664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-dn.webp?v=1739195386",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 41265428791504,
+      "created_at": "2025-02-10T20:49:42+07:00",
+      "position": 2,
+      "updated_at": "2025-02-10T20:49:45+07:00",
+      "product_id": 8249759891664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/napo-dn-naked.webp?v=1739195385",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "id": 43567813001424,
+      "created_at": "2025-09-26T16:55:19+07:00",
+      "position": 3,
+      "updated_at": "2025-09-26T16:55:21+07:00",
+      "product_id": 8249759891664,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/6-single-origin-napolitains-chocolate-piece-naked.webp?v=1758880521",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

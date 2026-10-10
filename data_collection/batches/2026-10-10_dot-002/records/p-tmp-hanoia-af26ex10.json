@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trà tròn Exotic",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26EX10_4_1.webp?sig=f08c67f98683e123e8c709a9b7ec0d3e8ec0f8791f39a6d507c3da03baad9534",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 6500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-tra-tron-exotic-af26ex10.html",
+      "sku": "AF26EX10",
+      "mpn": "AF26EX10"
+    }
+  ],
+  "url": "https://hanoia.com/hop-tra-tron-exotic-af26ex10.html",
+  "sku": "AF26EX10",
+  "mpn": "AF26EX10"
+}

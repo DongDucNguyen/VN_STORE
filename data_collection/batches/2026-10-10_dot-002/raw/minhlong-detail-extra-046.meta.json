@@ -1,0 +1,27 @@
+{
+  "url": "https://minhlong.com/products/binh-hoa-luc-giac-45-cm-khong-quai-thinh-vuong-xanh-duong-1.js",
+  "final_url": "https://minhlong.com/products/binh-hoa-luc-giac-45-cm-khong-quai-thinh-vuong-xanh-duong-1.js",
+  "retrieved_at": "2026-10-10T20:54:37.891144+07:00",
+  "sha256": "3a9e38480179199e0f9e381b776b2e821575b4a1cf2a4dae9aef77a88d5da87f",
+  "bytes": 2112,
+  "headers": {
+    "Server": "openresty",
+    "Date": "Sat, 10 Oct 2026 13:54:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Cache-Control": "private",
+    "ETag": "W/\"02e5d694862444c385e1e0fff680b87e\"",
+    "Link": "<https://cdn.hstatic.net>; rel=\"preconnect\"; crossorigin",
+    "Strict-Transport-Security": "max-age=604800",
+    "X-ShopId": "200000532849",
+    "X-Cache": "miss",
+    "X-Cache-Ver": "266674",
+    "X-RequestId": "8eef094f883e04cf68d380cf014c0c26",
+    "P3P": "CP=\"NOI DSP COR NID ADMa OPTa OUR NOR\"",
+    "X-Content-Type-Options": "nosniff",
+    "Content-Security-Policy": "block-all-mixed-content; frame-ancestors 'self'; upgrade-insecure-requests",
+    "X-XSS-Protection": "1; mode=block"
+  }
+}

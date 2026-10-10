@@ -54,7 +54,7 @@ cd frontend && npm run test:e2e                          # chỉ E2E
 cd frontend && npm run test:e2e:report                   # xem báo cáo HTML của lần chạy gần nhất
 ```
 
-Gồm validate catalog, kiểm tra fixture khớp generator, pytest backend, typecheck và build frontend, và Playwright E2E trên desktop + mobile (Pixel 7).
+Gồm validate catalog, kiểm tra fixture khớp generator, pytest backend, test giải mã ảnh bằng Pillow (chỉ khi có `.venv-ml`), typecheck và build frontend, và Playwright E2E trên desktop + mobile (Pixel 7).
 E2E tự bật backend (cổng 8010, dữ liệu fixture) và Vite (cổng 5180), dùng Chrome đã cài trên máy.
 Đặt `PW_CHANNEL=""` để dùng Chromium của Playwright, sau khi cài bằng `npx playwright install chromium`.
 Test E2E thất bại nếu trang có lỗi JS hoặc `console.error` ngoài lỗi được mô phỏng có chủ đích. `npm run test:e2e` tạo báo cáo HTML trong `artifacts/e2e-report/`; `run_all_tests.py` dùng reporter dòng, không cập nhật HTML. Ảnh chụp và trace khi test thất bại nằm trong `artifacts/e2e-results/`.
@@ -65,14 +65,14 @@ Frontend gọi `/api/*` và `/images/*`, Vite proxy sang `VNSTORE_API` (mặc đ
 
 ## Dữ liệu và ảnh hiện tại — 10/10/2026
 
-Catalog `seed-002-taxonomy`: **30 sản phẩm draft, 45 ảnh đã tải và đối chiếu từ nguồn chính thức, 23 danh mục**. Hai bình Hanoia nằm trong nhánh “Bình, lọ trang trí”.
+Catalog `seed-003-dot-002`: **330 sản phẩm draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, 60 sản phẩm mới mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Xem [báo cáo nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) và [hồ sơ nguồn](data_collection/batches/2026-10-10_dot-002/README.md). Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh); hai bình Hanoia nằm trong nhánh “Bình, lọ trang trí”.
 Ảnh nằm tại `assets/products/<product-id>/`; DB có đường dẫn, kích thước và SHA-256.
 Xem [bảng duyệt ảnh](artifacts/image_review/2026-10-10_seed-002-taxonomy/index.html),
 [manifest nguồn và quyết định chọn/loại](data_collection/images/2026-10-10/manifest.json),
 [phân tích dự án và tiến độ](reports/progress/2026-10-10_GD1_ra-soat-du-an-va-anh.md).
 
 Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem ảnh trong chế độ phát triển.
-Chế độ mặc định chỉ hiển thị `published`, hiện có 0 sản phẩm. Quyền ảnh vẫn `unknown`; việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
+Chế độ mặc định chỉ hiển thị `published`, hiện có 0 sản phẩm. Quyền ảnh vẫn `unknown` (cả 814 ảnh); việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
 
 ```bash
 .venv/Scripts/python scripts/validate_catalog/audit_images.py
@@ -143,12 +143,14 @@ py -3.14 -m venv .venv-ml
 cd backend && VNSTORE_INCLUDE_DRAFTS=1 VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmall   VNSTORE_IMAGE_ADAPTER=app.ml.image:SigLIP2Base ../.venv-ml/Scripts/python -m uvicorn app.main:app --port 8000
 ```
 
-Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt) và `app.ml.image:SigLIP2Base | DINOv2Base`. Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU. Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
+Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperBaseFp16 | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt; bản int8/fp16 không nhanh hơn fp32 trên GPU này, xem [profile](reports/progress/2026-10-10_GD4_profile-int8-fp16.md)) và `app.ml.image:SigLIP2Base | DINOv2Base`. Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU. Tùy chọn TensorRT: cài `backend/requirements-ml-trt.txt` (~1,9 GB) rồi đặt `VNSTORE_ML_TRT=1`; lần nạp đầu mất ~40 giây để dựng engine (cache ở `artifacts/trt-cache`), lợi ích độ trễ nhỏ ([báo cáo](reports/progress/2026-10-10_GD4_tensorrt.md)). Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
 Smoke đầu tiên (không phải benchmark): PhoWhisper-small có WER chuẩn hóa 0,109 trên 30 câu FLEURS; SigLIP2 đạt Hit@1 0,96 khi tìm lại sản phẩm trong gallery; end-to-end ~0,94 giây cho clip 8,9 giây và ~20 ms cho ảnh trên RTX 5070 Ti. Lựa chọn PhoWhisper-small + SigLIP2 chỉ là cấu hình chạy demo, chưa phải chọn model theo PLAN §8.3.
 
 Thử luồng bằng adapter GIẢ: `VNSTORE_ASR_ADAPTER=tests.fakes:FakeASR`, `VNSTORE_IMAGE_ADAPTER=tests.fakes:ByteHistogramEmbedder VNSTORE_IMAGE_INDEX_AUTOBUILD=1`. FakeASR luôn trả một câu cố định; embedder giả dùng histogram byte và không hiểu ảnh. E2E dùng hai adapter này, nên mọi số đo với chúng **không phải benchmark**.
 
 Thu dữ liệu benchmark: trang nội bộ `#/collect/voice` và `#/collect/image` xuất zip, sau đó nhập bằng `scripts/benchmark/import_voice_session.py` / `import_image_session.py` ([voice](benchmarks/voice/README.md#thu-âm-bằng-trang-collectvoice), [ảnh](benchmarks/image/README.md#thu-ảnh-bằng-trang-collectimage-thêm-10102026)).
+
+Duyệt nhãn: `#/review/voice` để nghe và sửa bản chép lời rồi xuất zip đã duyệt ([hướng dẫn](benchmarks/voice/README.md#duyệt-bản-chép-lời-bằng-trang-reviewvoice-thêm-10102026)); `prepare_image_review.py` tạo packet pool + trang chấm judgment ảnh offline, `apply_image_judgments.py` áp kết quả ([hướng dẫn](benchmarks/image/README.md#chấm-judgment-bằng-packet-pool-thêm-10102026)). Bộ keyword có thêm [107 truy vấn dev ứng viên](benchmarks/keyword/README.md) chờ chấm, với packet toàn catalog hoặc [theo pool](benchmarks/keyword/README.md#packet-theo-pool-thêm-10102026). Hai người duyệt độc lập: `audit_reviews.py` (keyword), `compare_reviews.py voice|image`.
 
 Đánh giá model: [eval_voice.py](benchmarks/voice/README.md#chạy-đánh-giá) (WER/CER, giá/phủ định, bịa chữ trên im lặng, RTF) và [eval_image.py](benchmarks/image/README.md#chạy-đánh-giá-retrieval-thêm-10102026-gđ4) (Recall@K, MRR, nDCG, mAP). Cả hai manifest hiện có **0 mẫu**, nên lệnh chỉ báo `pending_collection`.
 
@@ -164,5 +166,5 @@ Thu dữ liệu benchmark: trang nội bộ `#/collect/voice` và `#/collect/ima
 | `GET /facets`, `GET /suggest?q=` | Bộ lọc và gợi ý |
 | `POST /search` | `{query, filters, limit, offset}` → kết quả + `interpreted_query`, `applied_filters`, `suggested_filters`, `relaxations`, `warnings`, `timings_ms` |
 | `POST /search/voice` | Body WAV → `transcript` + kết quả như `/search`; 503 `model_unavailable` khi chưa cấu hình adapter, 422/413 khi audio không hợp lệ/im lặng, 429 khi bận |
-| `POST /search/image?text=` | Body JPEG/PNG/WebP → kết quả "mẫu tương tự" kèm `visual`, `similarity`; `text` là yêu cầu bổ sung. 503 khi chưa có adapter/chỉ mục khớp |
+| `POST /search/image?text=&filters=` | Body JPEG/PNG/WebP → kết quả "mẫu tương tự" kèm `visual`, `similarity`; `text` là yêu cầu bổ sung, `filters` là JSON bộ lọc cùng dạng `/search` (sai → 422 `invalid_filters`). 503 khi chưa có adapter/chỉ mục khớp |
 | `GET /images/{image_id}` | Ảnh của sản phẩm đang hiển thị |

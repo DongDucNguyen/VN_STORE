@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Khay chữ nhật Keras",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26KR01_13_1.webp?sig=51785b569d952a6730396ccc61b77a06ce231c975c760b8c28732022eb037caf",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 35500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/khay-chu-nhat-keras-af26kr01.html",
+      "sku": "AF26KR01",
+      "mpn": "AF26KR01"
+    }
+  ],
+  "url": "https://hanoia.com/khay-chu-nhat-keras-af26kr01.html",
+  "sku": "AF26KR01",
+  "mpn": "AF26KR01"
+}

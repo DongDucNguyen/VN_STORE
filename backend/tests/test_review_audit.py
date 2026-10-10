@@ -142,4 +142,66 @@ def test_cli_real_packet_is_pending_without_reviews(tmp_path, monkeypatch):
     assert main() == 0
     report = json.loads(next((tmp_path / "reports").glob("*.json")).read_bytes())
     assert report["status"] == "pending_review"
-    assert report["queries"] == 12 and report["pairs_per_reviewer"] == 360
+    assert report["queries"] == 12 and report["pairs_per_reviewer"] == 12 * len(snap.products)
+
+
+# ---------- Packet theo pool (prepare_review.py --pool-top) ----------
+
+@pytest.fixture()
+def pool_packet(packet):
+    packet["products"].append({"id": "c"})
+    return {**packet, "pool": {"q1": ["b", "a"], "q2": ["c"]}}
+
+
+def pool_export(packet, reviewer="Reviewer A", q1=None, q2=None):
+    rows = copy.deepcopy(packet["queries"])
+    for row in rows:
+        row.update(verified=True, labeled_by=reviewer, reviewed_at="2026-10-10T02:00:00+07:00",
+                   catalog_sha256=HASH, group_id=row["qid"])
+    rows[0]["relevance"] = q1 if q1 is not None else {"a": 3, "b": 0}
+    rows[1]["relevance"] = q2 if q2 is not None else {"a": 0, "b": 1, "c": 0}  # no-match: đủ catalog
+    return rows
+
+
+def test_pool_export_needs_pool_and_full_catalog_only_for_no_match(pool_packet):
+    ids = {"a", "b", "c"}
+    report = audit(pool_packet, [pool_export(pool_packet)], HASH, ids)
+    assert report["status"] == "valid_single_review" and report["label_scope"] == "pool"
+    assert report["pairs_per_reviewer"] == 3  # 2 + 1 cặp bắt buộc
+    with pytest.raises(ValueError, match="chưa chấm đủ pool"):
+        audit(pool_packet, [pool_export(pool_packet, q1={"a": 3})], HASH, ids)
+    with pytest.raises(ValueError, match="không có đáp án"):
+        audit(pool_packet, [pool_export(pool_packet, q2={"c": 0})], HASH, ids)
+
+
+def test_pool_comparison_uses_only_pairs_both_labeled(pool_packet):
+    ids = {"a", "b", "c"}
+    left = pool_export(pool_packet)
+    right = pool_export(pool_packet, "Reviewer B", q1={"a": 2, "b": 0, "c": 0})
+    c = audit(pool_packet, [left, right], HASH, ids)["comparison"]
+    assert c["pairs_compared"] == 5 and c["pairs_labeled_by_one_reviewer"] == 1
+    assert c["coverage_differences"] == [{"qid": "q1", "labeled_by_one_reviewer": ["c"]}]
+    assert [(d["product_id"], d["left"], d["right"]) for d in c["grade_disagreements"]] == [("a", 3, 2)]
+
+
+def test_pool_packet_rejects_bad_pool(pool_packet):
+    for bad in ({"q1": ["a"]}, {"q1": [], "q2": ["c"]}, {"q1": ["a", "a"], "q2": ["c"]}, {"q1": ["x"], "q2": ["c"]}):
+        with pytest.raises(ValueError, match="pool"):
+            audit({**pool_packet, "pool": bad}, [], HASH, {"a", "b", "c"})
+
+
+def test_real_pool_packet_from_bm25_and_random(tmp_path):
+    from app.catalog.store import load_snapshot
+    from prepare_review import make_packet
+    snap = load_snapshot(REPO_ROOT / "database.json", include_drafts=True)
+    queries = read_jsonl((REPO_ROOT / "benchmarks/keyword/seed_unverified.jsonl").read_bytes())
+    packet = make_packet(queries, snap, tmp_path, pool_top=5, n_random=3)
+    again = make_packet(queries, snap, tmp_path, pool_top=5, n_random=3)
+    assert packet["pool"] == again["pool"] and packet["scope"] == "pool_then_full_catalog_for_no_match"
+    for q in queries:
+        pool, order = packet["pool"][q["qid"]], packet["candidate_order"][q["qid"]]
+        assert order[:len(pool)] == pool and sorted(order) == sorted(snap.products)
+        tags = [s.split("@")[0] for v in packet["pool_sources"][q["qid"]].values() for s in v]
+        assert tags.count("random") == 3 and set(packet["pool_sources"][q["qid"]]) == set(pool)
+    assert len(packet["pool"]["kw-seed-001"]) < len(snap.products)
+    assert audit(packet, [], snap.sha256, set(snap.products))["status"] == "pending_review"

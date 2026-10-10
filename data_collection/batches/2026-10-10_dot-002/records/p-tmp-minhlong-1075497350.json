@@ -1,0 +1,125 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "<p>Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà.&nbsp;</p><p>Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá.&nbsp;</p><p>Ngoài việc sử dụng để tôn lên vẻ đẹp mĩ miều của các loài hoa, bình thủ công còn là một tác phẩm trang trí nâng tầm không gian sống của gia đình hoặc xứng đáng là vật phẩm quà tặng giá trị cao cho những dịp đặc biệt.</p><p><em>Bình vẽ tay thủ công nên hình ảnh sản phẩm chỉ mang tính chất minh họa.</em></p>",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-01_219f09971d0f4cf0b38b09463f569893.png",
+  "handle": "binh-hoa-30-cm-ca-chep",
+  "id": 1075497350,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/113043001v-sm-01_219f09971d0f4cf0b38b09463f569893.png",
+    "https://cdn.hstatic.net/products/200000532849/113043001v-sm-02_849ba5e8c6534556ac350f4c4e243b03.png",
+    "https://cdn.hstatic.net/products/200000532849/113043001v-sm-03_5ee134d674b24a219b37f8b2ace4da5c.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1706774838,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-01_219f09971d0f4cf0b38b09463f569893.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-01_219f09971d0f4cf0b38b09463f569893.png"
+    },
+    {
+      "alt": null,
+      "id": 1706774839,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-02_849ba5e8c6534556ac350f4c4e243b03.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-02_849ba5e8c6534556ac350f4c4e243b03.png"
+    },
+    {
+      "alt": null,
+      "id": 1706774836,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-03_5ee134d674b24a219b37f8b2ace4da5c.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/113043001v-sm-03_5ee134d674b24a219b37f8b2ace4da5c.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Cá Chép"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "30 cm"
+      ]
+    }
+  ],
+  "price": 3024000000,
+  "price_max": 3024000000,
+  "price_min": 3024000000,
+  "price_varies": false,
+  "tags": [
+    "Vẽ tay",
+    "Bình Hoa",
+    "ecom"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 30 cm - Cá Chép",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-30-cm-ca-chep",
+  "pagetitle": "Bình hoa 30 cm - Cá Chép",
+  "metadescription": "Bình hoa được các Nghệ nhân Minh Long vẽ tay hoàn toàn, các hoạ tiết được phác hoạ tỉ mỉ, khéo léo với màu sắc hài hoà. Như một tác phẩm nghệ thuật, bình hoa Minh Long luôn luôn được sáng tác kì công trong từng nét vẽ, để kể một câu chuyện đặc sắc về thiên nhiên, con người hoặc văn hoá. Ngoài việc sử dụng để tôn lên vẻ",
+  "variants": [
+    {
+      "id": 1172105530,
+      "barcode": "A001_113043001V",
+      "available": true,
+      "price": 3024000000,
+      "sku": "A001_113043001V",
+      "option1": "Bình hoa",
+      "option2": "Cá Chép",
+      "option3": "30 cm",
+      "options": [
+        "Bình hoa",
+        "Cá Chép",
+        "30 cm"
+      ],
+      "inventory_quantity": 1,
+      "old_inventory_quantity": 1,
+      "title": "Bình hoa / Cá Chép / 30 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-07-10T02:50:27.354Z",
+  "created_at": "2026-07-09T08:09:36.875Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

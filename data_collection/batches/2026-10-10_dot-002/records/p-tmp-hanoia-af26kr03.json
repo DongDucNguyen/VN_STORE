@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp đựng cigar Keras",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26KR03_13_1.webp?sig=6f3ff721ed492f16df8c3ed83cf04a84fe7ffd617078385399986e69aea50344",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 32500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-dung-cigar-keras-af26kr03.html",
+      "sku": "AF26KR03",
+      "mpn": "AF26KR03"
+    }
+  ],
+  "url": "https://hanoia.com/hop-dung-cigar-keras-af26kr03.html",
+  "sku": "AF26KR03",
+  "mpn": "AF26KR03"
+}

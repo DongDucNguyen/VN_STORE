@@ -1,0 +1,71 @@
+{
+  "id": 8249758777552,
+  "title": "Wallpaper* Edition Tien Giang 80% Dark Chocolate bar",
+  "handle": "dark-chocolate-wallpaper-limited-tien-giang-80-bar",
+  "body_html": "A full bodied chocolate with notes of spices and honey, made from the finest cacao grown by farmers in Mekong Delta, Vietnam.",
+  "published_at": "2025-02-10T20:46:52+07:00",
+  "created_at": "2025-02-10T20:46:50+07:00",
+  "updated_at": "2026-10-10T20:34:33+07:00",
+  "vendor": "Marou Chocolate",
+  "product_type": "",
+  "tags": [
+    "awards",
+    "special",
+    "tablets",
+    "Vegan"
+  ],
+  "variants": [
+    {
+      "id": 44410942619856,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "CHSO0007",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "170000",
+      "grams": 80,
+      "compare_at_price": null,
+      "position": 1,
+      "product_id": 8249758777552,
+      "created_at": "2025-02-10T20:46:50+07:00",
+      "updated_at": "2026-10-10T20:34:33+07:00"
+    }
+  ],
+  "images": [
+    {
+      "id": 41444793876688,
+      "created_at": "2025-03-31T17:16:33+07:00",
+      "position": 1,
+      "updated_at": "2025-03-31T17:17:17+07:00",
+      "product_id": 8249758777552,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/wallpaper-80-80g.webp?v=1743416237",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "id": 46017648459984,
+      "created_at": "2026-04-20T13:52:22+07:00",
+      "position": 2,
+      "updated_at": "2026-04-20T13:52:24+07:00",
+      "product_id": 8249758777552,
+      "variant_ids": [],
+      "src": "https://cdn.shopify.com/s/files/1/0646/0955/0544/files/80g_bar_front_Bk_shadow_new.jpg?v=1776667944",
+      "width": 2500,
+      "height": 2500
+    }
+  ],
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "available": true,
+  "compare_at_price_max": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_varies": false,
+  "compare_at_price": 0,
+  "content": null,
+  "description": "",
+  "featured_image": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-01_ac1cf18544534366bb9a5abd49007d67.png",
+  "handle": "binh-hoa-42-cm-chim-va-khe",
+  "id": 1074964934,
+  "images": [
+    "https://cdn.hstatic.net/products/200000532849/r024222018-sm-01_ac1cf18544534366bb9a5abd49007d67.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222018-sm-02_dfc7ded34bed41489b05f8f3aea2b7aa.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222018-sm-03_838bfcc5fa334981b98bfb23f9da8e7b.png",
+    "https://cdn.hstatic.net/products/200000532849/r024222018-sm-04_c8c3d2d0440b4de9ad763410f52d029b.png"
+  ],
+  "media": [
+    {
+      "alt": null,
+      "id": 1703223838,
+      "position": 1,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-01_ac1cf18544534366bb9a5abd49007d67.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-01_ac1cf18544534366bb9a5abd49007d67.png"
+    },
+    {
+      "alt": null,
+      "id": 1703223840,
+      "position": 2,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-02_dfc7ded34bed41489b05f8f3aea2b7aa.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-02_dfc7ded34bed41489b05f8f3aea2b7aa.png"
+    },
+    {
+      "alt": null,
+      "id": 1703223844,
+      "position": 3,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-03_838bfcc5fa334981b98bfb23f9da8e7b.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-03_838bfcc5fa334981b98bfb23f9da8e7b.png"
+    },
+    {
+      "alt": null,
+      "id": 1703223839,
+      "position": 4,
+      "preview_image": {
+        "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-04_c8c3d2d0440b4de9ad763410f52d029b.png"
+      },
+      "external_id": null,
+      "host": null,
+      "media_type": "image",
+      "src": "https://cdn.hstatic.net/products/200000532849/r024222018-sm-04_c8c3d2d0440b4de9ad763410f52d029b.png"
+    }
+  ],
+  "options": [
+    {
+      "name": "Loại",
+      "position": 1,
+      "values": [
+        "Bình hoa"
+      ]
+    },
+    {
+      "name": "Hoa văn",
+      "position": 2,
+      "values": [
+        "Chim và Khế"
+      ]
+    },
+    {
+      "name": "Kích thước",
+      "position": 3,
+      "values": [
+        "42 cm"
+      ]
+    }
+  ],
+  "price": 2322000000,
+  "price_max": 2322000000,
+  "price_min": 2322000000,
+  "price_varies": false,
+  "tags": [
+    "Bình Hoa",
+    "ecom",
+    "Vẽ tay"
+  ],
+  "template_suffix": null,
+  "title": "Bình hoa 42 cm - Chim và Khế",
+  "type": "Bình Hoa",
+  "url": "/products/binh-hoa-42-cm-chim-va-khe",
+  "pagetitle": "Bình hoa 42 cm - Chim và Khế",
+  "metadescription": null,
+  "variants": [
+    {
+      "id": 1170569348,
+      "barcode": "A001_R024222018",
+      "available": true,
+      "price": 2322000000,
+      "sku": "A001_R024222018",
+      "option1": "Bình hoa",
+      "option2": "Chim và Khế",
+      "option3": "42 cm",
+      "options": [
+        "Bình hoa",
+        "Chim và Khế",
+        "42 cm"
+      ],
+      "inventory_quantity": 2,
+      "old_inventory_quantity": 2,
+      "title": "Bình hoa / Chim và Khế / 42 cm",
+      "weight": 0,
+      "compare_at_price": 0,
+      "inventory_management": "haravan",
+      "inventory_policy": "deny",
+      "selected": false,
+      "url": null,
+      "featured_image": null
+    }
+  ],
+  "vendor": "Minh Long",
+  "published_at": "2026-06-09T04:10:00Z",
+  "created_at": "2026-06-08T02:30:08.836Z",
+  "not_allow_promotion": false,
+  "sole_quantity": 0
+}

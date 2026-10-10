@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Bình hoa Vịnh size M",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_A23VI02_3_1.webp?sig=1f169a6837082a347b9006109a29fd0a227f33c6dfd82c8d02ca2876f200f96f",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 11290000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/binh-hoa-vinh-size-m-a23vi02.html",
+      "sku": "A23VI02",
+      "mpn": "A23VI02"
+    }
+  ],
+  "url": "https://hanoia.com/binh-hoa-vinh-size-m-a23vi02.html",
+  "sku": "A23VI02",
+  "mpn": "A23VI02"
+}

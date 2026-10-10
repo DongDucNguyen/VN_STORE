@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Product",
+  "name": "Hộp trang sức Exotic size L",
+  "description": "",
+  "image": "https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/285x285/Hanoia/HNA_AF26EX11_4_1.webp?sig=8045ae605abe3ea726ce14a22c039eb960ec948515e3ed866b12d0c2117dca8d",
+  "aggregateRating": [],
+  "review": [
+    []
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "priceCurrency": "VND",
+      "price": 16500000,
+      "seller": {
+        "@type": "Organization",
+        "name": "Hanoia"
+      },
+      "url": "https://hanoia.com/hop-trang-suc-exotic-size-l-af26ex11.html",
+      "sku": "AF26EX11",
+      "mpn": "AF26EX11"
+    }
+  ],
+  "url": "https://hanoia.com/hop-trang-suc-exotic-size-l-af26ex11.html",
+  "sku": "AF26EX11",
+  "mpn": "AF26EX11"
+}
