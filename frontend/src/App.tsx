@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { api, type Health } from "./api";
 import { useFavorites } from "./favorites";
 import { BrandsPage, FavoritesPage, PlacesPage } from "./pages/BrowsePages";
+import { CollectImagePage } from "./pages/CollectImagePage";
+import { CollectVoicePage } from "./pages/CollectVoicePage";
 import { HomePage } from "./pages/HomePage";
 import { ImageSearchPage } from "./pages/ImageSearchPage";
 import { ProductPage } from "./pages/ProductPage";
@@ -17,6 +19,10 @@ function Page() {
       return <SearchPage route={route} />;
     case "/image":
       return <ImageSearchPage />;
+    case "/collect/voice":
+      return <CollectVoicePage />;
+    case "/collect/image":
+      return <CollectImagePage />;
     case "/brands":
       return <BrandsPage />;
     case "/places":

@@ -29,6 +29,22 @@ Audio giọng nói là dữ liệu cá nhân. Manifest chỉ dùng mã người 
 | `consent` | `{status: unknown|granted, evidence}`; `granted` phải có evidence |
 | `transcript_review` | `null` hoặc `{reviewed_by, reviewed_at}` sau khi người thứ hai nghe lại tên riêng |
 
+## Thu âm bằng trang `#/collect/voice`
+
+Chạy frontend (`npm run dev`) rồi mở `http://localhost:5173/#/collect/voice` trên máy/điện thoại của phiên thu. Trang này không cần backend và không gửi audio đi đâu.
+
+1. Người điều phối nhập mã người nói, vùng giọng (người nói tự khai), mã thiết bị, môi trường, **split nhóm dữ liệu đã phân cho người nói này** và mã hồ sơ đồng ý, rồi tích ô đồng ý. Thiếu một mục thì nút ghi bị khóa.
+2. Người nói đọc tự nhiên từng câu mẫu ([prompts.ts](../../frontend/src/collect/prompts.ts), 24 câu gồm thương hiệu, làng nghề, giá, phủ định, xen tiếng Anh và một nhu cầu ngoài catalog), sau đó nghe lại hoặc ghi lại. Mỗi lượt tối đa 10 giây.
+3. Bấm **Tải file zip của phiên**: file gồm `manifest.json` đúng schema 1.0.0 và `raw/<qid>.wav` (16 kHz mono PCM16), với qid = `<người nói>-<thời điểm>-<mã câu>`.
+4. Nhóm dữ liệu nhập file:
+
+```bash
+.venv/Scripts/python scripts/benchmark/import_voice_session.py voice-<...>.zip --dry-run   # kiểm tra
+.venv/Scripts/python scripts/benchmark/import_voice_session.py voice-<...>.zip             # nhập
+```
+
+Script kiểm tra tên file trong zip, schema, hash, WAV giải mã được theo giới hạn API, qid trùng và người nói ở nhiều split; có lỗi thì không ghi gì. `reference_text` ban đầu là câu mẫu. Người duyệt phải nghe lại, sửa câu nếu người nói đọc khác, rồi mới điền `transcript_review`. Ghi âm trên trình duyệt có thể đã qua khử vọng (echo cancellation), còn khử ồn được tắt.
+
 ## Chạy đánh giá
 
 ```bash
@@ -46,3 +62,11 @@ Audio giọng nói là dữ liệu cá nhân. Manifest chỉ dùng mã người 
 Trước khi có dữ liệu, `scripts/benchmark/make_fleurs_smoke.py` tạo bộ smoke trong `artifacts/voice_smoke/` từ FLEURS vi_vn dev (CC-BY-4.0): câu đọc kèm một clip nhiễu trắng. Chạy với `--manifest artifacts/voice_smoke/fleurs-vi-dev/manifest.json --allow-unreviewed`. FLEURS không có mã người nói và không phải truy vấn mua sắm, nên chỉ dùng để kiểm tra adapter. Kết quả đầu tiên nằm trong [báo cáo](../../reports/progress/2026-10-10_GD4_adapter-onnx-model-that.md).
 
 Chưa có: bootstrap CI theo người nói, end-to-end nDCG qua `keyword_qid`, n-best/contextual biasing. Không so WER giữa hai bộ test hoặc hai chính sách chuẩn hóa khác nhau.
+
+## So sánh hai run (paired bootstrap)
+
+```bash
+.venv/Scripts/python scripts/benchmark/compare_runs.py --left experiments/results/<run A> --right experiments/results/<run B>
+```
+
+Chỉ so khi cùng manifest, split và tập qid; lệch thì exit 2. Resample theo **người nói** có hoàn lại, cho delta và CI 95% của WER/CER normalized (micro, tính lại từ số lỗi). Dưới 5 cụm có dữ liệu thì không báo CI (ví dụ FLEURS chỉ có 1 cụm vì không có mã người nói). Báo cáo ghi vào `reports/benchmark/`. CI chứa 0 nghĩa là chưa phân biệt được hai cấu hình; công cụ không tự chọn model.

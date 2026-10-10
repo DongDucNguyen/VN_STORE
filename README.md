@@ -1,6 +1,6 @@
 # VNStore — demo khám phá và tìm kiếm sản phẩm Việt
 
-Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md)
+Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
 ## Cấu trúc
 
@@ -147,6 +147,8 @@ Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperSmall | PhoWhisperSmal
 Smoke đầu tiên (không phải benchmark): PhoWhisper-small có WER chuẩn hóa 0,109 trên 30 câu FLEURS; SigLIP2 đạt Hit@1 0,96 khi tìm lại sản phẩm trong gallery; end-to-end ~0,94 giây cho clip 8,9 giây và ~20 ms cho ảnh trên RTX 5070 Ti. Lựa chọn PhoWhisper-small + SigLIP2 chỉ là cấu hình chạy demo, chưa phải chọn model theo PLAN §8.3.
 
 Thử luồng bằng adapter GIẢ: `VNSTORE_ASR_ADAPTER=tests.fakes:FakeASR`, `VNSTORE_IMAGE_ADAPTER=tests.fakes:ByteHistogramEmbedder VNSTORE_IMAGE_INDEX_AUTOBUILD=1`. FakeASR luôn trả một câu cố định; embedder giả dùng histogram byte và không hiểu ảnh. E2E dùng hai adapter này, nên mọi số đo với chúng **không phải benchmark**.
+
+Thu dữ liệu benchmark: trang nội bộ `#/collect/voice` và `#/collect/image` xuất zip, sau đó nhập bằng `scripts/benchmark/import_voice_session.py` / `import_image_session.py` ([voice](benchmarks/voice/README.md#thu-âm-bằng-trang-collectvoice), [ảnh](benchmarks/image/README.md#thu-ảnh-bằng-trang-collectimage-thêm-10102026)).
 
 Đánh giá model: [eval_voice.py](benchmarks/voice/README.md#chạy-đánh-giá) (WER/CER, giá/phủ định, bịa chữ trên im lặng, RTF) và [eval_image.py](benchmarks/image/README.md#chạy-đánh-giá-retrieval-thêm-10102026-gđ4) (Recall@K, MRR, nDCG, mAP). Cả hai manifest hiện có **0 mẫu**, nên lệnh chỉ báo `pending_collection`.
 

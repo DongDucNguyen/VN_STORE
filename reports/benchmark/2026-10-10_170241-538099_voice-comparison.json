@@ -1,0 +1,92 @@
+{
+  "kind": "voice",
+  "status": "comparable_descriptive",
+  "cluster": "speaker_id",
+  "samples": 2000,
+  "seed": 13,
+  "left": {
+    "name": "phowhisper-base-onnx-vad1-fleurs-smoke",
+    "model": {
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "model_id": "vinai/PhoWhisper-base",
+      "revision": "41a94b878c46ec2ab28e0ebea0915369f0758380",
+      "license": "bsd-3-clause",
+      "config": {
+        "runtime": "onnxruntime",
+        "onnx_repo": "onnx-community/PhoWhisper-base-ONNX",
+        "onnx_variant": "fp32",
+        "upstream": "vinai/PhoWhisper-base@7ebdb9e88f5cc5271fb88f4d642c82ff9388650e",
+        "config_repo": "onnx-community/PhoWhisper-base-ONNX@41a94b878c46ec2ab28e0ebea0915369f0758380",
+        "decoder": "greedy",
+        "language": "vi",
+        "task": "transcribe",
+        "timestamps": false,
+        "max_new_tokens": 96,
+        "vad": {
+          "vad": "silero-vad v6.2.3",
+          "threshold": 0.5,
+          "min_speech_ms": 250
+        }
+      }
+    }
+  },
+  "right": {
+    "name": "phowhispersmall-onnx-fleurs-smoke",
+    "model": {
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "license": "bsd-3-clause",
+      "config": {
+        "runtime": "onnxruntime",
+        "onnx_repo": "huuquyet/PhoWhisper-small",
+        "onnx_variant": "fp32",
+        "upstream": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+        "config_repo": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+        "decoder": "greedy",
+        "language": "vi",
+        "task": "transcribe",
+        "timestamps": false,
+        "max_new_tokens": 96,
+        "vad": {
+          "vad": "silero-vad v6.2.3",
+          "threshold": 0.5,
+          "min_speech_ms": 250
+        }
+      }
+    }
+  },
+  "split": "dev",
+  "queries": 31,
+  "metrics": {
+    "wer_normalized": {
+      "left": 0.1267,
+      "right": 0.1092,
+      "delta": -0.0176,
+      "ci95": null,
+      "clusters": 1,
+      "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+      "better": "lower"
+    },
+    "cer_normalized": {
+      "left": 0.0971,
+      "right": 0.0795,
+      "delta": -0.0176,
+      "ci95": null,
+      "clusters": 1,
+      "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+      "better": "lower"
+    }
+  },
+  "note": "Mô tả bất định; CI chứa 0 nghĩa là chưa phân biệt được hai cấu hình trên mẫu này.",
+  "inputs": {
+    "left": {
+      "dir": "experiments\\results\\20261010-163658-628484_voice_phowhisper-base-onnx-vad1-fleurs-smoke",
+      "run_sha256": "a681c88e7aa0ff4d778983826c1de5b8cfd37fedf715df659607cfbe7c95934a"
+    },
+    "right": {
+      "dir": "experiments\\results\\20261010-163804-768692_voice_phowhispersmall-onnx-fleurs-smoke",
+      "run_sha256": "d22bf5d78d63fe98190c0f9a6f031d80df8667321d6b38e4b9b4f889fed707a0"
+    }
+  }
+}

@@ -131,3 +131,26 @@ Kết quả gallery hiện tại: [45 ảnh giải mã được, 19 cặp gợi 
 - Metric dùng [retrieval_metrics.py](../../scripts/benchmark/retrieval_metrics.py): exact Recall@1/5/10 và MRR@10 theo product; similar/image_text nDCG@10, mAP@10 và Success@5. Có sản phẩm chưa chấm trong top K thì metric là `null`.
 - No-match chưa có ngưỡng; báo trung vị `top_similarity` của query có/không có đáp án để chọn ngưỡng trên dev.
 - Ghi `run.json` + `predictions.jsonl` vào `experiments/results/<thời điểm>_image_<tên>/`. Mọi run vẫn có `benchmark_approved=false`.
+
+## Thu ảnh bằng trang `#/collect/image` (thêm 10/10/2026)
+
+Mở `http://localhost:5173/#/collect/image`. Nếu backend đang chạy, trang gợi ý mã họ sản phẩm từ catalog; không có backend thì nhập tay được.
+
+1. Nhập thông tin phiên: mã người chụp, mã phiên chụp (nơi/thời điểm), split đã phân, quyền sử dụng (`owned`/`permission_granted`/`licensed`) và mã bằng chứng quyền. Thiếu mục nào thì không thêm được ảnh.
+2. Mỗi ảnh: chọn họ sản phẩm (`family_id`) và tác vụ (`exact`, `similar`, `image_text` kèm yêu cầu bằng chữ), rồi chụp/chọn ảnh. Ảnh được mã hóa lại JPEG q95, cạnh ≤2048 px, để **bỏ EXIF/GPS**; `source_asset_sha256` giữ hash bytes ảnh gốc. Dùng lại cùng ảnh gốc (ví dụ thêm yêu cầu chữ) sẽ giữ cùng `source_asset_id`.
+3. Tải zip (`samples.json` + `raw/<qid>.jpg`) rồi nhập:
+
+```bash
+.venv/Scripts/python scripts/benchmark/import_image_session.py image-<...>.zip --dry-run
+.venv/Scripts/python scripts/benchmark/import_image_session.py image-<...>.zip
+```
+
+Script kiểm tên file, hash và qid, rồi chạy `audit()` trên manifest đã gộp. Audit `invalid` (ví dụ cùng họ sản phẩm ở hai split, ảnh trùng gallery) thì xóa file vừa ghi và giữ nguyên manifest. Sau khi nhập, trạng thái là `pending_review`: người duyệt điền `independence_review` và `judgment` trước khi chạy `eval_image.py`.
+
+## So sánh hai run (paired bootstrap)
+
+```bash
+.venv/Scripts/python scripts/benchmark/compare_runs.py --left experiments/results/<run A> --right experiments/results/<run B>
+```
+
+Chỉ so khi cùng manifest, split và tập qid; lệch thì exit 2. Resample theo **họ sản phẩm** có hoàn lại, cho delta và CI 95% của Recall@1/5, MRR@10, nDCG@10, mAP@10, Success@5 (chỉ query đủ nhãn ở cả hai run). Dưới 5 cụm có dữ liệu thì không báo CI (ví dụ FLEURS chỉ có 1 cụm vì không có mã người nói). Báo cáo ghi vào `reports/benchmark/`. CI chứa 0 nghĩa là chưa phân biệt được hai cấu hình; công cụ không tự chọn model.

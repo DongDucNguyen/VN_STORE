@@ -7,20 +7,22 @@ Thư mục này ghi lại tiến độ triển khai [PLAN.md](../../PLAN.md) the
 - Mọi kết luận "đạt" phải kèm cách kiểm chứng (lệnh đã chạy và kết quả). Số đo trên dữ liệu fixture giả không được dùng làm kết quả benchmark.
 - Cập nhật bảng trạng thái bên dưới mỗi khi thêm báo cáo.
 
+**Việc ưu tiên tiếp theo: [BACKLOG.md](BACKLOG.md)** — đọc trước khi bắt đầu phiên mới; cập nhật khi xong một mục.
+
 Chạy toàn bộ kiểm thử: `.venv/Scripts/python scripts/run_all_tests.py`
 
 ## Trạng thái các giai đoạn
 
 Cập nhật lần cuối: 10/10/2026
 
-Kiểm tra gần nhất: [7/7 bước, 340 backend test, 84 E2E, 6 test model thật đạt; adapter ONNX chạy trên GPU](2026-10-10_GD4_adapter-onnx-model-that.md).
+Kiểm tra gần nhất: [7/7 bước, 348 backend test, 88 E2E đạt sau khi thêm so sánh bootstrap](2026-10-10_GD4_so-sanh-bootstrap.md); test model thật 6/6 ở [đợt GĐ4](2026-10-10_GD4_adapter-onnx-model-that.md).
 
 | GĐ | Nội dung (PLAN.md mục 9) | Trạng thái | Báo cáo gần nhất |
 |---|---|---|---|
 | 0 | Khởi tạo khung dự án, môi trường | ✅ Hoàn thành | [2026-10-09_GD0](2026-10-09_GD0_khoi-tao.md) |
 | 1 | Taxonomy, schema, nguồn; 30 → 300 bản ghi thật | 🟡 **seed-002-taxonomy: 23 danh mục, 30 draft, 45 ảnh**. Đã sửa nhánh bình Hanoia; còn quyền ảnh/review và thêm 270 sản phẩm | [Taxonomy và snapshot](2026-10-10_GD1_taxonomy-va-snapshot.md) |
 | 2 | Catalog UI/API, BM25, bộ lọc, chuẩn hóa tiếng Việt | 🟡 **289 test backend đạt** sau thêm audit query ảnh; công cụ so sánh keyword đã có. 64 E2E và 7/7 bước đạt ở đợt rà soát trước; chưa có nhãn baseline | [So sánh keyword runs](2026-10-10_GD2_so-sanh-keyword-runs.md) |
-| 3 | Thu và gán nhãn benchmark, khóa splits | 🟡 Packet keyword **360 cặp** chờ duyệt; đã có audit query và công cụ giải mã/gợi ý gần trùng. **45/45 ảnh gallery giải mã được, 22 test ảnh riêng đạt**; 0 query thật, chưa có audio/split khóa | [Giải mã và đối chiếu ảnh](2026-10-10_GD3_giai-ma-va-doi-chieu-anh.md) |
+| 3 | Thu và gán nhãn benchmark, khóa splits | 🟡 Packet keyword **360 cặp** chờ duyệt; đã có audit query và công cụ giải mã/gợi ý gần trùng. **45/45 ảnh gallery giải mã được, 22 test ảnh riêng đạt**; 0 query thật, chưa có audio/split khóa. **Đã có trang thu `#/collect/voice`, `#/collect/image` và script nhập zip** ([voice](2026-10-10_GD3_cong-cu-thu-am.md), [ảnh](2026-10-10_GD3_cong-cu-thu-anh.md)) | [Giải mã và đối chiếu ảnh](2026-10-10_GD3_giai-ma-va-doi-chieu-anh.md) |
 | 4 | Adapter và sàng lọc model voice/image | 🟡 **5 adapter thật chạy trên GPU qua ONNX Runtime** (torch bị Windows chặn): PhoWhisper base/small/small-int8 + Silero VAD, SigLIP2, DINOv2. Mới có smoke FLEURS và leave-one-out gallery; chưa sàng lọc vì 0 clip/0 ảnh query VNStore | [Adapter ONNX + smoke](2026-10-10_GD4_adapter-onnx-model-that.md) |
 | 5 | Tối ưu ngôn ngữ, OCR/crop/fusion, ablation | ⬜ Chưa bắt đầu | — |
 | 6 | Tích hợp voice/image vào giao diện, locked test | 🟡 UI ghi âm/chọn ảnh/cắt vùng và các trạng thái lỗi đã có, chạy với adapter giả; chưa có locked test | [Khung adapter voice/ảnh](2026-10-10_GD4_khung-adapter-voice-anh.md) |
@@ -33,7 +35,7 @@ Kiểm tra gần nhất: [7/7 bước, 340 backend test, 84 E2E, 6 test model th
 | Review 30 sản phẩm draft ([checklist](../../data_collection/README.md)) và xin phép dùng ảnh từ 5 thương hiệu | Nhóm dữ liệu | Published sản phẩm đầu tiên, baseline GĐ2 |
 | Thu thập thêm 270 sản phẩm (đợt 002+) | Nhóm dữ liệu / Claude | Hoàn tất GĐ1, GĐ3+ |
 | Viết bộ truy vấn keyword có người kiểm tra (mục tiêu 600) | Nhóm dữ liệu | Baseline GĐ2, GĐ3 |
-| Tuyển người nói (40 người) và người chụp ảnh truy vấn; mẫu đồng ý sử dụng dữ liệu | Quản lý dự án | GĐ3 |
+| Tuyển người nói (40 người) và người chụp ảnh truy vấn; mẫu đồng ý sử dụng dữ liệu. Công cụ thu âm/ảnh `#/collect/voice`, `#/collect/image` + script nhập đã sẵn sàng | Quản lý dự án | GĐ3 |
 | Duyệt 360 cặp trong [trang review](../../artifacts/keyword_review/2026-10-10_seed-002-taxonomy/index.html), xuất nhãn và mở rộng bộ dev ~100 truy vấn | Nhóm dữ liệu | Baseline GĐ2 |
 | Chốt cấu hình máy đo và ngân sách GPU theo giờ (máy hiện có RTX 5070 Ti 16 GB, đủ để sàng lọc ban đầu) | Quản lý dự án | GĐ4 |
 | Thu clip truy vấn giọng nói và ảnh query thật để sàng lọc 5 adapter đã có | Nhóm dữ liệu | GĐ4 |
@@ -62,3 +64,6 @@ Kiểm tra gần nhất: [7/7 bước, 340 backend test, 84 E2E, 6 test model th
 - [2026-10-10_GD3_test-nhanh-cong-cu-anh.md](2026-10-10_GD3_test-nhanh-cong-cu-anh.md)
 - [2026-10-10_GD4_khung-adapter-voice-anh.md](2026-10-10_GD4_khung-adapter-voice-anh.md)
 - [2026-10-10_GD4_adapter-onnx-model-that.md](2026-10-10_GD4_adapter-onnx-model-that.md)
+- [2026-10-10_GD3_cong-cu-thu-am.md](2026-10-10_GD3_cong-cu-thu-am.md)
+- [2026-10-10_GD3_cong-cu-thu-anh.md](2026-10-10_GD3_cong-cu-thu-anh.md)
+- [2026-10-10_GD4_so-sanh-bootstrap.md](2026-10-10_GD4_so-sanh-bootstrap.md)

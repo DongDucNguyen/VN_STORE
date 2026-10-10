@@ -180,3 +180,165 @@ def test_eval_image_refuses_test_without_lock(tmp_path):
     assert ei.main(base + ["--split", "test"]) == 1
     assert ei.main(base + ["--split", "test", "--confirm-locked-test", "--allow-unreviewed"]) == 1
     assert not (tmp_path / "out").exists()
+
+
+# ---------- import_voice_session ----------
+
+import import_voice_session as ivs  # noqa: E402
+
+
+def session_zip(path, speaker="s01", split="dev", qids=("p01", "p02"), extra=None):
+    import zipfile
+    samples, files = [], {}
+    for q in qids:
+        qid = f"{speaker}-20261010t1700-{q}"
+        data = wav(1.0)
+        files[f"raw/{qid}.wav"] = data
+        samples.append({"qid": qid, "audio_path": f"raw/{qid}.wav", "sha256": hashlib.sha256(data).hexdigest(),
+                        "reference_text": "túi cói dưới ba trăm nghìn", "speaker_id": speaker, "region": "bac",
+                        "device": "phone-a", "environment": "quiet", "split": split, "tags": ["price"],
+                        "consent": {"status": "granted", "evidence": "consent-001"}, "transcript_review": None})
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("manifest.json", json.dumps({"manifest_version": "1.0.0", "samples": samples}, ensure_ascii=False))
+        for name, data in {**files, **(extra or {})}.items():
+            z.writestr(name, data)
+    return path
+
+
+def empty_target(tmp_path):
+    d = tmp_path / "voice"
+    d.mkdir()
+    (d / "manifest.json").write_text('{"manifest_version": "1.0.0", "samples": []}', encoding="utf-8")
+    return d / "manifest.json"
+
+
+def test_import_voice_session_merges_and_guards(tmp_path):
+    target = empty_target(tmp_path)
+    z = session_zip(tmp_path / "a.zip")
+    assert ivs.main([str(z), "--manifest", str(target), "--dry-run"]) == 0
+    assert json.loads(target.read_text(encoding="utf-8"))["samples"] == []
+    assert ivs.main([str(z), "--manifest", str(target)]) == 0
+    merged = json.loads(target.read_text(encoding="utf-8"))["samples"]
+    assert [s["qid"] for s in merged] == ["s01-20261010t1700-p01", "s01-20261010t1700-p02"]
+    assert (target.parent / "raw" / "s01-20261010t1700-p01.wav").is_file()
+    assert ivs.main([str(z), "--manifest", str(target)]) == 1  # qid trùng
+    other = session_zip(tmp_path / "b.zip", split="test", qids=("p03",))
+    assert ivs.main([str(other), "--manifest", str(target)]) == 1  # cùng người nói khác split
+    assert len(json.loads(target.read_text(encoding="utf-8"))["samples"]) == 2  # lỗi thì không ghi
+
+
+@pytest.mark.parametrize("extra", [{"../evil.wav": b"x"}, {"raw/khong-co-trong-manifest.wav": wav(1.0)}],
+                         ids=["traversal", "unlisted"])
+def test_import_voice_session_rejects_unexpected_files(tmp_path, extra):
+    target = empty_target(tmp_path)
+    assert ivs.main([str(session_zip(tmp_path / "x.zip", extra=extra)), "--manifest", str(target)]) == 1
+    assert not (tmp_path / "evil.wav").exists() and not (target.parent / "raw").exists()
+
+
+# ---------- import_image_session ----------
+
+import import_image_session as iis  # noqa: E402
+
+
+def image_session_zip(path, collector="c01", split="dev", n=2, family="fx-gio-may-co-quai", extra=None):
+    import zipfile
+    samples, files = [], {}
+    for i in range(n):
+        qid = f"{collector}-20261010t1700-{i:03d}"
+        data = png(80 + i + (10 if split == "test" else 0), 64, (10 * i, 90, 160))
+        files[f"raw/{qid}.jpg"] = data
+        h = hashlib.sha256(data).hexdigest()
+        samples.append({"qid": qid, "task": "exact", "text_vi": None, "split": split, "family_id": family,
+                        "capture_session_id": f"{collector}-cho", "source_asset_id": f"{qid}-src",
+                        "source_asset_sha256": h, "image_path": f"raw/{qid}.jpg", "sha256": h, "source_url": None,
+                        "usage_rights": {"status": "owned", "evidence": "rights-001"},
+                        "independence_review": None, "judgment": None})
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("samples.json", json.dumps({"samples": samples}))
+        for name, data in {**files, **(extra or {})}.items():
+            z.writestr(name, data)
+    return path
+
+
+def image_target(tmp_path):
+    d = tmp_path / "image"
+    d.mkdir()
+    sha = hashlib.sha256(FIXTURE.read_bytes()).hexdigest()
+    (d / "manifest.json").write_text(json.dumps({"manifest_version": "1.0.0", "catalog_sha256": sha,
+                                                 "include_drafts": False, "samples": []}), encoding="utf-8")
+    return d / "manifest.json"
+
+
+def test_import_image_session(tmp_path):
+    target = image_target(tmp_path)
+    args = ["--manifest", str(target), "--catalog", str(FIXTURE)]
+    z = image_session_zip(tmp_path / "a.zip")
+    assert iis.main([str(z), *args, "--dry-run"]) == 0
+    assert not list((target.parent / "raw").glob("*")) and len(list(target.parent.iterdir())) == 2  # dọn sạch
+    assert iis.main([str(z), *args]) == 0
+    assert len(json.loads(target.read_text(encoding="utf-8"))["samples"]) == 2
+    assert iis.main([str(z), *args]) == 1  # qid trùng
+    # Cùng họ sản phẩm ở split khác: audit chặn rò split, không để lại file.
+    leak = image_session_zip(tmp_path / "b.zip", collector="c02", split="test", n=1)
+    assert iis.main([str(leak), *args]) == 1
+    assert len(json.loads(target.read_text(encoding="utf-8"))["samples"]) == 2
+    assert not (target.parent / "raw" / "c02-20261010t1700-000.jpg").exists()
+
+
+def test_import_image_session_rejects_bad_zip(tmp_path):
+    target = image_target(tmp_path)
+    args = ["--manifest", str(target), "--catalog", str(FIXTURE)]
+    assert iis.main([str(image_session_zip(tmp_path / "x.zip", extra={"../x.jpg": b"1"})), *args]) == 1
+    assert iis.main([str(image_session_zip(tmp_path / "y.zip", extra={"raw/la.jpg": b"1"})), *args]) == 1
+
+
+# ---------- compare_runs (paired cluster bootstrap) ----------
+
+import compare_runs as cr  # noqa: E402
+
+
+def voice_run(errors_by_speaker, name="a", manifest="m" * 64):
+    rows = []
+    for spk, errs in errors_by_speaker.items():
+        for i, e in enumerate(errs):
+            rows.append({"qid": f"{spk}-{i}", "speaker_id": spk, "word_normalized": [e, 0, 0, 10],
+                         "char_normalized": [e, 0, 0, 40]})
+    return {"name": name, "split": "dev", "manifest_sha256": manifest, "model": {"model_id": name}}, rows
+
+
+def test_compare_voice_runs_bootstrap_by_speaker():
+    speakers = [f"s{i}" for i in range(8)]
+    left = voice_run({s: [3, 2] for s in speakers})
+    right = voice_run({s: [1, 1] for s in speakers}, "b")
+    rep = cr.compare(left, right, samples=500)
+    m = rep["metrics"]["wer_normalized"]
+    assert rep["cluster"] == "speaker_id" and m["clusters"] == 8
+    assert m["left"] == 0.25 and m["right"] == 0.1 and m["delta"] == -0.15
+    assert m["ci95"] == [-0.15, -0.15]  # mọi cụm cải thiện như nhau
+    mixed = voice_run({s: ([0, 0] if i % 2 else [4, 4]) for i, s in enumerate(speakers)}, "c")
+    mm = cr.compare(left, mixed, samples=500)["metrics"]["wer_normalized"]
+    # Nửa số người nói tốt hẳn, nửa kém đi: trung bình giảm 0,05 nhưng CI chứa 0.
+    assert mm["delta"] == -0.05 and mm["ci95"][0] < 0 < mm["ci95"][1]
+    assert cr.compare(left, left, samples=200)["metrics"]["wer_normalized"]["ci95"] == [0.0, 0.0]
+
+
+def test_compare_refuses_too_few_clusters_and_mismatches():
+    few = cr.compare(voice_run({"s1": [3, 3]}), voice_run({"s1": [1, 1]}, "b"), samples=100)
+    assert few["metrics"]["wer_normalized"]["ci95"] is None and "1 cụm" in few["metrics"]["wer_normalized"]["ci_note"]
+    a = voice_run({f"s{i}": [1] for i in range(6)})
+    with pytest.raises(cr.Incomparable, match="manifest"):
+        cr.compare(a, voice_run({f"s{i}": [1] for i in range(6)}, manifest="x" * 64))
+    with pytest.raises(cr.Incomparable, match="qid"):
+        cr.compare(a, voice_run({f"s{i}": [1] for i in range(5)}))
+
+
+def test_compare_image_runs_pairs_only_judged_queries():
+    def run(vals):
+        rows = [{"qid": f"q{i}", "family_id": f"f{i % 6}", "ndcg_10": v, "recall_5": v is not None and v > 0.5}
+                for i, v in enumerate(vals)]
+        return {"name": "x", "split": "dev", "manifest_sha256": "m" * 64, "model": None}, rows
+    left = run([0.2, 0.4, None, 0.3, 0.5, 0.1, 0.2, 0.3, 0.4, 0.2, 0.1, 0.3])
+    right = run([0.6, 0.8, 0.9, 0.7, 0.9, 0.5, 0.6, None, 0.8, 0.6, 0.5, 0.7])
+    m = cr.compare(left, right, samples=300)["metrics"]["ndcg_10"]
+    assert m["queries"] == 10 and m["clusters"] == 6  # q2, q7 thiếu ở một bên → loại cả cặp
+    assert m["delta"] > 0 and m["ci95"][0] > 0

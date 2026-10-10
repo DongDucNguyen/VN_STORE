@@ -205,3 +205,21 @@ td a + a::before { content: ", "; }
   border-radius: var(--radius); background: var(--surface); color: var(--text); }
 .text-input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .section-title { font-size: 1.1rem; margin: 16px 0 0; }
+
+.collect-page h1 { font-size: 1.4rem; margin: 12px 0 4px; }
+.collect-form { display: grid; gap: 8px; border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 12px;
+  background: var(--surface); }
+@media (min-width: 800px) { .collect-form { grid-template-columns: 1fr 1fr; } }
+.collect-form label:not(.check) { display: grid; gap: 4px; font-size: 0.9rem; }
+.collect-form input:not([type="checkbox"]), .collect-form select { padding: 8px; font: inherit; border: 1px solid var(--line);
+  border-radius: 6px; background: var(--bg); color: var(--text); }
+.prompt-list { padding-left: 20px; display: grid; gap: 8px; }
+.prompt-list li { padding: 8px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.prompt-live { border-color: var(--err) !important; }
+.prompt-text { margin: 0 0 6px; font-size: 1.05rem; }
+.prompt-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.prompt-actions audio { height: 32px; max-width: 100%; }
+.collect-export { position: sticky; bottom: 0; background: var(--bg); padding: 8px 0; border-top: 1px solid var(--line); }
+.shot { display: flex; gap: 10px; align-items: center; }
+.shot img { width: 72px; height: 72px; object-fit: cover; border-radius: 6px; flex: none; }
+.btn-disabled { opacity: 0.6; cursor: default; }
