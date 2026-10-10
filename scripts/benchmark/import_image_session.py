@@ -69,6 +69,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("zip", type=Path)
     ap.add_argument("--manifest", type=Path, default=TARGET)
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
+    ap.add_argument("--families", type=Path, help="registry họ đã duyệt để đối chiếu khi nhập")
+    ap.add_argument("--require-families", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")
@@ -93,7 +95,7 @@ def main(argv: list[str] | None = None) -> int:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             json.dump({**current, "samples": current["samples"] + samples}, f, ensure_ascii=False, indent=1)
             f.write("\n")
-        report = audit(tmp, args.catalog)
+        report = audit(tmp, args.catalog, args.families, args.require_families)
         if report["status"] == "invalid":
             errors = [f"{i['code']} @ {i['path']}: {i['message']}" for i in report["issues"] if i["level"] == "error"]
             raise SessionError("audit invalid — " + "; ".join(errors[:5]))

@@ -1,0 +1,2452 @@
+{
+ "status": "proposed_unreviewed",
+ "catalog_version": "seed-003-dot-002",
+ "catalog_sha256": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc",
+ "generated_at": "2026-10-10T21:53:19+07:00",
+ "visual_source": "google/siglip2-base-patch16-224@ba1f3b0843f2",
+ "code_sha256": "064782508778a1b7b71a2611d2f3f06c37b2df3e5801cebe6717b8b9ddc4fff5",
+ "families": [
+  {
+   "family_id": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",
+   "products": [
+    "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+    "p-hanoia-binh-hoa-bellus-size-s-a25be08",
+    "p-hanoia-binh-hoa-bellus-size-xl-a25be10"
+   ],
+   "names": [
+    "Bình hoa Bellus size M",
+    "Bình hoa Bellus size S",
+    "Bình hoa Bellus size XL"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "binh hoa bellus"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+   "products": [
+    "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+    "p-hanoia-binh-hoa-red-river-size-m-a20rr05",
+    "p-hanoia-binh-hoa-red-river-size-s-a20rr04",
+    "p-hanoia-hop-tra-tron-red-river-a20rr02"
+   ],
+   "names": [
+    "BÌNH HOA RED RIVER LỚN",
+    "Bình hoa Red River size M",
+    "Bình hoa Red River size S",
+    "Hộp trà tròn Red River"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "binh hoa red river"
+    },
+    {
+     "type": "visual",
+     "a": "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+     "b": "p-hanoia-hop-tra-tron-red-river-a20rr02",
+     "cosine": 0.9968
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-binh-hoa-thong-dong-nho-a24td02",
+   "products": [
+    "p-hanoia-binh-hoa-thong-dong-nho-a24td02",
+    "p-hanoia-hop-tra-tron-thong-dong-a24td04"
+   ],
+   "names": [
+    "Bình hoa Thong Dong nhỏ",
+    "Hộp trà tròn Thong Dong"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-hanoia-binh-hoa-thong-dong-nho-a24td02",
+     "b": "p-hanoia-hop-tra-tron-thong-dong-a24td04",
+     "cosine": 0.9703
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-binh-hoa-vinh-size-l-a23vi03",
+   "products": [
+    "p-hanoia-binh-hoa-vinh-size-l-a23vi03",
+    "p-hanoia-binh-hoa-vinh-size-m-a23vi02",
+    "p-hanoia-binh-hoa-vinh-size-s-a23vi01"
+   ],
+   "names": [
+    "Bình hoa Vịnh size L",
+    "Bình hoa Vịnh size M",
+    "Bình hoa Vịnh size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "binh hoa vinh"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-gia-do-dien-thoai-elephone-af26el01",
+   "products": [
+    "p-hanoia-gia-do-dien-thoai-elephone-af26el01",
+    "p-hanoia-gia-do-dien-thoai-elephone-af26el02"
+   ],
+   "names": [
+    "Giá đỡ điện thoại Elephone (AF26EL01)",
+    "Giá đỡ điện thoại Elephone (AF26EL02)"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "gia do dien thoai elephone"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+   "products": [
+    "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03"
+   ],
+   "names": [
+    "Giỏ đan tre Ethnic cao",
+    "Giỏ đan tre Ethnic thấp size M",
+    "Giỏ đan tre Ethnic thấp size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "gio dan tre ethnic"
+    },
+    {
+     "type": "visual",
+     "a": "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+     "b": "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03",
+     "cosine": 0.9768
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+   "products": [
+    "p-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+    "p-hanoia-hop-da-tron-mountain-size-s-af26mt01"
+   ],
+   "names": [
+    "Hộp đá tròn Mountain size M",
+    "Hộp đá tròn Mountain size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop da tron mountain"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+   "products": [
+    "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+    "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01"
+   ],
+   "names": [
+    "Hộp đan tre Ethnic size S",
+    "Hộp đan tre Ethnic size M"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop dan tre ethnic"
+    },
+    {
+     "type": "visual",
+     "a": "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+     "b": "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01",
+     "cosine": 0.9679
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-tra-tron-exotic-af26ex08",
+   "products": [
+    "p-hanoia-hop-tra-tron-exotic-af26ex08",
+    "p-hanoia-hop-tra-tron-exotic-af26ex09",
+    "p-hanoia-hop-tra-tron-exotic-af26ex10"
+   ],
+   "names": [
+    "Hộp trà tròn Exotic (AF26EX08)",
+    "Hộp trà tròn Exotic (AF26EX09)",
+    "Hộp trà tròn Exotic (AF26EX10)"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop tra tron exotic"
+    },
+    {
+     "type": "visual",
+     "a": "p-hanoia-hop-tra-tron-exotic-af26ex08",
+     "b": "p-hanoia-hop-tra-tron-exotic-af26ex10",
+     "cosine": 0.9747
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+   "products": [
+    "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+    "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01"
+   ],
+   "names": [
+    "Hộp trang sức Exotic size L",
+    "Hộp trang sức Exotic size M"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop trang suc exotic"
+    },
+    {
+     "type": "visual",
+     "a": "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+     "b": "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01",
+     "cosine": 0.9788
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-vuong-botanica-s-af26bt03",
+   "products": [
+    "p-hanoia-hop-vuong-botanica-s-af26bt03",
+    "p-hanoia-hop-vuong-botanica-size-m-af26bt04"
+   ],
+   "names": [
+    "Hộp vuông Botanica size S",
+    "Hộp vuông Botanica size M"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop vuong botanica"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-vuong-exotic-size-l-af26ex13",
+   "products": [
+    "p-hanoia-hop-vuong-exotic-size-l-af26ex13",
+    "p-hanoia-hop-vuong-exotic-size-m-af26ex12",
+    "p-hanoia-hop-vuong-exotic-size-s-af26ex04"
+   ],
+   "names": [
+    "Hộp vuông Exotic size L",
+    "Hộp vuông Exotic size M",
+    "Hộp vuông Exotic size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop vuong exotic"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+   "products": [
+    "p-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+    "p-hanoia-hop-vuong-moonbow-size-m-af26mo10",
+    "p-hanoia-hop-vuong-moonbow-size-s-af26mo02"
+   ],
+   "names": [
+    "Hộp vuông Moonbow size L",
+    "Hộp vuông Moonbow size M",
+    "Hộp vuông Moonbow size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "hop vuong moonbow"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+   "products": [
+    "p-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+    "p-hanoia-khay-chu-nhat-moonbow-size-s-af26mo04"
+   ],
+   "names": [
+    "Khay chữ nhật Moonbow size L",
+    "Khay chữ nhật Moonbow size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "khay chu nhat moonbow"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+   "products": [
+    "p-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+    "p-hanoia-khay-chu-nhat-mountain-size-s-af26mt04"
+   ],
+   "names": [
+    "Khay chữ nhật Mountain size M",
+    "Khay chữ nhật Mountain size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "khay chu nhat mountain"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-hanoia-khung-anh-moonbow-size-m-af26mo13",
+   "products": [
+    "p-hanoia-khung-anh-moonbow-size-m-af26mo13",
+    "p-hanoia-khung-anh-moonbow-size-s-af26mo07"
+   ],
+   "names": [
+    "Khung ảnh Moonbow size M",
+    "Khung ảnh Moonbow size S"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "khung anh moonbow"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+   "products": [
+    "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+    "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+    "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552"
+   ],
+   "names": [
+    "Sô cô la Marou — 6 Flavors Of Vietnam Napolitains Chocolate 36-Piece Gift Box",
+    "Sô cô la Marou — 6 Single Origin Napolitains Chocolate 36-Piece Gift Box",
+    "Sô cô la Marou — 6 The Faiseurs Collection Napolitains Chocolate 36-Piece Gift Box"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+     "b": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+     "cosine": 0.9637
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+     "b": "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+     "cosine": 0.9633
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+     "b": "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+     "cosine": 0.976
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+   "products": [
+    "p-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+    "p-marou-so-co-la-marou-ca-phe-sua-bar-44-80g-8249792037072"
+   ],
+   "names": [
+    "Sô cô la Marou — Ca Phe Sua Bar 44% - 24G",
+    "Sô cô la Marou — Ca Phe Sua Bar 44% - 80G"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "ca phe sua bar"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+   "products": [
+    "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+    "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632"
+   ],
+   "names": [
+    "Sô cô la Marou — Ca Phe Sua & Sea Salt 44% Chocolate Bar - Socola Trail Edition",
+    "Sô cô la Marou — Popped Rice With Pho Spice 65% Dark Chocolate Bar - Socola Trail Edition",
+    "Sô cô la Marou — Rice Paper With Sesame 48% Milk Chocolate Bar - Socola Trail Edition"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+     "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+     "cosine": 0.9706
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+     "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+     "cosine": 0.9636
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+     "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+     "cosine": 0.9864
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+   "products": [
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360"
+   ],
+   "names": [
+    "Sô cô la Marou — Ironbar - 65% Dark Chocolate Protein Bar - 55G Vegan",
+    "Sô cô la Marou — Ironbar - 65% Dark Chocolate Protein Bar - 10X55G Vegan",
+    "Sô cô la Marou — Ironbar - 65% Dark Chocolate Energy Bar - 40G"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "ironbar dark chocolate protein bar vegan"
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+     "b": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360",
+     "cosine": 0.9689
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448"
+   ],
+   "names": [
+    "Sô cô la Marou — Maison Marou Exclusive Bar - Feuillantine 80G",
+    "Sô cô la Marou — Maison Marou Exclusive Bar - Caramelized Nibs 80G",
+    "Sô cô la Marou — Maison Marou Exclusive Bar - Candied Ginger 80G",
+    "Sô cô la Marou — Maison Marou Exclusive Bar - Candied Chili 80G"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+     "cosine": 0.9624
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+     "cosine": 0.9601
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+     "cosine": 0.9698
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+     "cosine": 0.9668
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+     "cosine": 0.9613
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+     "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+     "cosine": 0.9712
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+   "products": [
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+    "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312"
+   ],
+   "names": [
+    "Sô cô la Marou — Marou Bar - 53% Coconut Milk Chocolate & Popped Rice - 35G",
+    "Sô cô la Marou — Marou Bar - 64% Tropical Fruits & Cashews - 35G",
+    "Sô cô la Marou — Marou Bar - 65% Peanuts, Ginger & Salted Caramel - 35G"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+     "b": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+     "cosine": 0.9827
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+     "b": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+     "cosine": 0.9893
+    },
+    {
+     "type": "visual",
+     "a": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+     "b": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+     "cosine": 0.9844
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+   "products": [
+    "p-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+    "p-marou-so-co-la-marou-set-of-3-mini-milk-by-marou-8441716441296"
+   ],
+   "names": [
+    "Sô cô la Marou — Set Of 3 Milk By Marou Chocolate Bars",
+    "Sô cô la Marou — Set Of 3 Mini Milk By Marou Chocolate Bars"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "milk by chocolate bars"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+   "products": [
+    "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+    "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624"
+   ],
+   "names": [
+    "Sô cô la Marou — Set Of 6 Mini The Faiseurs Collection Chocolate Bars",
+    "Sô cô la Marou — Set Of 6 The Faiseurs Collection Chocolate Bars"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "the faiseurs collection chocolate bars"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+   "products": [
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640"
+   ],
+   "names": [
+    "Sô cô la Marou — The Faiseurs Collection 6 Chocolate Mini Bars Gift Box",
+    "Sô cô la Marou — The Faiseurs Collection 6 Chocolate Bars Gift Box"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "the faiseurs collection chocolate bars gift box"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+   "products": [
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640"
+   ],
+   "names": [
+    "Sô cô la Marou — Vietnamese Matcha & Coconut 40% White Chocolate Mini Bar",
+    "Sô cô la Marou — Vietnamese Matcha & Coconut 40% White Chocolate Bar"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "vietnamese matcha coconut white chocolate bar"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "products": [
+    "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+    "p-minhlong-binh-hoa-36-cm-sen-do-1071550664"
+   ],
+   "names": [
+    "Bình hoa 36 cm - Hoa Sen",
+    "Bình hoa 36 cm - Sen Đỏ"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+     "b": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+     "cosine": 0.9671
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+    "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849"
+   ],
+   "names": [
+    "Bình Hoa 41 cm - Bình Hoa - Đôi Két",
+    "Bình hoa 41 cm - Đôi Két"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+     "b": "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849",
+     "cosine": 0.9987
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+   "products": [
+    "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770"
+   ],
+   "names": [
+    "Bình hoa 45 cm - Bình Hoa - Sen Vàng",
+    "Bình hoa 50 cm - Bình Hoa - Sen Vàng"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "binh hoa binh hoa sen vang"
+    },
+    {
+     "type": "visual",
+     "a": "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+     "b": "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770",
+     "cosine": 0.9999
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+   "products": [
+    "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+    "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134"
+   ],
+   "names": [
+    "Bình hoa Lộc Phát 28 cm - Bình Hoa - Sen vàng nền vàng",
+    "Bình hoa Lộc Phát 40 cm - Bình Hoa - Sen vàng nền vàng"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "binh hoa loc phat binh hoa sen vang nen vang"
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-camellia-chi-vang-05l"
+   ],
+   "names": [
+    "Bộ trà 0.5 L - Camellia - Hương Biển Kem",
+    "Bộ trà 0.5 L Camellia – Chỉ Vàng"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+     "b": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+     "cosine": 0.966
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558"
+   ],
+   "names": [
+    "Bộ trà 0.5 L - Camellia - Văn Lang",
+    "Bộ trà 0.8 L - Camellia - Văn Lang"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "bo tra camellia van lang"
+    },
+    {
+     "type": "visual",
+     "a": "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+     "b": "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+     "cosine": 0.9918
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+   "products": [
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709"
+   ],
+   "names": [
+    "Dĩa lót 15.5 cm - Tulip Ngà - Màu Cam",
+    "Dĩa lót 15.5 cm - Tulip Ngà - Màu Vàng",
+    "Dĩa lót 15.5 cm - Tulip Ngà - Trắng Ngà",
+    "Dĩa lót 15.5 cm - Tulip Ngà - Xanh Non"
+   ],
+   "evidence": [
+    {
+     "type": "name",
+     "key": "dia lot tulip nga"
+    },
+    {
+     "type": "visual",
+     "a": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+     "b": "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+     "cosine": 0.9727
+    }
+   ]
+  },
+  {
+   "family_id": "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+   "products": [
+    "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+    "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927"
+   ],
+   "names": [
+    "Dĩa tròn 18 cm N.hàng- Jasmine - Trắng",
+    "Dĩa tròn 22 cm - Tulip IFP - Trắng Ngà"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+     "b": "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927",
+     "cosine": 0.9718
+    }
+   ]
+  },
+  {
+   "family_id": "fam-vietcraft-chup-den-tre-vh24043-1241",
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24043-1241",
+    "p-vietcraft-chup-den-tre-vh240902-668"
+   ],
+   "names": [
+    "Chụp đèn tre — VH24043",
+    "Chụp đèn tre — VH240902"
+   ],
+   "evidence": [
+    {
+     "type": "visual",
+     "a": "p-vietcraft-chup-den-tre-vh24043-1241",
+     "b": "p-vietcraft-chup-den-tre-vh240902-668",
+     "cosine": 0.9663
+    }
+   ]
+  }
+ ],
+ "product_family": {
+  "p-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412": "fam-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412",
+  "p-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165": "fam-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165",
+  "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450": "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450",
+  "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440": "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440",
+  "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428": "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428",
+  "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423": "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423",
+  "p-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451": "fam-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451",
+  "p-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433": "fam-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433",
+  "p-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456": "fam-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456",
+  "p-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417": "fam-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417",
+  "p-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177": "fam-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177",
+  "p-hanhsilk-ao-lua-2-day-3040": "fam-hanhsilk-ao-lua-2-day-3040",
+  "p-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156": "fam-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156",
+  "p-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122": "fam-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122",
+  "p-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103": "fam-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103",
+  "p-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172": "fam-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172",
+  "p-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487": "fam-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487",
+  "p-hanhsilk-khan-lanh-to-tam-246": "fam-hanhsilk-khan-lanh-to-tam-246",
+  "p-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361": "fam-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361",
+  "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786": "fam-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+  "p-hanhsilk-khan-lua-thuy-an-dai-570": "fam-hanhsilk-khan-lua-thuy-an-dai-570",
+  "p-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799": "fam-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799",
+  "p-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613": "fam-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613",
+  "p-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456": "fam-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456",
+  "p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232": "fam-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+  "p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243": "fam-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243",
+  "p-hanhsilk-vai-lua-det-may-det-mong-2229": "fam-hanhsilk-vai-lua-det-may-det-mong-2229",
+  "p-hanhsilk-vai-lua-the-van-chu-tho-2239": "fam-hanhsilk-vai-lua-the-van-chu-tho-2239",
+  "p-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093": "fam-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093",
+  "p-hanhsilk-vay-song-wavy-dress-3192": "fam-hanhsilk-vay-song-wavy-dress-3192",
+  "p-hanoia-binh-hoa-axis-size-s-pc26ax01": "fam-hanoia-binh-hoa-axis-size-s-pc26ax01",
+  "p-hanoia-binh-hoa-bellus-size-m-a25be09": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",
+  "p-hanoia-binh-hoa-bellus-size-s-a25be08": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",
+  "p-hanoia-binh-hoa-bellus-size-xl-a25be10": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",
+  "p-hanoia-binh-hoa-botanica-af26bt01": "fam-hanoia-binh-hoa-botanica-af26bt01",
+  "p-hanoia-binh-hoa-exotic-size-s-af26ex07": "fam-hanoia-binh-hoa-exotic-size-s-af26ex07",
+  "p-hanoia-binh-hoa-monument-a22mo01": "fam-hanoia-binh-hoa-monument-a22mo01",
+  "p-hanoia-binh-hoa-moonbow-af26mo06": "fam-hanoia-binh-hoa-moonbow-af26mo06",
+  "p-hanoia-binh-hoa-mystery-a18mt01": "fam-hanoia-binh-hoa-mystery-a18mt01",
+  "p-hanoia-binh-hoa-red-river-lon-a20rr01": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+  "p-hanoia-binh-hoa-red-river-size-m-a20rr05": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+  "p-hanoia-binh-hoa-red-river-size-s-a20rr04": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+  "p-hanoia-hop-tra-tron-red-river-a20rr02": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+  "p-hanoia-binh-hoa-thong-dong-nho-a24td02": "fam-hanoia-binh-hoa-thong-dong-nho-a24td02",
+  "p-hanoia-hop-tra-tron-thong-dong-a24td04": "fam-hanoia-binh-hoa-thong-dong-nho-a24td02",
+  "p-hanoia-binh-hoa-vinh-size-l-a23vi03": "fam-hanoia-binh-hoa-vinh-size-l-a23vi03",
+  "p-hanoia-binh-hoa-vinh-size-m-a23vi02": "fam-hanoia-binh-hoa-vinh-size-l-a23vi03",
+  "p-hanoia-binh-hoa-vinh-size-s-a23vi01": "fam-hanoia-binh-hoa-vinh-size-l-a23vi03",
+  "p-hanoia-binh-hoa-vita-pc26vt01": "fam-hanoia-binh-hoa-vita-pc26vt01",
+  "p-hanoia-bo-co-tuong-aurify-af26ar10": "fam-hanoia-bo-co-tuong-aurify-af26ar10",
+  "p-hanoia-chan-sach-aurify-af26ar09": "fam-hanoia-chan-sach-aurify-af26ar09",
+  "p-hanoia-dia-xa-phong-mountain-af26mt03": "fam-hanoia-dia-xa-phong-mountain-af26mt03",
+  "p-hanoia-gia-do-dien-thoai-elephone-af26el01": "fam-hanoia-gia-do-dien-thoai-elephone-af26el01",
+  "p-hanoia-gia-do-dien-thoai-elephone-af26el02": "fam-hanoia-gia-do-dien-thoai-elephone-af26el01",
+  "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01": "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+  "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02": "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+  "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03": "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+  "p-hanoia-hop-but-innate-af26in16": "fam-hanoia-hop-but-innate-af26in16",
+  "p-hanoia-hop-da-tron-mountain-size-m-af26mt02": "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+  "p-hanoia-hop-da-tron-mountain-size-s-af26mt01": "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+  "p-hanoia-hop-dan-tre-ethnic-s-ou17et02": "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+  "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01": "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+  "p-hanoia-hop-dong-ho-keras-af26kr04": "fam-hanoia-hop-dong-ho-keras-af26kr04",
+  "p-hanoia-hop-dung-cigar-keras-af26kr03": "fam-hanoia-hop-dung-cigar-keras-af26kr03",
+  "p-hanoia-hop-dung-giay-red-river-a20rr06": "fam-hanoia-hop-dung-giay-red-river-a20rr06",
+  "p-hanoia-hop-gat-tan-keras-af26kr02": "fam-hanoia-hop-gat-tan-keras-af26kr02",
+  "p-hanoia-hop-tra-tron-bellus-a25be11": "fam-hanoia-hop-tra-tron-bellus-a25be11",
+  "p-hanoia-hop-tra-tron-exotic-af26ex08": "fam-hanoia-hop-tra-tron-exotic-af26ex08",
+  "p-hanoia-hop-tra-tron-exotic-af26ex09": "fam-hanoia-hop-tra-tron-exotic-af26ex08",
+  "p-hanoia-hop-tra-tron-exotic-af26ex10": "fam-hanoia-hop-tra-tron-exotic-af26ex08",
+  "p-hanoia-hop-tra-tron-moonbow-af26mo01": "fam-hanoia-hop-tra-tron-moonbow-af26mo01",
+  "p-hanoia-hop-trang-suc-botanica-af26bt02": "fam-hanoia-hop-trang-suc-botanica-af26bt02",
+  "p-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05": "fam-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05",
+  "p-hanoia-hop-trang-suc-cosmos-af26co04": "fam-hanoia-hop-trang-suc-cosmos-af26co04",
+  "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11": "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+  "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01": "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+  "p-hanoia-hop-vuong-botanica-s-af26bt03": "fam-hanoia-hop-vuong-botanica-s-af26bt03",
+  "p-hanoia-hop-vuong-botanica-size-m-af26bt04": "fam-hanoia-hop-vuong-botanica-s-af26bt03",
+  "p-hanoia-hop-vuong-exotic-size-l-af26ex13": "fam-hanoia-hop-vuong-exotic-size-l-af26ex13",
+  "p-hanoia-hop-vuong-exotic-size-m-af26ex12": "fam-hanoia-hop-vuong-exotic-size-l-af26ex13",
+  "p-hanoia-hop-vuong-exotic-size-s-af26ex04": "fam-hanoia-hop-vuong-exotic-size-l-af26ex13",
+  "p-hanoia-hop-vuong-moonbow-size-l-af26mo11": "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+  "p-hanoia-hop-vuong-moonbow-size-m-af26mo10": "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+  "p-hanoia-hop-vuong-moonbow-size-s-af26mo02": "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+  "p-hanoia-khay-chu-nhat-keras-af26kr01": "fam-hanoia-khay-chu-nhat-keras-af26kr01",
+  "p-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12": "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+  "p-hanoia-khay-chu-nhat-moonbow-size-s-af26mo04": "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+  "p-hanoia-khay-chu-nhat-mountain-size-m-af26mt05": "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+  "p-hanoia-khay-chu-nhat-mountain-size-s-af26mt04": "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+  "p-hanoia-khay-chu-nhat-red-river-af26rr07": "fam-hanoia-khay-chu-nhat-red-river-af26rr07",
+  "p-hanoia-khay-tron-exotic-af26ex03": "fam-hanoia-khay-tron-exotic-af26ex03",
+  "p-hanoia-khay-vuong-moonbow-af26mo05": "fam-hanoia-khay-vuong-moonbow-af26mo05",
+  "p-hanoia-khung-anh-moonbow-size-m-af26mo13": "fam-hanoia-khung-anh-moonbow-size-m-af26mo13",
+  "p-hanoia-khung-anh-moonbow-size-s-af26mo07": "fam-hanoia-khung-anh-moonbow-size-m-af26mo13",
+  "p-hanoia-lo-da-mountain-af26mt07": "fam-hanoia-lo-da-mountain-af26mt07",
+  "p-hanoia-tuong-chim-chao-mao-ether-af26er01": "fam-hanoia-tuong-chim-chao-mao-ether-af26er01",
+  "p-hanoia-tuong-chim-se-ngo-ether-af26er03": "fam-hanoia-tuong-chim-se-ngo-ether-af26er03",
+  "p-hanoia-tuong-chim-vet-ether-af26er02": "fam-hanoia-tuong-chim-vet-ether-af26er02",
+  "p-kilomet109-ao-khoac-phi-17mjk003": "fam-kilomet109-ao-khoac-phi-17mjk003",
+  "p-kilomet109-ao-khoac-vang-1-19mjk001": "fam-kilomet109-ao-khoac-vang-1-19mjk001",
+  "p-kilomet109-ao-so-mi-thong-17mt004": "fam-kilomet109-ao-so-mi-thong-17mt004",
+  "p-kilomet109-chan-vay-ha-17wsk001": "fam-kilomet109-chan-vay-ha-17wsk001",
+  "p-kilomet109-vay-van-19wdr006": "fam-kilomet109-vay-van-19wdr006",
+  "p-kilomet109-vong-co-xoan-17wac001": "fam-kilomet109-vong-co-xoan-17wac001",
+  "p-lys-dia-tron-jasmine-trang-nga-15cm": "fam-lys-dia-tron-jasmine-trang-nga-15cm",
+  "p-marou-ba-ria-76-80g": "fam-marou-ba-ria-76-80g",
+  "p-marou-ben-tre-78-80g": "fam-marou-ben-tre-78-80g",
+  "p-marou-lam-dong-74-80g": "fam-marou-lam-dong-74-80g",
+  "p-marou-quat-tien-giang-68-80g": "fam-marou-quat-tien-giang-68-80g",
+  "p-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872",
+  "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712",
+  "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+  "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+  "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+  "p-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328": "fam-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328",
+  "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928": "fam-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928",
+  "p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320": "fam-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320",
+  "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752": "fam-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+  "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376": "fam-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+  "p-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216": "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+  "p-marou-so-co-la-marou-ca-phe-sua-bar-44-80g-8249792037072": "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+  "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624": "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+  "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+  "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+  "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480": "fam-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408": "fam-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+  "p-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864": "fam-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864",
+  "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272": "fam-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+  "p-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688": "fam-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688",
+  "p-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080": "fam-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080",
+  "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664": "fam-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+  "p-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016": "fam-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016",
+  "p-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664": "fam-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664",
+  "p-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736": "fam-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736",
+  "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624": "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+  "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464": "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+  "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360": "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+  "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720": "fam-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264",
+  "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472": "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+  "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864": "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+  "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312": "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+  "p-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456": "fam-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456",
+  "p-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424": "fam-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424",
+  "p-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808": "fam-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808",
+  "p-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064": "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+  "p-marou-so-co-la-marou-set-of-3-mini-milk-by-marou-8441716441296": "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+  "p-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632": "fam-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632",
+  "p-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768": "fam-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768",
+  "p-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304": "fam-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304",
+  "p-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872": "fam-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872",
+  "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928": "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+  "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624": "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+  "p-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200": "fam-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200",
+  "p-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360": "fam-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360",
+  "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104": "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+  "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640": "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+  "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880": "fam-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+  "p-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312": "fam-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312",
+  "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872": "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+  "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640": "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+  "p-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688": "fam-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688",
+  "p-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552": "fam-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552",
+  "p-marou-tien-giang-70-80g": "fam-marou-tien-giang-70-80g",
+  "p-marou-vietnam-100-60g": "fam-marou-vietnam-100-60g",
+  "p-minhlong-binh-hoa-26-cm-dan-ga-1075177869": "fam-minhlong-binh-hoa-26-cm-dan-ga-1075177869",
+  "p-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941": "fam-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941",
+  "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628": "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+  "p-minhlong-binh-hoa-36-cm-sen-do-1071550664": "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+  "p-minhlong-binh-hoa-40-cm-buom-dao-1075177777": "fam-minhlong-binh-hoa-40-cm-buom-dao-1075177777",
+  "p-minhlong-binh-hoa-40-cm-buom-luon-1071551425": "fam-minhlong-binh-hoa-40-cm-buom-luon-1071551425",
+  "p-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827": "fam-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827",
+  "p-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790": "fam-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790",
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886": "fam-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725": "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+  "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849": "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046": "fam-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046",
+  "p-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963": "fam-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963",
+  "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908": "fam-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+  "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": "fam-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+  "p-minhlong-binh-hoa-41-cm-sen-hot-1074964446": "fam-minhlong-binh-hoa-41-cm-sen-hot-1074964446",
+  "p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791": "fam-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791",
+  "p-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980": "fam-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980",
+  "p-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934": "fam-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934",
+  "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001": "fam-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+  "p-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992": "fam-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992",
+  "p-minhlong-binh-hoa-42-cm-hue-do-1074964896": "fam-minhlong-binh-hoa-42-cm-hue-do-1074964896",
+  "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741": "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+  "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770": "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+  "p-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653": "fam-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653",
+  "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715": "fam-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715",
+  "p-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842": "fam-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842",
+  "p-minhlong-binh-hoa-52-cm-rong-do-1074965041": "fam-minhlong-binh-hoa-52-cm-rong-do-1074965041",
+  "p-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861": "fam-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861",
+  "p-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660": "fam-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660",
+  "p-minhlong-binh-hoa-don-xuan-ve-tay-1075177745": "fam-minhlong-binh-hoa-don-xuan-ve-tay-1075177745",
+  "p-minhlong-binh-hoa-hon-viet-30cm": "fam-minhlong-binh-hoa-hon-viet-30cm",
+  "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+  "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+  "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+  "p-minhlong-binh-hoa-sac-tia-1075177720": "fam-minhlong-binh-hoa-sac-tia-1075177720",
+  "p-minhlong-binh-hoa-sen-vang-27cm": "fam-minhlong-binh-hoa-sen-vang-27cm",
+  "p-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157": "fam-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157",
+  "p-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775": "fam-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775",
+  "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739": "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+  "p-minhlong-bo-tra-camellia-chi-vang-05l": "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+  "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946": "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+  "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558": "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+  "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520": "fam-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+  "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122": "fam-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+  "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799": "fam-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799",
+  "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914": "fam-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+  "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858": "fam-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858",
+  "p-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445": "fam-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445",
+  "p-minhlong-chen-com-thach-van-11cm": "fam-minhlong-chen-com-thach-van-11cm",
+  "p-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380": "fam-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187",
+  "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211": "fam-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211",
+  "p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709": "fam-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709",
+  "p-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128": "fam-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128",
+  "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795": "fam-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+  "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370": "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+  "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927": "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+  "p-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597": "fam-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597",
+  "p-minhlong-ly-su-duong-sinh-bien-xanh-048l": "fam-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+  "p-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429": "fam-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429",
+  "p-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260": "fam-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260",
+  "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114": "fam-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114",
+  "p-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339": "fam-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339",
+  "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094": "fam-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+  "p-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246": "fam-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246",
+  "p-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378": "fam-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378",
+  "p-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360": "fam-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360",
+  "p-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169": "fam-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169",
+  "p-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364": "fam-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364",
+  "p-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275": "fam-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275",
+  "p-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268": "fam-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268",
+  "p-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286": "fam-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286",
+  "p-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047": "fam-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047",
+  "p-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194": "fam-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194",
+  "p-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228": "fam-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228",
+  "p-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421": "fam-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421",
+  "p-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332": "fam-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332",
+  "p-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351": "fam-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351",
+  "p-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291": "fam-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291",
+  "p-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250": "fam-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250",
+  "p-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311": "fam-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311",
+  "p-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417": "fam-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417",
+  "p-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075": "fam-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075",
+  "p-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327": "fam-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327",
+  "p-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229": "fam-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229",
+  "p-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206": "fam-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206",
+  "p-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734": "fam-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734",
+  "p-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289": "fam-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289",
+  "p-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441": "fam-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441",
+  "p-vietcraft-ban-may-gom-vh240901-688": "fam-vietcraft-ban-may-gom-vh240901-688",
+  "p-vietcraft-ban-may-vh2609-1442": "fam-vietcraft-ban-may-vh2609-1442",
+  "p-vietcraft-bat-gao-dua-son-ve-tay": "fam-vietcraft-bat-gao-dua-son-ve-tay",
+  "p-vietcraft-bat-tre-cuon-phu-son-vh24045": "fam-vietcraft-bat-tre-cuon-phu-son-vh24045",
+  "p-vietcraft-bat-tre-vh24029-1511": "fam-vietcraft-bat-tre-vh24029-1511",
+  "p-vietcraft-bat-tre-vh24033-1473": "fam-vietcraft-bat-tre-vh24033-1473",
+  "p-vietcraft-bat-tre-vh24034-1466": "fam-vietcraft-bat-tre-vh24034-1466",
+  "p-vietcraft-bat-tre-vh24041-1257": "fam-vietcraft-bat-tre-vh24041-1257",
+  "p-vietcraft-bat-tre-vh24051-1183": "fam-vietcraft-bat-tre-vh24051-1183",
+  "p-vietcraft-bat-tre-vh24053-1154": "fam-vietcraft-bat-tre-vh24053-1154",
+  "p-vietcraft-bat-tre-vh24070-1062": "fam-vietcraft-bat-tre-vh24070-1062",
+  "p-vietcraft-bat-tre-vh25027-739": "fam-vietcraft-bat-tre-vh25027-739",
+  "p-vietcraft-binh-trang-tri-tre-vh2602-1384": "fam-vietcraft-binh-trang-tri-tre-vh2602-1384",
+  "p-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760": "fam-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760",
+  "p-vietcraft-chau-may-vh24060-1090": "fam-vietcraft-chau-may-vh24060-1090",
+  "p-vietcraft-chup-den-may-vh24072-1050": "fam-vietcraft-chup-den-may-vh24072-1050",
+  "p-vietcraft-chup-den-seagrass-vh24028": "fam-vietcraft-chup-den-seagrass-vh24028",
+  "p-vietcraft-chup-den-tre-may-vh24031-1483": "fam-vietcraft-chup-den-tre-may-vh24031-1483",
+  "p-vietcraft-chup-den-tre-vh24038-1300": "fam-vietcraft-chup-den-tre-vh24038-1300",
+  "p-vietcraft-chup-den-tre-vh24043-1241": "fam-vietcraft-chup-den-tre-vh24043-1241",
+  "p-vietcraft-chup-den-tre-vh240902-668": "fam-vietcraft-chup-den-tre-vh24043-1241",
+  "p-vietcraft-chup-den-tre-vh24047-1210": "fam-vietcraft-chup-den-tre-vh24047-1210",
+  "p-vietcraft-chup-den-tre-vh24055-1125": "fam-vietcraft-chup-den-tre-vh24055-1125",
+  "p-vietcraft-chup-den-tre-vh24074-1038": "fam-vietcraft-chup-den-tre-vh24074-1038",
+  "p-vietcraft-chup-den-tre-vh25012-461": "fam-vietcraft-chup-den-tre-vh25012-461",
+  "p-vietcraft-chup-den-vh24058-1102": "fam-vietcraft-chup-den-vh24058-1102",
+  "p-vietcraft-de-lot-coc-may-gom-vh24101-775": "fam-vietcraft-de-lot-coc-may-gom-vh24101-775",
+  "p-vietcraft-dia-may-vh2610-1455": "fam-vietcraft-dia-may-vh2610-1455",
+  "p-vietcraft-dia-tre-vh25022-622": "fam-vietcraft-dia-tre-vh25022-622",
+  "p-vietcraft-gio-dan-luc-binh-vh24035-1423": "fam-vietcraft-gio-dan-luc-binh-vh24035-1423",
+  "p-vietcraft-gio-dan-may-vh24056-1114": "fam-vietcraft-gio-dan-may-vh24056-1114",
+  "p-vietcraft-gio-dan-may-vh24059-1097": "fam-vietcraft-gio-dan-may-vh24059-1097",
+  "p-vietcraft-gio-dan-may-vh24062-1076": "fam-vietcraft-gio-dan-may-vh24062-1076",
+  "p-vietcraft-gio-dan-may-vh24077-1000": "fam-vietcraft-gio-dan-may-vh24077-1000",
+  "p-vietcraft-gio-dan-may-vh24109-699": "fam-vietcraft-gio-dan-may-vh24109-699",
+  "p-vietcraft-gio-dan-may-vh25023-629": "fam-vietcraft-gio-dan-may-vh25023-629",
+  "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246",
+  "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136",
+  "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770",
+  "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733",
+  "p-vietcraft-gio-dan-tre-vh24027-1523": "fam-vietcraft-gio-dan-tre-vh24027-1523",
+  "p-vietcraft-gio-dan-tre-vietcraft-753-753": "fam-vietcraft-gio-dan-tre-vietcraft-753-753",
+  "p-vietcraft-gio-dan-vh24057-1107": "fam-vietcraft-gio-dan-vh24057-1107",
+  "p-vietcraft-gio-dan-vh25021-615": "fam-vietcraft-gio-dan-vh25021-615",
+  "p-vietcraft-gio-may-bau-duc-vh24040": "fam-vietcraft-gio-may-bau-duc-vh24040",
+  "p-vietcraft-gio-seagrass-vh24046": "fam-vietcraft-gio-seagrass-vh24046",
+  "p-vietcraft-gio-tre-dan-tron-vh24026": "fam-vietcraft-gio-tre-dan-tron-vh24026",
+  "p-vietcraft-guong-trang-tri-may-vh2604-1407": "fam-vietcraft-guong-trang-tri-may-vh2604-1407",
+  "p-vietcraft-hop-tre-vh24075-1028": "fam-vietcraft-hop-tre-vh24075-1028",
+  "p-vietcraft-hop-tre-vietcraft-1164-1164": "fam-vietcraft-hop-tre-vietcraft-1164-1164",
+  "p-vietcraft-hop-tre-vietcraft-481-481": "fam-vietcraft-hop-tre-vietcraft-481-481",
+  "p-vietcraft-khay-may-24030-1490": "fam-vietcraft-khay-may-24030-1490",
+  "p-vietcraft-khay-may-dan-vh24048": "fam-vietcraft-khay-may-dan-vh24048",
+  "p-vietcraft-khay-may-gom-vh24105-746": "fam-vietcraft-khay-may-gom-vh24105-746",
+  "p-vietcraft-khay-may-vh24049-1195": "fam-vietcraft-khay-may-vh24049-1195",
+  "p-vietcraft-khay-may-vh25020-466": "fam-vietcraft-khay-may-vh25020-466",
+  "p-vietcraft-khay-may-vietcraft-610-610": "fam-vietcraft-khay-may-vietcraft-610-610",
+  "p-vietcraft-khay-may-xa-cu-vietcraft-1083-1083": "fam-vietcraft-khay-may-xa-cu-vietcraft-1083-1083",
+  "p-vietcraft-khay-tre-xa-cu-vh25019-189": "fam-vietcraft-khay-tre-xa-cu-vh25019-189",
+  "p-vietcraft-long-ban-tre-vh251201-1275": "fam-vietcraft-long-ban-tre-vh251201-1275",
+  "p-vietcraft-nha-cho-thu-cung-vh24103-765": "fam-vietcraft-nha-cho-thu-cung-vh24103-765",
+  "p-vietcraft-tui-luc-binh-vo-so-vh24032": "fam-vietcraft-tui-luc-binh-vo-so-vh24032",
+  "p-vietcraft-vat-trang-tri-may-vh24076-1019": "fam-vietcraft-vat-trang-tri-may-vh24076-1019",
+  "p-vietcraft-vat-trang-tri-may-vh25034-1007": "fam-vietcraft-vat-trang-tri-may-vh25034-1007"
+ },
+ "evidence": {
+  "name": [
+   {
+    "source": "hanoia",
+    "key": "hop vuong botanica",
+    "products": [
+     "p-hanoia-hop-vuong-botanica-s-af26bt03",
+     "p-hanoia-hop-vuong-botanica-size-m-af26bt04"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop dan tre ethnic",
+    "products": [
+     "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+     "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "binh hoa red river",
+    "products": [
+     "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+     "p-hanoia-binh-hoa-red-river-size-m-a20rr05",
+     "p-hanoia-binh-hoa-red-river-size-s-a20rr04"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "binh hoa vinh",
+    "products": [
+     "p-hanoia-binh-hoa-vinh-size-l-a23vi03",
+     "p-hanoia-binh-hoa-vinh-size-m-a23vi02",
+     "p-hanoia-binh-hoa-vinh-size-s-a23vi01"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "binh hoa bellus",
+    "products": [
+     "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+     "p-hanoia-binh-hoa-bellus-size-s-a25be08",
+     "p-hanoia-binh-hoa-bellus-size-xl-a25be10"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "gia do dien thoai elephone",
+    "products": [
+     "p-hanoia-gia-do-dien-thoai-elephone-af26el01",
+     "p-hanoia-gia-do-dien-thoai-elephone-af26el02"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "gio dan tre ethnic",
+    "products": [
+     "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+     "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+     "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop trang suc exotic",
+    "products": [
+     "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+     "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop vuong exotic",
+    "products": [
+     "p-hanoia-hop-vuong-exotic-size-l-af26ex13",
+     "p-hanoia-hop-vuong-exotic-size-m-af26ex12",
+     "p-hanoia-hop-vuong-exotic-size-s-af26ex04"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop tra tron exotic",
+    "products": [
+     "p-hanoia-hop-tra-tron-exotic-af26ex08",
+     "p-hanoia-hop-tra-tron-exotic-af26ex09",
+     "p-hanoia-hop-tra-tron-exotic-af26ex10"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop vuong moonbow",
+    "products": [
+     "p-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+     "p-hanoia-hop-vuong-moonbow-size-m-af26mo10",
+     "p-hanoia-hop-vuong-moonbow-size-s-af26mo02"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "khay chu nhat moonbow",
+    "products": [
+     "p-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+     "p-hanoia-khay-chu-nhat-moonbow-size-s-af26mo04"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "khung anh moonbow",
+    "products": [
+     "p-hanoia-khung-anh-moonbow-size-m-af26mo13",
+     "p-hanoia-khung-anh-moonbow-size-s-af26mo07"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "hop da tron mountain",
+    "products": [
+     "p-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+     "p-hanoia-hop-da-tron-mountain-size-s-af26mt01"
+    ]
+   },
+   {
+    "source": "hanoia",
+    "key": "khay chu nhat mountain",
+    "products": [
+     "p-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+     "p-hanoia-khay-chu-nhat-mountain-size-s-af26mt04"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "ironbar dark chocolate protein bar vegan",
+    "products": [
+     "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+     "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "ca phe sua bar",
+    "products": [
+     "p-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+     "p-marou-so-co-la-marou-ca-phe-sua-bar-44-80g-8249792037072"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "the faiseurs collection chocolate bars gift box",
+    "products": [
+     "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+     "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "the faiseurs collection chocolate bars",
+    "products": [
+     "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+     "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "milk by chocolate bars",
+    "products": [
+     "p-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+     "p-marou-so-co-la-marou-set-of-3-mini-milk-by-marou-8441716441296"
+    ]
+   },
+   {
+    "source": "marou",
+    "key": "vietnamese matcha coconut white chocolate bar",
+    "products": [
+     "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+     "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640"
+    ]
+   },
+   {
+    "source": "minhlong",
+    "key": "bo tra camellia van lang",
+    "products": [
+     "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+     "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558"
+    ]
+   },
+   {
+    "source": "minhlong",
+    "key": "binh hoa binh hoa sen vang",
+    "products": [
+     "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+     "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770"
+    ]
+   },
+   {
+    "source": "minhlong",
+    "key": "binh hoa loc phat binh hoa sen vang nen vang",
+    "products": [
+     "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+     "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134"
+    ]
+   },
+   {
+    "source": "minhlong",
+    "key": "dia lot tulip nga",
+    "products": [
+     "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+     "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+     "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147"
+    ]
+   }
+  ],
+  "visual": [
+   {
+    "a": "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+    "b": "p-hanoia-hop-tra-tron-red-river-a20rr02",
+    "cosine": 0.9968
+   },
+   {
+    "a": "p-hanoia-binh-hoa-thong-dong-nho-a24td02",
+    "b": "p-hanoia-hop-tra-tron-thong-dong-a24td04",
+    "cosine": 0.9703
+   },
+   {
+    "a": "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+    "b": "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03",
+    "cosine": 0.9768
+   },
+   {
+    "a": "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+    "b": "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01",
+    "cosine": 0.9679
+   },
+   {
+    "a": "p-hanoia-hop-tra-tron-exotic-af26ex08",
+    "b": "p-hanoia-hop-tra-tron-exotic-af26ex10",
+    "cosine": 0.9747
+   },
+   {
+    "a": "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+    "b": "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01",
+    "cosine": 0.9788
+   },
+   {
+    "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+    "b": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+    "cosine": 0.9637
+   },
+   {
+    "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+    "b": "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+    "cosine": 0.9633
+   },
+   {
+    "a": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+    "b": "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+    "cosine": 0.976
+   },
+   {
+    "a": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+    "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+    "cosine": 0.9706
+   },
+   {
+    "a": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+    "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+    "cosine": 0.9636
+   },
+   {
+    "a": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+    "b": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360",
+    "cosine": 0.9689
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "cosine": 0.9624
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "cosine": 0.9601
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+    "cosine": 0.9698
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "cosine": 0.9668
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+    "cosine": 0.9613
+   },
+   {
+    "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+    "cosine": 0.9712
+   },
+   {
+    "a": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "b": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+    "cosine": 0.9827
+   },
+   {
+    "a": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "b": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+    "cosine": 0.9893
+   },
+   {
+    "a": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+    "b": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+    "cosine": 0.9844
+   },
+   {
+    "a": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+    "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+    "cosine": 0.9864
+   },
+   {
+    "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+    "b": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+    "cosine": 0.9671
+   },
+   {
+    "a": "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+    "b": "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849",
+    "cosine": 0.9987
+   },
+   {
+    "a": "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+    "b": "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770",
+    "cosine": 0.9999
+   },
+   {
+    "a": "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "b": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+    "cosine": 0.966
+   },
+   {
+    "a": "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "b": "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+    "cosine": 0.9918
+   },
+   {
+    "a": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+    "b": "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+    "cosine": 0.9727
+   },
+   {
+    "a": "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+    "b": "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927",
+    "cosine": 0.9718
+   },
+   {
+    "a": "p-vietcraft-chup-den-tre-vh24043-1241",
+    "b": "p-vietcraft-chup-den-tre-vh240902-668",
+    "cosine": 0.9663
+   }
+  ]
+ },
+ "visual_candidates": [
+  {
+   "a": "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211",
+   "b": "p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709",
+   "cosine": 0.9599
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "cosine": 0.9551
+  },
+  {
+   "a": "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+   "b": "p-hanoia-binh-hoa-bellus-size-xl-a25be10",
+   "cosine": 0.9549
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9544
+  },
+  {
+   "a": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+   "b": "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+   "cosine": 0.9538
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+   "cosine": 0.9537
+  },
+  {
+   "a": "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+   "b": "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+   "cosine": 0.9532
+  },
+  {
+   "a": "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770",
+   "b": "p-minhlong-binh-hoa-sen-vang-27cm",
+   "cosine": 0.9527
+  },
+  {
+   "a": "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+   "b": "p-minhlong-binh-hoa-sen-vang-27cm",
+   "cosine": 0.9521
+  },
+  {
+   "a": "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928",
+   "b": "p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320",
+   "cosine": 0.9516
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+   "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+   "cosine": 0.9515
+  },
+  {
+   "a": "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+   "b": "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+   "cosine": 0.9514
+  },
+  {
+   "a": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+   "b": "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134",
+   "cosine": 0.9507
+  },
+  {
+   "a": "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799",
+   "b": "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858",
+   "cosine": 0.9506
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh240902-668",
+   "b": "p-vietcraft-chup-den-tre-vh25012-461",
+   "cosine": 0.9505
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.95
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh24047-1210",
+   "b": "p-vietcraft-chup-den-tre-vh240902-668",
+   "cosine": 0.9495
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+   "cosine": 0.9487
+  },
+  {
+   "a": "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+   "b": "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640",
+   "cosine": 0.9487
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+   "b": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+   "cosine": 0.9485
+  },
+  {
+   "a": "p-hanoia-binh-hoa-red-river-size-m-a20rr05",
+   "b": "p-hanoia-binh-hoa-red-river-size-s-a20rr04",
+   "cosine": 0.9482
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh24038-1300",
+   "b": "p-vietcraft-chup-den-tre-vh240902-668",
+   "cosine": 0.948
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+   "cosine": 0.9479
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh24038-1300",
+   "b": "p-vietcraft-chup-den-tre-vh24043-1241",
+   "cosine": 0.9475
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+   "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+   "cosine": 0.947
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh24043-1241",
+   "b": "p-vietcraft-chup-den-tre-vh24047-1210",
+   "cosine": 0.9469
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "cosine": 0.9464
+  },
+  {
+   "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712",
+   "b": "p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320",
+   "cosine": 0.9458
+  },
+  {
+   "a": "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+   "b": "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+   "cosine": 0.9454
+  },
+  {
+   "a": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+   "b": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+   "cosine": 0.9449
+  },
+  {
+   "a": "p-hanoia-hop-tra-tron-exotic-af26ex08",
+   "b": "p-hanoia-hop-tra-tron-exotic-af26ex09",
+   "cosine": 0.9447
+  },
+  {
+   "a": "p-hanoia-hop-dong-ho-keras-af26kr04",
+   "b": "p-hanoia-hop-dung-cigar-keras-af26kr03",
+   "cosine": 0.9442
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+   "b": "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+   "cosine": 0.9441
+  },
+  {
+   "a": "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+   "b": "p-hanoia-binh-hoa-bellus-size-s-a25be08",
+   "cosine": 0.944
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+   "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+   "cosine": 0.9438
+  },
+  {
+   "a": "p-hanoia-hop-tra-tron-exotic-af26ex09",
+   "b": "p-hanoia-hop-tra-tron-exotic-af26ex10",
+   "cosine": 0.9433
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "b": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+   "cosine": 0.9429
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+   "b": "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+   "cosine": 0.9426
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "b": "p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791",
+   "cosine": 0.9423
+  },
+  {
+   "a": "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+   "b": "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+   "cosine": 0.9419
+  },
+  {
+   "a": "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+   "b": "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927",
+   "cosine": 0.9418
+  },
+  {
+   "a": "p-hanoia-binh-hoa-vinh-size-l-a23vi03",
+   "b": "p-hanoia-binh-hoa-vinh-size-m-a23vi02",
+   "cosine": 0.9416
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9415
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+   "b": "p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791",
+   "cosine": 0.9409
+  },
+  {
+   "a": "p-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304",
+   "b": "p-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872",
+   "cosine": 0.9407
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+   "b": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+   "cosine": 0.9405
+  },
+  {
+   "a": "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712",
+   "b": "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928",
+   "cosine": 0.9391
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9381
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+   "cosine": 0.9379
+  },
+  {
+   "a": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+   "b": "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+   "cosine": 0.9379
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+   "b": "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+   "cosine": 0.9378
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849",
+   "b": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+   "cosine": 0.9378
+  },
+  {
+   "a": "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715",
+   "b": "p-minhlong-binh-hoa-hon-viet-30cm",
+   "cosine": 0.9377
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+   "b": "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+   "cosine": 0.9371
+  },
+  {
+   "a": "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+   "b": "p-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075",
+   "cosine": 0.9371
+  },
+  {
+   "a": "p-hanoia-hop-trang-suc-cosmos-af26co04",
+   "b": "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01",
+   "cosine": 0.937
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+   "cosine": 0.9369
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9368
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "b": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+   "cosine": 0.9364
+  },
+  {
+   "a": "p-vietcraft-gio-dan-may-vh24056-1114",
+   "b": "p-vietcraft-khay-may-dan-vh24048",
+   "cosine": 0.9363
+  },
+  {
+   "a": "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114",
+   "b": "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+   "cosine": 0.9362
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "b": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+   "cosine": 0.9359
+  },
+  {
+   "a": "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+   "b": "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+   "cosine": 0.9359
+  },
+  {
+   "a": "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+   "b": "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+   "cosine": 0.9354
+  },
+  {
+   "a": "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246",
+   "b": "p-vietcraft-gio-seagrass-vh24046",
+   "cosine": 0.9349
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+   "b": "p-minhlong-binh-hoa-41-cm-sen-hot-1074964446",
+   "cosine": 0.9348
+  },
+  {
+   "a": "p-vietcraft-chup-den-tre-vh24047-1210",
+   "b": "p-vietcraft-chup-den-tre-vh25012-461",
+   "cosine": 0.9348
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+   "b": "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+   "cosine": 0.9347
+  },
+  {
+   "a": "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+   "b": "p-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992",
+   "cosine": 0.9343
+  },
+  {
+   "a": "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+   "b": "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+   "cosine": 0.9342
+  },
+  {
+   "a": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9341
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+   "b": "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+   "cosine": 0.9339
+  },
+  {
+   "a": "p-hanoia-hop-trang-suc-cosmos-af26co04",
+   "b": "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+   "cosine": 0.9338
+  },
+  {
+   "a": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+   "b": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+   "cosine": 0.9336
+  },
+  {
+   "a": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "b": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+   "cosine": 0.9329
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "b": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+   "cosine": 0.9329
+  },
+  {
+   "a": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+   "b": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+   "cosine": 0.9322
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+   "b": "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+   "cosine": 0.9318
+  },
+  {
+   "a": "p-hanoia-hop-vuong-moonbow-size-m-af26mo10",
+   "b": "p-hanoia-hop-vuong-moonbow-size-s-af26mo02",
+   "cosine": 0.9315
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "b": "p-minhlong-binh-hoa-42-cm-hue-do-1074964896",
+   "cosine": 0.9315
+  },
+  {
+   "a": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+   "b": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+   "cosine": 0.9314
+  },
+  {
+   "a": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+   "b": "p-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360",
+   "cosine": 0.9308
+  },
+  {
+   "a": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "b": "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+   "cosine": 0.9301
+  }
+ ],
+ "shared_image_clusters": [
+  {
+   "images": [
+    "img-hanoia-binh-hoa-red-river-lon-a20rr01-3",
+    "img-hanoia-hop-tra-tron-red-river-a20rr02-2"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+    "p-hanoia-hop-tra-tron-red-river-a20rr02"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725-1",
+    "img-minhlong-binh-hoa-41-cm-doi-ket-1074964849-2"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+    "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725-2",
+    "img-minhlong-binh-hoa-41-cm-doi-ket-1074964849-1"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+    "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741-1",
+    "img-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770-1"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741-2",
+    "img-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770-2"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739-3",
+    "img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-3",
+    "img-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520-2",
+    "img-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122-4",
+    "img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-3",
+    "img-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914-2",
+    "img-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858-3"
+   ],
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+    "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+    "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+    "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739-4",
+    "img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-4",
+    "img-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520-3",
+    "img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-4",
+    "img-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914-3"
+   ],
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+    "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914"
+   ]
+  },
+  {
+   "images": [
+    "img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-2",
+    "img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-2"
+   ],
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558"
+   ]
+  }
+ ],
+ "design_lines": [
+  {
+   "source": "hanhsilk",
+   "term": "dress",
+   "products": [
+    "p-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122",
+    "p-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093",
+    "p-hanhsilk-vay-song-wavy-dress-3192"
+   ]
+  },
+  {
+   "source": "hanhsilk",
+   "term": "satin",
+   "products": [
+    "p-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156",
+    "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786"
+   ]
+  },
+  {
+   "source": "hanhsilk",
+   "term": "than",
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451",
+    "p-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417"
+   ]
+  },
+  {
+   "source": "hanhsilk",
+   "term": "thuy",
+   "products": [
+    "p-hanhsilk-khan-lua-thuy-an-dai-570",
+    "p-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613"
+   ]
+  },
+  {
+   "source": "hanhsilk",
+   "term": "vest",
+   "products": [
+    "p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+    "p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "aurify",
+   "products": [
+    "p-hanoia-bo-co-tuong-aurify-af26ar10",
+    "p-hanoia-chan-sach-aurify-af26ar09"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "bellus",
+   "products": [
+    "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+    "p-hanoia-binh-hoa-bellus-size-s-a25be08",
+    "p-hanoia-binh-hoa-bellus-size-xl-a25be10",
+    "p-hanoia-hop-tra-tron-bellus-a25be11",
+    "p-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "botanica",
+   "products": [
+    "p-hanoia-binh-hoa-botanica-af26bt01",
+    "p-hanoia-hop-trang-suc-botanica-af26bt02",
+    "p-hanoia-hop-vuong-botanica-s-af26bt03",
+    "p-hanoia-hop-vuong-botanica-size-m-af26bt04"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "chim",
+   "products": [
+    "p-hanoia-tuong-chim-chao-mao-ether-af26er01",
+    "p-hanoia-tuong-chim-se-ngo-ether-af26er03",
+    "p-hanoia-tuong-chim-vet-ether-af26er02"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "ether",
+   "products": [
+    "p-hanoia-tuong-chim-chao-mao-ether-af26er01",
+    "p-hanoia-tuong-chim-se-ngo-ether-af26er03",
+    "p-hanoia-tuong-chim-vet-ether-af26er02"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "ethnic",
+   "products": [
+    "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03",
+    "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+    "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "exotic",
+   "products": [
+    "p-hanoia-binh-hoa-exotic-size-s-af26ex07",
+    "p-hanoia-hop-tra-tron-exotic-af26ex08",
+    "p-hanoia-hop-tra-tron-exotic-af26ex09",
+    "p-hanoia-hop-tra-tron-exotic-af26ex10",
+    "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+    "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01",
+    "p-hanoia-hop-vuong-exotic-size-l-af26ex13",
+    "p-hanoia-hop-vuong-exotic-size-m-af26ex12",
+    "p-hanoia-hop-vuong-exotic-size-s-af26ex04",
+    "p-hanoia-khay-tron-exotic-af26ex03"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "keras",
+   "products": [
+    "p-hanoia-hop-dong-ho-keras-af26kr04",
+    "p-hanoia-hop-dung-cigar-keras-af26kr03",
+    "p-hanoia-hop-gat-tan-keras-af26kr02",
+    "p-hanoia-khay-chu-nhat-keras-af26kr01"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "moonbow",
+   "products": [
+    "p-hanoia-binh-hoa-moonbow-af26mo06",
+    "p-hanoia-hop-tra-tron-moonbow-af26mo01",
+    "p-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+    "p-hanoia-hop-vuong-moonbow-size-m-af26mo10",
+    "p-hanoia-hop-vuong-moonbow-size-s-af26mo02",
+    "p-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+    "p-hanoia-khay-chu-nhat-moonbow-size-s-af26mo04",
+    "p-hanoia-khay-vuong-moonbow-af26mo05",
+    "p-hanoia-khung-anh-moonbow-size-m-af26mo13",
+    "p-hanoia-khung-anh-moonbow-size-s-af26mo07"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "mountain",
+   "products": [
+    "p-hanoia-dia-xa-phong-mountain-af26mt03",
+    "p-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+    "p-hanoia-hop-da-tron-mountain-size-s-af26mt01",
+    "p-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+    "p-hanoia-khay-chu-nhat-mountain-size-s-af26mt04",
+    "p-hanoia-lo-da-mountain-af26mt07"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "river",
+   "products": [
+    "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+    "p-hanoia-binh-hoa-red-river-size-m-a20rr05",
+    "p-hanoia-binh-hoa-red-river-size-s-a20rr04",
+    "p-hanoia-hop-dung-giay-red-river-a20rr06",
+    "p-hanoia-hop-tra-tron-red-river-a20rr02",
+    "p-hanoia-khay-chu-nhat-red-river-af26rr07"
+   ]
+  },
+  {
+   "source": "hanoia",
+   "term": "tuong",
+   "products": [
+    "p-hanoia-bo-co-tuong-aurify-af26ar10",
+    "p-hanoia-tuong-chim-chao-mao-ether-af26er01",
+    "p-hanoia-tuong-chim-se-ngo-ether-af26er03",
+    "p-hanoia-tuong-chim-vet-ether-af26er02"
+   ]
+  },
+  {
+   "source": "kilomet109",
+   "term": "khoac",
+   "products": [
+    "p-kilomet109-ao-khoac-phi-17mjk003",
+    "p-kilomet109-ao-khoac-vang-1-19mjk001"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "caramel",
+   "products": [
+    "p-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080",
+    "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "caramelized",
+   "products": [
+    "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+    "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "cashew",
+   "products": [
+    "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "coconut",
+   "products": [
+    "p-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864",
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "exclusive",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "faiseurs",
+   "products": [
+    "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+    "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+    "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624",
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "giang",
+   "products": [
+    "p-marou-quat-tien-giang-68-80g",
+    "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+    "p-marou-tien-giang-70-80g"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "ginger",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "ironbar",
+   "products": [
+    "p-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "maison",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "napolitain",
+   "products": [
+    "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+    "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+    "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+    "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+    "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+    "p-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768",
+    "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "popped",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "rice",
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+    "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "spice",
+   "products": [
+    "p-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096"
+   ]
+  },
+  {
+   "source": "marou",
+   "term": "tien",
+   "products": [
+    "p-marou-quat-tien-giang-68-80g",
+    "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+    "p-marou-tien-giang-70-80g"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "buom",
+   "products": [
+    "p-minhlong-binh-hoa-40-cm-buom-dao-1075177777",
+    "p-minhlong-binh-hoa-40-cm-buom-luon-1071551425"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "camellia",
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+    "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+    "p-minhlong-bo-tra-camellia-chi-vang-05l",
+    "p-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128",
+    "p-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "chim",
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980",
+    "p-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934",
+    "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+    "p-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653",
+    "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+    "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "daisy",
+   "products": [
+    "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+    "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "hang",
+   "products": [
+    "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+    "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "huong",
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963",
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "jasmine",
+   "products": [
+    "p-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445",
+    "p-minhlong-chen-com-thach-van-11cm",
+    "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211",
+    "p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709",
+    "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+    "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "linh",
+   "products": [
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715",
+    "p-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "phat",
+   "products": [
+    "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+    "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+    "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134"
+   ]
+  },
+  {
+   "source": "minhlong",
+   "term": "tulip",
+   "products": [
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+    "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927"
+   ]
+  },
+  {
+   "source": "sensilk",
+   "term": "choang",
+   "products": [
+    "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114",
+    "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+    "p-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229"
+   ]
+  },
+  {
+   "source": "sensilk",
+   "term": "embroidery",
+   "products": [
+    "p-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339",
+    "p-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327"
+   ]
+  },
+  {
+   "source": "sensilk",
+   "term": "lavender",
+   "products": [
+    "p-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360",
+    "p-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228"
+   ]
+  }
+ ],
+ "params": {
+  "visual_threshold": 0.96,
+  "candidate_threshold": 0.93,
+  "shared_image_threshold": 0.99,
+  "visual_used": true
+ }
+}

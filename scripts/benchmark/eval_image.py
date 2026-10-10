@@ -144,6 +144,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
     ap.add_argument("--split", choices=("train", "dev", "test"), required=True)
     ap.add_argument("--index-dir", type=Path, default=None, help="thư mục chỉ mục đã dựng (manifest.json)")
+    ap.add_argument("--families", type=Path, help="registry họ đã duyệt; bắt buộc ngoài chế độ smoke")
     ap.add_argument("--allow-unreviewed", action="store_true", help="smoke trên train/dev khi review chưa đủ")
     ap.add_argument("--confirm-locked-test", action="store_true")
     ap.add_argument("--warmup", type=int, default=1)
@@ -160,7 +161,7 @@ def main(argv: list[str] | None = None) -> int:
         print("invalid: split test cần --confirm-locked-test và không nhận --allow-unreviewed", file=sys.stderr)
         return 1
 
-    report = audit(args.manifest, args.catalog)
+    report = audit(args.manifest, args.catalog, args.families, require_families=not args.allow_unreviewed)
     if report["status"] == "invalid":
         print(f"invalid: audit manifest thất bại ({len(report['issues'])} lỗi); chạy audit_image_queries.py",
               file=sys.stderr)
@@ -168,6 +169,12 @@ def main(argv: list[str] | None = None) -> int:
     manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
     in_split = [s for s in manifest["samples"] if s["split"] == args.split]
     samples = [s for s in in_split if usable(s, args.allow_unreviewed)]
+    pending_families = set(report["family_registry"]["pending_qids"])
+    if not args.allow_unreviewed:
+        samples = [s for s in samples if s["qid"] not in pending_families]
+    if args.split == "test" and len(samples) != len(in_split):
+        print("invalid: locked test còn query chưa đủ nhãn/quyền/review họ; không được bỏ qua", file=sys.stderr)
+        return 1
     if not samples:
         print(f"{report['status']}: split {args.split} có {len(in_split)} query, 0 query dùng được để chấm; "
               f"không ghi kết quả.")
@@ -193,15 +200,28 @@ def main(argv: list[str] | None = None) -> int:
     for w in idle["warnings"]:
         print(f"CẢNH BÁO độ trễ: {w}; số đo có thể nhiễu.")
 
+    # Do not attribute predictions to inputs that changed while model inference was running.
+    for item in report["inputs"]:
+        try:
+            unchanged = hashlib.sha256(Path(item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        except OSError:
+            unchanged = False
+        if not unchanged:
+            print(f"invalid: input changed during evaluation: {item['kind']}; no run written", file=sys.stderr)
+            return 1
     now = datetime.now(timezone(timedelta(hours=7)))
     out = args.out_root / f"{now:%Y%m%d-%H%M%S-%f}_image_{args.name}"
     out.mkdir(parents=True, exist_ok=False)
     code = [Path(__file__), Path(rm.__file__), Path(lp.__file__), ROOT / "backend/app/image/index.py", ROOT / "backend/app/search/engine.py"]
+    code += [Path(__file__).with_name("audit_image_queries.py"), Path(__file__).with_name("family_registry.py"),
+             ROOT / "benchmarks/image/manifest.schema.json"]
     run = {
         "name": args.name, "created_at": now.isoformat(timespec="seconds"),
-        "evaluation_status": "smoke_unreviewed" if report["status"] != "recorded_checks_passed"
+        "evaluation_status": "smoke_unreviewed" if args.allow_unreviewed or report["status"] != "recorded_checks_passed"
         else ("locked_test" if args.split == "test" else "dev"),
         "audit_status": report["status"], "benchmark_approved": False,
+        "family_registry_sha256": report["family_registry"]["sha256"],
+        "family_grouping_policy": "registry-v1: exact target or human family_review; external- IDs for outside objects",
         "model": {"adapter": args.adapter, "model_id": embedder.model_id, "revision": embedder.revision,
                   "preprocess": getattr(embedder, "preprocess", None), "license": getattr(embedder, "license", None)},
         "index": {"source": index_source, "entries": len(index.entries), "dim": index.dim},

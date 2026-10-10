@@ -17,7 +17,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "backend"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from app.catalog.validation import validate_catalog, inspect_image_file
+from family_registry import validate_registry, resolve_family
 
 SCHEMA = ROOT / "benchmarks/image/manifest.schema.json"
 MAX_BYTES = 25 * 1024 * 1024
@@ -27,10 +29,12 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def audit(manifest_path: Path, catalog_path: Path) -> dict:
+def audit(manifest_path: Path, catalog_path: Path, families_path: Path | None = None,
+          require_families: bool = False) -> dict:
     report = {"status": "invalid", "issues": [], "files": [], "inputs": [],
               "scope": "File bytes/hash and declared provenance only; no decoding, perceptual dedup, rights verification or benchmark approval.",
               "benchmark_approved": False}
+    report["family_registry"] = {"status": "not_checked", "sha256": None, "pending_qids": []}
 
     def issue(code, location, message, level="error"):
         report["issues"].append({"level": level, "code": code, "path": location, "message": message})
@@ -57,6 +61,19 @@ def audit(manifest_path: Path, catalog_path: Path) -> dict:
             return report
         if manifest["catalog_sha256"] != report["inputs"][1]["sha256"]:
             issue("catalog_changed", "catalog_sha256", "Re-review against this catalog; do not just replace the hash.")
+            return report
+        mapping = None
+        if families_path is not None:
+            raw = families_path.read_bytes()
+            report["inputs"].append({"kind": "family_registry", "path": str(families_path), "sha256": digest(raw)})
+            try:
+                mapping = validate_registry(json.loads(raw), manifest["catalog_sha256"], {p["id"] for p in catalog["products"]})
+            except (ValueError, TypeError) as exc:
+                issue("family_registry_invalid", "family_registry", str(exc))
+                return report
+            report["family_registry"].update(status="checked", sha256=digest(raw))
+        elif require_families and manifest["samples"]:
+            issue("family_registry_required", "family_registry", "Use --families with a reviewed registry before evaluation.")
             return report
         products = {p["id"]: p for p in catalog["products"] if p["status"] == "published"
                     or manifest["include_drafts"] and p["status"] == "draft"}
@@ -86,8 +103,8 @@ def audit(manifest_path: Path, catalog_path: Path) -> dict:
                 issue("duplicate_qid", loc, qid)
             seen_qids.add(qid)
             group_values = {k: row[k] for k in ("family_id", "capture_session_id", "source_asset_id", "source_asset_sha256", "sha256")}
-            for review_key in ("judgment", "independence_review"):
-                if row[review_key] is not None:
+            for review_key in ("judgment", "independence_review", "family_review"):
+                if row.get(review_key) is not None:
                     try:
                         stamp = datetime.fromisoformat(row[review_key]["reviewed_at"].replace("Z", "+00:00"))
                         if stamp.utcoffset() is None:
@@ -117,6 +134,15 @@ def audit(manifest_path: Path, catalog_path: Path) -> dict:
                     issue("unexpected_exact_target", loc, "Exact IDs only belong to answerable exact queries.")
             else:
                 pending["judgment"] += 1
+            if mapping is not None:
+                canonical, error = resolve_family(row, mapping)
+                if error:
+                    issue("family_mismatch", loc, error)
+                if canonical is not None:
+                    group_values["registry_family"] = canonical
+                elif not error:
+                    pending["family_review"] += 1
+                    report["family_registry"]["pending_qids"].append(qid)
             if (row["task"] == "image_text") != (row["text_vi"] is not None):
                 issue("text_task", loc, "Only image_text queries require nonempty text_vi.")
             for kind, value in group_values.items():
@@ -205,6 +231,7 @@ def markdown(report):
     lines = ["# Audit bộ query ảnh", "", f"- Trạng thái: **{report['status']}**",
              f"- Thời điểm: {report['generated_at']}", "", report["scope"], "",
              "Không phải quyết định cho phép benchmark. Chưa giải mã ảnh, kiểm tra gần trùng, xác minh quyền hoặc nhãn.", ""]
+    lines.append(f"- Registry họ: `{report['family_registry']['status']}`; SHA-256: `{report['family_registry']['sha256']}`.")
     for i in report["inputs"]:
         lines.append(f"- {i['kind']}: `{i['path']}` — SHA-256 `{i['sha256']}`")
     if "summary" in report:
@@ -220,10 +247,12 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--manifest", type=Path, default=ROOT / "benchmarks/image/manifest.json")
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
+    ap.add_argument("--families", type=Path, help="families.json đã duyệt, cùng catalog")
+    ap.add_argument("--require-families", action="store_true", help="từ chối bộ có mẫu nếu thiếu registry")
     ap.add_argument("--report-dir", type=Path, default=ROOT / "reports/benchmark")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    report = audit(args.manifest, args.catalog)
+    report = audit(args.manifest, args.catalog, args.families, args.require_families)
     now = datetime.now().astimezone()
     report.update(generated_at=now.isoformat(timespec="seconds"),
                   audit_code_sha256=digest(Path(__file__).read_bytes()))

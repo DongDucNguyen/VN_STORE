@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from audit_image_queries import audit  # noqa: E402
 from eval_image import MANIFEST  # noqa: E402
 
-FIELDS = ("judgment", "independence_review")
+FIELDS = ("judgment", "independence_review", "family_review")
 
 
 class ApplyError(ValueError):
@@ -56,9 +56,9 @@ def merge(manifest: dict, export: dict, catalog_sha: str, replace: bool) -> tupl
             raise ApplyError(f"{qid}: trường không mong đợi {sorted(extra)}")
         changed = False
         for field in FIELDS:
-            if field not in item or item[field] == row[field]:
+            if field not in item or item[field] == row.get(field):
                 continue
-            if row[field] is not None and not replace:
+            if row.get(field) is not None and not replace:
                 raise ApplyError(f"{qid}: đã có {field} của {row[field]['reviewed_by']}; dùng --replace-judged")
             row[field] = item[field]
             changed = True
@@ -71,6 +71,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("export", type=Path)
     ap.add_argument("--manifest", type=Path, default=MANIFEST)
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
+    ap.add_argument("--families", type=Path)
+    ap.add_argument("--require-families", action="store_true")
     ap.add_argument("--replace-judged", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
@@ -85,7 +87,7 @@ def main(argv: list[str] | None = None) -> int:
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
             f.write("\n")
-        report = audit(Path(tmp), args.catalog)
+        report = audit(Path(tmp), args.catalog, args.families, args.require_families)
         if report["status"] == "invalid":
             errors = [f"{i['code']} ({i['path']})" for i in report["issues"] if i["level"] == "error"]
             raise ApplyError(f"audit sau khi gộp báo invalid: {errors[:5]}")

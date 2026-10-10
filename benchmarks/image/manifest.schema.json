@@ -46,6 +46,21 @@
         "text_vi": {"$ref": "#/$defs/nullable_text"},
         "split": {"enum": ["train", "dev", "test"]},
         "family_id": {"$ref": "#/$defs/id"},
+        "family_review": {
+          "anyOf": [
+            {"type": "null"},
+            {
+              "type": "object", "additionalProperties": false,
+              "required": ["product_id", "reviewed_by", "reviewed_at", "note"],
+              "properties": {
+                "product_id": {"anyOf": [{"$ref": "#/$defs/id"}, {"type": "null"}]},
+                "reviewed_by": {"$ref": "#/$defs/text"},
+                "reviewed_at": {"type": "string", "format": "date-time"},
+                "note": {"$ref": "#/$defs/text"}
+              }
+            }
+          ]
+        },
         "capture_session_id": {"$ref": "#/$defs/id"},
         "source_asset_id": {"$ref": "#/$defs/id"},
         "source_asset_sha256": {"$ref": "#/$defs/hash"},

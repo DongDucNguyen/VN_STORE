@@ -93,6 +93,10 @@ def compare(left: tuple[dict, list[dict]], right: tuple[dict, list[dict]], sampl
     kind = kind_of(lrows)
     if kind_of(rrows) != kind:
         raise Incomparable("Hai run khác loại")
+    if kind == "image":
+        for key in ("family_registry_sha256", "family_grouping_policy"):
+            if lrun.get(key) != rrun.get(key):
+                raise Incomparable(f"Khác {key}; không so run dùng registry/quy tắc nhóm khác nhau")
     for key in ("manifest_sha256", "split"):
         if lrun.get(key) != rrun.get(key):
             raise Incomparable(f"Khác {key}: {lrun.get(key)} ≠ {rrun.get(key)}")

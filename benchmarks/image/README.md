@@ -2,7 +2,27 @@
 
 Mục tiêu PLAN §8: 600 ảnh query độc lập, khoảng 200 họ sản phẩm; chia theo họ 120/40/40 cho train/dev/test. Ảnh + text là bộ bổ sung 120 truy vấn. Đây là mục tiêu, chưa phải số liệu đã thu.
 
-Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-002-taxonomy` và bật draft để bao phủ 30 sản phẩm hiện tại. Không dùng 45 ảnh gallery làm query đánh giá. Không có model/embedding/metric ảnh trong đợt này.
+Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-003-dot-002` và bật draft để bao phủ 330 sản phẩm (rà soát 11/10/2026). Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2 và evaluator, nhưng chưa có benchmark ảnh thật. Xem [báo cáo hiện trạng](../../reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md).
+
+## Registry họ đã duyệt (11/10/2026)
+
+`families.json` phải được tạo từ quyết định của người duyệt bằng [quy trình duyệt họ](../families/README.md). Audit kiểm tra `status: reviewed`, người/thời điểm duyệt, hash catalog/proposal, mọi product ID và danh sách thành viên nhất quán. Hash đúng chỉ xác nhận phiên bản, không xác minh danh tính người duyệt.
+
+```bash
+.venv/Scripts/python scripts/benchmark/audit_image_queries.py --families benchmarks/families/families.json --require-families
+.venv/Scripts/python scripts/benchmark/import_image_session.py <session.zip> --families benchmarks/families/families.json --require-families --dry-run
+.venv/Scripts/python scripts/benchmark/apply_image_judgments.py <review.json> --families benchmarks/families/families.json --require-families --dry-run
+.venv-ml/Scripts/python scripts/benchmark/eval_image.py --adapter app.ml.image:SigLIP2Base --split dev --families benchmarks/families/families.json --name siglip2-dev
+```
+
+- **Exact có đáp án:** `family_id` phải bằng registry của `judgment.exact_product_id`. Audit gom thêm theo họ chuẩn, nên đổi tên họ của hai SKU anh em không che được rò split.
+- **Similar, image_text, exact không có đáp án:** người duyệt điền trường tùy chọn `family_review` gồm `product_id`, `reviewed_by`, `reviewed_at` (ISO có múi giờ), `note`. `product_id` nhận ID của vật thể được chụp nếu thuộc catalog; `family_id` phải khớp registry. Không suy vật thể từ danh sách relevance. Có thể no-match vì điều kiện chữ loại hết kết quả dù ảnh vẫn là món có trong catalog.
+- **Vật thể ngoài catalog:** `family_review.product_id = null`, ghi căn cứ ở `note`, dùng `family_id = external-<ma-on-dinh>`. Giữ cùng mã qua mọi ảnh/phiên/split của cùng họ ngoài catalog. Đây vẫn là khai báo có người duyệt; audit không tự nhận diện vật thể hoặc phát hiện mọi khai báo sai.
+- Thiếu family_review ở nhóm cần duyệt → `pending_review`. Import được để tiếp tục gán nhãn; evaluator dev bỏ mẫu thiếu duyệt họ, locked test từ chối nếu còn mẫu không đủ điều kiện. Nhãn chính thức bắt buộc registry; `--allow-unreviewed` chỉ chạy smoke train/dev, luôn ghi `smoke_unreviewed`, kể cả các trường khác đã đầy đủ.
+- Không truyền registry khi audit/import giữ tương thích luồng thu ban đầu, báo `family_registry.status = not_checked`. `--require-families` chặn bộ có mẫu nhưng chưa cung cấp registry. Manifest rỗng vẫn báo `pending_collection` và không nạp model.
+- `run.json` ghi `family_registry_sha256`, policy nhóm và hash code audit/schema. So sánh image runs từ chối registry/policy khác nhau; đổi registry hoặc manifest/catalog trong khi inference thì không ghi run.
+
+Trang chấm ảnh hiện chưa có ô nhập `family_review`. Người duyệt thêm trường này vào từng item của file export `image_judgment_export`, cùng `qid` và `sha256`, rồi áp bằng lệnh trên. `apply_image_judgments.py` giữ nguyên các trường khác, không ghi nếu audit lỗi; thay review đã tồn tại cần `--replace-judged`. Chưa tạo review thật trong repo. Quyết định họ cần được lưu trước khi benchmark, không tự điền metadata để vượt kiểm tra.
 
 ## Cấu trúc
 

@@ -1,14 +1,14 @@
 # VNStore — Việc ưu tiên tiếp theo (backlog sống)
 
-Cập nhật: 10/10/2026 (khuya), sau khi nhập đợt 002 — 330 sản phẩm ([báo cáo](2026-10-10_GD1_nhap-dot-002.md)); trước đó TensorRT ([báo cáo](2026-10-10_GD4_tensorrt.md)); trước đó P1.6/P1.7 + bộ lọc tìm ảnh ([pool + đối chiếu](2026-10-10_GD3_pool-keyword-va-doi-chieu.md), [profile int8/fp16](2026-10-10_GD4_profile-int8-fp16.md), [bộ lọc ảnh](2026-10-10_GD6_bo-loc-tim-anh.md)).
+Cập nhật: 11/10/2026, sau [nối registry họ vào audit/import/evaluator ảnh](2026-10-11_GD3_registry-ho-va-chong-ro-split.md). Catalog vẫn `seed-003-dot-002`, 330 sản phẩm, 814 ảnh; P1.12 đã xong, tiếp theo P1.13 và P1.14.
 
 Khác với các báo cáo theo đợt (không sửa lại), file này **được sửa mỗi phiên**: đánh dấu việc xong, thêm việc mới phát hiện, sắp lại thứ tự. Khi làm một mục thì ghi báo cáo đợt như thường lệ ([TEMPLATE](TEMPLATE.md)), rồi cập nhật mục đó ở đây kèm link báo cáo.
 
 ## 0. Hiện trạng một đoạn
 
-Toàn bộ phần **mã nguồn** cho demo đã có:
+Các luồng chính của **mã nguồn demo** đã có; chưa đồng nghĩa hoàn thành nghiệm thu PLAN:
 - catalog/API/UI tìm bằng chữ;
-- tìm bằng giọng nói/ảnh với 5 adapter ONNX chạy trên GPU (PhoWhisper base/small/small-int8 + Silero VAD, SigLIP2-base, DINOv2-base);
+- tìm bằng giọng nói/ảnh qua ONNX (4 cấu hình PhoWhisper base/base-fp16/small/small-int8 + Silero VAD, 2 adapter ảnh SigLIP2-base/DINOv2-base); các lần chạy GPU trước được ghi trong báo cáo GĐ4;
 - công cụ thu dữ liệu (`#/collect/voice`, `#/collect/image`), nhập, audit, đánh giá và so sánh có CI;
 - công cụ duyệt nhãn: `#/review/voice` (bản chép lời), packet pool + trang chấm judgment ảnh, packet keyword toàn catalog hoặc theo pool (107 truy vấn dev), `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh; protocol latency cố định.
 
@@ -16,6 +16,7 @@ Toàn bộ phần **mã nguồn** cho demo đã có:
 - 330/330 sản phẩm còn `draft`, 0 published (catalog `seed-003-dot-002`);
 - 814/814 ảnh có quyền `unknown`;
 - 74/330 sản phẩm chưa có giá;
+- 96 sản phẩm có dưới 2 ảnh, 137 thiếu chất liệu; 2 sản phẩm chưa có claim Việt đủ điều kiện công bố (`p-lys-dia-tron-jasmine-trang-nga-15cm`, `p-vietcraft-gio-may-bau-duc-vh24040`);
 - 12 truy vấn keyword seed + 107 truy vấn dev ứng viên chưa duyệt; packet pool trên catalog mới: seed 138 cặp, dev 1.361 cặp (+ no-match chấm đủ catalog) chờ chấm;
 - **0 clip giọng nói, 0 ảnh query thật**.
 
@@ -25,7 +26,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 | Việc | Lệnh / ghi chú |
 |---|---|
-| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — mốc gần nhất: 8/8, 380 backend (+1 skip), 22 test Pillow (qua `.venv-ml`), 98 E2E |
+| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — mốc gần nhất: 8/8, 439 backend (+1 skip), 22 test Pillow (qua `.venv-ml`), 100 E2E. Sandbox có thể chặn thư mục tạm/tiến trình trình duyệt: cần chạy trong môi trường được phép. E2E đôi khi hỏng vì `net::ERR_NO_BUFFER_SPACE`: xem log trước khi kết luận |
 | Test model thật (tùy chọn) | `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py` — 6/6 |
 | Hai môi trường Python | `.venv` (API, test, script; không có Pillow/ML) và `.venv-ml` (thêm onnxruntime-gpu, Pillow…, theo `backend/requirements-ml.txt`) |
 | **PyTorch bị chặn** | Windows Application Control chặn DLL của torch trên máy này. **Không tìm cách vượt chính sách.** Chỉ dùng ONNX Runtime; việc cần torch (fine-tune, tự export ONNX) phải làm trên máy khác. TensorRT 10.16 (`backend/requirements-ml-trt.txt`) nạp được; bật bằng `VNSTORE_ML_TRT=1` (fp16 bị chặn với ASR vì cho kết quả hỏng) |
@@ -70,6 +71,14 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
   4. Xem [benchmarks/voice/README.md](../../benchmarks/voice/README.md).
 - **Xong khi (pilot)**: 2–3 người nói, ~60 clip dev đã duyệt. **Mục tiêu PLAN**: 600 clip / 40 người, cân đối Bắc/Trung/Nam, có clip ồn/im lặng/ngoài catalog.
 
+### P0.7 Duyệt họ sản phẩm → families.json
+- **Ai**: nhóm dữ liệu. Mở [trang hiện hành](../../artifacts/family_review/2026-10-11_seed-003-validated/index.html) (35 họ, 83 ứng viên ảnh, 8 cụm ảnh dùng chung), xuất quyết định, chạy `scripts/benchmark/apply_family_review.py`. Trang và CLI từ chối mâu thuẫn tách/gộp; nạp được bản nháp cùng proposal từ trang cũ.
+- **Xong khi**: `benchmarks/families/families.json` có `status: reviewed`; dùng `family_id` này khi chia split ảnh/keyword. Có thể làm cùng P0.6 (thẻ "Ảnh dùng chung").
+
+### P0.6 Quyết định ảnh minh họa dùng chung trong gallery
+- **Vì sao**: 2 ảnh minh họa (Minh Long `…-sm-04`, `…-sm-05`) có mặt ở 7 và 5 bộ trà khác hoa văn; truy vấn ảnh khớp đều các sản phẩm đó. Đợt 001 đã loại ảnh chung tương tự. 2 sản phẩm chỉ có ảnh dùng chung ([báo cáo](2026-10-10_GD3_de-xuat-ho-san-pham.md), `shared_image_clusters`).
+- **Ai**: nhóm dữ liệu quyết định giữ/loại; nếu loại, Claude cập nhật bằng importer có diff, dựng lại chỉ mục.
+
 ### P0.5 Thu ảnh query độc lập
 - **Ai**: nhóm dữ liệu (phân họ sản phẩm vào split 120/40/40, chụp ảnh thật).
 - **Cách**:
@@ -81,12 +90,15 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 ## 3. P1 — Claude làm được ngay, giảm việc tay cho P0
 
-P1.1–P1.8 đã xong — xem "Đã xong gần đây". Mục mới phát sinh sau khi nhập đợt 002: P1.9.
+P1.1–P1.12 đã xong — xem "Đã xong gần đây". Registry thật vẫn cần nhóm dữ liệu duyệt (P0.7); không tự tạo để vượt kiểm tra.
 
-### P1.9 Gom họ sản phẩm cho catalog 330 (trước khi chia split benchmark)
-- **Vì sao**: đợt 002 có nhiều SKU anh em (size S/M/L, màu, hộp quà cùng dòng). Smoke gallery: SigLIP2 Hit@1 0,58, mọi lần sai đều cùng nhóm gốc. Benchmark ảnh/keyword phải giữ cùng họ trong một split (PLAN §8.1).
-- **Làm**: script đề xuất `family_id` (cùng nguồn + tên bỏ size/màu/mã, cụm ảnh dHash gần), xuất bảng cho người xác nhận; không tự ghi vào catalog.
-- **Xong khi**: file đề xuất họ + trang duyệt; người xác nhận trước khi dùng cho split.
+### P1.13 Hoàn thiện đo voice end-to-end theo PLAN §8.2
+- `eval_voice.py` đã đo WER/CER, giá/phủ định và latency; chưa có liên kết nhãn relevance để đo nDCG/Success của tìm kiếm từ ASR so với transcript chuẩn.
+- Chuẩn bị hợp đồng liên kết query/judgment cùng catalog, kiểm tra coverage và evaluator bằng fixture; chỉ báo chất lượng thật khi có nhãn đã duyệt. Chưa đạt tiêu chí “Success@5 giảm không quá 10 điểm phần trăm”.
+
+### P1.14 Nhập family_review trên trang chấm ảnh
+- Backend/schema/apply đã hỗ trợ; hiện người duyệt phải thêm family_review vào JSON export.
+- Bổ sung chọn vật thể thuộc catalog hay ngoài catalog, tên/mã họ từ registry đã duyệt, ghi căn cứ và người/thời điểm; xuất và áp qua audit với `--families`. Không suy họ từ relevance. Thêm E2E cho query similar/no-match và nháp chưa đủ.
 
 ## 4. P2 — Sau khi có dữ liệu dev
 
@@ -123,6 +135,10 @@ P1.1–P1.8 đã xong — xem "Đã xong gần đây". Mục mới phát sinh sa
 
 ## Đã xong gần đây
 
+- 11/10: P1.12 registry họ cho audit/import/apply/evaluator ảnh; chặn hai SKU anh em vượt split bằng mã họ khác; yêu cầu registry ngoài smoke, ghi hash vào run và kiểm tra khi compare. 29 test mới; 439 backend, 22 Pillow, 100 E2E đạt. Manifest thật vẫn 0 query, chưa có registry đã duyệt ([báo cáo](2026-10-11_GD3_registry-ho-va-chong-ro-split.md)).
+- 11/10: P1.11 bảo vệ kết quả duyệt họ: chặn mâu thuẫn gộp bắc cầu/khác họ, gộp ngược nhóm đã tách, mã nhóm trùng, metadata sai; UI báo trước khi xuất. 19 test backend mới; 410 backend, 22 Pillow, 100 E2E đạt. Audit 814 ảnh/API đúng hash; cập nhật số liệu và packet hiện hành ([báo cáo](2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md)).
+- 11/10: P1.10 trang duyệt họ có ảnh + `apply_family_review.py` → `families.json` ([báo cáo](2026-10-11_GD3_trang-duyet-ho-san-pham.md)).
+- 10/10 (khuya): P1.9 đề xuất họ sản phẩm `propose_families.py`: 279 họ (35 nhiều thành viên), phát hiện 8 cụm ảnh dùng chung giữa sản phẩm khác nhau ([báo cáo](2026-10-10_GD3_de-xuat-ho-san-pham.md)).
 - 10/10 (khuya): P1.4 nhập đợt 002 — 300 sản phẩm từ collector riêng, kiểm tra kỹ (checksum, trùng, đối chiếu record, lỗi bóc tách) rồi nhập bằng `import_staging.py` qua `safe_import`; catalog `seed-003-dot-002` 330 sản phẩm; dựng lại chỉ mục ảnh, packet pool mới; xóa `tmp_data/` ([báo cáo](2026-10-10_GD1_nhap-dot-002.md)).
 - 10/10 (khuya): P1.8 TensorRT EP tùy chọn (`VNSTORE_ML_TRT=1`, profile shape động, cache engine): cùng WER/Hit@1, p95 ASR −2–9%, ảnh −6–7%, cold start 37–42 giây khi dựng engine; fp16 hỏng với PhoWhisper nên bị chặn; không bật mặc định ([báo cáo](2026-10-10_GD4_tensorrt.md)).
 - 10/10 (khuya): P1.6 packet keyword theo pool + trang duyệt/audit hỗ trợ pool, `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh ([báo cáo](2026-10-10_GD3_pool-keyword-va-doi-chieu.md)); P1.7 profile: int8 chậm trên CUDA vì `MatMulInteger` chạy CPU, fp16 (`PhoWhisperBaseFp16`) không nhanh hơn, small fp32 trên CPU p95 2,4 giây ([báo cáo](2026-10-10_GD4_profile-int8-fp16.md)); bộ lọc trên `#/image` + `filters` cho `/search/image` ([báo cáo](2026-10-10_GD6_bo-loc-tim-anh.md)).

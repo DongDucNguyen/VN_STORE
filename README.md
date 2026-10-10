@@ -2,6 +2,10 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+Rà soát 11/10/2026: [phân tích toàn dự án và sửa kiểm tra duyệt họ](reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md). Catalog có **330 draft / 814 ảnh**, chưa có sản phẩm published hay mẫu benchmark voice/ảnh thật. [Trang duyệt họ hiện hành](artifacts/family_review/2026-10-11_seed-003-validated/index.html) đã kiểm tra mâu thuẫn tách/gộp; các số đo và packet catalog cũ bên dưới là hồ sơ từng đợt, xem báo cáo mới để biết trạng thái hiện tại.
+
+Tiếp theo trong ngày 11/10: đã [nối registry họ đã duyệt vào benchmark ảnh](reports/progress/2026-10-11_GD3_registry-ho-va-chong-ro-split.md), yêu cầu `--families` khi đánh giá ngoài smoke và ghi hash registry vào run. **439 backend, 22 Pillow, 100 E2E đạt**; registry và query thật vẫn chờ nhóm dữ liệu.
+
 ## Cấu trúc
 
 ```text

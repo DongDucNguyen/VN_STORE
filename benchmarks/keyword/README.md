@@ -20,12 +20,16 @@ Kết quả (run.json + predictions.jsonl) ghi vào `experiments/results/`.
 - `dev_candidates_unverified.jsonl` (thêm 10/10/2026): **107 truy vấn ứng viên** cho split dev, nhóm theo `group_id` (câu diễn đạt lại cùng nhóm), có thêm trường `intent`. Phân bố: món cụ thể 23, không dấu 10, nhu cầu 9, giá 9, xen tiếng Anh 7, vùng miền (chén/bát, ly/cốc/tách, dĩa/đĩa, tô, đầm) 6, thương hiệu 6, phủ định 6, thuộc tính 5, lỗi gõ/Telex 5, nguồn gốc 3, địa danh 2, đơn vị 2, đồng nghĩa 2, **không có đáp án 12 (11%)**. `relevance` chỉ là nhãn nháp một phần của Claude (`labeled_by=claude-draft`, `verified=false`), hiện trong mục tham khảo của trang duyệt. Packet chờ chấm: `artifacts/keyword_review/2026-10-10_dev-candidates-107/` (107 × 30 = 3.210 cặp, `--include-drafts`).
 - Bộ chính thức (mục tiêu 600 truy vấn, PLAN.md mục 8.1) cần người viết và gán nhãn. Hai người gán độc lập một phần dữ liệu và phân xử khi bất đồng. Pool nhãn lấy từ top kết quả của mọi baseline cộng mẫu ngẫu nhiên.
 
-## Duyệt 12 truy vấn trên 30 sản phẩm hiện tại
+## Packet hiện hành — catalog 330 sản phẩm (cập nhật 11/10/2026)
+
+Dùng [seed 12 truy vấn theo pool](../../artifacts/keyword_review/2026-10-10_seed-003_seed-12-pool/index.html) (138 cặp bắt buộc) hoặc [dev 107 truy vấn theo pool](../../artifacts/keyword_review/2026-10-10_seed-003_dev-candidates-107-pool/index.html) (1.361 cặp, no-match phải chấm đủ gallery). Hai người chấm dùng cùng packet. Nhãn nháp chỉ xét 30 sản phẩm cũ, cần duyệt lại trên catalog hiện hành; không dùng làm baseline. Xem [backlog P0.3](../../reports/progress/BACKLOG.md).
+
+## Hồ sơ cũ: duyệt 12 truy vấn trên 30 sản phẩm
 
 Mở [trang duyệt offline](../../artifacts/keyword_review/2026-10-10_seed-002-taxonomy/index.html).
 Trang có 360 cặp truy vấn–sản phẩm, ảnh local và liên kết nguồn. Thứ tự sản phẩm cố định theo hash của qid/product_id, không theo điểm BM25.
 
-Packet hiện tại thuộc `seed-002-taxonomy` (hai bình Hanoia đã đổi danh mục). Packet `2026-10-10_seed-001` được giữ làm lịch sử; không dùng export/nháp cũ với snapshot mới. Hash catalog đổi nên cần đối chiếu và xác nhận lại, không chỉ thay hash trong JSONL.
+Packet dưới đây thuộc `seed-002-taxonomy` (hai bình Hanoia đã đổi danh mục), đã lệch hash catalog hiện hành. Cả packet này và `2026-10-10_seed-001` được giữ làm lịch sử; không dùng export/nháp cũ với snapshot mới. Hash catalog đổi nên cần đối chiếu và xác nhận lại, không chỉ thay hash trong JSONL.
 
 1. Điền tên/mã người kiểm tra; chọn truy vấn.
 2. Chấm tất cả 30 sản phẩm ở mức 0–3. Điểm 2–3 nghĩa là phù hợp. Nhãn AI chỉ là tham khảo trong mục mở rộng; ô chấm ban đầu để trống.
