@@ -1,0 +1,263 @@
+{
+  "kind": "voice",
+  "status": "smoke",
+  "split": "dev",
+  "primary_metric": {
+    "key": "wer_normalized",
+    "label": "WER chuẩn hóa",
+    "better": "lower"
+  },
+  "manifest_sha256": "b6be89b80cfccc81c40d7c867bc416c7b7b892d1c39350922685b7f8b1a663b5",
+  "catalog_sha256": "5448a8f4f8161e14cda4f6c3bac921c46af4c02be359dfe20c8ddd312572cecb",
+  "family_registry_sha256": null,
+  "retrieval_queries_sha256": null,
+  "p95_target_ms_model_only": 3000,
+  "rows": [
+    {
+      "name": "fleurs-smoke-screen-phowhisper-small",
+      "run_dir": "experiments\\results\\20261011-102219-596001_voice_fleurs-smoke-screen-phowhisper-small",
+      "run_sha256": "2d14aeee3f06dc52c91987a9aaf7ba27369aeae31f9709165316b4902436bb77",
+      "evaluation_status": "smoke_unreviewed",
+      "model": {
+        "adapter": "app.ml.asr:PhoWhisperSmall",
+        "model_id": "vinai/PhoWhisper-small",
+        "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+        "license": "bsd-3-clause",
+        "config": {
+          "runtime": "onnxruntime",
+          "onnx_repo": "huuquyet/PhoWhisper-small",
+          "onnx_variant": "fp32",
+          "upstream": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "config_repo": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "decoder": "greedy",
+          "language": "vi",
+          "task": "transcribe",
+          "timestamps": false,
+          "max_new_tokens": 96,
+          "vad": {
+            "vad": "silero-vad v6.2.3",
+            "threshold": 0.5,
+            "min_speech_ms": 250
+          },
+          "tensorrt": null
+        }
+      },
+      "quality": {
+        "n": 31,
+        "n_speakers": 2,
+        "wer_normalized": 0.1092,
+        "cer_normalized": 0.0795,
+        "worst_region": "unknown",
+        "worst_region_wer": 0.1092,
+        "price_accuracy": 1.0,
+        "n_price": 4,
+        "negation_accuracy": 1.0,
+        "n_negation": 5,
+        "silence_hallucination_rate": 0.0,
+        "speech_rejected_by_gate": 0,
+        "asr_success_5": null,
+        "success_5_drop": null,
+        "asr_ndcg_10": null,
+        "ndcg_10_drop": null,
+        "asr_false_accept": null
+      },
+      "resources": {
+        "p50_ms": 810.94,
+        "p95_ms": 1134.47,
+        "p95_spread_pct": 8.8,
+        "cold_start_ms": 4686.4,
+        "peak_vram_mb": [
+          4618.0
+        ],
+        "vram_delta_mb": [
+          3690.0
+        ],
+        "peak_rss_mb": 1431.1,
+        "model_mb": 1459.38,
+        "busy_warnings": [],
+        "device_env": null,
+        "tensorrt_env": null,
+        "gpus": [
+          "NVIDIA GeForce RTX 5070 Ti"
+        ],
+        "rtf_p95": 0.1066
+      },
+      "primary": 0.1092,
+      "vs_best": {
+        "is_best": true
+      },
+      "pareto": true,
+      "meets_p95_target_model_only": true
+    },
+    {
+      "name": "fleurs-smoke-trt1-phowhisper-small-trt",
+      "run_dir": "experiments\\results\\20261011-103823-585409_voice_fleurs-smoke-trt1-phowhisper-small-trt",
+      "run_sha256": "1ebee4cad280a81d9853fbf9f13a29c7dc37203024dd633f51d2e96b9e0a34d7",
+      "evaluation_status": "smoke_unreviewed",
+      "model": {
+        "adapter": "app.ml.asr:PhoWhisperSmall",
+        "model_id": "vinai/PhoWhisper-small",
+        "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+        "license": "bsd-3-clause",
+        "config": {
+          "runtime": "onnxruntime",
+          "onnx_repo": "huuquyet/PhoWhisper-small",
+          "onnx_variant": "fp32",
+          "upstream": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "config_repo": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "decoder": "greedy",
+          "language": "vi",
+          "task": "transcribe",
+          "timestamps": false,
+          "max_new_tokens": 96,
+          "vad": {
+            "vad": "silero-vad v6.2.3",
+            "threshold": 0.5,
+            "min_speech_ms": 250
+          },
+          "tensorrt": "1"
+        }
+      },
+      "quality": {
+        "n": 31,
+        "n_speakers": 2,
+        "wer_normalized": 0.1092,
+        "cer_normalized": 0.0795,
+        "worst_region": "unknown",
+        "worst_region_wer": 0.1092,
+        "price_accuracy": 1.0,
+        "n_price": 4,
+        "negation_accuracy": 1.0,
+        "n_negation": 5,
+        "silence_hallucination_rate": 0.0,
+        "speech_rejected_by_gate": 0,
+        "asr_success_5": null,
+        "success_5_drop": null,
+        "asr_ndcg_10": null,
+        "ndcg_10_drop": null,
+        "asr_false_accept": null
+      },
+      "resources": {
+        "p50_ms": 728.27,
+        "p95_ms": 1031.99,
+        "p95_spread_pct": 4.3,
+        "cold_start_ms": 13057.1,
+        "peak_vram_mb": [
+          4045.0
+        ],
+        "vram_delta_mb": [
+          3037.0
+        ],
+        "peak_rss_mb": 5456.8,
+        "model_mb": 1459.38,
+        "busy_warnings": [],
+        "device_env": null,
+        "tensorrt_env": "1",
+        "gpus": [
+          "NVIDIA GeForce RTX 5070 Ti"
+        ],
+        "rtf_p95": 0.0912
+      },
+      "primary": 0.1092,
+      "vs_best": {
+        "delta": 0.0,
+        "ci95": null,
+        "clusters": 1,
+        "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+        "verdict": "không ước lượng được bất định"
+      },
+      "pareto": true,
+      "meets_p95_target_model_only": true
+    },
+    {
+      "name": "fleurs-smoke-trt2-phowhisper-small-trt",
+      "run_dir": "experiments\\results\\20261011-103946-478302_voice_fleurs-smoke-trt2-phowhisper-small-trt",
+      "run_sha256": "b353a385d55d5cdd2694f77ef1043c295f3f8bc7fca349fb71d15e3569934683",
+      "evaluation_status": "smoke_unreviewed",
+      "model": {
+        "adapter": "app.ml.asr:PhoWhisperSmall",
+        "model_id": "vinai/PhoWhisper-small",
+        "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+        "license": "bsd-3-clause",
+        "config": {
+          "runtime": "onnxruntime",
+          "onnx_repo": "huuquyet/PhoWhisper-small",
+          "onnx_variant": "fp32",
+          "upstream": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "config_repo": "vinai/PhoWhisper-small@a86b604c346caf7148c37512eafe783a16420adb",
+          "decoder": "greedy",
+          "language": "vi",
+          "task": "transcribe",
+          "timestamps": false,
+          "max_new_tokens": 96,
+          "vad": {
+            "vad": "silero-vad v6.2.3",
+            "threshold": 0.5,
+            "min_speech_ms": 250
+          },
+          "tensorrt": "1"
+        }
+      },
+      "quality": {
+        "n": 31,
+        "n_speakers": 2,
+        "wer_normalized": 0.1092,
+        "cer_normalized": 0.0795,
+        "worst_region": "unknown",
+        "worst_region_wer": 0.1092,
+        "price_accuracy": 1.0,
+        "n_price": 4,
+        "negation_accuracy": 1.0,
+        "n_negation": 5,
+        "silence_hallucination_rate": 0.0,
+        "speech_rejected_by_gate": 0,
+        "asr_success_5": null,
+        "success_5_drop": null,
+        "asr_ndcg_10": null,
+        "ndcg_10_drop": null,
+        "asr_false_accept": null
+      },
+      "resources": {
+        "p50_ms": 735.61,
+        "p95_ms": 1056.64,
+        "p95_spread_pct": 1.9,
+        "cold_start_ms": 11988.5,
+        "peak_vram_mb": [
+          4042.0
+        ],
+        "vram_delta_mb": [
+          3038.0
+        ],
+        "peak_rss_mb": 5456.0,
+        "model_mb": 1459.38,
+        "busy_warnings": [],
+        "device_env": null,
+        "tensorrt_env": "1",
+        "gpus": [
+          "NVIDIA GeForce RTX 5070 Ti"
+        ],
+        "rtf_p95": 0.0905
+      },
+      "primary": 0.1092,
+      "vs_best": {
+        "delta": 0.0,
+        "ci95": null,
+        "clusters": 1,
+        "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+        "verdict": "không ước lượng được bất định"
+      },
+      "pareto": true,
+      "meets_p95_target_model_only": true
+    }
+  ],
+  "failures": [],
+  "checks": [
+    "Các cấu hình chạy trên thiết bị/execution provider khác nhau (CPU/CUDA/TensorRT); so độ trễ trong cùng thiết bị"
+  ],
+  "recommendation": null,
+  "bootstrap": {
+    "samples": 2000,
+    "seed": 13
+  },
+  "created_at": "2026-10-11T10:41:15+07:00"
+}

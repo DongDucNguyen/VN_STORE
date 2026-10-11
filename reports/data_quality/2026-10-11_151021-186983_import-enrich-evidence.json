@@ -1,0 +1,1476 @@
+[
+ {
+  "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-sen-vang-27cm",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bộ trà 0.5 L Camellia – Chỉ Vàng"
+ },
+ {
+  "product_id": "p-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+  "field": "colors",
+  "values": [
+   "xanh"
+  ],
+  "evidence": "tên nguồn: Ly sứ dưỡng sinh 0.48 L có nắp ống hút – Biển Xanh"
+ },
+ {
+  "product_id": "p-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456",
+  "field": "colors",
+  "values": [
+   "nhiều màu"
+  ],
+  "evidence": "Màu sắc: Nhiều màu"
+ },
+ {
+  "product_id": "p-hanhsilk-vai-lua-det-may-det-mong-2229",
+  "field": "colors",
+  "values": [
+   "nhiều màu"
+  ],
+  "evidence": "Màu sắc: Nhiều màu"
+ },
+ {
+  "product_id": "p-hanhsilk-vai-lua-the-van-chu-tho-2239",
+  "field": "colors",
+  "values": [
+   "nhiều màu"
+  ],
+  "evidence": "Màu sắc: Nhiều màu"
+ },
+ {
+  "product_id": "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+  "field": "colors",
+  "values": [
+   "trắng",
+   "vàng"
+  ],
+  "evidence": "Màu sắc: màu trắng vàng tự nhiên của lụa đũi tơ tằm KHĂN LỤA"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156",
+  "field": "materials",
+  "values": [
+   "lụa tơ tằm"
+  ],
+  "evidence": "tên nguồn: Áo sơ mi lụa ngắn tay & quần lụa Satin ống rộng"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412",
+  "field": "colors",
+  "values": [
+   "trắng"
+  ],
+  "evidence": "Màu sắc: Trắng"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417",
+  "field": "colors",
+  "values": [
+   "xanh lá"
+  ],
+  "evidence": "Màu sắc: Xanh lá"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "Màu sắc: Vàng"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428",
+  "field": "colors",
+  "values": [
+   "tím than"
+  ],
+  "evidence": "Màu sắc: Tím than"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433",
+  "field": "colors",
+  "values": [
+   "tím than"
+  ],
+  "evidence": "Màu sắc: Tím than"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440",
+  "field": "colors",
+  "values": [
+   "trắng"
+  ],
+  "evidence": "Màu sắc: Trắng tinh khôi"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450",
+  "field": "colors",
+  "values": [
+   "cam"
+  ],
+  "evidence": "Màu sắc: Cam ngọt ngào"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451",
+  "field": "colors",
+  "values": [
+   "cam"
+  ],
+  "evidence": "Màu sắc: màu cam ngọt ngào"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456",
+  "field": "colors",
+  "values": [
+   "xanh ngọc"
+  ],
+  "evidence": "Màu sắc: màu xanh ngọc"
+ },
+ {
+  "product_id": "p-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613",
+  "field": "materials",
+  "values": [
+   "lụa tơ tằm"
+  ],
+  "evidence": "tên nguồn: Set quà tặng – Khăn hoa Thủy Ấn và vòng lụa"
+ },
+ {
+  "product_id": "p-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165",
+  "field": "colors",
+  "values": [
+   "xanh da trời"
+  ],
+  "evidence": "Màu sắc: màu xanh da trời"
+ },
+ {
+  "product_id": "p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+  "field": "colors",
+  "values": [
+   "tím",
+   "xanh"
+  ],
+  "evidence": "Màu sắc: Màu muối tiêu xanh, xám, tím nhạt,…"
+ },
+ {
+  "product_id": "p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243",
+  "field": "colors",
+  "values": [
+   "nhiều màu"
+  ],
+  "evidence": "Màu sắc: Nhiều màu, độc đáo, đa dạng"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Pho Spice 65% - 10-Year Anniversary Bar - 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Set Of 6 X 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Popped Rice 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Feuillantine 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Cashew Praline 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Caramelized Nibs 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Candied Ginger 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Maison Marou Exclusive Bar - Candied Chili 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Single Origin Bars - Set Of 6X80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Single Origin Bars - Mini Set Of 6X24G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Wallpaper* Edition Tien Giang 80% Dark Chocolate bar"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 6 Chocolate Napolitain"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ben Tre 78% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ba Ria 76% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Dong Nai 72% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Dak Lak 70% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Tien Giang 70% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Lam Dong 74% Single Origin Napolitain (20X4G)"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Marou Bar - 64% Tropical Fruits & Cashews - 35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Marou Bar - 53% Coconut Milk Chocolate & Popped Rice - 35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Marou Bar - 65% Peanuts, Ginger & Salted Caramel - 35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Marou Bar Box Of 16X35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ironbar - 65% Dark Chocolate Energy Bar - 40G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ironbar 65% Box Of 16X40G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Gift Box Marou Bar 6X35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Gift Box Marou Bar 12X35G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ironbar - 65% Dark Chocolate Protein Bar - 55G Vegan"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ironbar - 65% Dark Chocolate Protein Bar - 10X55G Vegan"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ca-phe-sua-bar-44-80g-8249792037072",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ca Phe Sua Bar 44% - 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ca Phe Sua Bar 44% - 24G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 6 Mini Flavors Of Vietnam Chocolate Bars - Mid-Autumn Festival"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — The Faiseurs Collection 6 Chocolate Mini Bars Gift Box"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — The Faiseurs Collection 6 Chocolate Bars Gift Box"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 6 The Faiseurs Collection Chocolate Bars"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 6 Mini The Faiseurs Collection Chocolate Bars"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Dark Chocolate 55% Roasted Buckwheat Bar 80G"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 3 Marou Bars & 2 Ironbars"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Caramelized Peanut & Cinnamon Spices 48% Milk Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Caramelized Cashew 65% Dark Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Ca Phe Sua & Sea Salt 44% Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-3-mini-milk-by-marou-8441716441296",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 3 Mini Milk By Marou Chocolate Bars"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 3 Milk By Marou Chocolate Bars"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 The Faiseurs Collection Napolitains Chocolate 36-Piece Gift Box"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Flavors Of Vietnam Napolitains Chocolate 36-Piece Gift Box"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Single Origin Napolitains Chocolate 36-Piece Gift Box"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Popped Rice With Pho Spice 65% Dark Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Coconut Milk With Dried Fruit 55% Dark Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Rice Paper With Sesame 48% Milk Chocolate Bar - Socola Trail Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Vietnamese Matcha & Coconut 40% White Chocolate Mini Bar"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Vietnamese Matcha & Coconut 40% White Chocolate Bar"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+  "field": "colors",
+  "values": [
+   "hồng"
+  ],
+  "evidence": "tên nguồn: Bộ trà 0.65 L - Daisy - Sen Hồng"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bình hoa 45 cm - Bình Hoa - Sen Vàng"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bình hoa 50 cm - Bình Hoa - Sen Vàng"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bình hoa Lộc Phát 28 cm - Bình Hoa - Sen vàng nền vàng"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+  "field": "colors",
+  "values": [
+   "xanh ngọc",
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bình hoa Lộc Phát 28 cm - Bình hoa - Sen vàng nền xanh ngọc"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bình hoa Lộc Phát 40 cm - Bình Hoa - Sen vàng nền vàng"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+  "field": "colors",
+  "values": [
+   "đỏ"
+  ],
+  "evidence": "tên nguồn: Bình hoa 36 cm - Sen Đỏ"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-36-cm-sen-do-1071550664",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827",
+  "field": "colors",
+  "values": [
+   "đen"
+  ],
+  "evidence": "tên nguồn: Bình hoa 40 cm - Sen Khắc (Nền Đen)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-40-cm-buom-luon-1071551425",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660",
+  "field": "colors",
+  "values": [
+   "xanh cobalt"
+  ],
+  "evidence": "tên nguồn: Bình hoa 60 cm - Hoa tây cobalt"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128",
+  "field": "colors",
+  "values": [
+   "xanh dương"
+  ],
+  "evidence": "tên nguồn: Dĩa sâu lòng 23 cm - Camellia - Chỉ Xanh Dương"
+ },
+ {
+  "product_id": "p-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775",
+  "field": "colors",
+  "values": [
+   "trắng ngà"
+  ],
+  "evidence": "tên nguồn: Bộ đồ ăn 09 sản phẩm - Timeless IFP - Trắng Ngà"
+ },
+ {
+  "product_id": "p-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "field": "colors",
+  "values": [
+   "cam"
+  ],
+  "evidence": "tên nguồn: Dĩa lót 15.5 cm - Tulip Ngà - Màu Cam"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Dĩa lót 15.5 cm - Tulip Ngà - Màu Vàng"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+  "field": "colors",
+  "values": [
+   "trắng ngà"
+  ],
+  "evidence": "tên nguồn: Dĩa lót 15.5 cm - Tulip Ngà - Trắng Ngà"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+  "field": "colors",
+  "values": [
+   "xanh non"
+  ],
+  "evidence": "tên nguồn: Dĩa lót 15.5 cm - Tulip Ngà - Xanh Non"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927",
+  "field": "colors",
+  "values": [
+   "trắng ngà"
+  ],
+  "evidence": "tên nguồn: Dĩa tròn 22 cm - Tulip IFP - Trắng Ngà"
+ },
+ {
+  "product_id": "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "tên nguồn: Bộ trà cao 1.2 L - Royal - Chỉ Vàng"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799",
+  "field": "colors",
+  "values": [
+   "xanh lá"
+  ],
+  "evidence": "tên nguồn: Bộ trà 0.8 L - Hoàng Cung - Thiên Hương (Xanh Lá)"
+ },
+ {
+  "product_id": "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445",
+  "field": "colors",
+  "values": [
+   "xanh dương"
+  ],
+  "evidence": "tên nguồn: Chén cơm 11.5 cm - Jasmine - Chỉ Xanh Dương"
+ },
+ {
+  "product_id": "p-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+  "field": "colors",
+  "values": [
+   "trắng"
+  ],
+  "evidence": "tên nguồn: Dĩa súp 23 cm Nhà hàng - Jasmine - Trắng"
+ },
+ {
+  "product_id": "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380",
+  "field": "colors",
+  "values": [
+   "trắng ngà"
+  ],
+  "evidence": "tên nguồn: Dĩa ăn sáng 20x18 cm - Ngọc Biển IFP - Trắng Ngà"
+ },
+ {
+  "product_id": "p-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+  "field": "colors",
+  "values": [
+   "trắng"
+  ],
+  "evidence": "tên nguồn: Dĩa tròn 18 cm N.hàng- Jasmine - Trắng"
+ },
+ {
+  "product_id": "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-sen-hot-1074964446",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+  "field": "colors",
+  "values": [
+   "xanh cobalt"
+  ],
+  "evidence": "tên nguồn: Bình hoa 41 cm - Hoa Sen Nền Cobalt"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-hue-do-1074964896",
+  "field": "colors",
+  "values": [
+   "đỏ"
+  ],
+  "evidence": "tên nguồn: Bình hoa 42 cm - Huệ Đỏ"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-hue-do-1074964896",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-52-cm-rong-do-1074965041",
+  "field": "colors",
+  "values": [
+   "đỏ"
+  ],
+  "evidence": "tên nguồn: Bình hoa 52 cm - Rồng Đỏ"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-52-cm-rong-do-1074965041",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-sac-tia-1075177720",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-don-xuan-ve-tay-1075177745",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-40-cm-buom-dao-1075177777",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-26-cm-dan-ga-1075177869",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941",
+  "field": "colors",
+  "values": [
+   "xanh cobalt"
+  ],
+  "evidence": "tên nguồn: Bình hoa 31 cm - Hoa Anh Túc Cobalt"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+  "field": "materials",
+  "values": [
+   "sứ"
+  ],
+  "evidence": "trang chủ nguồn: 'gốm sứ Minh Long' (trang sản phẩm không ghi chất liệu)"
+ },
+ {
+  "product_id": "p-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047",
+  "field": "colors",
+  "values": [
+   "xanh lam",
+   "vàng"
+  ],
+  "evidence": "Màu sắc: vàng – xanh lam"
+ },
+ {
+  "product_id": "p-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075",
+  "field": "colors",
+  "values": [
+   "vàng"
+  ],
+  "evidence": "Màu sắc: vàng – sắc sẫm"
+ },
+ {
+  "product_id": "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+  "field": "colors",
+  "values": [
+   "vàng",
+   "xanh"
+  ],
+  "evidence": "Màu sắc: vàng – xanh"
+ },
+ {
+  "product_id": "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114",
+  "field": "colors",
+  "values": [
+   "vàng",
+   "cam",
+   "đỏ"
+  ],
+  "evidence": "Màu sắc: vàng – đỏ – cam"
+ },
+ {
+  "product_id": "p-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169",
+  "field": "colors",
+  "values": [
+   "trắng ngà",
+   "xanh ngọc",
+   "xanh lá",
+   "vàng",
+   "cam",
+   "đen"
+  ],
+  "evidence": "Màu sắc: Vàng cam – Xanh ngọc – Xanh lá – Trắng ngà – Đen"
+ },
+ {
+  "product_id": "p-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229",
+  "field": "colors",
+  "values": [
+   "trắng ngà",
+   "vàng",
+   "đỏ",
+   "hồng",
+   "nâu"
+  ],
+  "evidence": "Màu sắc: Hồng đào – Trắng ngà – Đỏ son – Vàng ánh kim – Nâu gỗ"
+ },
+ {
+  "product_id": "p-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250",
+  "field": "colors",
+  "values": [
+   "trắng ngà",
+   "xanh lam",
+   "tím",
+   "xanh"
+  ],
+  "evidence": "Màu sắc: Xanh lam – Tím lavender – Trắng ngà – Xanh lục"
+ },
+ {
+  "product_id": "p-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268",
+  "field": "colors",
+  "values": [
+   "trắng ngà",
+   "xanh lam",
+   "vàng",
+   "cam",
+   "hồng",
+   "tím"
+  ],
+  "evidence": "Màu sắc: Hồng – Cam đào – Tím – Xanh lam – Vàng – Trắng ngà"
+ },
+ {
+  "product_id": "p-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286",
+  "field": "colors",
+  "values": [
+   "xanh ngọc",
+   "xanh lam",
+   "trắng",
+   "vàng",
+   "xanh"
+  ],
+  "evidence": "Màu sắc: Xanh ngọc – Xanh lam – Vàng kim – Trắng kem – Xanh navy"
+ },
+ {
+  "product_id": "p-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734",
+  "field": "colors",
+  "values": [
+   "xanh lá",
+   "vàng",
+   "cam",
+   "đỏ"
+  ],
+  "evidence": "Màu sắc: Vàng ánh kim – Cam – Đỏ son – Xanh lá – Ngà kem"
+ },
+ {
+  "product_id": "p-vietcraft-chup-den-may-vh24072-1050",
+  "field": "colors",
+  "values": [
+   "đen"
+  ],
+  "evidence": "Color: Matte black finish (eco-friendly coating"
+ },
+ {
+  "product_id": "p-vietcraft-gio-dan-may-vh24059-1097",
+  "field": "colors",
+  "values": [
+   "đen"
+  ],
+  "evidence": "Color: Matte black finish Shape: Available in r"
+ },
+ {
+  "product_id": "p-vietcraft-chup-den-tre-vh24043-1241",
+  "field": "colors",
+  "values": [
+   "màu tự nhiên",
+   "nâu sẫm",
+   "nâu"
+  ],
+  "evidence": "Color: Natural, dark brown, smoke brown, whitew"
+ },
+ {
+  "product_id": "p-vietcraft-gio-dan-luc-binh-vh24035-1423",
+  "field": "colors",
+  "values": [
+   "màu tự nhiên",
+   "nâu"
+  ],
+  "evidence": "Color: Natural Golden Warm Brown (Untreated nat"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Flavors Of Vietnam Chocolate Bars Gift Box - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Flavors Of Vietnam Mini Bars Gift Box - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Single Origin Mini Bars Gift Box - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Single Origin Chocolate Bars Gift Box - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 6 Flavors Of Vietnam Chocolate Bars - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — 6 Mini Bars Gift Box - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Set Of 3 Mini Chocolate Bars - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Dark Chocolate 65% Caramel With Pumpkin Seeds Bar - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Vietnam Dark Milk 48% Chocolate Mini Bar - Halloween Edition"
+ },
+ {
+  "product_id": "p-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688",
+  "field": "materials",
+  "values": [
+   "cacao"
+  ],
+  "evidence": "tên nguồn là sản phẩm sô cô la: Sô cô la Marou — Vietnamese Vanilla 44% White Chocolate Mini Bar - Halloween Edition"
+ }
+]

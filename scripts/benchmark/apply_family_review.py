@@ -54,6 +54,10 @@ def apply(proposal: dict, proposal_sha: str, decisions: dict, catalog_sha: str,
         raise ReviewError("Thời điểm duyệt phải là ISO datetime có múi giờ") from None
     fam_dec, cand_dec = decisions.get("families", {}), decisions.get("candidates", {})
     shared = decisions.get("shared", {})
+    assist = decisions.get("assist")
+    if assist is not None and (not isinstance(assist, dict) or any(
+            type(assist.get(k)) is not int or assist[k] < 0 for k in ("applied", "kept_unchanged", "changed"))):
+        raise ReviewError("Trường assist (gợi ý máy) sai định dạng")
     if not all(isinstance(d, dict) for d in (fam_dec, cand_dec, shared)):
         raise ReviewError("families, candidates, shared phải là JSON object")
     family = proposal["product_family"]
@@ -140,6 +144,7 @@ def apply(proposal: dict, proposal_sha: str, decisions: dict, catalog_sha: str,
             "product_family": dict(sorted(family.items())),
             "families": [{"family_id": fid, "products": sorted(p)} for fid, p in sorted(members.items()) if len(p) > 1],
             "shared_image_decisions": shared,
+            "assist": decisions.get("assist"),
             "stats": {"products": len(family), "families": len(members),
                       "split": sum(1 for d in fam_dec.values() if d.get("action") == "split"), "merged_pairs": merged}}
 

@@ -230,8 +230,8 @@ def test_formal_fake_run_records_registry_hash(tmp_path, monkeypatch, mutation):
     monkeypatch.setattr(ei.lp, "_nvidia_smi", lambda: None)
     if mutation:
         original = ei.evaluate
-        def mutate(*args):
-            result = original(*args)
+        def mutate(*args, **kwargs):
+            result = original(*args, **kwargs)
             if mutation == "delete":
                 families.unlink()
             else:

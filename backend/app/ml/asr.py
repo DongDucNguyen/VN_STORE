@@ -74,7 +74,8 @@ class _OnnxWhisper:
         self._model = LazyModel()
         self.max_new_tokens = int(os.environ.get("VNSTORE_ASR_MAX_NEW_TOKENS", "96"))
         # VAD chặn đoạn chỉ có tiếng ồn trước ASR; VNSTORE_ASR_VAD=0 để đo model không có VAD.
-        self.detect_speech = SileroVAD() if os.environ.get("VNSTORE_ASR_VAD", "1") != "0" else None
+        self.detect_speech = SileroVAD(float(os.environ.get("VNSTORE_VAD_THRESHOLD", "0.5")),
+                                       int(os.environ.get("VNSTORE_VAD_MIN_MS", "250"))) if os.environ.get("VNSTORE_ASR_VAD", "1") != "0" else None
 
     @property
     def config(self) -> dict[str, Any]:

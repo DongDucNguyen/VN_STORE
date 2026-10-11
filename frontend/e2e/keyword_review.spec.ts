@@ -120,3 +120,29 @@ test("review pool: chấm danh sách chính; không có đáp án thì phải ch
   expect(Object.keys(rows[0].relevance)).toHaveLength(2);
   expect(rows[1]).toMatchObject({ relevance: { a: 1, b: 0, c: 0 }, has_answer: false });
 });
+
+test("review: gợi ý máy chỉ áp khi người chấm bấm, export ghi số đã sửa", async ({ page }) => {
+  const assisted = { ...packet, suggestions_sha256: "fixture-suggestions", suggestions: { version: "fixture-v1",
+    queries: { q1: { note: "Ghi chú tổng hợp", suggested_has_answer: true,
+      relevance: { a: { score: 3, reason: "giỏ tre" }, b: { score: 2, reason: "lý do giả" } } } } } };
+  await page.goto("/");
+  await page.setContent(template.replace("__PACKET_JSON__", JSON.stringify(assisted)));
+  await expect(page.getByText("Gợi ý máy: 2 — lý do giả")).toBeVisible();
+  await expect(page.locator("#scope-note")).toContainText("Người chấm thứ hai");
+  // Suggestions never prefill the grade boxes.
+  await expect(page.getByLabel("Mức phù hợp: Sản phẩm a", { exact: true })).toHaveValue("");
+  await page.getByRole("button", { name: "Áp gợi ý máy cho các sản phẩm chưa chấm" }).click();
+  await expect(page.getByLabel("Mức phù hợp: Sản phẩm b", { exact: true })).toHaveValue("2");
+  await page.getByLabel("Mức phù hợp: Sản phẩm b", { exact: true }).selectOption("0");
+  await page.locator("#reviewer").fill("assisted-tester");
+  await page.locator("#confirmed").check();
+  const downloaded = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Xuất nhãn đã duyệt" }).click();
+  const stream = await (await downloaded).createReadStream();
+  const chunks: Buffer[] = [];
+  for await (const chunk of stream!) chunks.push(Buffer.from(chunk));
+  const row = JSON.parse(Buffer.concat(chunks).toString("utf8"));
+  expect(row.relevance).toEqual({ a: 3, b: 0 });
+  expect(row.assist).toEqual({ version: "fixture-v1", suggestions_sha256: "fixture-suggestions",
+    applied: 2, kept_unchanged: 1, changed: 1 });
+});

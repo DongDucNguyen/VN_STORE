@@ -72,6 +72,14 @@ def test_dinov2_cls_vector():
     assert len(v) == 768 and all(math.isfinite(x) for x in v)
 
 
+def test_openclip_fixed_batch_export_embeds_many_images():
+    from app.ml.image import OpenCLIPViTB32
+    q = gallery_query()
+    a, b, other = OpenCLIPViTB32().embed([q, q, png(224, 224, (20, 120, 220))])  # bản export cố định batch 1
+    assert len(a) == 512 and abs(math.sqrt(sum(x * x for x in a)) - 1) < 1e-3
+    assert cosine(a, b) > 0.999 and cosine(a, other) < 0.8
+
+
 @pytest.fixture(scope="module")
 def whisper():
     if not (SMOKE / "manifest.json").is_file():

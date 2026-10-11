@@ -9,6 +9,7 @@ import { ImageSearchPage } from "./pages/ImageSearchPage";
 import { ProductPage } from "./pages/ProductPage";
 import { ReviewVoicePage } from "./pages/ReviewVoicePage";
 import { SearchPage } from "./pages/SearchPage";
+import { DiagnosticsPage } from "./pages/DiagnosticsPage";
 import { useRoute } from "./router";
 
 function Page() {
@@ -16,6 +17,8 @@ function Page() {
   const m = route.path.match(/^\/p\/([^/]+)$/);
   if (m) return <ProductPage id={decodeURIComponent(m[1])} />;
   switch (route.path) {
+    case "/diagnostics":
+      return <DiagnosticsPage />;
     case "/search":
       return <SearchPage route={route} />;
     case "/image":

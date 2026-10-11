@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError, modalityProblem } from "../api";
+import { api, ApiError, modalityProblem, type SearchResponse } from "../api";
 import { MAX_RECORD_SECONDS, MicError, Recorder } from "../media";
+import { beginMeasure, endMeasure, type Measure } from "../measurements";
 
 type VoiceState =
   | { kind: "idle" }
@@ -17,15 +18,21 @@ export interface VoiceSearch {
 }
 
 /** Bấm để nói → bấm dừng (hoặc tự dừng sau MAX_RECORD_SECONDS) → bản chép lời. */
-export function useVoiceSearch(onTranscript: (text: string) => void): VoiceSearch {
+export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Measure) => void): VoiceSearch {
   const [state, setState] = useState<VoiceState>({ kind: "idle" });
   const rec = useRef<Recorder | null>(null);
   const alive = useRef(true);
+  const generation = useRef(0);
+  const request = useRef<AbortController | null>(null);
+  const busy = useRef(false);
 
   useEffect(() => {
     alive.current = true;
     return () => {
       alive.current = false;
+      generation.current++;
+      busy.current = false;
+      request.current?.abort();
       rec.current?.cancel();
     };
   }, []);
@@ -35,18 +42,26 @@ export function useVoiceSearch(onTranscript: (text: string) => void): VoiceSearc
   };
 
   async function start() {
-    if (state.kind === "recording" || state.kind === "processing") return;
+    if (busy.current) return;
+    busy.current = true;
+    const id = ++generation.current;
+    const current = () => alive.current && id === generation.current;
     set({ kind: "checking" });
     const problem = await modalityProblem("voice");
-    if (problem) return set({ kind: "error", message: problem, canRetry: false });
+    if (!current()) return;
+    if (problem) { busy.current = false; return set({ kind: "error", message: problem, canRetry: false }); }
     const r = new Recorder();
+    rec.current = r;
     try {
       await r.start();
     } catch (e) {
+      if (!current()) return;
+      busy.current = false;
+      rec.current = null;
       const kind = e instanceof MicError ? e.kind : "failed";
       return set({ kind: "error", message: (e as Error).message, canRetry: kind !== "unsupported" });
     }
-    rec.current = r;
+    if (!current()) { r.cancel(); return; }
     set({ kind: "recording", startedAt: Date.now() });
   }
 
@@ -54,19 +69,39 @@ export function useVoiceSearch(onTranscript: (text: string) => void): VoiceSearc
     const r = rec.current;
     if (!r) return;
     rec.current = null;
+    const id = generation.current;
+    const current = () => alive.current && id === generation.current;
+    const controller = new AbortController();
+    request.current = controller;
+    const measure = beginMeasure("voice");
     set({ kind: "processing" });
+    const superseded = () => {
+      if (current()) return false;
+      endMeasure(measure, "cancelled");
+      return true;
+    };
     try {
       const wav = await r.stop();
-      const res = await api.searchVoice(wav);
+      if (superseded()) return;
+      const res = await api.searchVoice(wav, controller.signal);
+      if (superseded()) return;
+      busy.current = false;
       set({ kind: "idle" });
-      if (res.transcript) onTranscript(res.transcript.text);
+      if (res.transcript) onResult(res, measure);
+      else endMeasure(measure, "error");
     } catch (e) {
+      if (superseded()) return;
+      endMeasure(measure, "error");
+      busy.current = false;
       const message = e instanceof ApiError || e instanceof MicError ? e.message : "Không xử lý được đoạn ghi âm.";
       set({ kind: "error", message, canRetry: !(e instanceof ApiError && e.code === "model_unavailable") });
     }
   }
 
   function cancel() {
+    generation.current++;
+    busy.current = false;
+    request.current?.abort();
     rec.current?.cancel();
     rec.current = null;
     set({ kind: "idle" });
@@ -97,6 +132,7 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
     return (
       <div className="voice-panel" role="status">
         <span className="spinner" aria-hidden /> Đang chuẩn bị micro…
+        <button className="link" onClick={voice.cancel}>Hủy</button>
       </div>
     );
   }
@@ -123,6 +159,7 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
     return (
       <div className="voice-panel" role="status">
         <span className="spinner" aria-hidden /> Đang chép lời…
+        <button className="link" onClick={voice.cancel}>Hủy</button>
       </div>
     );
   }

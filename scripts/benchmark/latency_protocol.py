@@ -5,6 +5,8 @@ warm-up, đủ lượt lặp, cold start báo riêng).
 - idle_check(): lấy mẫu tải GPU vài lần trước khi đo; GPU đang bận thì ghi cảnh báo vào run.
 - VramPeak: chạy `nvidia-smi -lms` trong lúc đo để lấy đỉnh bộ nhớ GPU (toàn máy, không riêng tiến trình).
 - rounds_summary(): p50/p95 từng lượt lặp, p50/p95 gộp và độ lệch p95 giữa các lượt (%).
+- resources(): đỉnh RAM của tiến trình (peak working set/RSS) và kích thước các file model adapter đã nạp
+  qua app.ml (Hugging Face đã ghim revision, Silero VAD). Mỗi cấu hình nên chạy trong tiến trình riêng.
 Không có nvidia-smi thì các trường GPU là null; số đo vẫn hợp lệ cho CPU.
 """
 from __future__ import annotations
@@ -13,6 +15,7 @@ import os
 import platform
 import shutil
 import subprocess
+import sys
 import threading
 import time
 from collections.abc import Callable, Sequence
@@ -157,3 +160,50 @@ def rounds_summary(rounds: Sequence[Sequence[float]]) -> dict:
     spread = round((max(p95s) - min(p95s)) / min(p95s) * 100, 1) if len(p95s) > 1 and min(p95s) > 0 else None
     return {"n_rounds": len(per), "rounds": per, "p50": pct(pooled, 0.5), "p95": pct(pooled, 0.95),
             "p95_spread_pct": spread}
+
+
+def peak_rss_mb() -> float | None:
+    """Đỉnh RAM tiến trình từ lúc khởi động (Windows: PeakWorkingSetSize; POSIX: ru_maxrss), MB."""
+    if os.name == "nt":
+        import ctypes
+        from ctypes import wintypes
+
+        class Counters(ctypes.Structure):
+            _fields_ = [("cb", wintypes.DWORD), ("PageFaultCount", wintypes.DWORD)] + [
+                (n, ctypes.c_size_t) for n in ("PeakWorkingSetSize", "WorkingSetSize", "QuotaPeakPagedPoolUsage",
+                                               "QuotaPagedPoolUsage", "QuotaPeakNonPagedPoolUsage",
+                                               "QuotaNonPagedPoolUsage", "PagefileUsage", "PeakPagefileUsage")]
+        try:
+            kernel32, psapi = ctypes.WinDLL("kernel32"), ctypes.WinDLL("psapi")
+        except OSError:
+            return None
+        kernel32.GetCurrentProcess.restype = wintypes.HANDLE
+        psapi.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.POINTER(Counters), wintypes.DWORD]
+        c = Counters()
+        c.cb = ctypes.sizeof(c)
+        if not psapi.GetProcessMemoryInfo(kernel32.GetCurrentProcess(), ctypes.byref(c), c.cb):
+            return None
+        return round(c.PeakWorkingSetSize / 2**20, 1)
+    try:
+        import resource
+    except ImportError:
+        return None
+    peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss  # KB trên Linux, byte trên macOS
+    return round(peak / (2**20 if sys.platform == "darwin" else 2**10), 1)
+
+
+def model_files_map() -> dict:
+    ml = sys.modules.get("app.ml")
+    return dict(getattr(ml, "LOADED_FILES", {})) if ml else {}
+
+
+def model_files() -> dict:
+    """File adapter đã nạp qua app.ml và tổng dung lượng (MB); adapter khác (vd. adapter giả) → rỗng."""
+    loaded = model_files_map()
+    rows = [{"file": k, "mb": round(p.stat().st_size / 2**20, 2)} for k, p in sorted(loaded.items()) if p.is_file()]
+    return {"files": rows, "total_mb": round(sum(r["mb"] for r in rows), 2) if rows else None}
+
+
+def resources() -> dict:
+    return {"peak_rss_mb": peak_rss_mb(), "model_files": model_files(),
+            "peak_rss_scope": "toàn tiến trình đánh giá (gồm catalog, manifest, chỉ mục), từ lúc khởi động"}

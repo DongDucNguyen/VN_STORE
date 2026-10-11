@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { api, ApiError, emptyFilters, type Filters, type SearchResponse } from "../api";
+import { api, ApiError, emptyFilters, hasFilters, type Filters, type SearchResponse } from "../api";
+import { voiceResult } from "../voiceResult";
+import { afterResultPaint, beginMeasure, endMeasure, type Measure } from "../measurements";
 import { ErrorBox, Loading, Notice } from "../components/common";
 import { ProductGrid } from "../components/ProductCard";
 import { SearchBar } from "../components/SearchBar";
@@ -60,6 +62,7 @@ export function SearchPage({ route }: { route: Route }) {
   const [loading, setLoading] = useState(true);
   const [limit, setLimit] = useState(PAGE);
   const [retry, setRetry] = useState(0);
+  const [measure, setMeasure] = useState<Measure>();
   // Màn hình rộng mở sẵn bộ lọc; giữ nguyên lựa chọn đóng/mở của người dùng khi đổi bộ lọc.
   const [filtersOpen, setFiltersOpen] = useState(() => window.innerWidth > 800);
 
@@ -69,16 +72,33 @@ export function SearchPage({ route }: { route: Route }) {
     let alive = true;
     setLoading(true);
     setError(null);
+    const voice = route.params.get("via") === "voice" && !hasFilters(filters) && limit === PAGE && retry === 0
+      ? voiceResult(route.params.get("voice_id"), q) : null;
+    if (voice) {
+      setMeasure(voice.measure);
+      setData(voice.response);
+      setLoading(false);
+      return;
+    }
+    const timing = beginMeasure("keyword");
     api
       .search(q, filters, limit)
-      .then((r) => alive && setData(r))
-      .catch((e) => alive && setError(e instanceof ApiError ? e.message : String(e)))
+      .then((r) => { if (alive) { setData(r); setMeasure(timing); } })
+      .catch((e) => {
+        if (!alive) return;
+        endMeasure(timing, "error");
+        setError(e instanceof ApiError ? e.message : String(e));
+      })
       .finally(() => alive && setLoading(false));
     return () => {
       alive = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key, limit, retry]);
+
+  useEffect(() => {
+    if (data && !loading && !error) return afterResultPaint(measure, data);
+  }, [data, loading, error, measure]);
 
   function update(mut: (f: Filters) => void) {
     const f = filtersFrom(route.params);

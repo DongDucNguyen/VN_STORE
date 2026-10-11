@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "note": "Cấu hình sàng lọc PLAN §8.3 bước 2 cho scripts/benchmark/screen_models.py. Mỗi cấu hình chạy trong tiến trình riêng với cùng manifest/split/nhãn. env chỉ nhận biến VNSTORE_* (ví dụ VNSTORE_ML_DEVICE=cpu, VNSTORE_ASR_VAD=0, VNSTORE_ML_TRT=1). Thêm ứng viên (Qwen3-ASR, PhoWhisper-medium, ViCLIP-OT) khi có bản ONNX đáng tin cậy.",
+  "voice": [
+    {"name": "phowhisper-base", "adapter": "app.ml.asr:PhoWhisperBase"},
+    {"name": "phowhisper-base-fp16", "adapter": "app.ml.asr:PhoWhisperBaseFp16"},
+    {"name": "phowhisper-small", "adapter": "app.ml.asr:PhoWhisperSmall"},
+    {"name": "phowhisper-small-int8", "adapter": "app.ml.asr:PhoWhisperSmallInt8"}
+  ],
+  "image": [
+    {"name": "siglip2-base", "adapter": "app.ml.image:SigLIP2Base"},
+    {"name": "dinov2-base", "adapter": "app.ml.image:DINOv2Base"},
+    {"name": "openclip-vitb32", "adapter": "app.ml.image:OpenCLIPViTB32"}
+  ]
+}

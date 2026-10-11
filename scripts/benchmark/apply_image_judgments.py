@@ -51,10 +51,20 @@ def merge(manifest: dict, export: dict, catalog_sha: str, replace: bool) -> tupl
         row = rows[qid]
         if item.get("sha256") != row["sha256"]:
             raise ApplyError(f"{qid}: ảnh query đã đổi so với lúc tạo packet (sha256 khác)")
-        extra = set(item) - {"qid", "sha256", *FIELDS}
+        extra = set(item) - {"qid", "sha256", "family_id", "source_family_id", *FIELDS}
         if extra:
             raise ApplyError(f"{qid}: trường không mong đợi {sorted(extra)}")
         changed = False
+        if "family_id" in item:
+            if not item.get("family_review") or not export.get("family_registry_sha256"):
+                raise ApplyError(f"{qid}: đổi họ cần family_review và hash registry đã duyệt")
+            if item.get("source_family_id") != row["family_id"] and item["family_id"] != row["family_id"]:
+                raise ApplyError(f"{qid}: họ đã đổi từ khi tạo packet; tạo lại packet")
+            if item["family_id"] != row["family_id"]:
+                if row.get("family_review") is not None and not replace:
+                    raise ApplyError(f"{qid}: họ đã được duyệt; dùng --replace-judged")
+                row["family_id"] = item["family_id"]
+                changed = True
         for field in FIELDS:
             if field not in item or item[field] == row.get(field):
                 continue
@@ -73,6 +83,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
     ap.add_argument("--families", type=Path)
     ap.add_argument("--require-families", action="store_true")
+    ap.add_argument("--split-plan", type=Path)
     ap.add_argument("--replace-judged", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
@@ -81,13 +92,17 @@ def main(argv: list[str] | None = None) -> int:
     try:
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         export = json.loads(args.export.read_text(encoding="utf-8"))
+        registry_sha = export.get("family_registry_sha256")
+        if registry_sha is not None:
+            if args.families is None or hashlib.sha256(args.families.read_bytes()).hexdigest() != registry_sha:
+                raise ApplyError("File chấm cần --families đúng hash registry của packet")
         catalog_sha = hashlib.sha256(args.catalog.read_bytes()).hexdigest()
         merged, stats = merge(manifest, export, catalog_sha, args.replace_judged)
         fd, tmp = tempfile.mkstemp(dir=args.manifest.parent, prefix=".manifest.", suffix=".json")
         with os.fdopen(fd, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
             f.write("\n")
-        report = audit(Path(tmp), args.catalog, args.families, args.require_families)
+        report = audit(Path(tmp), args.catalog, args.families, args.require_families, args.split_plan)
         if report["status"] == "invalid":
             errors = [f"{i['code']} ({i['path']})" for i in report["issues"] if i["level"] == "error"]
             raise ApplyError(f"audit sau khi gộp báo invalid: {errors[:5]}")

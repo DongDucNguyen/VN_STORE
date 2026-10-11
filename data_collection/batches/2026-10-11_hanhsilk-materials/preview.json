@@ -1,0 +1,154 @@
+{
+  "catalog_sha256_before": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc",
+  "catalog_version_after": "seed-004-hanhsilk-materials",
+  "catalog_sha256_after": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc",
+  "dry_run": true,
+  "exit_code": 0,
+  "report": "reports/data_quality/2026-10-11_025238-637507_import-hanhsilk-materials.json",
+  "changes": [
+    {
+      "product_id": "p-hanhsilk-vai-lua-det-may-det-mong-2229",
+      "name_vi": "VẢI LỤA DỆT MÁY DỆT MỎNG",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-vai-lua-det-may-det-mong-2229",
+      "url": "https://hanhsilk.com/san-pham/vai-lua-det-may/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-2229.json",
+      "record_sha256": "b4724933484069e2166772cf8e48edbc0906d5e54809e6d4bfefe36494f0143f",
+      "field": "description",
+      "excerpt": "Vải Lụa dệt máy chất liệu 100% Tơ Tằm tự nhiên Việt Nam",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-vai-lua-the-van-chu-tho-2239",
+      "name_vi": "VẢI LỤA THE VÂN CHỮ THỌ",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-vai-lua-the-van-chu-tho-2239",
+      "url": "https://hanhsilk.com/san-pham/vai-lua-the-van-chu-tho/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-2239.json",
+      "record_sha256": "a098fb53843c8edb4e5b64bc30e98eb606ee6bdb6a4916d30e8f1061938c619c",
+      "field": "description",
+      "excerpt": "Vải Lụa the vân chữ thọ chất liệu 100% Tơ Tằm tự nhiên Việt Nam",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-ao-lua-2-day-3040",
+      "name_vi": "ÁO LỤA 2 DÂY",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-ao-lua-2-day-3040",
+      "url": "https://hanhsilk.com/san-pham/ao-lua-2-day/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3040.json",
+      "record_sha256": "f0088383d0f5fa0b31612f4032c16cbb28b04d4831bb443ca80bf1549bff4c1e",
+      "field": "short_description",
+      "excerpt": "Vải lụa tơ tằm 100%",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-vay-song-wavy-dress-3192",
+      "name_vi": "Váy sóng – Wavy dress",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-vay-song-wavy-dress-3192",
+      "url": "https://hanhsilk.com/san-pham/vay-song-wavy-dress/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3192.json",
+      "record_sha256": "2ebe31e36d887634bbdec2ec6bbca3668edf1db1c9170a0631ca2d8852c72f81",
+      "field": "description",
+      "excerpt": "lụa tơ tằm nguyên chất",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487",
+      "name_vi": "KHĂN ĐŨI THÊU HOA SEN NHIỀU MÀU",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487",
+      "url": "https://hanhsilk.com/san-pham/khan-dui-theu-hoa-sen-nhieu-mau/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3487.json",
+      "record_sha256": "ec9820667179c91fdaaa8d0bc2d0418cf3b02424ccf86cf5c2c4ccf8df3c5500",
+      "field": "description",
+      "excerpt": "Chất liệu lụa tơ tằm 100%",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361",
+      "name_vi": "KHĂN LỤA ĐŨI CAO CẤP THÊU HOA SEN",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361",
+      "url": "https://hanhsilk.com/san-pham/khan-lua-hai-lop-cao-cap-theu-hoa/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-361.json",
+      "record_sha256": "1435b04d04eb9848d17c1b172a8630667aac177719a1a3bccece51977c10fa13",
+      "field": "description",
+      "excerpt": "Chất liệu lụa tơ tằm 100%",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+      "name_vi": "Vải đũi may vest màu muối tiêu",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+      "url": "https://hanhsilk.com/san-pham/vai-dui-may-vest-mau-muoi-tieu/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-4232.json",
+      "record_sha256": "6c5322d548a3d3498312bb37ec55efe618ebf70670ea635d508a0cf5c4561c68",
+      "field": "description",
+      "excerpt": "Vải Đũi Lụa chất liệu 100% Tơ Tằm tự nhiên Việt Nam",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243",
+      "name_vi": "Vải đũi may vest nhiều màu, dày dặn",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243",
+      "url": "https://hanhsilk.com/san-pham/vai-dui-may-vest-nhieu-mau-day-dan/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-4243.json",
+      "record_sha256": "adac09d645f54694ceb5c5bb991365325afce506a286ae34f71fd8c3f740d804",
+      "field": "description",
+      "excerpt": "Vải Đũi Lụa chất liệu 100% Tơ Tằm tự nhiên Việt Nam",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    },
+    {
+      "product_id": "p-hanhsilk-khan-lua-thuy-an-dai-570",
+      "name_vi": "KHĂN LỤA THỦY ẤN DÀI",
+      "before": [],
+      "after": [
+        "lụa tơ tằm"
+      ],
+      "source_id": "src-hanhsilk-khan-lua-thuy-an-dai-570",
+      "url": "https://hanhsilk.com/san-pham/khan-lua-hoa-si-ve-tay/",
+      "retrieved_at": "2026-10-10T20:36:06.459519+07:00",
+      "record_path": "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-570.json",
+      "record_sha256": "de6d5b847c7abe16d243fc8106d1c9babd8107e9bcabfcf969cb275008dcca46",
+      "field": "description",
+      "excerpt": "Với chất liệu Lụa tơ tằm",
+      "basis": "Supplier description archived on 2026-10-10; not independent certification."
+    }
+  ]
+}

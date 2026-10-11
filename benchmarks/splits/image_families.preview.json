@@ -1,0 +1,3748 @@
+{
+ "kind": "image_family_split_plan",
+ "status": "preview_unreviewed",
+ "policy": "image-family-split-v1: units = reviewed families ∪ shared gallery images ∪ design lines; stratum = majority category; largest deficit by family count; ties by hash(seed, unit)",
+ "generated_at": "2026-10-11T03:13:04+07:00",
+ "catalog_sha256": "5448a8f4f8161e14cda4f6c3bac921c46af4c02be359dfe20c8ddd312572cecb",
+ "catalog_version": "seed-004-hanhsilk-materials",
+ "proposal_sha256": "df3215182c0e8aa476d8d3c28c91377f639860ee8492cdd3cd1cefda4baace13",
+ "source": {
+  "kind": "proposal_unreviewed",
+  "sha256": null
+ },
+ "params": {
+  "ratios": {
+   "train": 0.6,
+   "dev": 0.2,
+   "test": 0.2
+  },
+  "seed": "vnstore-image-split-1",
+  "design_lines": []
+ },
+ "counts": {
+  "train": {
+   "units": 164,
+   "families": 169,
+   "products": 200
+  },
+  "dev": {
+   "units": 55,
+   "families": 55,
+   "products": 62
+  },
+  "test": {
+   "units": 55,
+   "families": 55,
+   "products": 68
+  }
+ },
+ "family_share": {
+  "train": 0.6057,
+  "dev": 0.1971,
+  "test": 0.1971
+ },
+ "largest_unit": 6,
+ "by_category": {
+  "det-may-khan": {
+   "dev": 7,
+   "train": 23,
+   "test": 7
+  },
+  "det-may-thoi-trang": {
+   "train": 14,
+   "test": 5,
+   "dev": 5
+  },
+  "det-may-vai-lua": {
+   "test": 1,
+   "train": 3,
+   "dev": 1
+  },
+  "go-son-mai": {
+   "train": 20,
+   "dev": 7,
+   "test": 7
+  },
+  "go-son-mai-binh-lo": {
+   "test": 2,
+   "dev": 2,
+   "train": 6
+  },
+  "gom-su-am-chen": {
+   "dev": 1,
+   "train": 6
+  },
+  "gom-su-bat-dia": {
+   "train": 8,
+   "test": 3,
+   "dev": 3
+  },
+  "gom-su-binh-lo": {
+   "train": 20,
+   "test": 7,
+   "dev": 7
+  },
+  "gom-su-coc-ly": {
+   "train": 1
+  },
+  "may-tre-coi": {
+   "test": 2,
+   "train": 5,
+   "dev": 2
+  },
+  "may-tre-coi-gio": {
+   "dev": 8,
+   "test": 8,
+   "train": 24
+  },
+  "may-tre-coi-noi-that": {
+   "train": 8,
+   "test": 3,
+   "dev": 2
+  },
+  "may-tre-coi-tui": {
+   "train": 1
+  },
+  "thuc-pham-banh-keo": {
+   "dev": 10,
+   "test": 10,
+   "train": 30
+  }
+ },
+ "family_split": {
+  "fam-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412": "test",
+  "fam-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165": "train",
+  "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450": "train",
+  "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440": "dev",
+  "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428": "test",
+  "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423": "train",
+  "fam-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451": "train",
+  "fam-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433": "dev",
+  "fam-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456": "train",
+  "fam-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417": "test",
+  "fam-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177": "train",
+  "fam-hanhsilk-ao-lua-2-day-3040": "dev",
+  "fam-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156": "train",
+  "fam-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122": "test",
+  "fam-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103": "train",
+  "fam-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172": "train",
+  "fam-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487": "train",
+  "fam-hanhsilk-khan-lanh-to-tam-246": "train",
+  "fam-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361": "train",
+  "fam-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786": "test",
+  "fam-hanhsilk-khan-lua-thuy-an-dai-570": "train",
+  "fam-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799": "test",
+  "fam-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613": "train",
+  "fam-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456": "train",
+  "fam-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232": "test",
+  "fam-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243": "train",
+  "fam-hanhsilk-vai-lua-det-may-det-mong-2229": "dev",
+  "fam-hanhsilk-vai-lua-the-van-chu-tho-2239": "train",
+  "fam-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093": "dev",
+  "fam-hanhsilk-vay-song-wavy-dress-3192": "test",
+  "fam-hanoia-binh-hoa-axis-size-s-pc26ax01": "train",
+  "fam-hanoia-binh-hoa-bellus-size-m-a25be09": "test",
+  "fam-hanoia-binh-hoa-botanica-af26bt01": "dev",
+  "fam-hanoia-binh-hoa-exotic-size-s-af26ex07": "train",
+  "fam-hanoia-binh-hoa-monument-a22mo01": "train",
+  "fam-hanoia-binh-hoa-moonbow-af26mo06": "test",
+  "fam-hanoia-binh-hoa-mystery-a18mt01": "train",
+  "fam-hanoia-binh-hoa-red-river-lon-a20rr01": "dev",
+  "fam-hanoia-binh-hoa-thong-dong-nho-a24td02": "test",
+  "fam-hanoia-binh-hoa-vinh-size-l-a23vi03": "train",
+  "fam-hanoia-binh-hoa-vita-pc26vt01": "train",
+  "fam-hanoia-bo-co-tuong-aurify-af26ar10": "dev",
+  "fam-hanoia-chan-sach-aurify-af26ar09": "dev",
+  "fam-hanoia-dia-xa-phong-mountain-af26mt03": "test",
+  "fam-hanoia-gia-do-dien-thoai-elephone-af26el01": "dev",
+  "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01": "train",
+  "fam-hanoia-hop-but-innate-af26in16": "dev",
+  "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02": "train",
+  "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02": "train",
+  "fam-hanoia-hop-dong-ho-keras-af26kr04": "train",
+  "fam-hanoia-hop-dung-cigar-keras-af26kr03": "train",
+  "fam-hanoia-hop-dung-giay-red-river-a20rr06": "train",
+  "fam-hanoia-hop-gat-tan-keras-af26kr02": "train",
+  "fam-hanoia-hop-tra-tron-bellus-a25be11": "train",
+  "fam-hanoia-hop-tra-tron-exotic-af26ex08": "test",
+  "fam-hanoia-hop-tra-tron-moonbow-af26mo01": "train",
+  "fam-hanoia-hop-trang-suc-botanica-af26bt02": "train",
+  "fam-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05": "train",
+  "fam-hanoia-hop-trang-suc-cosmos-af26co04": "dev",
+  "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11": "train",
+  "fam-hanoia-hop-vuong-botanica-s-af26bt03": "dev",
+  "fam-hanoia-hop-vuong-exotic-size-l-af26ex13": "train",
+  "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11": "train",
+  "fam-hanoia-khay-chu-nhat-keras-af26kr01": "train",
+  "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12": "train",
+  "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05": "test",
+  "fam-hanoia-khay-chu-nhat-red-river-af26rr07": "train",
+  "fam-hanoia-khay-tron-exotic-af26ex03": "train",
+  "fam-hanoia-khay-vuong-moonbow-af26mo05": "dev",
+  "fam-hanoia-khung-anh-moonbow-size-m-af26mo13": "train",
+  "fam-hanoia-lo-da-mountain-af26mt07": "train",
+  "fam-hanoia-tuong-chim-chao-mao-ether-af26er01": "train",
+  "fam-hanoia-tuong-chim-se-ngo-ether-af26er03": "train",
+  "fam-hanoia-tuong-chim-vet-ether-af26er02": "test",
+  "fam-kilomet109-ao-khoac-phi-17mjk003": "train",
+  "fam-kilomet109-ao-khoac-vang-1-19mjk001": "train",
+  "fam-kilomet109-ao-so-mi-thong-17mt004": "dev",
+  "fam-kilomet109-chan-vay-ha-17wsk001": "train",
+  "fam-kilomet109-vay-van-19wdr006": "train",
+  "fam-kilomet109-vong-co-xoan-17wac001": "train",
+  "fam-lys-dia-tron-jasmine-trang-nga-15cm": "dev",
+  "fam-marou-ba-ria-76-80g": "test",
+  "fam-marou-ben-tre-78-80g": "train",
+  "fam-marou-lam-dong-74-80g": "train",
+  "fam-marou-quat-tien-giang-68-80g": "dev",
+  "fam-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872": "train",
+  "fam-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712": "dev",
+  "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168": "train",
+  "fam-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328": "train",
+  "fam-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928": "test",
+  "fam-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320": "train",
+  "fam-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752": "train",
+  "fam-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376": "train",
+  "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216": "train",
+  "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624": "train",
+  "fam-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480": "train",
+  "fam-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408": "train",
+  "fam-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864": "train",
+  "fam-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272": "train",
+  "fam-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688": "test",
+  "fam-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080": "dev",
+  "fam-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664": "train",
+  "fam-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016": "train",
+  "fam-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664": "test",
+  "fam-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736": "dev",
+  "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624": "train",
+  "fam-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720": "train",
+  "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104": "train",
+  "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": "test",
+  "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088": "dev",
+  "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264": "train",
+  "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472": "train",
+  "fam-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456": "dev",
+  "fam-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424": "train",
+  "fam-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808": "train",
+  "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064": "dev",
+  "fam-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632": "train",
+  "fam-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768": "test",
+  "fam-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304": "train",
+  "fam-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872": "dev",
+  "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928": "train",
+  "fam-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200": "test",
+  "fam-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360": "train",
+  "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104": "test",
+  "fam-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880": "dev",
+  "fam-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312": "test",
+  "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872": "test",
+  "fam-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688": "train",
+  "fam-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552": "train",
+  "fam-marou-tien-giang-70-80g": "train",
+  "fam-marou-vietnam-100-60g": "dev",
+  "fam-minhlong-binh-hoa-26-cm-dan-ga-1075177869": "train",
+  "fam-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941": "dev",
+  "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628": "train",
+  "fam-minhlong-binh-hoa-40-cm-buom-dao-1075177777": "train",
+  "fam-minhlong-binh-hoa-40-cm-buom-luon-1071551425": "train",
+  "fam-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827": "train",
+  "fam-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790": "test",
+  "fam-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886": "test",
+  "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725": "train",
+  "fam-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046": "dev",
+  "fam-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963": "train",
+  "fam-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908": "train",
+  "fam-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": "dev",
+  "fam-minhlong-binh-hoa-41-cm-sen-hot-1074964446": "test",
+  "fam-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791": "train",
+  "fam-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980": "test",
+  "fam-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934": "dev",
+  "fam-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001": "train",
+  "fam-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992": "train",
+  "fam-minhlong-binh-hoa-42-cm-hue-do-1074964896": "test",
+  "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741": "train",
+  "fam-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653": "dev",
+  "fam-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715": "train",
+  "fam-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842": "train",
+  "fam-minhlong-binh-hoa-52-cm-rong-do-1074965041": "train",
+  "fam-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861": "test",
+  "fam-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660": "test",
+  "fam-minhlong-binh-hoa-don-xuan-ve-tay-1075177745": "train",
+  "fam-minhlong-binh-hoa-hon-viet-30cm": "train",
+  "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812": "dev",
+  "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038": "train",
+  "fam-minhlong-binh-hoa-sac-tia-1075177720": "train",
+  "fam-minhlong-binh-hoa-sen-vang-27cm": "dev",
+  "fam-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157": "train",
+  "fam-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775": "train",
+  "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739": "train",
+  "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946": "train",
+  "fam-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520": "train",
+  "fam-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122": "train",
+  "fam-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799": "dev",
+  "fam-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914": "train",
+  "fam-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858": "train",
+  "fam-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445": "train",
+  "fam-minhlong-chen-com-thach-van-11cm": "test",
+  "fam-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380": "dev",
+  "fam-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896": "test",
+  "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034": "train",
+  "fam-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187": "train",
+  "fam-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211": "train",
+  "fam-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709": "train",
+  "fam-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128": "dev",
+  "fam-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795": "train",
+  "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370": "test",
+  "fam-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597": "train",
+  "fam-minhlong-ly-su-duong-sinh-bien-xanh-048l": "train",
+  "fam-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429": "dev",
+  "fam-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260": "dev",
+  "fam-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114": "train",
+  "fam-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339": "test",
+  "fam-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094": "test",
+  "fam-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246": "train",
+  "fam-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378": "train",
+  "fam-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360": "dev",
+  "fam-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169": "train",
+  "fam-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364": "test",
+  "fam-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275": "train",
+  "fam-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268": "train",
+  "fam-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286": "train",
+  "fam-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047": "test",
+  "fam-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194": "train",
+  "fam-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228": "train",
+  "fam-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421": "train",
+  "fam-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332": "dev",
+  "fam-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351": "dev",
+  "fam-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291": "train",
+  "fam-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250": "train",
+  "fam-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311": "test",
+  "fam-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417": "dev",
+  "fam-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075": "train",
+  "fam-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327": "train",
+  "fam-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229": "train",
+  "fam-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206": "train",
+  "fam-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734": "train",
+  "fam-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289": "dev",
+  "fam-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441": "train",
+  "fam-vietcraft-ban-may-gom-vh240901-688": "train",
+  "fam-vietcraft-ban-may-vh2609-1442": "train",
+  "fam-vietcraft-bat-gao-dua-son-ve-tay": "test",
+  "fam-vietcraft-bat-tre-cuon-phu-son-vh24045": "test",
+  "fam-vietcraft-bat-tre-vh24029-1511": "train",
+  "fam-vietcraft-bat-tre-vh24033-1473": "train",
+  "fam-vietcraft-bat-tre-vh24034-1466": "dev",
+  "fam-vietcraft-bat-tre-vh24041-1257": "train",
+  "fam-vietcraft-bat-tre-vh24051-1183": "train",
+  "fam-vietcraft-bat-tre-vh24053-1154": "test",
+  "fam-vietcraft-bat-tre-vh24070-1062": "train",
+  "fam-vietcraft-bat-tre-vh25027-739": "test",
+  "fam-vietcraft-binh-trang-tri-tre-vh2602-1384": "train",
+  "fam-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760": "dev",
+  "fam-vietcraft-chau-may-vh24060-1090": "train",
+  "fam-vietcraft-chup-den-may-vh24072-1050": "train",
+  "fam-vietcraft-chup-den-seagrass-vh24028": "test",
+  "fam-vietcraft-chup-den-tre-may-vh24031-1483": "test",
+  "fam-vietcraft-chup-den-tre-vh24038-1300": "train",
+  "fam-vietcraft-chup-den-tre-vh24043-1241": "test",
+  "fam-vietcraft-chup-den-tre-vh24047-1210": "train",
+  "fam-vietcraft-chup-den-tre-vh24055-1125": "train",
+  "fam-vietcraft-chup-den-tre-vh24074-1038": "dev",
+  "fam-vietcraft-chup-den-tre-vh25012-461": "dev",
+  "fam-vietcraft-chup-den-vh24058-1102": "train",
+  "fam-vietcraft-de-lot-coc-may-gom-vh24101-775": "dev",
+  "fam-vietcraft-dia-may-vh2610-1455": "test",
+  "fam-vietcraft-dia-tre-vh25022-622": "dev",
+  "fam-vietcraft-gio-dan-luc-binh-vh24035-1423": "train",
+  "fam-vietcraft-gio-dan-may-vh24056-1114": "test",
+  "fam-vietcraft-gio-dan-may-vh24059-1097": "dev",
+  "fam-vietcraft-gio-dan-may-vh24062-1076": "dev",
+  "fam-vietcraft-gio-dan-may-vh24077-1000": "train",
+  "fam-vietcraft-gio-dan-may-vh24109-699": "test",
+  "fam-vietcraft-gio-dan-may-vh25023-629": "dev",
+  "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246": "train",
+  "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136": "train",
+  "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770": "train",
+  "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733": "test",
+  "fam-vietcraft-gio-dan-tre-vh24027-1523": "train",
+  "fam-vietcraft-gio-dan-tre-vietcraft-753-753": "train",
+  "fam-vietcraft-gio-dan-vh24057-1107": "train",
+  "fam-vietcraft-gio-dan-vh25021-615": "test",
+  "fam-vietcraft-gio-may-bau-duc-vh24040": "train",
+  "fam-vietcraft-gio-seagrass-vh24046": "test",
+  "fam-vietcraft-gio-tre-dan-tron-vh24026": "train",
+  "fam-vietcraft-guong-trang-tri-may-vh2604-1407": "test",
+  "fam-vietcraft-hop-tre-vh24075-1028": "train",
+  "fam-vietcraft-hop-tre-vietcraft-1164-1164": "train",
+  "fam-vietcraft-hop-tre-vietcraft-481-481": "train",
+  "fam-vietcraft-khay-may-24030-1490": "train",
+  "fam-vietcraft-khay-may-dan-vh24048": "train",
+  "fam-vietcraft-khay-may-gom-vh24105-746": "dev",
+  "fam-vietcraft-khay-may-vh24049-1195": "dev",
+  "fam-vietcraft-khay-may-vh25020-466": "train",
+  "fam-vietcraft-khay-may-vietcraft-610-610": "train",
+  "fam-vietcraft-khay-may-xa-cu-vietcraft-1083-1083": "train",
+  "fam-vietcraft-khay-tre-xa-cu-vh25019-189": "dev",
+  "fam-vietcraft-long-ban-tre-vh251201-1275": "test",
+  "fam-vietcraft-nha-cho-thu-cung-vh24103-765": "train",
+  "fam-vietcraft-tui-luc-binh-vo-so-vh24032": "train",
+  "fam-vietcraft-vat-trang-tri-may-vh24076-1019": "train",
+  "fam-vietcraft-vat-trang-tri-may-vh25034-1007": "train"
+ },
+ "units": [
+  {
+   "unit_id": "fam-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429",
+   "families": [
+    "fam-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429"
+   ],
+   "products": [
+    "p-sensilk-100-mulberry-silk-scarf-khan-lua-ve-tay-hoa-14429"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260",
+   "families": [
+    "fam-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260"
+   ],
+   "products": [
+    "p-sensilk-cam-tu-cau-khan-lua-to-tam-ve-tay-cao-cap-14260"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360",
+   "families": [
+    "fam-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-cao-cap-ve-tay-lavender-one-of-a-kind-14360"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332",
+   "families": [
+    "fam-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-ve-tay-nghe-thuat-hoa-dao-silk-shawl-14332"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351",
+   "families": [
+    "fam-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-ve-tay-nghe-thuat-ngoc-lan-silk-14351"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417",
+   "families": [
+    "fam-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417"
+   ],
+   "products": [
+    "p-sensilk-khan-to-tam-ve-tay-hoa-huong-duong-qua-tang-di-14417"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289",
+   "families": [
+    "fam-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289"
+   ],
+   "products": [
+    "p-sensilk-vietnam-silk-art-khan-lua-ve-tay-cao-cap-ngoc-14289"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-trang-3440"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-theu-phuong-hoang-3433"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-lua-2-day-3040",
+   "families": [
+    "fam-hanhsilk-ao-lua-2-day-3040"
+   ],
+   "products": [
+    "p-hanhsilk-ao-lua-2-day-3040"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093",
+   "families": [
+    "fam-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093"
+   ],
+   "products": [
+    "p-hanhsilk-vay-canh-lua-to-tam-dai-wing-long-dress-3093"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-kilomet109-ao-so-mi-thong-17mt004",
+   "families": [
+    "fam-kilomet109-ao-so-mi-thong-17mt004"
+   ],
+   "products": [
+    "p-kilomet109-ao-so-mi-thong-17mt004"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vai-lua-det-may-det-mong-2229",
+   "families": [
+    "fam-hanhsilk-vai-lua-det-may-det-mong-2229"
+   ],
+   "products": [
+    "p-hanhsilk-vai-lua-det-may-det-mong-2229"
+   ],
+   "reasons": [],
+   "category": "det-may-vai-lua",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-bo-co-tuong-aurify-af26ar10",
+   "families": [
+    "fam-hanoia-bo-co-tuong-aurify-af26ar10"
+   ],
+   "products": [
+    "p-hanoia-bo-co-tuong-aurify-af26ar10"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-chan-sach-aurify-af26ar09",
+   "families": [
+    "fam-hanoia-chan-sach-aurify-af26ar09"
+   ],
+   "products": [
+    "p-hanoia-chan-sach-aurify-af26ar09"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-gia-do-dien-thoai-elephone-af26el01",
+   "families": [
+    "fam-hanoia-gia-do-dien-thoai-elephone-af26el01"
+   ],
+   "products": [
+    "p-hanoia-gia-do-dien-thoai-elephone-af26el01",
+    "p-hanoia-gia-do-dien-thoai-elephone-af26el02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-but-innate-af26in16",
+   "families": [
+    "fam-hanoia-hop-but-innate-af26in16"
+   ],
+   "products": [
+    "p-hanoia-hop-but-innate-af26in16"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-trang-suc-cosmos-af26co04",
+   "families": [
+    "fam-hanoia-hop-trang-suc-cosmos-af26co04"
+   ],
+   "products": [
+    "p-hanoia-hop-trang-suc-cosmos-af26co04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-vuong-botanica-s-af26bt03",
+   "families": [
+    "fam-hanoia-hop-vuong-botanica-s-af26bt03"
+   ],
+   "products": [
+    "p-hanoia-hop-vuong-botanica-s-af26bt03",
+    "p-hanoia-hop-vuong-botanica-size-m-af26bt04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-vuong-moonbow-af26mo05",
+   "families": [
+    "fam-hanoia-khay-vuong-moonbow-af26mo05"
+   ],
+   "products": [
+    "p-hanoia-khay-vuong-moonbow-af26mo05"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-botanica-af26bt01",
+   "families": [
+    "fam-hanoia-binh-hoa-botanica-af26bt01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-botanica-af26bt01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-red-river-lon-a20rr01",
+   "families": [
+    "fam-hanoia-binh-hoa-red-river-lon-a20rr01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-red-river-lon-a20rr01",
+    "p-hanoia-binh-hoa-red-river-size-m-a20rr05",
+    "p-hanoia-binh-hoa-red-river-size-s-a20rr04",
+    "p-hanoia-hop-tra-tron-red-river-a20rr02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799",
+   "families": [
+    "fam-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799"
+   ],
+   "products": [
+    "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799"
+   ],
+   "reasons": [],
+   "category": "gom-su-am-chen",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-lys-dia-tron-jasmine-trang-nga-15cm",
+   "families": [
+    "fam-lys-dia-tron-jasmine-trang-nga-15cm"
+   ],
+   "products": [
+    "p-lys-dia-tron-jasmine-trang-nga-15cm"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380",
+   "families": [
+    "fam-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380"
+   ],
+   "products": [
+    "p-minhlong-dia-an-sang-20x18-cm-ngoc-bien-ifp-trang-nga-1074833380"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128",
+   "families": [
+    "fam-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128"
+   ],
+   "products": [
+    "p-minhlong-dia-sau-long-23-cm-camellia-chi-xanh-duong-1071772128"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941",
+   "families": [
+    "fam-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-31-cm-hoa-anh-tuc-cobalt-1075177941"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-hoa-hong-1071315046"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-chim-va-khe-1074964934"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653",
+   "families": [
+    "fam-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-45-cm-hoa-dien-vy-dinh-hoa-chim-canh-1071518653"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+   "families": [
+    "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812",
+    "p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-sen-vang-27cm",
+   "families": [
+    "fam-minhlong-binh-hoa-sen-vang-27cm"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-sen-vang-27cm"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760",
+   "families": [
+    "fam-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760"
+   ],
+   "products": [
+    "p-vietcraft-binh-trang-tri-tre-xa-cu-vh25028-760"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-de-lot-coc-may-gom-vh24101-775",
+   "families": [
+    "fam-vietcraft-de-lot-coc-may-gom-vh24101-775"
+   ],
+   "products": [
+    "p-vietcraft-de-lot-coc-may-gom-vh24101-775"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24034-1466",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24034-1466"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24034-1466"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-dia-tre-vh25022-622",
+   "families": [
+    "fam-vietcraft-dia-tre-vh25022-622"
+   ],
+   "products": [
+    "p-vietcraft-dia-tre-vh25022-622"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh24059-1097",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh24059-1097"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh24059-1097"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh24062-1076",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh24062-1076"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh24062-1076"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh25023-629",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh25023-629"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh25023-629"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-gom-vh24105-746",
+   "families": [
+    "fam-vietcraft-khay-may-gom-vh24105-746"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-gom-vh24105-746"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-vh24049-1195",
+   "families": [
+    "fam-vietcraft-khay-may-vh24049-1195"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-vh24049-1195"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-tre-xa-cu-vh25019-189",
+   "families": [
+    "fam-vietcraft-khay-tre-xa-cu-vh25019-189"
+   ],
+   "products": [
+    "p-vietcraft-khay-tre-xa-cu-vh25019-189"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh24074-1038",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh24074-1038"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24074-1038"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh25012-461",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh25012-461"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh25012-461"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-quat-tien-giang-68-80g",
+   "families": [
+    "fam-marou-quat-tien-giang-68-80g"
+   ],
+   "products": [
+    "p-marou-quat-tien-giang-68-80g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712",
+   "families": [
+    "fam-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080",
+   "families": [
+    "fam-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-dark-chocolate-65-caramel-with-8249810256080"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736",
+   "families": [
+    "fam-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ironbar-65-box-of-16x40g-8249764118736"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088",
+   "families": [
+    "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456",
+   "families": [
+    "fam-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-marou-bar-box-of-16x35g-8249761333456"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064",
+    "p-marou-so-co-la-marou-set-of-3-mini-milk-by-marou-8441716441296"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880",
+   "families": [
+    "fam-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-marou-vietnam-100-60g",
+   "families": [
+    "fam-marou-vietnam-100-60g"
+   ],
+   "products": [
+    "p-marou-vietnam-100-60g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "dev"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+   "families": [
+    "fam-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786"
+   ],
+   "products": [
+    "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799",
+   "families": [
+    "fam-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799"
+   ],
+   "products": [
+    "p-hanhsilk-khan-to-ve-doc-ban-hand-painted-silk-scarf-by-2799"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339",
+   "families": [
+    "fam-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339"
+   ],
+   "products": [
+    "p-sensilk-handmade-silk-embroidery-scarf-khan-lua-theu-13339"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094",
+   "families": [
+    "fam-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094"
+   ],
+   "products": [
+    "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364",
+   "families": [
+    "fam-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-qua-tang-ve-hoa-dong-tien-sen-silk-14364"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047",
+   "families": [
+    "fam-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-to-tam-sen-lam-chieu-in-3d-cao-cap-13047"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311",
+   "families": [
+    "fam-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311"
+   ],
+   "products": [
+    "p-sensilk-khan-tay-theu-cao-cap-hoa-mai-sensilk-100-pure-13311"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412",
+   "families": [
+    "fam-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-dui-to-tam-hoa-tiet-theu-hoa-sen-3412"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-hoa-hong-3428"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417",
+   "families": [
+    "fam-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-ngu-than-lua-to-tam-3417"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122",
+   "families": [
+    "fam-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122"
+   ],
+   "products": [
+    "p-hanhsilk-ao-vay-truyen-thong-traditional-shirt-dress-3122"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vay-song-wavy-dress-3192",
+   "families": [
+    "fam-hanhsilk-vay-song-wavy-dress-3192"
+   ],
+   "products": [
+    "p-hanhsilk-vay-song-wavy-dress-3192"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232",
+   "families": [
+    "fam-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232"
+   ],
+   "products": [
+    "p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232"
+   ],
+   "reasons": [],
+   "category": "det-may-vai-lua",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-thong-dong-nho-a24td02",
+   "families": [
+    "fam-hanoia-binh-hoa-thong-dong-nho-a24td02"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-thong-dong-nho-a24td02",
+    "p-hanoia-hop-tra-tron-thong-dong-a24td04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-dia-xa-phong-mountain-af26mt03",
+   "families": [
+    "fam-hanoia-dia-xa-phong-mountain-af26mt03"
+   ],
+   "products": [
+    "p-hanoia-dia-xa-phong-mountain-af26mt03"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-tra-tron-exotic-af26ex08",
+   "families": [
+    "fam-hanoia-hop-tra-tron-exotic-af26ex08"
+   ],
+   "products": [
+    "p-hanoia-hop-tra-tron-exotic-af26ex08",
+    "p-hanoia-hop-tra-tron-exotic-af26ex09",
+    "p-hanoia-hop-tra-tron-exotic-af26ex10"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+   "families": [
+    "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05"
+   ],
+   "products": [
+    "p-hanoia-khay-chu-nhat-mountain-size-m-af26mt05",
+    "p-hanoia-khay-chu-nhat-mountain-size-s-af26mt04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-tuong-chim-vet-ether-af26er02",
+   "families": [
+    "fam-hanoia-tuong-chim-vet-ether-af26er02"
+   ],
+   "products": [
+    "p-hanoia-tuong-chim-vet-ether-af26er02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-gao-dua-son-ve-tay",
+   "families": [
+    "fam-vietcraft-bat-gao-dua-son-ve-tay"
+   ],
+   "products": [
+    "p-vietcraft-bat-gao-dua-son-ve-tay"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-cuon-phu-son-vh24045",
+   "families": [
+    "fam-vietcraft-bat-tre-cuon-phu-son-vh24045"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-cuon-phu-son-vh24045"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",
+   "families": [
+    "fam-hanoia-binh-hoa-bellus-size-m-a25be09"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-bellus-size-m-a25be09",
+    "p-hanoia-binh-hoa-bellus-size-s-a25be08",
+    "p-hanoia-binh-hoa-bellus-size-xl-a25be10"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-moonbow-af26mo06",
+   "families": [
+    "fam-hanoia-binh-hoa-moonbow-af26mo06"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-moonbow-af26mo06"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-chen-com-thach-van-11cm",
+   "families": [
+    "fam-minhlong-chen-com-thach-van-11cm"
+   ],
+   "products": [
+    "p-minhlong-chen-com-thach-van-11cm"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896",
+   "families": [
+    "fam-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896"
+   ],
+   "products": [
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-dau-rung-1073395896"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+   "families": [
+    "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370"
+   ],
+   "products": [
+    "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370",
+    "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790",
+   "families": [
+    "fam-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-40-cm-sen-mau-ve-tay-1075177790"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-sen-hot-1074964446",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-sen-hot-1074964446"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-sen-hot-1074964446"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-chim-en-va-hoa-mai-cach-dieu-1075177980"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-hue-do-1074964896",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-hue-do-1074964896"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-hue-do-1074964896"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861",
+   "families": [
+    "fam-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-57-cm-sen-va-ca-1071550861"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660",
+   "families": [
+    "fam-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-60-cm-hoa-tay-cobalt-1071699660"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-guong-trang-tri-may-vh2604-1407",
+   "families": [
+    "fam-vietcraft-guong-trang-tri-may-vh2604-1407"
+   ],
+   "products": [
+    "p-vietcraft-guong-trang-tri-may-vh2604-1407"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-long-ban-tre-vh251201-1275",
+   "families": [
+    "fam-vietcraft-long-ban-tre-vh251201-1275"
+   ],
+   "products": [
+    "p-vietcraft-long-ban-tre-vh251201-1275"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24053-1154",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24053-1154"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24053-1154"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh25027-739",
+   "families": [
+    "fam-vietcraft-bat-tre-vh25027-739"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh25027-739"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-dia-may-vh2610-1455",
+   "families": [
+    "fam-vietcraft-dia-may-vh2610-1455"
+   ],
+   "products": [
+    "p-vietcraft-dia-may-vh2610-1455"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh24056-1114",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh24056-1114"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh24056-1114"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh24109-699",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh24109-699"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh24109-699"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733",
+   "families": [
+    "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24106-733"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-vh25021-615",
+   "families": [
+    "fam-vietcraft-gio-dan-vh25021-615"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-vh25021-615"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-seagrass-vh24046",
+   "families": [
+    "fam-vietcraft-gio-seagrass-vh24046"
+   ],
+   "products": [
+    "p-vietcraft-gio-seagrass-vh24046"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-seagrass-vh24028",
+   "families": [
+    "fam-vietcraft-chup-den-seagrass-vh24028"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-seagrass-vh24028"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-may-vh24031-1483",
+   "families": [
+    "fam-vietcraft-chup-den-tre-may-vh24031-1483"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-may-vh24031-1483"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh24043-1241",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh24043-1241"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24043-1241",
+    "p-vietcraft-chup-den-tre-vh240902-668"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-ba-ria-76-80g",
+   "families": [
+    "fam-marou-ba-ria-76-80g"
+   ],
+   "products": [
+    "p-marou-ba-ria-76-80g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928",
+   "families": [
+    "fam-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688",
+   "families": [
+    "fam-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-dark-chocolate-55-roasted-8249806356688"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664",
+   "families": [
+    "fam-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-gift-box-marou-bar-6x35g-8249780371664"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+   "families": [
+    "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-6-chocolate-napolitain-8249759170768"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200",
+   "families": [
+    "fam-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-single-origin-bars-mini-set-of-8249755861200"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+   "families": [
+    "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104",
+    "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312",
+   "families": [
+    "fam-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-vietnam-dark-milk-48-chocolate-8352337199312"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+   "families": [
+    "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872",
+    "p-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852946640"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "test"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487",
+   "families": [
+    "fam-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487"
+   ],
+   "products": [
+    "p-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-lanh-to-tam-246",
+   "families": [
+    "fam-hanhsilk-khan-lanh-to-tam-246"
+   ],
+   "products": [
+    "p-hanhsilk-khan-lanh-to-tam-246"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361",
+   "families": [
+    "fam-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361"
+   ],
+   "products": [
+    "p-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-khan-lua-thuy-an-dai-570",
+   "families": [
+    "fam-hanhsilk-khan-lua-thuy-an-dai-570"
+   ],
+   "products": [
+    "p-hanhsilk-khan-lua-thuy-an-dai-570"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613",
+   "families": [
+    "fam-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613"
+   ],
+   "products": [
+    "p-hanhsilk-set-qua-tang-khan-hoa-thuy-an-va-vong-lua-3613"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114",
+   "families": [
+    "fam-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114"
+   ],
+   "products": [
+    "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246",
+   "families": [
+    "fam-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-100-to-tam-ve-tay-hoa-tulip-qua-tang-14246"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378",
+   "families": [
+    "fam-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-cao-cap-ve-tay-hoa-sen-viet-nam-luxury-14378"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169",
+   "families": [
+    "fam-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-qua-tang-to-tam-cao-cap-in-3d-klvi01-13169"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275",
+   "families": [
+    "fam-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-qua-tang-ve-tay-mau-don-sensilk-100-14275"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268",
+   "families": [
+    "fam-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-thoi-trang-in-sen-silk-klvi04-qua-tang-13268"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286",
+   "families": [
+    "fam-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-to-tam-in-3d-sensilk-klvi05-qua-tang-13286"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194",
+   "families": [
+    "fam-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-to-tam-ve-tay-cuc-vang-qua-tang-me-14194"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228",
+   "families": [
+    "fam-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-to-tam-ve-tay-truyen-thong-lavender-14228"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421",
+   "families": [
+    "fam-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-ve-tay-hoa-dao-sensilk-limited-qua-14421"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291",
+   "families": [
+    "fam-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291"
+   ],
+   "products": [
+    "p-sensilk-khan-lua-viet-nam-ve-tay-hoa-ngoc-lan-qua-tang-14291"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250",
+   "families": [
+    "fam-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250"
+   ],
+   "products": [
+    "p-sensilk-khan-quang-co-lua-in-3d-sensilk-klvi07-qua-tang-13250"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075",
+   "families": [
+    "fam-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075"
+   ],
+   "products": [
+    "p-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327",
+   "families": [
+    "fam-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327"
+   ],
+   "products": [
+    "p-sensilk-silk-handkerchief-embroidery-khan-tay-lua-theu-13327"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229",
+   "families": [
+    "fam-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229"
+   ],
+   "products": [
+    "p-sensilk-silk-print-square-scarves-khan-choang-co-in-3d-13229"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206",
+   "families": [
+    "fam-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206"
+   ],
+   "products": [
+    "p-sensilk-silk-shawl-hand-painted-sensilk-khan-lua-nghe-14206"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734",
+   "families": [
+    "fam-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734"
+   ],
+   "products": [
+    "p-sensilk-silk-square-printed-scarf-khan-lua-in-sen-thai-13734"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441",
+   "families": [
+    "fam-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441"
+   ],
+   "products": [
+    "p-sensilk-vietnamese-silk-gift-khan-lua-cao-cap-ve-tay-14441"
+   ],
+   "reasons": [],
+   "category": "det-may-khan",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165",
+   "families": [
+    "fam-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-dui-to-tam-ve-hoa-sen-trang-4165"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-hoa-tiet-vay-so-mau-cam-3450"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-jq-hoa-tiet-vo-so-3423"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-to-tam-ngu-than-mau-cam-3451"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456",
+   "families": [
+    "fam-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456"
+   ],
+   "products": [
+    "p-hanhsilk-ao-dai-lua-xanh-ngoc-100-to-tam-3456"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177",
+   "families": [
+    "fam-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177"
+   ],
+   "products": [
+    "p-hanhsilk-ao-khoac-dui-to-tam-duster-coat-3177"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156",
+   "families": [
+    "fam-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156"
+   ],
+   "products": [
+    "p-hanhsilk-ao-so-mi-lua-ngan-tay-quan-lua-satin-ong-rong-3156"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103",
+   "families": [
+    "fam-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103"
+   ],
+   "products": [
+    "p-hanhsilk-choang-kaftan-multi-functional-3-ways-kaftan-3103"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172",
+   "families": [
+    "fam-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172"
+   ],
+   "products": [
+    "p-hanhsilk-jumpsuit-lua-to-tam-ket-hop-lua-ve-tay-3172"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-kilomet109-ao-khoac-phi-17mjk003",
+   "families": [
+    "fam-kilomet109-ao-khoac-phi-17mjk003"
+   ],
+   "products": [
+    "p-kilomet109-ao-khoac-phi-17mjk003"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-kilomet109-ao-khoac-vang-1-19mjk001",
+   "families": [
+    "fam-kilomet109-ao-khoac-vang-1-19mjk001"
+   ],
+   "products": [
+    "p-kilomet109-ao-khoac-vang-1-19mjk001"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-kilomet109-chan-vay-ha-17wsk001",
+   "families": [
+    "fam-kilomet109-chan-vay-ha-17wsk001"
+   ],
+   "products": [
+    "p-kilomet109-chan-vay-ha-17wsk001"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-kilomet109-vay-van-19wdr006",
+   "families": [
+    "fam-kilomet109-vay-van-19wdr006"
+   ],
+   "products": [
+    "p-kilomet109-vay-van-19wdr006"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-kilomet109-vong-co-xoan-17wac001",
+   "families": [
+    "fam-kilomet109-vong-co-xoan-17wac001"
+   ],
+   "products": [
+    "p-kilomet109-vong-co-xoan-17wac001"
+   ],
+   "reasons": [],
+   "category": "det-may-thoi-trang",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456",
+   "families": [
+    "fam-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456"
+   ],
+   "products": [
+    "p-hanhsilk-vai-dui-cao-cap-tussah-silk-premium-1456"
+   ],
+   "reasons": [],
+   "category": "det-may-vai-lua",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243",
+   "families": [
+    "fam-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243"
+   ],
+   "products": [
+    "p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243"
+   ],
+   "reasons": [],
+   "category": "det-may-vai-lua",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanhsilk-vai-lua-the-van-chu-tho-2239",
+   "families": [
+    "fam-hanhsilk-vai-lua-the-van-chu-tho-2239"
+   ],
+   "products": [
+    "p-hanhsilk-vai-lua-the-van-chu-tho-2239"
+   ],
+   "reasons": [],
+   "category": "det-may-vai-lua",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+   "families": [
+    "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02"
+   ],
+   "products": [
+    "p-hanoia-hop-da-tron-mountain-size-m-af26mt02",
+    "p-hanoia-hop-da-tron-mountain-size-s-af26mt01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-dong-ho-keras-af26kr04",
+   "families": [
+    "fam-hanoia-hop-dong-ho-keras-af26kr04"
+   ],
+   "products": [
+    "p-hanoia-hop-dong-ho-keras-af26kr04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-dung-cigar-keras-af26kr03",
+   "families": [
+    "fam-hanoia-hop-dung-cigar-keras-af26kr03"
+   ],
+   "products": [
+    "p-hanoia-hop-dung-cigar-keras-af26kr03"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-dung-giay-red-river-a20rr06",
+   "families": [
+    "fam-hanoia-hop-dung-giay-red-river-a20rr06"
+   ],
+   "products": [
+    "p-hanoia-hop-dung-giay-red-river-a20rr06"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-gat-tan-keras-af26kr02",
+   "families": [
+    "fam-hanoia-hop-gat-tan-keras-af26kr02"
+   ],
+   "products": [
+    "p-hanoia-hop-gat-tan-keras-af26kr02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-tra-tron-bellus-a25be11",
+   "families": [
+    "fam-hanoia-hop-tra-tron-bellus-a25be11"
+   ],
+   "products": [
+    "p-hanoia-hop-tra-tron-bellus-a25be11"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-tra-tron-moonbow-af26mo01",
+   "families": [
+    "fam-hanoia-hop-tra-tron-moonbow-af26mo01"
+   ],
+   "products": [
+    "p-hanoia-hop-tra-tron-moonbow-af26mo01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-trang-suc-botanica-af26bt02",
+   "families": [
+    "fam-hanoia-hop-trang-suc-botanica-af26bt02"
+   ],
+   "products": [
+    "p-hanoia-hop-trang-suc-botanica-af26bt02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05",
+   "families": [
+    "fam-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05"
+   ],
+   "products": [
+    "p-hanoia-hop-trang-suc-chu-nhat-bellus-a25be05"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+   "families": [
+    "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11"
+   ],
+   "products": [
+    "p-hanoia-hop-trang-suc-exotic-size-l-af26ex11",
+    "p-hanoia-hop-trang-suc-exotic-size-m-af26ex01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-vuong-exotic-size-l-af26ex13",
+   "families": [
+    "fam-hanoia-hop-vuong-exotic-size-l-af26ex13"
+   ],
+   "products": [
+    "p-hanoia-hop-vuong-exotic-size-l-af26ex13",
+    "p-hanoia-hop-vuong-exotic-size-m-af26ex12",
+    "p-hanoia-hop-vuong-exotic-size-s-af26ex04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+   "families": [
+    "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11"
+   ],
+   "products": [
+    "p-hanoia-hop-vuong-moonbow-size-l-af26mo11",
+    "p-hanoia-hop-vuong-moonbow-size-m-af26mo10",
+    "p-hanoia-hop-vuong-moonbow-size-s-af26mo02"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-chu-nhat-keras-af26kr01",
+   "families": [
+    "fam-hanoia-khay-chu-nhat-keras-af26kr01"
+   ],
+   "products": [
+    "p-hanoia-khay-chu-nhat-keras-af26kr01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+   "families": [
+    "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12"
+   ],
+   "products": [
+    "p-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12",
+    "p-hanoia-khay-chu-nhat-moonbow-size-s-af26mo04"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-chu-nhat-red-river-af26rr07",
+   "families": [
+    "fam-hanoia-khay-chu-nhat-red-river-af26rr07"
+   ],
+   "products": [
+    "p-hanoia-khay-chu-nhat-red-river-af26rr07"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-khay-tron-exotic-af26ex03",
+   "families": [
+    "fam-hanoia-khay-tron-exotic-af26ex03"
+   ],
+   "products": [
+    "p-hanoia-khay-tron-exotic-af26ex03"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-khung-anh-moonbow-size-m-af26mo13",
+   "families": [
+    "fam-hanoia-khung-anh-moonbow-size-m-af26mo13"
+   ],
+   "products": [
+    "p-hanoia-khung-anh-moonbow-size-m-af26mo13",
+    "p-hanoia-khung-anh-moonbow-size-s-af26mo07"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-lo-da-mountain-af26mt07",
+   "families": [
+    "fam-hanoia-lo-da-mountain-af26mt07"
+   ],
+   "products": [
+    "p-hanoia-lo-da-mountain-af26mt07"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-tuong-chim-chao-mao-ether-af26er01",
+   "families": [
+    "fam-hanoia-tuong-chim-chao-mao-ether-af26er01"
+   ],
+   "products": [
+    "p-hanoia-tuong-chim-chao-mao-ether-af26er01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-tuong-chim-se-ngo-ether-af26er03",
+   "families": [
+    "fam-hanoia-tuong-chim-se-ngo-ether-af26er03"
+   ],
+   "products": [
+    "p-hanoia-tuong-chim-se-ngo-ether-af26er03"
+   ],
+   "reasons": [],
+   "category": "go-son-mai",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-axis-size-s-pc26ax01",
+   "families": [
+    "fam-hanoia-binh-hoa-axis-size-s-pc26ax01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-axis-size-s-pc26ax01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-exotic-size-s-af26ex07",
+   "families": [
+    "fam-hanoia-binh-hoa-exotic-size-s-af26ex07"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-exotic-size-s-af26ex07"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-monument-a22mo01",
+   "families": [
+    "fam-hanoia-binh-hoa-monument-a22mo01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-monument-a22mo01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-mystery-a18mt01",
+   "families": [
+    "fam-hanoia-binh-hoa-mystery-a18mt01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-mystery-a18mt01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-vinh-size-l-a23vi03",
+   "families": [
+    "fam-hanoia-binh-hoa-vinh-size-l-a23vi03"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-vinh-size-l-a23vi03",
+    "p-hanoia-binh-hoa-vinh-size-m-a23vi02",
+    "p-hanoia-binh-hoa-vinh-size-s-a23vi01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-binh-hoa-vita-pc26vt01",
+   "families": [
+    "fam-hanoia-binh-hoa-vita-pc26vt01"
+   ],
+   "products": [
+    "p-hanoia-binh-hoa-vita-pc26vt01"
+   ],
+   "reasons": [],
+   "category": "go-son-mai-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+   "families": [
+    "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "fam-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+    "fam-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+    "fam-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+    "fam-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858"
+   ],
+   "products": [
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739",
+    "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946",
+    "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520",
+    "p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122",
+    "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558",
+    "p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914",
+    "p-minhlong-bo-tra-camellia-chi-vang-05l",
+    "p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858"
+   ],
+   "reasons": [
+    "shared_image"
+   ],
+   "category": "gom-su-am-chen",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775",
+   "families": [
+    "fam-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775"
+   ],
+   "products": [
+    "p-minhlong-bo-do-an-09-san-pham-timeless-ifp-trang-nga-1073043775"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445",
+   "families": [
+    "fam-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445"
+   ],
+   "products": [
+    "p-minhlong-chen-com-11-5-cm-jasmine-chi-xanh-duong-1074464445"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+   "families": [
+    "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034"
+   ],
+   "products": [
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147",
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187",
+   "families": [
+    "fam-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187"
+   ],
+   "products": [
+    "p-minhlong-dia-lot-15-5-cm-tulip-nga-vuon-thuong-uyen-1073397187"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211",
+   "families": [
+    "fam-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211"
+   ],
+   "products": [
+    "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709",
+   "families": [
+    "fam-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709"
+   ],
+   "products": [
+    "p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795",
+   "families": [
+    "fam-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795"
+   ],
+   "products": [
+    "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597",
+   "families": [
+    "fam-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597"
+   ],
+   "products": [
+    "p-minhlong-dia-tron-20-cm-camellia-tu-linh-1072195597"
+   ],
+   "reasons": [],
+   "category": "gom-su-bat-dia",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-26-cm-dan-ga-1075177869",
+   "families": [
+    "fam-minhlong-binh-hoa-26-cm-dan-ga-1075177869"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-26-cm-dan-ga-1075177869"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+   "families": [
+    "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628",
+    "p-minhlong-binh-hoa-36-cm-sen-do-1071550664"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-40-cm-buom-dao-1075177777",
+   "families": [
+    "fam-minhlong-binh-hoa-40-cm-buom-dao-1075177777"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-40-cm-buom-dao-1075177777"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-40-cm-buom-luon-1071551425",
+   "families": [
+    "fam-minhlong-binh-hoa-40-cm-buom-luon-1071551425"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-40-cm-buom-luon-1071551425"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827",
+   "families": [
+    "fam-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-40-cm-sen-khac-nen-den-1071550827"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725",
+    "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-hoa-huong-duong-1075177963"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908",
+   "families": [
+    "fam-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992",
+   "families": [
+    "fam-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+   "families": [
+    "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741",
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715",
+   "families": [
+    "fam-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842",
+   "families": [
+    "fam-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-52-cm-binh-hoa-sen-hac-1071314842"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-52-cm-rong-do-1074965041",
+   "families": [
+    "fam-minhlong-binh-hoa-52-cm-rong-do-1074965041"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-52-cm-rong-do-1074965041"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-don-xuan-ve-tay-1075177745",
+   "families": [
+    "fam-minhlong-binh-hoa-don-xuan-ve-tay-1075177745"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-don-xuan-ve-tay-1075177745"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-hon-viet-30cm",
+   "families": [
+    "fam-minhlong-binh-hoa-hon-viet-30cm"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-hon-viet-30cm"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038",
+   "families": [
+    "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-sac-tia-1075177720",
+   "families": [
+    "fam-minhlong-binh-hoa-sac-tia-1075177720"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-sac-tia-1075177720"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157",
+   "families": [
+    "fam-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157"
+   ],
+   "products": [
+    "p-minhlong-binh-hoa-thai-hoa-40-cm-nap-binh-hoa-hoi-tuu-1071463157"
+   ],
+   "reasons": [],
+   "category": "gom-su-binh-lo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-minhlong-ly-su-duong-sinh-bien-xanh-048l",
+   "families": [
+    "fam-minhlong-ly-su-duong-sinh-bien-xanh-048l"
+   ],
+   "products": [
+    "p-minhlong-ly-su-duong-sinh-bien-xanh-048l"
+   ],
+   "reasons": [],
+   "category": "gom-su-coc-ly",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+   "families": [
+    "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02"
+   ],
+   "products": [
+    "p-hanoia-hop-dan-tre-ethnic-s-ou17et02",
+    "p-hanoia-hop-dan-tre-ethnic-size-m-af26et01"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-binh-trang-tri-tre-vh2602-1384",
+   "families": [
+    "fam-vietcraft-binh-trang-tri-tre-vh2602-1384"
+   ],
+   "products": [
+    "p-vietcraft-binh-trang-tri-tre-vh2602-1384"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chau-may-vh24060-1090",
+   "families": [
+    "fam-vietcraft-chau-may-vh24060-1090"
+   ],
+   "products": [
+    "p-vietcraft-chau-may-vh24060-1090"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-vat-trang-tri-may-vh24076-1019",
+   "families": [
+    "fam-vietcraft-vat-trang-tri-may-vh24076-1019"
+   ],
+   "products": [
+    "p-vietcraft-vat-trang-tri-may-vh24076-1019"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-vat-trang-tri-may-vh25034-1007",
+   "families": [
+    "fam-vietcraft-vat-trang-tri-may-vh25034-1007"
+   ],
+   "products": [
+    "p-vietcraft-vat-trang-tri-may-vh25034-1007"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+   "families": [
+    "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01"
+   ],
+   "products": [
+    "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24029-1511",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24029-1511"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24029-1511"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24033-1473",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24033-1473"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24033-1473"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24041-1257",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24041-1257"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24041-1257"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24051-1183",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24051-1183"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24051-1183"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-bat-tre-vh24070-1062",
+   "families": [
+    "fam-vietcraft-bat-tre-vh24070-1062"
+   ],
+   "products": [
+    "p-vietcraft-bat-tre-vh24070-1062"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-luc-binh-vh24035-1423",
+   "families": [
+    "fam-vietcraft-gio-dan-luc-binh-vh24035-1423"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-luc-binh-vh24035-1423"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-may-vh24077-1000",
+   "families": [
+    "fam-vietcraft-gio-dan-may-vh24077-1000"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-may-vh24077-1000"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246",
+   "families": [
+    "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136",
+   "families": [
+    "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24054-1136"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770",
+   "families": [
+    "fam-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24102-770"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-tre-vh24027-1523",
+   "families": [
+    "fam-vietcraft-gio-dan-tre-vh24027-1523"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-tre-vh24027-1523"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-tre-vietcraft-753-753",
+   "families": [
+    "fam-vietcraft-gio-dan-tre-vietcraft-753-753"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-tre-vietcraft-753-753"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-dan-vh24057-1107",
+   "families": [
+    "fam-vietcraft-gio-dan-vh24057-1107"
+   ],
+   "products": [
+    "p-vietcraft-gio-dan-vh24057-1107"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-may-bau-duc-vh24040",
+   "families": [
+    "fam-vietcraft-gio-may-bau-duc-vh24040"
+   ],
+   "products": [
+    "p-vietcraft-gio-may-bau-duc-vh24040"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-gio-tre-dan-tron-vh24026",
+   "families": [
+    "fam-vietcraft-gio-tre-dan-tron-vh24026"
+   ],
+   "products": [
+    "p-vietcraft-gio-tre-dan-tron-vh24026"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-hop-tre-vh24075-1028",
+   "families": [
+    "fam-vietcraft-hop-tre-vh24075-1028"
+   ],
+   "products": [
+    "p-vietcraft-hop-tre-vh24075-1028"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-hop-tre-vietcraft-1164-1164",
+   "families": [
+    "fam-vietcraft-hop-tre-vietcraft-1164-1164"
+   ],
+   "products": [
+    "p-vietcraft-hop-tre-vietcraft-1164-1164"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-hop-tre-vietcraft-481-481",
+   "families": [
+    "fam-vietcraft-hop-tre-vietcraft-481-481"
+   ],
+   "products": [
+    "p-vietcraft-hop-tre-vietcraft-481-481"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-24030-1490",
+   "families": [
+    "fam-vietcraft-khay-may-24030-1490"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-24030-1490"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-dan-vh24048",
+   "families": [
+    "fam-vietcraft-khay-may-dan-vh24048"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-dan-vh24048"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-vh25020-466",
+   "families": [
+    "fam-vietcraft-khay-may-vh25020-466"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-vh25020-466"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-vietcraft-610-610",
+   "families": [
+    "fam-vietcraft-khay-may-vietcraft-610-610"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-vietcraft-610-610"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-khay-may-xa-cu-vietcraft-1083-1083",
+   "families": [
+    "fam-vietcraft-khay-may-xa-cu-vietcraft-1083-1083"
+   ],
+   "products": [
+    "p-vietcraft-khay-may-xa-cu-vietcraft-1083-1083"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-gio",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-ban-may-gom-vh240901-688",
+   "families": [
+    "fam-vietcraft-ban-may-gom-vh240901-688"
+   ],
+   "products": [
+    "p-vietcraft-ban-may-gom-vh240901-688"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-ban-may-vh2609-1442",
+   "families": [
+    "fam-vietcraft-ban-may-vh2609-1442"
+   ],
+   "products": [
+    "p-vietcraft-ban-may-vh2609-1442"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-may-vh24072-1050",
+   "families": [
+    "fam-vietcraft-chup-den-may-vh24072-1050"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-may-vh24072-1050"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh24038-1300",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh24038-1300"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24038-1300"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh24047-1210",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh24047-1210"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24047-1210"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-tre-vh24055-1125",
+   "families": [
+    "fam-vietcraft-chup-den-tre-vh24055-1125"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-tre-vh24055-1125"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-chup-den-vh24058-1102",
+   "families": [
+    "fam-vietcraft-chup-den-vh24058-1102"
+   ],
+   "products": [
+    "p-vietcraft-chup-den-vh24058-1102"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-nha-cho-thu-cung-vh24103-765",
+   "families": [
+    "fam-vietcraft-nha-cho-thu-cung-vh24103-765"
+   ],
+   "products": [
+    "p-vietcraft-nha-cho-thu-cung-vh24103-765"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-noi-that",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-vietcraft-tui-luc-binh-vo-so-vh24032",
+   "families": [
+    "fam-vietcraft-tui-luc-binh-vo-so-vh24032"
+   ],
+   "products": [
+    "p-vietcraft-tui-luc-binh-vo-so-vh24032"
+   ],
+   "reasons": [],
+   "category": "may-tre-coi-tui",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-ben-tre-78-80g",
+   "families": [
+    "fam-marou-ben-tre-78-80g"
+   ],
+   "products": [
+    "p-marou-ben-tre-78-80g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-lam-dong-74-80g",
+   "families": [
+    "fam-marou-lam-dong-74-80g"
+   ],
+   "products": [
+    "p-marou-lam-dong-74-80g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872",
+   "families": [
+    "fam-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-flavors-of-vietnam-chocolate-8249799409872"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+   "families": [
+    "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168",
+    "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936",
+    "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328",
+   "families": [
+    "fam-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-mini-bars-gift-box-halloween-8249801605328"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320",
+   "families": [
+    "fam-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752",
+   "families": [
+    "fam-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376",
+   "families": [
+    "fam-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+   "families": [
+    "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216",
+    "p-marou-so-co-la-marou-ca-phe-sua-bar-44-80g-8249792037072"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+   "families": [
+    "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096",
+    "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480",
+   "families": [
+    "fam-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408",
+   "families": [
+    "fam-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864",
+   "families": [
+    "fam-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-coconut-milk-with-dried-fruit-55-8456113094864"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272",
+   "families": [
+    "fam-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664",
+   "families": [
+    "fam-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016",
+   "families": [
+    "fam-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-gift-box-marou-bar-12x35g-8249791480016"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+   "families": [
+    "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720",
+   "families": [
+    "fam-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104",
+   "families": [
+    "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264",
+   "families": [
+    "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-set-8249754157264"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+   "families": [
+    "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472",
+    "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864",
+    "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424",
+   "families": [
+    "fam-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-pho-spice-65-10-year-anniversary-8249753993424"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-3-marou-bars-2-ironbars-8249809305808"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-3-mini-chocolate-bars-8249801703632"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+   "families": [
+    "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928",
+    "p-marou-so-co-la-marou-set-of-6-the-faiseurs-collection-8249803964624"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360",
+   "families": [
+    "fam-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688",
+   "families": [
+    "fam-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-vietnamese-vanilla-44-white-8352337428688"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552",
+   "families": [
+    "fam-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552"
+   ],
+   "products": [
+    "p-marou-so-co-la-marou-wallpaper-edition-tien-giang-80-8249758777552"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  },
+  {
+   "unit_id": "fam-marou-tien-giang-70-80g",
+   "families": [
+    "fam-marou-tien-giang-70-80g"
+   ],
+   "products": [
+    "p-marou-tien-giang-70-80g"
+   ],
+   "reasons": [],
+   "category": "thuc-pham-banh-keo",
+   "split": "train"
+  }
+ ],
+ "locked_by": null,
+ "locked_at": null
+}

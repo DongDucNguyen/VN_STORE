@@ -1,0 +1,482 @@
+{
+  "generated_at": "2026-10-11T02:52:21+07:00",
+  "kind": "hanhsilk-materials",
+  "dry_run": true,
+  "catalog_sha256_before": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc",
+  "proposed_sha256": "2e6f6b5cc30efd16aad7245fdf16d9dc09d8a670ec9a4168fcae402a25855360",
+  "baseline": null,
+  "inputs_sha256": {
+    "apply_materials.py": "e3eb232348ecd730813d9ee14e7a7d2643082c82c9625c3c6b1778657e7b390c",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-2229.json": "b4724933484069e2166772cf8e48edbc0906d5e54809e6d4bfefe36494f0143f",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-2239.json": "a098fb53843c8edb4e5b64bc30e98eb606ee6bdb6a4916d30e8f1061938c619c",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3040.json": "f0088383d0f5fa0b31612f4032c16cbb28b04d4831bb443ca80bf1549bff4c1e",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3192.json": "2ebe31e36d887634bbdec2ec6bbca3668edf1db1c9170a0631ca2d8852c72f81",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-3487.json": "ec9820667179c91fdaaa8d0bc2d0418cf3b02424ccf86cf5c2c4ccf8df3c5500",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-361.json": "1435b04d04eb9848d17c1b172a8630667aac177719a1a3bccece51977c10fa13",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-4232.json": "6c5322d548a3d3498312bb37ec55efe618ebf70670ea635d508a0cf5c4561c68",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-4243.json": "adac09d645f54694ceb5c5bb991365325afce506a286ae34f71fd8c3f740d804",
+    "data_collection/batches/2026-10-10_dot-002/records/p-tmp-hanhsilk-570.json": "de6d5b847c7abe16d243fc8106d1c9babd8107e9bcabfcf969cb275008dcca46"
+  },
+  "conflicts": [],
+  "validation_issues": [],
+  "changes": [
+    {
+      "path": "$.catalog_version",
+      "before": {
+        "present": true,
+        "value": "seed-003-dot-002"
+      },
+      "after": {
+        "present": true,
+        "value": "seed-004-hanhsilk-materials"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-ao-lua-2-day-3040].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-ao-lua-2-day-3040].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-lua-thuy-an-dai-570].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-khan-lua-thuy-an-dai-570].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-lua-det-may-det-mong-2229].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-lua-det-may-det-mong-2229].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-lua-the-van-chu-tho-2239].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vai-lua-the-van-chu-tho-2239].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vay-song-wavy-dress-3192].materials",
+      "before": {
+        "present": true,
+        "value": []
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "lụa tơ tằm"
+        ]
+      }
+    },
+    {
+      "path": "$.products[id=p-hanhsilk-vay-song-wavy-dress-3192].updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T20:36:06.459519+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-ao-lua-2-day-3040].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-khan-dui-theu-hoa-sen-nhieu-mau-3487].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-khan-lua-dui-cao-cap-theu-hoa-sen-361].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "traditional_craft",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-khan-lua-thuy-an-dai-570].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "craft_techniques"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "craft_techniques",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-vai-dui-may-vest-mau-muoi-tieu-4232].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-vai-dui-may-vest-nhieu-mau-day-dan-4243].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-vai-lua-det-may-det-mong-2229].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-vai-lua-the-van-chu-tho-2239].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.sources[id=src-hanhsilk-vay-song-wavy-dress-3192].supports",
+      "before": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material"
+        ]
+      },
+      "after": {
+        "present": true,
+        "value": [
+          "name",
+          "variants",
+          "images",
+          "price",
+          "vn_material",
+          "materials"
+        ]
+      }
+    },
+    {
+      "path": "$.updated_at",
+      "before": {
+        "present": true,
+        "value": "2026-10-10T21:17:26+07:00"
+      },
+      "after": {
+        "present": true,
+        "value": "2026-10-11T02:52:21+07:00"
+      }
+    }
+  ],
+  "status": "preview",
+  "artifacts": "data_collection/import_runs/2026-10-11_025221-951090_hanhsilk-materials"
+}

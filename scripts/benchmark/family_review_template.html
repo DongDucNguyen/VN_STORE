@@ -3,11 +3,12 @@
 <title>VNStore — Duyệt họ sản phẩm</title>
 <style>
 body{font:16px/1.5 system-ui;background:#f3f5f1;color:#203129;margin:0}header,main{max-width:1150px;margin:auto;padding:14px 24px}header{position:sticky;top:0;background:#f3f5f1;z-index:1;border-bottom:1px solid #ccd5cb}h1{font-size:22px;margin:0 0 6px}button,select,input{font:inherit;padding:6px 8px;margin:3px;border:1px solid #a3b8a8;border-radius:6px}button{background:#1e6043;color:#fff;cursor:pointer}button.tab{background:#fff;color:#1e6043}button.tab[aria-pressed=true]{background:#1e6043;color:#fff}#notice{color:#923600;min-height:1.4em}
-.card{background:#fff;border:1px solid #dce4db;border-radius:12px;padding:12px 14px;margin:12px 0}.card.done{border-color:#7fa98c;background:#f7fbf7}.row{display:flex;flex-wrap:wrap;gap:12px}.prod{width:200px}.prod img{width:96px;height:96px;object-fit:contain;background:#f6f7f4;margin:0 4px 4px 0;border-radius:6px}.prod b{display:block;font-size:14px}small{color:#5a6c5f}.ev{font-size:13px;color:#5a6c5f}label{display:inline-block;margin-right:12px}@media(max-width:600px){.prod{width:100%}header{position:static}}
+.card{background:#fff;border:1px solid #dce4db;border-radius:12px;padding:12px 14px;margin:12px 0}.card.done{border-color:#7fa98c;background:#f7fbf7}.row{display:flex;flex-wrap:wrap;gap:12px}.prod{width:200px}.prod img{width:96px;height:96px;object-fit:contain;background:#f6f7f4;margin:0 4px 4px 0;border-radius:6px}.prod b{display:block;font-size:14px}small{color:#5a6c5f}.ev{font-size:13px;color:#5a6c5f}.sug{background:#fff6dc;border-left:4px solid #c99a2e;padding:4px 8px;margin:6px 0;font-size:14px}label{display:inline-block;margin-right:12px}@media(max-width:600px){.prod{width:100%}header{position:static}}
 </style>
 <header><h1>Duyệt họ sản phẩm</h1><div id="summary"></div>
 <label>Người duyệt <input id="reviewer" placeholder="Tên hoặc mã người duyệt"></label>
 <button class="tab" data-tab="families" type="button">Họ đề xuất</button><button class="tab" data-tab="candidates" type="button">Ứng viên ảnh</button><button class="tab" data-tab="shared" type="button">Ảnh dùng chung</button>
+<button id="apply-tab" type="button" hidden>Áp gợi ý cho thẻ chưa quyết định (tab này)</button>
 <button id="export" type="button">Xuất quyết định</button><button id="backup" type="button" class="tab">Lưu bản nháp</button>
 <label>Nạp bản nháp <input type="file" id="restore" accept="application/json,.json"></label>
 <div id="notice" role="status"></div></header>
@@ -16,17 +17,31 @@ body{font:16px/1.5 system-ui;background:#f3f5f1;color:#203129;margin:0}header,ma
 <script>
 const packet=JSON.parse(document.getElementById('packet').textContent);
 const key='vnstore-family-review:'+packet.proposal_sha256;
+const keys=[key,...(packet.compatible_proposal_sha256||[]).map(s=>'vnstore-family-review:'+s)];
 const $=id=>document.getElementById(id);
-let state={reviewer:'',fam:{},cand:{},shared:{}},tab='families';
+let state={reviewer:'',fam:{},cand:{},shared:{},assisted:{fam:{},cand:{},shared:{}}},tab='families';
+const sug=packet.suggestions||null;
 const HELP={families:'Một họ = các SKU là biến thể của cùng một món (size, dung tích, màu, hộp quà). Dòng thiết kế khác món (bình và hộp cùng hoa văn) không phải một họ: chọn “Tách” và gán nhóm.',
  candidates:'Cặp sản phẩm cùng nguồn có ảnh khá giống nhưng chưa được gộp. Chọn “Cùng họ” nếu là biến thể của cùng một món.',
  shared:'Ảnh gần như đồng nhất nằm ở nhiều sản phẩm. Ảnh minh họa chung (≥3 sản phẩm) làm tìm bằng ảnh khớp đều các sản phẩm đó. Quyết định chỉ được ghi lại cho nhóm dữ liệu, không tự xóa ảnh.'};
 function object(v){return v&&typeof v==='object'&&!Array.isArray(v);}
-function valid(v){return object(v)&&typeof v.reviewer==='string'&&['fam','cand','shared'].every(k=>object(v[k]))&&
+function valid(v){return object(v)&&typeof v.reviewer==='string'&&['fam','cand','shared'].every(k=>object(v[k]))&&(v.assisted===undefined||object(v.assisted))&&
  Object.entries(v.fam).every(([id,d])=>{const f=packet.families.find(x=>x.family_id===id);return f&&object(d)&&(d.action==='confirm'||(d.action==='split'&&object(d.groups)&&Object.entries(d.groups).every(([p,g])=>f.products.includes(p)&&['','A','B','C','D'].includes(g))));})&&
  Object.entries(v.cand).every(([k,d])=>packet.candidates.some(x=>x.key===k)&&['merge','separate'].includes(d))&&
  Object.entries(v.shared).every(([k,d])=>packet.shared.some(x=>x.key===k)&&['keep','exclude'].includes(d));}
-try{const s=JSON.parse(localStorage.getItem(key));if(valid(s))state=s;}catch{}
+for(const k of keys){try{const s=JSON.parse(localStorage.getItem(k));if(valid(s)){state=s;break;}}catch{}}
+function fixAssisted(){state.assisted??={};for(const k of ['fam','cand','shared'])state.assisted[k]??={};}
+fixAssisted();
+const famValue=d=>JSON.stringify(d?{action:d.action,groups:d.action==='split'?Object.fromEntries(Object.entries(d.groups||{}).sort()):undefined}:null);
+function applyFam(f){const g=sug.families[f.family_id];state.fam[f.family_id]=g.action==='split'?{action:'split',groups:{...g.groups}}:{action:'confirm'};state.assisted.fam[f.family_id]=famValue(state.fam[f.family_id]);}
+function applyCand(x){state.cand[x.key]=sug.candidates[x.key].decision;state.assisted.cand[x.key]=state.cand[x.key];}
+function applyShared(x){state.shared[x.key]=sug.shared[x.key].decision;state.assisted.shared[x.key]=state.shared[x.key];}
+function assistStats(){let kept=0,changed=0;const cur={fam:k=>famValue(state.fam[k]),cand:k=>state.cand[k],shared:k=>state.shared[k]};
+ for(const t of ['fam','cand','shared'])for(const [k,v] of Object.entries(state.assisted[t])){const now=cur[t](k);if(now===undefined||now==='null')continue;if(now===v)kept++;else changed++;}
+ return{applied:kept+changed,kept_unchanged:kept,changed};}
+function hint(text,reason,decided,apply){const box=el('div');box.className='sug';box.append(el('span',`Gợi ý máy: ${text} — ${reason} `));
+ if(!decided){const b=el('button','Áp gợi ý');b.type='button';b.onclick=()=>{apply();save();render();};box.append(b);}return box;}
+const LABEL={confirm:'Đúng là một họ',merge:'Cùng họ (gộp)',separate:'Khác họ',keep:'Giữ trong gallery',exclude:'Đề nghị loại khỏi gallery'};
 function save(){try{localStorage.setItem(key,JSON.stringify(state));}catch{$('notice').textContent='Trình duyệt không tự lưu được; dùng “Lưu bản nháp”.';}}
 function el(t,x){const n=document.createElement(t);if(x!==undefined)n.textContent=x;return n;}
 function famDone(f){const d=state.fam[f.family_id];if(!d)return false;if(d.action==='confirm')return true;if(d.action!=='split')return false;const g=f.products.map(p=>(d.groups||{})[p]);return g.every(x=>['A','B','C','D'].includes(x))&&new Set(g).size>1;}
@@ -39,18 +54,26 @@ function renderFamilies(list){for(const f of packet.families){const c=el('articl
  c.append(el('small',f.family_id+' · '+f.products.length+' sản phẩm'));const ev=el('div',f.evidence.map(e=>e.type==='name'?'tên “'+e.key+'”':'ảnh '+e.cosine).join(' · '));ev.className='ev';c.append(ev);
  const row=el('div');row.className='row';for(const pid of f.products){const p=prod(pid);if(d.action==='split'){const s=el('select');s.setAttribute('aria-label','Nhóm của '+packet.products[pid].name);for(const g of ['','A','B','C','D'])s.append(new Option(g||'— nhóm —',g));s.value=(d.groups||{})[pid]||'';s.onchange=()=>{d.groups=d.groups||{};d.groups[pid]=s.value;state.fam[f.family_id]=d;save();render();};p.append(s);}row.append(p);}c.append(row);
  c.append(radio('f-'+f.family_id,'confirm','Đúng là một họ',d.action==='confirm',()=>{state.fam[f.family_id]={action:'confirm'};save();render();}),
-  radio('f-'+f.family_id,'split','Tách thành nhiều họ',d.action==='split',()=>{state.fam[f.family_id]={action:'split',groups:{}};save();render();}));list.append(c);}}
+  radio('f-'+f.family_id,'split','Tách thành nhiều họ',d.action==='split',()=>{state.fam[f.family_id]={action:'split',groups:{}};save();render();}));
+ if(sug){const g=sug.families[f.family_id];c.append(hint(g.action==='split'?'Tách: '+f.products.map(p=>packet.products[p].name+' → '+g.groups[p]).join('; '):LABEL.confirm,g.reason,!!state.fam[f.family_id],()=>applyFam(f)));}
+ list.append(c);}}
 function renderCandidates(list){for(const x of packet.candidates){const c=el('article'),v=state.cand[x.key];c.className='card'+(v?' done':'');c.append(el('small','cosine '+x.cosine));const row=el('div');row.className='row';row.append(prod(x.a),prod(x.b));c.append(row,
- radio('c-'+x.key,'merge','Cùng họ (gộp)',v==='merge',()=>{state.cand[x.key]='merge';save();render();}),radio('c-'+x.key,'separate','Khác họ',v==='separate',()=>{state.cand[x.key]='separate';save();render();}));list.append(c);}}
+ radio('c-'+x.key,'merge','Cùng họ (gộp)',v==='merge',()=>{state.cand[x.key]='merge';save();render();}),radio('c-'+x.key,'separate','Khác họ',v==='separate',()=>{state.cand[x.key]='separate';save();render();}));
+ if(sug){const g=sug.candidates[x.key];c.append(hint(LABEL[g.decision],g.reason,!!v,()=>applyCand(x)));}list.append(c);}}
 function renderShared(list){for(const x of packet.shared){const c=el('article'),v=state.shared[x.key];c.className='card'+(v?' done':'');c.append(el('small',(x.illustration?'Ảnh minh họa chung · ':'')+x.products.length+' sản phẩm'));const row=el('div');row.className='row';
  for(const s of x.images){const i=el('img');i.src=s;i.alt='Ảnh dùng chung';i.style.cssText='width:140px;height:140px;object-fit:contain;background:#f6f7f4';row.append(i);}c.append(row,el('p',x.products.map(p=>packet.products[p].name).join(' · ')),
- radio('s-'+x.key,'keep','Giữ trong gallery',v==='keep',()=>{state.shared[x.key]='keep';save();render();}),radio('s-'+x.key,'exclude','Đề nghị loại khỏi gallery',v==='exclude',()=>{state.shared[x.key]='exclude';save();render();}));list.append(c);}}
-function render(){const list=$('list');list.replaceChildren();$('help').textContent=HELP[tab];({families:renderFamilies,candidates:renderCandidates,shared:renderShared})[tab](list);summary();}
+ radio('s-'+x.key,'keep','Giữ trong gallery',v==='keep',()=>{state.shared[x.key]='keep';save();render();}),radio('s-'+x.key,'exclude','Đề nghị loại khỏi gallery',v==='exclude',()=>{state.shared[x.key]='exclude';save();render();}));
+ if(sug){const g=sug.shared[x.key];c.append(hint(LABEL[g.decision],g.reason,!!v,()=>applyShared(x)));}list.append(c);}}
+function render(){const list=$('list');list.replaceChildren();$('help').textContent=HELP[tab]+(sug?` Trang có gợi ý máy (${sug.version}, không phải quyết định): xem ảnh và lý do, chỉ áp khi đồng ý; bạn chịu trách nhiệm quyết định đã xuất.`:'');$('apply-tab').hidden=!sug;({families:renderFamilies,candidates:renderCandidates,shared:renderShared})[tab](list);summary();}
 document.querySelectorAll('.tab[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;render();});
+$('apply-tab').onclick=()=>{let n=0;if(tab==='families'){for(const f of packet.families)if(!state.fam[f.family_id]){applyFam(f);n++;}}
+ else if(tab==='candidates'){for(const x of packet.candidates)if(!state.cand[x.key]){applyCand(x);n++;}}
+ else{for(const x of packet.shared)if(!state.shared[x.key]){applyShared(x);n++;}}
+ save();render();$('notice').textContent=`Đã áp ${n} gợi ý trong tab này. Xem lại từng thẻ (nhất là thẻ ghi “cần xem ảnh”) trước khi xuất.`;};
 $('reviewer').value=state.reviewer;$('reviewer').oninput=()=>{state.reviewer=$('reviewer').value;save();};
 function download(name,text){const u=URL.createObjectURL(new Blob([text],{type:'application/json'}));const a=el('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
 $('backup').onclick=()=>download('family-review-draft.json',JSON.stringify({key,state},null,1));
-$('restore').onchange=async()=>{try{const f=$('restore').files[0];if(!f)return;const d=JSON.parse(await f.text());if(d.key!==key||!valid(d.state))throw Error('Bản nháp không khớp đề xuất này.');state=d.state;$('reviewer').value=state.reviewer;save();render();$('notice').textContent='Đã nạp bản nháp.';}catch(e){$('notice').textContent=e.message;}};
+$('restore').onchange=async()=>{try{const f=$('restore').files[0];if(!f)return;const d=JSON.parse(await f.text());if(!keys.includes(d.key)||!valid(d.state))throw Error('Bản nháp không khớp đề xuất này.');state=d.state;fixAssisted();$('reviewer').value=state.reviewer;save();render();$('notice').textContent='Đã nạp bản nháp.';}catch(e){$('notice').textContent=e.message;}};
 function conflict(){
  const family=new Map(Object.entries(packet.products).map(([p,v])=>[p,v.family]));
  for(const f of packet.families){const d=state.fam[f.family_id];if(d.action==='split')for(const p of f.products)family.set(p,JSON.stringify([f.family_id,d.groups[p]]));}
@@ -63,7 +86,7 @@ $('export').onclick=()=>{if(!state.reviewer.trim()){$('notice').textContent='C�
  const fam={};for(const f of packet.families)if(famDone(f)){const d=state.fam[f.family_id];fam[f.family_id]=d.action==='confirm'?{action:'confirm'}:{action:'split',groups:Object.fromEntries(f.products.map(p=>[p,d.groups[p]]))};}
  const c=counts(),complete=c.families===packet.families.length&&c.candidates===packet.candidates.length;
  if(complete){const problem=conflict();if(problem){$('notice').textContent=problem;return;}}
- download(`family-review-${packet.proposal_sha256.slice(0,8)}.json`,JSON.stringify({kind:'family_review_decisions',proposal_sha256:packet.proposal_sha256,catalog_sha256:packet.catalog_sha256,reviewed_by:state.reviewer.trim(),reviewed_at:new Date().toISOString(),complete,families:fam,candidates:state.cand,shared:state.shared},null,1));
+ download(`family-review-${packet.proposal_sha256.slice(0,8)}.json`,JSON.stringify({kind:'family_review_decisions',proposal_sha256:packet.proposal_sha256,catalog_sha256:packet.catalog_sha256,reviewed_by:state.reviewer.trim(),reviewed_at:new Date().toISOString(),complete,families:fam,candidates:state.cand,shared:state.shared,...(sug?{assist:{version:sug.version,suggestions_sha256:packet.suggestions_sha256,...assistStats()}}:{})},null,1));
  $('notice').textContent=complete?'Đã xuất đủ quyết định họ và ứng viên.':'Đã xuất bản chưa đủ (dùng làm nháp); apply_family_review.py cần đủ họ và ứng viên.';};
 render();
 </script></html>

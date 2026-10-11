@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from audit_image_queries import audit  # noqa: E402
 from eval_image import MANIFEST, get_index  # noqa: E402
+from family_registry import validate_registry  # noqa: E402
 
 from app.adapters import AdapterError, ImageEmbedder, load_adapter  # noqa: E402
 from app.catalog.store import CatalogSnapshot, load_snapshot  # noqa: E402
@@ -82,7 +83,8 @@ def build_pool(samples: list[dict], base: Path, snap: CatalogSnapshot, systems: 
 
 
 def make_packet(manifest_path: Path, catalog_path: Path, split: str, adapters: list[str], out: Path, top_k: int = 10,
-                n_random: int = 5, seed: str = "vnstore-image-pool-1", include_judged: bool = False) -> dict:
+                n_random: int = 5, seed: str = "vnstore-image-pool-1", include_judged: bool = False,
+                families_path: Path | None = None) -> dict:
     report = audit(manifest_path, catalog_path)
     if report["status"] == "invalid":
         raise ValueError(f"audit manifest thất bại ({len(report['issues'])} lỗi); chạy audit_image_queries.py")
@@ -91,6 +93,12 @@ def make_packet(manifest_path: Path, catalog_path: Path, split: str, adapters: l
     if not samples:
         raise ValueError(f"split {split} không có query cần chấm ({report['status']})")
     snap = load_snapshot(catalog_path, include_drafts=manifest["include_drafts"])
+    registry = None
+    if families_path is not None:
+        raw = families_path.read_bytes()
+        mapping = validate_registry(json.loads(raw), snap.sha256, {p["id"] for p in snap.data["products"]})
+        registry = {"sha256": hashlib.sha256(raw).hexdigest(), "product_family": mapping,
+                    "products": [{"id": p["id"], "name": p["name_vi"]} for p in snap.data["products"]]}
     systems, described = [], []
     for spec in adapters:
         embedder = load_adapter(spec, ImageEmbedder)
@@ -111,7 +119,8 @@ def make_packet(manifest_path: Path, catalog_path: Path, split: str, adapters: l
             "pool": hash_order(s["qid"], list(pool)),
             "rest": hash_order(s["qid"], sorted(set(snap.products) - set(pool))),
             "pool_sources": pool,
-            "existing": {"judgment": s["judgment"], "independence_review": s["independence_review"]},
+            "existing": {"judgment": s["judgment"], "independence_review": s["independence_review"],
+                         "family_review": s.get("family_review")},
         })
     return {
         "packet_version": "1.0.0", "kind": "image_judgment",
@@ -122,6 +131,7 @@ def make_packet(manifest_path: Path, catalog_path: Path, split: str, adapters: l
         "queries": queries,
         "products": [product_card(snap, p, out) for p in snap.products.values()],
         "verified": False,
+        "family_registry": registry,
     }
 
 
@@ -135,6 +145,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--random", type=int, default=5, help="số sản phẩm ngẫu nhiên thêm vào pool mỗi query")
     ap.add_argument("--seed", default="vnstore-image-pool-1")
     ap.add_argument("--include-judged", action="store_true", help="tạo packet cả cho query đã có judgment")
+    ap.add_argument("--families", type=Path, help="registry đã duyệt để xác nhận danh tính/họ vật thể trên trang")
     ap.add_argument("--out", type=Path, required=True)
     args = ap.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")
@@ -144,7 +155,7 @@ def main(argv: list[str] | None = None) -> int:
         ap.error("--top-k ≥ 1, --random ≥ 0")
     try:
         packet = make_packet(args.manifest, args.catalog, args.split, args.adapter, args.out.resolve(), args.top_k,
-                             args.random, args.seed, args.include_judged)
+                             args.random, args.seed, args.include_judged, args.families)
     except (ValueError, OSError, AdapterError) as e:
         print(f"invalid: {e}", file=sys.stderr)
         return 1

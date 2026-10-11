@@ -1,0 +1,1568 @@
+{
+  "version": 2,
+  "scope": "keyword_request/voice_stop/image_submit to result paint; excludes recording time and product image downloads",
+  "quality_benchmark": false,
+  "samples": [
+    {
+      "kind": "keyword",
+      "browser_ms": 41.2,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.43,
+        "total": 1.76
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 39.9,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 1.02,
+        "total": 3
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.4,
+      "server_ms": {
+        "parse": 0.27,
+        "retrieve_rank": 0.89,
+        "total": 1.76
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.5,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 1.42,
+        "total": 2.45
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.2,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.8,
+        "total": 11.53
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.6,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.41,
+        "total": 2.25
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 49.5,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.75,
+        "total": 7.47
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.4,
+        "total": 6.09
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.3,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.41,
+        "total": 1.43
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.5,
+      "server_ms": {
+        "parse": 0.07,
+        "retrieve_rank": 0.67,
+        "total": 14.58
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.6,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.34,
+        "total": 2.17
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.3,
+        "total": 2.65
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.7,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.76,
+        "total": 2.4
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 30.8,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.57,
+        "total": 1.63
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 34.5,
+      "server_ms": {
+        "parse": 0.2,
+        "retrieve_rank": 0.88,
+        "total": 3.18
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44.4,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.77,
+        "total": 4.83
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.4,
+      "server_ms": {
+        "parse": 0.43,
+        "retrieve_rank": 0.52,
+        "total": 7.43
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.35,
+        "total": 3.9
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 53.2,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 1.36,
+        "total": 9.92
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 52.8,
+      "server_ms": {
+        "parse": 0.2,
+        "retrieve_rank": 1.23,
+        "total": 9.82
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.5,
+      "server_ms": {
+        "parse": 0.24,
+        "retrieve_rank": 1.02,
+        "total": 1.81
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44.4,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 0.54,
+        "total": 5.71
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 36.1,
+      "server_ms": {
+        "parse": 0.2,
+        "retrieve_rank": 0.49,
+        "total": 6.11
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.6,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.63,
+        "total": 6.11
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 29.9,
+      "server_ms": {
+        "parse": 0.24,
+        "retrieve_rank": 0.49,
+        "total": 1.13
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 39.2,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.45,
+        "total": 0.98
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.9,
+      "server_ms": {
+        "parse": 0.33,
+        "retrieve_rank": 0.3,
+        "total": 1.75
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.4,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 0.72,
+        "total": 1.29
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.7,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.58,
+        "total": 6.82
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.5,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.82,
+        "total": 6.53
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.8,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.78,
+        "total": 6.61
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.7,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.98,
+        "total": 7.83
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 42.2,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.55,
+        "total": 7.4
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.7,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 1.22,
+        "total": 6.73
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 37,
+      "server_ms": {
+        "parse": 0.2,
+        "retrieve_rank": 0.93,
+        "total": 7.8
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.1,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.27,
+        "total": 1.95
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 36.1,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.95,
+        "total": 1.73
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.1,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.51,
+        "total": 1.34
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.1,
+      "server_ms": {
+        "parse": 0.19,
+        "retrieve_rank": 0.73,
+        "total": 2.15
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.8,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.83,
+        "total": 6.2
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.4,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.85,
+        "total": 7.74
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.8,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.37,
+        "total": 0.85
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.5,
+      "server_ms": {
+        "parse": 0.23,
+        "retrieve_rank": 0.53,
+        "total": 1.13
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44.5,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.67,
+        "total": 3.47
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 31.8,
+      "server_ms": {
+        "parse": 0.39,
+        "retrieve_rank": 0.95,
+        "total": 3.96
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.2,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.53,
+        "total": 1.18
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 57.4,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.81,
+        "total": 11.08
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.4,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.43,
+        "total": 5.42
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.2,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 1.96,
+        "total": 4.77
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 52.3,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.65,
+        "total": 7.72
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 54.1,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 1.22,
+        "total": 10.45
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 56,
+      "server_ms": {
+        "parse": 0.19,
+        "retrieve_rank": 1.18,
+        "total": 11.97
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.1,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.9,
+        "total": 9.52
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.4,
+      "server_ms": {
+        "parse": 0.27,
+        "retrieve_rank": 1.07,
+        "total": 8.07
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.4,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.55,
+        "total": 1.43
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.3,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.45,
+        "total": 1.3
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 36.5,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.32,
+        "total": 3.77
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 56.5,
+      "server_ms": {
+        "parse": 0.19,
+        "retrieve_rank": 0.72,
+        "total": 13.77
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 53.4,
+      "server_ms": {
+        "parse": 0.37,
+        "retrieve_rank": 1.16,
+        "total": 8.51
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.9,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.64,
+        "total": 8.39
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.53,
+        "total": 7.73
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.3,
+      "server_ms": {
+        "parse": 0.09,
+        "retrieve_rank": 0.47,
+        "total": 3.36
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.8,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.53,
+        "total": 2.49
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44.6,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.36,
+        "total": 3.03
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 37,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.33,
+        "total": 3.28
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44.8,
+      "server_ms": {
+        "parse": 0.25,
+        "retrieve_rank": 0.57,
+        "total": 2.08
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 29.6,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.4,
+        "total": 2.58
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.29,
+        "total": 0.95
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 51.8,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.73,
+        "total": 14.84
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.7,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.81,
+        "total": 11.12
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.8,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.71,
+        "total": 3.96
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.67,
+        "total": 8.03
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.2,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.38,
+        "total": 3.11
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.4,
+      "server_ms": {
+        "parse": 0.06,
+        "retrieve_rank": 0.29,
+        "total": 0.38
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.3,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.92,
+        "total": 3.12
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45,
+      "server_ms": {
+        "parse": 0.27,
+        "retrieve_rank": 1.11,
+        "total": 8.43
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.5,
+      "server_ms": {
+        "parse": 0.4,
+        "retrieve_rank": 1.21,
+        "total": 8.75
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 42.6,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 0.74,
+        "total": 3.37
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.4,
+      "server_ms": {
+        "parse": 0.19,
+        "retrieve_rank": 1.52,
+        "total": 9.35
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 37.4,
+      "server_ms": {
+        "parse": 0.22,
+        "retrieve_rank": 0.42,
+        "total": 10.3
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.2,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 0.68,
+        "total": 9.52
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 51.2,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.37,
+        "total": 10.32
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 32,
+      "server_ms": {
+        "parse": 0.28,
+        "retrieve_rank": 0.27,
+        "total": 1.58
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 36.4,
+      "server_ms": {
+        "parse": 0.42,
+        "retrieve_rank": 0.96,
+        "total": 5.62
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 42.3,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.48,
+        "total": 4.71
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 49.8,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 0.6,
+        "total": 11.21
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 52.5,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.49,
+        "total": 10.75
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40.1,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.66,
+        "total": 1.63
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.9,
+      "server_ms": {
+        "parse": 0.21,
+        "retrieve_rank": 0.68,
+        "total": 1.98
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35.1,
+      "server_ms": {
+        "parse": 0.19,
+        "retrieve_rank": 2.4,
+        "total": 4.14
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.5,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.78,
+        "total": 2.38
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 32.7,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.68,
+        "total": 1.27
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 33.6,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.86,
+        "total": 1.03
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.6,
+      "server_ms": {
+        "parse": 0.16,
+        "retrieve_rank": 1.04,
+        "total": 12.46
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.4,
+      "server_ms": {
+        "parse": 0.26,
+        "retrieve_rank": 1.03,
+        "total": 2.59
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 37.9,
+      "server_ms": {
+        "parse": 0.18,
+        "retrieve_rank": 0.95,
+        "total": 2.93
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.1,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.64,
+        "total": 5.54
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 39.7,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.37,
+        "total": 3.47
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 44,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 1.28,
+        "total": 10.62
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 49.1,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.5,
+        "total": 10.3
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 38.9,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.5,
+        "total": 2.56
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.1,
+      "server_ms": {
+        "parse": 0.14,
+        "retrieve_rank": 0.66,
+        "total": 7.2
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 47.2,
+      "server_ms": {
+        "parse": 0.09,
+        "retrieve_rank": 0.56,
+        "total": 9.94
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 36.2,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.83,
+        "total": 7.06
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.3,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 1.71,
+        "total": 7.97
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 49.4,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.84,
+        "total": 5.58
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 39.8,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.36,
+        "total": 2.27
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 42.8,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.42,
+        "total": 1.36
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 41.5,
+      "server_ms": {
+        "parse": 0.09,
+        "retrieve_rank": 0.6,
+        "total": 13
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.8,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.82,
+        "total": 14.6
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 50.6,
+      "server_ms": {
+        "parse": 0.17,
+        "retrieve_rank": 0.31,
+        "total": 2
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 43.4,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.8,
+        "total": 6.7
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 46.4,
+      "server_ms": {
+        "parse": 0.11,
+        "retrieve_rank": 0.63,
+        "total": 9.22
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 35,
+      "server_ms": {
+        "parse": 0.12,
+        "retrieve_rank": 0.66,
+        "total": 7.24
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 40,
+      "server_ms": {
+        "parse": 0.15,
+        "retrieve_rank": 0.26,
+        "total": 1.36
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.7,
+      "server_ms": {
+        "parse": 0.13,
+        "retrieve_rank": 0.26,
+        "total": 1.33
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 45.3,
+      "server_ms": {
+        "parse": 0.08,
+        "retrieve_rank": 0.22,
+        "total": 0.69
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 53.4,
+      "server_ms": {
+        "parse": 0.1,
+        "retrieve_rank": 0.46,
+        "total": 11.87
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 32.8,
+      "server_ms": {
+        "parse": 0.2,
+        "retrieve_rank": 0.3,
+        "total": 2.47
+      },
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    }
+  ],
+  "outcomes": {
+    "keyword": {
+      "error": 0,
+      "cancelled": 0
+    },
+    "voice": {
+      "error": 0,
+      "cancelled": 0
+    },
+    "image": {
+      "error": 0,
+      "cancelled": 0
+    }
+  }
+}

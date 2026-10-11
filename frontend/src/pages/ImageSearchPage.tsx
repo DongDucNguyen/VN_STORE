@@ -5,6 +5,7 @@ import { ProductGrid } from "../components/ProductCard";
 import { SearchBar } from "../components/SearchBar";
 import { ACCEPT_ATTR, type Crop, decodeImage, ImageInputError, prepareImage } from "../media";
 import { FilterPanel } from "./SearchPage";
+import { afterResultPaint, beginMeasure, endMeasure, type Measure } from "../measurements";
 
 const MIN_CROP = 0.05;
 
@@ -22,6 +23,22 @@ export function ImageSearchPage() {
   const [filters, setFilters] = useState<Filters>(emptyFilters);
   const lastBlob = useRef<Blob | null>(null);
   const [filtersOpen, setFiltersOpen] = useState(() => window.innerWidth > 800);
+  const generation = useRef(0);
+  const request = useRef<AbortController | null>(null);
+  const [measure, setMeasure] = useState<Measure>();
+
+  function invalidate() {
+    generation.current++;
+    request.current?.abort();
+    setLoading(false);
+    setData(null);
+    setError(null);
+    lastBlob.current = null;
+  }
+  useEffect(() => () => { generation.current++; request.current?.abort(); }, []);
+  useEffect(() => {
+    if (data && !loading && !error) return afterResultPaint(measure, data);
+  }, [data, loading, error, measure]);
 
   useEffect(() => {
     let alive = true;
@@ -37,6 +54,10 @@ export function ImageSearchPage() {
 
   async function pick(file: File | undefined) {
     if (!file) return;
+    invalidate();
+    const id = generation.current;
+    setBmp(null);
+    setPreview(null);
     setInputError(null);
     setData(null);
     setError(null);
@@ -45,46 +66,60 @@ export function ImageSearchPage() {
     lastBlob.current = null;
     try {
       const decoded = await decodeImage(file);
+      if (id !== generation.current) { decoded.close(); return; }
       setBmp(decoded);
       setPreview(URL.createObjectURL(file));
     } catch (e) {
+      if (id !== generation.current) return;
       setBmp(null);
       setPreview(null);
       setInputError(e instanceof ImageInputError ? e.message : "Không đọc được ảnh.");
     }
   }
 
-  async function search(blob: Blob, f: Filters) {
+  async function search(prepare: () => Promise<Blob>, f: Filters, reuse = false) {
+    const id = ++generation.current;
+    request.current?.abort();
+    const controller = new AbortController();
+    request.current = controller;
+    const timing = beginMeasure("image");
     setLoading(true);
     setError(null);
     setInputError(null);
+    const superseded = () => {
+      if (id === generation.current) return false;
+      endMeasure(timing, "cancelled");
+      return true;
+    };
     try {
-      setData(await api.searchImage(blob, text.trim(), f));
+      const blob = await prepare();
+      if (superseded()) return;
+      lastBlob.current = blob;
+      const response = await api.searchImage(blob, text.trim(), f, controller.signal, reuse);
+      if (superseded()) return;
+      setData(response);
+      setMeasure(timing);
     } catch (err) {
+      if (superseded()) return;
+      endMeasure(timing, "error");
       setError(err instanceof ApiError ? err.message : String(err));
     } finally {
-      setLoading(false);
+      if (id === generation.current) setLoading(false);
     }
   }
 
   async function run(e?: React.FormEvent) {
     e?.preventDefault();
     if (!bmp) return;
-    try {
-      lastBlob.current = await prepareImage(bmp, crop);
-    } catch (err) {
-      if (err instanceof ImageInputError) setInputError(err.message);
-      else setError(String(err));
-      return;
-    }
-    await search(lastBlob.current, filters);
+    await search(() => prepareImage(bmp, crop), filters);
   }
 
   function update(mut: (f: Filters) => void) {
     const next = structuredClone(filters);
     mut(next);
     setFilters(next);
-    if (lastBlob.current) void search(lastBlob.current, next);
+    const prepared = lastBlob.current;
+    if (prepared) void search(() => Promise.resolve(prepared), next, true);
   }
 
   function toggle(key: keyof Filters, value: string) {
@@ -102,7 +137,9 @@ export function ImageSearchPage() {
         Chụp hoặc chọn ảnh món đồ, kéo trên ảnh để chọn vùng có vật cần tìm. Ảnh được thu nhỏ và bỏ thông tin vị trí
         trước khi gửi; máy chủ không lưu ảnh.
       </p>
-      {problem && <Notice tone="warn">{problem}</Notice>}
+      {problem && <Notice tone="warn">{problem}{" "}
+        <button className="link" onClick={() => void modalityProblem("image", true).then(setProblem)}>Kiểm tra lại</button>
+      </Notice>}
 
       <div className="image-pick">
         <label className="btn">
@@ -123,12 +160,12 @@ export function ImageSearchPage() {
 
       {preview && (
         <>
-          <CropBox src={preview} crop={crop} onChange={setCrop} />
+          <CropBox key={preview} src={preview} crop={crop} onChange={(c) => { invalidate(); setCrop(c); }} />
           <p className="muted small" aria-live="polite">
             {crop ? (
               <>
                 Đã chọn vùng.{" "}
-                <button className="link" onClick={() => setCrop(null)}>
+                <button className="link" onClick={() => { invalidate(); setCrop(null); }}>
                   Bỏ vùng chọn (dùng cả ảnh)
                 </button>
               </>
@@ -144,7 +181,7 @@ export function ImageSearchPage() {
               maxLength={300}
               aria-label="Yêu cầu thêm"
               placeholder="Thêm yêu cầu: có quai, dưới 400k…"
-              onChange={(e) => setText(e.target.value)}
+              onChange={(e) => { invalidate(); setText(e.target.value); }}
             />
             <button className="btn btn-primary" disabled={loading || !!problem}>
               Tìm mẫu tương tự
@@ -163,6 +200,7 @@ export function ImageSearchPage() {
         )}
         <section className="results" aria-live="polite">
           {loading && <Loading label="Đang tìm mẫu tương tự…" />}
+          {loading && <button className="btn" onClick={invalidate}>Hủy tìm ảnh</button>}
           {error && <ErrorBox message={error} onRetry={() => void run()} />}
           {data && !loading && !error && (
             <ImageResults data={data} onClear={hasFilters(filters) ? () => update((f) => Object.assign(f, emptyFilters()))

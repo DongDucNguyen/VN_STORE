@@ -275,6 +275,8 @@ def test_image_download_does_not_transfer_prior_permission(real):
 
 def test_image_caption_note_and_gallery_order_survive_download_and_reimport(real):
     product = next(p for p in real["products"] if len(p["images"]) > 1)
+    # Image downloads only touch unreviewed drafts; the real catalog may already be published.
+    product.update(status="draft", reviewed_at=None)
     product["images"].reverse()
     image = product["images"][0]
     image["local_path"] = None

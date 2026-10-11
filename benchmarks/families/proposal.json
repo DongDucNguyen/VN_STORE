@@ -1,8 +1,8 @@
 {
  "status": "proposed_unreviewed",
- "catalog_version": "seed-003-dot-002",
- "catalog_sha256": "e38a4dd8518829ab6e7421c65918927e772cd31be03912c732ecbf069b8bd9dc",
- "generated_at": "2026-10-10T21:53:19+07:00",
+ "catalog_version": "seed-006-enriched",
+ "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+ "generated_at": "2026-10-11T15:12:15+07:00",
  "visual_source": "google/siglip2-base-patch16-224@ba1f3b0843f2",
  "code_sha256": "064782508778a1b7b71a2611d2f3f06c37b2df3e5801cebe6717b8b9ddc4fff5",
  "families": [

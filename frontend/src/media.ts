@@ -42,14 +42,17 @@ export class Recorder {
   private rec: MediaRecorder | null = null;
   private chunks: Blob[] = [];
   private startedAt = 0;
+  private cancelled = false;
 
   async start(): Promise<void> {
+    this.cancelled = false;
     if (!canRecord()) throw micError("unsupported");
     try {
       // Không bật khử ồn mặc định: có thể làm mất phụ âm/dấu thanh (PLAN.md mục 6.2).
       this.stream = await navigator.mediaDevices.getUserMedia({
         audio: { channelCount: 1, noiseSuppression: false, echoCancellation: true },
       });
+      if (this.cancelled) { this.release(); throw micError("failed"); }
     } catch (e) {
       const name = (e as DOMException)?.name;
       if (name === "NotAllowedError" || name === "SecurityError") throw micError("denied");
@@ -58,7 +61,8 @@ export class Recorder {
       throw micError("failed");
     }
     this.chunks = [];
-    this.rec = new MediaRecorder(this.stream);
+    try { this.rec = new MediaRecorder(this.stream); }
+    catch { this.release(); throw micError("failed"); }
     this.rec.ondataavailable = (ev) => ev.data.size > 0 && this.chunks.push(ev.data);
     this.rec.start(250);
     this.startedAt = performance.now();
@@ -78,6 +82,7 @@ export class Recorder {
   }
 
   cancel() {
+    this.cancelled = true;
     if (this.rec && this.rec.state !== "inactive") this.rec.stop();
     this.release();
   }

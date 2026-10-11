@@ -9,6 +9,7 @@ from typing import TYPE_CHECKING, Any
 from ..catalog.present import CLAIM_LABELS, price_summary, product_summary
 from ..catalog.store import CatalogSnapshot
 from .bm25 import MultiFieldBM25
+from .config import SearchConfig
 from .normalize import analyze, has_accents, is_stopword, strip_accents, tokens
 from .query_parser import ParsedQuery, PriceConstraint, Vocabulary, VocabEntry, parse_query
 
@@ -72,13 +73,16 @@ class _Constraint:
 
 
 class SearchEngine:
-    def __init__(self, snap: CatalogSnapshot):
+    def __init__(self, snap: CatalogSnapshot, config: SearchConfig | None = None):
         t0 = time.perf_counter()
         self.snap = snap
+        self.config = config or SearchConfig.from_env()
+        self._coverage_tokens = {}
         self.index = MultiFieldBM25(FIELD_WEIGHTS)
         self.index_acc = MultiFieldBM25(FIELD_WEIGHTS)
         self._plain_blob: dict[str, str] = {}
         for p in snap.products.values():
+            self._coverage_tokens[p["id"]] = set(tokens(" ".join(self._field_texts(p).values())))
             acc_fields, plain_fields = {}, {}
             for f, text in self._field_texts(p).items():
                 acc_fields[f], plain_fields[f] = analyze(text)
@@ -360,7 +364,7 @@ class SearchEngine:
         if has_text:
             s_plain, matched = self.index.score(q_plain, candidates)
             s_acc, matched_acc = self.index_acc.score(q_acc, candidates)
-            scores = {d: s_plain.get(d, 0.0) + ACCENT_EXACT_WEIGHT * s_acc.get(d, 0.0)
+            scores = {d: s_plain.get(d, 0.0) + self.config.accent_weight * s_acc.get(d, 0.0)
                       for d in set(s_plain) | set(s_acc)}
             for d, fs in matched_acc.items():
                 matched[d] |= fs
@@ -368,6 +372,15 @@ class SearchEngine:
                 return []
             top = max(scores.values())
             scores = {d: v for d, v in scores.items() if v >= RELATIVE_CUTOFF * top}
+            if self.config.min_token_coverage:
+                query_tokens = {t for t in tokens(parsed.text) if not is_stopword(t)}
+                def covered(d):
+                    acc = self._coverage_tokens[d]
+                    plain = {strip_accents(t) for t in acc}
+                    hits = sum(t in acc if self.config.strict_accents and has_accents(t)
+                               else strip_accents(t) in plain for t in query_tokens)
+                    return not query_tokens or hits / len(query_tokens) >= self.config.min_token_coverage
+                scores = {d: v for d, v in scores.items() if covered(d)}
         else:
             scores = {d: 1.0 for d in candidates}
             matched = {}
@@ -427,21 +440,37 @@ class SearchEngine:
                       "min_vnd": min(prices) if prices else None, "max_vnd": max(prices) if prices else None},
         }
 
-    def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc
+    def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc, ocr_text=""
               ) -> list[tuple[str, float, set[str]]]:
         """Ảnh (+ chữ): gộp thứ hạng bằng RRF, không cộng cosine với điểm BM25 (PLAN.md mục 4).
         Bộ lọc cứng đã áp dụng lên candidates; gợi ý thuộc tính trong chữ chỉ boost mềm."""
-        vis = [h.product_id for h in visual if h.product_id in candidates][:IMAGE_TOP_K]
+        cfg = self.config
+        if cfg.image_min_similarity is not None:
+            candidates = candidates & {h.product_id for h in visual if h.similarity >= cfg.image_min_similarity}
+        vis = list(dict.fromkeys(h.product_id for h in visual if h.product_id in candidates))[:cfg.image_top_k]
         text = self._rank(parsed, candidates, q_plain, q_acc) if q_plain else []
+        if cfg.generic_text_mode == "visual_only" and len(text) > len(candidates) / 2:
+            text = []
         fused: Counter[str] = Counter()
         fields: dict[str, set[str]] = {}
         for rank, d in enumerate(vis, 1):
-            fused[d] += 1 / (RRF_K + rank)
+            fused[d] += 1 / (cfg.rrf_k + rank)
             fields[d] = {"image"}
         for rank, (d, _, fs) in enumerate(text, 1):
-            fused[d] += 1 / (RRF_K + rank)
+            if not cfg.text_weight:
+                break
+            fused[d] += cfg.text_weight / (cfg.rrf_k + rank)
             fields[d] = fields.get(d, set()) | fs
-        ranked = [(d, s * (1 + HINT_BOOST * self._hint_matches(self.snap.products[d], parsed)), fields[d])
+        # OCR is noisy evidence only. Never parse it into user constraints or origin claims.
+        if ocr_text and cfg.ocr_weight:
+            acc, plain = analyze(ocr_text, drop_stopwords=True)
+            scores, _ = self.index.score(dict.fromkeys(plain, 1.0), candidates)
+            accented, _ = self.index_acc.score(dict.fromkeys(acc, 1.0), candidates)
+            ocr_ranked = sorted(scores, key=lambda d: (-(scores[d] + cfg.accent_weight * accented.get(d, 0)), d))
+            for rank, d in enumerate(ocr_ranked[:cfg.image_top_k], 1):
+                fused[d] += cfg.ocr_weight / (cfg.rrf_k + rank)
+                fields[d] = fields.get(d, set()) | {"ocr"}
+        ranked = [(d, s * (1 + cfg.text_weight * HINT_BOOST * self._hint_matches(self.snap.products[d], parsed)), fields[d])
                   for d, s in fused.items()]
         ranked.sort(key=lambda x: (-x[1], self.snap.products[x[0]]["name_vi"]))
         return ranked
@@ -451,12 +480,12 @@ class SearchEngine:
         return self._execute(query, filters, limit, offset)
 
     def search_visual(self, visual: list[VisualHit], text: str = "", filters: SearchFilters | None = None,
-                      limit: int = 24, offset: int = 0) -> dict[str, Any]:
+                      limit: int = 24, offset: int = 0, ocr_text: str = "") -> dict[str, Any]:
         """Kết quả cho ảnh truy vấn: cùng bộ lọc, diễn giải và định dạng với tìm bằng chữ."""
-        return self._execute(text, filters, limit, offset, visual)
+        return self._execute(text, filters, limit, offset, visual, ocr_text)
 
     def _execute(self, query: str, filters: SearchFilters | None, limit: int, offset: int,
-                 visual: list[VisualHit] | None = None) -> dict[str, Any]:
+                 visual: list[VisualHit] | None = None, ocr_text: str = "") -> dict[str, Any]:
         t0 = time.perf_counter()
         filters = filters or SearchFilters()
         parsed = parse_query(query or "", self.vocab)
@@ -474,7 +503,7 @@ class SearchEngine:
         def rank(ids: set[str]) -> list[tuple[str, float, set[str]]]:
             if visual is None:
                 return self._rank(parsed, ids, q_plain, q_acc)
-            return self._fuse(parsed, ids, visual, q_plain, q_acc)
+            return self._fuse(parsed, ids, visual, q_plain, q_acc, ocr_text)
 
         base = passing(non_price, all_ids)
         candidates = passing(price_cs, base)

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api } from "../api";
 import { href, navigate } from "../router";
 import { useVoiceSearch, VoicePanel } from "./VoiceSearch";
+import { rememberVoice } from "../voiceResult";
 
 type Suggestion = { type: string; id: string; text: string };
 
@@ -27,7 +28,9 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
   const [active, setActive] = useState(-1);
   const reqId = useRef(0);
   // Bản chép lời đi qua trang tìm kiếm chung: hiện trong ô tìm để người dùng sửa được.
-  const voice = useVoiceSearch((text) => navigate("/search", { q: text, via: "voice" }));
+  const voice = useVoiceSearch((response, measure) => navigate("/search", {
+    q: response.transcript!.text, via: "voice", voice_id: rememberVoice(response, measure),
+  }));
 
   useEffect(() => setQ(initial), [initial]);
 
@@ -49,6 +52,7 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
 
   function submit(e?: React.FormEvent) {
     e?.preventDefault();
+    voice.cancel();
     setOpen(false);
     if (active >= 0 && sugs[active]) {
       window.location.hash = suggestionHref(sugs[active]).slice(1);

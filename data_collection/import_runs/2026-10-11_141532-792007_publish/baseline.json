@@ -1,0 +1,11 @@
+{
+  "format": "vnstore-import-baseline-v1",
+  "eligible": false,
+  "generated_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "generated": {},
+  "input_hashes": {
+    "note": "f2adcc36f42dda9f8bf95f104c6afea4ad25d6930d640c04145be16f567bbc99",
+    "exclude": "2f553ff14a3df923a7f0fd0912cbb75487dfcac182f5e086bfbf03915cb34a55"
+  },
+  "run_status": "preview"
+}

@@ -1,0 +1,499 @@
+{
+  "status": "needs_data_or_review",
+  "modality": "voice",
+  "split": "dev",
+  "selection": null,
+  "issues": [
+    "base-baseline: not reviewed dev",
+    "base-baseline: missing reviewed retrieval labels",
+    "base-no-vad: not reviewed dev",
+    "base-no-vad: missing reviewed retrieval labels",
+    "base-vad035: not reviewed dev",
+    "base-vad035: missing reviewed retrieval labels",
+    "base-vad150ms: not reviewed dev",
+    "base-vad150ms: missing reviewed retrieval labels",
+    "base-energy50: not reviewed dev",
+    "base-energy50: missing reviewed retrieval labels",
+    "small-baseline: not reviewed dev",
+    "small-baseline: missing reviewed retrieval labels",
+    "small-no-vad: not reviewed dev",
+    "small-no-vad: missing reviewed retrieval labels",
+    "small-vad035: not reviewed dev",
+    "small-vad035: missing reviewed retrieval labels",
+    "small-vad150ms: not reviewed dev",
+    "small-vad150ms: missing reviewed retrieval labels",
+    "small-energy50: not reviewed dev",
+    "small-energy50: missing reviewed retrieval labels",
+    "base-no-vad: insufficient clusters for CI",
+    "base-vad035: insufficient clusters for CI",
+    "base-vad150ms: insufficient clusters for CI",
+    "base-energy50: insufficient clusters for CI",
+    "small-no-vad: insufficient clusters for CI",
+    "small-vad035: insufficient clusters for CI",
+    "small-vad150ms: insufficient clusters for CI",
+    "small-energy50: insufficient clusters for CI",
+    "The two finalists from GĐ4 have not been recorded as selected_on_reviewed_dev"
+  ],
+  "comparisons": [
+    {
+      "name": "base-no-vad",
+      "vs": "ab-base-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1267,
+          "right": 0.1267,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0971,
+          "right": 0.0971,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "base-vad035",
+      "vs": "ab-base-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1267,
+          "right": 0.1267,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0971,
+          "right": 0.0971,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "base-vad150ms",
+      "vs": "ab-base-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1267,
+          "right": 0.1267,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0971,
+          "right": 0.0971,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "base-energy50",
+      "vs": "ab-base-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1267,
+          "right": 0.1606,
+          "delta": 0.0339,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0971,
+          "right": 0.1279,
+          "delta": 0.0308,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "small-no-vad",
+      "vs": "ab-small-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1092,
+          "right": 0.1092,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0795,
+          "right": 0.0795,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "small-vad035",
+      "vs": "ab-small-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1092,
+          "right": 0.1092,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0795,
+          "right": 0.0795,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "small-vad150ms",
+      "vs": "ab-small-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1092,
+          "right": 0.1092,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0795,
+          "right": 0.0795,
+          "delta": 0.0,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    },
+    {
+      "name": "small-energy50",
+      "vs": "ab-small-baseline",
+      "metrics": {
+        "wer_normalized": {
+          "left": 0.1092,
+          "right": 0.1455,
+          "delta": 0.0364,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        },
+        "cer_normalized": {
+          "left": 0.0795,
+          "right": 0.1121,
+          "delta": 0.0326,
+          "ci95": null,
+          "clusters": 1,
+          "ci_note": "chỉ 1 cụm có dữ liệu (< 5); không ước lượng được bất định",
+          "better": "lower"
+        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "base-baseline",
+      "candidate": "base",
+      "variant": "baseline",
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113138-400674_voice_ab-base-baseline"
+    },
+    {
+      "name": "base-no-vad",
+      "candidate": "base",
+      "variant": "no-vad",
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "0",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113218-314730_voice_ab-base-no-vad"
+    },
+    {
+      "name": "base-vad035",
+      "candidate": "base",
+      "variant": "vad035",
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.35",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113306-727738_voice_ab-base-vad035"
+    },
+    {
+      "name": "base-vad150ms",
+      "candidate": "base",
+      "variant": "vad150ms",
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "150",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113346-860498_voice_ab-base-vad150ms"
+    },
+    {
+      "name": "base-energy50",
+      "candidate": "base",
+      "variant": "energy50",
+      "adapter": "app.ml.asr:PhoWhisperBase",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-50",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113427-051194_voice_ab-base-energy50"
+    },
+    {
+      "name": "small-baseline",
+      "candidate": "small",
+      "variant": "baseline",
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113548-131570_voice_ab-small-baseline"
+    },
+    {
+      "name": "small-no-vad",
+      "candidate": "small",
+      "variant": "no-vad",
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "0",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113706-553568_voice_ab-small-no-vad"
+    },
+    {
+      "name": "small-vad035",
+      "candidate": "small",
+      "variant": "vad035",
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.35",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113824-629178_voice_ab-small-vad035"
+    },
+    {
+      "name": "small-vad150ms",
+      "candidate": "small",
+      "variant": "vad150ms",
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "150",
+        "VNSTORE_SILENCE_DBFS": "-60",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-113944-276327_voice_ab-small-vad150ms"
+    },
+    {
+      "name": "small-energy50",
+      "candidate": "small",
+      "variant": "energy50",
+      "adapter": "app.ml.asr:PhoWhisperSmall",
+      "requires_crops": false,
+      "env": {
+        "VNSTORE_SEARCH_CONFIG": "{\"accent_weight\": 0.5, \"min_token_coverage\": 0.0, \"strict_accents\": false, \"rrf_k\": 60, \"image_top_k\": 50, \"text_weight\": 1.0, \"ocr_weight\": 0.0, \"generic_text_mode\": \"rrf\", \"image_min_similarity\": null}",
+        "VNSTORE_ASR_VAD": "1",
+        "VNSTORE_VAD_THRESHOLD": "0.5",
+        "VNSTORE_VAD_MIN_MS": "250",
+        "VNSTORE_SILENCE_DBFS": "-50",
+        "VNSTORE_OCR": "off",
+        "VNSTORE_IMAGE_MULTI_VIEW": "1",
+        "VNSTORE_IMAGE_CROPS": "",
+        "VNSTORE_ML_TRT": "0",
+        "VNSTORE_ML_DEVICE": "auto",
+        "VNSTORE_ASR_MAX_NEW_TOKENS": "96"
+      },
+      "returncode": 0,
+      "status": "ok",
+      "run_dir": "C:\\Users\\Admin\\Desktop\\VNStore\\experiments\\ablations\\20261011-113058-735181_voice\\runs\\20261011-114100-538076_voice_ab-small-energy50"
+    }
+  ],
+  "budget": {
+    "variants_per_candidate": 5,
+    "warmup": 1,
+    "latency_rounds": 3,
+    "timeout_seconds_each": 3600
+  },
+  "note": "Paired dev exploration, not independent confirmation. Inspect subgroup, entity, no-match and latency regressions before selecting; locked test is never tuned here.",
+  "matrix_sha256": "b9a1d66f141f5a66d327eb18a27baa17c7015a6414228355129c0c1f8200072c",
+  "code_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/adapters.py": "fc5bf1cf8f73e06283bb2dee917a80eaecd4fcc746d368f591986b68cc03b5b3",
+    "backend/app/catalog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/catalog/present.py": "b8d4c20b7a23eceb8abbe091553629cbedf2f8a485cf4e3c4eecb6556c8480c4",
+    "backend/app/catalog/readiness.py": "2c583f96dbc016819b52b622a1eeca3de71489f6433ae6dcde2dbad585c33976",
+    "backend/app/catalog/store.py": "c653f07cdcf269935ecefee103122045a6d5cc5a15d0165a319d41be1910303c",
+    "backend/app/catalog/validation.py": "2e979b4838fb49b913876d203841bc17aba03b89d63fa27f7534b4026e80685e",
+    "backend/app/image/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/image/index.py": "80b4c285275039544bdbbc6761a5387509ea8e6bcffedc27873e060a346df5e4",
+    "backend/app/image/pipeline.py": "82764d036fd9863ceba912fd6700cd0d1de367cdae778abf4b1906912e1fb477",
+    "backend/app/main.py": "b94e515772aa252798cc5419cbd7300f2a0ec7c674371723e8544e68bd8c4299",
+    "backend/app/media.py": "6e1ed697a61aa38bd1e2babf38b58aba38210c1821799ebbad92028cc10e1928",
+    "backend/app/ml/__init__.py": "4ef2f51d6b5e9fcd9e19be6e0cf0f1b16e5fa1f074ce5efe16cba3ca659c9f3b",
+    "backend/app/ml/asr.py": "07e46959826c2de5064a41d75dc2c89b2b7969d476a34240043a6e104bf748c6",
+    "backend/app/ml/image.py": "690c5e5ab9af61bfcbe26f23206868452b40684e0d46455e9c5009db4f9577ed",
+    "backend/app/ml/ocr.py": "e09635e9fcfb88533f1722e4eede060c4dbe847699fa26621ff77102ee6d1076",
+    "backend/app/ml/vad.py": "86b7882c5608010597191713086b5394d26d62c1f6fc3c509d5fa8f9c0b8a019",
+    "backend/app/modalities.py": "68a11ce77792394a2f14fd5dc01cb96dd4f5003d2ef2b7131c2f79a59fc51c88",
+    "backend/app/search/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/search/bm25.py": "75216baec9086be8e3808096b0a90294bdb75472194249f9889f0cdd47386ed7",
+    "backend/app/search/config.py": "3dee46cbc31228854529df23d2e3efd8ac52199174c3d26b0f5b3ae4e2b033c7",
+    "backend/app/search/engine.py": "a6f89195cd9d83790135a6c0bfd1da299a1a596c5c9d9c6f3fe5d7a6ec97df51",
+    "backend/app/search/normalize.py": "9313f2473e18c0867770831511139dfff3c7b8acc42881ea607d0357d93636cb",
+    "backend/app/search/query_parser.py": "65e6766b136c871758cd4050f862645b6e4a2075d49b06efedf20baf660676b6",
+    "backend/app/voice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/benchmark/ablate.py": "f0bc82681a361fa97b06ca77e57d1632d932dd48f4a5a5a1808713e05a61990d"
+  }
+}

@@ -1,0 +1,52 @@
+﻿npx.cmd : [WebServer] INFO:     Started server process [37292]
+At line:1 char:356
++ ... e\frontend; npx.cmd playwright test --config playwright.smoke.config. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([WebServer] INF...process [37292]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[WebServer] INFO:     Waiting for application startup.
+
+
+[WebServer] INFO:     Application startup complete.
+
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)
+
+[WebServer] (node:27696) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:32888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 2 tests using 1 worker
+
+(node:38704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/2] [desktop] › smoke\stage6_real.spec.ts:5:1 › local models: browser → WAV/image → inference → editable results and timing export
+[WebServer] [INFO] 2026-10-11 12:37:44,349 [RapidOCR] base.py:22: Using engine_name: onnxruntime
+
+[WebServer] [INFO] 2026-10-11 12:37:44,351 [RapidOCR] main.py:55: Using 
+C:\Users\Admin\Desktop\VNStore\artifacts\models\rapidocr-3.4.1\ch_PP-OCRv4_det_infer.onnx
+
+[WebServer] [INFO] 2026-10-11 12:37:44,461 [RapidOCR] base.py:22: Using engine_name: onnxruntime
+
+[WebServer] [INFO] 2026-10-11 12:37:44,461 [RapidOCR] main.py:55: Using 
+C:\Users\Admin\Desktop\VNStore\artifacts\models\rapidocr-3.4.1\ch_ppocr_mobile_v2.0_cls_infer.onnx
+
+
+
+[WebServer] [INFO] 2026-10-11 12:37:44,506 [RapidOCR] base.py:22: Using engine_name: onnxruntime
+[WebServer] [INFO] 2026-10-11 12:37:44,506 [RapidOCR] main.py:55: Using 
+C:\Users\Admin\Desktop\VNStore\artifacts\models\rapidocr-3.4.1\latin_PP-OCRv3_rec_infer.onnx
+[WebServer] [transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and 
+file/data utilities can be used.
+
+
+
+(node:43508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2/2] [mobile] › smoke\stage6_real.spec.ts:5:1 › local models: browser → WAV/image → inference → editable results and timing export
+  2 passed (46.0s)

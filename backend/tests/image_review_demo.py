@@ -41,11 +41,18 @@ def build_manifest(directory: Path) -> Path:
     return manifest
 
 
-def build(out: Path, **packet_args) -> tuple[Path, Path]:
+def build(out: Path, with_families: bool = False, **packet_args) -> tuple[Path, Path]:
     sys.path.insert(0, str(ROOT / "scripts" / "benchmark"))
     import prepare_image_review as pir  # noqa: PLC0415
 
     manifest = build_manifest(out / "image")
+    if with_families:
+        mapping = {p["id"]: "fam-" + p["id"] for p in json.loads(FIXTURE.read_bytes())["products"]}
+        families = out / "families.json"
+        families.write_text(json.dumps({"status": "reviewed", "catalog_sha256": hashlib.sha256(FIXTURE.read_bytes()).hexdigest(),
+            "proposal_sha256": "a" * 64, "reviewed_by": "SYNTHETIC ONLY", "reviewed_at": "2026-10-11T10:00:00+07:00",
+            "product_family": mapping, "families": []}), encoding="utf-8")
+        packet_args["families"] = families
     args = ["--manifest", str(manifest), "--catalog", str(FIXTURE), "--split", "dev",
             "--adapter", "tests.fakes:ByteHistogramEmbedder", "--top-k", "4", "--random", "2", "--out", str(out / "packet")]
     for k, v in packet_args.items():
@@ -56,5 +63,6 @@ def build(out: Path, **packet_args) -> tuple[Path, Path]:
 
 
 if __name__ == "__main__":
-    m, p = build(Path(sys.argv[1]))
-    print(json.dumps({"manifest": str(m), "packet": str(p), "catalog": str(FIXTURE)}))
+    m, p = build(Path(sys.argv[1]), with_families="--families-fixture" in sys.argv)
+    print(json.dumps({"manifest": str(m), "packet": str(p), "catalog": str(FIXTURE),
+                      "families": str(Path(sys.argv[1]) / "families.json")}))

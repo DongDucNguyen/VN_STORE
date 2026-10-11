@@ -140,6 +140,12 @@ def validate_catalog(data: dict[str, Any], base_dir: Path, check_files: bool = T
         return result
 
     _check_datetime(result, data.get("updated_at"), "$.updated_at")
+    policy = data.get("publication_policy") or {}
+    if policy:
+        _check_datetime(result, policy.get("decided_at"), "$.publication_policy.decided_at")
+    # Internal demo only: published products may show images whose rights are still 'unknown'.
+    demo_rights = policy.get("allow_unverified_image_rights") is True
+    demo_unverified = 0
 
     ids: dict[str, set[str]] = {}
     for coll in ("categories", "brands", "makers", "places", "sources", "products"):
@@ -260,6 +266,7 @@ def validate_catalog(data: dict[str, Any], base_dir: Path, check_files: bool = T
                 result.warn("original_below_price", vp, "Giá gốc thấp hơn giá bán")
 
         usable_images = 0
+        unverified_rights = 0
         for j, img in enumerate(pr["images"]):
             ip = f"{p}.images[{j}]"
             if img["id"] in image_ids:
@@ -269,6 +276,7 @@ def validate_catalog(data: dict[str, Any], base_dir: Path, check_files: bool = T
                 result.error("broken_ref", f"{ip}.variant_sku", f"SKU {img['variant_sku']!r} không thuộc sản phẩm")
             ref(img["usage_rights"].get("source_id"), "sources", f"{ip}.usage_rights.source_id")
             rights_ok = img["usage_rights"]["status"] in USABLE_IMAGE_RIGHTS
+            demo_ok = demo_rights and img["usage_rights"]["status"] == "unknown"
             file_check = inspect_image_file(img, base_dir, check_files)
             file_ok = file_check.status in ("valid", "unchecked")
             if img["local_path"] is None:
@@ -290,10 +298,14 @@ def validate_catalog(data: dict[str, Any], base_dir: Path, check_files: bool = T
                 result.error("image_file_invalid", f"{ip}.local_path",
                              "Không đọc được file ảnh hoặc file rỗng")
             if published and not rights_ok:
-                result.error("image_rights", f"{ip}.usage_rights", "Sản phẩm published không được dùng ảnh chưa rõ quyền")
-            if rights_ok and file_ok:
+                if demo_ok:
+                    unverified_rights += 1
+                else:
+                    result.error("image_rights", f"{ip}.usage_rights", "Sản phẩm published không được dùng ảnh chưa rõ quyền")
+            if (rights_ok or demo_ok) and file_ok:
                 usable_images += 1
 
+        demo_unverified += unverified_rights
         if published:
             if not pr["source_ids"]:
                 result.error("published_no_source", f"{p}.source_ids", "Sản phẩm published cần ít nhất một nguồn")
@@ -305,6 +317,10 @@ def validate_catalog(data: dict[str, Any], base_dir: Path, check_files: bool = T
             if pr["reviewed_at"] is None:
                 result.warn("published_not_reviewed", f"{p}.reviewed_at", "Sản phẩm published chưa có reviewed_at")
 
+    if demo_unverified:
+        # One catalog-level note: verification was deliberately skipped (publication_policy), not forgotten.
+        result.warn("image_rights_unverified_demo", "$.publication_policy",
+                    f"Bỏ qua xác minh quyền ảnh theo publication_policy: {demo_unverified} ảnh published có quyền 'unknown'")
     dict_ = data["search_dictionary"]
     for k in ("synonyms", "regional_terms"):
         seen = set()

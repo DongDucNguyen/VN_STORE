@@ -2,9 +2,26 @@
 
 Mục tiêu PLAN §8: 600 ảnh query độc lập, khoảng 200 họ sản phẩm; chia theo họ 120/40/40 cho train/dev/test. Ảnh + text là bộ bổ sung 120 truy vấn. Đây là mục tiêu, chưa phải số liệu đã thu.
 
-Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-003-dot-002` và bật draft để bao phủ 330 sản phẩm (rà soát 11/10/2026). Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2 và evaluator, nhưng chưa có benchmark ảnh thật. Xem [báo cáo hiện trạng](../../reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md).
+Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-004-hanhsilk-materials` (11/10) và bật draft để bao phủ 330 sản phẩm (rà soát 11/10/2026). Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2 và evaluator, nhưng chưa có benchmark ảnh thật. Xem [báo cáo hiện trạng](../../reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md).
+
+**Kế hoạch split theo họ (11/10/2026):** trước khi chụp, lập và khóa kế hoạch bằng `scripts/benchmark/plan_splits.py`. `--split-plan benchmarks/splits/image_families.json` (cùng `--families`) có trong `audit_image_queries.py`, `import_image_session.py`, `apply_image_judgments.py`, `eval_image.py` và báo `split_plan_mismatch` khi query của một họ nằm khác split đã lập. `eval_image.py --split test` bắt buộc kế hoạch `locked`. Xem [benchmarks/splits/README.md](../splits/README.md).
 
 ## Registry họ đã duyệt (11/10/2026)
+
+### Nhập danh tính/họ ngay trên trang chấm ảnh (P1.14)
+
+Tạo packet với registry đã duyệt (chỉ khi đã có query và `families.json` thật):
+
+```bash
+.venv-ml/Scripts/python scripts/benchmark/prepare_image_review.py --split dev --adapter app.ml.image:SigLIP2Base --families benchmarks/families/families.json --out artifacts/image_judgment/<thu-muc-moi>
+.venv/Scripts/python scripts/benchmark/apply_image_judgments.py <file-xuat.json> --families benchmarks/families/families.json --dry-run
+```
+
+Trong phần **Danh tính và họ của vật thể trong ảnh**, chọn thuộc catalog (chọn sản phẩm, trang hiện mã họ chuẩn) hoặc ngoài catalog (nhập `external-<mã ổn định>`). Ghi căn cứ và tích xác nhận riêng. Mức phù hợp 2–3 không chứng minh vật thể là sản phẩm trong catalog: ảnh ngoài catalog vẫn có thể có kết quả tương tự. Với exact có đáp án, danh tính phải khớp sản phẩm exact.
+
+Nháp giữ các trường chưa đủ và chưa xuất thành review; sửa danh tính/căn cứ sẽ bỏ xác nhận họ. File xuất ghi người chấm, thời điểm, `family_review`, `family_id`, mã họ lúc tạo packet và hash registry. CLI yêu cầu đúng registry, chặn ghi đè họ đã duyệt nếu thiếu `--replace-judged`, rồi audit toàn manifest (gồm rò split theo họ mới) trước khi ghi. Chạy lại không có `--dry-run` để áp kết quả đã kiểm tra.
+
+Packet không có `--families` vẫn chấm relevance/độc lập được nhưng không nhập họ. Registry sai catalog hoặc chưa duyệt bị từ chối; công cụ không tự tạo registry. Registry thật của dự án vẫn đang chờ nhóm dữ liệu.
 
 `families.json` phải được tạo từ quyết định của người duyệt bằng [quy trình duyệt họ](../families/README.md). Audit kiểm tra `status: reviewed`, người/thời điểm duyệt, hash catalog/proposal, mọi product ID và danh sách thành viên nhất quán. Hash đúng chỉ xác nhận phiên bản, không xác minh danh tính người duyệt.
 
@@ -150,8 +167,23 @@ Kết quả gallery hiện tại: [45 ảnh giải mã được, 19 cặp gợi 
 - Query đi đúng đường của API: embedding → cosine gộp theo sản phẩm → `SearchEngine.search_visual` với `text_vi`. Do đó giá/phủ định trong `text_vi` là bộ lọc cứng.
 - Metric dùng [retrieval_metrics.py](../../scripts/benchmark/retrieval_metrics.py): exact Recall@1/5/10 và MRR@10 theo product; similar/image_text nDCG@10, mAP@10 và Success@5. Có sản phẩm chưa chấm trong top K thì metric là `null`.
 - No-match chưa có ngưỡng; báo trung vị `top_similarity` của query có/không có đáp án để chọn ngưỡng trên dev.
-- Độ trễ theo [latency_protocol.py](../../scripts/benchmark/latency_protocol.py): `--latency-rounds` lượt đo embedding, cold start tách riêng (nạp adapter, dựng/nạp chỉ mục, lần embed đầu), GPU/driver/provider ORT, đỉnh VRAM, cảnh báo máy bận.
+- Độ trễ theo [latency_protocol.py](../../scripts/benchmark/latency_protocol.py): `--latency-rounds` lượt đo embedding, cold start tách riêng (nạp adapter, dựng/nạp chỉ mục, lần embed đầu), GPU/driver/provider ORT, đỉnh VRAM, đỉnh RAM tiến trình và dung lượng file model (`resources` trong run.json, thêm 11/10/2026), cảnh báo máy bận.
 - Ghi `run.json` + `predictions.jsonl` vào `experiments/results/<thời điểm>_image_<tên>/`. Mọi run vẫn có `benchmark_approved=false`.
+
+## Sàng lọc nhiều cấu hình (GĐ4, thêm 11/10/2026)
+
+```bash
+.venv-ml/Scripts/python scripts/benchmark/screen_models.py run --modality image --split dev \
+    --families benchmarks/families/families.json --split-plan benchmarks/splits/image_families.json
+```
+
+- Cấu hình nằm trong [experiments/configs/screening.json](../../experiments/configs/screening.json): SigLIP2-base, DINOv2-base, OpenCLIP ViT-B-32 laion2B. Mỗi cấu hình chạy evaluator trong **tiến trình riêng** để RAM/VRAM/cold start không lẫn nhau; `env` chỉ nhận biến `VNSTORE_*` (ví dụ `VNSTORE_ML_DEVICE=cpu`, `VNSTORE_ML_TRT=1`).
+- Lỗi, OOM, timeout được ghi thành dòng riêng của bảng, không bị bỏ qua (PLAN §8.3 bước 2). Manifest chưa có mẫu thì báo `pending_collection` và không ghi bảng. Không nhận split `test`.
+- Bảng ghi vào `reports/model_selection/<thời điểm>_image-screening.{md,json}`: Recall@1/5, MRR@10 (exact), nDCG@10, mAP@10, Success@5 (similar); dung lượng chỉ mục; độ trễ p50/p95 phần model, cold start, đỉnh VRAM toàn máy và phần tăng so với lúc rảnh, đỉnh RAM tiến trình, dung lượng file model (tính từ file adapter đã nạp). Mỗi cấu hình so với cấu hình có metric chính tốt nhất bằng paired bootstrap theo họ sản phẩm; ★ là Pareto theo (metric chính, p95, dung lượng, đỉnh RAM, VRAM tăng thêm).
+- Có run smoke thì tiêu đề là "SMOKE" và không có gợi ý ứng viên. Chỉ khi mọi run là dev đã duyệt và đủ ≥5 cụm, bảng mới gợi ý 2 ứng viên: tốt nhất theo metric chính, và cấu hình rẻ nhất trong nhóm chưa phân biệt được với nó (PLAN §8.3 bước 3, 6). Người quyết định vẫn phải xem phân nhóm, lỗi và ghi lý do.
+- `summarize <run_dir>…` lập bảng từ các run đã có; khác manifest/split/tập query/catalog thì exit 2.
+- Metric chính: Recall@5 exact nếu mọi run có query exact, nếu không thì nDCG@10 similar.
+- Chưa có query ảnh thật nên hiện chỉ có [kiểm tra gallery leave-one-out](../../reports/benchmark/2026-10-11_103215-244030_image-gallery-sanity.md) cho 3 adapter, có cột dung lượng model/VRAM/chỉ mục (không phải benchmark).
 
 ## Thu ảnh bằng trang `#/collect/image` (thêm 10/10/2026)
 

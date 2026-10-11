@@ -81,6 +81,26 @@ class ImageService:
                  gate: Gate | None = None):
         self.embedder, self.status, self.index = embedder, status, index
         self.gate = gate or Gate(1)
+        from .image.pipeline import QueryCache
+        self.cache = QueryCache()  # per service: a new catalog/index starts empty
+        from .ml.ocr import from_env
+        self.ocr_error = None
+        try:
+            self.ocr = from_env()
+        except ValueError as exc:
+            # A misconfigured optional OCR must not prevent keyword/voice/API startup.
+            self.ocr = None
+            self.ocr_error = type(exc).__name__
+
+    def search(self, data, engine, text="", filters=None, limit=24, reuse=False):
+        from .image.pipeline import retrieve
+        with self.gate.slot():
+            result, diagnostics = retrieve(data, self.embedder, self.index, engine, text, filters, limit, ocr=self.ocr,
+                                           cache=self.cache, reuse=reuse)
+        if self.ocr_error:
+            diagnostics["ocr_error"] = self.ocr_error
+            result["warnings"].append("Chưa đọc được chữ trên ảnh; kết quả dựa trên hình ảnh và yêu cầu đã nhập.")
+        return result, diagnostics
 
     @staticmethod
     def index_dir(embedder: ImageEmbedder) -> Path:

@@ -1,0 +1,583 @@
+{
+ "kind": "family_review_suggestions",
+ "version": "claude-assist-v1",
+ "proposal_sha256": "b14d53794638adfc737ba831f3e93e68a1d1580495d304d4293028a7e260ccde",
+ "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+ "author": "Claude (AI) — gợi ý máy, không phải quyết định",
+ "policy": "Người duyệt xem từng thẻ và ảnh; chỉ file do người duyệt xuất mới được apply_family_review.py nhận.",
+ "families": {
+  "fam-hanoia-binh-hoa-bellus-size-m-a25be09": {
+   "action": "confirm",
+   "reason": "Bellus S/M/XL: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-binh-hoa-red-river-lon-a20rr01": {
+   "action": "split",
+   "groups": {
+    "p-hanoia-binh-hoa-red-river-lon-a20rr01": "A",
+    "p-hanoia-binh-hoa-red-river-size-m-a20rr05": "A",
+    "p-hanoia-binh-hoa-red-river-size-s-a20rr04": "A",
+    "p-hanoia-hop-tra-tron-red-river-a20rr02": "B"
+   },
+   "reason": "3 bình Red River (lớn/M/S) là một họ; hộp trà tròn là khác loại đồ vật (cùng dòng thiết kế)"
+  },
+  "fam-hanoia-binh-hoa-thong-dong-nho-a24td02": {
+   "action": "split",
+   "groups": {
+    "p-hanoia-binh-hoa-thong-dong-nho-a24td02": "A",
+    "p-hanoia-hop-tra-tron-thong-dong-a24td04": "B"
+   },
+   "reason": "Bình hoa và hộp trà Thong Dong: khác loại đồ vật (cùng dòng thiết kế)"
+  },
+  "fam-hanoia-binh-hoa-vinh-size-l-a23vi03": {
+   "action": "confirm",
+   "reason": "Vịnh S/M/L: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-gia-do-dien-thoai-elephone-af26el01": {
+   "action": "confirm",
+   "reason": "Elephone EL01/EL02: cùng món, khác màu/hoàn thiện (EL02 thêm lá vàng)"
+  },
+  "fam-hanoia-gio-dan-tre-ethnic-cao-ou17et01": {
+   "action": "split",
+   "groups": {
+    "p-hanoia-gio-dan-tre-ethnic-cao-ou17et01": "A",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-m-af26et02": "B",
+    "p-hanoia-gio-dan-tre-ethnic-thap-size-s-ou17et03": "B"
+   },
+   "reason": "Giỏ Ethnic 'cao' khác dáng với 'thấp' M/S (mã OU17/AF26 lẫn nhau) — cần xem ảnh"
+  },
+  "fam-hanoia-hop-da-tron-mountain-size-m-af26mt02": {
+   "action": "confirm",
+   "reason": "Hộp đá Mountain S/M: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-hop-dan-tre-ethnic-s-ou17et02": {
+   "action": "confirm",
+   "reason": "Hộp đan tre Ethnic S/M: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-hop-tra-tron-exotic-af26ex08": {
+   "action": "confirm",
+   "reason": "Hộp trà Exotic EX08/09/10 cùng tên, cùng giá: cùng món, khác màu/hoàn thiện — kiểm tra ảnh họa tiết"
+  },
+  "fam-hanoia-hop-trang-suc-exotic-size-l-af26ex11": {
+   "action": "confirm",
+   "reason": "Hộp trang sức Exotic M/L: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-hop-vuong-botanica-s-af26bt03": {
+   "action": "confirm",
+   "reason": "Hộp vuông Botanica S/M: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-hop-vuong-exotic-size-l-af26ex13": {
+   "action": "confirm",
+   "reason": "Hộp vuông Exotic S/M/L: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-hop-vuong-moonbow-size-l-af26mo11": {
+   "action": "confirm",
+   "reason": "Hộp vuông Moonbow S/M/L: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-khay-chu-nhat-moonbow-size-l-af26mo12": {
+   "action": "confirm",
+   "reason": "Khay chữ nhật Moonbow S/L: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-khay-chu-nhat-mountain-size-m-af26mt05": {
+   "action": "confirm",
+   "reason": "Khay chữ nhật Mountain S/M: biến thể kích thước của cùng một món"
+  },
+  "fam-hanoia-khung-anh-moonbow-size-m-af26mo13": {
+   "action": "confirm",
+   "reason": "Khung ảnh Moonbow S/M: biến thể kích thước của cùng một món"
+  },
+  "fam-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168": {
+   "action": "split",
+   "groups": {
+    "p-marou-so-co-la-marou-6-flavors-of-vietnam-napolitains-8450595881168": "A",
+    "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936": "B",
+    "p-marou-so-co-la-marou-6-the-faiseurs-collection-8441717817552": "C"
+   },
+   "reason": "3 hộp Napolitains 36 viên khác bộ vị (Flavors/Single Origin/Faiseurs): khác hương vị/thành phần là sản phẩm khác"
+  },
+  "fam-marou-so-co-la-marou-ca-phe-sua-bar-44-24g-8249792299216": {
+   "action": "confirm",
+   "reason": "Cà Phê Sữa 24G/80G: biến thể kích thước của cùng một món"
+  },
+  "fam-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624": {
+   "action": "split",
+   "groups": {
+    "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624": "A",
+    "p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": "B",
+    "p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": "C"
+   },
+   "reason": "3 thanh Socola Trail: khác hương vị/thành phần là sản phẩm khác"
+  },
+  "fam-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624": {
+   "action": "split",
+   "groups": {
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791676624": "A",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-8249791840464": "A",
+    "p-marou-so-co-la-marou-ironbar-65-dark-chocolate-energy-8249763889360": "B"
+   },
+   "reason": "Protein Bar 55G và hộp 10x55G cùng món; Energy Bar 40G khác hương vị/thành phần là sản phẩm khác"
+  },
+  "fam-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": {
+   "action": "split",
+   "groups": {
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": "A",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928": "B",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072": "C",
+    "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448": "D"
+   },
+   "reason": "4 thanh Maison Marou Exclusive: khác hương vị/thành phần là sản phẩm khác"
+  },
+  "fam-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472": {
+   "action": "split",
+   "groups": {
+    "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472": "A",
+    "p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864": "B",
+    "p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312": "C"
+   },
+   "reason": "3 thanh Marou Bar 35G: khác hương vị/thành phần là sản phẩm khác"
+  },
+  "fam-marou-so-co-la-marou-set-of-3-milk-by-marou-chocolate-8441716474064": {
+   "action": "confirm",
+   "reason": "Set 3 Milk by Marou và bản mini: biến thể kích thước của cùng một món"
+  },
+  "fam-marou-so-co-la-marou-set-of-6-mini-the-faiseurs-8249804062928": {
+   "action": "confirm",
+   "reason": "Set 6 Faiseurs và bản mini: biến thể kích thước của cùng một món"
+  },
+  "fam-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104": {
+   "action": "confirm",
+   "reason": "Hộp quà Faiseurs và bản mini: biến thể kích thước của cùng một món"
+  },
+  "fam-marou-so-co-la-marou-vietnamese-matcha-coconut-40-8469852913872": {
+   "action": "confirm",
+   "reason": "Matcha & Coconut bar và mini bar: biến thể kích thước của cùng một món"
+  },
+  "fam-minhlong-binh-hoa-36-cm-hoa-sen-1071550628": {
+   "action": "split",
+   "groups": {
+    "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628": "A",
+    "p-minhlong-binh-hoa-36-cm-sen-do-1071550664": "B"
+   },
+   "reason": "Bình 36 cm Hoa Sen và Sen Đỏ: khác họa tiết vẽ là sản phẩm khác (giá khác nhau)"
+  },
+  "fam-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725": {
+   "action": "confirm",
+   "reason": "Đôi Két 41 cm: hai trang Minh Long trùng tên, giá, ảnh — có thể là tin đăng trùng; báo nhóm dữ liệu"
+  },
+  "fam-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741": {
+   "action": "confirm",
+   "reason": "Sen Vàng 45/50 cm: biến thể kích thước của cùng một món"
+  },
+  "fam-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812": {
+   "action": "confirm",
+   "reason": "Lộc Phát Sen vàng nền vàng 28/40 cm: biến thể kích thước của cùng một món"
+  },
+  "fam-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739": {
+   "action": "split",
+   "groups": {
+    "p-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739": "A",
+    "p-minhlong-bo-tra-camellia-chi-vang-05l": "B"
+   },
+   "reason": "Bộ trà Camellia 0,5 L Hương Biển Kem và Chỉ Vàng: khác họa tiết vẽ là sản phẩm khác"
+  },
+  "fam-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946": {
+   "action": "confirm",
+   "reason": "Camellia Văn Lang 0,5/0,8 L: biến thể dung tích"
+  },
+  "fam-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034": {
+   "action": "confirm",
+   "reason": "Dĩa lót Tulip Ngà 4 màu: cùng món, khác màu/hoàn thiện"
+  },
+  "fam-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370": {
+   "action": "split",
+   "groups": {
+    "p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370": "A",
+    "p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927": "B"
+   },
+   "reason": "Dĩa tròn Jasmine 18 cm và Tulip IFP 22 cm: khác dòng sản phẩm"
+  },
+  "fam-vietcraft-chup-den-tre-vh24043-1241": {
+   "action": "split",
+   "groups": {
+    "p-vietcraft-chup-den-tre-vh24043-1241": "A",
+    "p-vietcraft-chup-den-tre-vh240902-668": "B"
+   },
+   "reason": "VH24043 và VH240902 là hai trang sản phẩm Vietcraft khác nhau (pendant light / hanging lampshade)"
+  }
+ },
+ "candidates": {
+  "p-minhlong-dia-lot-chen-15-cm-jasmine-chim-lac-1074723211|p-minhlong-dia-lot-tach-12-cm-jasmine-phuoc-loc-tho-1074541709": {
+   "decision": "separate",
+   "reason": "dĩa lót chén 15 cm và dĩa lót tách 12 cm: khác món"
+  },
+  "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-hanoia-binh-hoa-bellus-size-m-a25be09|p-hanoia-binh-hoa-bellus-size-xl-a25be10": {
+   "decision": "merge",
+   "reason": "Bellus M/XL — cùng họ đề xuất"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034|p-minhlong-dia-lot-15-5-cm-tulip-nga-xanh-non-1073397709": {
+   "decision": "merge",
+   "reason": "Tulip Ngà cam/xanh non — cùng món, khác màu/hoàn thiện"
+  },
+  "p-marou-so-co-la-marou-caramelized-cashew-65-dark-8327525302480|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272|p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770|p-minhlong-binh-hoa-sen-vang-27cm": {
+   "decision": "separate",
+   "reason": "27 cm là dòng men ngọc (URL) khác dòng Sen Vàng 45/50 cm; giá khác hẳn — cần xem ảnh"
+  },
+  "p-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741|p-minhlong-binh-hoa-sen-vang-27cm": {
+   "decision": "separate",
+   "reason": "27 cm là dòng men ngọc khác dòng Sen Vàng 45/50 cm"
+  },
+  "p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928|p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320": {
+   "decision": "merge",
+   "reason": "hộp Halloween 6 Single Origin: thanh thường và mini — biến thể kích thước của cùng một món"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928|p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272|p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812|p-minhlong-binh-hoa-loc-phat-40-cm-binh-hoa-sen-vang-nen-1071463134": {
+   "decision": "merge",
+   "reason": "Lộc Phát 28/40 cm — cùng họ đề xuất"
+  },
+  "p-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799|p-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858": {
+   "decision": "separate",
+   "reason": "Hoàng Cung và Royal: khác dòng"
+  },
+  "p-vietcraft-chup-den-tre-vh240902-668|p-vietcraft-chup-den-tre-vh25012-461": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-vietcraft-chup-den-tre-vh24047-1210|p-vietcraft-chup-den-tre-vh240902-668": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408|p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803473104|p-marou-so-co-la-marou-the-faiseurs-collection-6-8249803538640": {
+   "decision": "merge",
+   "reason": "Faiseurs gift box và mini — cùng họ đề xuất"
+  },
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886|p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-hanoia-binh-hoa-red-river-size-m-a20rr05|p-hanoia-binh-hoa-red-river-size-s-a20rr04": {
+   "decision": "merge",
+   "reason": "Red River M/S — cùng nhóm bình"
+  },
+  "p-vietcraft-chup-den-tre-vh24038-1300|p-vietcraft-chup-den-tre-vh240902-668": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-vietcraft-chup-den-tre-vh24038-1300|p-vietcraft-chup-den-tre-vh24043-1241": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072|p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-vietcraft-chup-den-tre-vh24043-1241|p-vietcraft-chup-den-tre-vh24047-1210": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712|p-marou-so-co-la-marou-6-single-origin-mini-bars-gift-8249799770320": {
+   "decision": "separate",
+   "reason": "khác bộ vị (Flavors vs Single Origin)"
+  },
+  "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795|p-minhlong-dia-tron-18-cm-n-hang-jasmine-trang-1074870370": {
+   "decision": "separate",
+   "reason": "dĩa súp và dĩa tròn: khác món"
+  },
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034|p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-vang-1073396807": {
+   "decision": "merge",
+   "reason": "Tulip Ngà cam/vàng — cùng món, khác màu/hoàn thiện"
+  },
+  "p-hanoia-hop-tra-tron-exotic-af26ex08|p-hanoia-hop-tra-tron-exotic-af26ex09": {
+   "decision": "merge",
+   "reason": "Exotic EX08/09 — cùng họ đề xuất"
+  },
+  "p-hanoia-hop-dong-ho-keras-af26kr04|p-hanoia-hop-dung-cigar-keras-af26kr03": {
+   "decision": "separate",
+   "reason": "hộp đồng hồ và hộp cigar Keras: khác loại đồ vật (cùng dòng thiết kế)"
+  },
+  "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752|p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-hanoia-binh-hoa-bellus-size-m-a25be09|p-hanoia-binh-hoa-bellus-size-s-a25be08": {
+   "decision": "merge",
+   "reason": "Bellus M/S — cùng họ đề xuất"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448|p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-hanoia-hop-tra-tron-exotic-af26ex09|p-hanoia-hop-tra-tron-exotic-af26ex10": {
+   "decision": "merge",
+   "reason": "Exotic EX09/10 — cùng họ đề xuất"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944|p-marou-so-co-la-marou-popped-rice-with-pho-spice-65-8456113062096": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-36-cm-sen-do-1071550664|p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628|p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-dong-nai-72-single-origin-8249759891664|p-marou-so-co-la-marou-lam-dong-74-single-origin-8249760448720": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-minhlong-dia-sup-23-cm-nha-hang-jasmine-trang-1074662795|p-minhlong-dia-tron-22-cm-tulip-ifp-trang-nga-1073434927": {
+   "decision": "separate",
+   "reason": "dĩa súp Jasmine và dĩa tròn Tulip: khác món/dòng"
+  },
+  "p-hanoia-binh-hoa-vinh-size-l-a23vi03|p-hanoia-binh-hoa-vinh-size-m-a23vi02": {
+   "decision": "merge",
+   "reason": "Vịnh L/M — cùng họ đề xuất"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-36-cm-sen-do-1071550664|p-minhlong-binh-hoa-42-cm-binh-hoa-dam-sen-1071314791": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-set-of-6-flavors-of-vietnam-8249800196304|p-marou-so-co-la-marou-set-of-6-mini-flavors-of-vietnam-8249795313872": {
+   "decision": "separate",
+   "reason": "Halloween và Trung thu: khác ấn bản/bộ"
+  },
+  "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908|p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-6-flavors-of-vietnam-mini-bars-8249799573712|p-marou-so-co-la-marou-6-single-origin-chocolate-bars-8249799966928": {
+   "decision": "separate",
+   "reason": "khác bộ vị"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754484944|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754747088": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-dia-lot-15-5-cm-tulip-nga-mau-cam-1073396034|p-minhlong-dia-lot-15-5-cm-tulip-nga-trang-nga-1073397147": {
+   "decision": "merge",
+   "reason": "Tulip Ngà cam/trắng ngà — cùng món, khác màu/hoàn thiện"
+  },
+  "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752|p-marou-so-co-la-marou-tien-giang-70-single-origin-8249760284880": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-minhlong-binh-hoa-41-cm-doi-ket-1074964849|p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-50-cm-binh-hoa-tu-linh-1070579715|p-minhlong-binh-hoa-hon-viet-30cm": {
+   "decision": "separate",
+   "reason": "Tứ Linh 50 cm và Hồn Việt 30 cm: khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886|p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094|p-sensilk-nguyet-ha-sen-khan-lua-to-tam-cao-cap-in-3d-13075": {
+   "decision": "separate",
+   "reason": "khăn SenSilk khác mẫu in"
+  },
+  "p-hanoia-hop-trang-suc-cosmos-af26co04|p-hanoia-hop-trang-suc-exotic-size-m-af26ex01": {
+   "decision": "separate",
+   "reason": "hộp trang sức Cosmos và Exotic: khác dòng"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754321104|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755173072|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408|p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-vietcraft-gio-dan-may-vh24056-1114|p-vietcraft-khay-may-dan-vh24048": {
+   "decision": "separate",
+   "reason": "giỏ mây VH24056 (bread basket) và khay mây: khác món, khác trang nguồn"
+  },
+  "p-sensilk-dao-moc-lan-khan-choang-lua-to-tam-in-3d-sensilk-13114|p-sensilk-hong-van-to-khan-choang-lua-to-tam-in-3d-sensilk-13094": {
+   "decision": "separate",
+   "reason": "khăn SenSilk khác mẫu in"
+  },
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408|p-marou-so-co-la-marou-marou-bar-65-peanuts-ginger-8249761071312": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558|p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914": {
+   "decision": "separate",
+   "reason": "Camellia Văn Lang và Chim Lạc: khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946|p-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914": {
+   "decision": "separate",
+   "reason": "Văn Lang và Chim Lạc: khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-vietcraft-gio-dan-seagrass-theo-nguon-vh24042-1246|p-vietcraft-gio-seagrass-vh24046": {
+   "decision": "separate",
+   "reason": "hai giỏ seagrass ở hai trang nguồn Vietcraft khác nhau"
+  },
+  "p-minhlong-binh-hoa-41-cm-hoa-sen-binh-hoa-trang-tri-1071461908|p-minhlong-binh-hoa-41-cm-sen-hot-1074964446": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-vietcraft-chup-den-tre-vh24047-1210|p-vietcraft-chup-den-tre-vh25012-461": {
+   "decision": "separate",
+   "reason": "khác mã chụp đèn Vietcraft"
+  },
+  "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752|p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-minhlong-binh-hoa-41-cm-binh-hoa-anh-tuc-trang-tri-1071461886|p-minhlong-binh-hoa-42-cm-hoa-mau-don-1074964992": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520|p-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122": {
+   "decision": "separate",
+   "reason": "Daisy quả ôliu và sen hồng: khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249755402448|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-ben-tre-78-single-origin-8249759367376|p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-hanoia-hop-trang-suc-cosmos-af26co04|p-hanoia-hop-trang-suc-exotic-size-l-af26ex11": {
+   "decision": "separate",
+   "reason": "Cosmos và Exotic: khác dòng"
+  },
+  "p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071462812|p-minhlong-binh-hoa-loc-phat-28-cm-binh-hoa-sen-vang-nen-1071463038": {
+   "decision": "merge",
+   "reason": "Lộc Phát 28 cm nền vàng/nền xanh ngọc: cùng món, khác màu/hoàn thiện — gộp vào họ Lộc Phát"
+  },
+  "p-marou-so-co-la-marou-caramelized-peanut-cinnamon-8327525171408|p-marou-so-co-la-marou-marou-bar-64-tropical-fruits-8249760710864": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628|p-minhlong-binh-hoa-41-cm-hoa-sen-nen-cobalt-1074964814": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-marou-bar-53-coconut-milk-8249760907472|p-marou-so-co-la-marou-rice-paper-with-sesame-48-milk-8456113127632": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-ba-ria-76-single-origin-8249759596752|p-marou-so-co-la-marou-dak-lak-70-single-origin-8249760088272": {
+   "decision": "separate",
+   "reason": "khác vùng cacao"
+  },
+  "p-hanoia-hop-vuong-moonbow-size-m-af26mo10|p-hanoia-hop-vuong-moonbow-size-s-af26mo02": {
+   "decision": "merge",
+   "reason": "Moonbow M/S — cùng họ đề xuất"
+  },
+  "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628|p-minhlong-binh-hoa-42-cm-hue-do-1074964896": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-ca-phe-sua-sea-salt-44-chocolate-8327525564624|p-marou-so-co-la-marou-maison-marou-exclusive-bar-8249754910928": {
+   "decision": "separate",
+   "reason": "khác hương vị/thành phần là sản phẩm khác"
+  },
+  "p-marou-so-co-la-marou-6-single-origin-napolitains-8450595913936|p-marou-so-co-la-marou-single-origin-bars-set-of-6x80g-8249755697360": {
+   "decision": "separate",
+   "reason": "hộp Napolitains và set thanh 80G: khác dạng sản phẩm"
+  },
+  "p-minhlong-binh-hoa-36-cm-hoa-sen-1071550628|p-minhlong-binh-hoa-42-cm-chim-va-luu-1075178001": {
+   "decision": "separate",
+   "reason": "khác họa tiết vẽ là sản phẩm khác"
+  }
+ },
+ "shared": {
+  "img-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739-3,img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-3,img-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520-2,img-minhlong-bo-tra-0-65-l-daisy-sen-hong-1071226122-4,img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-3,img-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914-2,img-minhlong-bo-tra-cao-1-2-l-royal-chi-vang-1074169858-3": {
+   "decision": "exclude",
+   "reason": "Ảnh minh họa chung của 7 bộ trà khác họa tiết: tìm bằng ảnh sẽ khớp đều cả 7 (P0.6)"
+  },
+  "img-minhlong-bo-tra-0-5-l-camellia-huong-bien-kem-1072542739-4,img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-4,img-minhlong-bo-tra-0-65-l-daisy-qua-oliu-1071226520-3,img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-4,img-minhlong-bo-tra-0-8l-camellia-chim-lac-1073441914-3": {
+   "decision": "exclude",
+   "reason": "Ảnh minh họa chung của 5 bộ trà khác họa tiết (P0.6)"
+  },
+  "img-hanoia-binh-hoa-red-river-lon-a20rr01-3,img-hanoia-hop-tra-tron-red-river-a20rr02-2": {
+   "decision": "exclude",
+   "reason": "Ảnh chung của bình Red River và hộp trà — hai họ khác nhau theo gợi ý F1"
+  },
+  "img-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725-1,img-minhlong-binh-hoa-41-cm-doi-ket-1074964849-2": {
+   "decision": "keep",
+   "reason": "Đôi Két: hai tin của cùng một sản phẩm (cùng họ)"
+  },
+  "img-minhlong-binh-hoa-41-cm-binh-hoa-doi-ket-1071314725-2,img-minhlong-binh-hoa-41-cm-doi-ket-1074964849-1": {
+   "decision": "keep",
+   "reason": "Đôi Két: hai tin của cùng một sản phẩm (cùng họ)"
+  },
+  "img-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741-1,img-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770-1": {
+   "decision": "keep",
+   "reason": "Sen Vàng 45/50 cm cùng họ"
+  },
+  "img-minhlong-binh-hoa-45-cm-binh-hoa-sen-vang-1071462741-2,img-minhlong-binh-hoa-50-cm-binh-hoa-sen-vang-1071462770-2": {
+   "decision": "keep",
+   "reason": "Sen Vàng 45/50 cm cùng họ"
+  },
+  "img-minhlong-bo-tra-0-5-l-camellia-van-lang-1070425946-2,img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-2": {
+   "decision": "keep",
+   "reason": "Văn Lang 0,5/0,8 L cùng họ"
+  }
+ },
+ "if_all_accepted": {
+  "families": 294,
+  "multi_member_families": 27,
+  "split": 12,
+  "merge": 14,
+  "exclude_shared": 3
+ },
+ "decisions_sha256": "641705c4dd9bbf040b55db561f9f3ea111609c045031bcde7668219fcc41dce0"
+}

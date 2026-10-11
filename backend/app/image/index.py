@@ -189,18 +189,22 @@ class ImageIndex:
     # ---------- Truy vấn ----------
 
     def query(self, vector: Sequence[float], allowed_products: set[str] | None = None,
-              exclude_images: set[str] | None = None) -> list[VisualHit]:
+              exclude_images: set[str] | None = None, *, multi_view: bool = True) -> list[VisualHit]:
         """Cosine với từng ảnh rồi gộp theo product_id (lấy ảnh giống nhất) để nhiều góc chụp của
         một sản phẩm không chiếm hết top K."""
         q = _normalize(vector)
         if len(q) != self.dim:
             raise ValueError(f"Vector truy vấn {len(q)} chiều, chỉ mục {self.dim} chiều")
         best: dict[str, tuple[float, str]] = {}
+        seen = set()
         for e, v in zip(self.entries, self.vectors):
             if allowed_products is not None and e.product_id not in allowed_products:
                 continue
             if exclude_images and e.image_id in exclude_images:  # kiểm tra leave-one-out
                 continue
+            if not multi_view and e.product_id in seen:
+                continue
+            seen.add(e.product_id)
             sim = sum(a * b for a, b in zip(q, v))
             if e.product_id not in best or sim > best[e.product_id][0]:
                 best[e.product_id] = (sim, e.image_id)

@@ -187,7 +187,8 @@ def test_eval_image_refuses_test_without_lock(tmp_path):
 import import_voice_session as ivs  # noqa: E402
 
 
-def session_zip(path, speaker="s01", split="dev", qids=("p01", "p02"), extra=None):
+def session_zip(path, speaker="s01", split="dev", qids=("p01", "p02"), extra=None,
+                text="túi cói dưới ba trăm nghìn"):
     import zipfile
     samples, files = [], {}
     for q in qids:
@@ -195,7 +196,7 @@ def session_zip(path, speaker="s01", split="dev", qids=("p01", "p02"), extra=Non
         data = wav(1.0)
         files[f"raw/{qid}.wav"] = data
         samples.append({"qid": qid, "audio_path": f"raw/{qid}.wav", "sha256": hashlib.sha256(data).hexdigest(),
-                        "reference_text": "túi cói dưới ba trăm nghìn", "speaker_id": speaker, "region": "bac",
+                        "reference_text": text, "speaker_id": speaker, "region": "bac",
                         "device": "phone-a", "environment": "quiet", "split": split, "tags": ["price"],
                         "consent": {"status": "granted", "evidence": "consent-001"}, "transcript_review": None})
     with zipfile.ZipFile(path, "w") as z:
@@ -233,6 +234,31 @@ def test_import_voice_session_rejects_unexpected_files(tmp_path, extra):
     target = empty_target(tmp_path)
     assert ivs.main([str(session_zip(tmp_path / "x.zip", extra=extra)), "--manifest", str(target)]) == 1
     assert not (tmp_path / "evil.wav").exists() and not (target.parent / "raw").exists()
+
+
+def test_same_sentence_cannot_span_splits(tmp_path):
+    """Bộ câu mỗi split tách riêng: câu dev xuất hiện lại ở test bị chặn khi nhập, khi áp duyệt và khi nạp."""
+    target = empty_target(tmp_path)
+    shutil.copy(ROOT / "benchmarks/voice/manifest.schema.json", target.parent / "manifest.schema.json")
+    assert ivs.main([str(session_zip(tmp_path / "a.zip")), "--manifest", str(target)]) == 0
+    same = session_zip(tmp_path / "b.zip", speaker="s02", split="test", qids=("te01",),
+                       text="Túi cói, dưới ba trăm nghìn!")  # khác hoa/dấu câu vẫn là cùng câu
+    before = target.read_bytes()
+    assert ivs.main([str(same), "--manifest", str(target)]) == 1
+    assert target.read_bytes() == before
+    other = session_zip(tmp_path / "c.zip", speaker="s02", split="test", qids=("te01",), text="khăn lụa thêu hoa sen")
+    assert ivs.main([str(other), "--manifest", str(target)]) == 0
+    assert len(ev.load_manifest(target)) == 3
+    # Người duyệt sửa câu dev thành đúng câu của test → từ chối, manifest giữ nguyên.
+    z = reviewed_zip(tmp_path / "a.zip", tmp_path / "r.zip", {"s01-20261010t1700-p01": {
+        "reference_text": "khăn lụa thêu hoa sen", "transcript_review": REVIEW}})
+    before = target.read_bytes()
+    assert avr.main([str(z), "--manifest", str(target)]) == 1
+    assert target.read_bytes() == before
+    with pytest.raises(ev.ManifestError, match="đã có ở split dev"):
+        ev.check_text_splits([{"qid": "a", "split": "dev", "reference_text": "Ly sứ"},
+                              {"qid": "s", "split": "dev", "reference_text": None},
+                              {"qid": "b", "split": "test", "reference_text": "ly  sứ."}])
 
 
 # ---------- apply_voice_review ----------
@@ -514,3 +540,23 @@ def test_compare_image_judgments(tmp_path):
         crv.compare_image(a, image_export("B", [], packet_id="q" * 64))
     with pytest.raises(crv.CompareError, match="cùng người"):
         crv.compare_image(a, image_export("a", [("q1", {"x": 3}, "x")]))
+
+
+def test_prompt_sets_are_disjoint_between_splits():
+    """frontend/src/collect/prompts.ts: mỗi split một bộ câu, không câu nào (sau chuẩn hóa) lặp lại ở bộ khác."""
+    import re
+    src = (ROOT / "frontend/src/collect/prompts.ts").read_text(encoding="utf-8")
+    body = src[src.index("PROMPT_SETS"):]
+    starts = {m.group(1): m.end() for m in re.finditer(r"^  (train|dev|test): \[", body, re.M)}
+    assert sorted(starts) == ["dev", "test", "train"]
+    ids, texts = set(), {}
+    for split, pos in starts.items():
+        rows = re.findall(r'\{ id: "([^"]+)", text: "([^"]+)"', body[pos:body.index("\n  ],", pos)])
+        assert len(rows) >= 15, split  # ≥15 clip/người (600 clip / 40 người)
+        for pid, text in rows:
+            assert re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,19}", pid) and pid not in ids, pid
+            ids.add(pid)
+            key = am.normalize(text)
+            assert key and key not in texts, f"{text!r} lặp lại (đã có ở {texts.get(key)})"
+            texts[key] = split
+    ev.check_text_splits([{"qid": t, "split": s, "reference_text": t} for t, s in texts.items()])

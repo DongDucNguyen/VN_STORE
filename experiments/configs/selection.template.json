@@ -1,0 +1,10 @@
+{
+  "status": "draft",
+  "selected_by": null,
+  "selected_at": null,
+  "rationale": null,
+  "catalog_sha256": null,
+  "include_drafts": true,
+  "voice": {"ablation_report": null, "report_sha256": null, "run_name": null, "run_sha256": null, "predictions_sha256": null},
+  "image": {"ablation_report": null, "report_sha256": null, "run_name": null, "run_sha256": null, "predictions_sha256": null}
+}

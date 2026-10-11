@@ -8,10 +8,12 @@
 - Độ đúng giá và phủ định: so ràng buộc do bộ phân tích truy vấn rút ra từ bản chép lời chuẩn và từ
   bản của model (cùng từ vựng catalog). Chỉ tính clip mà bản chuẩn có giá/phủ định; giá "bịa thêm" đếm riêng.
 - Clip im lặng/chỉ tiếng ồn (reference_text = null): tỉ lệ model vẫn trả chữ (hallucination).
+- --queries: nDCG@10/Success@5 từ ASR so với transcript chuẩn trên cùng nhãn keyword_qid;
+  thiếu nhãn trong top K trả null, chỉ lấy trung bình trên các cặp clip đủ nhãn.
 - Độ trễ ASR p50/p95 và RTF (thời gian xử lý / thời lượng clip), batch=1, sau warm-up; --latency-rounds lặp
   thêm các lượt chỉ đo thời gian và báo độ lệch p95 giữa các lượt. Cold start (nạp adapter, lần gọi đầu có
-  nạp model) báo riêng; ghi GPU/driver/provider ORT, đỉnh VRAM và cảnh báo nếu GPU đang có tải khác
-  (latency_protocol.py).
+  nạp model) báo riêng; ghi GPU/driver/provider ORT, đỉnh VRAM, đỉnh RAM tiến trình, dung lượng file model
+  và cảnh báo nếu GPU đang có tải khác (latency_protocol.py).
 Ghi run.json + predictions.jsonl vào experiments/results/<thời điểm>_voice_<tên>/.
 Không dùng split test để tinh chỉnh; chạy test cần --confirm-locked-test và nhãn đã duyệt.
 """
@@ -20,6 +22,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -32,6 +35,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import asr_metrics as am  # noqa: E402
 import latency_protocol as lp  # noqa: E402
+import locked_ledger  # noqa: E402
+import voice_retrieval as vr  # noqa: E402
 from retrieval_metrics import mean, percentile  # noqa: E402
 
 from app.adapters import AdapterError, ASRAdapter, load_adapter  # noqa: E402
@@ -46,6 +51,20 @@ GROUPS = ("region", "device", "environment")
 
 class ManifestError(ValueError):
     pass
+
+
+def check_text_splits(samples: list[dict]) -> None:
+    """Một câu (sau chuẩn hóa asr_metrics) chỉ thuộc một split, như người nói. Câu train trùng câu test làm
+    fine-tune ASR học thuộc văn bản test, và nhãn keyword không gắn được cho cùng câu ở hai split."""
+    seen: dict[str, tuple[str, str]] = {}
+    for s in samples:
+        text = am.normalize(s["reference_text"])
+        if not text:
+            continue
+        split, qid = seen.setdefault(text, (s["split"], s["qid"]))
+        if split != s["split"]:
+            raise ManifestError(f"{s['qid']}: câu “{text}” đã có ở split {split} ({qid}); mỗi split dùng bộ câu "
+                                "riêng (prompts.ts) — ghi câu khác hoặc bỏ clip")
 
 
 def load_manifest(path: Path) -> list[dict]:
@@ -77,6 +96,7 @@ def load_manifest(path: Path) -> list[dict]:
             raise ManifestError(f"{s['qid']}: sha256 không khớp file")
         if s["consent"]["status"] == "granted" and not s["consent"]["evidence"]:
             raise ManifestError(f"{s['qid']}: consent granted cần evidence")
+    check_text_splits(samples)
     return samples
 
 
@@ -115,7 +135,8 @@ def run_pipeline(adapter: ASRAdapter, data: bytes) -> tuple[str, str | None, flo
     return text, None, clip.duration_s, (time.perf_counter() - t) * 1000
 
 
-def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup: int = 1, rounds: int = 1
+def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup: int = 1, rounds: int = 1,
+             engine=None, links: dict | None = None
              ) -> tuple[list[dict], dict]:
     audio = {s["qid"]: (base / s["audio_path"]).read_bytes() for s in samples}
     # Lần gọi đầu nạp model (adapter nạp lười) → cold start, không tính vào p50/p95.
@@ -124,11 +145,14 @@ def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup
         run_pipeline(adapter, audio[s["qid"]])
     rows = []
     for s in samples:
+        pipeline_start = time.perf_counter()
         hyp, gate, duration, ms = run_pipeline(adapter, audio[s["qid"]])
+        pipeline_ms = (time.perf_counter() - pipeline_start) * 1000
         ref = s["reference_text"]
         row = {"qid": s["qid"], "split": s["split"], "speaker_id": s["speaker_id"],
                **{g: s[g] for g in GROUPS}, "tags": s.get("tags", []), "reference": ref, "hypothesis": hyp,
                "gate_rejected": gate, "duration_s": round(duration, 3), "asr_ms": round(ms, 2),
+               "pipeline_ms": round(pipeline_ms, 2),
                "rtf": round(ms / 1000 / duration, 4) if duration else None}
         if ref is None:
             row["hallucinated"] = bool(hyp)
@@ -143,14 +167,28 @@ def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup
             row["price_ref"], row["price_hyp"] = _price(pr), _price(ph)
             row["negation_ref"] = sorted(map(list, _negations(pr)))
             row["negation_hyp"] = sorted(map(list, _negations(ph)))
+        if links is not None and s["qid"] in links:
+            row.update(vr.score(row, links[s["qid"]], engine))
         rows.append(row)
     # Các lượt lặp chỉ đo thời gian, cùng tập clip và thứ tự; chất lượng lấy từ lượt đầu.
     timing = [[r["asr_ms"] for r in rows if r["gate_rejected"] is None]]
+    pipeline_timing = [[r["pipeline_ms"] for r in rows]]
     for _ in range(rounds - 1):
-        timing.append([ms for s in samples for _, gate, _, ms in [run_pipeline(adapter, audio[s["qid"]])]
-                       if gate is None])
+        model_round, pipeline_round = [], []
+        for s in samples:
+            start = time.perf_counter()
+            _, gate, _, ms = run_pipeline(adapter, audio[s["qid"]])
+            pipeline_round.append((time.perf_counter() - start) * 1000)
+            if gate is None:
+                model_round.append(ms)
+        timing.append(model_round)
+        pipeline_timing.append(pipeline_round)
     metrics = summarize(rows)
-    metrics["latency"] = {"cold_first_call_ms": round(cold_ms, 2), "asr_ms": lp.rounds_summary(timing)}
+    if links is not None:
+        metrics["retrieval"] = vr.summarize(rows)
+    metrics["latency"] = {"cold_first_call_ms": round(cold_ms, 2), "asr_ms": lp.rounds_summary(timing),
+                          "pipeline_ms": lp.rounds_summary(pipeline_timing),
+                          "pipeline_scope": "decode + energy gate + VAD + ASR; excludes retrieval/upload"}
     return rows, metrics
 
 
@@ -199,6 +237,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json",
                     help="từ vựng thương hiệu/chất liệu để phân tích giá/phủ định")
     ap.add_argument("--split", choices=("train", "dev", "test"), required=True)
+    ap.add_argument("--queries", type=Path, help="JSONL relevance keyword liên kết qua keyword_qid để đo retrieval")
+    ap.add_argument("--include-drafts", action="store_true", help="retrieval trên cả draft; mặc định chỉ published")
     ap.add_argument("--allow-unreviewed", action="store_true", help="smoke trên train/dev khi nhãn chưa duyệt")
     ap.add_argument("--confirm-locked-test", action="store_true")
     ap.add_argument("--warmup", type=int, default=1)
@@ -213,13 +253,37 @@ def main(argv: list[str] | None = None) -> int:
         ap.error("--latency-rounds ≥ 1, --warmup ≥ 0")
 
     try:
-        samples = select(load_manifest(args.manifest), args.split, args.allow_unreviewed, args.confirm_locked_test)
+        all_samples = load_manifest(args.manifest)
+        samples = select(all_samples, args.split, args.allow_unreviewed, args.confirm_locked_test)
     except ManifestError as e:
         print(f"invalid: {e}", file=sys.stderr)
         return 1
     if not samples:
         print(f"pending_collection: manifest chưa có clip nào ở split {args.split}; không ghi kết quả.")
         return 0
+    locked_id = None
+    if args.split == "test":
+        try:
+            locked_id = locked_ledger.require_open("voice")
+        except locked_ledger.LedgerError as e:
+            print(f"invalid: {e}", file=sys.stderr)
+            return 1
+    links, retrieval = None, None
+    try:
+        # ASR-only keeps the historical full-catalog vocabulary. Retrieval visibility is explicit.
+        snap = load_snapshot(args.catalog, include_drafts=args.include_drafts if args.queries else True)
+        engine = SearchEngine(snap)
+        if args.queries:
+            if not snap.products:
+                raise ValueError("Catalog không có sản phẩm hiển thị; kiểm tra --include-drafts")
+            links, retrieval = vr.load_links(args.queries, all_samples, samples, snap, args.allow_unreviewed)
+            search_files = sorted((ROOT / "backend/app/search").glob("*.py"))
+            search_files += sorted((ROOT / "backend/app/catalog").glob("*.py"))
+            retrieval["search_code_sha256"] = hashlib.sha256(b"".join(p.read_bytes() for p in search_files)).hexdigest()
+            retrieval["search_config"] = engine.config.to_dict()
+    except (ValueError, OSError) as e:
+        print(f"invalid: {e}", file=sys.stderr)
+        return 1
     idle = lp.idle_check()
     try:
         t = time.perf_counter()
@@ -228,10 +292,9 @@ def main(argv: list[str] | None = None) -> int:
     except AdapterError as e:
         print(e, file=sys.stderr)
         return 2
-    snap = load_snapshot(args.catalog, include_drafts=True)
     with lp.VramPeak() as vram:
-        rows, metrics = evaluate(samples, adapter, args.manifest.parent, SearchEngine(snap).vocab, args.warmup,
-                                 args.latency_rounds)
+        rows, metrics = evaluate(samples, adapter, args.manifest.parent, engine.vocab, args.warmup,
+                                 args.latency_rounds, engine, links)
     metrics["latency"].update({"adapter_load_ms": round(load_ms, 2), "peak_vram_mb": vram.peak,
                                "machine_busy_warnings": idle["warnings"]})
     print(json.dumps({k: v for k, v in metrics.items() if k != "by_group"}, ensure_ascii=False, indent=2))
@@ -239,14 +302,23 @@ def main(argv: list[str] | None = None) -> int:
         print(f"CẢNH BÁO độ trễ: {w}; số đo có thể nhiễu.")
 
     unreviewed = sum(1 for s in samples if s["transcript_review"] is None or s["consent"]["status"] != "granted")
+    smoke = unreviewed or (retrieval and retrieval["unreviewed_queries"])
+    if retrieval is not None:
+        retrieval["status"] = ("smoke_unreviewed" if smoke else "incomplete_judgments"
+                               if metrics["retrieval"]["incomplete_qids"] else "reviewed_pool")
     now = datetime.now(timezone(timedelta(hours=7)))
     out = args.out_root / f"{now:%Y%m%d-%H%M%S-%f}_voice_{args.name}"
     out.mkdir(parents=True, exist_ok=False)
-    code = [Path(__file__), Path(am.__file__), Path(lp.__file__), ROOT / "backend/app/media.py",
+    code = [Path(__file__), Path(am.__file__), Path(lp.__file__), Path(vr.__file__), Path(locked_ledger.__file__),
+            ROOT / "scripts/benchmark/retrieval_metrics.py", ROOT / "scripts/benchmark/eval_keyword.py", ROOT / "backend/app/media.py",
             ROOT / "backend/app/search/query_parser.py"]
     run = {
         "name": args.name, "created_at": now.isoformat(timespec="seconds"),
-        "evaluation_status": "smoke_unreviewed" if unreviewed else ("locked_test" if args.split == "test" else "dev"),
+        "evaluation_status": "smoke_unreviewed" if smoke else ("locked_test" if args.split == "test" else args.split),
+        "locked_test_id": locked_id,
+        "retrieval": retrieval,
+        "search_config": engine.config.to_dict(),
+        "silence_dbfs": float(os.environ.get("VNSTORE_SILENCE_DBFS", "-60")),
         "model": {"adapter": args.adapter, "model_id": adapter.model_id, "revision": adapter.revision,
                   "license": getattr(adapter, "license", None), "config": getattr(adapter, "config", None)},
         "manifest_sha256": hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
@@ -259,6 +331,7 @@ def main(argv: list[str] | None = None) -> int:
                              "cold_start": "adapter_load_ms + cold_first_call_ms (lần gọi đầu nạp model), không gộp",
                              "peak_vram": "nvidia-smi memory.used toàn máy, lấy mẫu 100 ms", "idle_check": idle},
         "environment": lp.environment(),
+        "resources": lp.resources(),
         "code_files_sha256": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                               for p in code},
         "metrics": metrics,
@@ -266,9 +339,12 @@ def main(argv: list[str] | None = None) -> int:
     (out / "run.json").write_text(json.dumps(run, ensure_ascii=False, indent=2), encoding="utf-8")
     (out / "predictions.jsonl").write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n",
                                            encoding="utf-8")
+    if locked_id:
+        locked_ledger.record_run(locked_id, "voice", out)
     print(f"Đã ghi {out}")
-    if unreviewed:
-        print(f"CẢNH BÁO: {unreviewed} clip chưa duyệt — kết quả chỉ là smoke, không dùng để chọn model.")
+    if smoke:
+        print(f"CẢNH BÁO: {unreviewed} clip / {(retrieval or {}).get('unreviewed_queries', 0)} liên kết nhãn chưa duyệt"
+              " — kết quả chỉ là smoke, không dùng để chọn model.")
     return 0
 
 

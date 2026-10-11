@@ -8,12 +8,13 @@ xác suất >= threshold đạt min_speech_ms. Ngưỡng cần hiệu chỉnh tr
 from __future__ import annotations
 
 import hashlib
+import math
 import os
 import urllib.request
 from pathlib import Path
 
 from ..media import AudioClip
-from . import LazyModel
+from . import LOADED_FILES, LazyModel
 
 VERSION = "v6.2.3"
 URL = f"https://raw.githubusercontent.com/snakers4/silero-vad/{VERSION}/src/silero_vad/data/silero_vad.onnx"
@@ -32,11 +33,16 @@ def model_path() -> Path:
         tmp.replace(fp)
     if hashlib.sha256(fp.read_bytes()).hexdigest() != SHA256:
         raise RuntimeError(f"{fp} sai SHA-256; xóa file để tải lại")
+    LOADED_FILES[f"silero-vad@{VERSION}/silero_vad.onnx"] = fp
     return fp
 
 
 class SileroVAD:
     def __init__(self, threshold: float = 0.5, min_speech_ms: int = 250):
+        if not math.isfinite(threshold) or not 0 < threshold < 1:
+            raise ValueError("VAD threshold must be in (0, 1)")
+        if type(min_speech_ms) is not int or not 1 <= min_speech_ms <= 15000:
+            raise ValueError("min_speech_ms must be in [1, 15000]")
         self.threshold, self.min_speech_ms = threshold, min_speech_ms
         self._session = LazyModel()
 

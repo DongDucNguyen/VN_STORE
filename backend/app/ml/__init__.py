@@ -24,6 +24,8 @@ TRT_MODES = {"1": False, "fp32": False, "fp16": True}  # giá trị VNSTORE_ML_T
 ShapeFn = Callable[[str, list], "tuple[str, str, str] | None"]
 _trt_lock = threading.Lock()
 _trt_loaded = False
+# File model/cấu hình mà tiến trình đã nạp (khóa: nguồn ghim revision) để báo kích thước model trong run.
+LOADED_FILES: dict[str, Path] = {}
 
 
 def tensorrt_mode() -> str | None:
@@ -110,7 +112,9 @@ def fill_dims(dims: list, symbolic: dict[int, int], default: int = 1) -> str:
 
 def hf_file(repo: str, revision: str, filename: str) -> Path:
     from huggingface_hub import hf_hub_download
-    return Path(hf_hub_download(repo, filename, revision=revision))
+    path = Path(hf_hub_download(repo, filename, revision=revision))
+    LOADED_FILES[f"{repo}@{revision[:12]}/{filename}"] = path
+    return path
 
 
 def hf_json(repo: str, revision: str, filename: str) -> dict:

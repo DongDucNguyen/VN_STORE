@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import io
 import math
+import os
 import struct
 import sys
 import wave
@@ -97,7 +98,10 @@ def decode_wav(data: bytes) -> AudioClip:
 
 def check_speech(clip: AudioClip, vad=None) -> None:
     """Chặn trước ASR: ngưỡng năng lượng, rồi VAD nếu adapter có (`detect_speech(clip) -> bool`)."""
-    if clip.peak_frame_dbfs() < SILENCE_DBFS:
+    threshold = float(os.environ.get("VNSTORE_SILENCE_DBFS", str(SILENCE_DBFS)))
+    if not math.isfinite(threshold) or not -100 <= threshold <= -10:
+        raise ValueError("VNSTORE_SILENCE_DBFS must be finite in [-100, -10]")
+    if clip.peak_frame_dbfs() < threshold:
         raise MediaError("audio_silent", "Không nghe thấy tiếng nói. Kiểm tra micro rồi ghi lại.")
     if vad is not None and not vad(clip):
         raise MediaError("audio_no_speech", "Chỉ nghe thấy tiếng ồn, không nhận ra lời nói. Hãy nói gần micro "

@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from eval_voice import ManifestError, load_manifest  # noqa: E402
+from eval_voice import ManifestError, check_text_splits, load_manifest  # noqa: E402
 from import_voice_session import TARGET, read_session  # noqa: E402
 
 REVIEWED = ("reference_text", "transcript_review")
@@ -50,6 +50,7 @@ def plan(current: list[dict], reviewed: list[dict], replace: bool) -> tuple[list
                                 "dùng --replace-reviewed nếu muốn thay bằng lượt duyệt mới")
         out[by_qid[s["qid"]]] = {**old, **{k: s[k] for k in REVIEWED}}
         stats["applied"] += 1
+    check_text_splits(out)
     return out, stats
 
 

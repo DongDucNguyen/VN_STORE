@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "candidate_status": "provisional_pending_reviewed_dev",
+  "voice": {
+    "candidates": [
+      {
+        "name": "base",
+        "adapter": "app.ml.asr:PhoWhisperBase"
+      },
+      {
+        "name": "small",
+        "adapter": "app.ml.asr:PhoWhisperSmall"
+      }
+    ],
+    "variants": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "no-vad",
+        "env": {
+          "VNSTORE_ASR_VAD": "0"
+        }
+      },
+      {
+        "name": "vad035",
+        "env": {
+          "VNSTORE_VAD_THRESHOLD": "0.35"
+        }
+      },
+      {
+        "name": "vad150ms",
+        "env": {
+          "VNSTORE_VAD_MIN_MS": "150"
+        }
+      },
+      {
+        "name": "energy50",
+        "env": {
+          "VNSTORE_SILENCE_DBFS": "-50"
+        }
+      }
+    ]
+  },
+  "image": {
+    "candidates": [
+      {
+        "name": "siglip2",
+        "adapter": "app.ml.image:SigLIP2Base"
+      },
+      {
+        "name": "openclip",
+        "adapter": "app.ml.image:OpenCLIPViTB32"
+      }
+    ],
+    "variants": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "text025",
+        "search": {
+          "text_weight": 0.25
+        }
+      },
+      {
+        "name": "rrf20",
+        "search": {
+          "rrf_k": 20
+        }
+      },
+      {
+        "name": "generic",
+        "search": {
+          "generic_text_mode": "visual_only"
+        }
+      },
+      {
+        "name": "single-view",
+        "env": {
+          "VNSTORE_IMAGE_MULTI_VIEW": "0"
+        }
+      },
+      {
+        "name": "ocr",
+        "env": {
+          "VNSTORE_OCR": "rapidocr-latin"
+        },
+        "search": {
+          "ocr_weight": 0.35
+        }
+      },
+      {
+        "name": "crop",
+        "requires_crops": true
+      }
+    ]
+  },
+  "keyword": {
+    "candidates": [
+      {
+        "name": "bm25"
+      }
+    ],
+    "variants": [
+      {
+        "name": "baseline"
+      },
+      {
+        "name": "coverage050",
+        "search": {
+          "min_token_coverage": 0.5
+        }
+      },
+      {
+        "name": "coverage075",
+        "search": {
+          "min_token_coverage": 0.75
+        }
+      },
+      {
+        "name": "accents075",
+        "search": {
+          "min_token_coverage": 0.75,
+          "strict_accents": true
+        }
+      }
+    ]
+  }
+}

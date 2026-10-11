@@ -1,0 +1,58 @@
+{
+  "status": "blocked",
+  "benchmark_approved": false,
+  "inference_executed": false,
+  "inputs": {
+    "catalog": {
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\database.json",
+      "sha256": "5448a8f4f8161e14cda4f6c3bac921c46af4c02be359dfe20c8ddd312572cecb"
+    },
+    "voice_manifest": {
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\benchmarks\\voice\\manifest.json",
+      "sha256": "cab0118ecf9de5526c0f938312563af8d086eca05e4e3f4e8673de38e9e2fd85"
+    },
+    "image_manifest": {
+      "path": "C:\\Users\\Admin\\Desktop\\VNStore\\benchmarks\\image\\manifest.json",
+      "sha256": "2c62d3e7e8609156235fc15ff77e2bcd9965fb6488279f569ad68b3fa02bf505"
+    }
+  },
+  "checks": [
+    {
+      "check": "selected_dev_configuration",
+      "status": "blocked",
+      "detail": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\Admin\\\\Desktop\\\\VNStore\\\\experiments\\\\configs\\\\selection.json'"
+    },
+    {
+      "check": "keyword_test_data",
+      "status": "blocked",
+      "detail": "requires --keyword-queries with reviewed keyword test labels"
+    },
+    {
+      "check": "voice_test_data",
+      "status": "blocked",
+      "detail": "no reviewed voice test clips; collect and review first"
+    },
+    {
+      "check": "image_test_data",
+      "status": "blocked",
+      "detail": "image audit=invalid; requires reviewed registry and locked split"
+    },
+    {
+      "check": "unchanged_catalog",
+      "status": "passed",
+      "detail": true
+    },
+    {
+      "check": "unchanged_voice_manifest",
+      "status": "passed",
+      "detail": true
+    },
+    {
+      "check": "unchanged_image_manifest",
+      "status": "passed",
+      "detail": true
+    }
+  ],
+  "selected_configuration": null,
+  "note": "Preflight only. Does not prove label completeness at model cutoff or acceptance. Do not tune on test."
+}

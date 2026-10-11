@@ -75,3 +75,70 @@ test("chấm query ảnh: điều kiện xác nhận, no-match cần đủ galle
     .toBe(data.items[0].judgment.exact_product_id);
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+for (const similarAnswer of [true, false]) {
+test(`duyệt họ ảnh: nháp, registry, ${similarAnswer ? "có mẫu tương tự" : "no-match"}`, async ({ page }, testInfo) => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "vnstore-family-image-"));
+  try {
+    const paths = JSON.parse(execFileSync(PYTHON, ["-X", "utf8", "-m", "tests.image_review_demo",
+      path.join(dir, "demo"), "--families-fixture"], { cwd: path.join(ROOT, "backend"), encoding: "utf8" })
+      .trim().split("\n").pop()!);
+    await page.goto(pathToFileURL(path.join(paths.packet, "index.html")).href);
+    await page.locator("#reviewer").fill("synthetic-family-reviewer");
+    await page.locator("#query").selectOption("q-text");
+    await page.locator("#family-kind").selectOption("catalog");
+    await page.locator("#family-confirmed").click();
+    await expect(page.locator("#family-confirmed")).not.toBeChecked();
+    await page.locator("#family-product").selectOption("fx-tui-coi-tron");
+    await expect(page.locator("#family-id")).toHaveValue("fam-fx-tui-coi-tron");
+    await page.locator("#family-confirmed").click();
+    await expect(page.getByRole("status")).toContainText("căn cứ");
+    await page.reload();
+    await page.locator("#query").selectOption("q-text");
+    await expect(page.locator("#family-product")).toHaveValue("fx-tui-coi-tron");
+    await expect(page.locator("#family-confirmed")).not.toBeChecked();
+    await page.locator("#family-note").fill("Đối chiếu vật thể fixture");
+    await page.locator("#family-confirmed").check();
+    await page.locator("#family-note").fill("Căn cứ fixture đã bổ sung");
+    await expect(page.locator("#family-confirmed")).not.toBeChecked();
+    await page.locator("#family-confirmed").check();
+    await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.locator("#familybox").screenshot({ path: testInfo.outputPath("family-review.png") });
+
+    await page.locator("#query").selectOption("q-nomatch");
+    await page.locator("#family-kind").selectOption("external");
+    await page.locator("#family-id").fill("invalid");
+    await page.locator("#family-note").fill("Vật thể ngoài gallery fixture");
+    await page.locator("#family-confirmed").click();
+    await expect(page.locator("#family-confirmed")).not.toBeChecked();
+    await page.locator("#family-id").fill("external-fixture-object");
+    await page.locator("#family-confirmed").check();
+    // A positive similar judgment must not override the explicit external identity.
+    const pool = page.locator("#pool select");
+    for (let i = 0; i < await pool.count(); i++) await pool.nth(i).selectOption(i === 0 && similarAnswer ? "2" : "0");
+    if (!similarAnswer) {
+      await page.locator("#toggle-rest").click();
+      for (const s of await page.locator("#rest select").all()) await s.selectOption("0");
+    }
+    await page.locator("#confirmed").check();
+    const downloading = page.waitForEvent("download");
+    await page.locator("#export").click();
+    const download = await downloading;
+    const exported = path.join(dir, download.suggestedFilename());
+    await download.saveAs(exported);
+    const data = JSON.parse(fs.readFileSync(exported, "utf8"));
+    expect(data.items).toHaveLength(2);
+    const external = data.items.find((i: { qid: string }) => i.qid === "q-nomatch");
+    expect(external.family_review).toMatchObject({ product_id: null, reviewed_by: "synthetic-family-reviewer" });
+    expect(external.judgment.has_answer).toBe(similarAnswer);
+    expect(external.family_id).toBe("external-fixture-object");
+    const out = execFileSync(PYTHON, ["-X", "utf8", path.join(ROOT, "scripts/benchmark/apply_image_judgments.py"),
+      exported, "--manifest", paths.manifest, "--catalog", paths.catalog, "--families", paths.families], { encoding: "utf8" });
+    expect(out).toContain("áp 2");
+    const rows = JSON.parse(fs.readFileSync(paths.manifest, "utf8")).samples;
+    expect(rows.find((s: { qid: string }) => s.qid === "q-text").family_id).toBe("fam-fx-tui-coi-tron");
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});
+}

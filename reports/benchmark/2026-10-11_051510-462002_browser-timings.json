@@ -1,0 +1,49 @@
+{
+  "status": "descriptive_browser_timings",
+  "benchmark_approved": false,
+  "groups": [
+    {
+      "kind": "keyword",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": null,
+      "revision": null,
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 48.1,
+      "p95_ms": 54.6,
+      "first_observation_ms": 37.4,
+      "sample_warning": "fewer than 20 measured interactions"
+    },
+    {
+      "kind": "image",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 496.5,
+      "p95_ms": 497.4,
+      "first_observation_ms": 529.7,
+      "sample_warning": "fewer than 20 measured interactions"
+    },
+    {
+      "kind": "voice",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 429.5,
+      "p95_ms": 430.7,
+      "first_observation_ms": 582.2,
+      "sample_warning": "fewer than 20 measured interactions"
+    }
+  ],
+  "scope": "keyword request / voice stop / image submit to result paint; excludes speech duration and product image downloads",
+  "limitations": "Successes only; failures/cancellations excluded. First observation is not proof of cold model. No quality or network-generalization claim.",
+  "input_sha256": "1f207f2f29d7fbeaaecffb8baac08ea591265814769f640dcd08c0ecf420732c",
+  "context": "RTX 5070 Ti; Chrome Pixel 7 emulation; localhost; server already warm; PhoWhisper-small + SigLIP2 + RapidOCR; FLEURS replay/gallery smoke; 3 interactions per mode"
+}

@@ -6,6 +6,10 @@ Với --pool-top K (PLAN.md mục 8.1, khi catalog lớn): mỗi truy vấn có 
 trên câu gốc + top K của BM25 trên phần từ khóa (bỏ bộ lọc giá/phủ định) + --random N sản phẩm ngẫu nhiên
 cố định theo seed và qid. Pool được xáo theo hash, không theo thứ hạng. Truy vấn không có sản phẩm 2–3
 vẫn phải chấm toàn catalog để ghi nhận no-match. Không có --pool-top thì chấm toàn catalog như trước.
+
+Với --suggestions (build_keyword_suggestions.py): tạo packet "có hỗ trợ" hiện gợi ý máy cạnh từng cặp. Ô chấm
+vẫn trống cho tới khi người chấm tự chọn hoặc bấm áp gợi ý; export ghi số gợi ý đã áp và đã sửa. Chỉ người chấm
+thứ nhất/người phân xử dùng packet này; người chấm thứ hai dùng packet không gợi ý để giữ độc lập.
 """
 from __future__ import annotations
 
@@ -79,6 +83,30 @@ def make_packet(queries, snap, output: Path, pool_top: int | None = None, n_rand
     return packet
 
 
+def attach_suggestions(packet: dict, raw: bytes) -> None:
+    data = json.loads(raw)
+    if data.get("kind") != "keyword_relevance_suggestions" or data.get("catalog_sha256") != packet["catalog_sha256"]:
+        raise ValueError("Gợi ý thuộc catalog khác hoặc sai định dạng")
+    if packet["queries_sha256"] not in data["queries_sha256"]:
+        raise ValueError("Gợi ý được lập cho bộ truy vấn khác")
+    products = {p["id"] for p in packet["products"]}
+    chosen = {}
+    for q in packet["queries"]:
+        entry = data["queries"].get(q["qid"])
+        if entry is None:
+            raise ValueError(f"{q['qid']}: thiếu gợi ý")
+        rel = entry["relevance"]
+        if set(rel) - products or any(type(v["score"]) is not int or not 0 <= v["score"] <= 3 for v in rel.values()):
+            raise ValueError(f"{q['qid']}: gợi ý chứa sản phẩm ngoài packet hoặc điểm sai")
+        missing = set(packet["pool"][q["qid"]] if "pool" in packet else products) - set(rel)
+        if missing:
+            raise ValueError(f"{q['qid']}: pool hiện tại có {len(missing)} sản phẩm chưa có gợi ý")
+        chosen[q["qid"]] = {k: entry[k] for k in ("note", "scope", "suggested_has_answer", "relevance")}
+    packet["suggestions"] = {"version": data["version"], "author": data["author"], "policy": data["policy"],
+                             "queries": chosen}
+    packet["suggestions_sha256"] = hashlib.sha256(raw).hexdigest()
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--queries", type=Path, required=True)
@@ -88,6 +116,7 @@ def main():
     ap.add_argument("--pool-top", type=int, default=None, help="chỉ bắt buộc chấm pool top K + ngẫu nhiên")
     ap.add_argument("--random", type=int, default=5, help="số sản phẩm ngẫu nhiên thêm vào pool (với --pool-top)")
     ap.add_argument("--seed", default="vnstore-keyword-pool-1")
+    ap.add_argument("--suggestions", type=Path, help="JSON gợi ý máy; tạo packet có hỗ trợ cho người chấm thứ nhất")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     if args.out.exists():
@@ -101,6 +130,11 @@ def main():
     except (ValueError, OSError) as exc:
         ap.error(str(exc))
     packet["queries_sha256"] = hashlib.sha256(args.queries.read_bytes()).hexdigest()
+    if args.suggestions:
+        try:
+            attach_suggestions(packet, args.suggestions.read_bytes())
+        except (ValueError, OSError, KeyError, TypeError) as exc:
+            ap.error(str(exc))
     payload = json.dumps(packet, ensure_ascii=False, indent=2)
     template = Path(__file__).with_name("review_template.html").read_text(encoding="utf-8")
     args.out.mkdir(parents=True, exist_ok=False)

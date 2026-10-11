@@ -31,10 +31,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "backend"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from app.catalog.store import load_snapshot  # noqa: E402
 from app.search import engine as engine_mod  # noqa: E402
 from app.search.engine import SearchEngine  # noqa: E402
+import locked_ledger  # noqa: E402
 
 RELEVANT = 2
 
@@ -122,6 +124,7 @@ def evaluate(queries: list[dict], eng: SearchEngine, warmup: int = 1) -> tuple[l
         ideal = sorted(labels.values(), reverse=True)[:10]
         row = {
             "qid": q["qid"], "query": q["query"], "split": q.get("split"), "has_answer": q["has_answer"],
+            "group_id": q.get("group_id", q["qid"]),
             "predictions": ranked, "latency_ms": round(ms, 3),
             "unjudged_at_20": [pid for pid in ranked[:20] if pid not in labels],
             "judgments_cover_catalog": set(labels) == set(eng.snap.products),
@@ -164,7 +167,7 @@ def evaluate(queries: list[dict], eng: SearchEngine, warmup: int = 1) -> tuple[l
     return rows, metrics
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--queries", type=Path, required=True)
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
@@ -174,17 +177,38 @@ def main() -> int:
     ap.add_argument("--warmup", type=int, default=1, help="Số vòng warm-up không tính latency")
     ap.add_argument("--name", default="bm25")
     ap.add_argument("--no-write", action="store_true")
-    args = ap.parse_args()
+    ap.add_argument("--confirm-locked-test", action="store_true",
+                    help="split test: chỉ chạy trong phiên locked_test.py open, sau khi chốt cấu hình trên dev")
+    ap.add_argument("--out-root", type=Path, default=ROOT / "experiments" / "results")
+    ap.add_argument("--machine-labels", action="store_true",
+                    help="nhãn do máy chấm (label_source=machine, machine_labels.py); chỉ train/dev, ghi machine_labeled")
+    args = ap.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")
 
     if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,79}", args.name):
         ap.error("--name chỉ gồm chữ/số/gạch nối/gạch dưới, tối đa 80 ký tự")
     if not 0 <= args.warmup <= 100:
         ap.error("--warmup cần nằm trong 0..100")
+    if args.machine_labels and (args.split not in ("train", "dev") or args.allow_unverified or args.confirm_locked_test):
+        ap.error("--machine-labels chỉ dùng với --split train/dev, không kèm --allow-unverified hay locked test")
+    locked_id = None
+    if args.split == "test":
+        if not args.confirm_locked_test or args.allow_unverified or args.no_write:
+            ap.error("split test là locked test: cần --confirm-locked-test, phải ghi run, không nhận --allow-unverified")
+        try:
+            locked_id = locked_ledger.require_open("keyword")
+        except locked_ledger.LedgerError as exc:
+            ap.error(str(exc))
     snap = load_snapshot(args.catalog, include_drafts=args.include_drafts)
     try:
         queries = load_queries(args.queries, {p["id"] for p in snap.data["products"]},
-                               args.split, args.allow_unverified)
+                               args.split, args.allow_unverified or args.machine_labels)
+        machine = [q for q in queries if q.get("label_source") == "machine"]
+        if args.machine_labels and (len(machine) != len(queries) or any(q["verified"] for q in machine)
+                                    or any(q.get("catalog_sha256") != snap.sha256 for q in machine)):
+            raise ValueError("--machine-labels cần mọi dòng label_source=machine, verified=false, đúng catalog hiện hành")
+        if machine and not args.machine_labels:
+            raise ValueError("File có nhãn máy; chạy với --machine-labels để ghi đúng trạng thái")
         hidden = {pid for q in queries for pid in q["relevance"]} - set(snap.products)
         if hidden:
             raise ValueError("Nhãn tham chiếu sản phẩm không hiển thị; kiểm tra --include-drafts")
@@ -199,7 +223,9 @@ def main() -> int:
 
     unverified = sum(1 for q in queries if not q.get("verified"))
     print(json.dumps(metrics, ensure_ascii=False, indent=2))
-    if unverified:
+    if args.machine_labels:
+        print("Nhãn MÁY chấm (không phải người duyệt): báo cáo là baseline nhãn máy, không dùng cho locked test.")
+    elif unverified:
         print(f"CẢNH BÁO: {unverified}/{len(queries)} truy vấn có nhãn chưa được người kiểm tra duyệt — "
               f"không dùng làm baseline.")
     if metrics["queries_with_unjudged_results"]:
@@ -207,9 +233,10 @@ def main() -> int:
 
     if not args.no_write:
         now = datetime.now(timezone(timedelta(hours=7)))
-        out = ROOT / "experiments" / "results" / f"{now:%Y%m%d-%H%M%S-%f}_keyword_{args.name}"
+        out = args.out_root / f"{now:%Y%m%d-%H%M%S-%f}_keyword_{args.name}"
         out.mkdir(parents=True, exist_ok=False)
-        code_paths = sorted((ROOT / "backend/app").rglob("*.py")) + [Path(__file__), ROOT / "database.schema.json"]
+        code_paths = sorted((ROOT / "backend/app").rglob("*.py")) + [Path(__file__), Path(locked_ledger.__file__),
+                                                                     ROOT / "database.schema.json"]
         code_hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in code_paths}
         run = {
             "name": args.name,
@@ -217,13 +244,16 @@ def main() -> int:
             "queries_file": str(args.queries.relative_to(ROOT)) if args.queries.is_relative_to(ROOT) else str(args.queries),
             "queries_sha256": hashlib.sha256(args.queries.read_bytes()).hexdigest(),
             "catalog_version": snap.version, "catalog_sha256": snap.sha256, "include_drafts": args.include_drafts,
-            "split": args.split, "unverified_queries": unverified,
-            "evaluation_status": "smoke_unverified" if unverified else "incomplete_judgments" if metrics["queries_with_unjudged_results"] else "reviewed_pool",
+            "split": args.split, "unverified_queries": unverified, "locked_test_id": locked_id,
+            "evaluation_status": ("machine_labeled" if args.machine_labels else "smoke_unverified") if unverified
+            else "incomplete_judgments" if metrics["queries_with_unjudged_results"] else "reviewed_pool",
+            "label_source": "machine" if args.machine_labels else ("human" if not unverified else "unverified_draft"),
             "metric_policy": "Unjudged in top K => metric null; averages use eligible queries only. IDCG/Recall denominator uses known labels, not assumed complete relevance of catalog.",
             "latency_protocol": {"warmup_rounds": args.warmup, "measured_passes": 1, "scope": "in-process search only, excludes loading/index/API", "p50": "median", "p95": "nearest-rank"},
             "selected_qids": [q["qid"] for q in queries],
             "config": {**{name: sorted(value) if isinstance(value, set) else value
                             for name, value in vars(engine_mod).items() if name.isupper()},
+                       "search": eng.config.to_dict(),
                        "bm25": {"k1": next(iter(eng.index.fields.values())).k1,
                                 "b": next(iter(eng.index.fields.values())).b}},
             "environment": {"python": platform.python_version(), "platform": platform.platform()},
@@ -235,7 +265,9 @@ def main() -> int:
         (out / "run.json").write_text(json.dumps(run, ensure_ascii=False, indent=2), encoding="utf-8")
         (out / "predictions.jsonl").write_text(
             "\n".join(json.dumps(r, ensure_ascii=False) for r in rows) + "\n", encoding="utf-8")
-        print(f"Đã ghi {out.relative_to(ROOT)}")
+        if locked_id:
+            locked_ledger.record_run(locked_id, "keyword", out)
+        print(f"Đã ghi {out}")
     return 0
 
 

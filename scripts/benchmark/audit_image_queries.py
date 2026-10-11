@@ -2,6 +2,7 @@
 
 Checks bytes/checksums, not image decoding, near duplicates, rights authenticity
 or human judgment quality. Does not generate queries/labels, lock splits or run ML.
+With --split-plan, query families must sit in the split planned by plan_splits.py.
 """
 from __future__ import annotations
 
@@ -20,6 +21,7 @@ sys.path.insert(0, str(ROOT / "backend"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from app.catalog.validation import validate_catalog, inspect_image_file
 from family_registry import validate_registry, resolve_family
+from plan_splits import validate_plan
 
 SCHEMA = ROOT / "benchmarks/image/manifest.schema.json"
 MAX_BYTES = 25 * 1024 * 1024
@@ -30,11 +32,12 @@ def digest(raw):
 
 
 def audit(manifest_path: Path, catalog_path: Path, families_path: Path | None = None,
-          require_families: bool = False) -> dict:
+          require_families: bool = False, split_plan_path: Path | None = None) -> dict:
     report = {"status": "invalid", "issues": [], "files": [], "inputs": [],
               "scope": "File bytes/hash and declared provenance only; no decoding, perceptual dedup, rights verification or benchmark approval.",
               "benchmark_approved": False}
     report["family_registry"] = {"status": "not_checked", "sha256": None, "pending_qids": []}
+    report["split_plan"] = {"status": "not_checked", "sha256": None}
 
     def issue(code, location, message, level="error"):
         report["issues"].append({"level": level, "code": code, "path": location, "message": message})
@@ -75,6 +78,23 @@ def audit(manifest_path: Path, catalog_path: Path, families_path: Path | None = 
         elif require_families and manifest["samples"]:
             issue("family_registry_required", "family_registry", "Use --families with a reviewed registry before evaluation.")
             return report
+        plan_splits = None
+        if split_plan_path is not None:
+            raw = split_plan_path.read_bytes()
+            report["inputs"].append({"kind": "split_plan", "path": str(split_plan_path), "sha256": digest(raw)})
+            if mapping is None:
+                issue("split_plan_needs_registry", "split_plan", "--split-plan resolves families through --families.")
+                return report
+            try:
+                plan = json.loads(raw)
+                plan_splits = validate_plan(plan, manifest["catalog_sha256"], report["family_registry"]["sha256"],
+                                            allow_proposed=True)
+            except (ValueError, TypeError, KeyError) as exc:
+                issue("split_plan_invalid", "split_plan", str(exc))
+                return report
+            report["split_plan"].update(status=plan["status"], sha256=digest(raw))
+            if plan["status"] != "locked":
+                issue("split_plan_not_locked", "split_plan", "Plan is proposed, not locked; fine for a pilot only.", "warning")
         products = {p["id"]: p for p in catalog["products"] if p["status"] == "published"
                     or manifest["include_drafts"] and p["status"] == "draft"}
         gallery_hashes, gallery_paths = set(), set()
@@ -140,6 +160,9 @@ def audit(manifest_path: Path, catalog_path: Path, families_path: Path | None = 
                     issue("family_mismatch", loc, error)
                 if canonical is not None:
                     group_values["registry_family"] = canonical
+                    planned = plan_splits.get(canonical) if plan_splits is not None else None
+                    if planned is not None and planned != split:
+                        issue("split_plan_mismatch", loc, f"Family {canonical} is planned for {planned}, not {split}.")
                 elif not error:
                     pending["family_review"] += 1
                     report["family_registry"]["pending_qids"].append(qid)
@@ -232,6 +255,8 @@ def markdown(report):
              f"- Thời điểm: {report['generated_at']}", "", report["scope"], "",
              "Không phải quyết định cho phép benchmark. Chưa giải mã ảnh, kiểm tra gần trùng, xác minh quyền hoặc nhãn.", ""]
     lines.append(f"- Registry họ: `{report['family_registry']['status']}`; SHA-256: `{report['family_registry']['sha256']}`.")
+    plan = report.get("split_plan", {})
+    lines.append(f"- Kế hoạch split: `{plan.get('status')}`; SHA-256: `{plan.get('sha256')}`.")
     for i in report["inputs"]:
         lines.append(f"- {i['kind']}: `{i['path']}` — SHA-256 `{i['sha256']}`")
     if "summary" in report:
@@ -249,10 +274,11 @@ def main():
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
     ap.add_argument("--families", type=Path, help="families.json đã duyệt, cùng catalog")
     ap.add_argument("--require-families", action="store_true", help="từ chối bộ có mẫu nếu thiếu registry")
+    ap.add_argument("--split-plan", type=Path, help="benchmarks/splits/image_families.json (proposed/locked), cần --families")
     ap.add_argument("--report-dir", type=Path, default=ROOT / "reports/benchmark")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
-    report = audit(args.manifest, args.catalog, args.families, args.require_families)
+    report = audit(args.manifest, args.catalog, args.families, args.require_families, args.split_plan)
     now = datetime.now().astimezone()
     report.update(generated_at=now.isoformat(timespec="seconds"),
                   audit_code_sha256=digest(Path(__file__).read_bytes()))

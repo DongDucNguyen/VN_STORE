@@ -25,7 +25,7 @@ Audio giọng nói là dữ liệu cá nhân. Manifest chỉ dùng mã người 
 | `device`, `environment` | Mã thiết bị; `quiet`, `noisy`, `cafe`, `street`, `unknown` |
 | `split` | `train`, `dev`, `test` |
 | `tags` | Tùy chọn: `brand`, `price`, `negation`, `code_switch`, `out_of_catalog`… để lọc ca khó |
-| `keyword_qid` | Tùy chọn: qid của bộ keyword có nhãn relevance, để đo end-to-end sau này |
+| `keyword_qid` | qid của bộ keyword có nhãn relevance; bắt buộc cho mỗi clip có lời nói khi chạy `--queries`, bỏ trống cho im lặng |
 | `consent` | `{status: unknown|granted, evidence}`; `granted` phải có evidence |
 | `transcript_review` | `null` hoặc `{reviewed_by, reviewed_at}` sau khi người thứ hai nghe lại tên riêng |
 
@@ -34,7 +34,7 @@ Audio giọng nói là dữ liệu cá nhân. Manifest chỉ dùng mã người 
 Chạy frontend (`npm run dev`) rồi mở `http://localhost:5173/#/collect/voice` trên máy/điện thoại của phiên thu. Trang này không cần backend và không gửi audio đi đâu.
 
 1. Người điều phối nhập mã người nói, vùng giọng (người nói tự khai), mã thiết bị, môi trường, **split nhóm dữ liệu đã phân cho người nói này** và mã hồ sơ đồng ý, rồi tích ô đồng ý. Thiếu một mục thì nút ghi bị khóa.
-2. Người nói đọc tự nhiên từng câu mẫu ([prompts.ts](../../frontend/src/collect/prompts.ts), 24 câu gồm thương hiệu, làng nghề, giá, phủ định, xen tiếng Anh và một nhu cầu ngoài catalog), sau đó nghe lại hoặc ghi lại. Mỗi lượt tối đa 10 giây.
+2. Người nói đọc tự nhiên từng câu mẫu **của split đã chọn** ([prompts.ts](../../frontend/src/collect/prompts.ts): mỗi split 24 câu riêng gồm thương hiệu, làng nghề, giá, phủ định, xen tiếng Anh, nhu cầu ngoài catalog; dev giữ bộ `p01–p24` cũ, train `tr01–tr24`, test `te01–te24`), sau đó nghe lại hoặc ghi lại. Mỗi lượt tối đa 10 giây. Đã ghi câu nào thì không đổi split được nữa.
 3. Bấm **Tải file zip của phiên**: file gồm `manifest.json` đúng schema 1.0.0 và `raw/<qid>.wav` (16 kHz mono PCM16), với qid = `<người nói>-<thời điểm>-<mã câu>`.
 4. Nhóm dữ liệu nhập file:
 
@@ -43,7 +43,9 @@ Chạy frontend (`npm run dev`) rồi mở `http://localhost:5173/#/collect/voic
 .venv/Scripts/python scripts/benchmark/import_voice_session.py voice-<...>.zip             # nhập
 ```
 
-Script kiểm tra tên file trong zip, schema, hash, WAV giải mã được theo giới hạn API, qid trùng và người nói ở nhiều split; có lỗi thì không ghi gì. `reference_text` ban đầu là câu mẫu. Người duyệt phải nghe lại, sửa câu nếu người nói đọc khác, rồi mới điền `transcript_review` (dùng trang `#/review/voice` bên dưới). Ghi âm trên trình duyệt có thể đã qua khử vọng (echo cancellation), còn khử ồn được tắt.
+Script kiểm tra tên file trong zip, schema, hash, WAV giải mã được theo giới hạn API, qid trùng, người nói ở nhiều split và **câu ở nhiều split**; có lỗi thì không ghi gì.
+
+**Bộ câu tách theo split (11/10/2026).** Trước đây mọi người nói đọc cùng 24 câu. Như vậy fine-tune ASR trên người nói train sẽ học thuộc đúng văn bản của test, và một câu ở cả dev lẫn test không gắn được nhãn keyword (evaluator từ chối cùng câu ở hai split). Nay `import_voice_session.py`, `apply_voice_review.py` và `load_manifest` của `eval_voice.py` từ chối khi một câu, sau chuẩn hóa của `asr_metrics.py` (NFC, chữ thường, bỏ dấu câu, giữ dấu tiếng Việt), xuất hiện ở hai split. Nếu người nói đọc nhầm sang câu của split khác thì ghi lại câu đúng hoặc bỏ clip. Hai bộ train/test mới do Claude soạn theo catalog `seed-004`; nhóm dữ liệu cần rà soát trước phiên thu đầu tiên. `reference_text` ban đầu là câu mẫu. Người duyệt phải nghe lại, sửa câu nếu người nói đọc khác, rồi mới điền `transcript_review` (dùng trang `#/review/voice` bên dưới). Ghi âm trên trình duyệt có thể đã qua khử vọng (echo cancellation), còn khử ồn được tắt.
 
 ## Duyệt bản chép lời bằng trang `#/review/voice` (thêm 10/10/2026)
 
@@ -91,7 +93,59 @@ Công cụ chỉ so clip cả hai đã xác nhận; bản chép lời khác nhau
 
 Trước khi có dữ liệu, `scripts/benchmark/make_fleurs_smoke.py` tạo bộ smoke trong `artifacts/voice_smoke/` từ FLEURS vi_vn dev (CC-BY-4.0): câu đọc kèm một clip nhiễu trắng. Chạy với `--manifest artifacts/voice_smoke/fleurs-vi-dev/manifest.json --allow-unreviewed`. FLEURS không có mã người nói và không phải truy vấn mua sắm, nên chỉ dùng để kiểm tra adapter. Kết quả đầu tiên nằm trong [báo cáo](../../reports/progress/2026-10-10_GD4_adapter-onnx-model-that.md).
 
-Chưa có: end-to-end nDCG qua `keyword_qid`, n-best/contextual biasing. Bootstrap CI theo người nói: xem mục dưới. Không so WER giữa hai bộ test hoặc hai chính sách chuẩn hóa khác nhau.
+Chưa có: n-best/contextual biasing. Bootstrap CI theo người nói: xem mục dưới. Không so WER giữa hai bộ test hoặc hai chính sách chuẩn hóa khác nhau.
+
+### Chuẩn bị nhãn relevance cho bản chép lời đã duyệt (P1.15, thêm 11/10/2026)
+
+```bash
+# 1. Truy vấn nháp CHƯA CÓ NHÃN từ clip đã duyệt, chưa liên kết (một split mỗi lần):
+.venv/Scripts/python scripts/benchmark/prepare_voice_queries.py draft --split dev --out benchmarks/voice/relevance/<ngay>_dev     --keyword-file benchmarks/keyword/dev_candidates_unverified.jsonl
+# 2. Packet chấm như keyword, hai người chấm + phân xử (benchmarks/keyword/review_protocol.md):
+.venv/Scripts/python scripts/benchmark/prepare_review.py --queries benchmarks/voice/relevance/<ngay>_dev/queries.jsonl     --include-drafts --pool-top 10 --random 5 --out artifacts/keyword_review/<thu-muc-moi>
+.venv/Scripts/python scripts/benchmark/audit_reviews.py --packet artifacts/keyword_review/<thu-muc-moi>/packet.json --include-drafts --review <a>.jsonl --review <b>.jsonl
+# 3. Gắn keyword_qid vào manifest (dry-run trước), rồi đo bằng eval_voice.py --queries <nhãn-đã-phân-xử>.jsonl:
+.venv/Scripts/python scripts/benchmark/prepare_voice_queries.py apply benchmarks/voice/relevance/<ngay>_dev/links.json <nhan-da-phan-xu>.jsonl --dry-run
+```
+
+- **Bước draft** chỉ lấy clip có `transcript_review`, có lời nói, consent `granted` và chưa có `keyword_qid`; báo số clip bị bỏ theo lý do. Mỗi câu (sau chuẩn hóa) thành một truy vấn `vq-<split>-<hash>` và giữ danh sách `voice_clips`. Các câu đọc từ cùng câu mẫu (đuôi qid `-p01`…) chung `group_id = vg-<mã câu>`, kể cả khi người nói đọc khác câu mẫu. `relevance` rỗng, `verified=false`, `labeled_by=unlabeled-voice-draft`: không phải nhãn.
+- `links.json` ghi clip → qid kèm hash bản chép lời, hash catalog, hash manifest và truy vấn. `--keyword-file` dừng lại nếu cùng câu đã có ở split khác của bộ keyword; câu trùng cùng split chỉ được liệt kê, không tự dùng nhãn cũ.
+- **Bước apply** chỉ ghi khi đủ các điều kiện sau, nếu không thì không ghi gì:
+  - catalog hiện tại trùng catalog lúc tạo nháp và `catalog_sha256` của nhãn;
+  - nhãn `verified`, query khớp bản chép lời và cùng split, no-match chấm đủ catalog;
+  - bản chép lời chưa đổi hoặc chưa bị bỏ duyệt từ bước draft;
+  - clip chưa liên kết qid khác (không ghi đè).
+
+  Manifest mới được kiểm tra lại schema, file, hash và split trước khi thay nguyên khối.
+
+### Chất lượng tìm kiếm từ ASR so với transcript chuẩn (P1.13)
+
+```bash
+.venv-ml/Scripts/python scripts/benchmark/eval_voice.py --adapter app.ml.asr:PhoWhisperSmall --split dev --queries benchmarks/keyword/<nhan-da-duyet>.jsonl --name voice-retrieval
+```
+
+Chạy sau khi thu clip, duyệt transcript và chấm relevance của đúng bản chép lời. Không dùng sẵn relevance của một câu có ý nghĩa gần giống. Manifest thật hiện vẫn rỗng, chưa có kết quả chất lượng VNStore.
+
+- Mỗi clip có lời nói cần `keyword_qid` tồn tại, cùng split; `reference_text` phải khớp `query` sau chuẩn hóa của `asr_metrics.py` (giữ dấu, không quy đổi số). Nhãn cần `catalog_sha256` khớp catalog hiện tại. Kiểm tra toàn bộ file để phát hiện liên kết/split sai trước khi nạp model.
+- Mặc định tìm trên published; dùng `--include-drafts` để đo nội bộ trên draft. Nhãn phải thuộc đúng tập sản phẩm hiển thị. No-match phải có nhãn cho toàn gallery. Clip im lặng không liên kết relevance và vẫn được đo hallucination riêng.
+- Chạy cùng `SearchEngine` cho transcript chuẩn và kết quả ASR. ASR rỗng hoặc gate chặn tương ứng danh sách kết quả rỗng, giống API. Không dùng hành vi duyệt catalog của truy vấn trống.
+- `metrics.retrieval.paired.ndcg_10` và `.success_5` có `reference`, `asr`, `drop`, `n`, `eligible_qids`. **drop = chuẩn − ASR**; Success drop 0,10 tương ứng giảm 10 điểm phần trăm. Chỉ lấy trung bình trên cùng cặp clip đủ nhãn ở cutoff. Thiếu nhãn trả null và ghi `incomplete_qids`, không coi là relevance 0. nDCG dùng gain `2^rel-1`; Success dùng relevance ≥2. IDCG theo nhãn đã chấm trong pool.
+- `no_match` báo false accept riêng; `by_group` tách vùng giọng, thiết bị và môi trường. Predictions lưu cả hai danh sách top 20, metric từng clip và kết quả chưa chấm ở top 10.
+- `run.retrieval` ghi hash JSONL, liên kết qid, hash mã tìm kiếm, visibility và chính sách metric. `status` là `reviewed_pool`, `incomplete_judgments` hoặc `smoke_unreviewed`. Nhãn chưa duyệt chỉ chạy train/dev với `--allow-unreviewed`; không dùng smoke để chọn model.
+- Đây là **chất lượng retrieval end-to-end offline**. `asr_ms` vẫn chỉ đo lời gọi adapter, không phải độ trễ từ trình duyệt đến kết quả. Không tự kết luận đạt PLAN từ một pool nhỏ/thiếu nhãn.
+
+## Sàng lọc nhiều cấu hình (GĐ4, thêm 11/10/2026)
+
+```bash
+.venv-ml/Scripts/python scripts/benchmark/screen_models.py run --modality voice --split dev [--queries <nhãn>.jsonl]
+```
+
+- Cấu hình nằm trong [experiments/configs/screening.json](../../experiments/configs/screening.json): 4 cấu hình PhoWhisper (base, base-fp16, small, small-int8). Mỗi cấu hình chạy evaluator trong **tiến trình riêng** để RAM/VRAM/cold start không lẫn nhau; `env` chỉ nhận biến `VNSTORE_*` (ví dụ `VNSTORE_ML_DEVICE=cpu`, `VNSTORE_ML_TRT=1`).
+- Lỗi, OOM, timeout được ghi thành dòng riêng của bảng, không bị bỏ qua (PLAN §8.3 bước 2). Manifest chưa có mẫu thì báo `pending_collection` và không ghi bảng. Không nhận split `test`.
+- Bảng ghi vào `reports/model_selection/<thời điểm>_voice-screening.{md,json}`: WER/CER, WER của vùng giọng kém nhất, độ đúng giá/phủ định, bịa chữ khi im lặng, Success@5 từ ASR và mức giảm so với transcript chuẩn (khi có `--queries`); độ trễ p50/p95 phần model, cold start, đỉnh VRAM toàn máy và phần tăng so với lúc rảnh, đỉnh RAM tiến trình, dung lượng file model (tính từ file adapter đã nạp). Mỗi cấu hình so với cấu hình có metric chính tốt nhất bằng paired bootstrap theo người nói; ★ là Pareto theo (metric chính, p95, dung lượng, đỉnh RAM, VRAM tăng thêm).
+- Có run smoke thì tiêu đề là "SMOKE" và không có gợi ý ứng viên. Chỉ khi mọi run là dev đã duyệt và đủ ≥5 cụm, bảng mới gợi ý 2 ứng viên: tốt nhất theo metric chính, và cấu hình rẻ nhất trong nhóm chưa phân biệt được với nó (PLAN §8.3 bước 3, 6). Người quyết định vẫn phải xem phân nhóm, lỗi và ghi lý do.
+- `summarize <run_dir>…` lập bảng từ các run đã có; khác manifest/split/tập query/catalog thì exit 2.
+- Metric chính: Success@5 từ ASR nếu mọi run có nhãn retrieval, nếu không thì WER chuẩn hóa.
+- Smoke FLEURS 11/10/2026: [bảng](../../reports/model_selection/2026-10-11_104115-083089_voice-screening.md) (31 clip, 1 cụm, không dùng để chọn).
 
 ## So sánh hai run (paired bootstrap)
 
@@ -100,3 +154,5 @@ Chưa có: end-to-end nDCG qua `keyword_qid`, n-best/contextual biasing. Bootstr
 ```
 
 Chỉ so khi cùng manifest, split và tập qid; lệch thì exit 2. Resample theo **người nói** có hoàn lại, cho delta và CI 95% của WER/CER normalized (micro, tính lại từ số lỗi). Dưới 5 cụm có dữ liệu thì không báo CI (ví dụ FLEURS chỉ có 1 cụm vì không có mã người nói). Báo cáo ghi vào `reports/benchmark/`. CI chứa 0 nghĩa là chưa phân biệt được hai cấu hình; công cụ không tự chọn model.
+
+Với run có retrieval, cả hai phải có cùng catalog, file nhãn, liên kết qid, visibility, chính sách metric và mã tìm kiếm; kết quả từ transcript chuẩn cũng phải khớp. Báo thêm CI theo người nói cho nDCG/Success từ ASR, mức giảm so với chuẩn và false accept; chỉ giữ clip có metric ở cả hai run. Run ASR-only cũ vẫn so WER/CER được với nhau.

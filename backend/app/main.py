@@ -126,6 +126,7 @@ def health() -> dict[str, Any]:
             "products_visible": len(s.products),
             "products_total": len(s.data["products"]),
             "include_drafts": s.include_drafts,
+            "publication_mode": (s.data.get("publication_policy") or {}).get("mode", "standard"),
             "warnings": len(s.warnings),
         },
         "search": {"keyword": "ok", "index_build_ms": state.bundle.engine.build_ms,
@@ -323,6 +324,7 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -
     t0 = time.perf_counter()
     try:
         data = await _read_body(request, MAX_AUDIO_BYTES)
+        body_ms = (time.perf_counter() - t0) * 1000
         text, clip, timings = await run_in_threadpool(voice.transcribe, data)
     except MediaError as e:
         return _error(e.status, e.code, e.message)
@@ -334,16 +336,19 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -
     out["mode"] = "voice"
     out["transcript"] = {"text": text, "model_id": voice.status.model_id, "revision": voice.status.revision,
                          "duration_s": round(clip.duration_s, 2), "editable": True}
-    out["timings_ms"] = {**out["timings_ms"], **timings, "total": round((time.perf_counter() - t0) * 1000, 2)}
+    out["timings_ms"] = {**out["timings_ms"], **timings, "body_read": round(body_ms, 2),
+                         "total": round((time.perf_counter() - t0) * 1000, 2)}
     return out
 
 
 @app.post("/search/image")
 async def search_image(request: Request, text: str = Query("", max_length=300),
-                       filters: str = Query("", max_length=4000), limit: int = Query(24, ge=1, le=100)) -> Any:
+                       filters: str = Query("", max_length=4000), limit: int = Query(24, ge=1, le=100),
+                       reuse: bool = Query(False)) -> Any:
     """Body: ảnh JPEG/PNG/WebP (giao diện cắt vùng và bỏ metadata trước khi gửi). Tham số text là yêu cầu
     bổ sung tiếng Việt, ví dụ "có quai, dưới 400k": giá/phủ định là bộ lọc cứng như tìm bằng chữ.
-    filters là JSON cùng dạng với bộ lọc của POST /search (body đã dành cho ảnh nên đi qua query)."""
+    filters là JSON cùng dạng với bộ lọc của POST /search (body đã dành cho ảnh nên đi qua query).
+    reuse=1 khi gửi lại đúng ảnh vừa tìm để đổi bộ lọc: dùng lại embedding/OCR trong bộ nhớ nếu còn."""
     try:
         chosen = SearchFilters(**FiltersIn.model_validate_json(filters or "{}").model_dump())
     except ValidationError:
@@ -355,20 +360,23 @@ async def search_image(request: Request, text: str = Query("", max_length=300),
     t0 = time.perf_counter()
     try:
         data = await _read_body(request, MAX_IMAGE_BYTES)
-        hits, timings = await run_in_threadpool(images.query, data, set(b.snap.products))
+        body_ms = (time.perf_counter() - t0) * 1000
+        out, diagnostics = await run_in_threadpool(images.search, data, b.engine, text, chosen, limit, reuse)
     except MediaError as e:
         return _error(e.status, e.code, e.message)
     except Busy:
         return _error(429, "busy", BUSY_MESSAGE)
     except Exception as e:  # noqa: BLE001
         return _error(503, "model_error", f"Model ảnh gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
-    out = b.engine.search_visual(hits, text, chosen, limit=limit)
+    timings = {k: diagnostics[k + "_ms"] for k in ("validate", "embed", "retrieve", "ocr")}
     out["mode"] = "image"
     out["visual"] = {"model_id": images.status.model_id, "revision": images.status.revision,
-                     "top_similarity": hits[0].similarity if hits else None, "match_label": "similar"}
+                       "top_similarity": diagnostics["top_similarity"], "match_label": "similar",
+                       "query_cache": diagnostics["query_cache"]}
     out["warnings"].append("Kết quả là mẫu giống về hình ảnh, không khẳng định đúng sản phẩm; "
                            "nhãn nguồn gốc lấy từ catalog, không suy ra từ ảnh.")
-    out["timings_ms"] = {**out["timings_ms"], **timings, "total": round((time.perf_counter() - t0) * 1000, 2)}
+    out["timings_ms"] = {**out["timings_ms"], **timings, "body_read": round(body_ms, 2),
+                         "total": round((time.perf_counter() - t0) * 1000, 2)}
     return out
 
 

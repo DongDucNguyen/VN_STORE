@@ -21,6 +21,19 @@
     "places": { "type": "array", "items": { "$ref": "#/$defs/place" } },
     "sources": { "type": "array", "items": { "$ref": "#/$defs/source" } },
     "products": { "type": "array", "items": { "$ref": "#/$defs/product" } },
+    "publication_policy": {
+      "description": "Tùy chọn. Chỉ cho bản demo NỘI BỘ: cho phép sản phẩm published dùng ảnh có quyền 'unknown' (không đổi trạng thái quyền). Không dùng khi công khai.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "allow_unverified_image_rights", "decided_at", "decided_by", "note"],
+      "properties": {
+        "mode": { "const": "internal_demo" },
+        "allow_unverified_image_rights": { "const": true },
+        "decided_at": { "type": "string", "format": "date-time" },
+        "decided_by": { "type": ["string", "null"] },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    },
     "search_dictionary": {
       "type": "object",
       "additionalProperties": false,

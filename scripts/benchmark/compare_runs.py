@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 VOICE = {"wer_normalized": ("word_normalized", "lower"), "cer_normalized": ("char_normalized", "lower")}
 IMAGE = {"recall_1": "higher", "recall_5": "higher", "rr_10": "higher", "ndcg_10": "higher", "ap_10": "higher",
-         "success_5": "higher"}
+         "success_5": "higher", "false_accept": "lower", "false_reject": "lower"}
 
 
 MIN_CLUSTERS = 5  # ít cụm hơn thì bootstrap cho khoảng hẹp giả tạo (1 cụm → một điểm)
@@ -94,9 +94,18 @@ def compare(left: tuple[dict, list[dict]], right: tuple[dict, list[dict]], sampl
     if kind_of(rrows) != kind:
         raise Incomparable("Hai run khác loại")
     if kind == "image":
-        for key in ("family_registry_sha256", "family_grouping_policy"):
+        for key in ("family_registry_sha256", "family_grouping_policy", "catalog_sha256", "include_drafts", "split_plan"):
             if lrun.get(key) != rrun.get(key):
                 raise Incomparable(f"Khác {key}; không so run dùng registry/quy tắc nhóm khác nhau")
+    retrieval = kind == "voice" and (lrun.get("retrieval") is not None or rrun.get("retrieval") is not None)
+    if retrieval:
+        if lrun.get("retrieval") is None or rrun.get("retrieval") is None:
+            raise Incomparable("Một run thiếu retrieval; chạy lại với cùng --queries")
+        if lrun.get("catalog_sha256") != rrun.get("catalog_sha256"):
+            raise Incomparable("Khác catalog_sha256")
+        for key in ("queries_sha256", "policy", "include_drafts", "search_code_sha256", "search_config", "links"):
+            if lrun["retrieval"].get(key) != rrun["retrieval"].get(key):
+                raise Incomparable(f"Khác retrieval.{key}")
     for key in ("manifest_sha256", "split"):
         if lrun.get(key) != rrun.get(key):
             raise Incomparable(f"Khác {key}: {lrun.get(key)} ≠ {rrun.get(key)}")
@@ -108,6 +117,11 @@ def compare(left: tuple[dict, list[dict]], right: tuple[dict, list[dict]], sampl
     for qid in sorted(lby):
         if lby[qid][cluster_key] != rby[qid][cluster_key]:
             raise Incomparable(f"{qid}: {cluster_key} khác giữa hai run")
+        if retrieval:
+            for key in ("keyword_qid", "retrieval_has_answer", "reference_predictions", "reference_ndcg_10",
+                        "reference_success_5", "reference_false_accept"):
+                if lby[qid].get(key) != rby[qid].get(key):
+                    raise Incomparable(f"{qid}: khác {key} của transcript chuẩn")
         g = groups.setdefault(lby[qid][cluster_key], ([], []))
         g[0].append(lby[qid])
         g[1].append(rby[qid])
@@ -117,6 +131,15 @@ def compare(left: tuple[dict, list[dict]], right: tuple[dict, list[dict]], sampl
         for name, (key, better) in VOICE.items():
             metrics[name] = {**bootstrap(clusters, lambda rs, key=key: micro(rs, key), samples, seed),
                              "better": better}
+        if retrieval:
+            for name, better in {"asr_ndcg_10": "higher", "asr_success_5": "higher",
+                                 "ndcg_10_drop": "lower", "success_5_drop": "lower",
+                                 "asr_false_accept": "lower"}.items():
+                paired = [([a for a, b in zip(c[0], c[1]) if a.get(name) is not None and b.get(name) is not None],
+                           [b for a, b in zip(c[0], c[1]) if a.get(name) is not None and b.get(name) is not None])
+                          for c in clusters]
+                metrics[name] = {**bootstrap(paired, lambda rs, key=name: mean_of(rs, key), samples, seed),
+                                 "better": better, "queries": sum(len(c[0]) for c in paired)}
     else:
         for name, better in IMAGE.items():
             # Chỉ giữ query có metric ở cả hai run để so cặp đúng nghĩa.

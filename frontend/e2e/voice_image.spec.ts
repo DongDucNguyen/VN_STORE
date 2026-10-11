@@ -171,6 +171,7 @@ test.describe("Tìm bằng ảnh", () => {
     await panel.getByRole("checkbox", { name: /^cói/ }).check();
     const req = await sent;
     expect(JSON.parse(new URL(req.url()).searchParams.get("filters")!).materials).toEqual(["cói"]);
+    expect(new URL(req.url()).searchParams.get("reuse")).toBe("1"); // only filter changes may use server cache
     await expect(page.getByRole("region", { name: "Cách hệ thống hiểu truy vấn" }).getByText("Chất liệu: cói"))
       .toBeVisible();
     await expect(cardTitles(page).filter({ hasText: "Khăn lụa" })).toHaveCount(0);

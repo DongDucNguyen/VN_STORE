@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Notice } from "../components/common";
-import { PROMPTS } from "../collect/prompts";
+import { isSplit, PROMPT_SETS } from "../collect/prompts";
 import { makeZip, sha256Hex } from "../collect/zip";
 import { MAX_RECORD_SECONDS, MicError, Recorder } from "../media";
 
@@ -48,6 +48,8 @@ export function CollectVoicePage() {
   }, [active]);
 
   const ready = ID.test(speaker) && ID.test(device) && !!split && consent && evidence.trim().length > 0;
+  // Mỗi split đọc bộ câu riêng; đã ghi thì khóa split để clip không lẫn bộ câu.
+  const prompts = isSplit(split) ? PROMPT_SETS[split] : [];
 
   async function start(id: string) {
     setError(null);
@@ -82,7 +84,7 @@ export function CollectVoicePage() {
   async function exportZip() {
     const files: { name: string; data: Uint8Array }[] = [];
     const samples = [];
-    for (const p of PROMPTS) {
+    for (const p of prompts) {
       const t = takes[p.id];
       if (!t) continue;
       const qid = `${speaker}-${session.current}-${p.id}`;
@@ -134,7 +136,7 @@ export function CollectVoicePage() {
           </select>
         </label>
         <label>Split (do nhóm dữ liệu phân cho người nói này)
-          <select value={split} onChange={(e) => setSplit(e.target.value)}>
+          <select value={split} onChange={(e) => setSplit(e.target.value)} disabled={done > 0}>
             <option value="">— chọn —</option>
             <option value="train">train</option>
             <option value="dev">dev</option>
@@ -149,12 +151,14 @@ export function CollectVoicePage() {
         </label>
         {!ready && <p className="muted small">Mã người nói/thiết bị: chữ thường, số, gạch nối. Cần đủ thông tin và đồng ý
           trước khi ghi.</p>}
+        {done > 0 && <p className="muted small">Đã có bản ghi nên không đổi split được; mỗi split dùng bộ câu riêng.</p>}
       </fieldset>
 
       {error && <div className="notice notice-warn" role="alert">{error}</div>}
 
+      {!split && <p className="muted">Chọn split để hiện bộ câu mẫu của split đó.</p>}
       <ol className="prompt-list">
-        {PROMPTS.map((p) => {
+        {prompts.map((p) => {
           const t = takes[p.id];
           const live = active === p.id;
           return (
@@ -182,7 +186,7 @@ export function CollectVoicePage() {
       </ol>
 
       <div className="collect-export">
-        <p>Đã ghi {done}/{PROMPTS.length} câu.</p>
+        <p>Đã ghi {done}/{prompts.length} câu.</p>
         <button className="btn btn-primary" disabled={!ready || !done || !!active} onClick={() => void exportZip()}>
           Tải file zip của phiên
         </button>

@@ -1,0 +1,47 @@
+{
+  "status": "descriptive_browser_timings",
+  "benchmark_approved": false,
+  "groups": [
+    {
+      "kind": "keyword",
+      "catalog_version": "seed-005-published-internal-demo",
+      "model_id": null,
+      "revision": null,
+      "cached": false,
+      "n_total": 119,
+      "warmup_discarded": 1,
+      "n_measured": 118,
+      "p50_ms": 45.5,
+      "p95_ms": 90.1,
+      "first_observation_ms": 39.6,
+      "sample_warning": null
+    }
+  ],
+  "outcomes": {
+    "keyword": {
+      "succeeded": 119,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 119,
+      "error_rate": 0.0
+    },
+    "voice": {
+      "succeeded": 0,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 0,
+      "error_rate": null
+    },
+    "image": {
+      "succeeded": 0,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 0,
+      "error_rate": null
+    }
+  },
+  "scope": "keyword request / voice stop / image submit to result paint; excludes speech duration and product image downloads",
+  "limitations": "Latency uses successes only; failures/cancellations are counted per modality (v2 exports) and must be reported with it. v1 exports carry no failure counts. First observation is not proof of cold model. No quality or network-generalization claim.",
+  "input_sha256": "e124e095f13adec454329791015e3b08a1367af964a3823e2eaf3f9ed251e478",
+  "context": "RTX 5070 Ti; Chrome mobile (mobile = Pixel 7 giả lập, không phải thiết bị thật); localhost; catalog seed-005 328 published; 119 truy vấn keyword dev+seed; API thật, không fixture"
+}

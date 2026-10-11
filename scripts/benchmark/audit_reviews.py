@@ -87,6 +87,12 @@ def validate_export(rows: list[dict], packet: dict, products: set[str]) -> str:
                 raise ValueError("timezone missing")
         except (KeyError, TypeError, ValueError) as exc:
             raise ValueError(f"{qid}: reviewed_at cần ISO datetime có múi giờ") from exc
+        assist = q.get("assist")
+        if assist is not None and (not isinstance(assist, dict) or not isinstance(assist.get("suggestions_sha256"), str)
+                                   or any(type(assist.get(k)) is not int or assist[k] < 0
+                                          for k in ("applied", "kept_unchanged", "changed"))
+                                   or assist["applied"] != assist["kept_unchanged"] + assist["changed"]):
+            raise ValueError(f"{qid}: trường assist (gợi ý máy) sai định dạng")
         reviewers.add(identity(q["labeled_by"]))
     if len(reviewers) != 1:
         raise ValueError("Mỗi file export cần một người kiểm tra nhất quán")
@@ -142,11 +148,26 @@ def audit(packet: dict, exports: list[list[dict]], catalog_hash: str, visible_id
               "scope": "Kiểm tra cấu trúc và tính nhất quán của export đầy đủ; không xác thực danh tính, tính độc lập, nội dung chấm hay quyết định nghiệm thu benchmark.",
               "exports": [{"queries": len(rows), "grade_counts": dict(sorted(Counter(
                     str(grade) for q in rows for grade in q["relevance"].values()).items())),
-                    "no_answer_queries": sum(not q["has_answer"] for q in rows)} for rows in exports]}
+                    "no_answer_queries": sum(not q["has_answer"] for q in rows),
+                    "assisted": assist_summary(rows)} for rows in exports]}
+    if len(exports) == 2 and all(e["assisted"] for e in report["exports"]):
+        report["independence_warning"] = ("Cả hai file dùng packet có gợi ý máy: hai bản chấm không độc lập, "
+                                           "tỷ lệ đồng ý có thể bị thổi phồng. Người chấm thứ hai cần packet không gợi ý.")
     if len(exports) == 2:
         report["comparison"] = compare_exports(exports[0], exports[1], products)
         report["status"] = "requires_adjudication" if report["comparison"]["requires_adjudication"] else "agreement_recorded"
     return report
+
+
+def assist_summary(rows: list[dict]) -> dict | None:
+    assisted = [q["assist"] for q in rows if q.get("assist") is not None]
+    if not assisted:
+        return None
+    applied = sum(a["applied"] for a in assisted)
+    changed = sum(a["changed"] for a in assisted)
+    return {"queries": len(assisted), "applied": applied, "kept_unchanged": applied - changed, "changed": changed,
+            "suggestions_sha256": sorted({a["suggestions_sha256"] for a in assisted}),
+            "note": "Tỷ lệ sửa thấp không chứng minh gợi ý đúng; người phân xử nên kiểm tra mẫu ngẫu nhiên."}
 
 
 def read_jsonl(raw: bytes) -> list[dict]:
@@ -171,6 +192,12 @@ def markdown(report: dict) -> str:
         lines += [report["scope"], "", f"- {report['queries']} query × {report['products']} sản phẩm; {scope}.",
                   f"- Số file người kiểm tra: {len(report['reviewers'])}.",
                   f"- Catalog SHA-256: `{report['catalog_sha256']}`", ""]
+        for i, e in enumerate(report["exports"], 1):
+            if e.get("assisted"):
+                a = e["assisted"]
+                lines.append(f"- File {i} dùng gợi ý máy: áp {a['applied']} cặp, giữ nguyên {a['kept_unchanged']}, sửa {a['changed']}.")
+        if report.get("independence_warning"):
+            lines += ["", f"**Cảnh báo độc lập:** {report['independence_warning']}", ""]
         if not report["reviewers"]:
             lines.append("Packet đã sẵn sàng để chấm; chưa cung cấp file nhãn người duyệt, chưa có baseline chính thức.")
         if "comparison" in report:

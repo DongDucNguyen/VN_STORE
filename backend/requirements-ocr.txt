@@ -1,0 +1,2 @@
+# Install into .venv-ml, which already has onnxruntime-gpu. Do not install CPU ORT over it.
+rapidocr==3.4.1

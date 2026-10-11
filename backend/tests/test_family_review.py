@@ -159,3 +159,96 @@ def test_packet_from_current_proposal(tmp_path):
     stale = {**json.loads(raw), "catalog_sha256": "0" * 64}
     with pytest.raises(ValueError, match="catalog khác"):
         pfr.make_packet(stale, "x", snap, out)
+
+
+def test_carry_drafts_only_from_identical_proposal_content(tmp_path):
+    """Catalog đổi nhưng đề xuất giữ nguyên: trang mới nhận bản nháp cũ; nội dung khác thì từ chối."""
+    raw = (REPO_ROOT / "benchmarks/families/proposal.json").read_bytes()
+    snap = load_snapshot(REPO_ROOT / "database.json", include_drafts=True)
+    new = pfr.make_packet(json.loads(raw), "n" * 64, snap, tmp_path / "new")
+    old = {**json.loads(json.dumps(new)), "proposal_sha256": "o" * 64, "catalog_sha256": "0" * 64,
+           "catalog_version": "cu", "compatible_proposal_sha256": ["q" * 64, "n" * 64]}
+    old["products"] = {pid: {**p, "images": ["../khac/" + i for i in p["images"]]} for pid, p in old["products"].items()}
+    old_path = tmp_path / "old.json"
+    old_path.write_text(json.dumps(old), encoding="utf-8")
+    pfr.carry_drafts(new, [old_path, old_path])
+    assert new["compatible_proposal_sha256"] == ["o" * 64, "q" * 64]
+
+    changed = json.loads(json.dumps(old))
+    pid = next(iter(changed["products"]))
+    changed["products"][pid]["family"] = "fam-khac"
+    changed_path = tmp_path / "changed.json"
+    changed_path.write_text(json.dumps(changed), encoding="utf-8")
+    with pytest.raises(ValueError, match="nội dung đề xuất khác"):
+        pfr.carry_drafts(new, [changed_path])
+    changed_path.write_text(json.dumps({**old, "kind": "keyword_review"}), encoding="utf-8")
+    with pytest.raises(ValueError, match="không phải packet duyệt họ"):
+        pfr.carry_drafts(new, [changed_path])
+
+
+# ---------- gợi ý máy (build_family_suggestions.py) ----------
+import build_family_suggestions as bfs  # noqa: E402
+from types import SimpleNamespace  # noqa: E402
+
+
+def fam_packet():
+    p = proposal()
+    return {"kind": "family_review", "proposal_sha256": "p" * 64, "catalog_sha256": CAT, "families": p["families"],
+            "candidates": [{**c, "key": f"{c['a']}|{c['b']}"} for c in p["visual_candidates"]],
+            "shared": [{"key": "img-x,img-y", "products": ["p-b", "p-c"]}], "compatible_proposal_sha256": []}
+
+
+def suggestion(F=None, C=None, S=None):
+    return SimpleNamespace(F=F or {0: ("split", ["A", "A", "B"], "lý do")},
+                           C=C or {0: ("merge", "lý do"), 1: ("separate", "lý do")}, S=S or {0: ("keep", "lý do")})
+
+
+def test_family_suggestions_are_checked_with_apply_rules():
+    out = bfs.build(suggestion(), fam_packet(), proposal(), "p" * 64)
+    assert out["families"]["fam-a1"]["groups"] == {"p-a1": "A", "p-a2": "A", "p-a3": "B"}
+    assert out["if_all_accepted"]["merge"] == 1 and "không phải quyết định" in out["author"]
+    with pytest.raises(afr.ReviewError, match="Mâu thuẫn"):
+        _contradiction()
+    with pytest.raises(ValueError, match="cover"):
+        bfs.build(suggestion(C={0: ("merge", "x")}), fam_packet(), proposal(), "p" * 64)
+    with pytest.raises(ValueError, match="reason"):
+        bfs.build(suggestion(S={0: ("keep", " ")}), fam_packet(), proposal(), "p" * 64)
+
+
+def _contradiction():
+    # Splitting a1|a3 while a merge candidate joins them again must be rejected like a human export.
+    p, pk = proposal(), fam_packet()
+    p["visual_candidates"].append({"a": "p-a1", "b": "p-a3", "cosine": 0.95})
+    pk["candidates"].append({"a": "p-a1", "b": "p-a3", "key": "p-a1|p-a3"})
+    bfs.build(suggestion(C={0: ("merge", "x"), 1: ("separate", "x"), 2: ("merge", "x")}), pk, p, "p" * 64)
+
+
+def test_family_suggestions_attach_only_to_matching_page():
+    raw = json.dumps(bfs.build(suggestion(), fam_packet(), proposal(), "p" * 64)).encode()
+    page = fam_packet()
+    pfr.attach_suggestions(page, raw)
+    assert page["suggestions_sha256"] == hashlib.sha256(raw).hexdigest()
+    with pytest.raises(ValueError):
+        pfr.attach_suggestions({**fam_packet(), "proposal_sha256": "q" * 64}, raw)
+
+
+def test_apply_keeps_valid_assist_and_rejects_malformed():
+    p, sha = proposal(), "p" * 64
+    assist = {"version": "v1", "suggestions_sha256": "s", "applied": 3, "kept_unchanged": 2, "changed": 1}
+    assert afr.apply(p, sha, decisions(assist=assist), CAT)["assist"] == assist
+    with pytest.raises(afr.ReviewError, match="assist"):
+        afr.apply(p, sha, decisions(assist={"applied": -1}), CAT)
+
+
+def test_project_family_suggestions_are_consistent():
+    path = REPO_ROOT / "benchmarks/families/suggestions/claude_assist_v1.json"
+    packet = REPO_ROOT / "artifacts/family_review/2026-10-11_seed-006/packet.json"
+    if not packet.exists():
+        pytest.skip("review packet not present")
+    raw = (REPO_ROOT / "benchmarks/families/proposal.json").read_bytes()
+    module = bfs.load(REPO_ROOT / "benchmarks/families/suggestions/claude_assist_v1_decisions.py")
+    rebuilt = bfs.build(module, json.loads(packet.read_text(encoding="utf-8")), json.loads(raw),
+                        hashlib.sha256(raw).hexdigest())
+    saved = json.loads(path.read_text(encoding="utf-8"))
+    assert {k: saved[k] for k in ("families", "candidates", "shared")} == \
+        {k: rebuilt[k] for k in ("families", "candidates", "shared")}

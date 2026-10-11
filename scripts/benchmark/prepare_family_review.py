@@ -5,6 +5,13 @@
 Trang có ba phần: họ đề xuất (xác nhận hoặc tách thành nhóm A/B/C…), cặp ứng viên ảnh (gộp hay không) và cụm ảnh
 dùng chung (giữ hay loại khỏi gallery — chỉ ghi quyết định cho P0.6, không áp vào catalog). Người duyệt xuất file
 quyết định rồi áp bằng apply_family_review.py. Proposal phải khớp hash catalog hiện tại.
+
+Catalog đổi (ví dụ bổ sung chất liệu) làm đổi hash proposal dù nội dung đề xuất giữ nguyên. --carry-drafts-from
+<packet.json cũ> cho phép trang mới nạp bản nháp của trang cũ, chỉ khi họ, ứng viên ảnh, cụm ảnh dùng chung và
+mã họ của từng sản phẩm trùng khớp hoàn toàn. File quyết định xuất ra vẫn mang hash proposal hiện tại.
+
+--suggestions <json> (build_family_suggestions.py) hiện gợi ý máy và lý do trên từng thẻ; lựa chọn chỉ được đặt
+khi người duyệt bấm "Áp gợi ý". File quyết định ghi số gợi ý đã áp và đã sửa.
 """
 from __future__ import annotations
 
@@ -48,7 +55,39 @@ def make_packet(proposal: dict, proposal_sha: str, snap, out: Path) -> dict:
     return {"kind": "family_review", "proposal_sha256": proposal_sha, "catalog_sha256": snap.sha256,
             "catalog_version": snap.version, "families": proposal["families"],
             "candidates": [{**c, "key": f"{c['a']}|{c['b']}"} for c in proposal["visual_candidates"]],
-            "shared": shared, "products": products}
+            "shared": shared, "products": products, "compatible_proposal_sha256": []}
+
+
+def proposal_content(packet: dict) -> dict:
+    """Phần quyết định của người duyệt phụ thuộc vào; bỏ hash, phiên bản catalog và đường dẫn ảnh."""
+    return {"families": packet["families"], "candidates": packet["candidates"],
+            "shared": sorted((s["key"], s["products"], s["illustration"]) for s in packet["shared"]),
+            "product_family": {pid: p["family"] for pid, p in packet["products"].items()}}
+
+
+def carry_drafts(packet: dict, old_paths: list[Path]) -> None:
+    for path in old_paths:
+        old = json.loads(path.read_text(encoding="utf-8"))
+        if old.get("kind") != "family_review":
+            raise ValueError(f"{path}: không phải packet duyệt họ")
+        if proposal_content(old) != proposal_content(packet):
+            raise ValueError(f"{path}: nội dung đề xuất khác packet mới; bản nháp cũ phải duyệt lại, không chuyển được")
+        for sha in [old["proposal_sha256"], *old.get("compatible_proposal_sha256", [])]:
+            if sha != packet["proposal_sha256"] and sha not in packet["compatible_proposal_sha256"]:
+                packet["compatible_proposal_sha256"].append(sha)
+
+
+def attach_suggestions(packet: dict, raw: bytes) -> None:
+    data = json.loads(raw)
+    if data.get("kind") != "family_review_suggestions" or data.get("proposal_sha256") not in (
+            packet["proposal_sha256"], *packet["compatible_proposal_sha256"]):
+        raise ValueError("Gợi ý dành cho đề xuất khác hoặc sai định dạng")
+    if (set(data["families"]) != {f["family_id"] for f in packet["families"]}
+            or set(data["candidates"]) != {c["key"] for c in packet["candidates"]}
+            or set(data["shared"]) != {s["key"] for s in packet["shared"]}):
+        raise ValueError("Gợi ý không phủ đúng các thẻ của trang")
+    packet["suggestions"] = {k: data[k] for k in ("version", "author", "policy", "families", "candidates", "shared")}
+    packet["suggestions_sha256"] = hashlib.sha256(raw).hexdigest()
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -56,6 +95,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--proposal", type=Path, default=PROPOSAL)
     ap.add_argument("--catalog", type=Path, default=ROOT / "database.json")
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--carry-drafts-from", type=Path, action="append", default=[], metavar="PACKET_JSON",
+                    help="packet.json của trang cũ có cùng nội dung đề xuất; cho phép nạp bản nháp của trang đó")
+    ap.add_argument("--suggestions", type=Path, help="JSON gợi ý máy (build_family_suggestions.py)")
     args = ap.parse_args(argv)
     sys.stdout.reconfigure(encoding="utf-8")
     if args.out.exists():
@@ -64,6 +106,9 @@ def main(argv: list[str] | None = None) -> int:
         raw = args.proposal.read_bytes()
         snap = load_snapshot(args.catalog, include_drafts=True)
         packet = make_packet(json.loads(raw), hashlib.sha256(raw).hexdigest(), snap, args.out.resolve())
+        carry_drafts(packet, args.carry_drafts_from)
+        if args.suggestions:
+            attach_suggestions(packet, args.suggestions.read_bytes())
     except (ValueError, OSError, KeyError) as e:
         print(f"invalid: {e}", file=sys.stderr)
         return 1
@@ -74,6 +119,8 @@ def main(argv: list[str] | None = None) -> int:
     (args.out / "index.html").write_text(html, encoding="utf-8")
     print(f"{len(packet['families'])} họ, {len(packet['candidates'])} ứng viên ảnh, {len(packet['shared'])} cụm ảnh dùng chung "
           f"cần quyết định → {args.out / 'index.html'}")
+    if packet["compatible_proposal_sha256"]:
+        print(f"Nạp được bản nháp của {len(packet['compatible_proposal_sha256'])} proposal cũ cùng nội dung")
     return 0
 
 

@@ -1,0 +1,180 @@
+{
+  "version": 2,
+  "scope": "keyword_request/voice_stop/image_submit to result paint; excludes recording time and product image downloads",
+  "quality_benchmark": false,
+  "samples": [
+    {
+      "kind": "keyword",
+      "browser_ms": 41.9,
+      "server_ms": {
+        "parse": 0.09,
+        "retrieve_rank": 0.4,
+        "total": 1.21
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 51.8,
+      "server_ms": {
+        "parse": 0.09,
+        "retrieve_rank": 1.11,
+        "total": 9.81
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "keyword",
+      "browser_ms": 55,
+      "server_ms": {
+        "parse": 0.07,
+        "retrieve_rank": 0.94,
+        "total": 16.23
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": null,
+      "revision": null,
+      "cached": false
+    },
+    {
+      "kind": "image",
+      "browser_ms": 2022.4,
+      "server_ms": {
+        "parse": 0.02,
+        "retrieve_rank": 1.25,
+        "total": 1940.56,
+        "validate": 0.02,
+        "embed": 902.51,
+        "retrieve": 22.97,
+        "ocr": 1006.87,
+        "body_read": 0.12
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": false
+    },
+    {
+      "kind": "image",
+      "browser_ms": 519.6,
+      "server_ms": {
+        "parse": 0.02,
+        "retrieve_rank": 1.21,
+        "total": 451.95,
+        "validate": 0.01,
+        "embed": 13.74,
+        "retrieve": 23.48,
+        "ocr": 406.75,
+        "body_read": 0.13
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": false
+    },
+    {
+      "kind": "image",
+      "browser_ms": 536.4,
+      "server_ms": {
+        "parse": 0.02,
+        "retrieve_rank": 1.19,
+        "total": 474.42,
+        "validate": 0.01,
+        "embed": 11.15,
+        "retrieve": 23.27,
+        "ocr": 432.23,
+        "body_read": 0.12
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": false
+    },
+    {
+      "kind": "image",
+      "browser_ms": 70.6,
+      "server_ms": {
+        "parse": 0.03,
+        "retrieve_rank": 1.31,
+        "total": 30.97,
+        "validate": 0.01,
+        "embed": 0,
+        "retrieve": 22.98,
+        "ocr": 0,
+        "body_read": 0.1
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": true
+    },
+    {
+      "kind": "voice",
+      "browser_ms": 3546.5,
+      "server_ms": {
+        "parse": 0.49,
+        "retrieve_rank": 0.68,
+        "total": 3462.9,
+        "decode": 45.91,
+        "asr": 3404.81,
+        "body_read": 0.02
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "cached": false
+    },
+    {
+      "kind": "voice",
+      "browser_ms": 642.6,
+      "server_ms": {
+        "parse": 0.45,
+        "retrieve_rank": 1.12,
+        "total": 550.57,
+        "decode": 15.26,
+        "asr": 525.23,
+        "body_read": 0.07
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "cached": false
+    },
+    {
+      "kind": "voice",
+      "browser_ms": 448.6,
+      "server_ms": {
+        "parse": 0.46,
+        "retrieve_rank": 1.01,
+        "total": 373.84,
+        "decode": 14.19,
+        "asr": 348.83,
+        "body_read": 0.06
+      },
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "cached": false
+    }
+  ],
+  "outcomes": {
+    "keyword": {
+      "error": 0,
+      "cancelled": 0
+    },
+    "voice": {
+      "error": 0,
+      "cancelled": 0
+    },
+    "image": {
+      "error": 0,
+      "cancelled": 0
+    }
+  }
+}

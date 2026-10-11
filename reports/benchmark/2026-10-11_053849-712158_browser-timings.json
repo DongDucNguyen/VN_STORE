@@ -1,0 +1,89 @@
+{
+  "status": "descriptive_browser_timings",
+  "benchmark_approved": false,
+  "groups": [
+    {
+      "kind": "keyword",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": null,
+      "revision": null,
+      "cached": false,
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 51.8,
+      "p95_ms": 55,
+      "first_observation_ms": 41.9,
+      "sample_warning": "fewer than 20 measured interactions"
+    },
+    {
+      "kind": "image",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": false,
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 519.6,
+      "p95_ms": 536.4,
+      "first_observation_ms": 2022.4,
+      "sample_warning": "fewer than 20 measured interactions"
+    },
+    {
+      "kind": "image",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "cached": true,
+      "n_total": 1,
+      "warmup_discarded": 0,
+      "n_measured": 1,
+      "p50_ms": 70.6,
+      "p95_ms": 70.6,
+      "first_observation_ms": 70.6,
+      "sample_warning": "fewer than 20 measured interactions"
+    },
+    {
+      "kind": "voice",
+      "catalog_version": "seed-004-hanhsilk-materials",
+      "model_id": "vinai/PhoWhisper-small",
+      "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c",
+      "cached": false,
+      "n_total": 3,
+      "warmup_discarded": 1,
+      "n_measured": 2,
+      "p50_ms": 448.6,
+      "p95_ms": 642.6,
+      "first_observation_ms": 3546.5,
+      "sample_warning": "fewer than 20 measured interactions"
+    }
+  ],
+  "outcomes": {
+    "keyword": {
+      "succeeded": 3,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 3,
+      "error_rate": 0.0
+    },
+    "voice": {
+      "succeeded": 3,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 3,
+      "error_rate": 0.0
+    },
+    "image": {
+      "succeeded": 4,
+      "error": 0,
+      "cancelled": 0,
+      "attempts": 4,
+      "error_rate": 0.0
+    }
+  },
+  "scope": "keyword request / voice stop / image submit to result paint; excludes speech duration and product image downloads",
+  "limitations": "Latency uses successes only; failures/cancellations are counted per modality (v2 exports) and must be reported with it. v1 exports carry no failure counts. First observation is not proof of cold model. No quality or network-generalization claim.",
+  "input_sha256": "655ba317144f22bbe8537eb18fc305b87e57968e4dfb7ffe8940574265c1941f",
+  "context": "RTX 5070 Ti; Chrome desktop (mobile = Pixel 7 giả lập); localhost; model thật PhoWhisper-small/SigLIP2+OCR; smoke FLEURS/gallery, không phải benchmark"
+}

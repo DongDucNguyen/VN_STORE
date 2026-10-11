@@ -22,7 +22,31 @@ Kết quả (run.json + predictions.jsonl) ghi vào `experiments/results/`.
 
 ## Packet hiện hành — catalog 330 sản phẩm (cập nhật 11/10/2026)
 
-Dùng [seed 12 truy vấn theo pool](../../artifacts/keyword_review/2026-10-10_seed-003_seed-12-pool/index.html) (138 cặp bắt buộc) hoặc [dev 107 truy vấn theo pool](../../artifacts/keyword_review/2026-10-10_seed-003_dev-candidates-107-pool/index.html) (1.361 cặp, no-match phải chấm đủ gallery). Hai người chấm dùng cùng packet. Nhãn nháp chỉ xét 30 sản phẩm cũ, cần duyệt lại trên catalog hiện hành; không dùng làm baseline. Xem [backlog P0.3](../../reports/progress/BACKLOG.md).
+Dùng packet trên catalog hiện hành `seed-004-hanhsilk-materials`: [seed 12 truy vấn theo pool](../../artifacts/keyword_review/2026-10-11_seed-004_seed-12-pool/index.html) (138 cặp bắt buộc) hoặc [dev 107 truy vấn theo pool](../../artifacts/keyword_review/2026-10-11_seed-004_dev-107-pool/index.html) (1.361 cặp, no-match phải chấm đủ gallery). Packet `2026-10-10_seed-003_*` đã lệch hash từ 11/10 (bổ sung chất liệu Hanhsilk); pool `kw-seed-010` (“váy lụa”) đổi vì BM25 đổi thứ hạng sau khi thêm chất liệu (`…-570` vào top 10, một khăn SenSilk ra), kéo theo 4 sản phẩm ngẫu nhiên được chọn lại từ phần còn lại. Hai người chấm dùng cùng packet. Nhãn nháp chỉ xét 30 sản phẩm cũ, cần duyệt lại trên catalog hiện hành; không dùng làm baseline. Xem [backlog P0.3](../../reports/progress/BACKLOG.md).
+
+## Packet có gợi ý máy (thêm 11/10/2026)
+
+[`suggestions/claude_assist_v1.json`](suggestions/claude_assist_v1.json) chứa điểm **gợi ý** 0–3 kèm lý do cho cả 119 truy vấn (6.422 cặp). Gợi ý do Claude (AI) viết từ các trường catalog (tên, danh mục, chất liệu, màu, giá, claim, alias, mô tả); nguồn dễ đọc nằm ở [`suggestions/claude_assist_v1_judgments.py`](suggestions/claude_assist_v1_judgments.py), gồm các chính sách P1–P4 được ghi trong lý do từng cặp. Đây **không phải nhãn**: `verified` vẫn là false cho tới khi người chấm xác nhận.
+
+Packet có hỗ trợ: [seed 12](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool_assisted/index.html), [dev 107](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool_assisted/index.html). Hai packet này giống hệt packet hiện hành (cùng pool, thứ tự, truy vấn), chỉ thêm gợi ý và dùng khóa lưu nháp riêng.
+
+- Ô chấm vẫn trống. Gợi ý hiện cạnh từng sản phẩm; người chấm tự chọn, hoặc bấm **Áp gợi ý máy cho các sản phẩm chưa chấm** của từng truy vấn rồi sửa. Áp xong vẫn phải tick xác nhận cho từng truy vấn.
+- Export ghi `assist` cho từng truy vấn: phiên bản, hash gợi ý, số gợi ý đã áp, số giữ nguyên, số đã sửa. `audit_reviews.py` cộng các số này. Nếu **cả hai** file đều dùng gợi ý, audit cảnh báo không độc lập.
+- **Chỉ người chấm thứ nhất hoặc người phân xử dùng packet có gợi ý.** Người chấm thứ hai dùng packet hiện hành không gợi ý, để tỷ lệ đồng ý còn ý nghĩa (review_protocol.md).
+- Gợi ý khác nhãn nháp cũ ở 3 truy vấn: `kw-dev-063` "đồ sứ Bình Dương" (không có căn cứ; catalog chỉ ghi Hanoia ra đời ở Bình Dương và Hanoia không làm đồ sứ), `kw-dev-102` "bàn ghế mây" (có bàn mây VH2609) và `kw-dev-103` "sản phẩm đang giảm giá" (30 khăn SenSilk có giá gốc cao hơn giá bán).
+- Phát hiện dữ liệu cần nhóm dữ liệu xem: "Bàn mây, gốm — VH240901" có alias *Ceramic and Rattan Plate* (tên tiếng Việt có thể dịch sai).
+
+Dựng lại khi packet đổi: `build_keyword_suggestions.py --judgments … --packet <packet.json> … --out …`, rồi `prepare_review.py … --suggestions <json> --out <thư mục mới>`. Script từ chối khi gợi ý thuộc catalog/bộ truy vấn khác, khi thiếu gợi ý cho một sản phẩm trong pool, hoặc khi kết luận "không có đáp án" mà chưa rà toàn catalog.
+
+## Bộ 600 truy vấn (thêm 11/10/2026)
+
+| File | Split | Câu | Nhãn |
+|---|---|---:|---|
+| [`machine/dev_all_machine.jsonl`](machine/dev_all_machine.jsonl) | dev | 180 | máy (`claude-assist-v1` cho 119 câu cũ, `claude-criteria-v1` cho 61 câu mới) |
+| [`expansion/train_machine.jsonl`](expansion/train_machine.jsonl) | train | 300 | máy, theo tiêu chí, phủ toàn catalog |
+| [`expansion/test_unlabeled.jsonl`](expansion/test_unlabeled.jsonl) | test | 120 | **chưa có** — cần người chấm (tạo packet bằng `prepare_review.py`) |
+
+Tiêu chí từng ý định: [`expansion/claude_criteria_v1.py`](expansion/claude_criteria_v1.py); chấm bằng `scripts/benchmark/criteria_labels.py`. Nhãn máy luôn `verified: false`, `label_source: machine`; đánh giá bằng `eval_keyword.py --machine-labels` (cấm split test). Catalog đổi thì chạy lại `criteria_labels.py` (nhãn train/dev mới phải đối chiếu lại nếu tiêu chí đổi).
 
 ## Hồ sơ cũ: duyệt 12 truy vấn trên 30 sản phẩm
 

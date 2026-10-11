@@ -205,3 +205,55 @@ def test_voice_vad_rejects_noise_before_asr(client, monkeypatch):
     r = client.post("/search/voice", content=wav(1.0), headers=WAV)
     assert r.status_code == 422 and r.json()["detail"]["code"] == "audio_no_speech"
     assert api.state.voice.adapter.calls == []
+
+
+def test_refiltering_same_image_reuses_embedding(client, monkeypatch):
+    embedder = api.state.bundle.images.embedder
+    calls = []
+    original = embedder.embed
+    monkeypatch.setattr(embedder, "embed", lambda images: calls.append(1) or original(images))
+    first = client.post("/search/image", content=png(), headers=PNG).json()
+    assert client.post("/search/image", content=png(), headers=PNG).json()["visual"]["query_cache"] == "miss"
+    assert len(calls) == 2  # a fresh search never uses the cache, even for the same bytes
+    f = json.dumps({"price_max": 500000})
+    again = client.post("/search/image", params={"filters": f, "reuse": "1"}, content=png(), headers=PNG).json()
+    assert len(calls) == 2
+    assert (first["visual"]["query_cache"], again["visual"]["query_cache"]) == ("miss", "hit")
+    assert again["timings_ms"]["embed"] == 0 and again["visual"]["top_similarity"] == first["visual"]["top_similarity"]
+    api.state.bundle.images.cache = type(api.state.bundle.images.cache)()  # cold path for comparison
+    fresh = client.post("/search/image", params={"filters": f, "reuse": "1"}, content=png(), headers=PNG).json()
+    assert fresh["visual"]["query_cache"] == "miss" and len(calls) == 3
+    assert [x["id"] for x in again["results"]] == [x["id"] for x in fresh["results"]]
+    assert again["applied_filters"] == fresh["applied_filters"]
+    client.post("/search/image", params={"reuse": "1"}, content=png(70, 70), headers=PNG)  # other image → model runs
+    assert len(calls) == 4
+
+
+def test_query_cache_is_bounded_short_lived_and_skips_failed_ocr(monkeypatch):
+    from app.image import pipeline
+    cache = pipeline.QueryCache(size=2, ttl_s=60)
+    for key in "abc":
+        cache.put(key, [1.0], key)
+    assert cache.get("a") is None and cache.get("c") == ([1.0], "c")
+    clock = [0.0]
+    monkeypatch.setattr(pipeline.time, "monotonic", lambda: clock[0])
+    cache.put("d", [2.0], "")
+    clock[0] = 61
+    assert cache.get("d") is None
+
+    class BrokenOCR:
+        def recognize(self, data):
+            raise RuntimeError("ocr down")
+
+    from app.catalog.store import load_snapshot
+    from app.search.engine import SearchEngine
+    from tests.conftest import FIXTURE
+    snap = load_snapshot(FIXTURE)
+    emb = ByteHistogramEmbedder()
+    index, engine, cache = ImageIndex.build(snap, emb), SearchEngine(snap), pipeline.QueryCache()
+    _, diag = pipeline.retrieve(png(), emb, index, engine, ocr=BrokenOCR(), cache=cache)
+    _, again = pipeline.retrieve(png(), emb, index, engine, ocr=BrokenOCR(), cache=cache, reuse=True)
+    assert diag["ocr_error"] == again["ocr_error"] == "RuntimeError"  # failed OCR is retried, never cached
+    assert again["query_cache"] == "miss"
+    _, plain = pipeline.retrieve(png(), emb, index, engine)
+    assert plain["query_cache"] is None  # evaluators pass no cache

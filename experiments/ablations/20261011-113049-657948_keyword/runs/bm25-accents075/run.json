@@ -1,0 +1,58 @@
+{
+  "name": "bm25-accents075",
+  "split": "dev",
+  "catalog_sha256": "5448a8f4f8161e14cda4f6c3bac921c46af4c02be359dfe20c8ddd312572cecb",
+  "queries_sha256": "0201aa26dc4d0db652308146e05bcbc2fa328ac8aed63591872a1ba4cece44a7",
+  "evaluation_status": "smoke_unreviewed",
+  "config": {
+    "accent_weight": 0.5,
+    "min_token_coverage": 0.75,
+    "strict_accents": true,
+    "rrf_k": 60,
+    "image_top_k": 50,
+    "text_weight": 1.0,
+    "ocr_weight": 0.0,
+    "generic_text_mode": "rrf",
+    "image_min_similarity": null
+  },
+  "metrics": {
+    "n_queries": 107,
+    "n_with_answer": 95,
+    "n_no_answer": 12,
+    "ndcg_10": 0.4946,
+    "success_5": 0.5333,
+    "mrr_10": 0.5333,
+    "recall_20": 0.5083,
+    "eligible_queries": {
+      "ndcg_10": 60,
+      "success_5": 60,
+      "rr_10": 60,
+      "recall_20": 60
+    },
+    "queries_with_unjudged_results": 36,
+    "no_match_false_accept_rate": 0.0833,
+    "judged_at_10": 0.6177,
+    "latency_ms_p50": 1.561,
+    "latency_ms_p95": 8.085,
+    "search_ms": {
+      "n_rounds": 3,
+      "rounds": [
+        {
+          "p50": 1.56,
+          "p95": 8.09
+        },
+        {
+          "p50": 1.56,
+          "p95": 6.83
+        },
+        {
+          "p50": 1.54,
+          "p95": 6.79
+        }
+      ],
+      "p50": 1.55,
+      "p95": 7.47,
+      "p95_spread_pct": 19.1
+    }
+  }
+}

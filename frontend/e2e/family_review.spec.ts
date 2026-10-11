@@ -78,3 +78,41 @@ test("duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → 
     fs.rmSync(tmp, { recursive: true, force: true });
   }
 });
+
+test("duyệt họ có gợi ý máy: chỉ áp khi bấm, xuất ghi số đã sửa, apply giữ assist", async ({ page }) => {
+  const out = path.join(ROOT, "artifacts", `family-review-test-${randomUUID()}`);
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "vnstore-family-"));
+  execFileSync(PYTHON, ["-X", "utf8", script("prepare_family_review.py"), "--out", out, "--suggestions",
+    path.join(ROOT, "benchmarks/families/suggestions/claude_assist_v1.json")]);
+  try {
+    const packet = JSON.parse(fs.readFileSync(path.join(out, "packet.json"), "utf8"));
+    await page.goto(pathToFileURL(path.join(out, "index.html")).href);
+    const cards = page.locator("article.card");
+    await expect(cards.first().locator(".sug")).toContainText("Gợi ý máy");
+    // Suggestions are shown, never pre-selected.
+    await expect(page.locator("input[type=radio]:checked")).toHaveCount(0);
+    await page.locator("#reviewer").fill("r-assist");
+    for (const tab of ["Họ đề xuất", "Ứng viên ảnh", "Ảnh dùng chung"]) {
+      await page.getByRole("button", { name: tab }).click();
+      await page.getByRole("button", { name: "Áp gợi ý cho thẻ chưa quyết định (tab này)" }).click();
+    }
+    // The reviewer overrules one suggestion (shared image decision cannot create a family conflict).
+    const last = page.locator("article.card").last();
+    const keep = last.getByLabel("Giữ trong gallery");
+    await ((await keep.isChecked()) ? last.getByLabel("Đề nghị loại khỏi gallery") : keep).check();
+    const dl = page.waitForEvent("download");
+    await page.getByRole("button", { name: "Xuất quyết định" }).click();
+    const file = path.join(tmp, (await dl).suggestedFilename());
+    await (await dl).saveAs(file);
+    const dec = JSON.parse(fs.readFileSync(file, "utf8"));
+    const total = packet.families.length + packet.candidates.length + packet.shared.length;
+    expect(dec).toMatchObject({ complete: true, reviewed_by: "r-assist",
+      assist: { version: "claude-assist-v1", applied: total, kept_unchanged: total - 1, changed: 1 } });
+    const target = path.join(tmp, "families.json");
+    execFileSync(PYTHON, ["-X", "utf8", script("apply_family_review.py"), file, "--out", target]);
+    expect(JSON.parse(fs.readFileSync(target, "utf8")).assist.changed).toBe(1);
+  } finally {
+    fs.rmSync(out, { recursive: true, force: true });
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+});

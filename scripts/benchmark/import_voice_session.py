@@ -4,7 +4,8 @@
 
 Kiểm tra trước khi ghi: chỉ nhận manifest.json + raw/<qid>.wav (không theo đường dẫn khác trong zip),
 schema 1.0.0, SHA-256 từng file, WAV giải mã được theo giới hạn của API, qid chưa có trong manifest
-đích, mỗi người nói chỉ thuộc một split (gộp cả manifest hiện có). Lỗi bất kỳ thì không ghi gì.
+đích, mỗi người nói và mỗi câu (sau chuẩn hóa) chỉ thuộc một split (gộp cả manifest hiện có). Lỗi bất kỳ
+thì không ghi gì.
 Ghi file WAV vào raw/ rồi thay manifest nguyên khối. transcript_review vẫn null: người duyệt nghe lại,
 sửa reference_text nếu người nói đọc khác câu mẫu, rồi mới ghi transcript_review.
 """
@@ -25,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "backend"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from eval_voice import ManifestError, load_manifest  # noqa: E402
+from eval_voice import ManifestError, check_text_splits, load_manifest  # noqa: E402
 
 from app.media import MediaError, decode_wav  # noqa: E402
 
@@ -76,6 +77,7 @@ def merge(target: Path, samples: list[dict]) -> dict:
         if splits.setdefault(s["speaker_id"], s["split"]) != s["split"]:
             raise ManifestError(f"Người nói {s['speaker_id']} đã thuộc split {splits[s['speaker_id']]}, "
                                 f"phiên mới ghi {s['split']}")
+    check_text_splits(current["samples"] + samples)
     return {**current, "samples": current["samples"] + samples}
 
 

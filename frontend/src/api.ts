@@ -126,7 +126,8 @@ export interface SearchResponse {
   timings_ms: { total: number } & Record<string, number>;
   mode?: "voice" | "image";
   transcript?: { text: string; model_id: string; revision: string; duration_s: number; editable: boolean };
-  visual?: { model_id: string; revision: string; top_similarity: number | null; match_label: "similar" };
+  visual?: { model_id: string; revision: string; top_similarity: number | null; match_label: "similar";
+    query_cache?: "hit" | "miss" | null };
 }
 
 export interface CategoryNode { id: string; name_vi: string; count: number; children: CategoryNode[] }
@@ -140,7 +141,8 @@ export interface ModelStatus {
 
 export interface Health {
   status: string;
-  catalog: { version: string; products_visible: number; include_drafts: boolean } | null;
+  catalog: { version: string; products_visible: number; include_drafts: boolean;
+    publication_mode?: "standard" | "internal_demo" } | null;
   search?: { keyword: string; voice: string; image: string; models?: { voice: ModelStatus; image: ModelStatus } };
 }
 
@@ -154,7 +156,8 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   let res: Response;
   try {
     res = await fetch(`/api${path}`, init);
-  } catch {
+  } catch (error) {
+    if (init?.signal?.aborted) throw error;
     throw new ApiError(0, "network", "Không kết nối được máy chủ. Kiểm tra backend đã chạy chưa.");
   }
   if (!res.ok) {
@@ -191,15 +194,18 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, filters, limit, offset }),
     }),
-  searchVoice: (wav: Blob) =>
-    request<SearchResponse>("/search/voice", { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav }),
-  searchImage: (image: Blob, text = "", filters?: Filters) =>
+  searchVoice: (wav: Blob, signal?: AbortSignal) =>
+    request<SearchResponse>("/search/voice", { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav, signal }),
+  /** reuse: same prepared image re-sent for a filter change; the server may reuse its embedding/OCR. */
+  searchImage: (image: Blob, text = "", filters?: Filters, signal?: AbortSignal, reuse = false) =>
     request<SearchResponse>(`/search/image?${new URLSearchParams({
       text, ...(filters && hasFilters(filters) ? { filters: JSON.stringify(filters) } : {}),
+      ...(reuse ? { reuse: "1" } : {}),
     })}`, {
       method: "POST",
       headers: { "Content-Type": image.type || "image/jpeg" },
       body: image,
+      signal,
     }),
 };
 
@@ -208,8 +214,8 @@ const HEALTH_TTL_MS = 15_000;
 
 /** /health dùng chung cho các nút giọng nói/ảnh. Hỏi lại sau HEALTH_TTL_MS để thấy model vừa bật/tắt
  *  mà không cần tải lại trang; lỗi thì lần sau hỏi lại ngay. */
-export function cachedHealth(): Promise<Health> {
-  if (!healthCache || Date.now() - healthCache.at > HEALTH_TTL_MS) {
+export function cachedHealth(refresh = false): Promise<Health> {
+  if (refresh || !healthCache || Date.now() - healthCache.at > HEALTH_TTL_MS) {
     const value = api.health();
     healthCache = { at: Date.now(), value };
     value.catch(() => {
@@ -223,10 +229,10 @@ export type Modality = "voice" | "image";
 const MODALITY_NAME: Record<Modality, string> = { voice: "giọng nói", image: "ảnh" };
 
 /** null nếu sẵn sàng; ngược lại là thông báo cho người dùng. */
-export async function modalityProblem(kind: Modality): Promise<string | null> {
+export async function modalityProblem(kind: Modality, refresh = false): Promise<string | null> {
   let h: Health;
   try {
-    h = await cachedHealth();
+    h = await cachedHealth(refresh);
   } catch (e) {
     return e instanceof ApiError ? e.message : "Không kiểm tra được trạng thái máy chủ.";
   }
