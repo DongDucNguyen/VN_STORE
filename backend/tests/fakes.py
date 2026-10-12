@@ -63,3 +63,30 @@ class TableEmbedder:
                 raise MediaError("image_invalid", "Không giải mã được ảnh.")
             out.append(vec)
         return out
+
+
+class HashingTextEmbedder:
+    """Băm âm tiết không dấu vào 64 chiều: xác định, không cần thư viện, KHÔNG hiểu nghĩa (chỉ để kiểm thử
+    luồng nhánh ngữ nghĩa). VNSTORE_TEXT_ADAPTER=tests.fakes:HashingTextEmbedder + VNSTORE_TEXT_INDEX_AUTOBUILD=1."""
+    model_id = "test/hashing-text"
+    revision = "0"
+    preprocess = {"kind": "syllable-hash", "dim": 64}
+
+    def __init__(self):
+        self.query_calls = 0
+
+    @staticmethod
+    def _vec(text: str) -> list[float]:
+        import hashlib
+        from app.search.normalize import strip_accents, tokens
+        v = [0.01] * 64
+        for t in tokens(text):
+            v[hashlib.md5(strip_accents(t).encode()).digest()[0] % 64] += 1.0
+        return v
+
+    def embed_documents(self, texts: Sequence[str]) -> list[list[float]]:
+        return [self._vec(t) for t in texts]
+
+    def embed_queries(self, texts: Sequence[str]) -> list[list[float]]:
+        self.query_calls += len(texts)
+        return [self._vec(t) for t in texts]

@@ -1,6 +1,8 @@
 """Tìm kiếm keyword trên snapshot catalog: phân tích truy vấn → lọc cứng → BM25 → boost mềm."""
 from __future__ import annotations
 
+import math
+import re
 import time
 from collections import Counter
 from dataclasses import dataclass, field
@@ -10,11 +12,13 @@ from ..catalog.present import CLAIM_LABELS, price_summary, product_summary
 from ..catalog.store import CatalogSnapshot
 from .bm25 import MultiFieldBM25
 from .config import SearchConfig
-from .normalize import analyze, has_accents, is_stopword, strip_accents, tokens
+from .lexicon import BRAND_ABBREVIATIONS, LEXICON
+from .normalize import UNIT_TOKENS, analyze, has_accents, is_stopword, strip_accents, tokens, tone_key
 from .query_parser import ParsedQuery, PriceConstraint, Vocabulary, VocabEntry, parse_query
 
 if TYPE_CHECKING:
     from ..image.index import VisualHit
+    from .semantic import SemanticSearch
 
 FIELD_WEIGHTS = {
     "name": 3.0, "brand": 2.5, "sku": 2.5, "aliases": 2.0, "category": 1.5,
@@ -28,12 +32,23 @@ RELATIVE_CUTOFF = 0.25         # bỏ kết quả có điểm < 25% điểm cao 
 HINT_BOOST = 0.3
 EVIDENCE_BOOST = 0.02
 TEXT_EXCLUSION_PENALTY = 0.3
-EXPANSION_WEIGHTS = {"synonym": 0.6, "regional": 0.6, "broader": 0.4}
+EXPANSION_WEIGHTS = {"synonym": 0.6, "regional": 0.6, "broader": 0.4,
+                     # Từ vựng ngoài catalog (lexicon.py): dịch Anh–Việt, cách viết, viết tắt.
+                     "translation": 0.8, "spelling": 1.0, "abbreviation": 1.0}
 EXPANSION_NO_CONTEXT_FACTOR = 0.5
 PHRASE_FIELDS = {"place", "brand", "maker"}
 COVERED_UNIGRAM_WEIGHT = 0.2
+TYPO_WEIGHT = 0.8              # âm tiết sửa lỗi gõ (không có trong catalog → từ gần nhất)
+LEXICON_MAX_DF_RATIO = 0.05    # chỉ mở rộng từ điển ngoài catalog khi cụm gốc có ở ≤ 5% sản phẩm
+PARTIAL_MATCH_NOTICE = 0.6     # báo "chưa khớp đủ ý" khi 5 kết quả đầu đều phủ < 60% trọng số IDF của câu
+PARTIAL_MATCH_TOP = 5
+BASE_COLORS = frozenset("trắng đen đỏ xanh vàng nâu tím hồng cam xám bạc".split())
 RRF_K = 60                      # Reciprocal Rank Fusion; tinh chỉnh trên dev khi có nhãn ảnh
 IMAGE_TOP_K = 50               # số sản phẩm giống ảnh nhất đưa vào gộp hạng
+
+
+def _is_vowel(c: str) -> bool:
+    return strip_accents(c) in "aeiouy"
 
 
 def fmt_vnd(v: int) -> str:
@@ -73,10 +88,12 @@ class _Constraint:
 
 
 class SearchEngine:
-    def __init__(self, snap: CatalogSnapshot, config: SearchConfig | None = None):
+    def __init__(self, snap: CatalogSnapshot, config: SearchConfig | None = None,
+                 semantic: SemanticSearch | None = None):
         t0 = time.perf_counter()
         self.snap = snap
         self.config = config or SearchConfig.from_env()
+        self.semantic = semantic  # nhánh ngữ nghĩa đã kiểm tra khớp snapshot, hoặc None
         self._coverage_tokens = {}
         self.index = MultiFieldBM25(FIELD_WEIGHTS)
         self.index_acc = MultiFieldBM25(FIELD_WEIGHTS)
@@ -94,10 +111,29 @@ class SearchEngine:
                  " ".join(p.get("colors", []))])
         self.index.finalize()
         self.index_acc.finalize()
+        self._coverage_keys = {d: {tone_key(t) for t in toks} for d, toks in self._coverage_tokens.items()}
+        self._coverage_plain = {d: {strip_accents(t) for t in toks} for d, toks in self._coverage_tokens.items()}
+        # Âm tiết catalog viết không dấu ("Ca Phe Sua", "Dak Lak"): người dùng gõ có dấu vẫn được tính là khớp.
+        self._coverage_unacc = {d: {t for t in toks if not has_accents(t)}
+                                for d, toks in self._coverage_tokens.items()}
+        self._df_plain = Counter(t for toks in self._coverage_plain.values() for t in toks)
+        self._df_key = Counter(t for toks in self._coverage_keys.values() for t in toks)
+        lexicon_tokens = {t for rel in LEXICON for x in rel["terms"] for t in tokens(x)}
+        self._known_plain = set(self._df_plain) | {strip_accents(t) for t in lexicon_tokens}
+        self._known_acc = {t for toks in self._coverage_tokens.values() for t in toks} | lexicon_tokens
+        self._known_keys = set(self._df_key) | {tone_key(t) for t in lexicon_tokens}
+        self._acc_letters = "".join(sorted({c for t in self._known_acc for c in t if not c.isdigit()}))
         self.vocab = Vocabulary(self._vocab_entries())
         self._relations = self._load_relations()
         self._suggestions = self._build_suggestions()
         self.build_ms = round((time.perf_counter() - t0) * 1000, 2)
+
+    def require_consistent_semantic(self) -> None:
+        """Cho evaluator: cấu hình bật ngữ nghĩa mà không có model thì run chỉ là BM25 nhưng ghi cấu hình ngữ nghĩa.
+        API được phép rơi về BM25 (báo trong /health); benchmark thì không."""
+        if self.config.semantic_weight and self.semantic is None:
+            raise ValueError("semantic_weight > 0 nhưng không có TextEmbedder/chỉ mục văn bản: run sẽ chỉ là BM25. "
+                             "Dùng eval_keyword.py --semantic-adapter, hoặc đặt semantic_weight = 0")
 
     # ---------- Dựng chỉ mục ----------
 
@@ -148,6 +184,9 @@ class SearchEngine:
         for ba in s.data["search_dictionary"]["brand_aliases"]:
             if ba["brand_id"] in s.brands:
                 yield ba["alias"], VocabEntry("brand", s.brands[ba["brand_id"]]["name"], ba["brand_id"])
+        for alias, brand_id in BRAND_ABBREVIATIONS.items() if self.config.lexicon else ():
+            if brand_id in s.brands:
+                yield alias, VocabEntry("brand", s.brands[brand_id]["name"], brand_id)
         for m in s.makers.values():
             yield m["name"], VocabEntry("maker", m["name"], m["id"])
         for pl in s.places.values():
@@ -161,19 +200,28 @@ class SearchEngine:
             yield m, VocabEntry("material", m, None)
         for c in colors:
             yield c, VocabEntry("color", c, None)
+        # Màu gốc đứng đầu một sắc trong catalog ("trắng" của "trắng ngà") vẫn là màu, kể cả khi catalog không có
+        # sản phẩm ghi đúng "trắng"; bộ lọc/gợi ý màu khớp theo tiền tố nên "trắng" gồm cả "trắng ngà".
+        for base in BASE_COLORS - colors:
+            if any(c.startswith(base + " ") for c in colors):
+                yield base, VocabEntry("color", base, None)
 
     def _load_relations(self) -> list[dict[str, Any]]:
         d = self.snap.data["search_dictionary"]
         rels = []
-        for rel in d["synonyms"] + d["regional_terms"]:
+        lexicon_ids = {rel["id"] for rel in LEXICON}
+        for rel in d["synonyms"] + d["regional_terms"] + (LEXICON if self.config.lexicon else []):
             if rel["relation"] not in EXPANSION_WEIGHTS:
                 continue  # confusable: không mở rộng
             rels.append({
                 **rel,
                 "plain_terms": [tuple(strip_accents(t) for t in tokens(x)) for x in rel["terms"]],
+                "acc_sources": [tuple(tokens(x)) for x in rel.get("sources", rel["terms"])],
+                "lexicon": rel["id"] in lexicon_ids,
                 "head_plain": tuple(strip_accents(t) for t in tokens(rel.get("head", ""))),
                 "contexts": set().union(*(self.snap.category_subtree(c) for c in rel.get("category_ids", []))),
             })
+            rels[-1]["plain_sources"] = [tuple(strip_accents(t) for t in src) for src in rels[-1]["acc_sources"]]
         return rels
 
     def _build_suggestions(self) -> list[tuple[str, dict[str, Any]]]:
@@ -220,24 +268,91 @@ class SearchEngine:
                 break
         return out
 
-    def _query_terms(self, parsed: ParsedQuery) -> tuple[dict[str, float], dict[str, float], list[dict[str, Any]]]:
+    def _correct(self, token: str) -> str | None:
+        """Sửa lỗi gõ cho âm tiết không có trong catalog/từ vựng: bỏ chữ lặp ("chénn", "socolla"), rồi khoảng
+        cách sửa 1. Từ có dấu được sửa trong không gian có dấu (giữ thanh: "khăng" → "khăn", không sửa "nắng"
+        thành "vàng"); từ không dấu chỉ sửa khi ≥ 5 ký tự vì âm tiết ngắn không dấu quá nhập nhằng ("choi" ≠ "cói").
+        Trả về dạng đã sửa (có dấu nếu đầu vào có dấu), hoặc None nếu không cần/không chắc."""
+        plain = strip_accents(token)
+        if len(plain) < 3 or any(c.isdigit() for c in plain):
+            return None
+        accented = has_accents(token)
+        if (tone_key(token) in self._known_keys) if accented else (plain in self._known_plain):
+            return None
+        known = self._known_acc if accented else self._known_plain
+        collapsed = re.sub(r"(.)\1+", r"\1", token)
+        if collapsed != token and collapsed in known:
+            return collapsed
+        if len(plain) < (3 if accented else 5):
+            return None
+        splits = [(token[:i], token[i:]) for i in range(len(token) + 1)]
+        edits = {a + b[1] + b[0] + b[2:] for a, b in splits if len(b) > 1}
+        if accented:
+            # Từ có dấu: chỉ thêm/bớt phụ âm ("khăng" → "khăn", "bìn" → "bình"). Đổi/bớt nguyên âm làm đổi hẳn
+            # âm tiết và mất dấu thanh ("nắng" → "nông", "chơi" → "chi").
+            edits |= {a + b[1:] for a, b in splits if b and not _is_vowel(b[0])}
+            edits |= {a + c + b for a, b in splits for c in self._acc_letters if not _is_vowel(c)}
+        else:
+            letters = "abcdefghijklmnopqrstuvwxyz"
+            edits |= {a + b[1:] for a, b in splits if b}
+            edits |= {a + c + b for a, b in splits for c in letters}
+            edits |= {a + c + b[1:] for a, b in splits if b for c in letters}
+        found = [e for e in edits if e in known and len(e) >= 3]
+        return max(found, key=lambda e: (e[0] == token[0], self._df_plain.get(strip_accents(e), 0), e)) \
+            if found else None
+
+    def _phrase_df(self, phrase: tuple[str, ...]) -> int:
+        """Số sản phẩm chứa đủ các âm tiết (không dấu) của cụm."""
+        return sum(1 for toks in self._coverage_plain.values() if all(t in toks for t in phrase))
+
+    @staticmethod
+    def _lexicon_match_ok(user: list[str], source: tuple[str, ...]) -> bool:
+        """Mục từ điển ngoài catalog khớp theo dấu: người dùng gõ có dấu thì phải đúng dấu ("com" có dấu không
+        phải "cốm"); gõ không dấu chỉ nhận cụm ≥ 2 âm tiết hoặc từ vốn không dấu (socola, tea set)."""
+        for u, a in zip(user, source):
+            if has_accents(u):
+                if tone_key(u) != tone_key(a):
+                    return False
+            elif has_accents(a) and len(source) < 2:
+                return False
+        return True
+
+    def _query_terms(self, parsed: ParsedQuery) -> tuple[dict[str, float], dict[str, float], list[dict[str, Any]],
+                                                          list[dict[str, Any]]]:
+        """Trả về (từ không dấu, từ có dấu, mở rộng, đặc tả độ phủ từng âm tiết người dùng gõ)."""
         text_toks = tokens(parsed.text)
         # Âm tiết nằm trong tên riêng nhiều âm tiết đã nhận ra (Bát Tràng, Kim Sơn) chỉ nên khớp theo cụm:
         # "bát" trong "Bát Tràng" không phải cái bát.
         covered = {k for h in parsed.hints if h.length >= 2 and h.field in PHRASE_FIELDS
                    for k in range(h.start, h.start + h.length)}
         kept = [(k, t) for k, t in enumerate(text_toks) if not is_stopword(t)]
+        # Câu gõ có dấu: từ không dấu trong đó (Keras, Moonbow, km109) cũng là dạng chính xác, được cộng điểm
+        # khớp đúng dạng như từ có dấu thay vì thua thiệt trước các âm tiết tiếng Việt cùng câu.
+        exact_latin = self.config.exact_latin_bonus and any(has_accents(t) for t in text_toks)
         q_plain: dict[str, float] = {}
         q_acc: dict[str, float] = {}
         for k, t in kept:
             w = COVERED_UNIGRAM_WEIGHT if k in covered else 1.0
             q_plain[strip_accents(t)] = max(q_plain.get(strip_accents(t), 0.0), w)
-            if has_accents(t):
+            if has_accents(t) or exact_latin:
                 q_acc[t] = max(q_acc.get(t, 0.0), w)
         for (_, a), (_, b) in zip(kept, kept[1:]):
             q_plain[f"{strip_accents(a)}_{strip_accents(b)}"] = 1.0
             if has_accents(a) or has_accents(b):
                 q_acc[f"{a}_{b}"] = 1.0
+        expansions = []
+        fixed = {}
+        user_forms = list(text_toks)  # dạng người dùng gõ, thay bằng dạng đã sửa lỗi gõ nếu có
+        for k, t in kept:
+            c = self._correct(t) if self.config.typo_correction else None
+            if c:
+                user_forms[k] = c
+                fixed[k] = strip_accents(c)
+                q_plain[fixed[k]] = max(q_plain.get(fixed[k], 0.0), TYPO_WEIGHT)
+                if has_accents(c):
+                    q_acc[c] = max(q_acc.get(c, 0.0), TYPO_WEIGHT)
+                expansions.append({"relation": "typo", "relation_id": None, "term": c, "from": t,
+                                   "weight": TYPO_WEIGHT})
 
         hinted_cats = set()
         for h in parsed.hints:
@@ -245,12 +360,16 @@ class SearchEngine:
                 hinted_cats |= self.snap.category_subtree(h.id)
                 hinted_cats |= {c["id"] for c in self.snap.category_path(h.id)}
 
-        plain_unigrams = tuple("\0" if k in covered else strip_accents(t) for k, t in enumerate(text_toks))
-        expansions = []
+        plain_unigrams = tuple("\0" if k in covered else fixed.get(k, strip_accents(t))
+                               for k, t in enumerate(text_toks))
+        alts: dict[int, list[tuple[str, ...]]] = {k: [(c,)] for k, c in fixed.items()}
+
+        def find(seq: tuple[str, ...]) -> list[int]:
+            n = len(seq)
+            return [i for i in range(len(plain_unigrams) - n + 1) if n and plain_unigrams[i:i + n] == seq]
 
         def contains(seq: tuple[str, ...]) -> bool:
-            n = len(seq)
-            return n > 0 and any(plain_unigrams[i:i + n] == seq for i in range(len(plain_unigrams) - n + 1))
+            return bool(find(seq))
 
         for rel in self._relations:
             w = EXPANSION_WEIGHTS[rel["relation"]]
@@ -264,10 +383,27 @@ class SearchEngine:
                     continue
                 targets = [t for t in rel["plain_terms"] if t != rel["head_plain"]]
             else:
-                present = [t for t in rel["plain_terms"] if contains(t)]
-                if not present:
+                found = {}
+                for src, src_acc in zip(rel["plain_sources"], rel["acc_sources"]):
+                    pos = find(src)
+                    if rel["lexicon"]:
+                        # Từ vựng ngoài catalog chỉ bù khi cách nói của người dùng hiếm trong catalog; nếu đã khớp
+                        # nhiều sản phẩm, cộng thêm bản dịch chỉ làm loãng phần còn lại của câu.
+                        pos = [i for i in pos if self._lexicon_match_ok(
+                            [user_forms[k] for k in range(i, i + len(src))], src_acc)]
+                        if pos and self._phrase_df(src) > LEXICON_MAX_DF_RATIO * len(self.snap.products):
+                            pos = []
+                    if pos:
+                        found[src] = pos
+                if not found:
                     continue
-                targets = [t for t in rel["plain_terms"] if t not in present]
+                targets = [t for t in rel["plain_terms"] if t not in found]
+            if rel["relation"] == "broader":
+                found = {rel["head_plain"]: find(rel["head_plain"])}
+            for src, pos in found.items():
+                for i in pos:
+                    for k in range(i, i + len(src)):
+                        alts.setdefault(k, []).extend(targets)
             for t in targets:
                 _, terms = analyze(" ".join(t))
                 for term in terms:
@@ -275,7 +411,37 @@ class SearchEngine:
                         q_plain[term] = w
                 expansions.append({"relation": rel["relation"], "relation_id": rel["id"],
                                    "term": " ".join(t), "weight": round(w, 2)})
-        return q_plain, q_acc, expansions
+
+        # Độ phủ: mỗi âm tiết người dùng gõ (trừ số/đơn vị) có trọng số IDF trên toàn catalog, âm tiết không có
+        # trong catalog nặng nhất; được phủ khi sản phẩm chứa chính nó hoặc một cách nói thay thế (mở rộng, sửa lỗi
+        # gõ). Âm tiết gõ có dấu phải đúng dấu ("son" có dấu ≠ "sơn") trừ khi catalog viết không dấu ("Ca Phe Sua").
+        n = len(self.snap.products) or 1
+        cover = []
+        for k, t in kept:
+            if any(c.isdigit() for c in t) or (k and t in UNIT_TOKENS and text_toks[k - 1][:1].isdigit()):
+                continue
+            exact, plain = has_accents(t), strip_accents(t)
+            key = tone_key(t)
+            df = (sum(1 for d, keys in self._coverage_keys.items() if key in keys or plain in self._coverage_unacc[d])
+                  if exact else self._df_plain.get(plain, 0))
+            cover.append({"token": t, "key": key, "plain": plain, "exact": exact, "alts": alts.get(k, []),
+                          "weight": math.log(1 + (n - df + 0.5) / (df + 0.5)), "df": df})
+        return q_plain, q_acc, expansions, cover
+
+    def _covered(self, d: str, c: dict[str, Any]) -> bool:
+        plain = self._coverage_plain[d]
+        if c["exact"]:
+            own = c["key"] in self._coverage_keys[d] or c["plain"] in self._coverage_unacc[d]
+        else:
+            own = c["plain"] in plain
+        return own or any(all(x in plain for x in alt) for alt in c["alts"])
+
+    def _coverage(self, d: str, cover: list[dict[str, Any]]) -> float:
+        """Tỷ lệ trọng số IDF của các âm tiết truy vấn mà sản phẩm phủ được (1 = đủ ý)."""
+        total = sum(c["weight"] for c in cover)
+        if not total:
+            return 1.0
+        return sum(c["weight"] for c in cover if self._covered(d, c)) / total
 
     def _constraints(self, parsed: ParsedQuery, f: SearchFilters) -> list[_Constraint]:
         s = self.snap
@@ -288,6 +454,11 @@ class SearchEngine:
             pc = parsed.price
             out.append(_Constraint("price", describe_price(pc), "query",
                                    lambda p, pc=pc: any(pc.accepts(x) for x in known_prices(p)), True))
+        if parsed.on_sale:
+            out.append(_Constraint("on_sale", "Đang giảm giá (giá bán thấp hơn giá gốc)", "query",
+                                   lambda p: any(v.get("original_price_vnd") and v["price_vnd"] is not None
+                                                 and v["original_price_vnd"] > v["price_vnd"]
+                                                 for v in p["variants"])))
         if f.price_min is not None or f.price_max is not None:
             pc = PriceConstraint(f.price_min, f.price_max)
             out.append(_Constraint("price_user", describe_price(pc), "user",
@@ -297,8 +468,10 @@ class SearchEngine:
                 out.append(_Constraint(f"not_material:{e.value}", f"Không lấy chất liệu {e.value}", "query",
                                        lambda p, v=e.value: v not in p.get("materials", [])))
             elif e.field == "color":
+                # "trừ màu trắng" loại cả các sắc "trắng ngà", "trắng sữa".
                 out.append(_Constraint(f"not_color:{e.value}", f"Không lấy màu {e.value}", "query",
-                                       lambda p, v=e.value: v not in p.get("colors", [])))
+                                       lambda p, v=e.value: not any(c == v or c.startswith(v + " ")
+                                                                    for c in p.get("colors", []))))
             elif e.field == "category" and e.id:
                 sub = s.category_subtree(e.id)
                 out.append(_Constraint(f"not_category:{e.id}", f"Không lấy {e.value}", "query",
@@ -346,7 +519,7 @@ class SearchEngine:
                 fields.add("category")
             elif h.field == "material" and h.value in p.get("materials", []):
                 fields.add("material")
-            elif h.field == "color" and h.value in p.get("colors", []):
+            elif h.field == "color" and any(c == h.value or c.startswith(h.value + " ") for c in p.get("colors", [])):
                 fields.add("color")
             elif h.field == "place" and h.id in ({p["origin"]["craft_village_id"]} | set(p["origin"]["place_ids"])):
                 fields.add("place")
@@ -356,7 +529,8 @@ class SearchEngine:
                 fields.add("maker")
         return len(fields)
 
-    def _rank(self, parsed: ParsedQuery, candidates: set[str], q_plain, q_acc) -> list[tuple[str, float, set[str]]]:
+    def _rank(self, parsed: ParsedQuery, candidates: set[str], q_plain, q_acc, cover=None
+              ) -> list[tuple[str, float, set[str]]]:
         products = self.snap.products
         if not candidates:
             return []
@@ -381,6 +555,9 @@ class SearchEngine:
                                else strip_accents(t) in plain for t in query_tokens)
                     return not query_tokens or hits / len(query_tokens) >= self.config.min_token_coverage
                 scores = {d: v for d, v in scores.items() if covered(d)}
+            if self.config.min_idf_coverage and cover:
+                scores = {d: v for d, v in scores.items()
+                          if self._coverage(d, cover) >= self.config.min_idf_coverage}
         else:
             scores = {d: 1.0 for d in candidates}
             matched = {}
@@ -390,6 +567,9 @@ class SearchEngine:
         for d, base in scores.items():
             p = products[d]
             score = base * (1 + HINT_BOOST * self._hint_matches(p, parsed))
+            if self.config.brand_hint_boost and any(h.field == "brand" and h.id == p["brand_id"]
+                                                    for h in parsed.hints):
+                score *= 1 + self.config.brand_hint_boost
             evidence = sum(1 for c in p["origin_claims"] if c["value"] is True and c["source_ids"])
             score *= 1 + EVIDENCE_BOOST * evidence
             if any(f" {t} " in f" {self._plain_blob[d]} " for t in text_excl):
@@ -440,15 +620,60 @@ class SearchEngine:
                       "min_vnd": min(prices) if prices else None, "max_vnd": max(prices) if prices else None},
         }
 
-    def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc, ocr_text=""
-              ) -> list[tuple[str, float, set[str]]]:
+    def _hybrid(self, parsed: ParsedQuery, candidates: set[str], q_plain, q_acc, cover, sims: dict[str, float]
+                ) -> list[tuple[str, float, set[str]]]:
+        """BM25 + ngữ nghĩa: gộp thứ hạng bằng RRF có trọng số (không cộng cosine với điểm BM25). Nhánh ngữ nghĩa
+        chỉ xét ứng viên đã qua bộ lọc cứng; phủ định bằng chữ và gợi ý thuộc tính vẫn áp như BM25."""
+        cfg = self.config
+        text = self._rank(parsed, candidates, q_plain, q_acc, cover) if q_plain else []
+        if not text and q_plain and len(candidates) < len(self.snap.products) and self._rank(
+                parsed, set(self.snap.products), q_plain, q_acc, cover):
+            # Từ khóa có hàng khớp nhưng bộ lọc cứng đã loại hết: trả rỗng để gợi ý nới bộ lọc, không lấp bằng hàng
+            # "gần nghĩa nhất" còn lại (túi cói dưới 300k → sô cô la rẻ).
+            return []
+        floor = cfg.semantic_min_similarity
+        if cfg.semantic_relative_margin is not None and sims:
+            relative = max(sims.values()) - cfg.semantic_relative_margin  # sims phủ toàn catalog, trước bộ lọc
+            floor = relative if floor is None else max(floor, relative)
+        dense = sorted((d for d in candidates if d in sims and (floor is None or sims[d] >= floor)),
+                       key=lambda d: (-sims[d], d))[:cfg.semantic_top_k]
+        best_cov = max((self._coverage(d, cover) for d, _, _ in text[:PARTIAL_MATCH_TOP]), default=0.0) if cover else 1.0
+        if (cfg.semantic_no_match_similarity is not None and best_cov < cfg.semantic_no_match_coverage
+                and max(sims.values(), default=-1.0) < cfg.semantic_no_match_similarity):
+            return []  # cả từ khóa lẫn nghĩa đều không gần sản phẩm nào: coi là không có hàng
+        weight = cfg.semantic_weight
+        if cfg.semantic_mode == "adaptive":
+            weight *= 1 - best_cov
+        # Điểm BM25 đã gồm gợi ý thuộc tính/thương hiệu/phạt phủ định; không nhân lại lên điểm RRF (các điểm RRF sát
+        # nhau nên nhân lại sẽ đảo thứ hạng BM25 ngay cả khi trọng số ngữ nghĩa bằng 0).
+        fused: Counter[str] = Counter()
+        fields: dict[str, set[str]] = {}
+        text_rank = {}
+        for rank, (d, _, fs) in enumerate(text, 1):
+            fused[d] += 1 / (cfg.semantic_rrf_k + rank)
+            fields[d] = set(fs)
+            text_rank[d] = rank
+        text_excl = [strip_accents(e.value) for e in parsed.exclusions if e.field == "text"]
+        for rank, d in enumerate(dense, 1):
+            if not weight:
+                break
+            penalty = TEXT_EXCLUSION_PENALTY if d not in text_rank and any(
+                f" {t} " in f" {self._plain_blob[d]} " for t in text_excl) else 1.0
+            fused[d] += penalty * weight / (cfg.semantic_rrf_k + rank)
+            fields.setdefault(d, set()).add("semantic")
+        ranked = [(d, s, fields[d]) for d, s in fused.items()]
+        ranked.sort(key=lambda x: (-x[1], text_rank.get(x[0], len(text) + 1), self.snap.products[x[0]]["name_vi"]))
+        return ranked
+
+    def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc, ocr_text="",
+              cover=None) -> list[tuple[str, float, set[str]]]:
         """Ảnh (+ chữ): gộp thứ hạng bằng RRF, không cộng cosine với điểm BM25 (PLAN.md mục 4).
         Bộ lọc cứng đã áp dụng lên candidates; gợi ý thuộc tính trong chữ chỉ boost mềm."""
         cfg = self.config
         if cfg.image_min_similarity is not None:
             candidates = candidates & {h.product_id for h in visual if h.similarity >= cfg.image_min_similarity}
         vis = list(dict.fromkeys(h.product_id for h in visual if h.product_id in candidates))[:cfg.image_top_k]
-        text = self._rank(parsed, candidates, q_plain, q_acc) if q_plain else []
+        text = self._rank(parsed, candidates, q_plain, q_acc, cover) if q_plain else []
         if cfg.generic_text_mode == "visual_only" and len(text) > len(candidates) / 2:
             text = []
         fused: Counter[str] = Counter()
@@ -490,8 +715,19 @@ class SearchEngine:
         filters = filters or SearchFilters()
         parsed = parse_query(query or "", self.vocab)
         t_parse = time.perf_counter()
-        q_plain, q_acc, expansions = self._query_terms(parsed)
+        q_plain, q_acc, expansions, cover = self._query_terms(parsed)
         constraints = self._constraints(parsed, filters)
+        sims, semantic_ms, semantic_error = None, None, None
+        # Chỉ đưa phần nội dung vào model: câu chỉ còn từ đệm ("sản phẩm" sau khi tách "đang giảm giá") không có nghĩa
+        # để so; khi đó giữ thứ tự BM25/bộ lọc.
+        content = " ".join(t for t in tokens(parsed.text) if not is_stopword(t))
+        if visual is None and self.semantic is not None and self.config.semantic_weight and content:
+            t_sem = time.perf_counter()
+            try:
+                sims = self.semantic.similarities(content)
+            except Exception as e:  # noqa: BLE001 — lỗi model chỉ tắt nhánh ngữ nghĩa, BM25 vẫn trả kết quả
+                semantic_error = type(e).__name__
+            semantic_ms = round((time.perf_counter() - t_sem) * 1000, 2)
 
         all_ids = set(self.snap.products)
         non_price = [c for c in constraints if not c.is_price]
@@ -502,8 +738,10 @@ class SearchEngine:
 
         def rank(ids: set[str]) -> list[tuple[str, float, set[str]]]:
             if visual is None:
-                return self._rank(parsed, ids, q_plain, q_acc)
-            return self._fuse(parsed, ids, visual, q_plain, q_acc, ocr_text)
+                if sims is not None:
+                    return self._hybrid(parsed, ids, q_plain, q_acc, cover, sims)
+                return self._rank(parsed, ids, q_plain, q_acc, cover)
+            return self._fuse(parsed, ids, visual, q_plain, q_acc, ocr_text, cover)
 
         base = passing(non_price, all_ids)
         candidates = passing(price_cs, base)
@@ -521,6 +759,24 @@ class SearchEngine:
         for e in parsed.exclusions:
             if e.field == "text":
                 warnings.append(f"“{e.text}” không có trong từ điển thuộc tính; chỉ hạ hạng sản phẩm có từ này")
+        if semantic_error:
+            warnings.append("Tìm theo ngữ nghĩa tạm lỗi; kết quả chỉ dựa trên từ khóa.")
+        for x in expansions:
+            if x["relation"] == "typo":
+                warnings.append(f"Hiểu “{x['from']}” là “{x['term']}” (sửa lỗi gõ)")
+        unmatched = [c["token"] for c in cover if not c["df"] and not c["alts"]]
+        # Không chặn kết quả (đo trên train: chặn theo độ phủ mất nhiều truy vấn đúng hơn số no-match loại được);
+        # chỉ báo khi các kết quả đầu đều thiếu phần lớn ý của câu.
+        match_coverage = None
+        if cover and ranked and visual is None:
+            best = max(ranked[:PARTIAL_MATCH_TOP], key=lambda r: self._coverage(r[0], cover))[0]
+            match_coverage = round(self._coverage(best, cover), 3)
+            missing = [c["token"] for c in cover if not self._covered(best, c)]
+            if match_coverage < PARTIAL_MATCH_NOTICE and missing:
+                warnings.append("Chưa có sản phẩm khớp đủ ý; kết quả đầu không có: "
+                                + ", ".join(f"“{t}”" for t in missing))
+        elif unmatched and visual is None:
+            warnings.append("Không có sản phẩm nào chứa: " + ", ".join(f"“{t}”" for t in unmatched))
 
         relaxations = []
         if not ranked and constraints:
@@ -550,6 +806,8 @@ class SearchEngine:
                 "keywords": " ".join(t for t in tokens(parsed.text) if not is_stopword(t)),
                 "price_label": describe_price(parsed.price) if parsed.price else None,
                 "expansions": expansions,
+                "unmatched_terms": unmatched,
+                "match_coverage": match_coverage,
             },
             "applied_filters": [{"key": c.key, "label": c.label, "source": c.source, "hard": True}
                                 for c in constraints],
@@ -565,6 +823,7 @@ class SearchEngine:
             "timings_ms": {
                 "parse": round((t_parse - t0) * 1000, 2),
                 "retrieve_rank": round((t_rank - t_parse) * 1000, 2),
+                **({"semantic": semantic_ms} if semantic_ms is not None else {}),
                 "total": round((time.perf_counter() - t0) * 1000, 2),
             },
         }

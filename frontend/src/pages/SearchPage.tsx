@@ -81,8 +81,11 @@ export function SearchPage({ route }: { route: Route }) {
       return;
     }
     const timing = beginMeasure("keyword");
+    // Hủy yêu cầu cũ khi đổi truy vấn/bộ lọc để máy chủ không xử lý tiếp. Không ghi "cancelled" vào số đo:
+    // StrictMode chạy effect hai lần ở môi trường dev sẽ tạo lượt hủy giả.
+    const controller = new AbortController();
     api
-      .search(q, filters, limit)
+      .search(q, filters, limit, 0, controller.signal)
       .then((r) => { if (alive) { setData(r); setMeasure(timing); } })
       .catch((e) => {
         if (!alive) return;
@@ -92,6 +95,7 @@ export function SearchPage({ route }: { route: Route }) {
       .finally(() => alive && setLoading(false));
     return () => {
       alive = false;
+      controller.abort();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key, limit, retry]);
@@ -174,9 +178,11 @@ export function SearchPage({ route }: { route: Route }) {
               })}
             </div>
           )}
-          {iq.expansions.length > 0 && (
+          {/* Sửa lỗi gõ đã có cảnh báo riêng "Hiểu … là …". */}
+          {iq.expansions.some((e) => e.relation !== "typo") && (
             <p className="muted small">
-              Tìm thêm cách gọi khác: {iq.expansions.map((e) => e.term).join(", ")}
+              Tìm thêm cách gọi khác:{" "}
+              {iq.expansions.filter((e) => e.relation !== "typo").map((e) => e.term).join(", ")}
             </p>
           )}
           {data.warnings.map((w) => (

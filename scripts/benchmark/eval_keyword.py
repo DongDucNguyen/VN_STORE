@@ -35,6 +35,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from app.catalog.store import load_snapshot  # noqa: E402
 from app.search import engine as engine_mod  # noqa: E402
+from app.search.config import SearchConfig  # noqa: E402
 from app.search.engine import SearchEngine  # noqa: E402
 import locked_ledger  # noqa: E402
 
@@ -180,6 +181,9 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--confirm-locked-test", action="store_true",
                     help="split test: chỉ chạy trong phiên locked_test.py open, sau khi chốt cấu hình trên dev")
     ap.add_argument("--out-root", type=Path, default=ROOT / "experiments" / "results")
+    ap.add_argument("--semantic-adapter", default=None,
+                    help="module:thuộc_tính của TextEmbedder (vd. app.ml.text:BGEM3, cần .venv-ml và chỉ mục "
+                         "build_text_index.py); bật nhánh ngữ nghĩa theo VNSTORE_SEARCH_CONFIG")
     ap.add_argument("--machine-labels", action="store_true",
                     help="nhãn do máy chấm (label_source=machine, machine_labels.py); chỉ train/dev, ghi machine_labeled")
     args = ap.parse_args(argv)
@@ -218,7 +222,21 @@ def main(argv: list[str] | None = None) -> int:
             raise ValueError("Nhãn được duyệt trên catalog khác; cần đối chiếu lại catalog_sha256")
     except (ValueError, OSError) as exc:
         ap.error(str(exc))
-    eng = SearchEngine(snap)
+    semantic = None
+    if args.semantic_adapter:
+        from app.adapters import AdapterError, load_adapter
+        from app.search.semantic import SemanticSearch, TextEmbedder, TextIndexUnavailable
+        try:
+            semantic = SemanticSearch.for_snapshot(snap, load_adapter(args.semantic_adapter, TextEmbedder))
+        except (AdapterError, TextIndexUnavailable) as exc:
+            ap.error(str(exc))
+        if not SearchConfig.from_env().semantic_weight:
+            ap.error("--semantic-adapter cần semantic_weight > 0 trong VNSTORE_SEARCH_CONFIG")
+    eng = SearchEngine(snap, semantic=semantic)
+    try:
+        eng.require_consistent_semantic()
+    except ValueError as exc:
+        ap.error(str(exc))
     rows, metrics = evaluate(queries, eng, args.warmup)
 
     unverified = sum(1 for q in queries if not q.get("verified"))
@@ -251,9 +269,13 @@ def main(argv: list[str] | None = None) -> int:
             "metric_policy": "Unjudged in top K => metric null; averages use eligible queries only. IDCG/Recall denominator uses known labels, not assumed complete relevance of catalog.",
             "latency_protocol": {"warmup_rounds": args.warmup, "measured_passes": 1, "scope": "in-process search only, excludes loading/index/API", "p50": "median", "p95": "nearest-rank"},
             "selected_qids": [q["qid"] for q in queries],
-            "config": {**{name: sorted(value) if isinstance(value, set) else value
+            "config": {**{name: sorted(value) if isinstance(value, (set, frozenset)) else value
                             for name, value in vars(engine_mod).items() if name.isupper()},
                        "search": eng.config.to_dict(),
+                       "semantic": None if semantic is None else {
+                           "adapter": args.semantic_adapter, "model_id": semantic.embedder.model_id,
+                           "revision": semantic.embedder.revision, "preprocess": semantic.index.preprocess,
+                           "index": semantic.index.meta, "dim": semantic.index.dim},
                        "bm25": {"k1": next(iter(eng.index.fields.values())).k1,
                                 "b": next(iter(eng.index.fields.values())).b}},
             "environment": {"python": platform.python_version(), "platform": platform.platform()},

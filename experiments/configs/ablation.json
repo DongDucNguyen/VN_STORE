@@ -35,7 +35,12 @@
       {"name": "baseline"},
       {"name": "coverage050", "search": {"min_token_coverage": 0.5}},
       {"name": "coverage075", "search": {"min_token_coverage": 0.75}},
-      {"name": "accents075", "search": {"min_token_coverage": 0.75, "strict_accents": true}}
+      {"name": "accents075", "search": {"min_token_coverage": 0.75, "strict_accents": true}},
+      {"name": "no-lexicon", "search": {"lexicon": false}},
+      {"name": "no-typo", "search": {"typo_correction": false}},
+      {"name": "no-exact-latin", "search": {"exact_latin_bonus": false}},
+      {"name": "no-brand-boost", "search": {"brand_hint_boost": 0}},
+      {"name": "idf-coverage030", "search": {"min_idf_coverage": 0.3}}
     ]
   }
 }

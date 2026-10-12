@@ -73,7 +73,7 @@ E2E tự bật backend (cổng 8010, dữ liệu fixture) và Vite (cổng 5180)
 Đặt `PW_CHANNEL=""` để dùng Chromium của Playwright, sau khi cài bằng `npx playwright install chromium`.
 Test E2E thất bại nếu trang có lỗi JS hoặc `console.error` ngoài lỗi được mô phỏng có chủ đích. `npm run test:e2e` tạo báo cáo HTML trong `artifacts/e2e-report/`; `run_all_tests.py` dùng reporter dòng, không cập nhật HTML. Ảnh chụp và trace khi test thất bại nằm trong `artifacts/e2e-results/`.
 
-Biến môi trường backend: `VNSTORE_CATALOG`, `VNSTORE_INCLUDE_DRAFTS=1` (xem cả draft khi phát triển), `VNSTORE_CORS_ORIGINS`, `VNSTORE_ASR_ADAPTER`, `VNSTORE_IMAGE_ADAPTER`, `VNSTORE_IMAGE_INDEX_DIR`, `VNSTORE_IMAGE_INDEX_AUTOBUILD=1`.
+Biến môi trường backend: `VNSTORE_CATALOG`, `VNSTORE_INCLUDE_DRAFTS=1` (xem cả draft khi phát triển), `VNSTORE_CORS_ORIGINS`, `VNSTORE_ASR_ADAPTER`, `VNSTORE_IMAGE_ADAPTER`, `VNSTORE_IMAGE_INDEX_DIR`, `VNSTORE_IMAGE_INDEX_AUTOBUILD=1`, `VNSTORE_TEXT_ADAPTER`, `VNSTORE_TEXT_INDEX_DIR`, `VNSTORE_TEXT_INDEX_AUTOBUILD=1`, `VNSTORE_SEARCH_CONFIG` (JSON, xem [GĐ5](docs/giai-doan-5.md)).
 E2E bật adapter giả và micro giả của Chrome (phát file âm 440 Hz sinh trong `artifacts/e2e-media/`).
 Frontend gọi `/api/*` và `/images/*`, Vite proxy sang `VNSTORE_API` (mặc định `http://127.0.0.1:8000`).
 
@@ -158,6 +158,15 @@ cd backend && VNSTORE_INCLUDE_DRAFTS=1 VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisper
 ```
 
 Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperBaseFp16 | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt; bản int8/fp16 không nhanh hơn fp32 trên GPU này, xem [profile](reports/progress/2026-10-10_GD4_profile-int8-fp16.md)) và `app.ml.image:SigLIP2Base | DINOv2Base | OpenCLIPViTB32` (OpenCLIP ViT-B-32 laion2B, bản export thị giác của Immich, đã đối chiếu với bản export độc lập của onnx-community). Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU. Tùy chọn TensorRT: cài `backend/requirements-ml-trt.txt` (~1,9 GB) rồi đặt `VNSTORE_ML_TRT=1`; lần nạp đầu mất ~40 giây để dựng engine (cache ở `artifacts/trt-cache`), lợi ích độ trễ nhỏ ([báo cáo](reports/progress/2026-10-10_GD4_tensorrt.md)). Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
+**Tìm theo ngữ nghĩa (thử nghiệm, mặc định tắt):** `app.ml.text:BGEM3` (bản ONNX chính thức trong repo `BAAI/bge-m3`, MIT, ~2,3 GB). Dựng chỉ mục rồi bật bằng cấu hình:
+
+```bash
+.venv-ml/Scripts/python scripts/build_indexes/build_text_index.py --adapter app.ml.text:BGEM3
+cd backend && VNSTORE_TEXT_ADAPTER=app.ml.text:BGEM3 VNSTORE_SEARCH_CONFIG='{"semantic_weight": 1, "semantic_top_k": 10}' ../.venv-ml/Scripts/python -m uvicorn app.main:app --port 8000
+```
+
+Nhánh này gộp hạng với BM25 và giảm trọng số khi BM25 đã khớp đủ ý. Nó không lấp chỗ trống khi bộ lọc cứng đã loại hết hàng khớp từ khóa. Thiếu model hoặc chỉ mục thì API quay về BM25 và báo trong `/health` (`search.semantic`). Trên dev nhãn máy chưa thấy lợi ích nên chưa bật ([báo cáo](reports/progress/2026-10-12_GD5_tim-theo-ngu-nghia.md)).
+
 Smoke đầu tiên (không phải benchmark): PhoWhisper-small có WER chuẩn hóa 0,109 trên 30 câu FLEURS; SigLIP2 đạt Hit@1 0,96 khi tìm lại sản phẩm trong gallery; end-to-end ~0,94 giây cho clip 8,9 giây và ~20 ms cho ảnh trên RTX 5070 Ti. Lựa chọn PhoWhisper-small + SigLIP2 chỉ là cấu hình chạy demo, chưa phải chọn model theo PLAN §8.3.
 
 Thử luồng bằng adapter GIẢ: `VNSTORE_ASR_ADAPTER=tests.fakes:FakeASR`, `VNSTORE_IMAGE_ADAPTER=tests.fakes:ByteHistogramEmbedder VNSTORE_IMAGE_INDEX_AUTOBUILD=1`. FakeASR luôn trả một câu cố định; embedder giả dùng histogram byte và không hiểu ảnh. E2E dùng hai adapter này, nên mọi số đo với chúng **không phải benchmark**.

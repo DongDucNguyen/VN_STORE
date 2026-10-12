@@ -7,6 +7,10 @@ trên câu gốc + top K của BM25 trên phần từ khóa (bỏ bộ lọc gi�
 cố định theo seed và qid. Pool được xáo theo hash, không theo thứ hạng. Truy vấn không có sản phẩm 2–3
 vẫn phải chấm toàn catalog để ghi nhận no-match. Không có --pool-top thì chấm toàn catalog như trước.
 
+Với --pool-runs RUN_DIR… (kèm --pool-top K): thêm top K dự đoán của các run eval_keyword.py (vd. hệ thống mới như
+BM25 + từ điển, kết hợp ngữ nghĩa) vào pool, theo chuẩn pooling nhiều hệ thống. Run phải cùng catalog_sha256 và có
+đủ qid; nguồn ghi "run:<tên>@hạng" trong pool_sources.
+
 Với --suggestions (build_keyword_suggestions.py): tạo packet "có hỗ trợ" hiện gợi ý máy cạnh từng cặp. Ô chấm
 vẫn trống cho tới khi người chấm tự chọn hoặc bấm áp gợi ý; export ghi số gợi ý đã áp và đã sửa. Chỉ người chấm
 thứ nhất/người phân xử dùng packet này; người chấm thứ hai dùng packet không gợi ý để giữ độc lập.
@@ -28,7 +32,32 @@ def hash_order(qid: str, ids) -> list[str]:
     return sorted(ids, key=lambda pid: hashlib.sha256((qid + "\0" + pid).encode()).hexdigest())
 
 
-def build_pools(queries, snap, top_k: int, n_random: int, seed: str) -> tuple[dict, dict]:
+def load_pool_runs(run_dirs, snap, qids: set[str]) -> dict[str, dict[str, list[str]]]:
+    """Tên run → qid → dự đoán. Chặn run khác catalog, thiếu qid hoặc dự đoán sản phẩm không hiển thị."""
+    runs = {}
+    for d in run_dirs:
+        meta = json.loads((d / "run.json").read_text(encoding="utf-8"))
+        if meta.get("catalog_sha256") != snap.sha256:
+            raise ValueError(f"{d.name}: run trên catalog khác ({str(meta.get('catalog_sha256'))[:12]}…)")
+        preds = {}
+        for line in (d / "predictions.jsonl").read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                row = json.loads(line)
+                preds[row["qid"]] = row["predictions"]
+        if qids - set(preds):
+            raise ValueError(f"{d.name}: thiếu {len(qids - set(preds))} qid của bộ truy vấn")
+        unknown = {pid for qid in qids for pid in preds[qid]} - set(snap.products)
+        if unknown:
+            raise ValueError(f"{d.name}: dự đoán sản phẩm không hiển thị, kiểm tra --include-drafts")
+        name = meta.get("name") or d.name
+        if name in runs:
+            raise ValueError(f"Hai run cùng tên {name!r}")
+        runs[name] = preds
+    return runs
+
+
+def build_pools(queries, snap, top_k: int, n_random: int, seed: str, runs: dict | None = None
+                ) -> tuple[dict, dict]:
     """qid → pool (thứ tự hash) và qid → {product_id: [nguồn@hạng]} (chỉ lưu hồ sơ, trang không hiện)."""
     engine = SearchEngine(snap)
     pools, sources = {}, {}
@@ -44,6 +73,8 @@ def build_pools(queries, snap, top_k: int, n_random: int, seed: str) -> tuple[di
         keywords = res["interpreted_query"]["keywords"]
         if keywords and keywords != q["query"]:
             add([r["id"] for r in engine.search(keywords, limit=top_k)["results"]], "bm25:keywords")
+        for name, preds in (runs or {}).items():
+            add(preds[q["qid"]], f"run:{name}")
         rest = sorted(set(snap.products) - set(found))
         add(random.Random(f"{seed}\0{q['qid']}").sample(rest, min(n_random, len(rest))), "random")
         pools[q["qid"]] = hash_order(q["qid"], found)
@@ -52,7 +83,7 @@ def build_pools(queries, snap, top_k: int, n_random: int, seed: str) -> tuple[di
 
 
 def make_packet(queries, snap, output: Path, pool_top: int | None = None, n_random: int = 5,
-                seed: str = "vnstore-keyword-pool-1"):
+                seed: str = "vnstore-keyword-pool-1", pool_runs=()):
     validate_queries(queries, {p["id"] for p in snap.data["products"]})
     if not snap.products:
         raise ValueError("Catalog không có sản phẩm hiển thị; kiểm tra --include-drafts")
@@ -73,13 +104,14 @@ def make_packet(queries, snap, output: Path, pool_top: int | None = None, n_rand
               "candidate_order": {q["qid"]: hash_order(q["qid"], snap.products) for q in queries},
               "scope": "all_visible_catalog_products", "verified": False}
     if pool_top is not None:
-        pools, sources = build_pools(queries, snap, pool_top, n_random, seed)
+        runs = load_pool_runs(pool_runs, snap, {q["qid"] for q in queries}) if pool_runs else {}
+        pools, sources = build_pools(queries, snap, pool_top, n_random, seed, runs)
         # Pool đứng đầu danh sách, phần còn lại của catalog phía sau (đều theo thứ tự hash).
         packet["candidate_order"] = {qid: pool + [p for p in packet["candidate_order"][qid] if p not in pool]
                                      for qid, pool in pools.items()}
         packet.update(scope="pool_then_full_catalog_for_no_match", pool=pools, pool_sources=sources,
                       pool_policy={"top_k": pool_top, "random_per_query": n_random, "seed": seed,
-                                   "systems": ["bm25", "bm25:keywords"]})
+                                   "systems": ["bm25", "bm25:keywords", *(f"run:{n}" for n in runs)]})
     return packet
 
 
@@ -117,17 +149,22 @@ def main():
     ap.add_argument("--random", type=int, default=5, help="số sản phẩm ngẫu nhiên thêm vào pool (với --pool-top)")
     ap.add_argument("--seed", default="vnstore-keyword-pool-1")
     ap.add_argument("--suggestions", type=Path, help="JSON gợi ý máy; tạo packet có hỗ trợ cho người chấm thứ nhất")
+    ap.add_argument("--pool-runs", type=Path, nargs="+", default=(),
+                    help="thư mục run eval_keyword.py; top K dự đoán mỗi run vào pool (cần --pool-top)")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     if args.out.exists():
         ap.error("Thư mục đầu ra đã tồn tại; chọn thư mục mới để giữ hồ sơ cũ")
     if (args.pool_top is not None and args.pool_top < 1) or args.random < 0:
         ap.error("--pool-top ≥ 1, --random ≥ 0")
+    if args.pool_runs and args.pool_top is None:
+        ap.error("--pool-runs cần --pool-top")
     try:
         queries = [json.loads(line) for line in args.queries.read_text(encoding="utf-8").splitlines() if line.strip()]
         snap = load_snapshot(args.catalog, include_drafts=args.include_drafts)
-        packet = make_packet(queries, snap, args.out.resolve(), args.pool_top, args.random, args.seed)
-    except (ValueError, OSError) as exc:
+        packet = make_packet(queries, snap, args.out.resolve(), args.pool_top, args.random, args.seed,
+                             args.pool_runs)
+    except (ValueError, OSError, KeyError) as exc:
         ap.error(str(exc))
     packet["queries_sha256"] = hashlib.sha256(args.queries.read_bytes()).hexdigest()
     if args.suggestions:

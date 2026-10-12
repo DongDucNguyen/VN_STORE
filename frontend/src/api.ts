@@ -111,7 +111,9 @@ export interface SearchResponse {
     keywords: string;
     price_label: string | null;
     exclusions: { field: string; value: string; id: string | null; text: string }[];
-    expansions: { relation: string; term: string; weight: number }[];
+    expansions: { relation: string; term: string; weight: number; from?: string }[];
+    unmatched_terms: string[];
+    match_coverage: number | null;
     warnings: string[];
   };
   applied_filters: { key: string; label: string; source: "query" | "user"; hard: boolean }[];
@@ -155,7 +157,8 @@ export interface Health {
   status: string;
   catalog: { version: string; products_visible: number; include_drafts: boolean;
     publication_mode?: "standard" | "internal_demo" } | null;
-  search?: { keyword: string; voice: string; image: string; models?: { voice: ModelStatus; image: ModelStatus } };
+  search?: { keyword: string; voice: string; image: string; semantic?: string;
+    models?: { voice: ModelStatus; image: ModelStatus; text?: ModelStatus } };
 }
 
 export class ApiError extends Error {

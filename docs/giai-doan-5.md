@@ -14,7 +14,7 @@ Ngày 11/10/2026. Đây là công cụ thử nghiệm; chưa có cấu hình t�
 | OCR | Latin PP-OCR qua RapidOCR/ONNX, confidence ≥0,6; weighted RRF | Transcript OCR và relevance bao bì thật để đo độ đúng và lợi ích retrieval |
 | No-match | Bảng precision/recall/F1 và false accept/reject theo ngưỡng | Chỉ dev đã duyệt, có mẫu có/không có đáp án; chạy lại đầy đủ retrieval sau khi đề xuất ngưỡng |
 
-Semantic BGE-M3, denoise, contextual biasing/n-best, remove-background và fine-tune là các thử nghiệm có điều kiện của PLAN, **chưa triển khai/chưa chọn** trong đợt này. Chưa có baseline keyword/dev thật hoặc tập train đủ quyền; không có cơ sở chứng minh lợi ích hay điều chỉnh các model đó. Fine-tune/tự export còn bị hạn chế bởi PyTorch trên máy Windows hiện tại. Không tạo dữ liệu hoặc chữ ký người duyệt để vượt điều kiện này.
+Denoise, contextual biasing/n-best, remove-background và fine-tune là các thử nghiệm có điều kiện của PLAN, **chưa triển khai/chưa chọn**. Semantic BGE-M3 đã triển khai ngày 12/10 ở dạng tùy chọn, **chưa bật** (mục bên dưới). Chưa có baseline keyword/dev thật hoặc tập train đủ quyền; không có cơ sở chứng minh lợi ích hay điều chỉnh các model đó. Fine-tune/tự export còn bị hạn chế bởi PyTorch trên máy Windows hiện tại. Không tạo dữ liệu hoặc chữ ký người duyệt để vượt điều kiện này.
 
 ## Cấu hình dùng chung API và evaluator
 
@@ -36,6 +36,36 @@ $env:VNSTORE_IMAGE_MULTI_VIEW='1'
 - Voice: `VNSTORE_ASR_VAD=0|1`, `VNSTORE_VAD_THRESHOLD` mặc định 0,5, `VNSTORE_VAD_MIN_MS` mặc định 250, `VNSTORE_SILENCE_DBFS` mặc định −60. API và evaluator dùng cùng gate.
 
 Không tự sửa transcript/tên riêng gần âm; người dùng tiếp tục sửa transcript trên UI. Cấu hình được lưu trong từng run; so model voice có retrieval từ chối hai search config khác nhau.
+
+### Keyword — đợt 12/10/2026 (bật mặc định)
+
+Chọn trên **train nhãn máy**, báo cáo trên dev nhãn máy; xem [báo cáo](../reports/progress/2026-10-12_GD5_cai-thien-keyword.md). Tắt từng phần bằng `VNSTORE_SEARCH_CONFIG` để ablation; `TEXT_SETTINGS` trong `config.py` liệt kê các khóa phía chữ mà voice/ảnh/locked test phải giữ giống nhau.
+
+- `lexicon` (mặc định `true`): từ điển ngoài catalog [`lexicon.py`](../backend/app/search/lexicon.py) — dịch Anh↔Việt cho từ tiếng Anh có trong tên sản phẩm (milk↔sữa, tea set↔bộ trà…), cách viết "socola/chocolate", viết tắt `km109`. Chỉ mở rộng khi cụm gốc có ở ≤ 5% sản phẩm; mục một âm tiết có dấu chỉ khớp khi người dùng gõ đúng dấu ("com" không thành "cốm"). Không ghi vào `database.json` để không đổi hash catalog.
+- `typo_correction` (`true`): âm tiết không có trong catalog/từ điển → bỏ chữ lặp, rồi khoảng cách sửa 1. Từ có dấu chỉ thêm/bớt phụ âm hoặc đảo chữ (không đụng nguyên âm, giữ thanh); từ không dấu chỉ sửa khi ≥ 5 ký tự. UI hiện "Hiểu … là … (sửa lỗi gõ)".
+- `exact_latin_bonus` (`true`): câu có dấu thì từ Latin (Keras, Moonbow) cũng được cộng điểm khớp đúng dạng như từ có dấu.
+- `brand_hint_boost` (`0.5`): nhân thêm khi câu nêu thương hiệu của sản phẩm.
+- `min_idf_coverage` (`0`, **không bật**): loại sản phẩm phủ dưới ngưỡng trọng số IDF của câu. Trên train, ngưỡng 0,3 giảm no-match nhận nhầm 29/30 → 21/30 nhưng Success@5 −1,8 điểm; 0,5 còn 11/30 nhưng −9,6 điểm. API thay vào đó trả `match_coverage`, `unmatched_terms` và cảnh báo "Chưa có sản phẩm khớp đủ ý…" khi 5 kết quả đầu đều phủ < 60%.
+
+### Nhánh ngữ nghĩa BGE-M3 — 12/10/2026 (tùy chọn, mặc định tắt)
+
+Xem [báo cáo](../reports/progress/2026-10-12_GD5_tim-theo-ngu-nghia.md).
+
+Thành phần:
+- `app.ml.text:BGEM3`: bản ONNX chính thức của `BAAI/bge-m3`, ghim revision, output `sentence_embedding`, không dùng torch.
+- Chỉ mục `artifacts/indexes/text/<model>/`: dựng bằng `scripts/build_indexes/build_text_index.py`. Mỗi sản phẩm lưu hash văn bản; văn bản hoặc model đổi thì chỉ mục báo `index_stale`.
+- `SemanticSearch` (`backend/app/search/semantic.py`): cache 256 vector truy vấn.
+
+Bật bằng `VNSTORE_TEXT_ADAPTER` cùng `semantic_weight > 0`:
+- `semantic_weight` (0 = tắt), `semantic_top_k` (10), `semantic_rrf_k` (60): RRF có trọng số với danh sách BM25. Không cộng cosine với điểm BM25, không nhân lại gợi ý thuộc tính.
+- `semantic_mode=adaptive` (mặc định): trọng số nhân (1 − độ phủ IDF tốt nhất của BM25). BM25 đã khớp đủ ý thì giữ nguyên thứ hạng BM25.
+- `semantic_relative_margin` (0,1): chỉ nhận sản phẩm có tương đồng ≥ (giống nhất toàn catalog − biên). Nếu bộ lọc cứng loại hết hàng khớp từ khóa thì trả rỗng và gợi ý nới bộ lọc, không lấp bằng hàng gần nghĩa.
+- `semantic_no_match_similarity` / `semantic_no_match_coverage` (tắt): trả rỗng khi cả tương đồng lẫn độ phủ đều thấp.
+- Chỉ embed phần nội dung (bỏ từ đệm, giá, phủ định). Lỗi model thì quay về BM25 kèm cảnh báo.
+
+Evaluator: `VNSTORE_SEARCH_CONFIG='{"semantic_weight":1,"semantic_top_k":10}' .venv-ml/Scripts/python scripts/benchmark/eval_keyword.py … --semantic-adapter app.ml.text:BGEM3`. Mọi evaluator từ chối cấu hình có `semantic_weight > 0` mà không có model (`require_consistent_semantic`), để không ghi run BM25 dưới tên cấu hình ngữ nghĩa. Evaluator voice/ảnh và `locked_test.py` **chưa hỗ trợ** nhánh này; cần bổ sung trước khi chọn nó.
+
+Luôn bật (sửa lỗi, không có cờ): tách/chuẩn hóa đơn vị đo ("80gr" = "80g"); giá "100k-200k" là khoảng; "in 3D", "vàng 24K" không phải giá; "giảm giá/khuyến mãi/sale" → lọc cứng sản phẩm có giá gốc cao hơn giá bán; "bộ sưu tập/BST" bỏ khỏi từ khóa; loại/gợi ý màu theo sắc ("trừ màu trắng" loại "trắng ngà"; màu gốc vào từ vựng khi chỉ có sắc).
 
 ## OCR và provenance
 

@@ -61,6 +61,7 @@ class ParsedQuery:
     normalized: str
     text: str
     price: PriceConstraint | None = None
+    on_sale: bool = False
     exclusions: list[Exclusion] = field(default_factory=list)
     hints: list[Hint] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
@@ -133,13 +134,23 @@ def _is_number(tok: str) -> bool:
     return bool(re.fullmatch(r"\d+(?:[.,]\d+)*", tok))
 
 
+_KARAT_AFTER = {"vàng", "vang"}
+
+
 def _split_attached(toks: list[str]) -> list[str]:
-    """'500k' → ['500','k'], '1tr5' → ['1','tr','5'], '200g' → ['200','g']."""
+    """'500k' → ['500','k'], '1tr5' → ['1','tr','5'], '200g' → ['200','g'].
+
+    Giữ nguyên '3d' (số nhỏ dính 'd/đ' không phải tiền: "in 3D") và 'vàng 24k' (độ tuổi vàng)."""
     out: list[str] = []
     for t in toks:
         m = _ATTACHED.match(t)
-        if m and (m.group(2) in _MAGNITUDES or m.group(2) in _PLAIN_MAGNITUDES
-                  or m.group(2) in _CURRENCY or m.group(2) in _OTHER_UNITS):
+        unit = m.group(2) if m else ""
+        if m and unit in _CURRENCY and not m.group(3) and _parse_number(m.group(1)) < 1000:
+            m = None
+        elif m and unit == "k" and not m.group(3) and out and out[-1] in _KARAT_AFTER:
+            m = None
+        if m and (unit in _MAGNITUDES or unit in _PLAIN_MAGNITUDES
+                  or unit in _CURRENCY or unit in _OTHER_UNITS):
             out.append(m.group(1))
             out.append(m.group(2))
             if m.group(3):
@@ -246,11 +257,11 @@ _OPS_AFTER: list[tuple[tuple[str, ...], str]] = [
     (("trở", "lên"), "gte"), (("đổ", "lên"), "gte"),
 ]
 _RANGE_SEP = (("đến",), ("tới",), ("tới", "mức"))
-_HYPHEN_RANGE = re.compile(r"(\d)\s*[-–]\s*(\d)")
+_HYPHEN_RANGE = re.compile(r"(\d(?:k|tr|đ|d)?)\s*[-–]\s*(\d)")
 
 
 def price_tokens(text: str) -> list[str]:
-    """Tách token cho phân tích giá; "200-500k" → "200 đến 500k" vì tokenizer bỏ dấu gạch."""
+    """Tách token cho phân tích giá; "200-500k", "100k-200k" → "… đến …" vì tokenizer bỏ dấu gạch."""
     return _split_attached(tokens(_HYPHEN_RANGE.sub(r"\1 đến \2", normalize(text))))
 
 
@@ -376,6 +387,38 @@ def parse_price(toks: list[str]) -> tuple[PriceConstraint | None, set[int], list
     return None, set(), warnings
 
 
+# ---------- Giảm giá ----------
+
+_SALE_PHRASES: list[tuple[str, ...]] = [
+    ("đang", "giảm", "giá"), ("giảm", "giá"), ("khuyến", "mãi"), ("khuyến", "mại"), ("đang", "sale"),
+    ("on", "sale"), ("sale", "off"), ("sale",), ("giá", "sốc"),
+]
+
+
+def parse_sale(toks: list[str], used: set[int]) -> set[int]:
+    """Nhận "giảm giá/khuyến mãi/sale" → chỉ sản phẩm có giá gốc cao hơn giá bán (bộ lọc cứng)."""
+    for i in range(len(toks)):
+        for phrase in _SALE_PHRASES:
+            span = range(i, i + len(phrase))
+            if not any(k in used for k in span) and _match_phrase(toks, i, phrase):
+                return set(span)
+    return set()
+
+
+# Cụm chỉ "bộ sưu tập/dòng hàng" không mô tả sản phẩm; để lại thì "bộ" khớp "bộ trà" mạnh hơn tên bộ sưu tập.
+_COLLECTION_FILLERS: list[tuple[str, ...]] = [("bộ", "sưu", "tập"), ("bst",), ("dòng", "sản", "phẩm")]
+
+
+def parse_fillers(toks: list[str], used: set[int]) -> set[int]:
+    out: set[int] = set()
+    for i in range(len(toks)):
+        for phrase in _COLLECTION_FILLERS:
+            span = set(range(i, i + len(phrase)))
+            if not (span & (used | out)) and _match_phrase(toks, i, phrase):
+                out |= span
+    return out
+
+
 # ---------- Phủ định ----------
 
 _NEG_TRIGGERS: list[tuple[str, ...]] = [
@@ -431,6 +474,8 @@ def parse_query(raw: str, vocab: Vocabulary) -> ParsedQuery:
     norm = normalize(raw)
     toks = price_tokens(norm)
     price, used, warnings = parse_price(toks)
+    sale_used = parse_sale(toks, used)
+    used |= sale_used | parse_fillers(toks, used | sale_used)
     exclusions, neg_used = parse_negations(toks, used, vocab)
     used |= neg_used
 
@@ -451,5 +496,5 @@ def parse_query(raw: str, vocab: Vocabulary) -> ParsedQuery:
             i += 1
 
     text = " ".join(toks[k] for k in rest)
-    return ParsedQuery(raw=raw, normalized=norm, text=text, price=price,
+    return ParsedQuery(raw=raw, normalized=norm, text=text, price=price, on_sale=bool(sale_used),
                        exclusions=exclusions, hints=hints, warnings=warnings)

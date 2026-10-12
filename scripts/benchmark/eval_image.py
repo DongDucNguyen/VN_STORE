@@ -248,6 +248,11 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     snap = load_snapshot(args.catalog, include_drafts=manifest["include_drafts"])
     engine, ocr = SearchEngine(snap), ocr_from_env()
+    try:
+        engine.require_consistent_semantic()  # nhánh ngữ nghĩa không dùng cho ảnh; chặn cấu hình gây hiểu nhầm
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 2
     with lp.VramPeak() as vram:
         t = time.perf_counter()
         index, index_source = get_index(snap, embedder, args.index_dir)

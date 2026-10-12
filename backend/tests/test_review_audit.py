@@ -205,3 +205,29 @@ def test_real_pool_packet_from_bm25_and_random(tmp_path):
         assert tags.count("random") == 3 and set(packet["pool_sources"][q["qid"]]) == set(pool)
     assert len(packet["pool"]["kw-seed-001"]) < len(snap.products)
     assert audit(packet, [], snap.sha256, set(snap.products))["status"] == "pending_review"
+
+
+def test_pool_runs_add_new_system_predictions(tmp_path):
+    from app.catalog.store import load_snapshot
+    from prepare_review import make_packet
+    snap = load_snapshot(REPO_ROOT / "database.json", include_drafts=True)
+    queries = read_jsonl((REPO_ROOT / "benchmarks/keyword/seed_unverified.jsonl").read_bytes())[:3]
+    outside = sorted(snap.products)[-1]
+    run = tmp_path / "run-a"
+    run.mkdir()
+    (run / "run.json").write_text(json.dumps({"name": "hybrid", "catalog_sha256": snap.sha256}), encoding="utf-8")
+    (run / "predictions.jsonl").write_text("\n".join(json.dumps({"qid": q["qid"], "predictions": [outside]})
+                                                     for q in queries), encoding="utf-8")
+    packet = make_packet(queries, snap, tmp_path, pool_top=5, n_random=0, pool_runs=[run])
+    for q in queries:
+        assert outside in packet["pool"][q["qid"]]
+        assert "run:hybrid@1" in packet["pool_sources"][q["qid"]][outside]
+    assert packet["pool_policy"]["systems"][-1] == "run:hybrid"
+    # Run trên catalog khác hoặc thiếu qid bị chặn.
+    (run / "run.json").write_text(json.dumps({"name": "hybrid", "catalog_sha256": "0" * 64}), encoding="utf-8")
+    with pytest.raises(ValueError, match="catalog khác"):
+        make_packet(queries, snap, tmp_path, pool_top=5, pool_runs=[run])
+    (run / "run.json").write_text(json.dumps({"name": "hybrid", "catalog_sha256": snap.sha256}), encoding="utf-8")
+    (run / "predictions.jsonl").write_text(json.dumps({"qid": queries[0]["qid"], "predictions": []}), encoding="utf-8")
+    with pytest.raises(ValueError, match="thiếu"):
+        make_packet(queries, snap, tmp_path, pool_top=5, pool_runs=[run])

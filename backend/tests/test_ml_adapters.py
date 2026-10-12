@@ -136,3 +136,14 @@ def test_api_end_to_end_with_real_models(monkeypatch, whisper):
         api.state.voice = api.VoiceService(None, api.Status("unavailable"))
         api.state.image_embedder, api.state.image_status = None, api.Status("unavailable")
         api.state.bundle = None
+
+
+def test_bge_m3_text_embeddings_rank_synonyms_first():
+    from app.ml.text import BGEM3
+    m = BGEM3()
+    q, near, far = m.embed_queries(["bình hoa"]) + m.embed_documents(["Lọ hoa gốm men lam", "Sô cô la đen 70%"])
+    assert len(q) == 1024 and abs(math.fsum(x * x for x in q) - 1) < 1e-3
+    dot = lambda a, b: math.fsum(x * y for x, y in zip(a, b))  # noqa: E731
+    assert dot(q, near) > dot(q, far) + 0.1
+    # Truy vấn dài bị cắt ở query_max_tokens nhưng vẫn giữ token kết thúc, không lỗi.
+    assert len(m.embed_queries(["gốm " * 200])[0]) == 1024
