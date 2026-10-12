@@ -1,0 +1,685 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Vietnam+conical+hat+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:05.904396+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "39803139": {
+          "pageid": 39803139,
+          "ns": 6,
+          "title": "File:Conical hat, Viet, Thanh Oai, Hanoi, 1999, palm leaves with bamboo frame - Vietnamese Women's Museum - Hanoi, Vietnam - DSC03996.JPG",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 6558409,
+              "width": 3222,
+              "height": 3297,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG/1280px-Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1310,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG/1280px-Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1310,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Conical_hat%2C_Viet%2C_Thanh_Oai%2C_Hanoi%2C_1999%2C_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC03996.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Conical_hat,_Viet,_Thanh_Oai,_Hanoi,_1999,_palm_leaves_with_bamboo_frame_-_Vietnamese_Women%27s_Museum_-_Hanoi,_Vietnam_-_DSC03996.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39803139",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-04-26 22:11:12",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Conical hat, Viet, Thanh Oai, Hanoi, 1999, palm leaves with bamboo frame - Vietnamese Women's Museum - Hanoi, Vietnam - DSC03996",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Bambooworks of Vietnam|Conical straw hats in Vietnam|Files uploaded by Daderot|Hats in the Vietnamese Women's Museum|Culture of Thanh Oai",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnamese Women's Museum, Hanoi, Vietnam. Photography was permitted in the museum without restriction.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-04 03:29:20",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "10185064": {
+          "pageid": 10185064,
+          "ns": 6,
+          "title": "File:Conical hat 01.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 569556,
+              "width": 911,
+              "height": 757,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/04/Conical_hat_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1064,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/0/04/Conical_hat_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1064
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Conical_hat_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Conical_hat_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=10185064",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2010-04-28 10:20:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Conical hat 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "People of China|Taken with Sony DSC-W120|People with mobile telephones|Bo'ai Road area|Self-published work|PD-self|Files uploaded by Anna Frodesiak|People wearing conical straw hats in Vietnam|People in Haikou",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A female government-employed rubbish worker on Boai Road Hainan, Haikou, China. She is holding a mobile phone and wearing a conical hat. Note the rickshaw driver behind also wearing a conical hat.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-04-28",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Anna_Frodesiak\" title=\"User:Anna Frodesiak\">Anna Frodesiak</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<table class=\"licensetpl\" style=\"display:none\">\n<tbody><tr>\n<td><span class=\"licensetpl_short\">Public domain</span><span class=\"licensetpl_long\">Public domain</span><span class=\"licensetpl_link_req\">false</span><span class=\"licensetpl_attr_req\">false</span>\n</td></tr></tbody></table>\n<table style=\"width: 100%; clear: both; margin: 0.5em auto; background-color: var(--background-color-progressive-subtle, #f7f8ff); color: var(--color-base, #202122); border: var(--border-subtle, 2px solid #8888aa); border-spacing: 8px; padding: 0px;\" dir=\"ltr\" class=\"layouttemplate\" lang=\"en\">\n<tbody><tr>\n<td><span typeof=\"mw:File\"><span title=\"Public domain\"><img alt=\"Public domain\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/120px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/250px-PD-icon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"196\" data-file-height=\"196\"></span></span>\n</td>\n<td>I, the copyright holder of this work, release this work into the <b><a href=\"https://en.wikipedia.org/wiki/en:public_domain\" class=\"extiw\" title=\"w:en:public domain\">public domain</a></b>. This applies worldwide.<br><small>In some countries this may not be legally possible; if so:</small><br><i>I grant anyone the right to use this work <b>for any purpose</b>, without any conditions, unless such conditions are required by law.</i>\n</td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "130216352": {
+          "pageid": 130216352,
+          "ns": 6,
+          "title": "File:Incense in Vietnam.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 32790715,
+              "width": 7008,
+              "height": 4672,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Incense_in_Vietnam.jpg/1280px-Incense_in_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Incense_in_Vietnam.jpg/3840px-Incense_in_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Incense_in_Vietnam.jpg/1280px-Incense_in_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Incense_in_Vietnam.jpg/3840px-Incense_in_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Incense_in_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Incense_in_Vietnam.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=130216352",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-05-24 17:21:16",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Incense in Vietnam",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Sony ILCE-7M4|Traditions of Vietnam|Taken with Sony FE 24-70mm F2.8 GM|Self-published work|Featured pictures on Wikipedia, English|Products of Vietnam|Rose objects|Featured pictures of Vietnam|Featured pictures on Wikipedia, Persian|Featured pictures on Wikipedia, Spanish|Featured pictures on Wikipedia, Vietnamese|September 2022 Vietnam photographs|Images from Wiki Loves Folklore 2023|Files with coordinates missing SDC location of creation|Vietnam photographs taken on 2022-09-14|Conical straw hats in Vietnam|Images from Wiki Loves Folklore 2023 in Vietnam|Featured pictures on Wikipedia, Arabic|Incense production|Pictures of the Year/2023 (finalist)|Uploaded via Campaign:wlf 2023|Brown, gray, purple|Featured pictures from Wiki Loves Folklore 2023|Culture of Ứng Hòa",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|poty|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "20.770000",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "105.780000",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<a href=\"https://en.wikipedia.org/wiki/Incense\" class=\"extiw\" title=\"w:Incense\">Incense</a> plays an important role in Vietnamese life. It is considered as a sacred bridge to connect the visible life of human beings and the world of heaven, earth, and gods. Photo taken in <a href=\"https://www.wikidata.org/wiki/Q10810452\" class=\"extiw\" title=\"d:Q10810452\">Quang Phu Cau</a> village, on the outskirts of Hanoi, Vietnam. In this picture, incense sticks are being set out to dry, after being dipped in the incense solution.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-09-14 10:56:58",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Trantuanviet&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Trantuanviet (page does not exist)\">Trantuanviet</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "91052523": {
+          "pageid": 91052523,
+          "ns": 6,
+          "title": "File:Jeune vietnamienne à Cần Thơ.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2068714,
+              "width": 3648,
+              "height": 5472,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg/1280px-Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/82/Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg/1280px-Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/82/Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Jeune_vietnamienne_%C3%A0_C%E1%BA%A7n_Th%C6%A1.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=91052523",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-05-06 03:26:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Jeune vietnamienne à Cần Thơ",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files from external sources with reviewed licenses|Immature flowers|Women of Vietnam in the 2010s|Images from Unsplash|Portrait photographs of women smiling|White áo dài|Culture of Can Tho|Conical straw hats in Vietnam|Silk aodai|Tóc thề",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Jeune vietnamienne à Cần Thơ, au sud du Vietnam",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-08-16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://unsplash.com/photos/u6LGX2VMOP4\">https://unsplash.com/photos/u6LGX2VMOP4</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Hisu Lee",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This file, which was originally posted to\n<a rel=\"nofollow\" class=\"external free\" href=\"https://unsplash.com/photos/u6LGX2VMOP4\">https://unsplash.com/photos/u6LGX2VMOP4</a>, was reviewed on 19 March 2025 by <a href=\"//commons.wikimedia.org/wiki/Commons:License_review#Reviewers\" title=\"Commons:License review\">reviewer</a> <b><a href=\"//commons.wikimedia.org/wiki/User:Leoboudv\" title=\"User:Leoboudv\">Leoboudv</a></b>, who confirmed that it was available there under the stated license on that date.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "5605238": {
+          "pageid": 5605238,
+          "ns": 6,
+          "title": "File:Vietnamese conical hat nonla.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 311631,
+              "width": 1536,
+              "height": 1216,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Vietnamese_conical_hat_nonla.jpg/1280px-Vietnamese_conical_hat_nonla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1013,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/67/Vietnamese_conical_hat_nonla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Vietnamese_conical_hat_nonla.jpg/1280px-Vietnamese_conical_hat_nonla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1013,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/67/Vietnamese_conical_hat_nonla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Vietnamese_conical_hat_nonla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vietnamese_conical_hat_nonla.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=5605238",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2008-12-31 01:25:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Vietnamese conical hat nonla",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Flickr images reviewed by trusted users|Conical straw hats in Vietnam",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "The traditional Vietnamese conical hat (nonla) dates from long ago. It identifies pictures taken in Vietnam.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006-07-05 21:53",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/47391132@N00/183086555/\">vietnamese conical hat nonla</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/47391132@N00\">steve the archivist</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "112576082": {
+          "pageid": 112576082,
+          "ns": 6,
+          "title": "File:Woman in the shadow of a conical hat made of repurposed bags of laundry detergent in Don Det Laos.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 4612516,
+              "width": 5443,
+              "height": 3629,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg/1280px-Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg/3840px-Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg/1280px-Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg/3840px-Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Woman_in_the_shadow_of_a_conical_hat_made_of_repurposed_bags_of_laundry_detergent_in_Don_Det_Laos.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=112576082",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-11-17 03:02:44",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Woman in the shadow of a conical hat made of repurposed bags of laundry detergent in Don Det Laos",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon EOS 5D Mark IV and Canon EF 100-400mm F4.5-5.6L IS II USM|Plastic bags|Don Det|Waste reuse|Self-published work|Hats of Laos|Farmers from Laos|Files with coordinates missing SDC location of creation|Red sweaters|Photographs by Basile Morin|Repurposing in Laos|Laundry detergent packaging|Conical hats",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "13.984428",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "105.915118",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Woman in the shadow of a conical hat made of <a href=\"https://en.wikipedia.org/wiki/Repurposing\" class=\"extiw\" title=\"en:Repurposing\">repurposed</a> plastic wraps of laundry detergent sewn together and used as waterproofing material, in a paddy field of <a href=\"https://en.wikipedia.org/wiki/Don_Det\" class=\"extiw\" title=\"en:Don Det\">Don Det</a>, <a href=\"https://en.wikipedia.org/wiki/Si_Phan_Don\" class=\"extiw\" title=\"en:Si Phan Don\">Si Phan Don</a>, <a href=\"https://en.wikipedia.org/wiki/Laos\" class=\"extiw\" title=\"en:Laos\">Laos</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-10-11 08:07:58",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

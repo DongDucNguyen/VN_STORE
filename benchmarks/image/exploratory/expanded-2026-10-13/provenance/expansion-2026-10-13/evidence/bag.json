@@ -1,0 +1,776 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=straw+handbag+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=straw+handbag+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:26.226788+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "158138106": {
+          "pageid": 158138106,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 11).jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1192897,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/23/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/23/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_11%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_11).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138106",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_11).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138117": {
+          "pageid": 158138117,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 13).jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2633373,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/38/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/38/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_13%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_13).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138117",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:52",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_13).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138120": {
+          "pageid": 158138120,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 15).jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1748258,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_15%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_15).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138120",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_15).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138122": {
+          "pageid": 158138122,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 16).jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1186362,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_16%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_16).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138122",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:38:01",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Handbags|Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Straw ropes|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_16).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138086": {
+          "pageid": 158138086,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 2).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2428597,
+              "width": 2200,
+              "height": 3300,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_2).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138086",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:19",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society|Straw baskets",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_2).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138088": {
+          "pageid": 158138088,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 3).jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2427311,
+              "width": 2200,
+              "height": 3300,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_3).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138088",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:22",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_3).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138089": {
+          "pageid": 158138089,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 4).jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1663409,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/69/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/69/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_4).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138089",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:25",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_4).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158138090": {
+          "pageid": 158138090,
+          "ns": 6,
+          "title": "File:Straw Handbag with Pink Silk Accents - DPLA - c8e9ae0f7e85a68af35cf873494ad597 (page 5).jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3506658,
+              "width": 3300,
+              "height": 2200,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg/1280px-Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_%28page_5%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_5).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158138090",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-18 11:37:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nStraw Handbag with Pink Silk Accents</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Media contributed by the Digital Public Library of America|Artworks without Wikidata item|No known copyright|Digital Public Library of America files missing creator|Media contributed by Heartland Hub|Media contributed by Missouri Historical Society",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\nBasket shaped straw handbag with pink satin accents and lining.</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "This file was contributed to Wikimedia Commons by <a href=\"https://en.wikipedia.org/wiki/en:Missouri_Historical_Society\" class=\"extiw\" title=\"w:en:Missouri Historical Society\"><span title=\"organization in US\">Missouri Historical Society</span></a> as part of a cooperation project. The donation was facilitated by the <a href=\"https://en.wikipedia.org/wiki/Digital_Public_Library_of_America\" class=\"extiw\" title=\"w:Digital Public Library of America\">Digital Public Library of America</a>, via its partner <a href=\"https://www.wikidata.org/wiki/Q83878488\" class=\"extiw\" title=\"d:Q83878488\"><span title=\"regional digital library in the United States, and service hub for DPLA\">Heartland Hub</span></a>.<span style=\"text-align:left\">\n<ul><li><a rel=\"nofollow\" class=\"external text\" href=\"https://mohistory.org/collections/item/1962-205-0025\">Record in source catalog</a></li>\n<li>DPLA identifier: <a rel=\"nofollow\" class=\"external text\" href=\"https://dp.la/item/c8e9ae0f7e85a68af35cf873494ad597\">c8e9ae0f7e85a68af35cf873494ad597</a></li>\n<li>Missouri Historical Society identifier: 1962-205-0025</li></ul>\n</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"background-color: var(--background-color-neutral, #eaecf0); color: inherit; border: 1px solid #999999; margin: 0.5em; padding: 0.5em; padding: 1em;\" lang=\"\">\n<div style=\"text-align:center\"><b>Copyright determination made by <a href=\"https://www.wikidata.org/wiki/Q6879571\" class=\"extiw\" title=\"d:Q6879571\"><span title=\"organization in US\">Missouri Historical Society <small>(Q6879571)</small></span></a> using <a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/\">RightsStatements.org</a></b></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; background-color: var(--background-color-neutral-subtle, #f9f9f9); color: var(--color-base, #202122); border: 2px solid var(--border-color-muted, #dadde3); border-spacing: 8px; box-sizing: border-box; padding: 0;\" lang=\"en\" class=\"layouttemplate licensetpl\" dir=\"ltr\">\n<tbody><tr>\n<td style=\"width:100px;\"><span class=\"skin-invert\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:NoC.Icon-Only.dark.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/120px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"100\" height=\"100\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/NoC.Icon-Only.dark.svg/250px-NoC.Icon-Only.dark.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span>\n</td>\n<td><b><a rel=\"nofollow\" class=\"external text\" href=\"https://rightsstatements.org/page/NKC/1.0/\">No Known Copyright</a></b>\n<dl><dd><i>The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made. Please refer to the organization that has made the Item available for more information. You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.</i></dd></dl>\n<div style=\"font-size:85%;\">\n<table class=\"mw-collapsible mw-collapsed\" style=\"clear:both;margin:2px auto;background:var(--background-color-base, #FFF);color:inherit;border:1px solid #AAA;padding:1px;width:100%\">\n\n<tbody><tr>\n<th scope=\"col\" style=\"font-size:88%;background:var(--background-color-neutral, #eaecf0);border:none;color:inherit;padding:0 .2em;text-align:center\">Notices\n</th></tr>\n<tr>\n<td class=\"mw-collapsible-content\" style=\"font-size:88%;border:none;padding:0;\">* Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.\n<ul><li>You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.</li>\n<li>You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.</li></ul>\n</td></tr></tbody></table></div><span class=\"licensetpl_long\" style=\"display: none\">No known copyright restrictions</span><span class=\"licensetpl_short\" style=\"display: none\">No restrictions</span><span class=\"licensetpl_link\" style=\"display: none\">//commons.wikimedia.org/wiki/File:Straw_Handbag_with_Pink_Silk_Accents_-_DPLA_-_c8e9ae0f7e85a68af35cf873494ad597_(page_5).jpg</span><span class=\"licensetpl_attr_req licensetpl_link_req\" style=\"display: none\">false</span>\n</td></tr></tbody></table>\n</div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

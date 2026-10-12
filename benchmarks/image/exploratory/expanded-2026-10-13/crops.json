@@ -1,0 +1,29 @@
+{
+  "dataset_version": "expanded-2026-10-13",
+  "format": "normalized xyxy [left, top, right, bottom] after EXIF orientation, same as UI crop",
+  "chosen_by": "assistant (Claude), from crop_instruction_vi in test_cases.json",
+  "chosen_at": "2026-10-13T10:40:00+07:00",
+  "note": "Chọn trước khi chạy bất kỳ truy vấn nào và giữ nguyên qua mọi cấu hình. Vùng ước lượng trên lưới 10%; không phải nhãn đã duyệt.",
+  "crops": {
+    "web-010-crop": [0.24, 0.11, 0.82, 0.87],
+    "web-011-crop": [0.18, 0.09, 0.83, 0.88],
+    "web-030-crop": [0.37, 0.27, 0.56, 0.40],
+    "control-037-crop": [0.47, 0.30, 1.0, 0.95],
+    "add-54071586-crop": [0.12, 0.08, 0.87, 0.89],
+    "add-1103201-crop": [0.0, 0.72, 0.42, 1.0],
+    "add-104101424-crop": [0.06, 0.15, 0.96, 0.88],
+    "add-155646318-crop": [0.32, 0.62, 0.53, 0.88],
+    "add-200509963-crop": [0.11, 0.75, 0.60, 0.98],
+    "add-96222759-crop": [0.12, 0.46, 0.81, 1.0],
+    "add-86677017-crop": [0.54, 0.23, 0.72, 0.84],
+    "add-176361070-crop": [0.05, 0.57, 0.28, 0.98],
+    "add-200006254-crop": [0.67, 0.21, 0.84, 0.39],
+    "add-25572832-crop": [0.0, 0.26, 0.16, 0.48],
+    "add-97560214-crop": [0.13, 0.13, 0.78, 1.0],
+    "add-182122765-crop": [0.04, 0.36, 0.51, 0.79],
+    "add-130384936-crop": [0.19, 0.06, 0.77, 0.79],
+    "add-174755422-crop": [0.30, 0.10, 0.60, 0.95],
+    "add-182488430-crop": [0.27, 0.48, 0.78, 0.64],
+    "add-175764939-crop": [0.41, 0.38, 0.68, 0.73]
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "kind": "image_exploratory_smoke",
+  "status": "smoke_unreviewed",
+  "benchmark_approved": false,
+  "adapter": "app.ml.image:SigLIP2Base",
+  "model": {
+    "model_id": "google/siglip2-base-patch16-224",
+    "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4"
+  },
+  "dataset": "benchmarks/image/exploratory/expanded-2026-10-13",
+  "dataset_version": "expanded-2026-10-13",
+  "manifest_sha256": "61a557dd0dc453e6984c43b6651fb8689a182104baa092888b7b1b2fd9b3640e",
+  "test_cases_sha256": "9341c67363cd9ab6eeed2b3b81894d7df5b6d3903e27016b93acfcb07c3a5868",
+  "crops_file": "benchmarks/image/exploratory/expanded-2026-10-13/crops.reviewed.json",
+  "crops_sha256": "d763dee6f0adbc09267334260206a6830d5e0c2a0c9ebee7510dd388dbb14f88",
+  "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+  "visibility": "published (API default)",
+  "search_env": {
+    "VNSTORE_IMAGE_ADAPTER": "app.ml.image:SigLIP2Base"
+  },
+  "client_preprocess": {
+    "max_side": 1024,
+    "jpeg_quality": 90,
+    "exif_transpose": true,
+    "alpha": "white"
+  },
+  "top_k": 10,
+  "app_load_s": 1.18,
+  "health_image": {
+    "catalog": {
+      "path": "database.json",
+      "version": "seed-006-enriched",
+      "sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+      "loaded_at": "2026-10-13T04:01:02+07:00",
+      "products_visible": 328,
+      "products_total": 330,
+      "include_drafts": false,
+      "publication_mode": "internal_demo",
+      "warnings": 1
+    },
+    "image": {
+      "state": "ok",
+      "model_id": "google/siglip2-base-patch16-224",
+      "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+      "detail": null,
+      "reason": null
+    }
+  },
+  "code_sha256": "be3667b4a276b90517bfc3e29c68b68068290e988a06bc20eac3ec7f2c8cdf3e",
+  "summary": {
+    "cases": 250,
+    "ok": 250,
+    "errors": [],
+    "skipped": [],
+    "gallery_control": {
+      "n": 10,
+      "rank1": 10,
+      "in_top5": 10,
+      "items": [
+        {
+          "image_id": "control-030",
+          "expected": "p-minhlong-chen-com-thach-van-11cm",
+          "rank": 1,
+          "top_similarity": 0.999099
+        },
+        {
+          "image_id": "control-031",
+          "expected": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "rank": 1,
+          "top_similarity": 0.998946
+        },
+        {
+          "image_id": "control-032",
+          "expected": "p-vietcraft-gio-tre-dan-tron-vh24026",
+          "rank": 1,
+          "top_similarity": 0.993877
+        },
+        {
+          "image_id": "control-033",
+          "expected": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+          "rank": 1,
+          "top_similarity": 0.998855
+        },
+        {
+          "image_id": "control-034",
+          "expected": "p-hanoia-binh-hoa-mystery-a18mt01",
+          "rank": 1,
+          "top_similarity": 0.998043
+        },
+        {
+          "image_id": "control-035",
+          "expected": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+          "rank": 1,
+          "top_similarity": 0.997695
+        },
+        {
+          "image_id": "control-036",
+          "expected": "p-hanhsilk-khan-lanh-to-tam-246",
+          "rank": 1,
+          "top_similarity": 0.999557
+        },
+        {
+          "image_id": "control-037",
+          "expected": "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+          "rank": 1,
+          "top_similarity": 0.999396
+        },
+        {
+          "image_id": "control-038",
+          "expected": "p-marou-ben-tre-78-80g",
+          "rank": 1,
+          "top_similarity": 0.999211
+        },
+        {
+          "image_id": "control-039",
+          "expected": "p-marou-tien-giang-70-80g",
+          "rank": 1,
+          "top_similarity": 0.999386
+        }
+      ]
+    },
+    "group_proxy": {
+      "all": {
+        "n": 80,
+        "top1_same_group": 0.738,
+        "top5_same_group": 0.723
+      },
+      "by_role": {
+        "similar_candidate": {
+          "n": 61,
+          "top1_same_group": 0.77,
+          "top5_same_group": 0.78
+        },
+        "contrast_candidate": {
+          "n": 19,
+          "top1_same_group": 0.632,
+          "top5_same_group": 0.537
+        }
+      },
+      "by_group": {
+        "det-may": {
+          "n": 11,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "go-son-mai": {
+          "n": 10,
+          "top1_same_group": 0.5,
+          "top5_same_group": 0.66
+        },
+        "gom-su": {
+          "n": 23,
+          "top1_same_group": 0.652,
+          "top5_same_group": 0.609
+        },
+        "may-tre-coi": {
+          "n": 22,
+          "top1_same_group": 0.773,
+          "top5_same_group": 0.673
+        },
+        "thuc-pham": {
+          "n": 14,
+          "top1_same_group": 0.786,
+          "top5_same_group": 0.814
+        }
+      },
+      "by_topic": {
+        "ao-dai-street": {
+          "n": 4,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "bowl": {
+          "n": 4,
+          "top1_same_group": 0,
+          "top5_same_group": 0.3
+        },
+        "chair": {
+          "n": 3,
+          "top1_same_group": 1,
+          "top5_same_group": 0.667
+        },
+        "chocolate": {
+          "n": 3,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "dinner-plate": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 0.5
+        },
+        "dress": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "glass-mug": {
+          "n": 4,
+          "top1_same_group": 1,
+          "top5_same_group": 0.55
+        },
+        "jewellery-box": {
+          "n": 1,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "lacquer-box": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "lamp": {
+          "n": 2,
+          "top1_same_group": 0.5,
+          "top5_same_group": 0.7
+        },
+        "leather-bag": {
+          "n": 3,
+          "top1_same_group": 0,
+          "top5_same_group": 0.0
+        },
+        "mug": {
+          "n": 5,
+          "top1_same_group": 0.4,
+          "top5_same_group": 0.4
+        },
+        "plastic-basket": {
+          "n": 3,
+          "top1_same_group": 1,
+          "top5_same_group": 0.867
+        },
+        "plate": {
+          "n": 3,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "shirt": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "shirt-modern": {
+          "n": 1,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "straw-bag": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 0.9
+        },
+        "vietnam-cake": {
+          "n": 3,
+          "top1_same_group": 0.667,
+          "top5_same_group": 0.8
+        },
+        "vn-banh-com": {
+          "n": 3,
+          "top1_same_group": 1,
+          "top5_same_group": 1.0
+        },
+        "vn-keo-dua": {
+          "n": 2,
+          "top1_same_group": 0,
+          "top5_same_group": 0.0
+        },
+        "wicker-lampshade": {
+          "n": 2,
+          "top1_same_group": 1,
+          "top5_same_group": 0.5
+        },
+        "wood-box-simple": {
+          "n": 2,
+          "top1_same_group": 0,
+          "top5_same_group": 0.3
+        },
+        "woven-bag": {
+          "n": 2,
+          "top1_same_group": 0.5,
+          "top5_same_group": 0.6
+        }
+      }
+    },
+    "top_similarity_by_role": {
+      "gallery_control": {
+        "n": 10,
+        "median": 0.999,
+        "min": 0.9939,
+        "max": 0.9996
+      },
+      "similar_candidate": {
+        "n": 61,
+        "median": 0.6967,
+        "min": 0.4051,
+        "max": 0.8206
+      },
+      "contrast_candidate": {
+        "n": 19,
+        "median": 0.6439,
+        "min": 0.5287,
+        "max": 0.7066
+      },
+      "negative_candidate": {
+        "n": 10,
+        "median": 0.6287,
+        "min": 0.5756,
+        "max": 0.6723
+      }
+    },
+    "image_text": {
+      "n": 130,
+      "with_hard_filter": 47,
+      "with_price": 34,
+      "zero_results": [],
+      "price_violations": {},
+      "filters_seen": [
+        "not_color",
+        "price"
+      ]
+    },
+    "crop_vs_full": {
+      "n": 20,
+      "mean_top5_overlap": 3,
+      "group_proxy_better": 5,
+      "group_proxy_worse": 3,
+      "items": [
+        {
+          "case_id": "web-010-crop",
+          "top5_overlap": 5,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 4,
+          "full_top_similarity": 0.66199,
+          "crop_top_similarity": 0.676305
+        },
+        {
+          "case_id": "web-011-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 4,
+          "full_top_similarity": 0.579503,
+          "crop_top_similarity": 0.592011
+        },
+        {
+          "case_id": "web-030-crop",
+          "top5_overlap": 2,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.599074,
+          "crop_top_similarity": 0.613985
+        },
+        {
+          "case_id": "control-037-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.999396,
+          "crop_top_similarity": 0.831839
+        },
+        {
+          "case_id": "add-54071586-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 0,
+          "crop_same_group_top5": 0,
+          "full_top_similarity": 0.617056,
+          "crop_top_similarity": 0.614956
+        },
+        {
+          "case_id": "add-1103201-crop",
+          "top5_overlap": 3,
+          "full_same_group_top5": 3,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.711759,
+          "crop_top_similarity": 0.744194
+        },
+        {
+          "case_id": "add-104101424-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 2,
+          "crop_same_group_top5": 1,
+          "full_top_similarity": 0.672634,
+          "crop_top_similarity": 0.641275
+        },
+        {
+          "case_id": "add-155646318-crop",
+          "top5_overlap": 2,
+          "full_same_group_top5": 1,
+          "crop_same_group_top5": 1,
+          "full_top_similarity": 0.615885,
+          "crop_top_similarity": 0.559167
+        },
+        {
+          "case_id": "add-200509963-crop",
+          "top5_overlap": 1,
+          "full_same_group_top5": 0,
+          "crop_same_group_top5": 1,
+          "full_top_similarity": 0.621043,
+          "crop_top_similarity": 0.650665
+        },
+        {
+          "case_id": "add-96222759-crop",
+          "top5_overlap": 1,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.733704,
+          "crop_top_similarity": 0.722406
+        },
+        {
+          "case_id": "add-86677017-crop",
+          "top5_overlap": 2,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.655532,
+          "crop_top_similarity": 0.731493
+        },
+        {
+          "case_id": "add-176361070-crop",
+          "top5_overlap": 3,
+          "full_same_group_top5": 3,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.715036,
+          "crop_top_similarity": 0.695894
+        },
+        {
+          "case_id": "add-200006254-crop",
+          "top5_overlap": 2,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.674368,
+          "crop_top_similarity": 0.815114
+        },
+        {
+          "case_id": "add-25572832-crop",
+          "top5_overlap": 1,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.78016,
+          "crop_top_similarity": 0.728508
+        },
+        {
+          "case_id": "add-97560214-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 4,
+          "full_top_similarity": 0.68665,
+          "crop_top_similarity": 0.730021
+        },
+        {
+          "case_id": "add-182122765-crop",
+          "top5_overlap": 5,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.687043,
+          "crop_top_similarity": 0.686267
+        },
+        {
+          "case_id": "add-130384936-crop",
+          "top5_overlap": 3,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 3,
+          "full_top_similarity": 0.638899,
+          "crop_top_similarity": 0.617906
+        },
+        {
+          "case_id": "add-174755422-crop",
+          "top5_overlap": 4,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.670019,
+          "crop_top_similarity": 0.674325
+        },
+        {
+          "case_id": "add-182488430-crop",
+          "top5_overlap": 5,
+          "full_same_group_top5": 5,
+          "crop_same_group_top5": 5,
+          "full_top_similarity": 0.702428,
+          "crop_top_similarity": 0.601968
+        },
+        {
+          "case_id": "add-175764939-crop",
+          "top5_overlap": 1,
+          "full_same_group_top5": 4,
+          "crop_same_group_top5": 4,
+          "full_top_similarity": 0.659327,
+          "crop_top_similarity": 0.615684
+        }
+      ]
+    },
+    "latency_ms": {
+      "embed_p50": 11.07,
+      "embed_p95": 20.98,
+      "api_total_p50": 39.85,
+      "api_total_p95": 50.02,
+      "first_case_total": 1070.09
+    }
+  },
+  "created_at": "2026-10-13T04:01:18+07:00"
+}

@@ -1,0 +1,498 @@
+{
+  "checked_at": "2026-10-12T19:37:11.893615+00:00",
+  "image_count": 40,
+  "gallery_images_checked": 814,
+  "total_image_bytes": 13414892,
+  "formats": {
+    "JPEG": 34,
+    "PNG": 4,
+    "WEBP": 2
+  },
+  "by_role": {
+    "similar_candidate": 25,
+    "negative_candidate": 5,
+    "gallery_control": 10
+  },
+  "by_group": {
+    "gom-su": 7,
+    "may-tre-coi": 7,
+    "det-may": 7,
+    "go-son-mai": 7,
+    "thuc-pham": 7,
+    "ngoai-catalog": 5
+  },
+  "duplicate_query_byte_groups": [],
+  "near_query_candidates": [
+    {
+      "a": "control-038",
+      "b": "control-039",
+      "distance": 3
+    }
+  ],
+  "checks": [
+    {
+      "id": "web-000",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "60e0c8e8b4cce070",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-001",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "0f0f31c7070786c7",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-005",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "0323933b3c3cd8f0",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-006",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "0e45c0070f6c7013",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-008",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "6b1f0739397b7373",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-010",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "9fee8ec6e2c2621a",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-011",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "0a9a162e2e86fc2e",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-017",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "e180c0c0e04c0ef7",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-019",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "733979399bbba98a",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-021",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "0004101818181990",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-022",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "733a16a7363e3657",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-023",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "7362c88d84b6b2de",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-029",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "b38e2727373c4e16",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-030",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "5f67abc98ed8d8c2",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-031",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "71c4868652d0c0f4",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-034",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "8e9617b6a6b69a82",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-036",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "33189c9898baa080",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-037",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "d8ccdc9090b286c6",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-038",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "79f8feccccecf0f1",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-039",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "60e0e0c4c0e0e071",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-046",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "80b69eb68cdccce8",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-047",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "5672367e98a9cc1d",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-049",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "1fcf40cccce4710f",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-052",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "696b653426d43261",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-053",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "3b716969797878f7",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-057",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "30276362e0c4f038",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-060",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "646f6f7f7afd3f3b",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-063",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "b2b2ba8e8ab2b2f0",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-071",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "041d0e1f1b2f1f07",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "web-072",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [],
+      "dhash_hex": "9d323e5959183675",
+      "near_gallery_candidates": []
+    },
+    {
+      "id": "control-030",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-minhlong-chen-com-thach-van-11cm-1"
+      ],
+      "dhash_hex": "000000e4c4e06000",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-minhlong-chen-com-thach-van-11cm-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-031",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-minhlong-bo-tra-camellia-chi-vang-05l-1"
+      ],
+      "dhash_hex": "0000002830f09800",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+          "distance": 0
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-0-8-l-camellia-van-lang-1070622558-1",
+          "distance": 3
+        },
+        {
+          "image_id": "img-minhlong-bo-tra-0-8-l-hoang-cung-thien-huong-xanh-la-1074176799-1",
+          "distance": 3
+        }
+      ]
+    },
+    {
+      "id": "control-032",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-vietcraft-gio-tre-dan-tron-vh24026-1"
+      ],
+      "dhash_hex": "0370b88080c07002",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-vietcraft-gio-tre-dan-tron-vh24026-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-033",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-vietcraft-tui-luc-binh-vo-so-vh24032-1"
+      ],
+      "dhash_hex": "03308cecb2f46802",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-vietcraft-tui-luc-binh-vo-so-vh24032-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-034",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-hanoia-binh-hoa-mystery-a18mt01-1"
+      ],
+      "dhash_hex": "0e717171617171f0",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-hanoia-binh-hoa-mystery-a18mt01-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-035",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-hanoia-hop-vuong-botanica-s-af26bt03-1"
+      ],
+      "dhash_hex": "0000000c3171700c",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-hanoia-hop-vuong-botanica-s-af26bt03-1",
+          "distance": 0
+        },
+        {
+          "image_id": "img-hanoia-hop-vuong-exotic-size-s-af26ex04-1",
+          "distance": 2
+        },
+        {
+          "image_id": "img-hanoia-hop-vuong-moonbow-size-s-af26mo02-1",
+          "distance": 2
+        }
+      ]
+    },
+    {
+      "id": "control-036",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-hanhsilk-khan-lanh-to-tam-246-1"
+      ],
+      "dhash_hex": "929997663a6fa434",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-hanhsilk-khan-lanh-to-tam-246-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-037",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786-1"
+      ],
+      "dhash_hex": "e6d49ecb73b7ef33",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786-1",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "id": "control-038",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-marou-ben-tre-78-80g-1"
+      ],
+      "dhash_hex": "7071696171616161",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-marou-ben-tre-78-80g-1",
+          "distance": 0
+        },
+        {
+          "image_id": "img-marou-ba-ria-76-80g-1",
+          "distance": 1
+        },
+        {
+          "image_id": "img-marou-lam-dong-74-80g-1",
+          "distance": 3
+        }
+      ]
+    },
+    {
+      "id": "control-039",
+      "pillow_decode": "passed",
+      "api_inspect_image": "passed",
+      "sha256_matches": true,
+      "exact_gallery_image_ids": [
+        "img-marou-tien-giang-70-80g-1"
+      ],
+      "dhash_hex": "7071696171696969",
+      "near_gallery_candidates": [
+        {
+          "image_id": "img-marou-tien-giang-70-80g-1",
+          "distance": 0
+        },
+        {
+          "image_id": "img-marou-ba-ria-76-80g-1",
+          "distance": 2
+        },
+        {
+          "image_id": "img-marou-ben-tre-78-80g-1",
+          "distance": 3
+        }
+      ]
+    }
+  ],
+  "benchmark_approved": false,
+  "note": "dHash <= 6 only proposes review; neither independence nor identity is proven. No inference/API server was run."
+}

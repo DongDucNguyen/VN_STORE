@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-12T20:03:06.482445+00:00",
+  "files_before": 28659,
+  "files_after": 28659,
+  "hashed_files": 2745,
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "scope": "Size/mtime of all regular files outside tmp_data; SHA256 for project source/docs/data except git, environments, node_modules, artifacts and pytest cache.",
+  "unchanged": true
+}

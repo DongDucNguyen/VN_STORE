@@ -48,7 +48,10 @@ benchmarks/image/
   manifest.json           danh sách query và trạng thái review, hiện rỗng
   manifest.schema.json    hợp đồng dữ liệu 1.0.0
   raw/                    file do người thu thập cung cấp, bị .gitignore loại trừ
+  exploratory/<phiên bản>/  bộ ảnh thử khám phá, KHÔNG thuộc manifest này (không nhãn, không split)
 ```
+
+[`exploratory/expanded-2026-10-13/`](exploratory/expanded-2026-10-13/README.md) (13/10/2026): 100 ảnh Internet + 10 ảnh đối chứng gallery, 250 ca ảnh/ảnh + chữ/cắt vùng; chạy bằng `scripts/benchmark/run_image_exploratory.py`. Chỉ dùng để thử luồng và quan sát, không dùng làm query độc lập hay để chọn model.
 
 Ảnh query, ảnh gốc và văn bản đồng ý có thể chứa thông tin riêng tư; manifest chỉ cần mã người/phiên và tham chiếu hồ sơ bằng chứng, không cần tên thật, email hoặc địa chỉ nhà. Giữ bản gốc và bằng chứng quyền trong kho được nhóm dữ liệu quản lý. Không tự ghi `owned` hoặc người duyệt thay cho người cung cấp.
 

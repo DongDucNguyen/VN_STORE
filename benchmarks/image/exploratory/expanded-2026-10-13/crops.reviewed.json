@@ -1,0 +1,508 @@
+{
+  "kind": "vnstore_crop_review",
+  "dataset_version": "expanded-2026-10-13",
+  "format": "normalized xyxy [left, top, right, bottom] after EXIF orientation, same as UI crop",
+  "source_crops_sha256": "2734c36d3867a0146b00a1bcdc9b7877d777fcb8b959443b634110b35e55c324",
+  "proposed_by": "assistant (Claude), from crop_instruction_vi in test_cases.json",
+  "reviewed_by": "Nguyên",
+  "reviewed_at": "2026-10-13T03:59:28+07:00",
+  "complete": true,
+  "crops": {
+    "web-010-crop": [
+      0.24,
+      0.11,
+      0.82,
+      0.87
+    ],
+    "web-011-crop": [
+      0.18,
+      0.09,
+      0.83,
+      0.88
+    ],
+    "web-030-crop": [
+      0.37,
+      0.26,
+      0.56,
+      0.37
+    ],
+    "control-037-crop": [
+      0.47,
+      0.3,
+      1,
+      0.95
+    ],
+    "add-54071586-crop": [
+      0.12,
+      0.08,
+      0.87,
+      0.89
+    ],
+    "add-1103201-crop": [
+      0,
+      0.72,
+      0.42,
+      1
+    ],
+    "add-104101424-crop": [
+      0.06,
+      0.15,
+      0.96,
+      0.88
+    ],
+    "add-155646318-crop": [
+      0.32,
+      0.62,
+      0.53,
+      0.88
+    ],
+    "add-200509963-crop": [
+      0.11,
+      0.75,
+      0.6,
+      0.98
+    ],
+    "add-96222759-crop": [
+      0.12,
+      0.46,
+      0.81,
+      1
+    ],
+    "add-86677017-crop": [
+      0.54,
+      0.23,
+      0.72,
+      0.84
+    ],
+    "add-176361070-crop": [
+      0.05,
+      0.57,
+      0.28,
+      0.98
+    ],
+    "add-200006254-crop": [
+      0.67,
+      0.21,
+      0.84,
+      0.39
+    ],
+    "add-25572832-crop": [
+      0,
+      0.26,
+      0.16,
+      0.48
+    ],
+    "add-97560214-crop": [
+      0.13,
+      0.13,
+      0.78,
+      1
+    ],
+    "add-182122765-crop": [
+      0.04,
+      0.36,
+      0.51,
+      0.79
+    ],
+    "add-130384936-crop": [
+      0.19,
+      0.06,
+      0.77,
+      0.79
+    ],
+    "add-174755422-crop": [
+      0.3,
+      0.1,
+      0.6,
+      0.95
+    ],
+    "add-182488430-crop": [
+      0.27,
+      0.48,
+      0.78,
+      0.64
+    ],
+    "add-175764939-crop": [
+      0.41,
+      0.38,
+      0.68,
+      0.73
+    ]
+  },
+  "items": [
+    {
+      "case_id": "web-010-crop",
+      "image_id": "web-010",
+      "proposed": [
+        0.24,
+        0.11,
+        0.82,
+        0.87
+      ],
+      "final": [
+        0.24,
+        0.11,
+        0.82,
+        0.87
+      ],
+      "decision": "approved",
+      "note": null
+    },
+    {
+      "case_id": "web-011-crop",
+      "image_id": "web-011",
+      "proposed": [
+        0.18,
+        0.09,
+        0.83,
+        0.88
+      ],
+      "final": [
+        0.18,
+        0.09,
+        0.83,
+        0.88
+      ],
+      "decision": "approved",
+      "note": null
+    },
+    {
+      "case_id": "web-030-crop",
+      "image_id": "web-030",
+      "proposed": [
+        0.37,
+        0.27,
+        0.56,
+        0.4
+      ],
+      "final": [
+        0.37,
+        0.26,
+        0.56,
+        0.37
+      ],
+      "decision": "edited",
+      "note": null
+    },
+    {
+      "case_id": "control-037-crop",
+      "image_id": "control-037",
+      "proposed": [
+        0.47,
+        0.3,
+        1,
+        0.95
+      ],
+      "final": [
+        0.47,
+        0.3,
+        1,
+        0.95
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-54071586-crop",
+      "image_id": "add-54071586",
+      "proposed": [
+        0.12,
+        0.08,
+        0.87,
+        0.89
+      ],
+      "final": [
+        0.12,
+        0.08,
+        0.87,
+        0.89
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-1103201-crop",
+      "image_id": "add-1103201",
+      "proposed": [
+        0,
+        0.72,
+        0.42,
+        1
+      ],
+      "final": [
+        0,
+        0.72,
+        0.42,
+        1
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-104101424-crop",
+      "image_id": "add-104101424",
+      "proposed": [
+        0.06,
+        0.15,
+        0.96,
+        0.88
+      ],
+      "final": [
+        0.06,
+        0.15,
+        0.96,
+        0.88
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-155646318-crop",
+      "image_id": "add-155646318",
+      "proposed": [
+        0.32,
+        0.62,
+        0.53,
+        0.88
+      ],
+      "final": [
+        0.32,
+        0.62,
+        0.53,
+        0.88
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-200509963-crop",
+      "image_id": "add-200509963",
+      "proposed": [
+        0.11,
+        0.75,
+        0.6,
+        0.98
+      ],
+      "final": [
+        0.11,
+        0.75,
+        0.6,
+        0.98
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-96222759-crop",
+      "image_id": "add-96222759",
+      "proposed": [
+        0.12,
+        0.46,
+        0.81,
+        1
+      ],
+      "final": [
+        0.12,
+        0.46,
+        0.81,
+        1
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-86677017-crop",
+      "image_id": "add-86677017",
+      "proposed": [
+        0.54,
+        0.23,
+        0.72,
+        0.84
+      ],
+      "final": [
+        0.54,
+        0.23,
+        0.72,
+        0.84
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-176361070-crop",
+      "image_id": "add-176361070",
+      "proposed": [
+        0.05,
+        0.57,
+        0.28,
+        0.98
+      ],
+      "final": [
+        0.05,
+        0.57,
+        0.28,
+        0.98
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-200006254-crop",
+      "image_id": "add-200006254",
+      "proposed": [
+        0.67,
+        0.21,
+        0.84,
+        0.39
+      ],
+      "final": [
+        0.67,
+        0.21,
+        0.84,
+        0.39
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-25572832-crop",
+      "image_id": "add-25572832",
+      "proposed": [
+        0,
+        0.26,
+        0.16,
+        0.48
+      ],
+      "final": [
+        0,
+        0.26,
+        0.16,
+        0.48
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-97560214-crop",
+      "image_id": "add-97560214",
+      "proposed": [
+        0.13,
+        0.13,
+        0.78,
+        1
+      ],
+      "final": [
+        0.13,
+        0.13,
+        0.78,
+        1
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-182122765-crop",
+      "image_id": "add-182122765",
+      "proposed": [
+        0.04,
+        0.36,
+        0.51,
+        0.79
+      ],
+      "final": [
+        0.04,
+        0.36,
+        0.51,
+        0.79
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-130384936-crop",
+      "image_id": "add-130384936",
+      "proposed": [
+        0.19,
+        0.06,
+        0.77,
+        0.79
+      ],
+      "final": [
+        0.19,
+        0.06,
+        0.77,
+        0.79
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-174755422-crop",
+      "image_id": "add-174755422",
+      "proposed": [
+        0.3,
+        0.1,
+        0.6,
+        0.95
+      ],
+      "final": [
+        0.3,
+        0.1,
+        0.6,
+        0.95
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-182488430-crop",
+      "image_id": "add-182488430",
+      "proposed": [
+        0.27,
+        0.48,
+        0.78,
+        0.64
+      ],
+      "final": [
+        0.27,
+        0.48,
+        0.78,
+        0.64
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    },
+    {
+      "case_id": "add-175764939-crop",
+      "image_id": "add-175764939",
+      "proposed": [
+        0.41,
+        0.38,
+        0.68,
+        0.73
+      ],
+      "final": [
+        0.41,
+        0.38,
+        0.68,
+        0.73
+      ],
+      "decision": "approved",
+      "note": "Người duyệt xác nhận trong chat ngày 2026-10-13 (ghi lúc 2026-10-13T04:00:56+07:00): đồng ý vùng đề xuất."
+    }
+  ],
+  "review_history": [
+    {
+      "at": "2026-10-13T03:59:28+07:00",
+      "by": "Nguyên",
+      "via": "crop_review.html",
+      "items": 3
+    },
+    {
+      "at": "2026-10-13T04:00:56+07:00",
+      "by": "Nguyên",
+      "via": "chat confirmation, recorded by assistant",
+      "items": 17
+    }
+  ]
+}

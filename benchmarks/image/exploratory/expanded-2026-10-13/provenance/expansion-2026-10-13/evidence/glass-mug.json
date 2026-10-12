@@ -1,0 +1,856 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=glass+mug+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=glass+mug+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:51:07.228227+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "83141854": {
+          "pageid": 83141854,
+          "ns": 6,
+          "title": "File:1955 - Light Lager Glass Mug - Neuweiler - Allentown PA.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 139908,
+              "width": 504,
+              "height": 800,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/77/1955_-_Light_Lager_Glass_Mug_-_Neuweiler_-_Allentown_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 2032,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/77/1955_-_Light_Lager_Glass_Mug_-_Neuweiler_-_Allentown_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2032
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/1955_-_Light_Lager_Glass_Mug_-_Neuweiler_-_Allentown_PA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1955_-_Light_Lager_Glass_Mug_-_Neuweiler_-_Allentown_PA.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=83141854",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-10-16 19:30:29",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1955 - Light Lager Glass Mug - Neuweiler - Allentown PA",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Neuweiler Brewery|PD US no notice|Allentown, Pennsylvania in the 1950s|PD-US missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Light Lager Glass Mug - Neuweiler - Allentown PA",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1955",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "Neuweiler Brewery - Allentown PA",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Self Scanned",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "175764939": {
+          "pageid": 175764939,
+          "ns": 6,
+          "title": "File:2025.09.27 Flea Market in Minsk Blue Glass Mug Mogilev.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3662337,
+              "width": 4000,
+              "height": 3000,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg/1280px-2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg/3840px-2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg/1280px-2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg/3840px-2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:2025.09.27_Flea_Market_in_Minsk_Blue_Glass_Mug_Mogilev.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=175764939",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-09-28 21:12:45",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "2025.09.27 Flea Market in Minsk Blue Glass Mug Mogilev",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Belarus photographs taken on 2025-09-27|Blue glass in Belarus|Flea market in Minsk 2025.09.27|Blue glass mugs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Блошиный рынок в Ждановичах 27 сентября 2025 года. Минск, Беларусь.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-09-27 11:50:13",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tess_Mattew\" title=\"User:Tess Mattew\">Tess Mattew</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "37957": {
+          "pageid": 37957,
+          "ns": 6,
+          "title": "File:Beer mug icon.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2746,
+              "width": 64,
+              "height": 64,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Beer_mug_icon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Beer_mug_icon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Beer_mug_icon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Beer_mug_icon.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=37957",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2006-05-08 18:45:35",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Beer mug icon",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|PD-self|Beer mugs|Beer icons",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Glass of Beer",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006-05-08",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Evrik\" title=\"User:Evrik\">Evrik</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "51437505": {
+          "pageid": 51437505,
+          "ns": 6,
+          "title": "File:Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896 (4359250323).jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 249449,
+              "width": 1536,
+              "height": 1021,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg/1280px-Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 851,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg/1280px-Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 851,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359250323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid,_ca._1896_(4359250323).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51437505",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-09-16 03:38:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896 (4359250323)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "1896 elections in the United States|Flickr images reviewed by FlickreviewR|Files from Flickr's 'The Commons'|Cornell University Collection of Political Americana|Glass mugs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p><b>Collection</b>: Cornell University Collection of Political Americana, Cornell University Library\n</p><p><b>Repository</b>: Susan H. Douglas Political Americana Collection, #2214 Rare &amp; Manuscript Collections, Cornell University Library, Cornell University\n</p><p><b>Title</b>: Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896\n</p><p><b>Political Party</b>: Democratic\n</p><p><b>Election Year</b>: 1896\n</p><p><b>Date Made</b>: ca. 1896\n</p><p><b>Measurement</b>: Mug (height, with lid): 5.25 in.; 13.335 cm\n</p><p><b>Classification</b>: Decorative Arts\n</p><p><b>Persistent URI</b>: <a rel=\"nofollow\" class=\"external text\" href=\"http://hdl.handle.net/1813.001/5z89\">hdl.handle.net/1813.001/5z89</a>\n</p>\nThere are no known U.S. copyright restrictions on this image.  The digital file is owned by the Cornell University Library which is making it freely available with the request that, when possible, the Library be credited as its source.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-02-15 12:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/cornelluniversitylibrary/4359250323/\">Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/30515687@N05\">Cornell University Library</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"http://hdl.handle.net/1813.001/62pk\">Cornell University Library @ Flickr Commons</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "51437495": {
+          "pageid": 51437495,
+          "ns": 6,
+          "title": "File:Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896 (4359989202).jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 238727,
+              "width": 1536,
+              "height": 1021,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg/1280px-Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 851,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/66/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg/1280px-Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 851,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/66/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid%2C_ca._1896_%284359989202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bryan_%22The_People%27s_Money%22_Portrait_Glass_Mug_with_Lid,_ca._1896_(4359989202).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=51437495",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-09-16 03:38:16",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896 (4359989202)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "1896 elections in the United States|Flickr images reviewed by FlickreviewR|Files from Flickr's 'The Commons'|Cornell University Collection of Political Americana|Glass mugs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p><b>Collection</b>: Cornell University Collection of Political Americana, Cornell University Library\n</p><p><b>Repository</b>: Susan H. Douglas Political Americana Collection, #2214 Rare &amp; Manuscript Collections, Cornell University Library, Cornell University\n</p><p><b>Title</b>: Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896\n</p><p><b>Political Party</b>: Democratic\n</p><p><b>Election Year</b>: 1896\n</p><p><b>Date Made</b>: ca. 1896\n</p><p><b>Measurement</b>: Mug (height, with lid): 5.25 in.; 13.335 cm\n</p><p><b>Classification</b>: Decorative Arts\n</p><p><b>Persistent URI</b>: <a rel=\"nofollow\" class=\"external text\" href=\"http://hdl.handle.net/1813.001/5z8b\">hdl.handle.net/1813.001/5z8b</a>\n</p>\nThere are no known U.S. copyright restrictions on this image.  The digital file is owned by the Cornell University Library which is making it freely available with the request that, when possible, the Library be credited as its source.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2010-02-15 12:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/cornelluniversitylibrary/4359989202/\">Bryan \"The People's Money\" Portrait Glass Mug with Lid, ca. 1896</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/30515687@N05\">Cornell University Library</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"http://hdl.handle.net/1813.001/62pk\">Cornell University Library @ Flickr Commons</a>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "136181860": {
+          "pageid": 136181860,
+          "ns": 6,
+          "title": "File:Fat glass mug.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2669472,
+              "width": 3264,
+              "height": 2448,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Fat_glass_mug.jpg/1280px-Fat_glass_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Fat_glass_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Fat_glass_mug.jpg/1280px-Fat_glass_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Fat_glass_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Fat_glass_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fat_glass_mug.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=136181860",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-08-19 02:31:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Fat glass mug",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Green tea|Clear glass|Self-published work|Glass mugs|Taken with ZTE Avid 589",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A glass mug with decaf green tea.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-08-18 21:28:18",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Corn_cheese\" title=\"User:Corn cheese\">Corn cheese</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "158749173": {
+          "pageid": 158749173,
+          "ns": 6,
+          "title": "File:Glass beer mug full.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3821287,
+              "width": 3468,
+              "height": 4624,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Glass_beer_mug_full.jpg/1280px-Glass_beer_mug_full.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1707,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Glass_beer_mug_full.jpg/1920px-Glass_beer_mug_full.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Glass_beer_mug_full.jpg/1280px-Glass_beer_mug_full.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1707,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Glass_beer_mug_full.jpg/1920px-Glass_beer_mug_full.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Glass_beer_mug_full.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Glass_beer_mug_full.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=158749173",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-01-29 15:49:31",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Glass beer mug full",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Beer mugs in Germany|Beverages|Self-published work|Glasses of beer",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "glass beer mug on table",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-07-18",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:AxtImHause&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:AxtImHause (page does not exist)\">AxtImHause</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "25833176": {
+          "pageid": 25833176,
+          "ns": 6,
+          "title": "File:Kitchenware Glass Mug Rezowan.JPG",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1792437,
+              "width": 2048,
+              "height": 3648,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Kitchenware_Glass_Mug_Rezowan.JPG/1280px-Kitchenware_Glass_Mug_Rezowan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 2280,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kitchenware_Glass_Mug_Rezowan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Kitchenware_Glass_Mug_Rezowan.JPG/1280px-Kitchenware_Glass_Mug_Rezowan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2280,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kitchenware_Glass_Mug_Rezowan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kitchenware_Glass_Mug_Rezowan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kitchenware_Glass_Mug_Rezowan.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25833176",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-04-30 12:37:04",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Kitchenware Glass Mug Rezowan",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon PowerShot A490|Self-published work|Glass mugs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Kitchenware",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-04-30 01:12:42",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Rezowan\" title=\"User:Rezowan\">Rezowan</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

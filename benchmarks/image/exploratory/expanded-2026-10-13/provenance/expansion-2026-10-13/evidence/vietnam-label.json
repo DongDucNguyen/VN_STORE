@@ -1,0 +1,115 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Vietnam+candy+packaging+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Vietnam+candy+packaging+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:43.006647+00:00",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "6950792": {
+          "pageid": 6950792,
+          "ns": 6,
+          "title": "File:Crations.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 252608,
+              "width": 1024,
+              "height": 655,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Crations.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 819,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Crations.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 819
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Crations.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Crations.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6950792",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2009-06-05 22:18:07",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Crations",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Vietnam War in 1966|Can openers (P-38)|Smoking in the United States military|Flickr images reviewed by trusted users|United States canteens|Meal, Combat, Individual ration",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A United States Armed Forces, Combat, Individual ration (also called a C-ration). DaNang, Vietnam, c 1966 - 1967.\n<p>The meal comprised the following, from left to right:\n</p>\n<ul><li>A military issue canteen (not supplied with the ration)</li>\n<li>A B-2 unit can of 4 hardtack biscuits covered in cheese spread.</li>\n<li>A D-3 unit can of white bread.</li>\n<li>An M-2 unit can of franks and beans (hot dog chunks and beans in tomato sauce, which was colloquially called \"beanie weenie,\" with a plastic spoon that the handle also served as a spatula to spread peanut butter or cheese spread on to crackers or bread biscuits, behind which is the cardboard carton in which the entire Meal, Combat, Individual ration was packaged</li>\n<li>A brown foil-wrapped Accessory Pack, containing salt, pepper, sugar, instant coffee, non-dairy creamer, two pieces of candy-coated chewing gum, toilet paper, a 4-pack of commercial-grade cigarettes (brands: Camel, Chesterfield, Kent, Kool, Lucky Strike, Marlboro, Pall Mall, Salem, or Winston), and a book of 20 cardboard moisture-proof matches</li>\n<li>A D-2 unit can of date pudding.</li>\n<li>A P-38 can opener (the metal object sitting on the small unopened date pudding can on the right).</li>\n<li>The clear plastic bag in which the plastic spoon was packed</li></ul>\n<p>NOTE: this picture shows two dessert cans, which was not regular issue. Military personnel often swapped cans from one another.\n</p><p>The small cans were referred to as \"B units,\" the \"B\" referring to bread items. The medium-sized cans were referred to as \"D units,\" the \"D\" referring to dessert items. The large cans were referred to as \"M units,\" the \"M\" referring to meat items. The cardboard carton is labeled \"B-2\" because the bread item was hardtack biscuits with cheese spread (unit B-2). The bread and cake are unopened in the photo because the photographer had not gotten to them yet.\n</p><p>Each carton contained a complete meal providing approximately 1,200 calories (1200 kcal or 5,000 kJ), weighing 1.63 pounds and having a volume of 0.052 cubic feet.\n</p><p>The items, which comprised the photographer's meal for that day, are arranged on an improvised table consisting of the shelf of a three-sided sentry post (the photographer's sentry post), against three sides of which sandbags are stacked. The sentry stands inside, under the corrugated tin roof, and uses this shelf for holding, resting against, or eating on. The sentry post was located at the \"bomb dump,\" which was located across the airfield west of the Da Nang Airbase. Looking out over the shelf, the airstrip of the Da Nang Air Base is visible; behind it was the bomb storage area on the west side of the air base. This was a post the photographer often got and there was little to look at or do, so he often took photos to occupy his time, as well as to let people back home know about my daily routine, and to remember what it was like years later.\n</p><p>Within this series of shots one can find a photograph of a complete \"guard shack\": www.Flickr.com/photos/23056599@N00/146223259\n</p><p>The can of franks and beans, like most similar \"M-unit\" canned meat units, was probably warmed on the manifold of one of the Kaiser Jeeps that the photographer's area patrols used. About 30 minutes prior to \"chow\" time, the patrol would visit the stationary posts and the guards would punch a hole or two in the tops of their lunches and place them under the hood of the Jeep. When the patrol returned they had a hot meal.\n</p><p>U.S. military personnel also used to exchange pieces of the meals with each other. Each troop had their favorite items, so some of what is shown could be from another C-Ration meal, although the photographer does not think so.\n</p><p>Photo taken in the Air Force Security Forces (Air Police) area of the Da Nang Air Base in Da Nang, South Vietnam.\n</p><p>Photo taken with a 35mm still film camera.\n</p>\nThe photo was slightly color corrected and lightened from the original using Adobe Photoshop.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1966",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/23056599@N00/98795072/\">https://www.flickr.com/photos/23056599@N00/98795072/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Paul Mashburn (Flickr user: Mushy's Captures) ( <a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/23056599@N00/\">https://www.flickr.com/photos/23056599@N00/</a> )",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

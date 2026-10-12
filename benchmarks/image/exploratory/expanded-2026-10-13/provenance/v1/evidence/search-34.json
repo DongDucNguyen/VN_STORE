@@ -1,0 +1,657 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Vietnam+lacquerware+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:08.908917+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "40100633": {
+          "pageid": 40100633,
+          "ns": 6,
+          "title": "File:Basket made of varnished and closely-fitted bamboo, Nam Dinh province - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05247.JPG",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 9699266,
+              "width": 4086,
+              "height": 3154,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG/1280px-Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 988,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG/3840px-Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG/1280px-Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 988,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG/3840px-Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Basket_made_of_varnished_and_closely-fitted_bamboo%2C_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05247.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Basket_made_of_varnished_and_closely-fitted_bamboo,_Nam_Dinh_province_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05247.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40100633",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-05-10 11:28:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Basket made of varnished and closely-fitted bamboo, Nam Dinh province - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05247",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Bambooworks of Vietnam|Lacquerware of Vietnam|Files uploaded by Daderot|Miscellany in the Vietnam National Museum of Fine Arts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnam National Museum of Fine Arts - Hanoi, Vietnam. This artwork is old enough so that it is in the public domain.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-05 23:56:07",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "40073426": {
+          "pageid": 40073426,
+          "ns": 6,
+          "title": "File:Four seasons, lacquer engraving - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05121.JPG",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 8537586,
+              "width": 4672,
+              "height": 3498,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG/1280px-Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 958,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG/3840px-Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG/1280px-Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 958,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG/3840px-Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Four_seasons%2C_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05121.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Four_seasons,_lacquer_engraving_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05121.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40073426",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-05-08 23:02:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Four seasons, lacquer engraving - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05121",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Art of Vietnam|CC-Zero|Self-published work|Art of the Nguyễn dynasty|Files uploaded by Daderot|Lacquerware in the Vietnam National Museum of Fine Arts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnam National Museum of Fine Arts - Hanoi, Vietnam. This artwork is old enough so that it is in the public domain.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-05 23:24:51",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "39852546": {
+          "pageid": 39852546,
+          "ns": 6,
+          "title": "File:Gift box for engagement ritual, Hanoi, early 20th century, wood, lacquer - Vietnamese Women's Museum - Hanoi, Vietnam - DSC04347.JPG",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 7744246,
+              "width": 4629,
+              "height": 3433,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG/1280px-Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 949,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG/3840px-Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG/1280px-Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 949,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG/3840px-Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Gift_box_for_engagement_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04347.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gift_box_for_engagement_ritual,_Hanoi,_early_20th_century,_wood,_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi,_Vietnam_-_DSC04347.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39852546",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-04-29 10:05:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Gift box for engagement ritual, Hanoi, early 20th century, wood, lacquer - Vietnamese Women's Museum - Hanoi, Vietnam - DSC04347",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files uploaded by Daderot|Lacquerware in the Vietnamese Women's Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnamese Women's Museum, Hanoi, Vietnam. Photography was permitted in the museum without restriction.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-04 04:19:31",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "39852543": {
+          "pageid": 39852543,
+          "ns": 6,
+          "title": "File:Gift box for proposal ritual, Hanoi, early 20th century, wood, lacquer - Vietnamese Women's Museum - Hanoi, Vietnam - DSC04342.JPG",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 5751227,
+              "width": 3871,
+              "height": 3205,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG/1280px-Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1060,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG/3840px-Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG/1280px-Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1060,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG/3840px-Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Gift_box_for_proposal_ritual%2C_Hanoi%2C_early_20th_century%2C_wood%2C_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi%2C_Vietnam_-_DSC04342.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gift_box_for_proposal_ritual,_Hanoi,_early_20th_century,_wood,_lacquer_-_Vietnamese_Women%27s_Museum_-_Hanoi,_Vietnam_-_DSC04342.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39852543",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-04-29 10:05:39",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Gift box for proposal ritual, Hanoi, early 20th century, wood, lacquer - Vietnamese Women's Museum - Hanoi, Vietnam - DSC04342",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files uploaded by Daderot|Lacquerware in the Vietnamese Women's Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnamese Women's Museum, Hanoi, Vietnam. Photography was permitted in the museum without restriction.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-04 04:19:05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "40100632": {
+          "pageid": 40100632,
+          "ns": 6,
+          "title": "File:Lacquered box - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05246.JPG",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 9245120,
+              "width": 3530,
+              "height": 4163,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG/1280px-Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1510,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/58/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG/1280px-Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1510,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/58/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05246.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05246.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40100632",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-05-10 11:28:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Lacquered box - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05246",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files uploaded by Daderot|Paintings of the Later Lê Dynasty|Lacquerware in the Vietnam National Museum of Fine Arts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnam National Museum of Fine Arts - Hanoi, Vietnam. This artwork is old enough so that it is in the public domain.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-05 23:55:55",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "40100630": {
+          "pageid": 40100630,
+          "ns": 6,
+          "title": "File:Lacquered box - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05256.JPG",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 7638488,
+              "width": 3455,
+              "height": 3112,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG/1280px-Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1153,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG/1280px-Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1153,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi%2C_Vietnam_-_DSC05256.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lacquered_box_-_Vietnam_National_Museum_of_Fine_Arts_-_Hanoi,_Vietnam_-_DSC05256.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40100630",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-05-10 11:28:45",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Lacquered box - Vietnam National Museum of Fine Arts - Hanoi, Vietnam - DSC05256",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files uploaded by Daderot|Paintings of the Later Lê Dynasty|Lacquerware in the Vietnam National Museum of Fine Arts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Exhibit in the Vietnam National Museum of Fine Arts - Hanoi, Vietnam. This artwork is old enough so that it is in the public domain.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-08-05 23:57:31",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Daderot\" title=\"User:Daderot\">Daderot</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

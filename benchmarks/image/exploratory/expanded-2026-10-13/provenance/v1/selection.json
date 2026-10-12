@@ -1,0 +1,51 @@
+{
+  "commons_candidate_ids": [
+    0,
+    1,
+    5,
+    6,
+    8,
+    10,
+    11,
+    17,
+    19,
+    21,
+    22,
+    23,
+    29,
+    30,
+    31,
+    34,
+    36,
+    37,
+    38,
+    39,
+    46,
+    47,
+    49,
+    52,
+    53,
+    57,
+    60,
+    63,
+    71,
+    72
+  ],
+  "excluded_reasons": {
+    "web-024": "Visual review: image is a building, despite the title Silk Scarf; wrong subject for textiles.",
+    "web-068": "Visual review: person dominates image; replaced with a focused football photo for the intended object-search check."
+  },
+  "catalog_product_ids": [
+    "p-minhlong-chen-com-thach-van-11cm",
+    "p-minhlong-bo-tra-camellia-chi-vang-05l",
+    "p-vietcraft-gio-tre-dan-tron-vh24026",
+    "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+    "p-hanoia-binh-hoa-mystery-a18mt01",
+    "p-hanoia-hop-vuong-botanica-s-af26bt03",
+    "p-hanhsilk-khan-lanh-to-tam-246",
+    "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+    "p-marou-ben-tre-78-80g",
+    "p-marou-tien-giang-70-80g"
+  ],
+  "selection_note": "Selected by subject/source metadata for manual exploratory search. Visual review follows download. Similar/negative labels are test roles, not human relevance judgments."
+}

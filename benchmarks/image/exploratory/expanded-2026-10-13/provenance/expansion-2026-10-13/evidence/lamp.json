@@ -1,0 +1,893 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=rattan+lamp+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=rattan+lamp+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:15.696535+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "200006254": {
+          "pageid": 200006254,
+          "ns": 6,
+          "title": "File:DSC 9844 Cozy cafe interior with warm hanging wicker lamps neatly arranged shelves of treats and inviting wooden seating.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 10426578,
+              "width": 5568,
+              "height": 3712,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/1280px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/3840px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/1280px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/3840px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200006254",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-22 16:46:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "DSC 9844 Cozy cafe interior with warm hanging wicker lamps neatly arranged shelves of treats and inviting wooden seating",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Pattaya|Creative Commons Attribution-Share Alike missing SDC copyright status|Creative Commons Attribution-Share Alike 4.0 missing SDC copyright license|Flickr images missing SDC copyright status|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "12.924105",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "100.878433",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This appears to be the interior of a modern casual restaurant or café with distinctive Asian-fusion design elements. The space features beautiful woven bamboo or rattan lampshades hanging from the ceiling, creating a warm, inviting atmosphere with their soft lighting. The ceiling also has industrial-style fans and air conditioning units. The establishment appears to have a retail section with shelves displaying various products, possibly drinks or packaged foods in colorful containers. The interior combines modern industrial elements (like exposed pipes and metal fixtures) with natural materials (wooden walls and flooring). The seating area includes what looks like bench-style seating arrangements, and there's a \"ZAKS HIGH\" sign visible on the wall, which might be the name of the establishment. The overall design aesthetic combines contemporary urban style with traditional Asian elements, creating a cozy and stylish dining environment.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-03-03 11:39:17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/194424926@N05/54363634347\">Flickr</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/PattayaPatrol/\">PattayaPatrol</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "43229634": {
+          "pageid": 43229634,
+          "ns": 6,
+          "title": "File:Electric railway review (1906) (14760774202).jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 178651,
+              "width": 2140,
+              "height": 716,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Electric_railway_review_%281906%29_%2814760774202%29.jpg/1280px-Electric_railway_review_%281906%29_%2814760774202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 428,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_railway_review_%281906%29_%2814760774202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Electric_railway_review_%281906%29_%2814760774202%29.jpg/1280px-Electric_railway_review_%281906%29_%2814760774202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 428,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_railway_review_%281906%29_%2814760774202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Electric_railway_review_%281906%29_%2814760774202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Electric_railway_review_(1906)_(14760774202).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=43229634",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-09-14 17:09:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Electric railway review (1906) (14760774202)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Photos uploaded from Flickr by Fæ using a script|Trams in Tennessee|Flickr images reviewed by FlickreviewR|Files from Internet Archive Book Images Flickr stream|Files from Flickr's 'The Commons'|Media needing category review as of 14 September 2015|Electric Railway Review, 1907",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<br>\n<p><b>Identifier</b>: electricrailwayr18amer (<a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;fulltext=Search&amp;search=insource%3A%2Felectricrailwayr18amer%2F\">find matches</a>)<br>\n<b>Title</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidelectricrailwayr18amer\">Electric railway review</a><br>\n<b>Year</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookyear1906\">1906</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookdecade1900\">1900s</a>)<br>\n<b>Authors</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookauthorAmerican_Street_and_Interurban_Railway_Association\">American Street and Interurban Railway Association</a><br>\n<b>Subjects</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectStreet_railroads\">Street-railroads</a> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectElectric_railroads\">Electric railroads</a><br>\n<b>Publisher</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookpublisherChicago___Wilson_Co\">Chicago : Wilson Co</a><br>\n<b>Contributing Library</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookcontributorCarnegie_Library_of_Pittsburgh\">Carnegie Library of Pittsburgh</a><br>\n<b>Digitizing Sponsor</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksponsorLyrasis_Members_and_Sloan_Foundation\">Lyrasis Members and Sloan Foundation</a><br>\n<br>\n<b>View Book Page</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/electricrailwayr18amer/electricrailwayr18amer#page/n387/mode/1up\">Book Viewer</a><br>\n<b>About This Book</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/electricrailwayr18amer\">Catalog Entry</a><br>\n<b>View All Images</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidelectricrailwayr18amer\">All Images From Book</a><br>\nClick here to <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/electricrailwayr18amer/electricrailwayr18amer#page/n387/mode/1up\"><b>view book online</b></a> to see this illustration in context in a browseable online version of this book.<br>\n<br>\n<b>Text Appearing Before Image:</b><br>\n<i>ely consumed. Wiring Diagram for Car Lighting and Lintern Signal Lamps. NEW CARS FOR NASHVILLE. viously, any system which makes use of current from thetrolley must have an auxiliary source of current to supply thelamps in case the trolley wheel leaves the wire or the currentfails. The Lintern system, by means of an ingenious methodof wiring and an auxiliary battery of dry cells, provides amethod of electrical operation which possesses many ad-vantages over oil lamps as a method of rear-end signaling.Once installed the electric lamps entail practically no main- The J. G. Brill Company is delivering 15 double-truck carsto the Nashville Railway &amp; Light Company. These cars areof the semi-convertible type and are 42 feet long over thebumpers, 8 feet 1% inches wide and 11 feet 4% inches high,having cross seats for 28 and longitudinal seats for 16 people.The cross seats are reversible and have high backs. All ofthe seats are of rattan. The car body weighs approximately 37,000 pounds, and</i><br>\n<b>Text Appearing After Image:</b><br>\n<i>New City Cars for Nashville, Tenn. tenance expense, are convenient to operate and are absolutelyreliable. The accompanying illustration shows the method of con-nection for the Lintem car signal as installed on the cars ofthe Illinois Traction System by the Ohio Brass Company,Mansfield, O. For cars operating in both directions thecars are provided with two rear-end signals on each end.The two-candlepower lamps which light the signals derivecurrent both from the car-lighting circuit and from theauxiliary battery, as shown in the diagram, one side of the fully equipped with motors, trucks, controllers, etc., it weighs34 tons. Destination signs of the Hunter illuminated type areused and a Mosher arc headlight is attachable to either end ofthe car. The motor equipment comprises four GE-90 motorscontrolled by two K28 controllers. The National Brake &amp;Electric Companys straight air brakes, type AA4, are installed.These cars are mounted on Brill trucks and are provided withcast-iron wheels</i><br>\n<br>\n<b>Note About Images</b><br>\n</p>\n<i>Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.</i>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1906",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/internetarchivebookimages/14760774202/\">https://www.flickr.com/photos/internetarchivebookimages/14760774202/</a>\n</p>\n<ul><li>Source book page: <a rel=\"nofollow\" class=\"external free\" href=\"https://archive.org/stream/electricrailwayr18amer/electricrailwayr18amer#page/n387/mode/1up\">https://archive.org/stream/electricrailwayr18amer/electricrailwayr18amer#page/n387/mode/1up</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/126377022@N07\">Internet Archive Book Images</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "At the time of upload, the image license was automatically confirmed using the Flickr <a href=\"https://en.wikipedia.org/wiki/API\" class=\"extiw\" title=\"en:API\">API</a>. For more information see <a href=\"//commons.wikimedia.org/wiki/User:F%C3%A6/Flickr_API_detail\" title=\"User:Fæ/Flickr API detail\">Flickr API detail</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "39171880": {
+          "pageid": 39171880,
+          "ns": 6,
+          "title": "File:History of Inventions USNM 02 Fire-making tools.png",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 8396063,
+              "width": 1924,
+              "height": 1452,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/History_of_Inventions_USNM_02_Fire-making_tools.png/1280px-History_of_Inventions_USNM_02_Fire-making_tools.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 966,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/38/History_of_Inventions_USNM_02_Fire-making_tools.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/History_of_Inventions_USNM_02_Fire-making_tools.png/1280px-History_of_Inventions_USNM_02_Fire-making_tools.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 966,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/38/History_of_Inventions_USNM_02_Fire-making_tools.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/History_of_Inventions_USNM_02_Fire-making_tools.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:History_of_Inventions_USNM_02_Fire-making_tools.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39171880",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-03-23 20:10:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "History of Inventions USNM 02 Fire-making tools",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Fire-starting equipment|PD-US missing SDC copyright status|Synoptic series of objects in the United States National Museum illustrating the history of inventions",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "No. 4. Fire saw. Strip of bamboo drawn across a section of bamboo. Dyaks \n<p>of Borneo and other Malays 178,152 \n</p><p>No. 5. Fire thong. Rattan thong drawn over a grooved piece of wood. Dyaks \nof Borneo 178,152 \n</p><p>No. 6. Fire plow. Blunt stick worked along a groove in a lower stick. Polynesians 178,152 \n</p><p>No. 7. Fire drill. Slender rod twirled between the hands upon a lower stick \nhaving a cavity with slot. Indians of the United States and widely \ndiffused in the world 176,353 \n</p><p>No. 8. Fire drill. Rod held in a socket and gyrated by means of a cord. The lower piece of wood has a cavity with slot, opening upon a shelf. \nEskimos of Alaska 127,644 \n</p><p>No. 9. Fire drill. Rod held in a socket and gyrated with a bow and cord. \nLower piece with cavities on a central groove. Eskimos of \nAlaska 48,078 \n</p><p>No. 10. Fire drill. Pump drill used specially for sacred fire. Iroquois Indians, Canada. \n</p><p>No. 11. Strike-alight. Flint and iron pyrites struck together as the ordinary \nflint and steel. Eskimos of Alaska 178,154 \n</p><p>No. 12. Strike-a-light. Flint and steel and box for holding flint, steel, and \ntinder. Sulphur-tipped splint ignited from the tinder. England, \n</p><p>130,436 \n</p><p>No. 13. Strike-a-light. Bamboo tube and striker of pottery used as flint and \nsteel. Two boxes for tinder. Malay. \n</p><p>No. 14. Tinder pistol. Gunlock adapted for throwing sparks into tinder. \nEngland 175,712 \n</p><p>No. 15. Strike-a-light. Combination of flint, steel, tinder, and extinguislier, \nfor carrying in the pocket. Spain 1 178,155 \n</p><p>No. 16. Fire syringe. Cylinder with closely fitting piston bearing tinder. Driv- \ning the piston down smartly kindles the tinder. Siamese and \nMalays -1 176,091 \n</p><p>No. 17. Lens. Used for producing fire by focusing sunlight upon tinder. Ancient \nGreeks 178,151 \n</p><p>No. 18. Hydrogen lamp. Hydrogen gas is made, to play upon spongy platinum, \ncausing it to glow, Germany, 1824 165,440 \n</p><p>No. 19. Match light box. Bottle of sulphuric acid, into which splints tipped \nwith chlorate of potash and sugar were dipped. Vienna, 1809 151,711 \n</p><p>No. 20. Matches. Various kinds of phosphorus matches 178,156 \n</p><p>No. 21. Electric gas lighter. Cylinder containing a small dynamo run by pres- \nsure of the finger, producing sparks between the points at the upper \n</p>\nend of the tube. United States, 1882 200,512",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1922",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "Walter Hough (1922). <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/proceedingsofuni601922unit#page/n383/mode/2up\">Synoptic series of objects in the United States National Museum illustrating the history of inventions</a>. <i>Proceedings of the United States National Museum</i> 60 (2404). 1-47, 56 pl.",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "United States National Museum (Smithsonian Institution), Washington D.C.",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        },
+        "68129973": {
+          "pageid": 68129973,
+          "ns": 6,
+          "title": "File:Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing LCCN92510603.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1932282,
+              "width": 4096,
+              "height": 3298,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg/1280px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1031,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg/3840px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg/1280px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1031,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg/3840px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Leopold_Godowsky,_three-quarter_length_portrait,_seated_at_rattan_table_with_lamp,_facing_left,_writing_LCCN92510603.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68129973",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-07-15 19:16:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing LCCN92510603",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Leopold Godowsky|Images from the Library of Congress|PD-old-70-expired|Images uploaded by Fæ|CC-PD-Mark|Miscellaneous Items in High Demand, PPOC, Library of Congress|PD-old missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<i>Title:</i> Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing\n<i>Abstract/medium:</i> 1 photographic print.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1916",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p>Library of Congress\n</p>\n<ul><li><i>Catalog:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://lccn.loc.gov/92510603\">https://lccn.loc.gov/92510603</a></li>\n<li><i>Image download:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://cdn.loc.gov/service/pnp/cph/3c00000/3c05000/3c05300/3c05330v.jpg\">https://cdn.loc.gov/service/pnp/cph/3c00000/3c05000/3c05300/3c05330v.jpg</a></li>\n<li><i>Original url:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://www.loc.gov/pictures/item/92510603/\">https://www.loc.gov/pictures/item/92510603/</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image  is available from the United States <a href=\"//commons.wikimedia.org/wiki/Library_of_Congress\" title=\"Library of Congress\">Library of Congress</a>'s <a rel=\"nofollow\" class=\"external text\" href=\"//www.loc.gov/rr/print/\">Prints and Photographs division</a><br> under the digital ID <a rel=\"nofollow\" class=\"external text\" href=\"https://hdl.loc.gov/loc.pnp/cph.3c05330\">cph.3c05330</a>.<br><small>This tag does not indicate the copyright status of the attached work. <span style=\"white-space:nowrap\">A normal <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags\" title=\"Special:MyLanguage/Commons:Copyright tags\">copyright tag</a> is still required.</span> <span style=\"white-space:nowrap\">See <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">Commons:Licensing</a>.</span></small>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "68129979": {
+          "pageid": 68129979,
+          "ns": 6,
+          "title": "File:Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing LCCN92510603.tif",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 13510556,
+              "width": 4096,
+              "height": 3298,
+              "pagecount": 1,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif/lossy-page1-1280px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1031,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif/lossy-page1-3840px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif/lossy-page1-1280px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1031,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif/lossy-page1-3840px-Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Leopold_Godowsky%2C_three-quarter_length_portrait%2C_seated_at_rattan_table_with_lamp%2C_facing_left%2C_writing_LCCN92510603.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Leopold_Godowsky,_three-quarter_length_portrait,_seated_at_rattan_table_with_lamp,_facing_left,_writing_LCCN92510603.tif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68129979",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-04-08 02:58:38",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing LCCN92510603",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images from the Library of Congress|PD-old-70-expired|Images uploaded by Fæ|CC-PD-Mark|LC TIF images with categorized JPGs|Miscellaneous Items in High Demand, PPOC, Library of Congress|PD-old missing SDC copyright status",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<i>Title:</i> Leopold Godowsky, three-quarter length portrait, seated at rattan table with lamp, facing left, writing\n<i>Abstract/medium:</i> 1 photographic print.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1916",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p>Library of Congress\n</p>\n<ul><li><i>Catalog:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://lccn.loc.gov/92510603\">https://lccn.loc.gov/92510603</a></li>\n<li><i>Image download:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://cdn.loc.gov/master/pnp/cph/3c00000/3c05000/3c05300/3c05330u.tif\">https://cdn.loc.gov/master/pnp/cph/3c00000/3c05000/3c05300/3c05330u.tif</a></li>\n<li><i>Original url:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://www.loc.gov/pictures/item/92510603/\">https://www.loc.gov/pictures/item/92510603/</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image  is available from the United States <a href=\"//commons.wikimedia.org/wiki/Library_of_Congress\" title=\"Library of Congress\">Library of Congress</a>'s <a rel=\"nofollow\" class=\"external text\" href=\"//www.loc.gov/rr/print/\">Prints and Photographs division</a><br> under the digital ID <a rel=\"nofollow\" class=\"external text\" href=\"https://hdl.loc.gov/loc.pnp/cph.3c05330\">cph.3c05330</a>.<br><small>This tag does not indicate the copyright status of the attached work. <span style=\"white-space:nowrap\">A normal <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags\" title=\"Special:MyLanguage/Commons:Copyright tags\">copyright tag</a> is still required.</span> <span style=\"white-space:nowrap\">See <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">Commons:Licensing</a>.</span></small>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/tiff"
+            }
+          ]
+        },
+        "43223639": {
+          "pageid": 43223639,
+          "ns": 6,
+          "title": "File:The Street railway journal (1903) (14781621373).jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 448980,
+              "width": 1576,
+              "height": 1112,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/The_Street_railway_journal_%281903%29_%2814781621373%29.jpg/1280px-The_Street_railway_journal_%281903%29_%2814781621373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 903,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/f/ff/The_Street_railway_journal_%281903%29_%2814781621373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/The_Street_railway_journal_%281903%29_%2814781621373%29.jpg/1280px-The_Street_railway_journal_%281903%29_%2814781621373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 903,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/f/ff/The_Street_railway_journal_%281903%29_%2814781621373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/The_Street_railway_journal_%281903%29_%2814781621373%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Street_railway_journal_(1903)_(14781621373).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=43223639",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-09-14 14:51:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "The Street railway journal (1903) (14781621373)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Photos uploaded from Flickr by Fæ using a script|Flickr images reviewed by FlickreviewR|Files from Internet Archive Book Images Flickr stream|Files from Flickr's 'The Commons'|Media needing category review as of 14 September 2015|The Street Railway Journal (1903)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<br>\n<p><b>Identifier</b>: streetrailwayjo211903newy (<a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;fulltext=Search&amp;search=insource%3A%2Fstreetrailwayjo211903newy%2F\">find matches</a>)<br>\n<b>Title</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidstreetrailwayjo211903newy\">The Street railway journal</a><br>\n<b>Year</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookyear1884\">1884</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookdecade1880\">1880s</a>)<br>\n<b>Authors</b>: <br>\n<b>Subjects</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectStreet_railroads\">Street-railroads</a> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectElectric_railroads\">Electric railroads</a> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectTransportation\">Transportation</a><br>\n<b>Publisher</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookpublisherNew_York___McGraw_Pub__Co_\">New York : McGraw Pub. Co.</a><br>\n<b>Contributing Library</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookcontributorSmithsonian_Libraries\">Smithsonian Libraries</a><br>\n<b>Digitizing Sponsor</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksponsorSmithsonian_Libraries\">Smithsonian Libraries</a><br>\n<br>\n<b>View Book Page</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/streetrailwayjo211903newy/streetrailwayjo211903newy#page/n721/mode/1up\">Book Viewer</a><br>\n<b>About This Book</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/streetrailwayjo211903newy\">Catalog Entry</a><br>\n<b>View All Images</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidstreetrailwayjo211903newy\">All Images From Book</a><br>\nClick here to <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/streetrailwayjo211903newy/streetrailwayjo211903newy#page/n721/mode/1up\"><b>view book online</b></a> to see this illustration in context in a browseable online version of this book.<br>\n<br>\n<b>Text Appearing Before Image:</b><br>\n<i>peration being obtained from a500-volt Crocker-Wheeler motor. The rear of the shop is fittedup as toilet and locker rooms. A view of the car house interior is shown. A wooden jibcrane at the side facilitates the removal of motors and otherheavy parts from the pits. Armatures are handled by means ofa small lifting jack, supported on a square base and rollers.On top of the jack an oblong head has been fitted with twolong rolls for supporting the armature, but which allow it tobe turned over for inspection. The rear of the car house hasbeen fitted up as a paint shop. ROLLING STOCK The company has five closed and four open cars, all singletruck. Two new closed car bodies, built by the G. C. Kuhl-man Car Company, have been in use during the past season.They are mounted on Peckham trucks, and are equipped withtwo Westinghouse No. 3 motors. The length over bumpers is30 ft., over car body 20 ft., and the height from underside of sillto top of monitor roof 8 ft. 9 ins. The width is 8 ft. i in.</i><br>\n<b>Text Appearing After Image:</b><br>\n<i>i&lt;ErAiR SHUP AT HELENA The cars are double cii&lt;led and have round-front vestibuleswith three drop-sash hut no side doors. The platforms aredropped below the car floor level, and are reached by singleStanwood steps. The doors are of the twin automatic type;the window sash drop down between the side panels, and theopening is kept closed at all times by a hinged casing. The caris lighted by three incandescent lamps supported by curvedbrackets on each side of the transoms, and one on the ceilingat each end, and is heated by six electric heaters, made by theConsolidated Car Heating Company. Crouse-Hinds headlightsare used. The inside trim is of cherry with birds-eye maple tripleveneer ceiling. Ash strips are used on the floors for the aisletread. Longitudinal rattan seats are used. At the windowsare Crown curtains on Hartshorn rollers, with fixtures made bythe Curtain Supply Company. OVERHEAD AND TRACK WORKThe Ohio Brass Companys material is used on all the over-head work. The road i</i><br>\n<br>\n<b>Note About Images</b><br>\n</p>\n<i>Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.</i>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1903",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/internetarchivebookimages/14781621373/\">https://www.flickr.com/photos/internetarchivebookimages/14781621373/</a>\n</p>\n<ul><li>Source book page: <a rel=\"nofollow\" class=\"external free\" href=\"https://archive.org/stream/streetrailwayjo211903newy/streetrailwayjo211903newy#page/n721/mode/1up\">https://archive.org/stream/streetrailwayjo211903newy/streetrailwayjo211903newy#page/n721/mode/1up</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/126377022@N07\">Internet Archive Book Images</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "At the time of upload, the image license was automatically confirmed using the Flickr <a href=\"https://en.wikipedia.org/wiki/API\" class=\"extiw\" title=\"en:API\">API</a>. For more information see <a href=\"//commons.wikimedia.org/wiki/User:F%C3%A6/Flickr_API_detail\" title=\"User:Fæ/Flickr API detail\">Flickr API detail</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "43233382": {
+          "pageid": 43233382,
+          "ns": 6,
+          "title": "File:The Street railway journal (1904) (14574992170).jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 246169,
+              "width": 1271,
+              "height": 984,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/The_Street_railway_journal_%281904%29_%2814574992170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 991,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/4f/The_Street_railway_journal_%281904%29_%2814574992170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 991
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/The_Street_railway_journal_%281904%29_%2814574992170%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Street_railway_journal_(1904)_(14574992170).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=43233382",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-09-14 18:28:24",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "The Street railway journal (1904) (14574992170)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Photos uploaded from Flickr by Fæ using a script|Flickr images reviewed by FlickreviewR|Files from Internet Archive Book Images Flickr stream|Files from Flickr's 'The Commons'|Media needing category review as of 14 September 2015|The Street Railway Journal (1904)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<br>\n<p><b>Identifier</b>: streetrailwayjo241904newy (<a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;fulltext=Search&amp;search=insource%3A%2Fstreetrailwayjo241904newy%2F\">find matches</a>)<br>\n<b>Title</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidstreetrailwayjo241904newy\">The Street railway journal</a><br>\n<b>Year</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookyear1884\">1884</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookdecade1880\">1880s</a>)<br>\n<b>Authors</b>: <br>\n<b>Subjects</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectStreet_railroads\">Street-railroads</a> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectElectric_railroads\">Electric railroads</a> <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksubjectTransportation\">Transportation</a><br>\n<b>Publisher</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookpublisherNew_York___McGraw_Pub__Co_\">New York : McGraw Pub. Co.</a><br>\n<b>Contributing Library</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookcontributorSmithsonian_Libraries\">Smithsonian Libraries</a><br>\n<b>Digitizing Sponsor</b>:  <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/booksponsorSmithsonian_Libraries\">Smithsonian Libraries</a><br>\n<br>\n<b>View Book Page</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/streetrailwayjo241904newy/streetrailwayjo241904newy#page/n506/mode/1up\">Book Viewer</a><br>\n<b>About This Book</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/streetrailwayjo241904newy\">Catalog Entry</a><br>\n<b>View All Images</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/internetarchivebookimages/tags/bookidstreetrailwayjo241904newy\">All Images From Book</a><br>\nClick here to <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/streetrailwayjo241904newy/streetrailwayjo241904newy#page/n506/mode/1up\"><b>view book online</b></a> to see this illustration in context in a browseable online version of this book.<br>\n<br>\n<b>Text Appearing Before Image:</b><br>\n<i>and wrecking tools, consisting of the usual saw, axe, sledgeand bar. Standard railway signal lamps, burning oil, and signal flags,with proper sockets for holding either at the ends of the car;iron cuspidors for the smoking compartment, a manila floormat for the entire length of center aisle, removable rubbermats for vestibules, a motormans tool box and switch irons,</i><br>\n<b>Text Appearing After Image:</b><br>\n<i>FIGS. 2 AND 4.—INTERIOR OF OLD AND NEW TYPES OF INTERURBAN CARS and all moldings are of solid dark mahogany, in natural color,varnished and rubbed down in pumice stone and oil, to a smoothdead finish. All metal trimmings are highly polished bronze.The seats shown in the engraving are the latest type, high back,reversible, with head roll and bronze corner grab handles, thelatter making hanging straps unnecessary. The seats are up-holstered in white rattan, which many prefer, principally forsanitary reasons. Probably as many cars have the seats up- steel spring clips and floor sockets for the latter being pro-vided in the vestibules. Illuminated destination signs, visibleday or night, are now coming into general use. They areusually outside the vestibule below the windows and at one sideof the center. Arc headlights and trolley catchers are alsoprovided. All high-speed interurban cars are now equipped with someform of air brake, as they are far too heavy to be continually l^adllaD^I l</i><br>\n<br>\n<b>Note About Images</b><br>\n</p>\n<i>Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.</i>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1904",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/internetarchivebookimages/14574992170/\">https://www.flickr.com/photos/internetarchivebookimages/14574992170/</a>\n</p>\n<ul><li>Source book page: <a rel=\"nofollow\" class=\"external free\" href=\"https://archive.org/stream/streetrailwayjo241904newy/streetrailwayjo241904newy#page/n506/mode/1up\">https://archive.org/stream/streetrailwayjo241904newy/streetrailwayjo241904newy#page/n506/mode/1up</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/126377022@N07\">Internet Archive Book Images</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "At the time of upload, the image license was automatically confirmed using the Flickr <a href=\"https://en.wikipedia.org/wiki/API\" class=\"extiw\" title=\"en:API\">API</a>. For more information see <a href=\"//commons.wikimedia.org/wiki/User:F%C3%A6/Flickr_API_detail\" title=\"User:Fæ/Flickr API detail\">Flickr API detail</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "176361070": {
+          "pageid": 176361070,
+          "ns": 6,
+          "title": "File:Woven rattan lamp bases and lampshades.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 5164218,
+              "width": 4096,
+              "height": 3072,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Woven_rattan_lamp_bases_and_lampshades.jpg/1280px-Woven_rattan_lamp_bases_and_lampshades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Woven_rattan_lamp_bases_and_lampshades.jpg/3840px-Woven_rattan_lamp_bases_and_lampshades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Woven_rattan_lamp_bases_and_lampshades.jpg/1280px-Woven_rattan_lamp_bases_and_lampshades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Woven_rattan_lamp_bases_and_lampshades.jpg/3840px-Woven_rattan_lamp_bases_and_lampshades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Woven_rattan_lamp_bases_and_lampshades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Woven_rattan_lamp_bases_and_lampshades.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=176361070",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-10-09 00:52:28",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Woven rattan lamp bases and lampshades",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Rattan furniture|Files with coordinates missing SDC location of creation|Taken with Realme C65",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "14.325375",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "122.485466",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Woven rattan lamp bases and lampshades, made from natural rattan and abaca or other plant fibers for the shades.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-03-08 12:59:29",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:MaxixKatana\" title=\"User:MaxixKatana\">MaxixKatana</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

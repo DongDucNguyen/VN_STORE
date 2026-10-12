@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duyệt vùng cắt ảnh</title>
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--text:#1d1d1b;--muted:#6b6a65;--line:#dcdad3;--accent:#1f6feb;--ok:#1a7f37;--warn:#9a6700;--bad:#cf222e;--box:#ff3b30}
+@media (prefers-color-scheme: dark){:root{--bg:#161615;--card:#21211f;--text:#ecebe6;--muted:#a3a29b;--line:#3a3935;--accent:#58a6ff;--ok:#3fb950;--warn:#d29922;--bad:#f85149}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px}
+header h1{font-size:18px;margin:0 0 4px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bar input[type=text]{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--text);min-width:180px}
+button{font:inherit;padding:6px 12px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.okb{border-color:var(--ok);color:var(--ok)}
+button.badb{border-color:var(--bad);color:var(--bad)}
+button:disabled{opacity:.5;cursor:default}
+.muted{color:var(--muted)}
+#notice{color:var(--warn);min-height:1.2em;font-size:13px}
+.filters label{margin-right:10px;font-size:14px}
+main{padding:16px;max-width:1400px;margin:0 auto}
+.help{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-bottom:16px;font-size:14px}
+.help ul{margin:4px 0;padding-left:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:16px;display:grid;grid-template-columns:minmax(0,3fr) minmax(260px,2fr);gap:16px}
+@media (max-width:820px){.card{grid-template-columns:1fr}}
+.card h2{font-size:16px;margin:0 0 4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid currentColor}
+.chip.pending{color:var(--muted)}.chip.approved{color:var(--ok)}.chip.edited{color:var(--accent)}.chip.unconfirmed{color:var(--warn)}.chip.rejected{color:var(--bad)}
+.stage{position:relative;display:inline-block;overflow:hidden;max-width:100%;user-select:none;touch-action:none;cursor:crosshair;line-height:0}
+.stage img{max-width:100%;max-height:70vh;display:block}
+.shade{position:absolute;inset:0;pointer-events:none}
+.box{position:absolute;border:2px solid var(--box);box-shadow:0 0 0 9999px rgba(0,0,0,.45);pointer-events:none}
+.box.proposed-ghost{border:2px dashed #ffd60a;box-shadow:none}
+.instr{background:var(--bg);border-left:3px solid var(--accent);padding:6px 10px;margin:8px 0;font-size:14px}
+canvas.preview{max-width:100%;max-height:260px;border:1px solid var(--line);background:#fff;display:block;margin:6px 0}
+.coords{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:6px 0}
+.coords label{font-size:12px;color:var(--muted)}
+.coords input{width:100%;padding:4px 6px;border:1px solid var(--line);border-radius:5px;background:var(--card);color:var(--text)}
+textarea{width:100%;min-height:52px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--text);font:inherit;font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.size{font-size:13px}
+.size.small{color:var(--bad);font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <h1>Duyệt 20 vùng cắt — <span id="dsv"></span></h1>
+  <div class="bar">
+    <input type="text" id="reviewer" placeholder="Mã người duyệt (bắt buộc khi xuất)">
+    <span id="progress" class="muted"></span>
+    <button class="primary" id="export">Xuất kết quả duyệt</button>
+    <button id="saveDraft">Lưu bản nháp</button>
+    <label><button id="loadBtn" type="button">Nạp bản nháp/kết quả</button><input type="file" id="loadFile" accept="application/json" hidden></label>
+    <button id="reset">Xóa nháp</button>
+  </div>
+  <div class="bar filters">
+    <span class="muted">Hiện:</span>
+    <label><input type="radio" name="f" value="all" checked> tất cả</label>
+    <label><input type="radio" name="f" value="todo"> chưa xong</label>
+    <label><input type="radio" name="f" value="rejected"> không dùng</label>
+  </div>
+  <div id="notice"></div>
+</header>
+<main>
+  <div class="help">
+    <b>Cách duyệt.</b> Khung đỏ là vùng đề xuất (trợ lý chọn theo hướng dẫn, trước khi chạy tìm kiếm). Phần ngoài khung bị làm tối; ô bên phải là đúng phần ảnh sẽ được gửi đi.
+    <ul>
+      <li><b>Đồng ý</b> nếu vùng đúng hướng dẫn. Muốn sửa thì <b>kéo chuột trên ảnh</b> để vẽ lại, hoặc nhập tọa độ 0–1 (trái, trên, phải, dưới), rồi bấm <b>Xác nhận vùng đã sửa</b>. Khung vàng nét đứt là vùng đề xuất ban đầu.</li>
+      <li><b>Không dùng</b> nếu ảnh không cắt được theo hướng dẫn; ghi lý do.</li>
+      <li>Duyệt vùng <b>trước khi xem kết quả tìm kiếm</b>, giữ nguyên qua mọi model. Cạnh vùng cắt dưới 32 px sẽ bị giao diện từ chối.</li>
+      <li>Xuất ra <code>crops.reviewed.json</code>, đặt cạnh <code>crops.json</code>, rồi chạy lại với <code>--crops</code>.</li>
+    </ul>
+  </div>
+  <div id="list"></div>
+</main>
+<script type="application/json" id="packet">__PACKET_JSON__</script>
+<script>
+const P = JSON.parse(document.getElementById('packet').textContent);
+const $ = (id) => document.getElementById(id);
+const KEY = 'vnstore-crop-review:' + P.dataset_version + ':' + P.source_crops_sha256;
+const r2 = (v) => Math.round(v * 1000) / 1000;
+const clamp = (v) => Math.min(1, Math.max(0, v));
+let state = {reviewer: '', items: {}};
+for (const c of P.cases) state.items[c.case_id] = {box: c.proposed.slice(), decision: 'pending', note: ''};
+function validState(s) {
+  return s && typeof s === 'object' && s.items && P.cases.every(c => {
+    const it = s.items[c.case_id];
+    return it && Array.isArray(it.box) && it.box.length === 4 && it.box.every(v => typeof v === 'number') &&
+      ['pending', 'approved', 'edited', 'unconfirmed', 'rejected'].includes(it.decision);
+  });
+}
+try { const saved = JSON.parse(localStorage.getItem(KEY)); if (validState(saved)) state = saved; } catch {}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(state)); }
+  catch { $('notice').textContent = 'Trình duyệt không tự lưu được. Dùng “Lưu bản nháp” trước khi đóng trang.'; }
+}
+const LABEL = {pending: 'chưa duyệt', approved: 'đồng ý', edited: 'đã sửa', unconfirmed: 'đã sửa — chưa xác nhận', rejected: 'không dùng'};
+const same = (a, b) => a.every((v, i) => Math.abs(v - b[i]) < 1e-6);
+function validBox(b) { return b.every(v => Number.isFinite(v) && v >= 0 && v <= 1) && b[0] < b[2] && b[1] < b[3]; }
+
+function card(c) {
+  const el = document.createElement('section');
+  el.className = 'card'; el.id = 'c-' + c.case_id;
+  el.innerHTML = `
+    <div>
+      <h2><span>${c.case_id}</span><span class="chip"></span></h2>
+      <div class="muted" style="font-size:13px;margin-bottom:6px">${c.role} · ${c.group}${c.topic ? ' · ' + c.topic : ''} — ${c.title}</div>
+      <div class="stage"><img alt="${c.case_id}" src="${c.image_path}" draggable="false"><div class="box proposed-ghost"></div><div class="box cur"></div></div>
+    </div>
+    <div>
+      <div class="instr">${c.instruction}</div>
+      <div class="muted" style="font-size:13px">Phần ảnh sẽ gửi đi:</div>
+      <canvas class="preview"></canvas>
+      <div class="size"></div>
+      <div class="coords">
+        ${['trái', 'trên', 'phải', 'dưới'].map((l, i) => `<div><label>${l}</label><input type="number" min="0" max="1" step="0.01" data-i="${i}"></div>`).join('')}
+      </div>
+      <div class="actions">
+        <button class="okb approve">Đồng ý</button>
+        <button class="primary confirm">Xác nhận vùng đã sửa</button>
+        <button class="restore">Đặt lại đề xuất</button>
+        <button class="badb reject">Không dùng</button>
+      </div>
+      <textarea placeholder="Ghi chú (bắt buộc khi Không dùng)"></textarea>
+    </div>`;
+  const img = el.querySelector('img'), stage = el.querySelector('.stage');
+  const ghost = el.querySelector('.proposed-ghost'), cur = el.querySelector('.cur');
+  const cv = el.querySelector('canvas'), size = el.querySelector('.size');
+  const inputs = [...el.querySelectorAll('.coords input')], note = el.querySelector('textarea');
+  const it = () => state.items[c.case_id];
+  const place = (node, b) => Object.assign(node.style, {left: b[0] * 100 + '%', top: b[1] * 100 + '%', width: (b[2] - b[0]) * 100 + '%', height: (b[3] - b[1]) * 100 + '%'});
+  function render() {
+    const s = it(), b = s.box;
+    place(cur, b); place(ghost, c.proposed);
+    ghost.style.display = same(b, c.proposed) ? 'none' : 'block';
+    inputs.forEach((inp, i) => { if (document.activeElement !== inp) inp.value = r2(b[i]); });
+    note.value = s.note;
+    const chip = el.querySelector('.chip'); chip.className = 'chip ' + s.decision; chip.textContent = LABEL[s.decision];
+    el.querySelector('.confirm').disabled = s.decision !== 'unconfirmed';
+    if (img.naturalWidth) {
+      const W = img.naturalWidth, H = img.naturalHeight;
+      const sx = Math.round(b[0] * W), sy = Math.round(b[1] * H);
+      const sw = Math.max(1, Math.round((b[2] - b[0]) * W)), sh = Math.max(1, Math.round((b[3] - b[1]) * H));
+      const scale = Math.min(1, 1024 / Math.max(sw, sh));
+      cv.width = Math.round(sw * scale); cv.height = Math.round(sh * scale);
+      const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height);
+      g.drawImage(img, sx, sy, sw, sh, 0, 0, cv.width, cv.height);
+      const small = Math.min(sw, sh) < 32;
+      size.className = 'size' + (small ? ' small' : '');
+      size.textContent = `Vùng ${sw}×${sh} px trên ảnh ${W}×${H}` + (small ? ' — quá nhỏ, giao diện sẽ từ chối' : '');
+    }
+    updateProgress(); applyFilter();
+  }
+  function setBox(b, fromUser) {
+    if (!validBox(b)) return;
+    const s = it(); s.box = b.map(r2);
+    if (fromUser) s.decision = same(s.box, c.proposed) ? 'pending' : 'unconfirmed';
+    save(); render();
+  }
+  img.addEventListener('load', render);
+  let start = null;
+  const pt = (e) => { const r = img.getBoundingClientRect(); return [clamp((e.clientX - r.left) / r.width), clamp((e.clientY - r.top) / r.height)]; };
+  stage.addEventListener('pointerdown', (e) => { e.preventDefault(); start = pt(e); stage.setPointerCapture(e.pointerId); });
+  stage.addEventListener('pointermove', (e) => {
+    if (!start) return; const p = pt(e);
+    place(cur, [Math.min(start[0], p[0]), Math.min(start[1], p[1]), Math.max(start[0], p[0]), Math.max(start[1], p[1])]);
+  });
+  stage.addEventListener('pointerup', (e) => {
+    if (!start) return; const p = pt(e), s0 = start; start = null;
+    const b = [Math.min(s0[0], p[0]), Math.min(s0[1], p[1]), Math.max(s0[0], p[0]), Math.max(s0[1], p[1])];
+    if (b[2] - b[0] < 0.01 || b[3] - b[1] < 0.01) { render(); return; }  // click, not a drag
+    setBox(b, true);
+  });
+  inputs.forEach((inp) => inp.addEventListener('change', () => {
+    const b = it().box.slice(); b[+inp.dataset.i] = clamp(parseFloat(inp.value));
+    if (validBox(b)) setBox(b, true); else { $('notice').textContent = `${c.case_id}: tọa độ không hợp lệ (cần trái < phải, trên < dưới).`; render(); }
+  }));
+  el.querySelector('.approve').onclick = () => {
+    const s = it(); s.decision = same(s.box, c.proposed) ? 'approved' : 'edited'; save(); render();
+  };
+  el.querySelector('.confirm').onclick = () => { it().decision = 'edited'; save(); render(); };
+  el.querySelector('.restore').onclick = () => { const s = it(); s.box = c.proposed.slice(); s.decision = 'pending'; save(); render(); };
+  el.querySelector('.reject').onclick = () => {
+    const s = it(); s.note = note.value;
+    if (!s.note.trim()) { $('notice').textContent = `${c.case_id}: ghi lý do trước khi chọn Không dùng.`; note.focus(); return; }
+    s.decision = 'rejected'; save(); render();
+  };
+  note.addEventListener('input', () => { it().note = note.value; save(); });
+  el._render = render;
+  setTimeout(render);
+  return el;
+}
+
+function counts() {
+  const v = Object.values(state.items);
+  return {done: v.filter(s => ['approved', 'edited', 'rejected'].includes(s.decision)).length, total: v.length,
+          unconfirmed: v.filter(s => s.decision === 'unconfirmed').length};
+}
+function updateProgress() {
+  const n = counts();
+  $('progress').textContent = `Đã duyệt ${n.done}/${n.total}` + (n.unconfirmed ? ` · ${n.unconfirmed} vùng sửa chưa xác nhận` : '');
+}
+function applyFilter() {
+  const f = document.querySelector('input[name=f]:checked').value;
+  for (const c of P.cases) {
+    const d = state.items[c.case_id].decision;
+    const node = $('c-' + c.case_id); if (!node) continue;
+    node.style.display = f === 'all' || (f === 'todo' && ['pending', 'unconfirmed'].includes(d)) ||
+      (f === 'rejected' && d === 'rejected') ? '' : 'none';
+  }
+}
+document.querySelectorAll('input[name=f]').forEach(r => r.addEventListener('change', applyFilter));
+
+function isoNow() {
+  const d = new Date(), off = -d.getTimezoneOffset(), sign = off >= 0 ? '+' : '-', p = (n) => String(Math.abs(n)).padStart(2, '0');
+  const local = new Date(d.getTime() + off * 60000).toISOString().slice(0, 19);
+  return `${local}${sign}${p(Math.trunc(off / 60))}:${p(off % 60)}`;
+}
+function download(name, obj) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, null, 2) + '\n'], {type: 'application/json'}));
+  a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+$('reviewer').value = state.reviewer || '';
+$('reviewer').addEventListener('input', (e) => { state.reviewer = e.target.value; save(); });
+$('saveDraft').onclick = () => download(`crop-review-draft-${P.dataset_version}.json`, {kind: 'vnstore_crop_review_draft', key: KEY, state});
+$('loadBtn').onclick = () => $('loadFile').click();
+$('loadFile').onchange = async (e) => {
+  const f = e.target.files[0]; if (!f) return;
+  try {
+    const d = JSON.parse(await f.text());
+    let s = d.state;
+    if (d.kind === 'vnstore_crop_review' && Array.isArray(d.items)) {
+      s = {reviewer: d.reviewed_by || '', items: {}};
+      for (const it of d.items) s.items[it.case_id] = {box: it.final || it.proposed, decision: it.decision, note: it.note || ''};
+    }
+    if (!validState(s)) throw new Error('sai cấu trúc hoặc khác bộ ca');
+    state = s; save(); $('reviewer').value = state.reviewer || '';
+    document.querySelectorAll('.card').forEach(el => el._render()); $('notice').textContent = 'Đã nạp ' + f.name;
+  } catch (err) { $('notice').textContent = 'Không nạp được: ' + err.message; }
+  e.target.value = '';
+};
+$('reset').onclick = () => {
+  for (const c of P.cases) state.items[c.case_id] = {box: c.proposed.slice(), decision: 'pending', note: ''};
+  save(); document.querySelectorAll('.card').forEach(el => el._render()); $('notice').textContent = 'Đã đặt lại toàn bộ về đề xuất.';
+};
+$('export').onclick = () => {
+  const who = (state.reviewer || '').trim();
+  if (!who) { $('notice').textContent = 'Nhập mã người duyệt trước khi xuất.'; $('reviewer').focus(); return; }
+  const n = counts();
+  if (n.unconfirmed) { $('notice').textContent = `Còn ${n.unconfirmed} vùng đã sửa nhưng chưa xác nhận.`; return; }
+  const items = P.cases.map(c => {
+    const s = state.items[c.case_id];
+    return {case_id: c.case_id, image_id: c.image_id, proposed: c.proposed,
+            final: s.decision === 'rejected' ? null : s.box, decision: s.decision, note: s.note.trim() || null};
+  });
+  const crops = {};
+  for (const it of items) if (it.decision === 'approved' || it.decision === 'edited') crops[it.case_id] = it.final;
+  download('crops.reviewed.json', {
+    kind: 'vnstore_crop_review', dataset_version: P.dataset_version, format: P.format,
+    source_crops_sha256: P.source_crops_sha256, proposed_by: P.chosen_by,
+    reviewed_by: who, reviewed_at: isoNow(), complete: n.done === n.total,
+    crops, items});
+  $('notice').textContent = n.done === n.total ? 'Đã xuất kết quả duyệt đầy đủ.' :
+    `Đã xuất, nhưng còn ${n.total - n.done} ca chưa duyệt (sẽ bị bỏ qua khi chạy).`;
+};
+$('dsv').textContent = P.dataset_version;
+const list = $('list');
+for (const c of P.cases) list.appendChild(card(c));
+updateProgress();
+</script>
+</body>
+</html>

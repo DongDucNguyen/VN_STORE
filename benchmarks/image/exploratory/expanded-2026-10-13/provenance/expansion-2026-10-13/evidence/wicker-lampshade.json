@@ -1,0 +1,466 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=wicker+lampshade+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=wicker+lampshade+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:52:29.796895+00:00",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "41856389": {
+          "pageid": 41856389,
+          "ns": 6,
+          "title": "File:American homes and gardens (1911) (17970068080).jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 829268,
+              "width": 2842,
+              "height": 972,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/American_homes_and_gardens_%281911%29_%2817970068080%29.jpg/1280px-American_homes_and_gardens_%281911%29_%2817970068080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 438,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/27/American_homes_and_gardens_%281911%29_%2817970068080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/American_homes_and_gardens_%281911%29_%2817970068080%29.jpg/1280px-American_homes_and_gardens_%281911%29_%2817970068080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 438,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/27/American_homes_and_gardens_%281911%29_%2817970068080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/American_homes_and_gardens_%281911%29_%2817970068080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:American_homes_and_gardens_(1911)_(17970068080).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=41856389",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-07-26 05:56:10",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "American homes and gardens (1911) (17970068080)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Art of the United States|American homes and gardens (1911)|Floral designs|Lampshades|Frustums of 4-gon pyramids|Photos uploaded from Flickr by Fæ using a script|Truncated cone-shaped objects|Flickr images reviewed by FlickreviewR|Files from Internet Archive Book Images Flickr stream|Files from Flickr's 'The Commons'|Black and white photographs of the United States|Pyramidal frustum-shaped objects",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<br>\n<p><b>Title</b>: American homes and gardens<br>\n<b>Identifier</b>: americanhomesgar81911newy (<a class=\"external text\" href=\"https://commons.wikimedia.org/w/index.php?title=Special%3ASearch&amp;profile=default&amp;fulltext=Search&amp;search=insource%3A%2Famericanhomesgar81911newy%2F\">find matches</a>)<br>\n<b>Year</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=bookyear1905\">1905</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=bookdecade1900\">1900s</a>)<br>\n<b>Authors</b>: <br>\n<b>Subjects</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=booksubjectArchitecture_Domestic\">Architecture, Domestic</a>; <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=booksubjectLandscape_gardening\">Landscape gardening</a><br>\n<b>Publisher</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=bookpublisherNew_York_Munn_and_Co\">New York : Munn and Co</a><br>\n<b>Contributing Library</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=bookcontributorSmithsonian_Libraries\">Smithsonian Libraries</a><br>\n<b>Digitizing Sponsor</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=booksponsorBiodiversity_Heritage_Library\">Biodiversity Heritage Library</a><br>\n<br>\n<b>View Book Page</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/americanhomesgar81911newy/#page/n676/mode/1up\">Book Viewer</a><br>\n<b>About This Book</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/details/americanhomesgar81911newy\">Catalog Entry</a><br>\n<b>View All Images</b>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/search/?tags=bookid.americanhomesgar81911newy\">All Images From Book</a><br>\nClick here to <a rel=\"nofollow\" class=\"external text\" href=\"https://archive.org/stream/americanhomesgar81911newy/#page/n676/mode/1up\"><b>view book online</b></a> to see this illustration in context in a browseable online version of this book.<br>\n<br>\n<b>Text Appearing Before Image: </b><br>\n<i>November, 1911 AMERICAN HOMES AND GARDENS 413 so as to have another piece of furniture in this color. The chair for sitting at the desk should also be green, unless a wicker stool is preferred, the advantage of the stool being that it can be pushed underneath the desk when not in use. A decorative chintz to go with the frieze can be used on a threefold screen. It would be useful in screening the bed or washstand from the rest of the room that is to be used as a sitting-room. A small cushion should be covered for the stool or the seat of the chairs in the room. The wicker chair should have cushions covered with the same chintz or cretonne, if that material is preferred. The windows could have one pair of curtains and a vallence of the same. The effect of two windows curtained as one is sometimes very quaint, but the shape and size of the room would determine that. The one pair would leave more space for the desk and enable there being enough room to have the closet for stationery built above the writing part. The bedspread would be best white, as there would be enough color in the room without having a decorated quilt. Dainty hand-made rugs on a stained floor or over matting would be in good taste. SHADES FOR TABLE LIGHTS A READER asks advice about the best shades to use on oil lamps and candles for the dining-room table. The first consideration when choosing shades for dining-room tables is the color. It must be soft, so that it is not aggres- sive when unlighted on the mantelpiece or sideboard. It must be tender in tone, so as to shed a soft haze on the faces of those who sit around the board. It must harmonize with the decoration of the room. Some of the most be- coming shades are made of China silk of very good quality, in the four shades that are best for use in dining-rooms— ivory-white, corn-color, red, and green. When made by experts it will be noticed that in addition to the top color there is an intermediate silk lining of another color. A corn-colored silk shade will have a lining of corn-colored silk, over this an interlining of bright pink China silk, which, when concealed by the top silk of corn-color stretched tightly over the linings or soft-pleated, will look charm- ingly soft and dainty. When lighted a tender haze of pink- ish tone will be suffused. The effect is further enhanced by a heavy silken fringe or passementerie fringe. Sometimes a golden lace is chosen with the corn-color scheme to go beneath a light fringe of silk. There is also a wide choice in the selection of shapes. Empire, with its almost straight sides, the wide flare which means shorter silk covers and a greater depth of fringe, and the usual angle is after all the most satisfactory shape to have the shades. It is most harmonious to have the lamp shade match the candle whenever possible. When visiting in a country house in England the writer was impressed by the charming color *k JSp9* %'MJ&amp;£t \"i&gt;'.«T m aw's? *€ SrtBKr' '9 J9V' ■ Aw H^Kh l?rv '^\\ *^~ OF - &gt; 1 i MtK tr ':'ii$£\\ isi i *'H ii^ R*; vr.\\ It 1 Smi* im mm mi lUb IfiSlrl 9 CffVC-j , i I ^ K jQbrA ■*:h ' 1 air :a$. Wg: &gt;.t j 1 ■T j»jt ■KK ? mb \"^Jr^ § *sy I M?'¥ i *£w Efy si w -•JWlT 1 ~M 1 (m 1 '■ SfJS&lt; &lt; 1 L 9 - 1- ; \\\\ jfys Ef*'i i ^8 LtS-iiL : -11 i ■&amp;« 2 J 5 fd H ^yffi&gt;- I Im 51-lf 8*11 m JrW Hi 1\\ 'm§i 'I fej Hvv )fl§^ 1^ wi i jK^fe '7 4; ■! r'lKFt'-*! . w/S&gt; ■'dSLtl *SUL :»% ir u J _&gt; -aM*. 19 i\\t am i 1 L?5f^T kII fM^'fmiifm WF®St ■ - '••■ W .-ikt * % 8» jh^%»^' 5J- 1 V </i>$■ • ^u^m «H Vallenced window curtains of chintz for an attic bedroom scheme of flowers, candle shades and table center. If red candle shades were used a large piece of red felt was laid over the white tablecloth, extending to about eighteen inches from the edges of the table. An immense silver piece was filled with flowers and there were many silver dishes of candy, also two dishes of fruit on either side of the flower bowl. The red set off the silver and made a charming mass of red with the candle shades. For use in the simple dining-room there are effective shades to be found in cretonne, glazed chintz, and gingham, the last having small pattern blocks in red and white, yellow and white, and green and white. They are de- cidedly quaint, but could only be used for seashore or bunga- low cottages. There are the usual fancy shades of painted cardboard, stenciled effects and pierced copper, as well as a good variety of French shades, but a visit to the shops that carry such things must be taken to see the (newest designs.<i><br></i>\n<b>Text Appearing After Image: </b><br>\n<i>There are many sorts of shades for table candles, and these are to be had in the shops of nearly every town. Well-chosen designs enhance beautiful table effects</i><br>\n<br>\n<b>Note About Images</b><br>\n</p>\n<i>Please note that these images are extracted from scanned page images that may have been digitally enhanced for readability - coloration and appearance of these illustrations may not perfectly resemble the original work.</i>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1911",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/internetarchivebookimages/17970068080/\">https://www.flickr.com/photos/internetarchivebookimages/17970068080/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/126377022@N07\">Internet Archive Book Images</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "At the time of upload, the image license was automatically confirmed using the Flickr <a href=\"https://en.wikipedia.org/wiki/API\" class=\"extiw\" title=\"en:API\">API</a>. For more information see <a href=\"//commons.wikimedia.org/wiki/User:F%C3%A6/Flickr_API_detail\" title=\"User:Fæ/Flickr API detail\">Flickr API detail</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "No restrictions",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "No known copyright restrictions",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://www.flickr.com/commons/usage/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "92722732": {
+          "pageid": 92722732,
+          "ns": 6,
+          "title": "File:Craftmen at work, bamboo basket weaving and textile mobile sculptures, in Heuan Chan heritage house, Luang Prabang, Laos.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 11522565,
+              "width": 5563,
+              "height": 3129,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg/1280px-Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 720,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg/3840px-Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg/1280px-Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 720,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg/3840px-Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Craftmen_at_work%2C_bamboo_basket_weaving_and_textile_mobile_sculptures%2C_in_Heuan_Chan_heritage_house%2C_Luang_Prabang%2C_Laos.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Craftmen_at_work,_bamboo_basket_weaving_and_textile_mobile_sculptures,_in_Heuan_Chan_heritage_house,_Luang_Prabang,_Laos.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=92722732",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-07-30 04:53:09",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Craftmen at work, bamboo basket weaving and textile mobile sculptures, in Heuan Chan heritage house, Luang Prabang, Laos",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Walls in Laos|Interiors in Laos|Taken with Canon EOS 5D Mark IV and Canon EF 11-24mm F4L USM|Interior decoration|Artisans|Sudare|Wooden ceilings|People of Luang Prabang|Bambooworking|Pillars|Personality rights warning|Lampshades|Hanging light fixtures|Buildings in Luang Prabang|Suspended furniture|Self-published work|Featured pictures of Laos|Crafts of Laos|Wooden tables|Bamboo furniture|Featured pictures on Wikipedia, Persian|Wooden houses in Laos|Rooms in Laos|Stilt houses in Laos|Artisans from Laos|Bambooworking in Laos|Basket makers at work|People at work in Laos|Weaving in Laos|Featured pictures of people|Featured pictures of building interiors|Bamboo baskets|Files with coordinates missing SDC location of creation|Featured pictures by Basile Morin|Buildings in Laos photographed in 2018|Laos photographs taken on 2018-06-15|Photographs by Basile Morin|2018 in Luang Prabang Province|Wooden armchairs|Rhombicuboctahedron shaped objects|Bamboo lanterns|Hand weaving|Weavers at work|Hanging baskets in Laos|Published photographs by Basile Morin",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "19.892843",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "102.137527",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Craftmen at work, <a href=\"https://en.wikipedia.org/wiki/Wicker\" class=\"extiw\" title=\"en:Wicker\">wicker</a> furniture makers, bamboo <a href=\"https://en.wikipedia.org/wiki/Basket_weaving\" class=\"extiw\" title=\"en:Basket weaving\">basket weaving</a>, textile crafts and suspended <a href=\"https://en.wikipedia.org/wiki/Mobile_(sculpture)\" class=\"extiw\" title=\"en:Mobile (sculpture)\">mobile sculptures</a>, interior view of the wooden <i>Heuan Chan heritage house</i>, stilt building with wooden ceiling, bamboo furniture and <a href=\"https://en.wikipedia.org/wiki/Sudare\" class=\"extiw\" title=\"en:Sudare\">\"<i>sudare</i>\"</a> (bamboo <a href=\"https://en.wikipedia.org/wiki/Window_blind#Venetian\" class=\"extiw\" title=\"en:Window blind\">venetian blinds</a>), <a href=\"https://en.wikipedia.org/wiki/Luang_Prabang\" class=\"extiw\" title=\"en:Luang Prabang\">Luang Prabang</a>, <a href=\"https://en.wikipedia.org/wiki/Laos\" class=\"extiw\" title=\"en:Laos\">Laos</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-06-15 10:59:29",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Basile_Morin\" title=\"User:Basile Morin\">Basile Morin</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "personality",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "200006254": {
+          "pageid": 200006254,
+          "ns": 6,
+          "title": "File:DSC 9844 Cozy cafe interior with warm hanging wicker lamps neatly arranged shelves of treats and inviting wooden seating.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 10426578,
+              "width": 5568,
+              "height": 3712,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/1280px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/3840px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/1280px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg/3840px-DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:DSC_9844_Cozy_cafe_interior_with_warm_hanging_wicker_lamps_neatly_arranged_shelves_of_treats_and_inviting_wooden_seating.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200006254",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-22 16:46:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "DSC 9844 Cozy cafe interior with warm hanging wicker lamps neatly arranged shelves of treats and inviting wooden seating",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Pattaya|Creative Commons Attribution-Share Alike missing SDC copyright status|Creative Commons Attribution-Share Alike 4.0 missing SDC copyright license|Flickr images missing SDC copyright status|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "12.924105",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "100.878433",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "This appears to be the interior of a modern casual restaurant or café with distinctive Asian-fusion design elements. The space features beautiful woven bamboo or rattan lampshades hanging from the ceiling, creating a warm, inviting atmosphere with their soft lighting. The ceiling also has industrial-style fans and air conditioning units. The establishment appears to have a retail section with shelves displaying various products, possibly drinks or packaged foods in colorful containers. The interior combines modern industrial elements (like exposed pipes and metal fixtures) with natural materials (wooden walls and flooring). The seating area includes what looks like bench-style seating arrangements, and there's a \"ZAKS HIGH\" sign visible on the wall, which might be the name of the establishment. The overall design aesthetic combines contemporary urban style with traditional Asian elements, creating a cozy and stylish dining environment.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-03-03 11:39:17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/194424926@N05/54363634347\">Flickr</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/PattayaPatrol/\">PattayaPatrol</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "25572832": {
+          "pageid": 25572832,
+          "ns": 6,
+          "title": "File:Metier artisanal.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 672671,
+              "width": 2048,
+              "height": 1536,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Metier_artisanal.jpg/1280px-Metier_artisanal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Metier_artisanal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Metier_artisanal.jpg/1280px-Metier_artisanal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Metier_artisanal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Metier_artisanal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Metier_artisanal.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=25572832",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-04-13 10:09:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Metier artisanal",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Huawei Ideos X1 U8180|Craft occupations|Lampshades|Self-published work|Men at work in Cameroon|Toy balls|Furniture in Cameroon|Handicrafts of Cameroon|Wicker toys",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "au Marché des fleurs,un artisan en pleine réalisation faisant des abat-jours",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-03-30 12:03:04",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Eloujah&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Eloujah (page does not exist)\">Eloujah</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

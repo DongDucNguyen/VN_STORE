@@ -1,0 +1,747 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22straw+bag%22+-DPLA+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22straw+bag%22+-DPLA+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:52:34.063632+00:00",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "156769790": {
+          "pageid": 156769790,
+          "ns": 6,
+          "title": "File:Bright similarity- Stylish blonde woman tourist in a large straw hat, wearing a heavy gold link chain, silk dress, straw bag, guerrilla wall art of a business man with a brief case, Historical district, Mazatlan, Mexico.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 730701,
+              "width": 2520,
+              "height": 1864,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 947,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 947,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bright_similarity-_Stylish_blonde_woman_tourist_in_a_large_straw_hat,_wearing_a_heavy_gold_link_chain,_silk_dress,_straw_bag,_guerrilla_wall_art_of_a_business_man_with_a_brief_case,_Historical_district,_Mazatlan,_Mexico.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=156769790",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-12-17 00:04:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bright similarity- Stylish blonde woman tourist in a large straw hat, wearing a heavy gold link chain, silk dress, straw bag, guerrilla wall art of a business man with a brief case, Historical district, Mazatlan, Mexico",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Flickr images reviewed by FlickreviewR 2|Clothing in Mazatlán|Flickr images missing SDC published in",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Mazatlan",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2009-05-08 03:49:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/wonderlane/5383419929/\">https://www.flickr.com/photos/wonderlane/5383419929/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Wonderlane",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "91984912": {
+          "pageid": 91984912,
+          "ns": 6,
+          "title": "File:Dutch School - Two Little Dutch Children in Aprons, Holding Apples, Cherries and a Straw Bag - 593116 - National Trust.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 158982,
+              "width": 957,
+              "height": 1200,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dutch_School_-_Two_Little_Dutch_Children_in_Aprons%2C_Holding_Apples%2C_Cherries_and_a_Straw_Bag_-_593116_-_National_Trust.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1605,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dutch_School_-_Two_Little_Dutch_Children_in_Aprons%2C_Holding_Apples%2C_Cherries_and_a_Straw_Bag_-_593116_-_National_Trust.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1605
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Dutch_School_-_Two_Little_Dutch_Children_in_Aprons%2C_Holding_Apples%2C_Cherries_and_a_Straw_Bag_-_593116_-_National_Trust.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Dutch_School_-_Two_Little_Dutch_Children_in_Aprons,_Holding_Apples,_Cherries_and_a_Straw_Bag_-_593116_-_National_Trust.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=91984912",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-07-07 02:35:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Two Dutch Children, holding apples and cherries and a straw bag <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q52293425#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Two Dutch Children, holding apples and cherries and a straw bag <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q52293425#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Two Dutch Children, holding apples and cherries and a straw bag <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q52293425#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD-old-100-expired|PD-Art (PD-old-100-expired)|Artworks with Wikidata item|Artworks with known accession number|CC-PD-Mark|Artworks with accession number from Wikidata|Artworks digital representation of 2D work|Portrait paintings of children in National Trust places|Group portrait paintings in National Trust places|Dutch paintings in National Trust places",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\n<table cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td><a href=\"https://www.wikidata.org/wiki/Q4233718\" class=\"extiw\" title=\"d:Q4233718\"><span title='unknown creator of a work (do not use as value of P50; use \"unknown value\" instead)'>anonymous</span></a></td><td valign=\"top\"> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q52293425#P170\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></td></tr></tbody></table></div>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1629 <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q52293425#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://artuk.org/discover/artworks/two-little-dutch-children-in-aprons-holding-apples-cherries-and-a-straw-bag-167843\">Art UK</a> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:OOjs_UI_icon_edit-ltr-progressive.svg\" class=\"mw-file-description\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "61544000": {
+          "pageid": 61544000,
+          "ns": 6,
+          "title": "File:Gamani.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1273856,
+              "width": 1280,
+              "height": 853,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Gamani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/Gamani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Gamani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Gamani.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=61544000",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-11-24 19:54:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Gamani",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files from external sources with reviewed licenses|Photographs taken on 2010-12-22|Media from the Basic Korean Dictionary|Straw baskets",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<i>Gamani</i> (straw bag)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "22 December 2010 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://krdicmedia.korean.go.kr/front/search/searchResultView.do?file_no=105161\">https://krdicmedia.korean.go.kr/front/search/searchResultView.do?file_no=105161</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "국립국어원",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0 kr",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0 kr",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "국립국어원",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0/kr/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0-kr",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "31043583": {
+          "pageid": 31043583,
+          "ns": 6,
+          "title": "File:R Evans the wheelwright, Churchstoke (Tfn) NLW3363976.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 60470,
+              "width": 435,
+              "height": 604,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/8/80/R_Evans_the_wheelwright%2C_Churchstoke_%28Tfn%29_NLW3363976.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1777,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/80/R_Evans_the_wheelwright%2C_Churchstoke_%28Tfn%29_NLW3363976.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1777
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/R_Evans_the_wheelwright%2C_Churchstoke_%28Tfn%29_NLW3363976.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:R_Evans_the_wheelwright,_Churchstoke_(Tfn)_NLW3363976.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=31043583",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2014-02-07 21:10:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n[R Evans the wheelwright, Churchstoke (Tfn)] [graphic].</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Author died more than 100 years ago public domain images|Wheelwrights|Photographs by John Thomas|Wales in the 1880s|Artworks without Wikidata item|CC-PD-Mark|Black and white photographs of men wearing hats|Images from the National Library of Wales uploaded by Fæ|1880s portrait photographs of men|PD-old missing SDC copyright status|NLW Images of men",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nThomas, John,</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "<div class=\"description\">\n1 negative : glass, dry plate, b&amp;w ; 16.5 x 12 cm.</div>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "circa 1885<div style=\"display: none;\">date QS:P571,+1885-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external free\" href=\"http://dams.llgc.org.uk/behaviour/llgc-id:1126773/fedora-bdef:image/reference\">http://dams.llgc.org.uk/behaviour/llgc-id:1126773/fedora-bdef:image/reference</a>\n</p>\n<ul><li>The National Library of Wales <a rel=\"nofollow\" class=\"external text\" href=\"http://dams.llgc.org.uk/behaviour/llgc-id:1126773\">Catalogue</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<table style=\"border:1px red solid\">\n\n<tbody><tr>\n<td width=\"10%\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Logo_llgc_2013_1488px.jpg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_llgc_2013_1488px.jpg/500px-Logo_llgc_2013_1488px.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"450\" height=\"74\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_llgc_2013_1488px.jpg/960px-Logo_llgc_2013_1488px.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1488\" data-file-height=\"244\"></a><figcaption></figcaption></figure>\n</td>\n<td style=\"padding-left:1em;padding-right:1em\"><div class=\"center\">\n<p>The source of this file is <a rel=\"nofollow\" class=\"external free\" href=\"http://www.llgc.org.uk/en/\">http://www.llgc.org.uk/en/</a>. The website is managed by the <a href=\"//commons.wikimedia.org/wiki/Institution:National_Library_of_Wales\" title=\"Institution:National Library of Wales\">National Library of Wales</a>.\n</p>\n</div>\n</td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "130384936": {
+          "pageid": 130384936,
+          "ns": 6,
+          "title": "File:Straw bag, mats, and hat in Belize 2023-04-05.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2601032,
+              "width": 2048,
+              "height": 1365,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg/1280px-Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/52/Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg/1280px-Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/52/Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Straw_bag%2C_mats%2C_and_hat_in_Belize_2023-04-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_bag,_mats,_and_hat_in_Belize_2023-04-05.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=130384936",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-04-05 02:54:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Straw bag, mats, and hat in Belize 2023-04-05",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Objects made of straw|Crafts of Belize|Flickr images reviewed by FlickreviewR 2|2023 photographs of Belize|Basketry objects|Photographs by Makoto Lin|Images from the Taiwan Presidential Office Flickr stream",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "​貝里斯草編製品。",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-04-05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/presidentialoffice/52793863735/\">https://www.flickr.com/photos/presidentialoffice/52793863735/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Makoto Lin / Office of the President (中華民國總統府)",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "145194232": {
+          "pageid": 145194232,
+          "ns": 6,
+          "title": "File:Straw bag.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2740866,
+              "width": 2448,
+              "height": 3264,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Straw_bag.jpg/1280px-Straw_bag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1707,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Straw_bag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Straw_bag.jpg/1280px-Straw_bag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1707,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Straw_bag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Straw_bag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Straw_bag.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=145194232",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-02-10 16:48:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Straw bag",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Images from Wiki Loves Folklore 2024|Images from Wiki Loves Folklore 2024 in the Igbo community|Images from Wiki Loves Folklore 2024 in Nigeria|Images from Wiki Loves Folklore 2024 to check|Uploaded via Campaign:wlf 2024|Taken with itel S18",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A straw bag which is typically made from natural straws or straw material such as palm raffia , seagrass and other plants",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "6th February 2024 10:18 Am",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ebiojo\" title=\"User:Ebiojo\">Ebiojo</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "156769789": {
+          "pageid": 156769789,
+          "ns": 6,
+          "title": "File:Stylish blonde business woman in a large straw hat, wearing a heavy gold link chain, silk dress, straw bag, guerrilla wall art of a business man with a brief case, Historical district, Mazatlan, Mexico.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 732391,
+              "width": 2520,
+              "height": 1864,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Stylish_blonde_business_woman_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 947,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Stylish_blonde_business_woman_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Stylish_blonde_business_woman_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg/1280px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 947,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Stylish_blonde_business_woman_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Stylish_blonde_business_woman_in_a_large_straw_hat%2C_wearing_a_heavy_gold_link_chain%2C_silk_dress%2C_straw_bag%2C_guerrilla_wall_art_of_a_business_man_with_a_brief_case%2C_Historical_district%2C_Mazatlan%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Stylish_blonde_business_woman_in_a_large_straw_hat,_wearing_a_heavy_gold_link_chain,_silk_dress,_straw_bag,_guerrilla_wall_art_of_a_business_man_with_a_brief_case,_Historical_district,_Mazatlan,_Mexico.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=156769789",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-12-17 00:04:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Stylish blonde business woman in a large straw hat, wearing a heavy gold link chain, silk dress, straw bag, guerrilla wall art of a business man with a brief case, Historical district, Mazatlan, Mexico",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Flickr images reviewed by FlickreviewR 2|Clothing in Mazatlán",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Mazatlan",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2009-05-08 03:49:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/wonderlane/5379790683/\">https://www.flickr.com/photos/wonderlane/5379790683/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Wonderlane",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

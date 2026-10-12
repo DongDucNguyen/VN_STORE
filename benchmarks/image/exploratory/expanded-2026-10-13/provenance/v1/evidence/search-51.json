@@ -1,0 +1,675 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=coffee+package+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:20.184310+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "93512018": {
+          "pageid": 93512018,
+          "ns": 6,
+          "title": "File:Cheek Neal Coffee Company Building -- Houston, Texas.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2216180,
+              "width": 3105,
+              "height": 2085,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg/1280px-Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 860,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg/1280px-Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 860,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cheek_Neal_Coffee_Company_Building_--_Houston%2C_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cheek_Neal_Coffee_Company_Building_--_Houston,_Texas.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=93512018",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-12-27 12:54:11",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Cheek Neal Coffee Company Building -- Houston, Texas",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Buildings in Houston|National Register of Historic Places in Houston, Texas|Self-published work|National Register of Historic Places with known IDs|2020 in Houston|Industrial structures on the National Register of Historic Places in Texas|Coffee in Texas|August 2020 in Texas",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "valued",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "29.755665",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-95.351850",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "The 1917 Cheek-Neal Coffee Company Building was designed by Houston architects Joseph Finger and James Ruskin Bailey as a regional coffee processing facility for the developers of the Maxwell House brand. The company’s Houston building was one of seven similar multi-story buildings across the country where the company roasted, blended, packaged, and shipped coffee nationwide. The Cheek-Neal Coffee Company Building is in the National Register of Historic Places in the area of Industry,\nThe Cheek-Neal Coffee Company Building was built in 1917 for the growing coffee business interests of Joel Owsley Cheek and John William Neal, who developed the famous Maxwell House coffee brand at the company’s Nashville, Tennessee headquarters. Cheek began his career in the wholesale grocery business, which included coffee, the product on which he eventually focused. Coffee, long the favorite of wealthy urbanites, became a staple consumer item during this period. Earlier, green coffee beans were sold only in bags that had a very short shelf life, and they had to be roasted at home. In 1892 Cheek developed a popular blend of high-quality coffee beans, and Cheeks’ new company, the Nashville Coffee and Manufacturing Company, was the first to successfully introduce a prepared coffee already roasted, blended, and later ground and canned ready for home use. He persuaded Nashville’s elegant Maxwell House Hotel to serve his coffee, and then he borrowed the hotel’s name for his brand label. Cheek and Neal expanded their business that by the 1920s it had captured one-third of the coffee market in the United States.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2020-08-23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Jim_Evans\" title=\"User:Jim Evans\">Jim Evans</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178523794": {
+          "pageid": 178523794,
+          "ns": 6,
+          "title": "File:Coffee & Chicory blend package from Try-Me Coffee, New Orleans.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2366157,
+              "width": 3024,
+              "height": 4032,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg/1280px-Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1707,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg/1920px-Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg/1280px-Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1707,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg/1920px-Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee%2C_New_Orleans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Coffee_%26_Chicory_blend_package_from_Try-Me_Coffee,_New_Orleans.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178523794",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-15 20:12:17",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Coffee & Chicory blend package from Try-Me Coffee, New Orleans",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "With trademark|Chicory beverages|Coffee packages|Flickr images reviewed by FlickreviewR 2|November 2025 in New Orleans|Try-Me Coffee, New Orleans",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Coffee &amp; Chicory blend package from Try-Me Coffee, New Orleans",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-11-15 14:05:04",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/infrogmation/54924959542/\">https://www.flickr.com/photos/infrogmation/54924959542/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Infrogmation of New Orleans",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-trademarked\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Trademarked\"><img alt=\"Trademarked\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Trademark_Warning_Symbol.svg/120px-Trademark_Warning_Symbol.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Trademark_Warning_Symbol.svg/250px-Trademark_Warning_Symbol.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></a><figcaption>Trademarked</figcaption></figure>\n</td>\n<td style=\"border:none;\">This work includes material that may be <b>protected as a <a href=\"https://en.wikipedia.org/wiki/en:trademark\" class=\"extiw\" title=\"w:en:trademark\">trademark</a></b> in some jurisdictions. If you want to use it, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. See our <a href=\"//commons.wikimedia.org/wiki/Commons:General_disclaimer\" title=\"Commons:General disclaimer\">general disclaimer</a>.<br><small>This tag does not indicate the copyright status of the attached work. <span style=\"white-space:nowrap\">A normal <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags\" title=\"Special:MyLanguage/Commons:Copyright tags\">copyright tag</a> is still required.</span> <span style=\"white-space:nowrap\">See <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">Commons:Licensing</a>.</span></small>\n</td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "trademarked",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "74044726": {
+          "pageid": 74044726,
+          "ns": 6,
+          "title": "File:Coffee package.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 10094343,
+              "width": 4917,
+              "height": 3610,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Coffee_package.jpg/1280px-Coffee_package.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 940,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Coffee_package.jpg/3840px-Coffee_package.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Coffee_package.jpg/1280px-Coffee_package.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 940,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Coffee_package.jpg/3840px-Coffee_package.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Coffee_package.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Coffee_package.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=74044726",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-11-01 20:00:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Coffee package",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Tea bags|Self-published work|Coffee in Estonia|Coffee packages|Military food of Estonia",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Coffee package from an Estonian armed forces combat ration (2018)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-10-31 20:36:43",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:WanderingTrad\" title=\"User:WanderingTrad\">WanderingTrad</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "45687464": {
+          "pageid": 45687464,
+          "ns": 6,
+          "title": "File:Package of coffee beans.JPG",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 586369,
+              "width": 1696,
+              "height": 2224,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Package_of_coffee_beans.JPG/1280px-Package_of_coffee_beans.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1678,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Package_of_coffee_beans.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Package_of_coffee_beans.JPG/1280px-Package_of_coffee_beans.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1678,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Package_of_coffee_beans.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Package_of_coffee_beans.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Package_of_coffee_beans.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=45687464",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-12-17 12:40:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Package of coffee beans",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Coffee beans|Food packaging|Netherlands in the 1940s|Media from the National Liberation Museum 1944-1945|Self-published work|Consumer goods during World War II in the Netherlands|Commerce in the 1940s|Media donated by the National Liberation Museum 1944-1945 in 2015|Enkabé",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Package of coffee beans, tekst: “1/4 kilogram Enkabe Koffie”, \"Meer dan 2000 winkels in Nederland”.\nPhotographed in the collection of the <a rel=\"nofollow\" class=\"external text\" href=\"https://www.liberationmuseum.com\">National Liberation Museum 1944-1945</a>, the Netherlands, archive number 087.033.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-10-06 16:25:06",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:KingaNBM\" title=\"User:KingaNBM\">KingaNBM</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "157386284": {
+          "pageid": 157386284,
+          "ns": 6,
+          "title": "File:Roasted coffee packages from Bolivia.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3540075,
+              "width": 4032,
+              "height": 3024,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Roasted_coffee_packages_from_Bolivia.jpg/1280px-Roasted_coffee_packages_from_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Roasted_coffee_packages_from_Bolivia.jpg/3840px-Roasted_coffee_packages_from_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Roasted_coffee_packages_from_Bolivia.jpg/1280px-Roasted_coffee_packages_from_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Roasted_coffee_packages_from_Bolivia.jpg/3840px-Roasted_coffee_packages_from_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Roasted_coffee_packages_from_Bolivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Roasted_coffee_packages_from_Bolivia.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=157386284",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-12-31 20:08:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Roasted coffee packages from Bolivia",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Coffee packages|Coffee in Bolivia|December 2024 Bolivia photographs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Packages of roasted coffee from Bolivia, from the Café Buena Vista brand.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-12-31",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ruditaly\" title=\"User:Ruditaly\">Ruditaly</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "18594934": {
+          "pageid": 18594934,
+          "ns": 6,
+          "title": "File:Uchunari grade 0 coffee package.JPG",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 7041394,
+              "width": 4080,
+              "height": 4080,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Uchunari_grade_0_coffee_package.JPG/1280px-Uchunari_grade_0_coffee_package.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Uchunari_grade_0_coffee_package.JPG/3840px-Uchunari_grade_0_coffee_package.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Uchunari_grade_0_coffee_package.JPG/1280px-Uchunari_grade_0_coffee_package.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Uchunari_grade_0_coffee_package.JPG/3840px-Uchunari_grade_0_coffee_package.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Uchunari_grade_0_coffee_package.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Uchunari_grade_0_coffee_package.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=18594934",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2012-03-05 16:40:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Uchunari grade 0 coffee package",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Phase One P20|Self-published work|Coffee packages|Silver packaging",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Solid silver package created by the silversmith Rebecca H. Joselyn",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2012-02-13",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Annerella&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Annerella (page does not exist)\">Annerella</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
