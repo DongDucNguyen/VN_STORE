@@ -201,8 +201,8 @@ export const api = {
     request<{ total: number; results: ProductSummary[] }>(`/products?${new URLSearchParams(params)}`),
   product: (id: string) => request<ProductDetail>(`/products/${encodeURIComponent(id)}`),
   similar: (id: string) => request<{ results: ProductSummary[] }>(`/products/${encodeURIComponent(id)}/similar`),
-  suggest: (q: string) =>
-    request<{ type: string; id: string; text: string }[]>(`/suggest?${new URLSearchParams({ q })}`),
+  suggest: (q: string, signal?: AbortSignal) =>
+    request<{ type: string; id: string; text: string }[]>(`/suggest?${new URLSearchParams({ q })}`, { signal }),
   search: (query: string, filters: Filters, limit = 24, offset = 0, signal?: AbortSignal) =>
     request<SearchResponse>("/search", {
       method: "POST",

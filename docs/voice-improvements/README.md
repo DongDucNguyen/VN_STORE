@@ -2,6 +2,8 @@
 
 Hồ sơ triển khai theo yêu cầu phân tích hệ thống và tài liệu `de-xuat-cai-thien-tim-kiem-giong-noi.md`.
 
+Bổ sung 13/10/2026: [rà soát hệ thống, sửa lỗi và thêm nghe lại bản ghi](../../reports/progress/2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md). Các tài liệu bên dưới ghi nhận đợt triển khai ngày 12/10.
+
 Bản sao nguyên văn đầu vào: [source-proposal.md](source-proposal.md).
 
 - [01 — Phân tích hệ thống](01-system-analysis.md)

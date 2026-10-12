@@ -20,9 +20,26 @@ Kết quả (run.json + predictions.jsonl) ghi vào `experiments/results/`.
 - `dev_candidates_unverified.jsonl` (thêm 10/10/2026): **107 truy vấn ứng viên** cho split dev, nhóm theo `group_id` (câu diễn đạt lại cùng nhóm), có thêm trường `intent`. Phân bố: món cụ thể 23, không dấu 10, nhu cầu 9, giá 9, xen tiếng Anh 7, vùng miền (chén/bát, ly/cốc/tách, dĩa/đĩa, tô, đầm) 6, thương hiệu 6, phủ định 6, thuộc tính 5, lỗi gõ/Telex 5, nguồn gốc 3, địa danh 2, đơn vị 2, đồng nghĩa 2, **không có đáp án 12 (11%)**. `relevance` chỉ là nhãn nháp một phần của Claude (`labeled_by=claude-draft`, `verified=false`), hiện trong mục tham khảo của trang duyệt. Packet chờ chấm: `artifacts/keyword_review/2026-10-10_dev-candidates-107/` (107 × 30 = 3.210 cặp, `--include-drafts`).
 - Bộ chính thức (mục tiêu 600 truy vấn, PLAN.md mục 8.1) cần người viết và gán nhãn. Hai người gán độc lập một phần dữ liệu và phân xử khi bất đồng. Pool nhãn lấy từ top kết quả của mọi baseline cộng mẫu ngẫu nhiên.
 
-## Packet hiện hành — catalog 330 sản phẩm (cập nhật 11/10/2026)
+## Packet hiện hành — catalog 330 sản phẩm (cập nhật 13/10/2026)
 
-Dùng packet trên catalog hiện hành `seed-004-hanhsilk-materials`: [seed 12 truy vấn theo pool](../../artifacts/keyword_review/2026-10-11_seed-004_seed-12-pool/index.html) (138 cặp bắt buộc) hoặc [dev 107 truy vấn theo pool](../../artifacts/keyword_review/2026-10-11_seed-004_dev-107-pool/index.html) (1.361 cặp, no-match phải chấm đủ gallery). Packet `2026-10-10_seed-003_*` đã lệch hash từ 11/10 (bổ sung chất liệu Hanhsilk); pool `kw-seed-010` (“váy lụa”) đổi vì BM25 đổi thứ hạng sau khi thêm chất liệu (`…-570` vào top 10, một khăn SenSilk ra), kéo theo 4 sản phẩm ngẫu nhiên được chọn lại từ phần còn lại. Hai người chấm dùng cùng packet. Nhãn nháp chỉ xét 30 sản phẩm cũ, cần duyệt lại trên catalog hiện hành; không dùng làm baseline. Xem [backlog P0.3](../../reports/progress/BACKLOG.md).
+Dùng pool v2 trên `seed-006-enriched`: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_seed-12-pool-v2/index.html) (**154 cặp**) hoặc [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_dev-107-pool-v2/index.html) (**1.512 cặp**). Pool đã bổ sung kết quả của các hệ thống keyword/BGE-M3; no-match vẫn phải chấm đủ catalog. Hai người chấm dùng cùng packet. Packet seed-004/seed-003/seed-002 thuộc snapshot cũ; nhãn nháp trên 30 sản phẩm không phải nhãn đã duyệt cho catalog mới. Xem [backlog P0.3](../../reports/progress/BACKLOG.md).
+
+## Chuyển bản nháp khi catalog đổi (13/10/2026)
+
+Packet mới do `prepare_review.py` tạo lưu checksum byte của ảnh hiển thị. Khi đổi catalog hoặc pool, dùng cả hai `packet.json` và bản sao đã tải bằng **Lưu bản nháp**:
+
+```powershell
+.venv/Scripts/python scripts/benchmark/migrate_keyword_draft.py --old-packet artifacts/keyword_review/cu/packet.json --new-packet artifacts/keyword_review/moi/packet.json --draft keyword-review-draft.json --out keyword-review-draft-migrated.json
+```
+
+Các đường dẫn là ví dụ. Mở trang review mới và dùng **Nạp bản nháp** với file vừa tạo.
+
+- Giữ điểm chỉ khi cùng qid/query/split/group/intent và sản phẩm giữ nguyên mọi dữ liệu hiển thị, gồm giá, nguồn, claim và checksum ảnh. Đổi đường dẫn tương đối của cùng ảnh không làm mất điểm.
+- Câu đã đổi, sản phẩm đã sửa/xóa, ảnh thay đổi hoặc thiếu checksum lịch sử bị loại khỏi nháp chuyển. File kết quả có `state.migration` ghi từng cặp bỏ và lý do.
+- Tất cả xác nhận được đặt về `false`. Sản phẩm/pool mới chưa chấm vẫn trống; no-match vẫn cần chấm toàn catalog. Công cụ không sinh nhãn đã duyệt hoặc ghi catalog.
+- Không chuyển nháp có gợi ý máy sang bản chấm độc lập; đổi bộ gợi ý máy cũng bị từ chối. Điểm đã áp gợi ý được giữ nguồn hỗ trợ khi đủ điều kiện chuyển.
+- **Packet cũ chỉ có đường dẫn ảnh:** không đủ bằng chứng ảnh lúc chấm, nên không giữ điểm của cặp có ảnh đó. Không gán checksum của file hiện tại vào packet cũ để lách điều kiện. Khi vẫn cùng catalog/query, có thể nạp nháp bằng chức năng cùng khóa sẵn có; việc chuyển sang snapshot khác dùng quy tắc chặt ở trên.
+- Không ghi đè file đã tồn tại. Giữ packet cũ và bản nháp gốc để đối chiếu. Đây là chuyển tiến độ chấm, không phải đổi hash của nhãn đã nghiệm thu.
 
 ## Packet có gợi ý máy (thêm 11/10/2026)
 

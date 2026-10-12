@@ -11,7 +11,7 @@ from collections import defaultdict
 
 from ..search.normalize import strip_accents
 
-WORD = re.compile(r"[^\W_]+", re.UNICODE)
+WORD = re.compile(r"(?:[^\W_]|[\u0300-\u036f])+", re.UNICODE)
 PROTECTED = set("không chẳng đừng trừ ngoại dưới trên từ đến tới khoảng tối đa thiểu một hai ba bốn năm sáu bảy tám chín mười trăm nghìn ngàn triệu rưỡi nửa k vnd not no without under over between".split())
 
 
@@ -37,6 +37,7 @@ class PhraseSuggester:
                     self.protected.update(words(text))
         for alias in snap.data.get("search_dictionary", {}).get("brand_aliases", []):
             self.protected.update(words(alias["alias"]))
+        self.protected_names_folded = {strip_accents(w) for w in self.protected}
         for p in snap.products.values():
             for v in p.get("variants", []):
                 self.protected.update(words(v["sku"]))
@@ -86,7 +87,9 @@ class PhraseSuggester:
                         continue
                     k = changed[0]
                     a, b = src[k], dst[k]
-                    if a in PROTECTED or b in PROTECTED or a in self.protected or b in self.protected:
+                    if (a in PROTECTED or b in PROTECTED or a in self.protected or b in self.protected or
+                            strip_accents(a) in self.protected_names_folded or
+                            strip_accents(b) in self.protected_names_folded):
                         continue
                     if not near(a, b):
                         continue

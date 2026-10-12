@@ -2,6 +2,10 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+Công cụ và độ ổn định (13/10): đã hoàn thành [chuyển bản nháp keyword khi catalog đổi](reports/progress/2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md), giữ điểm có nội dung không đổi và yêu cầu xác nhận lại. Kiểm chứng cuối: **735 backend, 22 Pillow, 140 E2E đạt**; 3 test tùy chọn được bỏ qua. Catalog hiện có 328/330 sản phẩm published; nghiệm thu model vẫn chờ dữ liệu thật.
+
+Cập nhật 13/10: thêm **nghe lại bản ghi trước khi tìm**, sửa lỗi micro/ghi âm bị treo, chặn WAV thiếu dữ liệu, củng cố gợi ý tiếng Việt và ngăn autocomplete hiển thị phản hồi cũ. Xem [phân tích và kết quả đợt rà soát](reports/progress/2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md).
+
 Cập nhật voice (12/10): thêm xem/sửa/xác nhận bản chép lời trước khi tìm, gợi ý cụm theo catalog, cảnh báo âm nhỏ/vỡ tiếng, lựa chọn Việt/Anh/tự nhận diện và tiền xử lý tùy chọn. Xem [hồ sơ phân tích, tiến độ và kết quả](docs/voice-improvements/README.md). Gain/lọc vẫn tắt mặc định; chưa có clip VNStore đã duyệt để nghiệm thu chất lượng.
 
 Cập nhật GĐ6 (11/10): hoàn thiện voice dùng kết quả API, hủy/chặn yêu cầu cũ, trang `#/diagnostics`, đo browser và tiền kiểm locked test. **550 backend, 22 Pillow, 114 E2E và 2 smoke browser model thật đạt**. Chưa nghiệm thu chất lượng hoặc chạy locked test vì thiếu selection/dữ liệu đã duyệt. Xem [báo cáo GĐ6](reports/progress/2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md) và [hướng dẫn demo/đo/tiền kiểm](docs/giai-doan-6.md).

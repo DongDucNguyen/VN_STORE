@@ -96,10 +96,14 @@ def make_packet(queries, snap, output: Path, pool_top: int | None = None, n_rand
             "materials": p["materials"], "colors": p["colors"], "variants": p["variants"],
             "claims": p["origin_claims"], "category": snap.categories[p["category_id"]]["name_vi"],
             "image": Path(os.path.relpath(image_path, output)).as_posix() if image_path else None,
+            # Capture the actual displayed bytes now; relative paths alone cannot
+            # prove that an image has stayed unchanged when migrating old drafts.
+            "image_sha256": hashlib.sha256(image_path.read_bytes()).hexdigest() if image_path else None,
             "sources": [{"url": snap.sources[s]["url"], "title": snap.sources[s].get("title")}
                         for s in p["source_ids"]],
         })
-    packet = {"catalog_sha256": snap.sha256, "catalog_version": snap.version,
+    packet = {"kind": "keyword_review", "review_content_version": 1,
+              "catalog_sha256": snap.sha256, "catalog_version": snap.version,
               "queries": queries, "products": products,
               "candidate_order": {q["qid"]: hash_order(q["qid"], snap.products) for q in queries},
               "scope": "all_visible_catalog_products", "verified": False}

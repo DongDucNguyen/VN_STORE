@@ -2,7 +2,13 @@
 
 Thư mục này ghi lại tiến độ triển khai [PLAN.md](../../PLAN.md) theo từng giai đoạn.
 
-**Tổng quan toàn dự án hiện hành:** [Báo cáo GĐ0–7 ngày 12/10/2026](2026-10-12_GD0-7_tong-quan-du-an.md), đối chiếu catalog/manifest trực tiếp và phân biệt phần đã triển khai với phần chưa nghiệm thu.
+Kiểm chứng hiệu quả 13/10: [đối chứng mã trước và sau sửa](2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md), tái hiện 9 ca backend và 3 lỗi micro trên mã cũ; đã siết kiểm thử lỗi micro bất đồng bộ để tránh đạt nhầm vì bản ghi quá ngắn.
+
+**Hiện trạng 13/10/2026:** [hoàn thành công cụ chuyển bản nháp và cập nhật trạng thái](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md). P1.1–P1.17 đã có công cụ; kiểm chứng cuối **735 backend (+3 skip), 22 Pillow, 140 E2E đạt**, validator/typecheck/build đạt. Ưu tiên đã xác nhận: công cụ và độ ổn định trước. Catalog 328 published/2 draft; dữ liệu voice/ảnh thật và nhãn đã duyệt vẫn chặn nghiệm thu.
+
+Đợt mới 13/10/2026: [rà soát hệ thống và củng cố tìm kiếm](2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md) — sửa micro, WAV, Unicode/tên riêng, autocomplete; thêm nghe lại trước xác nhận. Chưa nghiệm thu chất lượng ASR trên dữ liệu người nói thật.
+
+**Tổng quan toàn dự án tại mốc 12/10:** [Báo cáo GĐ0–7 ngày 12/10/2026](2026-10-12_GD0-7_tong-quan-du-an.md), đối chiếu catalog/manifest trực tiếp và phân biệt phần đã triển khai với phần chưa nghiệm thu.
 
 - Mỗi lần kết thúc một đợt làm việc thì thêm **một file báo cáo mới**; không sửa báo cáo cũ, trừ khi đính chính (ghi rõ "Đính chính" kèm ngày).
 - Tên file: `YYYY-MM-DD_GD<số>_<chủ-đề>.md`. Dùng [TEMPLATE.md](TEMPLATE.md).
@@ -15,20 +21,20 @@ Chạy toàn bộ kiểm thử: `.venv/Scripts/python scripts/run_all_tests.py`
 
 ## Trạng thái các giai đoạn
 
-Cập nhật lần cuối: 12/10/2026 (khuya) — [GĐ5 tìm theo ngữ nghĩa BGE-M3](2026-10-12_GD5_tim-theo-ngu-nghia.md): đã triển khai ở dạng tùy chọn, **chưa bật** (train nDCG +1,7 điểm, dev nhãn máy trung tính); pool chấm v2 đã tạo, chờ người chấm. **8/8 bước: 702 backend, 126 E2E đạt**.
+Mốc trước đó: 12/10/2026 (khuya) — [GĐ5 tìm theo ngữ nghĩa BGE-M3](2026-10-12_GD5_tim-theo-ngu-nghia.md): đã triển khai ở dạng tùy chọn, **chưa bật** (train nDCG +1,7 điểm, dev nhãn máy trung tính); pool chấm v2 đã tạo, chờ người chấm. **8/8 bước: 702 backend, 126 E2E đạt**.
 
 Trước đó (tối 12/10): [GĐ5 cải thiện keyword](2026-10-12_GD5_cai-thien-keyword.md): từ điển Anh–Việt/viết tắt, sửa lỗi gõ, đơn vị, khoảng giá, giảm giá, màu theo sắc, cảnh báo khớp một phần. Dev nhãn máy so cặp: Success@5 0,916 → **0,948**, nDCG@10 0,848 → **0,895**; no-match chưa giải được bằng luật (đã đo, không bật). **8/8 bước: 676 backend, 22 Pillow, 126 E2E đạt**. Catalog không đổi.
 
 Trước đó: [cải thiện voice GĐ5–6](2026-10-12_GD5-6_cai-thien-tim-kiem-giong-noi.md): xem/sửa/xác nhận transcript, gợi ý cụm, kiểm tra âm lượng, vi/en/auto, evaluator dùng chung pipeline. **632 backend, 22 Pillow, 126 E2E đạt**, 4 smoke ONNX đạt. Gain/lọc tắt mặc định; chưa nghiệm thu chất lượng vì thiếu clip VNStore đã duyệt. Hồ sơ theo thư mục: [docs/voice-improvements](../../docs/voice-improvements/README.md).
 
-Kiểm tra gần nhất: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-noi-bo.md): catalog `seed-005-published-internal-demo` (`820f35b0…`), **328/330 published**, validate 0 lỗi; backend **587 đạt** (+2 skip), Pillow, typecheck/build, 120 E2E đạt. Chỉ mục ảnh, đề xuất họ, packet keyword `seed-005` và gợi ý máy đã dựng lại. **Chưa nghiệm thu GĐ2/3/6**: vẫn cần nhãn, quyết định và dữ liệu do người làm.
+Mốc công bố 11/10: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-noi-bo.md): catalog `seed-005-published-internal-demo` (`820f35b0…`), **328/330 published**, validate 0 lỗi; backend **587 đạt** (+2 skip), Pillow, typecheck/build, 120 E2E đạt. Chỉ mục ảnh, đề xuất họ, packet keyword `seed-005` và gợi ý máy đã dựng lại. **Chưa nghiệm thu GĐ2/3/6**: vẫn cần nhãn, quyết định và dữ liệu do người làm.
 
 | GĐ | Nội dung (PLAN.md mục 9) | Trạng thái | Báo cáo gần nhất |
 |---|---|---|---|
 | 0 | Khởi tạo khung dự án, môi trường | ✅ Hoàn thành | [2026-10-09_GD0](2026-10-09_GD0_khoi-tao.md) |
-| 1 | Taxonomy, schema, nguồn; 30 → 300 bản ghi thật | ✅ **seed-006-enriched: 328/330 published** (chủ dự án duyệt; bỏ qua xác minh quyền ảnh bằng `publication_policy: internal_demo`). Bổ sung tự động từ trang nguồn lưu: thiếu chất liệu 128 → 6, thiếu màu 253 → 195; thiếu giá 73 (nguồn không có). 2 sản phẩm chưa có tiêu chí Việt giữ draft | [Bổ sung tự động](2026-10-11_GD1-2_bo-sung-tu-dong.md), [publish](2026-10-11_GD1_publish-demo-noi-bo.md) |
+| 1 | Taxonomy, schema, nguồn; 30 → 300 bản ghi thật | ✅ **seed-006-enriched: 328/330 published** theo `publication_policy: internal_demo`. Toàn catalog thiếu giá ở 74 sản phẩm, chất liệu ở 6, màu ở 196. Hai sản phẩm thiếu claim Việt giữ draft; quyền ảnh công khai còn mở | [Hiện trạng 13/10](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md), [publish](2026-10-11_GD1_publish-demo-noi-bo.md) |
 | 2 | Catalog UI/API, BM25, bộ lọc, chuẩn hóa tiếng Việt | ✅ **600 truy vấn** (train 300 / dev 180 / test 120). Baseline nhãn máy: dev Success@5 **0,920** [0,869–0,963], train 0,859; p95 trình duyệt 53/90 ms. Nhãn train/dev do máy, test chưa có nhãn (cần người). No-match vẫn trả kết quả gần như 100% | [Bổ sung + 600 truy vấn](2026-10-11_GD1-2_bo-sung-tu-dong.md), [baseline nhãn máy](2026-10-11_GD2_baseline-nhan-may.md) |
-| 3 | Thu và gán nhãn benchmark, khóa splits | 🟡 Công cụ đủ: **bộ câu voice riêng từng split** (chặn câu ở hai split), **P1.15** chuẩn bị/gắn nhãn relevance voice, **`plan_splits.py` lập và khóa split ảnh theo họ** (`--split-plan`; locked test cần kế hoạch khóa), trang duyệt họ seed-004 nạp được bản nháp cũ; **trang `…_assisted` gợi ý đủ 126 thẻ, đã kiểm nhất quán**. **Chặn nghiệm thu**: 0 clip / 0 ảnh query, chưa có families.json đã duyệt nên chưa khóa split; 48 câu mẫu mới chờ rà soát | [Gợi ý máy](2026-10-11_GD3_goi-y-may-cham-keyword-va-duyet-ho.md), [đồng bộ seed-004 và khóa split](2026-10-11_GD3_dong-bo-seed-004-va-khoa-split.md) |
+| 3 | Thu và gán nhãn benchmark, khóa splits | 🟡 **P1.1–P1.17 đã có công cụ**, gồm chuyển bản nháp keyword an toàn, thu/duyệt voice/ảnh, gán relevance, duyệt họ và lập/khóa split. **Chặn nghiệm thu**: 0 clip / 0 ảnh query, chưa có registry họ đã duyệt hoặc split ảnh khóa; pool keyword v2 chờ người chấm | [Hoàn thành P1.17 và tiền kiểm 13/10](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md), [đồng bộ và khóa split](2026-10-11_GD3_dong-bo-seed-004-va-khoa-split.md) |
 | 4 | Adapter và sàng lọc model voice/image | 🟡 **Phần agent làm được đã xong**: 4 cấu hình PhoWhisper + Silero VAD, **3 adapter ảnh** (SigLIP2, DINOv2, **OpenCLIP ViT-B-32**, đối chiếu 2 bản export độc lập); run ghi **đỉnh RAM và dung lượng model**; **`screen_models.py`** chạy mọi cấu hình trong tiến trình riêng, ghi lỗi/OOM, lập bảng chất lượng + chi phí + bootstrap + Pareto vào `reports/model_selection/`. Smoke: FLEURS 4 cấu hình, gallery 3 adapter, TensorRT small có cache. **Chặn nghiệm thu**: 0 clip / 0 ảnh query dev đã duyệt nên chưa chọn 2 ứng viên theo PLAN §8.3 | [Sàng lọc và chi phí](2026-10-11_GD4_sang-loc-model-va-chi-phi.md), [voice retrieval P1.13](2026-10-11_GD4_ra-soat-voice-retrieval-va-duyet-ho.md) |
 | 5 | Tối ưu ngôn ngữ, OCR/crop/fusion, ablation | 🟡 **Keyword 12/10**: từ điển ngoài catalog, sửa lỗi gõ, đơn vị/giá/giảm giá/màu; dev nhãn máy Success@5 0,948, nDCG 0,895 (so cặp +3,2/+4,7 điểm); no-match vẫn mở. **BGE-M3** đã triển khai, chưa bật (dev trung tính, chờ pool v2 được chấm). Đã có cấu hình tiếng Việt/VAD, weighted RRF, **OCR Latin ONNX thật**, crop theo qid/hash, multi-view, calibration no-match và runner ngân sách bằng nhau. Đã sửa gate từng metric, provenance nhãn/split và chi phí/lỗi OCR; kiểm thử hồi quy đạt. **Chưa nghiệm thu**: thiếu dev đã duyệt và ứng viên GĐ4; semantic/fine-tune và thử nghiệm có điều kiện còn mở | [Ngữ nghĩa BGE-M3](2026-10-12_GD5_tim-theo-ngu-nghia.md), [cải thiện keyword](2026-10-12_GD5_cai-thien-keyword.md), [rà soát và hoàn thiện](2026-10-11_GD5_ra-soat-va-hoan-thien.md), [triển khai GĐ5](2026-10-11_GD5_toi-uu-va-ablation.md), [hướng dẫn](../../docs/giai-doan-5.md) |
 | 6 | Tích hợp voice/image vào giao diện, locked test | 🟡 **Toàn bộ phần agent làm được đã xong**: tích hợp voice/ảnh, hủy/chặn yêu cầu cũ, diagnostics + đếm lỗi/hủy, cache đổi bộ lọc ảnh, smoke model thật desktop/mobile; **sổ mở locked test chống sửa**, evaluator chỉ chạy test trong phiên đã mở, `locked_test.py` mở/chạy/báo cáo PLAN §8.4/ký nghiệm thu. **Chưa nghiệm thu**: thiếu selection trên dev và dữ liệu test đã duyệt; chưa mở locked test | [Hoàn tất khóa locked test](2026-10-11_GD6_hoan-tat-khoa-locked-test.md), [tích hợp demo](2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md), [hướng dẫn](../../docs/giai-doan-6.md) |
@@ -38,10 +44,10 @@ Kiểm tra gần nhất: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-n
 
 | Việc | Ai | Chặn giai đoạn |
 |---|---|---|
-| Review 330 sản phẩm draft ([checklist](../../data_collection/README.md)) và xin phép dùng ảnh từ 7 thương hiệu/nhà sản xuất | Nhóm dữ liệu | Published sản phẩm đầu tiên, baseline GĐ2 |
-| Viết bộ truy vấn keyword có người kiểm tra (mục tiêu 600) | Nhóm dữ liệu | Baseline GĐ2, GĐ3 |
+| Bổ sung căn cứ claim cho 2 draft và xin quyền dùng ảnh từ 7 thương hiệu/nhà sản xuất; 328 sản phẩm đã published cho demo nội bộ | Nhóm dữ liệu | Công bố công khai và hoàn thiện catalog |
+| Rà soát bộ 600 truy vấn đã có và hoàn thành nhãn độc lập; test chưa có nhãn đã duyệt | Nhóm dữ liệu | Nghiệm thu GĐ2/GĐ3/GĐ6 |
 | Tuyển người nói (40 người) và người chụp ảnh truy vấn; mẫu đồng ý sử dụng dữ liệu. Công cụ thu âm/ảnh `#/collect/voice`, `#/collect/image` + script nhập đã sẵn sàng | Quản lý dự án | GĐ3 |
-| Chấm packet pool trên catalog hiện hành: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool/index.html) (138 cặp) và [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool/index.html) (1.361 cặp + no-match chấm đủ catalog), xuất nhãn. Người chấm thứ nhất có thể dùng bản có gợi ý máy ([seed](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool_assisted/index.html), [dev](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool_assisted/index.html)); người thứ hai dùng bản thường | Nhóm dữ liệu | Baseline GĐ2 |
+| Chấm pool v2 trên seed-006: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_seed-12-pool-v2/index.html) (154 cặp), [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_dev-107-pool-v2/index.html) (1.512 cặp + no-match chấm đủ catalog). Hai người dùng cùng packet; bản v2 chưa có gợi ý máy | Nhóm dữ liệu | Nghiệm thu GĐ2/GĐ5 |
 | Chốt cấu hình máy đo và ngân sách GPU theo giờ (máy hiện có RTX 5070 Ti 16 GB, đủ để sàng lọc ban đầu) | Quản lý dự án | GĐ4 |
 | Thu clip truy vấn giọng nói và ảnh query thật (dev đã duyệt, 60–100 mẫu/modality) để chạy `screen_models.py` cho 4 cấu hình voice + 3 ảnh | Nhóm dữ liệu | GĐ4 |
 | Fine-tune/tự export ONNX cần máy không bị chính sách Application Control chặn PyTorch (TensorRT thì nạp được) | Quản lý dự án | GĐ5 |
@@ -50,6 +56,9 @@ Kiểm tra gần nhất: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-n
 
 ## Danh sách báo cáo
 
+- [2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md](2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md)
+- [2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md)
+- [2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md](2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md)
 - [2026-10-12_GD5_tim-theo-ngu-nghia.md](2026-10-12_GD5_tim-theo-ngu-nghia.md)
 - [2026-10-12_GD5_cai-thien-keyword.md](2026-10-12_GD5_cai-thien-keyword.md)
 - [2026-10-12_GD0-7_tong-quan-du-an.md](2026-10-12_GD0-7_tong-quan-du-an.md)

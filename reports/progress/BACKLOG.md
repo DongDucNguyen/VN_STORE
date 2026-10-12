@@ -1,6 +1,12 @@
 # VNStore — Việc ưu tiên tiếp theo (backlog sống)
 
-Cập nhật mới nhất **12/10/2026 (khuya)**: [GĐ5 tìm theo ngữ nghĩa BGE-M3](2026-10-12_GD5_tim-theo-ngu-nghia.md) — bản ONNX chính thức, chỉ mục văn bản, ghép hạng thích ứng với BM25, cổng no-match tùy chọn, API/evaluator. Train nDCG +1,7 điểm nhưng dev nhãn máy trung tính (14 câu dev có kết quả chưa nhãn) nên **chưa bật** (`semantic_weight = 0`). Đã tạo **pool chấm v2** (seed 154, dev 1.512 cặp) gồm kết quả của các hệ thống mới, chờ người chấm. Kiểm thử: 8/8 bước, 702 backend, 126 E2E.
+Kiểm chứng hiệu quả 13/10: [đối chứng trước/sau sửa và chạy lại toàn bộ](2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md). **8/8 bước đạt trong một lượt: 735 backend (+3 skip), 22 Pillow, 140 E2E**. Đã siết ca lỗi micro bất đồng bộ; 9 ca backend và 3 ca Recorder tái hiện đúng lỗi trên mã cũ.
+
+Cập nhật mới nhất **13/10/2026 — công cụ và độ ổn định**: [P1.17 chuyển bản nháp keyword đã xong](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md). Kiểm chứng cuối: **735 backend (+3 skip), 22 Pillow, 140 E2E đạt**, validator/typecheck/build đạt. P1.1–P1.17 đã có công cụ; phần nghiệm thu còn chờ nhãn/dữ liệu thật. E2E mặc định một worker sau khi xác định lỗi tài nguyên trình duyệt khi chạy song song.
+
+Đợt mới **13/10/2026**: [củng cố voice và autocomplete](2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md) đã sửa micro, WAV thiếu dữ liệu, gợi ý Unicode/tên riêng và thêm nghe lại trước xác nhận. Việc còn lại về chất lượng là thu/duyệt pilot giọng vùng miền, English/Việt–Anh và nói nhỏ; chưa có cơ sở tự bật gain/lọc hay thay model mặc định.
+
+Trước đó **12/10/2026 (khuya)**: [GĐ5 tìm theo ngữ nghĩa BGE-M3](2026-10-12_GD5_tim-theo-ngu-nghia.md) — bản ONNX chính thức, chỉ mục văn bản, ghép hạng thích ứng với BM25, cổng no-match tùy chọn, API/evaluator. Train nDCG +1,7 điểm nhưng dev nhãn máy trung tính (14 câu dev có kết quả chưa nhãn) nên **chưa bật** (`semantic_weight = 0`). Đã tạo **pool chấm v2** (seed 154, dev 1.512 cặp) gồm kết quả của các hệ thống mới, chờ người chấm. Kiểm thử: 8/8 bước, 702 backend, 126 E2E.
 
 Trước đó (tối 12/10): [GĐ5 cải thiện keyword](2026-10-12_GD5_cai-thien-keyword.md) — từ điển Anh–Việt/viết tắt ngoài catalog, sửa lỗi gõ, đơn vị, khoảng giá, "giảm giá", màu theo sắc, cảnh báo khớp một phần. Dev nhãn máy (so cặp, 155 câu): Success@5 0,916 → **0,948**, nDCG@10 0,848 → **0,895**; không câu nào tụt. No-match **chưa giải được** bằng luật từ vựng (đánh đổi quá lớn, xem báo cáo §4.3) → để BGE-M3/nhãn người. Catalog không đổi. Kiểm thử: 8/8 bước đạt: 676 backend (+3 skip), 22 Pillow, typecheck/build, 126 E2E.
 
@@ -20,13 +26,13 @@ Các luồng chính của **mã nguồn demo** đã có; chưa đồng nghĩa ho
 - công cụ thu dữ liệu (`#/collect/voice`, `#/collect/image`), nhập, audit, đánh giá và so sánh có CI;
 - công cụ duyệt nhãn: `#/review/voice` (bản chép lời), packet pool + trang chấm judgment ảnh, packet keyword toàn catalog hoặc theo pool (107 truy vấn dev), `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh; protocol latency cố định.
 
-Điểm nghẽn là **dữ liệu do con người tạo**, chưa có gì:
-- 330/330 sản phẩm còn `draft`, 0 published (catalog `seed-004-hanhsilk-materials`);
-- 814/814 ảnh có quyền `unknown`;
-- 74/330 sản phẩm chưa có giá;
-- 96 sản phẩm có dưới 2 ảnh, 128 thiếu chất liệu (9 Hanhsilk đã bổ sung từ mô tả nguồn ngày 11/10); 2 sản phẩm chưa có claim Việt đủ điều kiện công bố (`p-lys-dia-tron-jasmine-trang-nga-15cm`, `p-vietcraft-gio-may-bau-duc-vh24040`);
-- 12 truy vấn keyword seed + 107 truy vấn dev ứng viên chưa duyệt; packet pool trên catalog seed-004: seed 138 cặp, dev 1.361 cặp (+ no-match chấm đủ catalog) chờ chấm;
-- **0 clip giọng nói, 0 ảnh query thật**.
+Trạng thái kiểm tra trực tiếp **13/10/2026**:
+- Catalog `seed-006-enriched`: **330 sản phẩm, 328 published, 2 draft, 814 ảnh**; chế độ `internal_demo` đã được triển khai. Hai sản phẩm thiếu claim Việt vẫn giữ draft (`p-lys-dia-tron-jasmine-trang-nga-15cm`, `p-vietcraft-gio-may-bau-duc-vh24040`).
+- Toàn catalog còn **74 sản phẩm thiếu giá, 6 thiếu chất liệu, 196 thiếu màu**; không tự điền khi nguồn không có.
+- Validator 0 lỗi; cảnh báo **811 ảnh published có quyền unknown**. Công bố công khai còn cần căn cứ quyền ảnh.
+- Đã có baseline keyword nhãn máy. Đánh giá độc lập còn chờ người chấm pool v2 trên seed-006: **154 cặp seed, 1.512 cặp dev**, cùng phần còn lại của catalog cho ca không có đáp án.
+- **0 clip giọng nói, 0 ảnh query thật**; chưa có `families.json` đã duyệt, split ảnh khóa hoặc `selection.json`.
+- Tiền kiểm GĐ6 ngày 13/10 báo blocked vì thiếu lựa chọn dev, nhãn keyword test, voice và image test; không chạy inference hay mở locked test.
 
 Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), chưa chọn được model theo PLAN §8.3. Bảng smoke mới nhất: [voice 4 cấu hình](../model_selection/2026-10-11_104115-083089_voice-screening.md), [ảnh 3 adapter](../benchmark/2026-10-11_103215-244030_image-gallery-sanity.md).
 
@@ -34,7 +40,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 | Việc | Lệnh / ghi chú |
 |---|---|
-| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — gần nhất: **8/8 bước đạt: 676 backend (+3 skip), 22 Pillow, typecheck/build, 126 E2E** ([GĐ5 keyword 12/10](2026-10-12_GD5_cai-thien-keyword.md)); riêng **2 smoke browser model thật** đạt ([GĐ6 hoàn tất](2026-10-11_GD6_hoan-tat-khoa-locked-test.md)). Sandbox có thể chặn thư mục tạm/tiến trình trình duyệt: cần chạy trong môi trường được phép. E2E đôi khi hỏng vì `net::ERR_NO_BUFFER_SPACE`: xem log trước khi kết luận |
+| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — kiểm chứng cuối 13/10: **735 backend (+3 skip), 22 Pillow, 140 E2E đạt**, validator/fixture/typecheck/build đạt ([báo cáo](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md)). E2E mặc định một worker; lượt hai worker trước đó có một lỗi tài nguyên `net::ERR_NO_BUFFER_SPACE`, toàn bộ E2E đã chạy lại đạt. Sandbox có thể chặn thư mục tạm/trình duyệt: cần môi trường được phép |
 | Test model thật (tùy chọn) | `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py` — 6/6 |
 | Hai môi trường Python | `.venv` (API, test, script; không có Pillow/ML) và `.venv-ml` (thêm onnxruntime-gpu, Pillow…, theo `backend/requirements-ml.txt`) |
 | **PyTorch bị chặn** | Windows Application Control chặn DLL của torch trên máy này. **Không tìm cách vượt chính sách.** Chỉ dùng ONNX Runtime; việc cần torch (fine-tune, tự export ONNX) phải làm trên máy khác. TensorRT 10.16 (`backend/requirements-ml-trt.txt`) nạp được; bật bằng `VNSTORE_ML_TRT=1` (fp16 bị chặn với ASR vì cho kết quả hỏng) |
@@ -55,8 +61,9 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 ### P0.1 Commit working tree
 - Người dùng đã commit phần duyệt họ và registry tại `8261b59`; lượt xác nhận sau commit đạt. Hồ sơ kiểm chứng mới chưa commit; **người dùng tự commit**, agent không stage/commit/push.
 
-### P0.2 Duyệt 330 sản phẩm draft + quyền ảnh → published đầu tiên
-- **Vì sao**: chế độ mặc định hiện hiển thị 0 sản phẩm; baseline keyword và benchmark ảnh cần catalog ổn định.
+### P0.2 Công bố catalog — đã xong demo nội bộ; quyền ảnh công khai còn mở
+- **Đã xong**: 328 sản phẩm published theo đợt 11/10, hiện có thể hiển thị mặc định. Không còn việc chuyển toàn bộ 330 draft sang published.
+- **Còn thiếu**: quyền ảnh cho công bố công khai và căn cứ claim Việt cho hai sản phẩm draft.
 - **Ai**: nhóm dữ liệu (xin phép 7 thương hiệu/nhà sản xuất: Minh Long/Lys, Marou, Hanoia, Kilomet109, Vietcraft, Hanhsilk, SenSilk). Có thể publish dần từng phần, không cần chờ đủ 330.
 - **Cách**: checklist [data_collection/README.md](../../data_collection/README.md) và [docs/huong-dan-nhap-lieu.md](../../docs/huong-dan-nhap-lieu.md). Chạy `.venv/Scripts/python scripts/validate_catalog/readiness.py` để xem từng sản phẩm còn thiếu gì.
 - **Xong khi**: ≥1 sản phẩm `published` có `reviewed_at`, ảnh có quyền kèm bằng chứng; readiness báo đạt.
@@ -66,7 +73,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 - **Ai**: 2 người chấm + 1 người phân xử.
 - **Cách**:
   0. **Từ 12/10 dùng pool v2** (thêm kết quả của BM25 + từ điển và BM25 + BGE-M3, cần để quyết định bật nhánh ngữ nghĩa): [seed 12](../../artifacts/keyword_review/2026-10-12_seed-006_seed-12-pool-v2/index.html) (154 cặp), [dev 107](../../artifacts/keyword_review/2026-10-12_seed-006_dev-107-pool-v2/index.html) (1.512 cặp). Bản v2 chưa có gợi ý máy. Các bước dưới đây áp dụng như cũ.
-  1. Mở packet pool trên catalog `seed-004-hanhsilk-materials`: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool/index.html) và [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool/index.html). Packet seed-003/seed-002 đã lệch hash, audit từ chối. Tạo lại bằng `prepare_review.py --pool-top 10 --random 5` nếu mất. Chấm rồi xuất JSONL; hai người dùng cùng một packet. Nhãn nháp chỉ xét 30 sản phẩm cũ; một số truy vấn "no-match" nháp (ví dụ "bàn ghế mây", "áo dài cưới") nay có thể có đáp án.
+  1. Dùng pool v2 ở bước 0 cho chấm mới. Packet [seed 12](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool/index.html) và [dev 107](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool/index.html) ngày 11/10 cũng thuộc seed-006 nhưng chưa phủ hệ thống BGE-M3; giữ làm hồ sơ. Hai người dùng cùng packet. Nhãn nháp trên 30 sản phẩm cũ cần xét lại khi catalog đã mở rộng.
      **Có gợi ý máy (11/10)**: người chấm thứ nhất/người phân xử có thể dùng packet `…_assisted` ([seed](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool_assisted/index.html), [dev](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool_assisted/index.html)): 6.422 cặp đã có điểm gợi ý kèm lý do, chỉ áp khi bấm, export ghi số đã sửa. **Người chấm thứ hai dùng packet không gợi ý.** Xem [benchmarks/keyword/README.md](../../benchmarks/keyword/README.md#packet-có-gợi-ý-máy-thêm-11102026).
   2. `scripts/benchmark/audit_reviews.py` → phân xử theo [review_protocol.md](../../benchmarks/keyword/review_protocol.md).
   3. `eval_keyword.py --split dev`.
@@ -75,7 +82,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 ### P0.4 Thu dữ liệu giọng nói (pilot rồi mở rộng)
 - **Ai**: quản lý dự án (mẫu đồng ý, tuyển người, phân split theo người nói 24/8/8) và người điều phối phiên.
 - **Cách**:
-  1. Rà soát bộ câu train `tr01–tr24` / test `te01–te24` (Claude soạn 11/10) trong [prompts.ts](../../frontend/src/collect/prompts.ts); mỗi split đọc bộ riêng, dev giữ `p01–p24`. Thu bằng `#/collect/voice` (chọn split trước, trang hiện đúng bộ câu).
+  1. Rà soát bộ câu train `tr01–tr24` / test `te01–te24` trong [prompts.ts](../../frontend/src/collect/prompts.ts); mỗi split đọc bộ riêng, dev hiện là `p01–p29` gồm English/Việt–Anh/nói nhỏ. Thu bằng `#/collect/voice` (chọn split trước, trang hiện đúng bộ câu).
   2. Nhập: `scripts/benchmark/import_voice_session.py <zip> --dry-run`, rồi nhập thật.
   3. Người duyệt mở zip ở `#/review/voice`, nghe lại, sửa câu, xác nhận, xuất zip đã duyệt; nhập bằng `import_voice_session.py` (phiên mới) hoặc `apply_voice_review.py` (phiên đã nhập).
   4. Xem [benchmarks/voice/README.md](../../benchmarks/voice/README.md).
@@ -100,10 +107,11 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 ## 3. P1 — Claude làm được ngay, giảm việc tay cho P0
 
-P1.1–P1.16 đã xong phần công cụ — xem "Đã xong gần đây". Registry thật vẫn cần nhóm dữ liệu duyệt (P0.7); không tự tạo để vượt kiểm tra.
+P1.1–P1.17 đã xong phần công cụ — xem "Đã xong gần đây". Registry thật vẫn cần nhóm dữ liệu duyệt (P0.7); không tự tạo để vượt kiểm tra.
 
-### P1.17 Chuyển bản nháp trang chấm keyword khi catalog đổi (tùy chọn)
-- Trang duyệt họ đã có `--carry-drafts-from` (11/10). Trang keyword vẫn khóa bản nháp theo hash catalog; mỗi lần catalog đổi (P0.2 publish dần) người chấm phải làm lại. Có thể cho nạp điểm của cặp (qid, sản phẩm) không đổi query và sản phẩm không đổi nội dung hiển thị, đánh dấu phần pool mới cần chấm. Cần quy tắc rõ để không mang nhãn sang sản phẩm đã sửa.
+### P1.17 Chuyển bản nháp keyword khi catalog đổi — đã triển khai 13/10
+- `migrate_keyword_draft.py --old-packet … --new-packet … --draft … --out …` chỉ giữ cặp không đổi câu/split/ý định, dữ liệu hiển thị và checksum ảnh. Xóa mọi xác nhận; phần mới/đã đổi phải chấm lại. Không chuyển nháp có hỗ trợ sang packet chấm độc lập.
+- Packet tạo mới có checksum ảnh thực. Packet cũ thiếu checksum lịch sử không được tự suy ra từ ảnh hiện tại; những cặp đó bị bỏ qua với lý do rõ ràng. Xem [hướng dẫn](../../benchmarks/keyword/README.md#chuyển-bản-nháp-khi-catalog-đổi-13102026) và [báo cáo](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md).
 
 ### ~~P1.15 Chuẩn bị packet relevance từ transcript voice đã duyệt~~ — xong 11/10, `prepare_voice_queries.py` ([báo cáo](2026-10-11_GD3_dong-bo-seed-004-va-khoa-split.md))
 - P1.13 đã hỗ trợ `eval_voice.py --queries`, nhưng nhóm dữ liệu vẫn phải chuẩn bị query keyword đúng bản chép lời và gắn `keyword_qid`.
@@ -113,7 +121,7 @@ P1.1–P1.16 đã xong phần công cụ — xem "Đã xong gần đây". Regist
 
 ## 4. P2 — Sau khi có dữ liệu dev
 
-GĐ5 đã triển khai `SearchConfig`, OCR Latin ONNX, crop/multi-view và `ablate.py`/`calibrate_no_match.py`; xem [lệnh và điều kiện](../../docs/giai-doan-5.md). Những việc “thử/hiệu chỉnh” bên dưới hiện có công cụ cho ngôn ngữ, VAD, RRF, OCR, crop và ngưỡng; **kết luận chất lượng vẫn chờ nhãn**. Semantic, denoise, contextual biasing/n-best, remove-background và fine-tune chưa triển khai/chưa được chọn. Không bật các biến thể smoke làm mặc định.
+GĐ5 đã triển khai `SearchConfig`, OCR Latin ONNX, crop/multi-view, BGE-M3 tùy chọn và `ablate.py`/`calibrate_no_match.py`; xem [lệnh và điều kiện](../../docs/giai-doan-5.md). Những việc “thử/hiệu chỉnh” bên dưới hiện có công cụ cho ngôn ngữ, VAD, RRF, OCR, crop và ngưỡng; **kết luận chất lượng vẫn chờ nhãn**. Denoise, contextual biasing/n-best, remove-background và fine-tune chưa triển khai/chưa được chọn. Không bật các biến thể smoke làm mặc định.
 
 | Việc | Ghi chú |
 |---|---|

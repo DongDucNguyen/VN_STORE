@@ -44,6 +44,20 @@ def test_rejects_unsupported_rate():
     assert code_of(decode_wav, wav(1.0, rate=4000)) == "audio_invalid"
 
 
+@pytest.mark.parametrize("channels,missing", [(1, 1), (1, 400), (2, 2), (2, 400)])
+def test_rejects_truncated_pcm_even_when_remaining_audio_is_long_enough(channels, missing):
+    assert code_of(decode_wav, wav(1, channels=channels)[:-missing]) == "audio_invalid"
+
+
+@pytest.mark.parametrize("channels,extra", [(1, 1), (2, 2)])
+def test_rejects_partial_frame_declared_in_data_chunk(channels, extra):
+    data = bytearray(wav(1, channels=channels))
+    data.extend(b"\x00" * extra)
+    struct.pack_into("<I", data, 4, len(data) - 8)
+    struct.pack_into("<I", data, 40, len(data) - 44)
+    assert code_of(decode_wav, bytes(data)) == "audio_invalid"
+
+
 def test_silence_detected_before_asr():
     clip = decode_wav(wav(1.0, amplitude=0.0))
     assert clip.peak_frame_dbfs() == float("-inf")

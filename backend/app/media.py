@@ -79,6 +79,12 @@ def decode_wav(data: bytes) -> AudioClip:
             if frames / rate > MAX_AUDIO_SECONDS:
                 raise MediaError("audio_too_long", f"Đoạn ghi âm dài hơn {MAX_AUDIO_SECONDS:g} giây. Hãy nói ngắn hơn.")
             raw = w.readframes(frames)
+            if len(raw) != frames * channels * width or len(raw) % (channels * width):
+                raise MediaError("audio_invalid", "File âm thanh bị thiếu dữ liệu. Hãy ghi lại.")
+            # getnframes() rounds down partial frames; reject a trailing partial
+            # frame too instead of silently transcribing an incomplete recording.
+            if w.readframes(1):
+                raise MediaError("audio_invalid", "File âm thanh có khung dữ liệu không đầy đủ.")
     except MediaError:
         raise
     except (wave.Error, EOFError, struct.error) as e:

@@ -12,6 +12,12 @@ const PYTHON = process.platform === "win32"
   : path.join(ROOT, ".venv", "bin", "python");
 
 test("thu âm 2 câu → zip đúng schema, script nhập chấp nhận", async ({ page }, info) => {
+  await page.addInitScript(() => {
+    const revoked: string[] = [];
+    Object.assign(window, { revokedTakeUrls: revoked });
+    const revoke = URL.revokeObjectURL.bind(URL);
+    URL.revokeObjectURL = (url) => { revoked.push(url); revoke(url); };
+  });
   await page.goto("/#/collect/voice");
   // Chưa chọn split thì chưa hiện câu: mỗi split có bộ câu riêng.
   await expect(page.getByText("Chọn split để hiện bộ câu mẫu")).toBeVisible();
@@ -55,4 +61,41 @@ test("thu âm 2 câu → zip đúng schema, script nhập chấp nhận", async 
   expect(out).toContain("2 clip");
   expect(out).toContain("s901");
   fs.rmSync(dir, { recursive: true, force: true });
+  const urls = await page.locator("audio").evaluateAll((elements) => elements.map((el) => (el as HTMLAudioElement).src));
+  await page.evaluate(() => { window.location.hash = "/"; });
+  await expect(page.getByRole("heading", { name: "Thu âm cho bộ đánh giá giọng nói" })).toHaveCount(0);
+  const revoked = await page.evaluate(() => (window as unknown as { revokedTakeUrls: string[] }).revokedTakeUrls);
+  for (const url of urls) expect(revoked).toContain(url);
+});
+
+test("rời trang thu mẫu khi chờ quyền micro giải phóng thiết bị; không mở hai phiên", async ({ page }) => {
+  await page.addInitScript(() => {
+    const original = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+    const state = window as unknown as { releaseMic: () => void; micTracks: MediaStreamTrack[]; micCalls: number };
+    state.micCalls = 0;
+    navigator.mediaDevices.getUserMedia = async (constraints) => {
+      state.micCalls++;
+      const stream = await original(constraints);
+      state.micTracks = stream.getTracks();
+      await new Promise<void>((resolve) => { state.releaseMic = resolve; });
+      return stream;
+    };
+  });
+  await page.goto("/#/collect/voice");
+  await page.getByLabel(/Split/).selectOption("dev");
+  await page.getByLabel("Mã người nói").fill("s902");
+  await page.getByLabel("Mã thiết bị").fill("e2e-fake-mic");
+  await page.getByLabel("Mã hồ sơ đồng ý").fill("consent-e2e");
+  await page.getByLabel(/Người nói đã đồng ý/).check();
+  await page.getByRole("button", { name: "Ghi câu p01", exact: true }).click();
+  await expect(page.getByRole("button", { name: "Ghi câu p02", exact: true })).toBeDisabled();
+  await expect(page.getByLabel(/Split/)).toBeDisabled();
+  await expect.poll(() => page.evaluate(() => typeof (window as unknown as { releaseMic: unknown }).releaseMic))
+    .toBe("function");
+  await page.evaluate(() => { window.location.hash = "/"; });
+  await expect(page.getByRole("heading", { name: "Thu âm cho bộ đánh giá giọng nói" })).toHaveCount(0);
+  await page.evaluate(() => (window as unknown as { releaseMic: () => void }).releaseMic());
+  await expect.poll(() => page.evaluate(() => (window as unknown as { micTracks: MediaStreamTrack[] })
+    .micTracks.every((track) => track.readyState === "ended"))).toBe(true);
+  expect(await page.evaluate(() => (window as unknown as { micCalls: number }).micCalls)).toBe(1);
 });
