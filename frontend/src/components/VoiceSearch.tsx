@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { api, ApiError, modalityProblem, type SearchResponse } from "../api";
+import { api, ApiError, emptyFilters, modalityProblem, type SearchResponse, type VoiceLanguage, type VoiceReviewResponse } from "../api";
 import { MAX_RECORD_SECONDS, MicError, Recorder } from "../media";
 import { beginMeasure, endMeasure, type Measure } from "../measurements";
 
@@ -8,6 +8,8 @@ type VoiceState =
   | { kind: "checking" }
   | { kind: "recording"; startedAt: number }
   | { kind: "processing" }
+  | { kind: "review"; response: VoiceReviewResponse; query: string }
+  | { kind: "searching" }
   | { kind: "error"; message: string; canRetry: boolean };
 
 export interface VoiceSearch {
@@ -15,6 +17,10 @@ export interface VoiceSearch {
   start: () => Promise<void>;
   stop: () => Promise<void>;
   cancel: () => void;
+  confirm: () => Promise<void>;
+  edit: (query: string) => void;
+  language: VoiceLanguage;
+  setLanguage: (value: VoiceLanguage) => void;
 }
 
 /** Bấm để nói → bấm dừng (hoặc tự dừng sau MAX_RECORD_SECONDS) → bản chép lời. */
@@ -25,6 +31,9 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
   const generation = useRef(0);
   const request = useRef<AbortController | null>(null);
   const busy = useRef(false);
+  const [language, setLanguage] = useState<VoiceLanguage>("vi");
+  const selectedLanguage = useRef<VoiceLanguage>("vi");
+  const reviewTiming = useRef<{ measure?: Measure; at: number } | null>(null);
 
   useEffect(() => {
     alive.current = true;
@@ -34,6 +43,7 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
       busy.current = false;
       request.current?.abort();
       rec.current?.cancel();
+      endMeasure(reviewTiming.current?.measure, "cancelled");
     };
   }, []);
 
@@ -43,6 +53,9 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
 
   async function start() {
     if (busy.current) return;
+    endMeasure(reviewTiming.current?.measure, "cancelled");
+    reviewTiming.current = null;
+    selectedLanguage.current = language;
     busy.current = true;
     const id = ++generation.current;
     const current = () => alive.current && id === generation.current;
@@ -83,12 +96,11 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
     try {
       const wav = await r.stop();
       if (superseded()) return;
-      const res = await api.searchVoice(wav, controller.signal);
+      const res = await api.reviewVoice(wav, selectedLanguage.current, controller.signal);
       if (superseded()) return;
       busy.current = false;
-      set({ kind: "idle" });
-      if (res.transcript) onResult(res, measure);
-      else endMeasure(measure, "error");
+      reviewTiming.current = { measure, at: performance.now() };
+      set({ kind: "review", response: res, query: res.transcript.text });
     } catch (e) {
       if (superseded()) return;
       endMeasure(measure, "error");
@@ -104,7 +116,41 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
     request.current?.abort();
     rec.current?.cancel();
     rec.current = null;
+    endMeasure(reviewTiming.current?.measure, "cancelled");
+    reviewTiming.current = null;
     set({ kind: "idle" });
+  }
+
+  async function confirm() {
+    if (state.kind !== "review" || busy.current || !state.query.trim() || state.query.trim().length > 300) return;
+    busy.current = true;
+    const { response, query } = state;
+    const id = generation.current;
+    const controller = new AbortController();
+    request.current = controller;
+    const timing = reviewTiming.current;
+    const measure = timing?.measure;
+    // Exclude time spent reading/editing; preserve ASR + retrieval time.
+    if (measure && timing) measure.start += performance.now() - timing.at;
+    set({ kind: "searching" });
+    try {
+      const result = await api.search(query.trim(), emptyFilters(), 24, 0, controller.signal);
+      if (!alive.current || id !== generation.current) { endMeasure(measure, "cancelled"); return; }
+      const total = response.timings_ms.total + result.timings_ms.total;
+      reviewTiming.current = null;
+      busy.current = false;
+      set({ kind: "idle" });
+      onResult({ ...result, mode: "voice", transcript: { ...response.transcript, text: query.trim() },
+        warnings: [...response.warnings, ...result.warnings],
+        timings_ms: { ...response.timings_ms, search: result.timings_ms.total, total } }, measure);
+    } catch (e) {
+      if (!alive.current || id !== generation.current) { endMeasure(measure, "cancelled"); return; }
+      endMeasure(measure, "error");
+      reviewTiming.current = { at: performance.now() };
+      busy.current = false;
+      set({ kind: "review", response: { ...response, warnings: [...response.warnings,
+        e instanceof Error ? e.message : "Chưa tìm được. Hãy thử lại."] }, query });
+    }
   }
 
   // Tự dừng khi quá thời lượng cho phép.
@@ -115,7 +161,8 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
-  return { state, start, stop, cancel };
+  return { state, start, stop, cancel, confirm, language, setLanguage,
+    edit: (query) => { if (state.kind === "review") set({ ...state, query }); } };
 }
 
 export function VoicePanel({ voice }: { voice: VoiceSearch }) {
@@ -127,7 +174,35 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
     return () => clearInterval(t);
   }, [state.kind]);
 
-  if (state.kind === "idle") return null;
+  const languageChoice = <label className="voice-language">Ngôn ngữ giọng nói{" "}
+    <select aria-label="Ngôn ngữ giọng nói" value={voice.language}
+      onChange={(e) => voice.setLanguage(e.target.value as VoiceLanguage)}>
+      <option value="vi">Tiếng Việt</option><option value="en">English</option>
+      <option value="auto">Tự nhận diện / Việt–Anh</option>
+    </select></label>;
+  if (state.kind === "idle") return languageChoice;
+  if (state.kind === "review") return <section className="voice-panel voice-review" aria-label="Xác nhận bản chép lời">
+    <strong>Kiểm tra lời nói trước khi tìm</strong>
+    <p>Bản chép lời gốc: <span className="voice-original">{state.response.transcript.raw_text ?? state.response.transcript.text}</span></p>
+    {state.response.transcript.language && <p>Ngôn ngữ nhận dạng: {state.response.transcript.language}</p>}
+    {state.response.warnings.map((w, i) => <p className="notice notice-warn" key={i}>{w}</p>)}
+    <label>Cụm từ dùng để tìm kiếm
+      <textarea autoFocus value={state.query} maxLength={300} rows={2}
+        aria-label="Cụm từ dùng để tìm kiếm" onChange={(e) => voice.edit(e.target.value)} />
+    </label>
+    {!!state.response.transcript.suggestions?.length && <div>
+      <p>Gợi ý theo catalog — chỉ chọn nếu đúng ý bạn:</p>
+      {state.response.transcript.suggestions.map((s) => <button className="btn" key={s.text}
+        onClick={() => voice.edit(s.text)}>{s.text}</button>)}
+    </div>}
+    {languageChoice}
+    <div className="voice-actions">
+      <button className="btn btn-primary" disabled={!state.query.trim() || state.query.trim().length > 300}
+        onClick={() => void voice.confirm()}>Tìm theo câu này</button>
+      <button className="btn" onClick={() => void voice.start()}>Ghi lại</button>
+      <button className="btn" onClick={voice.cancel}>Hủy</button>
+    </div>
+  </section>;
   if (state.kind === "checking") {
     return (
       <div className="voice-panel" role="status">
@@ -146,7 +221,7 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
         </span>
         <span className="voice-actions">
           <button className="btn btn-primary" onClick={() => void voice.stop()}>
-            Dừng và tìm
+            Dừng và xem lời
           </button>
           <button className="btn" onClick={voice.cancel}>
             Hủy
@@ -155,10 +230,10 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
       </div>
     );
   }
-  if (state.kind === "processing") {
+  if (state.kind === "processing" || state.kind === "searching") {
     return (
       <div className="voice-panel" role="status">
-        <span className="spinner" aria-hidden /> Đang chép lời…
+        <span className="spinner" aria-hidden /> {state.kind === "processing" ? "Đang chép lời…" : "Đang tìm sản phẩm…"}
         <button className="link" onClick={voice.cancel}>Hủy</button>
       </div>
     );

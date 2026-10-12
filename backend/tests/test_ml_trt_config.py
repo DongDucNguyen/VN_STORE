@@ -26,7 +26,7 @@ def test_whisper_profiles_only_grow_decoder_cache():
                                                                            f"1x8x{PROMPT_LEN + 96}x64")
     assert past("past_key_values.0.encoder.value", ["b", 8, "enc", 64]) == ("1x8x1500x64",) * 3
     first = whisper_shapes("decoder_model", 96)
-    assert first("input_ids", ["batch", "seq"]) == (f"1x{PROMPT_LEN}",) * 3
+    assert first("input_ids", ["batch", "seq"]) == ("1x1", f"1x{PROMPT_LEN}", f"1x{PROMPT_LEN}")
     assert first("encoder_hidden_states", ["batch", "enc", 512]) == ("1x1500x512",) * 3
     enc = whisper_shapes("encoder_model", 96, n_mels=80)
     assert enc("input_features", ["batch", 80, 3000]) == ("1x80x3000",) * 3

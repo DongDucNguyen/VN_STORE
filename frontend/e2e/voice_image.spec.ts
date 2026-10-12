@@ -50,14 +50,16 @@ test.describe("Tìm bằng giọng nói", () => {
     await expect(page.getByText("Đang nghe…")).toBeVisible();
     await expect(page.getByRole("button", { name: "Dừng ghi âm" })).toBeVisible();
     await page.waitForTimeout(1200);
-    const answered = page.waitForResponse("**/api/search/voice");
-    await page.getByRole("button", { name: "Dừng và tìm" }).click();
+    const answered = page.waitForResponse("**/api/search/voice*");
+    await page.getByRole("button", { name: "Dừng và xem lời" }).click();
     const res = await answered;
     expect(res.request().headers()["content-type"]).toBe("audio/wav");
     // Backend giải mã được WAV do trình duyệt mã hóa và đo đúng thời lượng đã ghi.
     expect(res.status()).toBe(200);
     expect((await res.json()).transcript.duration_s).toBeGreaterThan(0.8);
 
+    await expect(page.getByRole("textbox", { name: "Cụm từ dùng để tìm kiếm" })).toHaveValue(TRANSCRIPT);
+    await page.getByRole("button", { name: "Tìm theo câu này" }).click();
     await expect(page).toHaveURL(/via=voice/);
     await expect(page.getByText(/Đã chép lời từ giọng nói/)).toBeVisible();
     const box = page.getByRole("searchbox", { name: "Tìm sản phẩm" });
@@ -77,7 +79,7 @@ test.describe("Tìm bằng giọng nói", () => {
     page.on("request", (r) => r.url().includes("/api/search/voice") && (sent = true));
     await page.goto("/");
     await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
-    await page.getByRole("button", { name: "Dừng và tìm" }).click();
+    await page.getByRole("button", { name: "Dừng và xem lời" }).click();
     await expect(page.getByRole("alert")).toContainText("quá ngắn");
     expect(sent).toBe(false);
   });
@@ -119,14 +121,14 @@ test.describe("Tìm bằng giọng nói", () => {
 
   test("máy chủ báo không nghe thấy tiếng nói", async ({ page, allowConsoleErrors }) => {
     allowConsoleErrors(); // 422 có chủ đích
-    await page.route("**/api/search/voice", (route) =>
+    await page.route("**/api/search/voice*", (route) =>
       route.fulfill({ status: 422, json: { detail: { code: "audio_silent",
         message: "Không nghe thấy tiếng nói. Kiểm tra micro rồi ghi lại." } } }));
     await page.goto("/");
     await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
     await expect(page.getByText("Đang nghe…")).toBeVisible();
     await page.waitForTimeout(1000);
-    await page.getByRole("button", { name: "Dừng và tìm" }).click();
+    await page.getByRole("button", { name: "Dừng và xem lời" }).click();
     await expect(page.getByRole("alert")).toContainText("Không nghe thấy tiếng nói");
     await page.getByRole("button", { name: "Ghi lại" }).click();
     await expect(page.getByText("Đang nghe…")).toBeVisible();

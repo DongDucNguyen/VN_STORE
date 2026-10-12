@@ -1,5 +1,9 @@
 # VNStore — Việc ưu tiên tiếp theo (backlog sống)
 
+Cập nhật mới nhất **12/10/2026**: đã triển khai [bốn nhóm cải thiện voice](2026-10-12_GD5-6_cai-thien-tim-kiem-giong-noi.md), hồ sơ ở [docs/voice-improvements](../../docs/voice-improvements/README.md). Hiện tại là **seed-006-enriched, 330 sản phẩm/328 published/814 ảnh**, voice 0 clip. Các đoạn ghi seed-004/draft bên dưới là bối cảnh lịch sử đã được các đợt 11/10 cập nhật. Kiểm thử mới: 632 backend + 22 Pillow + 126 E2E; 4 smoke ONNX đạt.
+
+**Việc tiếp theo cho voice:** thu/duyệt pilot có tag English, code_switch, nói nhỏ/xa, nhầm n/l; chấm relevance; chạy `experiments/configs/voice-improvements.json` trên dev. UI review/gợi ý, ngôn ngữ theo request và quality đã xong. Gain/high-pass còn tắt mặc định; không tự tạo nhãn hoặc mở locked test để thay cho dữ liệu thiếu. Xem [protocol](../../docs/voice-improvements/05-evaluation.md).
+
 Cập nhật: 11/10/2026, [GĐ6 tích hợp demo và tiền kiểm](2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md), sau [rà soát GĐ5](2026-10-11_GD5_ra-soat-va-hoan-thien.md). Catalog `seed-004-hanhsilk-materials` (`5448a8f4…`), 330 draft, 814 ảnh. Packet/trang hiện hành: keyword `2026-10-11_seed-004_*`, duyệt họ `2026-10-11_seed-004`. GĐ6 đã xong toàn bộ phần công cụ ([hoàn tất](2026-10-11_GD6_hoan-tat-khoa-locked-test.md)): sổ mở test, `locked_test.py` mở/chạy/báo cáo/ký; tiền kiểm locked test vẫn blocked. Cần P0 do con người → screening GĐ4 → chọn cấu hình GĐ5 → locked test GĐ6. Chưa nghiệm thu GĐ5/GĐ6.
 
 Khác với các báo cáo theo đợt (không sửa lại), file này **được sửa mỗi phiên**: đánh dấu việc xong, thêm việc mới phát hiện, sắp lại thứ tự. Khi làm một mục thì ghi báo cáo đợt như thường lệ ([TEMPLATE](TEMPLATE.md)), rồi cập nhật mục đó ở đây kèm link báo cáo.

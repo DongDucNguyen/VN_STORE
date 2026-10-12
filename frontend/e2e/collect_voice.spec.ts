@@ -36,7 +36,7 @@ test("thu âm 2 câu → zip đúng schema, script nhập chấp nhận", async 
     await page.getByRole("button", { name: "Dừng" }).click();
     await expect(page.getByLabel(`Nghe lại câu ${id}`)).toBeVisible();
   }
-  await expect(page.getByText("Đã ghi 2/24 câu")).toBeVisible();
+  await expect(page.getByText("Đã ghi 2/29 câu")).toBeVisible();
   await expect(split).toBeDisabled(); // đã có bản ghi thì không đổi bộ câu
 
   const download = page.waitForEvent("download");

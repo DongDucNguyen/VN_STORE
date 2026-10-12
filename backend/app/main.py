@@ -17,7 +17,7 @@ import time
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.concurrency import run_in_threadpool
@@ -31,6 +31,7 @@ from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot
 from .media import MAX_AUDIO_BYTES, MAX_IMAGE_BYTES, MediaError
 from .modalities import STATE_MESSAGES, ImageService, Status, VoiceService, adapter_from_env
 from .search.engine import SearchEngine, SearchFilters
+from .voice.suggestions import PhraseSuggester
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -41,6 +42,7 @@ class Bundle:
     snap: CatalogSnapshot
     engine: SearchEngine
     images: ImageService | None = None  # chỉ mục ảnh đã kiểm tra khớp đúng snapshot này
+    voice_suggestions: PhraseSuggester | None = None
 
 
 class AppState:
@@ -65,7 +67,7 @@ def reload_catalog(path: Path | None = None) -> None:
         old = state.bundle.images if isinstance(state.bundle, Bundle) else None
         images = ImageService.for_snapshot(snap, state.image_embedder, state.image_status,
                                            old.gate if old else None)
-        state.bundle = Bundle(snap, SearchEngine(snap), images)
+        state.bundle = Bundle(snap, SearchEngine(snap), images, PhraseSuggester(snap))
         state.error = None
     except CatalogError as e:
         state.error = e
@@ -315,7 +317,8 @@ BUSY_MESSAGE = "Máy chủ đang xử lý yêu cầu khác. Thử lại sau vài
 
 
 @app.post("/search/voice")
-async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -> Any:
+async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100),
+                       language: Literal["vi", "en", "auto"] | None = None, review: bool = False) -> Any:
     """Body: WAV PCM 16-bit (trình duyệt tự mã hóa). Trả bản chép lời + kết quả tìm theo bản chép lời."""
     voice = state.voice
     if not voice.status.ok:
@@ -325,17 +328,36 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100)) -
     try:
         data = await _read_body(request, MAX_AUDIO_BYTES)
         body_ms = (time.perf_counter() - t0) * 1000
-        text, clip, timings = await run_in_threadpool(voice.transcribe, data)
+        recognition, clip, quality, timings = await run_in_threadpool(voice.transcribe_detailed, data, language)
     except MediaError as e:
         return _error(e.status, e.code, e.message)
     except Busy:
         return _error(429, "busy", BUSY_MESSAGE)
     except Exception as e:  # noqa: BLE001 — lỗi model không làm sập API
         return _error(503, "model_error", f"Model giọng nói gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
-    out = b.engine.search(text, limit=limit)
+    text = " ".join(recognition.text.split())
+    warnings = []
+    if quality["low_volume"]:
+        warnings.append("Âm lượng nhỏ. Hãy kiểm tra bản chép lời hoặc nói gần micro hơn và ghi lại.")
+    if quality["clipped_fraction"] > 0.01:
+        warnings.append("Âm thanh bị vỡ. Hãy giảm mức micro hoặc nói xa micro hơn rồi ghi lại.")
+    if recognition.truncated:
+        warnings.append("Bản chép lời có thể bị cắt. Hãy nói câu ngắn hơn hoặc sửa trước khi tìm.")
+    if recognition.language_probability is not None and recognition.language_probability < 0.8:
+        warnings.append("Chưa chắc ngôn ngữ của đoạn nói. Hãy kiểm tra bản chép lời hoặc chọn ngôn ngữ rồi ghi lại.")
+    suggestions = (b.voice_suggestions.suggest(text)
+                   if b.voice_suggestions and recognition.language in {None, "vi"} else [])
+    # Review requests do not execute retrieval until the user confirms a query.
+    out = {"warnings": [], "timings_ms": {}} if review else b.engine.search(text, limit=limit)
+    out["warnings"].extend(warnings)
     out["mode"] = "voice"
-    out["transcript"] = {"text": text, "model_id": voice.status.model_id, "revision": voice.status.revision,
-                         "duration_s": round(clip.duration_s, 2), "editable": True}
+    out["transcript"] = {"text": text, "raw_text": recognition.text,
+                         "model_id": voice.status.model_id, "revision": voice.status.revision,
+                         "duration_s": round(clip.duration_s, 2), "editable": True,
+                         "language": recognition.language, "requested_language": language,
+                         "language_probability": recognition.language_probability,
+                         "truncated": recognition.truncated, "suggestions": suggestions,
+                         "quality": quality, "requires_confirmation": True}
     out["timings_ms"] = {**out["timings_ms"], **timings, "body_read": round(body_ms, 2),
                          "total": round((time.perf_counter() - t0) * 1000, 2)}
     return out

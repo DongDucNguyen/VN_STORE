@@ -125,9 +125,21 @@ export interface SearchResponse {
   catalog_version: string;
   timings_ms: { total: number } & Record<string, number>;
   mode?: "voice" | "image";
-  transcript?: { text: string; model_id: string; revision: string; duration_s: number; editable: boolean };
+  transcript?: VoiceTranscript;
   visual?: { model_id: string; revision: string; top_similarity: number | null; match_label: "similar";
     query_cache?: "hit" | "miss" | null };
+}
+
+export type VoiceLanguage = "vi" | "en" | "auto";
+export interface VoiceTranscript {
+  text: string; raw_text?: string; model_id: string; revision: string; duration_s: number; editable: boolean;
+  language?: string | null; requested_language?: string | null; language_probability?: number | null;
+  truncated?: boolean; requires_confirmation?: boolean;
+  quality?: { low_volume: boolean; clipped_fraction: number; gain_db: number };
+  suggestions?: { text: string; phrase: string; reason: string; evidence: string }[];
+}
+export interface VoiceReviewResponse {
+  mode: "voice"; transcript: VoiceTranscript; warnings: string[]; timings_ms: { total: number } & Record<string, number>;
 }
 
 export interface CategoryNode { id: string; name_vi: string; count: number; children: CategoryNode[] }
@@ -188,14 +200,18 @@ export const api = {
   similar: (id: string) => request<{ results: ProductSummary[] }>(`/products/${encodeURIComponent(id)}/similar`),
   suggest: (q: string) =>
     request<{ type: string; id: string; text: string }[]>(`/suggest?${new URLSearchParams({ q })}`),
-  search: (query: string, filters: Filters, limit = 24, offset = 0) =>
+  search: (query: string, filters: Filters, limit = 24, offset = 0, signal?: AbortSignal) =>
     request<SearchResponse>("/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, filters, limit, offset }),
+      signal,
     }),
   searchVoice: (wav: Blob, signal?: AbortSignal) =>
     request<SearchResponse>("/search/voice", { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav, signal }),
+  reviewVoice: (wav: Blob, language: VoiceLanguage, signal?: AbortSignal) =>
+    request<VoiceReviewResponse>(`/search/voice?${new URLSearchParams({ review: "true", language })}`,
+      { method: "POST", headers: { "Content-Type": "audio/wav" }, body: wav, signal }),
   /** reuse: same prepared image re-sent for a filter change; the server may reuse its embedding/OCR. */
   searchImage: (image: Blob, text = "", filters?: Filters, signal?: AbortSignal, reuse = false) =>
     request<SearchResponse>(`/search/image?${new URLSearchParams({

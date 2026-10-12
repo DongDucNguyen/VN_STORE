@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-12",
+  "baseline": {
+    "backend_passed": 603,
+    "backend_skipped": 2,
+    "pillow_passed": 22,
+    "e2e_passed": 120
+  },
+  "after": {
+    "backend_passed": 632,
+    "backend_skipped": 3,
+    "pillow_passed": 22,
+    "typecheck": "passed",
+    "build": "passed",
+    "e2e_passed_full_run": 126,
+    "voice_targeted_passed": 101,
+    "onnx_smoke_passed": 4
+  },
+  "extra_direct_run": {
+    "backend_passed": 632,
+    "e2e_passed": 125,
+    "e2e_failed": 1,
+    "exit_code": 1,
+    "failure": "Chrome Vite HMR WebSocket net::ERR_NO_BUFFER_SPACE in catalog navigation",
+    "targeted_retry": {
+      "repeats": 2,
+      "workers": 1,
+      "passed": 2,
+      "exit_code": 0
+    }
+  },
+  "data": {
+    "catalog_version": "seed-006-enriched",
+    "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+    "voice_samples": 0,
+    "quality_benchmark": "pending_collection"
+  },
+  "default_audio_processing": {
+    "gain_db": 0,
+    "highpass": false
+  },
+  "notes": [
+    "Synthetic/fixture and Vietnamese FLEURS smoke are not VNStore quality benchmarks.",
+    "verified.log captures 8/8 passed steps; Windows PowerShell native stderr redirection produced an error record.",
+    "No catalog changes, locked-test run, stage, commit or push."
+  ]
+}

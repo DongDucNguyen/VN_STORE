@@ -123,6 +123,7 @@ export function SearchPage({ route }: { route: Route }) {
       {route.params.get("via") === "voice" && q && (
         <Notice>
           Đã chép lời từ giọng nói: “{q}”. Nếu chưa đúng, sửa trong ô tìm rồi bấm Tìm, hoặc bấm 🎤 để nói lại.
+          {data?.transcript?.raw_text && <div>Bản chép lời gốc: “{data.transcript.raw_text}”</div>}
         </Notice>
       )}
 

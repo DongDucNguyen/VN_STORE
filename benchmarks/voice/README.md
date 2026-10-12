@@ -156,3 +156,7 @@ Chạy sau khi thu clip, duyệt transcript và chấm relevance của đúng b�
 Chỉ so khi cùng manifest, split và tập qid; lệch thì exit 2. Resample theo **người nói** có hoàn lại, cho delta và CI 95% của WER/CER normalized (micro, tính lại từ số lỗi). Dưới 5 cụm có dữ liệu thì không báo CI (ví dụ FLEURS chỉ có 1 cụm vì không có mã người nói). Báo cáo ghi vào `reports/benchmark/`. CI chứa 0 nghĩa là chưa phân biệt được hai cấu hình; công cụ không tự chọn model.
 
 Với run có retrieval, cả hai phải có cùng catalog, file nhãn, liên kết qid, visibility, chính sách metric và mã tìm kiếm; kết quả từ transcript chuẩn cũng phải khớp. Báo thêm CI theo người nói cho nDCG/Success từ ASR, mức giảm so với chuẩn và false accept; chỉ giữ clip có metric ở cả hai run. Run ASR-only cũ vẫn so WER/CER được với nhau.
+
+## Cập nhật 12/10/2026 — bốn nhóm lỗi voice
+
+Đã có [pipeline và hướng dẫn cải thiện voice](../../docs/voice-improvements/04-results.md), [protocol thu/đánh giá](../../docs/voice-improvements/05-evaluation.md) và ma trận `experiments/configs/voice-improvements.json`. Evaluator dùng chung tiền xử lý với API, tách `by_tag`, `by_volume`, lưu bản gốc và đánh giá gợi ý top-1 giả định. Gain/high-pass tắt mặc định; các câu dev p25–p29 là ứng viên chờ rà soát. Manifest chưa có clip thật; chưa có kết quả chất lượng.

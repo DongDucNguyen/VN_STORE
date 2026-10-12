@@ -25,7 +25,9 @@ class ASRAdapter(Protocol):
 
     def transcribe(self, clip: AudioClip) -> str:
         """Bản chép lời gốc (chưa chuẩn hóa) cho một đoạn mono PCM 16-bit.
-        Tùy chọn: thuộc tính `detect_speech(clip) -> bool` (VAD) để API bỏ qua đoạn chỉ có tiếng ồn."""
+        Tùy chọn: `detect_speech(clip) -> bool` để bỏ qua đoạn chỉ có tiếng ồn;
+        `transcribe_detailed(clip, language=None) -> voice.pipeline.Recognition` để trả
+        ngôn ngữ, xác suất ngôn ngữ và cờ cắt câu. Không lưu lựa chọn request lên model chung."""
         ...
 
 

@@ -1,0 +1,15 @@
+{
+  "voice": {
+    "candidates": [
+      {"name": "phowhisper-base", "adapter": "app.ml.asr:PhoWhisperBase"},
+      {"name": "phowhisper-small", "adapter": "app.ml.asr:PhoWhisperSmall"}
+    ],
+    "variants": [
+      {"name": "baseline"},
+      {"name": "language-auto", "env": {"VNSTORE_ASR_LANGUAGE": "auto"}},
+      {"name": "language-en", "env": {"VNSTORE_ASR_LANGUAGE": "en"}},
+      {"name": "gain-6db", "env": {"VNSTORE_VOICE_MAX_GAIN_DB": "6"}},
+      {"name": "highpass-80hz", "env": {"VNSTORE_VOICE_HIGHPASS": "1"}}
+    ]
+  }
+}

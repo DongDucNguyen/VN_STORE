@@ -2,6 +2,8 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+Cập nhật voice (12/10): thêm xem/sửa/xác nhận bản chép lời trước khi tìm, gợi ý cụm theo catalog, cảnh báo âm nhỏ/vỡ tiếng, lựa chọn Việt/Anh/tự nhận diện và tiền xử lý tùy chọn. Xem [hồ sơ phân tích, tiến độ và kết quả](docs/voice-improvements/README.md). Gain/lọc vẫn tắt mặc định; chưa có clip VNStore đã duyệt để nghiệm thu chất lượng.
+
 Cập nhật GĐ6 (11/10): hoàn thiện voice dùng kết quả API, hủy/chặn yêu cầu cũ, trang `#/diagnostics`, đo browser và tiền kiểm locked test. **550 backend, 22 Pillow, 114 E2E và 2 smoke browser model thật đạt**. Chưa nghiệm thu chất lượng hoặc chạy locked test vì thiếu selection/dữ liệu đã duyệt. Xem [báo cáo GĐ6](reports/progress/2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md) và [hướng dẫn demo/đo/tiền kiểm](docs/giai-doan-6.md).
 
 Cập nhật GĐ5 (11/10): đã thêm cấu hình tối ưu tiếng Việt/VAD, weighted RRF, OCR Latin ONNX, crop/multi-view, calibration no-match và ma trận ablation; đã sửa điều kiện sẵn sàng, provenance nhãn/split và cold start OCR. **529 backend, 22 Pillow, 104 E2E và 2 test tích hợp GĐ5 với model thật đạt**; chưa chọn cấu hình cuối vì thiếu dev VNStore đã duyệt. Xem [rà soát và hoàn thiện](reports/progress/2026-10-11_GD5_ra-soat-va-hoan-thien.md), [kết quả triển khai](reports/progress/2026-10-11_GD5_toi-uu-va-ablation.md) và [hướng dẫn GĐ5](docs/giai-doan-5.md).

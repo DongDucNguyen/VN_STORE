@@ -1,0 +1,29 @@
+[WebServer] INFO:     Started server process [22556]
+
+[WebServer] INFO:     Waiting for application startup.
+
+
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+
+
+[WebServer] (node:15276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:34308) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:27840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/2] [desktop] › e2e\catalog.spec.ts:89:3 › Duyệt catalog › làng nghề và thương hiệu dẫn tới kết quả đã lọc
+
+(node:41052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/2] [desktop] › e2e\catalog.spec.ts:89:3 › Duyệt catalog › làng nghề và thương hiệu dẫn tới kết quả đã lọc
+  2 passed (3.7s)
+

@@ -34,7 +34,7 @@ export function endMeasure(measure: Measure | undefined, outcome: Outcome) {
   outcomes[measure.kind][outcome]++;
 }
 export function snapshotMeasurements() {
-  return { version: 2, scope: "keyword_request/voice_stop/image_submit to result paint; excludes recording time and product image downloads",
+  return { version: 2, scope: "keyword_request/voice_stop/image_submit to result paint; excludes recording, voice review/edit time and product image downloads",
     quality_benchmark: false, samples: samples.map((s) => ({ ...s, server_ms: { ...s.server_ms } })),
     outcomes: structuredClone(outcomes) };
 }

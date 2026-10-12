@@ -61,17 +61,14 @@ class VoiceService:
         return cls(*adapter_from_env("VNSTORE_ASR_ADAPTER", ASRAdapter))
 
     def transcribe(self, data: bytes) -> tuple[str, AudioClip, dict[str, float]]:
-        t0 = time.perf_counter()
-        clip = decode_wav(data)
-        check_speech(clip, getattr(self.adapter, "detect_speech", None))
-        t1 = time.perf_counter()
+        result, clip, _, timings = self.transcribe_detailed(data)
+        return " ".join(result.text.split()), clip, timings
+
+    def transcribe_detailed(self, data: bytes, language: str | None = None):
+        from .voice.pipeline import run_pipeline
+        # VAD can also load/run an inference model; include it in the same gate.
         with self.gate.slot():
-            text = self.adapter.transcribe(clip)
-        t2 = time.perf_counter()
-        text = " ".join(str(text or "").split())
-        if not text:
-            raise MediaError("no_speech", "Không nhận ra lời nói. Hãy nói rõ hơn hoặc gõ chữ.")
-        return text, clip, {"decode": round((t1 - t0) * 1000, 2), "asr": round((t2 - t1) * 1000, 2)}
+            return run_pipeline(self.adapter, data, language)
 
 
 class ImageService:

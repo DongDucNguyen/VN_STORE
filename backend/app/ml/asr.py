@@ -9,7 +9,9 @@ Bản small: repo ONNX có pytorch_model.bin trùng SHA-256 với vinai/PhoWhisp
 10/10/2026), nhưng không chứng minh được file ONNX xuất từ đúng trọng số đó; tokenizer và cấu hình sinh
 lấy từ repo gốc của VinAI. Bản int8 phải đo lại chất lượng, không dùng điểm của bản fp32 (PLAN.md 8.3).
 
-Giải mã greedy, prompt cố định <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>, chặn token
+Giải mã greedy, mặc định prompt <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>; hỗ trợ
+language vi/en/auto theo request (VNSTORE_ASR_LANGUAGE cho evaluator). Auto nhận diện ở mức clip;
+không bảo đảm chuyển ngôn ngữ trong câu. Chặn token
 theo generation_config (suppress_tokens, begin_suppress_tokens) và mọi token timestamp. Không đưa
 transcript hay đáp án vào prompt (PLAN.md mục 6.2).
 """
@@ -19,6 +21,7 @@ import os
 from typing import Any
 
 from ..media import AudioClip
+from ..voice.pipeline import Recognition
 from . import LazyModel, fill_dims, hf_file, hf_json, session, tensorrt_mode
 from .vad import SileroVAD
 
@@ -32,8 +35,10 @@ def whisper_shapes(kind: str, max_new_tokens: int, n_mels: int = 80):
     """Profile TensorRT cho encoder/decoder Whisper: chỉ cache decoder có độ dài đổi theo số token."""
     def shapes(name: str, dims: list):
         if name == "input_ids":
-            fixed = "1x1" if kind == "decoder_with_past_model" else f"1x{PROMPT_LEN}"
-            return fixed, fixed, fixed
+            if kind == "decoder_with_past_model":
+                return "1x1", "1x1", "1x1"
+            # Language detection uses the start token alone, transcription four tokens.
+            return "1x1", f"1x{PROMPT_LEN}", f"1x{PROMPT_LEN}"
         if name == "encoder_hidden_states" or ".encoder." in name:
             fixed = fill_dims(dims, {1: ENCODER_FRAMES, 2: ENCODER_FRAMES})
             return fixed, fixed, fixed
@@ -73,6 +78,11 @@ class _OnnxWhisper:
     def __init__(self):
         self._model = LazyModel()
         self.max_new_tokens = int(os.environ.get("VNSTORE_ASR_MAX_NEW_TOKENS", "96"))
+        if not 1 <= self.max_new_tokens <= 440:
+            raise ValueError("VNSTORE_ASR_MAX_NEW_TOKENS must be in [1, 440]")
+        self.language = os.environ.get("VNSTORE_ASR_LANGUAGE", "vi")
+        if self.language not in {"vi", "en", "auto"}:
+            raise ValueError("VNSTORE_ASR_LANGUAGE must be vi, en or auto")
         # VAD chặn đoạn chỉ có tiếng ồn trước ASR; VNSTORE_ASR_VAD=0 để đo model không có VAD.
         self.detect_speech = SileroVAD(float(os.environ.get("VNSTORE_VAD_THRESHOLD", "0.5")),
                                        int(os.environ.get("VNSTORE_VAD_MIN_MS", "250"))) if os.environ.get("VNSTORE_ASR_VAD", "1") != "0" else None
@@ -82,7 +92,7 @@ class _OnnxWhisper:
         return {"runtime": "onnxruntime", "onnx_repo": self.onnx_repo, "onnx_variant": self.suffix or "fp32",
                 "upstream": f"{self.model_id}@{self.upstream_revision}",
                 "config_repo": f"{self.config_repo}@{self.config_revision}", "decoder": "greedy",
-                "language": "vi", "task": "transcribe", "timestamps": False, "max_new_tokens": self.max_new_tokens,
+                "language": self.language, "task": "transcribe", "timestamps": False, "max_new_tokens": self.max_new_tokens,
                 "vad": self.detect_speech.config if self.detect_speech else None, "tensorrt": tensorrt_mode()}
 
     def _load(self):
@@ -98,7 +108,7 @@ class _OnnxWhisper:
         tok = Tokenizer.from_file(str(cfg_dir / "tokenizer.json"))
         gen = hf_json(self.config_repo, self.config_revision, "generation_config.json")
         ids = {t: tok.token_to_id(t) for t in
-               ("<|startoftranscript|>", "<|vi|>", "<|transcribe|>", "<|notimestamps|>", "<|endoftext|>")}
+               ("<|startoftranscript|>", "<|vi|>", "<|en|>", "<|transcribe|>", "<|notimestamps|>", "<|endoftext|>")}
         if None in ids.values():
             raise RuntimeError(f"Tokenizer thiếu token đặc biệt: {ids}")
         sessions = [session(hf_file(self.onnx_repo, self.onnx_revision, f"onnx/{name}{self.suffix}.onnx"),
@@ -107,7 +117,13 @@ class _OnnxWhisper:
         return fe, tok, gen, ids, sessions
 
     def transcribe(self, clip: AudioClip) -> str:
+        return self.transcribe_detailed(clip).text.strip()
+
+    def transcribe_detailed(self, clip: AudioClip, language: str | None = None) -> Recognition:
         import numpy as np
+        language = language or self.language
+        if language not in {"vi", "en", "auto"}:
+            raise ValueError("Unsupported ASR language")
         fe, tok, gen, ids, (enc, dec, dec_past) = self._model.get(self._load)
         feats = fe(to_float_16k(clip), sampling_rate=TARGET_RATE, return_tensors="np").input_features
         (hidden,) = enc.run(["last_hidden_state"], {"input_features": feats.astype(np.float32)})
@@ -115,7 +131,22 @@ class _OnnxWhisper:
         eos, no_ts = ids["<|endoftext|>"], ids["<|notimestamps|>"]
         suppress = list(gen.get("suppress_tokens") or [])
         begin_suppress = list(gen.get("begin_suppress_tokens") or [])
-        prompt = [ids["<|startoftranscript|>"], ids["<|vi|>"], ids["<|transcribe|>"], no_ts]
+        probability = None
+        language_id = ids.get(f"<|{language}|>")
+        if language == "auto":
+            # Same encoder output, no transcript/catalog prompt or translation.
+            logits = dec.run(["logits"], {"input_ids": np.array([[ids["<|startoftranscript|>"]]], dtype=np.int64),
+                                          "encoder_hidden_states": hidden})[0][0, -1]
+            languages = gen.get("lang_to_id") or {"<|vi|>": ids["<|vi|>"], "<|en|>": ids["<|en|>"]}
+            names, language_ids = zip(*languages.items())
+            scores = logits[list(language_ids)].astype(np.float64)
+            probs = np.exp(scores - scores.max())
+            probs /= probs.sum()
+            best = int(probs.argmax())
+            language_id = language_ids[best]
+            language = names[best][2:-2]
+            probability = round(float(probs[best]), 4)
+        prompt = [ids["<|startoftranscript|>"], language_id, ids["<|transcribe|>"], no_ts]
 
         def pick(logits, first: bool) -> int:
             row = logits[0, -1].astype(np.float32).copy()
@@ -141,7 +172,8 @@ class _OnnxWhisper:
             past.update({k.replace("present.", "past_key_values."): v for k, v in res.items()
                          if k.startswith("present.")})
             token = pick(res["logits"], False)
-        return tok.decode(out, skip_special_tokens=True).strip()
+        return Recognition(tok.decode(out, skip_special_tokens=True), language, probability,
+                           truncated=token != eos and len(out) >= self.max_new_tokens)
 
 
 class PhoWhisperBase(_OnnxWhisper):

@@ -67,6 +67,12 @@ export const PROMPT_SETS: Record<Split, Prompt[]> = {
     { id: "p22", text: "trà Thái Nguyên nửa ký", tags: ["place", "unit"] },
     { id: "p23", text: "khăn lụa Vạn Phúc màu xanh", tags: ["place", "material"] },
     { id: "p24", text: "nồi cơm điện giá rẻ", tags: ["out_of_catalog"] },
+    // Bổ sung 12/10/2026: câu ứng viên cho nhóm lỗi mới, chưa phải transcript chuẩn.
+    { id: "p25", text: "I am looking for a handmade silk scarf", tags: ["english", "natural"] },
+    { id: "p26", text: "Marou dark chocolate gift box", tags: ["english", "brand"] },
+    { id: "p27", text: "tìm khăn lụa silk scarf màu xanh", tags: ["code_switch", "material"] },
+    { id: "p28", text: "bát sứ trắng dùng ăn cơm", tags: ["phrase", "quiet_speech"] },
+    { id: "p29", text: "khăn lụa màu nâu làm quà", tags: ["confusion_n_l", "far_mic"] },
   ],
   test: [
     { id: "te01", text: "khăn lụa Hanhsilk thêu hoa sen", tags: ["brand", "craft"] },

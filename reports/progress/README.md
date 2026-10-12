@@ -2,6 +2,8 @@
 
 Thư mục này ghi lại tiến độ triển khai [PLAN.md](../../PLAN.md) theo từng giai đoạn.
 
+**Tổng quan toàn dự án hiện hành:** [Báo cáo GĐ0–7 ngày 12/10/2026](2026-10-12_GD0-7_tong-quan-du-an.md), đối chiếu catalog/manifest trực tiếp và phân biệt phần đã triển khai với phần chưa nghiệm thu.
+
 - Mỗi lần kết thúc một đợt làm việc thì thêm **một file báo cáo mới**; không sửa báo cáo cũ, trừ khi đính chính (ghi rõ "Đính chính" kèm ngày).
 - Tên file: `YYYY-MM-DD_GD<số>_<chủ-đề>.md`. Dùng [TEMPLATE.md](TEMPLATE.md).
 - Mọi kết luận "đạt" phải kèm cách kiểm chứng (lệnh đã chạy và kết quả). Số đo trên dữ liệu fixture giả không được dùng làm kết quả benchmark.
@@ -13,7 +15,7 @@ Chạy toàn bộ kiểm thử: `.venv/Scripts/python scripts/run_all_tests.py`
 
 ## Trạng thái các giai đoạn
 
-Cập nhật lần cuối: 11/10/2026 — GĐ6 (hoàn tất phần công cụ)
+Cập nhật lần cuối: 12/10/2026 — [cải thiện voice GĐ5–6](2026-10-12_GD5-6_cai-thien-tim-kiem-giong-noi.md): xem/sửa/xác nhận transcript, gợi ý cụm, kiểm tra âm lượng, vi/en/auto, evaluator dùng chung pipeline. **632 backend, 22 Pillow, 126 E2E đạt**, 4 smoke ONNX đạt. Gain/lọc tắt mặc định; chưa nghiệm thu chất lượng vì thiếu clip VNStore đã duyệt. Hồ sơ theo thư mục: [docs/voice-improvements](../../docs/voice-improvements/README.md).
 
 Kiểm tra gần nhất: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-noi-bo.md): catalog `seed-005-published-internal-demo` (`820f35b0…`), **328/330 published**, validate 0 lỗi; backend **587 đạt** (+2 skip), Pillow, typecheck/build, 120 E2E đạt. Chỉ mục ảnh, đề xuất họ, packet keyword `seed-005` và gợi ý máy đã dựng lại. **Chưa nghiệm thu GĐ2/3/6**: vẫn cần nhãn, quyết định và dữ liệu do người làm.
 
@@ -44,6 +46,8 @@ Kiểm tra gần nhất: [Publish demo nội bộ](2026-10-11_GD1_publish-demo-n
 
 ## Danh sách báo cáo
 
+- [2026-10-12_GD0-7_tong-quan-du-an.md](2026-10-12_GD0-7_tong-quan-du-an.md)
+- [2026-10-12_GD5-6_cai-thien-tim-kiem-giong-noi.md](2026-10-12_GD5-6_cai-thien-tim-kiem-giong-noi.md)
 - [2026-10-11_GD1-2_bo-sung-tu-dong.md](2026-10-11_GD1-2_bo-sung-tu-dong.md)
 - [2026-10-11_GD2_baseline-nhan-may.md](2026-10-11_GD2_baseline-nhan-may.md)
 - [2026-10-11_GD2_baseline-do-tre-keyword.md](2026-10-11_GD2_baseline-do-tre-keyword.md)

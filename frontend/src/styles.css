@@ -188,6 +188,14 @@ td a + a::before { content: ", "; }
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-size: 0.9rem; }
 .voice-panel.notice-warn { background: var(--warn-soft); border-color: transparent; }
 .voice-live { border-color: var(--err); }
+.voice-language { display: block; margin: 6px 0; font-size: .85rem; color: var(--muted); }
+.voice-language select { font: inherit; max-width: 100%; padding: 5px; }
+.voice-review { display: grid; align-items: stretch; }
+.voice-review p { margin: 4px 0; overflow-wrap: anywhere; }
+.voice-review label { display: grid; gap: 6px; }
+.voice-review textarea { width: 100%; padding: 8px; font: inherit; border: 1px solid var(--line); border-radius: 6px; }
+.voice-review .voice-actions { flex-wrap: wrap; margin-left: 0; }
+.voice-original { white-space: pre-wrap; }
 .voice-actions { display: inline-flex; gap: 10px; margin-left: auto; }
 .rec-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--err); animation: pulse 1s infinite; }
 @keyframes pulse { 50% { opacity: 0.3; } }

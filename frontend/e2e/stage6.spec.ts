@@ -1,27 +1,31 @@
 import { test, expect, cards } from "./fixtures";
 
-test("voice uses returned results once; editing transcript performs keyword search", async ({ page }) => {
+test("voice waits for confirmation, searches once, then allows editing", async ({ page }) => {
   let keywordRequests = 0;
   page.on("request", (r) => { if (new URL(r.url()).pathname === "/api/search") keywordRequests++; });
   await page.goto("/");
   await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
   await expect(page.getByText("Đang nghe…")).toBeVisible();
   await page.waitForTimeout(850);
-  await page.getByRole("button", { name: "Dừng và tìm" }).click();
+  await page.getByRole("button", { name: "Dừng và xem lời" }).click();
+  await expect(page.getByRole("region", { name: "Xác nhận bản chép lời" })).toBeVisible();
+  expect(keywordRequests).toBe(0);
+  await expect(page).not.toHaveURL(/voice_id=/);
+  await page.getByRole("button", { name: "Tìm theo câu này" }).click();
   await expect(page).toHaveURL(/voice_id=/);
   await expect(cards(page).first()).toBeVisible();
-  expect(keywordRequests).toBe(0);
+  expect(keywordRequests).toBe(1);
   await page.getByRole("searchbox").fill("khăn lụa");
   await page.getByRole("searchbox").press("Enter");
   await expect(page).not.toHaveURL(/via=voice/);
-  await expect.poll(() => keywordRequests).toBe(1);
+  await expect.poll(() => keywordRequests).toBe(2);
 });
 
 test("cancel delayed ASR does not navigate away from typed search", async ({ page, allowConsoleErrors }) => {
   allowConsoleErrors();
   let release!: () => void;
   const waiting = new Promise<void>((r) => { release = r; });
-  await page.route("**/api/search/voice", async (route) => {
+  await page.route("**/api/search/voice*", async (route) => {
     const response = await route.fetch();
     await waiting;
     await route.fulfill({ response }).catch(() => {});
@@ -30,7 +34,7 @@ test("cancel delayed ASR does not navigate away from typed search", async ({ pag
   await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
   await expect(page.getByText("Đang nghe…")).toBeVisible();
   await page.waitForTimeout(850);
-  await page.getByRole("button", { name: "Dừng và tìm" }).click();
+  await page.getByRole("button", { name: "Dừng và xem lời" }).click();
   await expect(page.getByText("Đang chép lời…")).toBeVisible();
   await page.getByRole("button", { name: "Hủy", exact: true }).click();
   await page.getByRole("searchbox").fill("khăn lụa");

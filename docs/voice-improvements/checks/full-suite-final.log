@@ -1,0 +1,353 @@
+
+=== Validate database.json ===
+[warning] image_rights_unverified_demo @ $.publication_policy: Bỏ qua xác minh quyền ảnh theo publication_policy: 811 ảnh published có quyền 'unknown'
+0 lỗi, 1 cảnh báo
+
+=== Validate fixture ===
+0 lỗi, 0 cảnh báo
+
+=== Fixture khớp generator ===
+catalog.fixture.json khớp make_fixture.py
+
+=== Backend pytest ===
+........................................................................ [ 11%]
+........................................................................ [ 22%]
+........................................................................ [ 34%]
+........................................................................ [ 45%]
+........................................................................ [ 57%]
+........................................................................ [ 68%]
+........................................................................ [ 79%]
+........................................................................ [ 91%]
+.......................................................                  [100%]
+============================== warnings summary ===============================
+..\.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\Admin\Desktop\VNStore\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+631 passed, 3 skipped, 1 warning in 43.10s
+
+=== Giải mã ảnh (Pillow, .venv-ml) ===
+pending_collection: C:\Users\Admin\AppData\Local\Temp\tmp9i8jrmys\query\reports\2026-10-12_215022-452443_image-pixels.json
+{"gallery_images": 2, "query_images": 0, "decoded": 2, "failed": 0, "candidate_pairs": 0, "by_relationship": {}, "high_priority_pairs": 0}
+invalid: C:\Users\Admin\AppData\Local\Temp\tmp53bx2s_d\query\reports\2026-10-12_215022-485022_image-pixels.json
+{"gallery_images": 2, "query_images": 1, "decoded": 2, "failed": 1, "candidate_pairs": 0, "by_relationship": {}, "high_priority_pairs": 0}
+.\.venv\Scripts\python.exe : ......................
+At line:2 char:1
++ .\.venv\Scripts\python.exe scripts\run_all_tests.py *> docs/voice-imp ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (......................:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+----------------------------------------------------------------------
+Ran 22 tests in 0.310s
+
+OK
+requires_visual_review: C:\Users\Admin\AppData\Local\Temp\tmp92pr0ovj\query\reports\2026-10-12_215022-516625_image-pixels.json
+{"gallery_images": 2, "query_images": 1, "decoded": 3, "failed": 0, "candidate_pairs": 1, "by_relationship": {"query_gallery": 1}, "high_priority_pairs": 1}
+
+=== Frontend typecheck ===
+
+=== Frontend build ===
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 39 modules transformed.
+rendering chunks...
+computing gzip size...
+../artifacts/build/index.html                   0.54 kB │ gzip:  0.36 kB
+../artifacts/build/assets/index-CQkS1QZu.css   11.67 kB │ gzip:  3.04 kB
+../artifacts/build/assets/index-BpmqpSJ_.js   298.83 kB │ gzip: 92.51 kB
+
+✓ built in 86ms
+
+=== E2E Playwright ===
+[WebServer] INFO:     Started server process [42488]
+
+[WebServer] INFO:     Waiting for application startup.
+
+[WebServer] INFO:     Application startup complete.
+
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+
+[WebServer] (node:13484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] (node:40840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 126 tests using 2 workers
+
+(node:16340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:33668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/126] [desktop] › e2e\catalog.spec.ts:15:3 › Duyệt catalog › giá chưa biết hiện Liên hệ, không hiện 0đ
+[2/126] [desktop] › e2e\catalog.spec.ts:4:3 › Duyệt catalog › trang chủ: banner fixture, danh mục, sản phẩm
+[3/126] [desktop] › e2e\catalog.spec.ts:22:3 › Duyệt catalog › chi tiết sản phẩm: thuộc tính, biến thể, nguồn gốc có căn cứ
+[4/126] [desktop] › e2e\catalog.spec.ts:44:3 › Duyệt catalog › claim 'unknown' hiện Chưa rõ và không thành nhãn
+[5/126] [desktop] › e2e\catalog.spec.ts:52:3 › Duyệt catalog › gallery đổi ảnh khi bấm thumbnail
+[6/126] [desktop] › e2e\catalog.spec.ts:62:3 › Duyệt catalog › đổi sản phẩm không hiện danh sách tương tự cũ khi API mới còn chờ
+[7/126] [desktop] › e2e\catalog.spec.ts:81:3 › Duyệt catalog › sản phẩm draft hoặc không tồn tại báo không tìm thấy
+[8/126] [desktop] › e2e\catalog.spec.ts:89:3 › Duyệt catalog › làng nghề và thương hiệu dẫn tới kết quả đã lọc
+[9/126] [desktop] › e2e\catalog.spec.ts:102:3 › Duyệt catalog › yêu thích lưu trên thiết bị, còn sau khi tải lại
+[10/126] [desktop] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /
+[11/126] [desktop] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/search?q=túi cói
+[12/126] [desktop] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/p/fx-binh-gom-men-lam
+[13/126] [desktop] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/places
+[14/126] [desktop] › e2e\collect_image.spec.ts:36:1 › chụp 2 ảnh → zip, script nhập + audit chấp nhận (pending_review)
+[15/126] [desktop] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận
+[16/126] [desktop] › e2e\family_review.spec.ts:14:1 › duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → áp thành families.json
+[desktop] › e2e\family_review.spec.ts:14:1 › duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → áp thành 
+families.json
+
+
+  1) [desktop] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Đã ghi 2/24 câu')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Đã ghi 2/24 câu') with timeout 5000ms
+      - waiting for getByText('Đã ghi 2/24 câu')
+
+
+      37 |     await expect(page.getByLabel(`Nghe lại câu ${id}`)).toBeVisible();
+      38 |   }
+    > 39 |   await expect(page.getByText("Đã ghi 2/24 câu")).toBeVisible();
+         |                                                   ^
+      40 |   await expect(split).toBeDisabled(); // đã có bản ghi thì không đổi bộ câu
+      41 |
+      42 |   const download = page.waitForEvent("download");
+        at C:\Users\Admin\Desktop\VNStore\frontend\e2e\collect_voice.spec.ts:39:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-desktop\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-desktop\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-desktop\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:34884) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[17/126] [desktop] › e2e\family_review.spec.ts:82:1 › duyệt họ có gợi ý máy: chỉ áp khi bấm, xuất ghi số đã sửa, apply giữ assist
+[desktop] › e2e\family_review.spec.ts:82:1 › duyệt họ có gợi ý máy: chỉ áp khi bấm, xuất ghi số đã sửa, apply giữ 
+assist
+
+
+
+
+[18/126] [desktop] › e2e\image_fallback.spec.ts:7:3 › ảnh http404: card báo lỗi, gallery chuyển sang ảnh còn tải được
+[19/126] [desktop] › e2e\image_fallback.spec.ts:7:3 › ảnh network: card báo lỗi, gallery chuyển sang ảnh còn tải được
+[20/126] [desktop] › e2e\image_fallback.spec.ts:31:1 › ảnh lỗi trên card vẫn cho xem thông tin và mở sản phẩm
+[21/126] [desktop] › e2e\image_fallback.spec.ts:43:1 › gallery bỏ ảnh hỏng và hiển thị ảnh kế tiếp tải được
+[22/126] [desktop] › e2e\image_fallback.spec.ts:52:1 › mọi ảnh lỗi có thể tải lại sau khi nguồn phục hồi
+[23/126] [desktop] › e2e\image_fallback.spec.ts:65:1 › đổi sản phẩm không giữ lỗi ảnh của trang trước
+[24/126] [desktop] › e2e\image_review.spec.ts:15:1 › chấm query ảnh: điều kiện xác nhận, no-match cần đủ gallery, xuất → áp → audit
+[25/126] [desktop] › e2e\image_review.spec.ts:80:1 › duyệt họ ảnh: nháp, registry, có mẫu tương tự
+[26/126] [desktop] › e2e\image_review.spec.ts:80:1 › duyệt họ ảnh: nháp, registry, no-match
+[27/126] [desktop] › e2e\keyword_review.spec.ts:20:1 › review: cần chấm đủ và xác nhận; xuất nhãn do người kiểm tra
+[28/126] [desktop] › e2e\keyword_review.spec.ts:44:1 › review: lưu và khôi phục nháp, không trộn catalog
+[29/126] [desktop] › e2e\keyword_review.spec.ts:59:1 › review: packet thật đủ sản phẩm catalog và ảnh local
+[30/126] [desktop] › e2e\keyword_review.spec.ts:81:1 › review pool: chấm danh sách chính; không có đáp án thì phải chấm cả phần còn lại
+[31/126] [desktop] › e2e\keyword_review.spec.ts:124:1 › review: gợi ý máy chỉ áp khi người chấm bấm, export ghi số đã sửa
+[desktop] › e2e\keyword_review.spec.ts:59:1 › review: packet thật đủ sản phẩm catalog và ảnh local
+
+
+[32/126] [desktop] › e2e\review_voice.spec.ts:49:1 › ghi → duyệt bản chép lời → nhập mới và áp vào manifest đã nhập
+[33/126] [desktop] › e2e\review_voice.spec.ts:107:1 › zip không hợp lệ bị từ chối với thông báo rõ
+[34/126] [desktop] › e2e\search.spec.ts:4:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 1: gõ không dấu, hiểu giá và làng nghề
+[35/126] [desktop] › e2e\search.spec.ts:24:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 2: câu nói tự nhiên, giá bằng chữ
+[36/126] [desktop] › e2e\search.spec.ts:35:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 3 (phần chữ): giỏ có quai dưới 400k
+[desktop] › e2e\review_voice.spec.ts:49:1 › ghi → duyệt bản chép lời → nhập mới và áp vào manifest đã nhập
+
+
+[37/126] [desktop] › e2e\search.spec.ts:40:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › phủ định là hard filter
+[38/126] [desktop] › e2e\search.spec.ts:47:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › không có kết quả thì giải thích ràng buộc đang hạn chế
+[39/126] [desktop] › e2e\search.spec.ts:53:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › bộ lọc người dùng cập nhật URL và kết quả, gỡ được khi rỗng
+[40/126] [desktop] › e2e\search.spec.ts:83:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › nút Back của trình duyệt trả lại bộ lọc trước đó
+[41/126] [desktop] › e2e\search.spec.ts:97:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › gợi ý khi gõ và điều hướng bằng bàn phím
+[42/126] [desktop] › e2e\search.spec.ts:109:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › giọng nói và ảnh báo chưa sẵn sàng, tìm chữ vẫn chạy
+[43/126] [desktop] › e2e\search.spec.ts:130:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › lỗi mạng hiện thông báo và thử lại được
+[44/126] [desktop] › e2e\stage6.spec.ts:3:1 › voice waits for confirmation, searches once, then allows editing
+[45/126] [desktop] › e2e\stage6.spec.ts:24:1 › cancel delayed ASR does not navigate away from typed search
+[46/126] [desktop] › e2e\stage6.spec.ts:48:1 › late microphone permission is released after leaving the page
+[47/126] [desktop] › e2e\stage6.spec.ts:68:1 › diagnostics exports only opt-in timing data
+[48/126] [desktop] › e2e\stage6.spec.ts:98:1 › diagnostics counts failed searches outside the latency distribution
+[49/126] [desktop] › e2e\stage6.spec.ts:120:1 › changing image discards an older pending response
+[50/126] [desktop] › e2e\voice_image.spec.ts:47:3 › Tìm bằng giọng nói › ghi âm → bản chép lời sửa được → kết quả và bộ lọc giá
+[51/126] [desktop] › e2e\voice_image.spec.ts:77:3 › Tìm bằng giọng nói › bấm dừng ngay: báo quá ngắn, không gửi
+[52/126] [desktop] › e2e\voice_image.spec.ts:87:3 › Tìm bằng giọng nói › hủy ghi âm không gửi gì
+[53/126] [desktop] › e2e\voice_image.spec.ts:98:3 › Tìm bằng giọng nói › micro bị từ chối: hướng dẫn và cho ghi lại
+[54/126] [desktop] › e2e\voice_image.spec.ts:111:3 › Tìm bằng giọng nói › trình duyệt không hỗ trợ ghi âm
+[55/126] [desktop] › e2e\voice_image.spec.ts:122:3 › Tìm bằng giọng nói › máy chủ báo không nghe thấy tiếng nói
+[56/126] [desktop] › e2e\voice_image.spec.ts:146:3 › Tìm bằng ảnh › chọn ảnh + yêu cầu giá → mẫu tương tự đúng bộ lọc cứng
+[57/126] [desktop] › e2e\voice_image.spec.ts:166:3 › Tìm bằng ảnh › bộ lọc sau khi có kết quả: gửi lại cùng ảnh kèm bộ lọc, gỡ được
+[58/126] [desktop] › e2e\voice_image.spec.ts:186:3 › Tìm bằng ảnh › kéo để chọn vùng rồi bỏ vùng chọn
+[59/126] [desktop] › e2e\voice_image.spec.ts:202:3 › Tìm bằng ảnh › file hỏng hoặc sai định dạng bị chặn trước khi gửi
+[60/126] [desktop] › e2e\voice_image.spec.ts:214:3 › Tìm bằng ảnh › model ảnh chưa sẵn sàng: báo rõ, không cho gửi
+[61/126] [desktop] › e2e\voice_review.spec.ts:11:1 › selecting a suggestion preserves original and only searches after confirmation
+[62/126] [desktop] › e2e\voice_review.spec.ts:41:1 › cancel and blank edits never search; English choice is passed per recording
+[63/126] [desktop] › e2e\voice_review.spec.ts:65:1 › failed confirmed search retains editable transcript for retry
+(node:34988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[64/126] [mobile] › e2e\catalog.spec.ts:4:3 › Duyệt catalog › trang chủ: banner fixture, danh mục, sản phẩm
+[65/126] [mobile] › e2e\catalog.spec.ts:15:3 › Duyệt catalog › giá chưa biết hiện Liên hệ, không hiện 0đ
+[66/126] [mobile] › e2e\catalog.spec.ts:44:3 › Duyệt catalog › claim 'unknown' hiện Chưa rõ và không thành nhãn
+(node:28132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[67/126] [mobile] › e2e\catalog.spec.ts:22:3 › Duyệt catalog › chi tiết sản phẩm: thuộc tính, biến thể, nguồn gốc có căn cứ
+[68/126] [mobile] › e2e\catalog.spec.ts:52:3 › Duyệt catalog › gallery đổi ảnh khi bấm thumbnail
+[69/126] [mobile] › e2e\catalog.spec.ts:62:3 › Duyệt catalog › đổi sản phẩm không hiện danh sách tương tự cũ khi API mới còn chờ
+[70/126] [mobile] › e2e\catalog.spec.ts:81:3 › Duyệt catalog › sản phẩm draft hoặc không tồn tại báo không tìm thấy
+[71/126] [mobile] › e2e\catalog.spec.ts:89:3 › Duyệt catalog › làng nghề và thương hiệu dẫn tới kết quả đã lọc
+[72/126] [mobile] › e2e\catalog.spec.ts:102:3 › Duyệt catalog › yêu thích lưu trên thiết bị, còn sau khi tải lại
+[73/126] [mobile] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /
+[74/126] [mobile] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/search?q=túi cói
+[75/126] [mobile] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/p/fx-binh-gom-men-lam
+[76/126] [mobile] › e2e\catalog.spec.ts:120:5 › Bố cục › không cuộn ngang: /#/places
+[77/126] [mobile] › e2e\collect_image.spec.ts:36:1 › chụp 2 ảnh → zip, script nhập + audit chấp nhận (pending_review)
+[78/126] [mobile] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận
+[79/126] [mobile] › e2e\family_review.spec.ts:14:1 › duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → áp thành families.json
+[mobile] › e2e\family_review.spec.ts:14:1 › duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → áp thành 
+families.json
+
+
+  2) [mobile] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Đã ghi 2/24 câu')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Đã ghi 2/24 câu') with timeout 5000ms
+      - waiting for getByText('Đã ghi 2/24 câu')
+
+
+      37 |     await expect(page.getByLabel(`Nghe lại câu ${id}`)).toBeVisible();
+      38 |   }
+    > 39 |   await expect(page.getByText("Đã ghi 2/24 câu")).toBeVisible();
+         |                                                   ^
+      40 |   await expect(split).toBeDisabled(); // đã có bản ghi thì không đổi bộ câu
+      41 |
+      42 |   const download = page.waitForEvent("download");
+        at C:\Users\Admin\Desktop\VNStore\frontend\e2e\collect_voice.spec.ts:39:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-mobile\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-mobile\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-mobile\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\artifacts\e2e-results\collect_voice-thu-âm-2-câu-ad76e-chema-script-nhập-chấp-nhận-mobile\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:32484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[80/126] [mobile] › e2e\family_review.spec.ts:82:1 › duyệt họ có gợi ý máy: chỉ áp khi bấm, xuất ghi số đã sửa, apply giữ assist
+[mobile] › e2e\family_review.spec.ts:82:1 › duyệt họ có gợi ý máy: chỉ áp khi bấm, xuất ghi số đã sửa, apply giữ assist
+
+
+
+
+[81/126] [mobile] › e2e\image_fallback.spec.ts:7:3 › ảnh http404: card báo lỗi, gallery chuyển sang ảnh còn tải được
+[82/126] [mobile] › e2e\image_fallback.spec.ts:7:3 › ảnh network: card báo lỗi, gallery chuyển sang ảnh còn tải được
+[83/126] [mobile] › e2e\image_fallback.spec.ts:31:1 › ảnh lỗi trên card vẫn cho xem thông tin và mở sản phẩm
+[84/126] [mobile] › e2e\image_fallback.spec.ts:43:1 › gallery bỏ ảnh hỏng và hiển thị ảnh kế tiếp tải được
+[85/126] [mobile] › e2e\image_fallback.spec.ts:52:1 › mọi ảnh lỗi có thể tải lại sau khi nguồn phục hồi
+[86/126] [mobile] › e2e\image_fallback.spec.ts:65:1 › đổi sản phẩm không giữ lỗi ảnh của trang trước
+[87/126] [mobile] › e2e\image_review.spec.ts:15:1 › chấm query ảnh: điều kiện xác nhận, no-match cần đủ gallery, xuất → áp → audit
+[88/126] [mobile] › e2e\image_review.spec.ts:80:1 › duyệt họ ảnh: nháp, registry, có mẫu tương tự
+[89/126] [mobile] › e2e\image_review.spec.ts:80:1 › duyệt họ ảnh: nháp, registry, no-match
+[90/126] [mobile] › e2e\keyword_review.spec.ts:20:1 › review: cần chấm đủ và xác nhận; xuất nhãn do người kiểm tra
+[91/126] [mobile] › e2e\keyword_review.spec.ts:44:1 › review: lưu và khôi phục nháp, không trộn catalog
+[92/126] [mobile] › e2e\keyword_review.spec.ts:59:1 › review: packet thật đủ sản phẩm catalog và ảnh local
+[93/126] [mobile] › e2e\keyword_review.spec.ts:81:1 › review pool: chấm danh sách chính; không có đáp án thì phải chấm cả phần còn lại
+[94/126] [mobile] › e2e\keyword_review.spec.ts:124:1 › review: gợi ý máy chỉ áp khi người chấm bấm, export ghi số đã sửa
+[mobile] › e2e\keyword_review.spec.ts:59:1 › review: packet thật đủ sản phẩm catalog và ảnh local
+
+
+[95/126] [mobile] › e2e\review_voice.spec.ts:49:1 › ghi → duyệt bản chép lời → nhập mới và áp vào manifest đã nhập
+[96/126] [mobile] › e2e\review_voice.spec.ts:107:1 › zip không hợp lệ bị từ chối với thông báo rõ
+[97/126] [mobile] › e2e\search.spec.ts:4:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 1: gõ không dấu, hiểu giá và làng nghề
+[98/126] [mobile] › e2e\search.spec.ts:24:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 2: câu nói tự nhiên, giá bằng chữ
+[99/126] [mobile] › e2e\search.spec.ts:35:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › hành trình 3 (phần chữ): giỏ có quai dưới 400k
+[mobile] › e2e\review_voice.spec.ts:49:1 › ghi → duyệt bản chép lời → nhập mới và áp vào manifest đã nhập
+
+
+[100/126] [mobile] › e2e\search.spec.ts:40:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › phủ định là hard filter
+[101/126] [mobile] › e2e\search.spec.ts:47:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › không có kết quả thì giải thích ràng buộc đang hạn chế
+[102/126] [mobile] › e2e\search.spec.ts:53:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › bộ lọc người dùng cập nhật URL và kết quả, gỡ được khi rỗng
+[103/126] [mobile] › e2e\search.spec.ts:83:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › nút Back của trình duyệt trả lại bộ lọc trước đó
+[104/126] [mobile] › e2e\search.spec.ts:97:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › gợi ý khi gõ và điều hướng bằng bàn phím
+[105/126] [mobile] › e2e\search.spec.ts:109:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › giọng nói và ảnh báo chưa sẵn sàng, tìm chữ vẫn chạy
+[106/126] [mobile] › e2e\search.spec.ts:130:3 › Tìm kiếm keyword — ba hành trình trong PLAN.md › lỗi mạng hiện thông báo và thử lại được
+[107/126] [mobile] › e2e\stage6.spec.ts:3:1 › voice waits for confirmation, searches once, then allows editing
+[108/126] [mobile] › e2e\stage6.spec.ts:24:1 › cancel delayed ASR does not navigate away from typed search
+[109/126] [mobile] › e2e\stage6.spec.ts:48:1 › late microphone permission is released after leaving the page
+[110/126] [mobile] › e2e\stage6.spec.ts:68:1 › diagnostics exports only opt-in timing data
+[111/126] [mobile] › e2e\stage6.spec.ts:98:1 › diagnostics counts failed searches outside the latency distribution
+[112/126] [mobile] › e2e\stage6.spec.ts:120:1 › changing image discards an older pending response
+[113/126] [mobile] › e2e\voice_image.spec.ts:47:3 › Tìm bằng giọng nói › ghi âm → bản chép lời sửa được → kết quả và bộ lọc giá
+[114/126] [mobile] › e2e\voice_image.spec.ts:77:3 › Tìm bằng giọng nói › bấm dừng ngay: báo quá ngắn, không gửi
+[115/126] [mobile] › e2e\voice_image.spec.ts:87:3 › Tìm bằng giọng nói › hủy ghi âm không gửi gì
+[116/126] [mobile] › e2e\voice_image.spec.ts:98:3 › Tìm bằng giọng nói › micro bị từ chối: hướng dẫn và cho ghi lại
+[117/126] [mobile] › e2e\voice_image.spec.ts:111:3 › Tìm bằng giọng nói › trình duyệt không hỗ trợ ghi âm
+[118/126] [mobile] › e2e\voice_image.spec.ts:122:3 › Tìm bằng giọng nói › máy chủ báo không nghe thấy tiếng nói
+[119/126] [mobile] › e2e\voice_image.spec.ts:146:3 › Tìm bằng ảnh › chọn ảnh + yêu cầu giá → mẫu tương tự đúng bộ lọc cứng
+[120/126] [mobile] › e2e\voice_image.spec.ts:166:3 › Tìm bằng ảnh › bộ lọc sau khi có kết quả: gửi lại cùng ảnh kèm bộ lọc, gỡ được
+[121/126] [mobile] › e2e\voice_image.spec.ts:186:3 › Tìm bằng ảnh › kéo để chọn vùng rồi bỏ vùng chọn
+[122/126] [mobile] › e2e\voice_image.spec.ts:202:3 › Tìm bằng ảnh › file hỏng hoặc sai định dạng bị chặn trước khi gửi
+[123/126] [mobile] › e2e\voice_image.spec.ts:214:3 › Tìm bằng ảnh › model ảnh chưa sẵn sàng: báo rõ, không cho gửi
+[124/126] [mobile] › e2e\voice_review.spec.ts:11:1 › selecting a suggestion preserves original and only searches after confirmation
+[125/126] [mobile] › e2e\voice_review.spec.ts:41:1 › cancel and blank edits never search; English choice is passed per recording
+[126/126] [mobile] › e2e\voice_review.spec.ts:65:1 › failed confirmed search retains editable transcript for retry
+  2 failed
+    [desktop] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận 
+    [mobile] › e2e\collect_voice.spec.ts:14:1 › thu âm 2 câu → zip đúng schema, script nhập chấp nhận 
+  124 passed (1.2m)
+
+=== Tổng kết ===
+ĐẠT           0.8s  Validate database.json
+ĐẠT           0.1s  Validate fixture
+ĐẠT           0.0s  Fixture khớp generator
+ĐẠT          43.5s  Backend pytest
+ĐẠT           0.5s  Giải mã ảnh (Pillow, .venv-ml)
+ĐẠT           1.4s  Frontend typecheck
+ĐẠT           0.6s  Frontend build
+LỖI (1)      73.2s  E2E Playwright
+
+1 BƯỚC LỖI

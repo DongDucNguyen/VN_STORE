@@ -44,6 +44,8 @@ from app.catalog.store import load_snapshot  # noqa: E402
 from app.media import MediaError, check_speech, decode_wav  # noqa: E402
 from app.search.engine import SearchEngine  # noqa: E402
 from app.search.query_parser import parse_query  # noqa: E402
+from app.voice.pipeline import run_pipeline as voice_pipeline, audio_quality, preprocess_config  # noqa: E402
+from app.voice.suggestions import PhraseSuggester  # noqa: E402
 
 MANIFEST = ROOT / "benchmarks" / "voice" / "manifest.json"
 GROUPS = ("region", "device", "environment")
@@ -123,16 +125,17 @@ def _negations(parsed) -> frozenset:
     return frozenset((e.field, am.normalize(e.value)) for e in parsed.exclusions)
 
 
-def run_pipeline(adapter: ASRAdapter, data: bytes) -> tuple[str, str | None, float, float]:
+def run_pipeline(adapter: ASRAdapter, data: bytes, *, details=False):
     """Cùng thứ tự như VoiceService: (bản chép lời, mã bị chặn, thời lượng, ms ASR)."""
+    quality, raw, language, duration = {}, "", None, 0.0
     try:
-        clip = decode_wav(data)
-        check_speech(clip, getattr(adapter, "detect_speech", None))
+        result, clip, quality, timings = voice_pipeline(adapter, data)
+        raw, language = result.text, result.language
+        value = (" ".join(raw.split()), None, clip.duration_s, timings["asr"])
     except MediaError as e:
-        return "", e.code, 0.0, 0.0
-    t = time.perf_counter()
-    text = " ".join(str(adapter.transcribe(clip) or "").split())
-    return text, None, clip.duration_s, (time.perf_counter() - t) * 1000
+        quality, duration = getattr(e, "audio_quality", {}), getattr(e, "duration_s", 0.0)
+        value = ("", e.code, duration, 0.0)
+    return (*value, quality, {"raw_text": raw, "language": language}) if details else value
 
 
 def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup: int = 1, rounds: int = 1,
@@ -144,15 +147,18 @@ def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup
     for s in samples[:warmup]:
         run_pipeline(adapter, audio[s["qid"]])
     rows = []
+    suggester = PhraseSuggester(engine.snap) if engine is not None else None
     for s in samples:
         pipeline_start = time.perf_counter()
-        hyp, gate, duration, ms = run_pipeline(adapter, audio[s["qid"]])
+        hyp, gate, duration, ms, quality, recognition = run_pipeline(adapter, audio[s["qid"]], details=True)
         pipeline_ms = (time.perf_counter() - pipeline_start) * 1000
         ref = s["reference_text"]
         row = {"qid": s["qid"], "split": s["split"], "speaker_id": s["speaker_id"],
                **{g: s[g] for g in GROUPS}, "tags": s.get("tags", []), "reference": ref, "hypothesis": hyp,
                "gate_rejected": gate, "duration_s": round(duration, 3), "asr_ms": round(ms, 2),
                "pipeline_ms": round(pipeline_ms, 2),
+               "audio_quality": quality, "recognition": recognition,
+               "volume_group": "low" if quality.get("low_volume") else "normal",
                "rtf": round(ms / 1000 / duration, 4) if duration else None}
         if ref is None:
             row["hallucinated"] = bool(hyp)
@@ -169,6 +175,16 @@ def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup
             row["negation_hyp"] = sorted(map(list, _negations(ph)))
         if links is not None and s["qid"] in links:
             row.update(vr.score(row, links[s["qid"]], engine))
+        suggestions = (suggester.suggest(hyp)
+                       if suggester and hyp and recognition["language"] in {None, "vi"} else [])
+        row["suggestions"] = suggestions
+        if ref is not None and suggestions:
+            candidate = suggestions[0]["text"]
+            row["suggested_wer"] = am.wer(ref, candidate)
+            row["suggestion_effect"] = ("better" if row["suggested_wer"] < row["wer_normalized"] else
+                                        "worse" if row["suggested_wer"] > row["wer_normalized"] else "same")
+            if links is not None and s["qid"] in links:
+                row["suggested_retrieval"] = vr.score({**row, "hypothesis": candidate}, links[s["qid"]], engine)
         rows.append(row)
     # Các lượt lặp chỉ đo thời gian, cùng tập clip và thứ tự; chất lượng lấy từ lượt đầu.
     timing = [[r["asr_ms"] for r in rows if r["gate_rejected"] is None]]
@@ -188,7 +204,7 @@ def evaluate(samples: list[dict], adapter: ASRAdapter, base: Path, vocab, warmup
         metrics["retrieval"] = vr.summarize(rows)
     metrics["latency"] = {"cold_first_call_ms": round(cold_ms, 2), "asr_ms": lp.rounds_summary(timing),
                           "pipeline_ms": lp.rounds_summary(pipeline_timing),
-                          "pipeline_scope": "decode + energy gate + VAD + ASR; excludes retrieval/upload"}
+                          "pipeline_scope": "decode + quality + energy gate + VAD + optional preprocessing + ASR; excludes retrieval/upload"}
     return rows, metrics
 
 
@@ -210,7 +226,9 @@ def summarize(rows: list[dict]) -> dict:
 
     def block(rs: list[dict]) -> dict:
         return {"n": len(rs), "wer_normalized": _micro(rs, "word_normalized"),
-                "cer_normalized": _micro(rs, "char_normalized")}
+                "cer_normalized": _micro(rs, "char_normalized"),
+                "speech_rejection_rate": mean([bool(r["gate_rejected"]) for r in rs if r["reference"] is not None]),
+                "hallucination_rate": mean([bool(r.get("hallucinated")) for r in rs if r["reference"] is None])}
 
     return {
         "n_clips": len(rows), "n_speech": len(speech), "n_silence": len(silence),
@@ -227,6 +245,13 @@ def summarize(rows: list[dict]) -> dict:
         "rtf_p50": percentile(rtf, 0.5), "rtf_p95": percentile(rtf, 0.95),
         "by_group": {g: {k: block([r for r in speech if r[g] == k]) for k in sorted({r[g] for r in speech})}
                      for g in GROUPS},
+        "by_volume": {k: block([r for r in rows if r.get("volume_group") == k]) for k in ("low", "normal")},
+        "by_tag": {tag: block([r for r in rows if tag in r.get("tags", [])])
+                   for tag in sorted({tag for r in rows for tag in r.get("tags", [])})},
+        "suggestions": {"policy": "top1 hypothetical, never automatically applied; compare WER, not human acceptance",
+                        "n": sum(bool(r.get("suggestions")) for r in speech),
+                        **{effect: sum(r.get("suggestion_effect") == effect for r in speech)
+                           for effect in ("better", "worse", "same")}},
     }
 
 
@@ -311,7 +336,8 @@ def main(argv: list[str] | None = None) -> int:
     out.mkdir(parents=True, exist_ok=False)
     code = [Path(__file__), Path(am.__file__), Path(lp.__file__), Path(vr.__file__), Path(locked_ledger.__file__),
             ROOT / "scripts/benchmark/retrieval_metrics.py", ROOT / "scripts/benchmark/eval_keyword.py", ROOT / "backend/app/media.py",
-            ROOT / "backend/app/search/query_parser.py"]
+            ROOT / "backend/app/search/query_parser.py", ROOT / "backend/app/voice/pipeline.py",
+            ROOT / "backend/app/voice/suggestions.py", ROOT / "backend/app/ml/asr.py"]
     run = {
         "name": args.name, "created_at": now.isoformat(timespec="seconds"),
         "evaluation_status": "smoke_unreviewed" if smoke else ("locked_test" if args.split == "test" else args.split),
@@ -319,6 +345,7 @@ def main(argv: list[str] | None = None) -> int:
         "retrieval": retrieval,
         "search_config": engine.config.to_dict(),
         "silence_dbfs": float(os.environ.get("VNSTORE_SILENCE_DBFS", "-60")),
+        "audio_preprocessing": preprocess_config(),
         "model": {"adapter": args.adapter, "model_id": adapter.model_id, "revision": adapter.revision,
                   "license": getattr(adapter, "license", None), "config": getattr(adapter, "config", None)},
         "manifest_sha256": hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
