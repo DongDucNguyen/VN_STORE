@@ -2,7 +2,7 @@
 
 Mục tiêu PLAN §8: 600 ảnh query độc lập, khoảng 200 họ sản phẩm; chia theo họ 120/40/40 cho train/dev/test. Ảnh + text là bộ bổ sung 120 truy vấn. Đây là mục tiêu, chưa phải số liệu đã thu.
 
-Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-004-hanhsilk-materials` (11/10) và bật draft để bao phủ 330 sản phẩm (rà soát 11/10/2026). Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2 và evaluator, nhưng chưa có benchmark ảnh thật. Xem [báo cáo hiện trạng](../../reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md).
+Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-006-enriched` (`b98b859a…`, 13/10/2026) và bật draft để bao phủ cả 330 sản phẩm. Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2/OpenCLIP và evaluator, nhưng chưa có benchmark ảnh thật. Bộ ảnh Internet để thử luồng nằm riêng ở [exploratory/](exploratory/expanded-2026-10-13/README.md), không thuộc manifest này. Xem [backlog](../../reports/progress/BACKLOG.md).
 
 **Kế hoạch split theo họ (11/10/2026):** trước khi chụp, lập và khóa kế hoạch bằng `scripts/benchmark/plan_splits.py`. `--split-plan benchmarks/splits/image_families.json` (cùng `--families`) có trong `audit_image_queries.py`, `import_image_session.py`, `apply_image_judgments.py`, `eval_image.py` và báo `split_plan_mismatch` khi query của một họ nằm khác split đã lập. `eval_image.py --split test` bắt buộc kế hoạch `locked`. Xem [benchmarks/splits/README.md](../splits/README.md).
 

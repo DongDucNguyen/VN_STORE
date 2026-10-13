@@ -80,6 +80,8 @@ textarea{width:100%;min-height:52px;padding:6px 8px;border:1px solid var(--line)
 <script>
 const P = JSON.parse(document.getElementById('packet').textContent);
 const $ = (id) => document.getElementById(id);
+// Tên/hướng dẫn lấy từ dữ liệu (tiêu đề Commons…) nên phải thoát trước khi chèn HTML.
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (ch) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[ch]));
 const KEY = 'vnstore-crop-review:' + P.dataset_version + ':' + P.source_crops_sha256;
 const r2 = (v) => Math.round(v * 1000) / 1000;
 const clamp = (v) => Math.min(1, Math.max(0, v));
@@ -106,12 +108,12 @@ function card(c) {
   el.className = 'card'; el.id = 'c-' + c.case_id;
   el.innerHTML = `
     <div>
-      <h2><span>${c.case_id}</span><span class="chip"></span></h2>
-      <div class="muted" style="font-size:13px;margin-bottom:6px">${c.role} · ${c.group}${c.topic ? ' · ' + c.topic : ''} — ${c.title}</div>
-      <div class="stage"><img alt="${c.case_id}" src="${c.image_path}" draggable="false"><div class="box proposed-ghost"></div><div class="box cur"></div></div>
+      <h2><span>${esc(c.case_id)}</span><span class="chip"></span></h2>
+      <div class="muted" style="font-size:13px;margin-bottom:6px">${esc(c.role)} · ${esc(c.group)}${c.topic ? ' · ' + esc(c.topic) : ''} — ${esc(c.title)}</div>
+      <div class="stage"><img alt="${esc(c.case_id)}" src="${esc(c.image_path)}" draggable="false"><div class="box proposed-ghost"></div><div class="box cur"></div></div>
     </div>
     <div>
-      <div class="instr">${c.instruction}</div>
+      <div class="instr">${esc(c.instruction)}</div>
       <div class="muted" style="font-size:13px">Phần ảnh sẽ gửi đi:</div>
       <canvas class="preview"></canvas>
       <div class="size"></div>

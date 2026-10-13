@@ -50,10 +50,15 @@ VNSTORE_IMAGE_INDEX_AUTOBUILD=1 .venv-ml/Scripts/python scripts/benchmark/run_im
 
 Script chuẩn bị ảnh như giao diện `#/image` (xoay EXIF, cắt vùng, cạnh ≤1024 px, JPEG q90) rồi gọi `POST /search/image` của app thật qua TestClient. Ghi `run.json`, `predictions.jsonl`, `run_filled.json` vào `experiments/results/` và báo cáo vào `reports/benchmark/`. Chỉ báo các kiểm tra không cần nhãn; proxy “cùng nhóm hàng lớn” không phải relevance.
 
-Kết quả lần đầu (13/10/2026, OCR tắt, catalog published): [SigLIP2](../../../../reports/benchmark/2026-10-13_034624_image-exploratory-siglip2base.md), [DINOv2](../../../../reports/benchmark/2026-10-13_034641_image-exploratory-dinov2base.md), [OpenCLIP](../../../../reports/benchmark/2026-10-13_034729_image-exploratory-openclipvitb32.md).
+Kết quả hiện hành (13/10/2026, OCR tắt, catalog published, vùng cắt đã duyệt, ghép ảnh + chữ `visual_text_rank=coverage`): [SigLIP2](../../../../reports/benchmark/2026-10-13_041705_image-exploratory-siglip2base-coverage.md), [DINOv2](../../../../reports/benchmark/2026-10-13_041723_image-exploratory-dinov2base-coverage.md), [OpenCLIP](../../../../reports/benchmark/2026-10-13_041810_image-exploratory-openclipvitb32-coverage.md). Cả ba: 250/250 ca, ảnh đối chứng top 1 10/10, 0 vi phạm giá; ảnh đối chứng + chữ đúng với món giữ hạng 1.
+
+Lịch sử cùng ngày: lượt đầu dùng vùng cắt chưa duyệt (`…034624/034641/034729`), lượt hai dùng vùng đã duyệt (`…-reviewed`); cả hai dùng cách ghép cũ (`bm25`), trong đó ảnh Marou + chữ "Marou" rơi khỏi top 10. Lỗi này dẫn tới thay đổi `visual_text_rank`, xem [docs/giai-doan-5.md](../../../../docs/giai-doan-5.md).
+
+Bộ dữ liệu còn phát hiện hạn chế của catalog, không phải lỗi model: danh mục Cốc, ly chỉ có 1 sản phẩm và Túi đan 1 sản phẩm, nên ảnh cốc/túi da trả về đồ khác nhóm; ảnh ngoài catalog có `top_similarity` chồng lên ảnh hợp lệ, chưa đặt được ngưỡng no-match khi chưa có nhãn.
 
 ## Giới hạn
 
 - 90 ảnh Wikimedia Commons giữ `source_declared` (giấy phép theo trang nguồn), 10 ảnh catalog giữ `unknown`. Không suy quyền công bố từ việc tải được file.
-- Ảnh bảo tàng/đồ nước ngoài khác miền ảnh khách hàng chụp sản phẩm Việt. Một số cặp cùng vật thể (`source_group_candidate`) phải ở cùng split nếu sau này dùng cho benchmark.
+- Ảnh bảo tàng/đồ nước ngoài khác miền ảnh khách hàng chụp sản phẩm Việt.
+- Vùng cắt: 3 vùng duyệt trên trang, 17 vùng người duyệt xác nhận trong chat (ghi trong `review_history` của `crops.reviewed.json`). Một số cặp cùng vật thể (`source_group_candidate`) phải ở cùng split nếu sau này dùng cho benchmark.
 - Muốn dùng làm benchmark theo PLAN §8 vẫn cần người duyệt độc lập/quyền/họ, gán nhãn relevance qua packet pool, lập split và nhập qua `import_image_session.py`/`apply_image_judgments.py`.

@@ -29,6 +29,7 @@ FIELD_WEIGHTS = {
 }
 ACCENT_EXACT_WEIGHT = 0.5      # điểm cộng khi khớp đúng dấu
 RELATIVE_CUTOFF = 0.25         # bỏ kết quả có điểm < 25% điểm cao nhất
+COVERAGE_CUTOFF = 0.5          # ảnh + chữ: chỉ xếp hạng chữ cho sản phẩm phủ ≥ 50% mức phủ cao nhất
 HINT_BOOST = 0.3
 EVIDENCE_BOOST = 0.02
 TEXT_EXCLUSION_PENALTY = 0.3
@@ -665,6 +666,33 @@ class SearchEngine:
         ranked.sort(key=lambda x: (-x[1], text_rank.get(x[0], len(text) + 1), self.snap.products[x[0]]["name_vi"]))
         return ranked
 
+    def text_coverage(self, text: str, product_ids) -> dict[str, float] | None:
+        """Độ phủ IDF của câu gõ cho từng sản phẩm (1 = đủ ý). None khi câu không còn từ nội dung (chỉ giá/phủ
+        định). Dùng để kiểm tra ảnh + chữ không cần nhãn: kết quả có đúng điều người dùng gõ hay không."""
+        _, _, _, cover = self._query_terms(parse_query(text or "", self.vocab))
+        return {d: self._coverage(d, cover) for d in product_ids} if cover else None
+
+    def _coverage_ranks(self, parsed: ParsedQuery, pool: set[str], cover: list[dict[str, Any]]
+                        ) -> list[tuple[str, int]]:
+        """Hạng của nhánh chữ khi gộp với ảnh: theo bậc (không bị loại trừ, độ phủ IDF), đồng hạng khi bằng nhau.
+
+        Chữ đi kèm ảnh nêu điều kiện/thuộc tính, không phải độ liên quan: mọi sản phẩm Marou khớp "Marou" như nhau.
+        Xếp theo điểm BM25 thô thì tần suất từ và độ dài tên (sản phẩm lặp "Marou" trong tên) quyết định thứ tự,
+        đủ để đẩy ảnh gần trùng (cosine 0,999) ra khỏi top 10. Đồng hạng giữ thứ tự ảnh giữa các sản phẩm khớp chữ
+        như nhau; sản phẩm phủ nhiều ý hơn vẫn được ưu tiên. Hạng kiểu thi đấu (1, 2, 2, 4). Sản phẩm phủ dưới
+        COVERAGE_CUTOFF lần mức phủ cao nhất không được cộng (như RELATIVE_CUTOFF của BM25): với RRF k=60, khớp một
+        phần ("áo" của "áo sơ mi") gần bằng khớp đủ nếu vẫn được xếp hạng."""
+        text_excl = [strip_accents(e.value) for e in parsed.exclusions if e.field == "text"]
+        covs = {d: round(self._coverage(d, cover), 6) for d in pool}
+        floor = COVERAGE_CUTOFF * max(covs.values(), default=0)
+        keys = {d: (not any(f" {t} " in f" {self._plain_blob[d]} " for t in text_excl), c)
+                for d, c in covs.items() if c > 0 and c >= floor}
+        ordered = sorted(keys.values(), reverse=True)
+        first = {}
+        for i, k in enumerate(ordered, 1):
+            first.setdefault(k, i)
+        return sorted(((d, first[k]) for d, k in keys.items()), key=lambda x: (x[1], x[0]))
+
     def _fuse(self, parsed: ParsedQuery, candidates: set[str], visual: list[VisualHit], q_plain, q_acc, ocr_text="",
               cover=None) -> list[tuple[str, float, set[str]]]:
         """Ảnh (+ chữ): gộp thứ hạng bằng RRF, không cộng cosine với điểm BM25 (PLAN.md mục 4).
@@ -681,11 +709,15 @@ class SearchEngine:
         for rank, d in enumerate(vis, 1):
             fused[d] += 1 / (cfg.rrf_k + rank)
             fields[d] = {"image"}
-        for rank, (d, _, fs) in enumerate(text, 1):
+        text_fields = {d: fs for d, _, fs in text}
+        text_ranks = (self._coverage_ranks(parsed, set(vis) | set(text_fields), cover)
+                      if text and cover and cfg.visual_text_rank == "coverage"
+                      else [(d, rank) for rank, (d, _, _) in enumerate(text, 1)])
+        for d, rank in text_ranks:
             if not cfg.text_weight:
                 break
             fused[d] += cfg.text_weight / (cfg.rrf_k + rank)
-            fields[d] = fields.get(d, set()) | fs
+            fields[d] = fields.get(d, set()) | text_fields.get(d, set())
         # OCR is noisy evidence only. Never parse it into user constraints or origin claims.
         if ocr_text and cfg.ocr_weight:
             acc, plain = analyze(ocr_text, drop_stopwords=True)

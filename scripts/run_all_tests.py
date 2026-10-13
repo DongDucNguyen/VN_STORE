@@ -48,7 +48,7 @@ STEPS: list[tuple[str, list[str] | None, Path, bool]] = [
     ("Fixture khớp generator", None, ROOT, False),
     ("Backend pytest", [PY, "-m", "pytest", "-q"], ROOT / "backend", False),
     ("Giải mã ảnh (Pillow, .venv-ml)", [str(ML_PY), "-X", "utf8", "-m", "unittest", "discover", "-s",
-                                         "scripts/benchmark/tests", "-p", "test_image_pixels.py"], ROOT, False),
+                                         "scripts/benchmark/tests", "-p", "test_image_*.py"], ROOT, False),
     ("Frontend typecheck", [NPX, "tsc", "-b"], ROOT / "frontend", False),
     ("Frontend build", [NPX, "vite", "build", "--outDir", str(ROOT / "artifacts" / "build"), "--emptyOutDir"],
      ROOT / "frontend", False),

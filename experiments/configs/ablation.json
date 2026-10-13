@@ -24,6 +24,7 @@
       {"name": "text025", "search": {"text_weight": 0.25}},
       {"name": "rrf20", "search": {"rrf_k": 20}},
       {"name": "generic", "search": {"generic_text_mode": "visual_only"}},
+      {"name": "text-bm25", "search": {"visual_text_rank": "bm25"}},
       {"name": "single-view", "env": {"VNSTORE_IMAGE_MULTI_VIEW": "0"}},
       {"name": "ocr", "env": {"VNSTORE_OCR": "rapidocr-latin"}, "search": {"ocr_weight": 0.35}},
       {"name": "crop", "requires_crops": true}

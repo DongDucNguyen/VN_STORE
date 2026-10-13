@@ -14,9 +14,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from run_image_exploratory import valid_box  # noqa: E402
+
 TEMPLATE = Path(__file__).with_name("crop_review_template.html")
 DEFAULT_DATASET = ROOT / "benchmarks" / "image" / "exploratory" / "expanded-2026-10-13"
 
@@ -33,6 +38,8 @@ def build(ds: Path) -> dict:
             continue
         if c["case_id"] not in crops["crops"]:
             raise SystemExit(f"{c['case_id']}: chưa có vùng đề xuất trong crops.json")
+        if not valid_box(crops["crops"][c["case_id"]]):
+            raise SystemExit(f"{c['case_id']}: vùng đề xuất không hợp lệ: {crops['crops'][c['case_id']]}")
         it = images[c["image_id"]]
         if not (ds / it["image_path"]).is_file():
             raise SystemExit(f"{c['image_id']}: thiếu file {it['image_path']}")

@@ -2,6 +2,8 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+Mới nhất 13/10 (sáng): [bộ ảnh thử khám phá, ghép ảnh + chữ theo độ phủ, token kích thước](reports/progress/2026-10-13_GD5_bo-anh-kham-pha-va-gop-anh-chu.md) — sửa lỗi ảnh gần trùng + chữ đúng với món rơi khỏi top 10 và "khăn 180 x 65" trả sô cô la. Kiểm chứng: **771 backend, 28 Pillow, 142 E2E đạt**.
+
 Công cụ và độ ổn định (13/10): đã hoàn thành [chuyển bản nháp keyword khi catalog đổi](reports/progress/2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md), giữ điểm có nội dung không đổi và yêu cầu xác nhận lại. Kiểm chứng cuối: **735 backend, 22 Pillow, 140 E2E đạt**; 3 test tùy chọn được bỏ qua. Catalog hiện có 328/330 sản phẩm published; nghiệm thu model vẫn chờ dữ liệu thật.
 
 Cập nhật 13/10: thêm **nghe lại bản ghi trước khi tìm**, sửa lỗi micro/ghi âm bị treo, chặn WAV thiếu dữ liệu, củng cố gợi ý tiếng Việt và ngăn autocomplete hiển thị phản hồi cũ. Xem [phân tích và kết quả đợt rà soát](reports/progress/2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md).
@@ -81,15 +83,17 @@ Biến môi trường backend: `VNSTORE_CATALOG`, `VNSTORE_INCLUDE_DRAFTS=1` (xe
 E2E bật adapter giả và micro giả của Chrome (phát file âm 440 Hz sinh trong `artifacts/e2e-media/`).
 Frontend gọi `/api/*` và `/images/*`, Vite proxy sang `VNSTORE_API` (mặc định `http://127.0.0.1:8000`).
 
-## Dữ liệu và ảnh hiện tại — 10/10/2026
+## Dữ liệu và ảnh hiện tại — 13/10/2026
 
-Catalog `seed-004-hanhsilk-materials` (= `seed-003-dot-002` + 9 chất liệu Hanhsilk từ mô tả nguồn, 11/10): **330 sản phẩm draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, 60 sản phẩm mới mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Xem [báo cáo nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) và [hồ sơ nguồn](data_collection/batches/2026-10-10_dot-002/README.md). Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh); hai bình Hanoia nằm trong nhánh “Bình, lọ trang trí”.
+Catalog `seed-006-enriched` (`b98b859a…`): **330 sản phẩm, 328 published (demo nội bộ), 2 draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, khoảng 60 sản phẩm mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Các bước: [nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) (`seed-003`), chất liệu Hanhsilk (`seed-004`), [publish demo nội bộ](reports/progress/2026-10-11_GD1_publish-demo-noi-bo.md) (`seed-005`), [bổ sung chất liệu/màu có căn cứ](reports/progress/2026-10-11_GD1-2_bo-sung-tu-dong.md) (`seed-006`). Quyền ảnh vẫn `unknown`, chưa công bố công khai. Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh).
+
+Bộ ảnh thử tìm bằng ảnh (không phải benchmark): [benchmarks/image/exploratory/](benchmarks/image/exploratory/expanded-2026-10-13/README.md), 100 ảnh / 250 ca, chạy bằng `scripts/benchmark/run_image_exploratory.py`.
 Ảnh nằm tại `assets/products/<product-id>/`; DB có đường dẫn, kích thước và SHA-256.
 Xem [bảng duyệt ảnh](artifacts/image_review/2026-10-10_seed-002-taxonomy/index.html),
 [manifest nguồn và quyết định chọn/loại](data_collection/images/2026-10-10/manifest.json),
 [phân tích dự án và tiến độ](reports/progress/2026-10-10_GD1_ra-soat-du-an-va-anh.md).
 
-Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem ảnh trong chế độ phát triển.
+Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem cả 2 sản phẩm draft trong chế độ phát triển.
 Chế độ mặc định chỉ hiển thị `published`, hiện có 0 sản phẩm. Quyền ảnh vẫn `unknown` (cả 814 ảnh); việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
 
 ```bash

@@ -2,6 +2,8 @@
 
 Thư mục này ghi lại tiến độ triển khai [PLAN.md](../../PLAN.md) theo từng giai đoạn.
 
+**Mới nhất 13/10/2026 (sáng):** [bộ ảnh thử khám phá, ghép ảnh + chữ theo độ phủ, token kích thước](2026-10-13_GD5_bo-anh-kham-pha-va-gop-anh-chu.md). Bộ 100 ảnh / 250 ca nằm ở `benchmarks/image/exploratory/` (không phải benchmark); sửa hai lỗi xếp hạng tìm thấy nhờ kiểm tra không cần nhãn. Dữ liệu voice/ảnh thật và nhãn đã duyệt vẫn chặn nghiệm thu.
+
 Kiểm chứng hiệu quả 13/10: [đối chứng mã trước và sau sửa](2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md), tái hiện 9 ca backend và 3 lỗi micro trên mã cũ; đã siết kiểm thử lỗi micro bất đồng bộ để tránh đạt nhầm vì bản ghi quá ngắn.
 
 **Hiện trạng 13/10/2026:** [hoàn thành công cụ chuyển bản nháp và cập nhật trạng thái](2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md). P1.1–P1.17 đã có công cụ; kiểm chứng cuối **735 backend (+3 skip), 22 Pillow, 140 E2E đạt**, validator/typecheck/build đạt. Ưu tiên đã xác nhận: công cụ và độ ổn định trước. Catalog 328 published/2 draft; dữ liệu voice/ảnh thật và nhãn đã duyệt vẫn chặn nghiệm thu.

@@ -81,11 +81,22 @@ def pct(values: list[float], q: float) -> float | None:
     return round(s[min(len(s) - 1, int(round(q * (len(s) - 1))))], 2)
 
 
+def valid_box(b) -> bool:
+    return (isinstance(b, list) and len(b) == 4 and all(type(v) in (int, float) and 0 <= v <= 1 for v in b)
+            and b[0] < b[2] and b[1] < b[3])
+
+
 def load_dataset(ds: Path, crops_file: Path | None = None) -> tuple[dict, list[dict], dict]:
     manifest = json.loads((ds / "manifest.json").read_text(encoding="utf-8"))
     cases = json.loads((ds / "test_cases.json").read_text(encoding="utf-8"))["cases"]
     crops_file = crops_file or ds / "crops.json"
     crops = json.loads(crops_file.read_text(encoding="utf-8"))["crops"] if crops_file.exists() else {}
+    crop_cases = {c["case_id"] for c in cases if c["task"] == "manual_crop_comparison"}
+    for cid, box in crops.items():
+        if cid not in crop_cases:
+            raise SystemExit(f"{crops_file.name}: {cid} không phải ca cắt vùng của bộ dữ liệu")
+        if not valid_box(box):
+            raise SystemExit(f"{crops_file.name}: vùng của {cid} không hợp lệ: {box}")
     images = {it["image_path"]: it for it in manifest["images"]}
     for it in manifest["images"]:
         if sha256((ds / it["image_path"]).read_bytes()) != it["sha256"]:
@@ -94,6 +105,21 @@ def load_dataset(ds: Path, crops_file: Path | None = None) -> tuple[dict, list[d
         if c["image_path"] not in images:
             raise SystemExit(f"{c['case_id']}: ảnh không có trong manifest")
     return manifest, cases, crops
+
+
+def crops_meta(path: Path) -> dict:
+    """Ai chọn/duyệt vùng cắt, để báo cáo không ghi nhầm vùng đã duyệt là chưa duyệt (và ngược lại)."""
+    if not path.exists():
+        return {"file": None, "reviewed": False}
+    d = json.loads(path.read_text(encoding="utf-8"))
+    return {"file": rel(path), "sha256": sha256(path.read_bytes()), "kind": d.get("kind"),
+            "reviewed": d.get("kind") == "vnstore_crop_review", "reviewed_by": d.get("reviewed_by"),
+            "reviewed_at": d.get("reviewed_at"), "complete": d.get("complete"),
+            "chosen_by": d.get("chosen_by") or d.get("proposed_by"), "n": len(d.get("crops") or {})}
+
+
+def fmt(v, spec: str = ".3f") -> str:
+    return "—" if v is None else format(v, spec)
 
 
 def top_group(product: dict, categories: dict) -> str:
@@ -105,7 +131,7 @@ def run(args) -> dict:
     os.environ["VNSTORE_IMAGE_ADAPTER"] = args.adapter
     sys.path.insert(0, str(ROOT / "backend"))
     from fastapi.testclient import TestClient
-    from app.main import app
+    from app.main import app, state
     from app.search.query_parser import PriceConstraint
 
     ds = args.dataset.resolve()
@@ -126,6 +152,7 @@ def run(args) -> dict:
         health = client.get("/health").json()
         load_s = time.perf_counter() - t_load
         img_status = {"catalog": health.get("catalog"), "image": health["search"]["models"]["image"]}
+        engine = state.bundle.engine
         for c in cases:
             it = images[c["image_path"]]
             crop = crops.get(c["case_id"]) if c["task"] == "manual_crop_comparison" else None
@@ -139,6 +166,7 @@ def run(args) -> dict:
             wall_ms = (time.perf_counter() - t0) * 1000
             row = {"case_id": c["case_id"], "image_id": it["id"], "task": c["task"], "role": it["role"],
                    "group": it["group"], "topic": it.get("topic"), "text_vi": c.get("text_vi") or "",
+                   "expected_product_id": it.get("expected_product_id"),
                    "crop": crop, "query_sha256": sha256(body), "http_status": r.status_code,
                    "wall_ms": round(wall_ms, 2)}
             data = r.json()
@@ -156,13 +184,19 @@ def run(args) -> dict:
                 unknown_price_excluded=data.get("unknown_price_excluded"), relaxations=data.get("relaxations"),
                 warnings=data["warnings"], timings_ms=data["timings_ms"],
                 model={"model_id": data["visual"]["model_id"], "revision": data["visual"]["revision"]})
+            if row["text_vi"]:
+                cov = engine.text_coverage(row["text_vi"], [x["product_id"] for x in row["results"]])
+                if cov is not None:
+                    for x in row["results"]:
+                        x["text_coverage"] = round(cov[x["product_id"]], 4)
             if iq.get("price"):
                 pc = PriceConstraint(**{k: v for k, v in iq["price"].items() if k in PriceConstraint.__dataclass_fields__})
                 row["price_violations"] = [x["product_id"] for x in row["results"] if not any(
                     v["price_vnd"] is not None and pc.accepts(v["price_vnd"]) for v in products[x["product_id"]]["variants"])]
             rows.append(row)
+        search_config = engine.config.to_dict()
     return {"rows": rows, "health_image": img_status, "load_s": round(load_s, 2), "manifest": manifest,
-            "catalog_sha256": sha256(catalog_bytes), "products": products}
+            "catalog_sha256": sha256(catalog_bytes), "products": products, "search_config": search_config}
 
 
 def summarize(rows: list[dict], k_proxy: int = 5) -> dict:
@@ -216,6 +250,23 @@ def summarize(rows: list[dict], k_proxy: int = 5) -> dict:
         "zero_results": [r["case_id"] for r in it if r["total"] == 0],
         "price_violations": {r["case_id"]: r["price_violations"] for r in it if r.get("price_violations")},
         "filters_seen": sorted({f["key"].split(":")[0] for r in it for f in r["applied_filters"]})}
+    sat = [statistics.mean(x["text_coverage"] for x in r["results"][:k_proxy])
+           for r in it if r["results"] and "text_coverage" in r["results"][0]]
+    s["image_text"]["text_coverage_top5"] = {"n": len(sat), "mean": round(statistics.mean(sat), 3) if sat else None}
+    vis = [statistics.mean(x["similarity"] or 0 for x in r["results"][:k_proxy]) for r in it if r["results"]]
+    s["image_text"]["visual_similarity_top5"] = round(statistics.mean(vis), 4) if vis else None
+    # Ảnh trùng gallery + chữ: sản phẩm gốc nên giữ hạng đầu khi chữ đúng với nó; rơi xuống là dấu hiệu gộp hạng
+    # sai (trường hợp Marou 13/10). Chữ đổi thuộc tính hoặc bộ lọc loại sản phẩm thì rơi là đúng: xem cột chữ.
+    ctrl_text = []
+    for r in it:
+        if r["role"] != "gallery_control" or not r.get("expected_product_id"):
+            continue
+        ids = [x["product_id"] for x in r["results"]]
+        exp = r["expected_product_id"]
+        ctrl_text.append({"case_id": r["case_id"], "text_vi": r["text_vi"], "expected": exp,
+                          "rank": ids.index(exp) + 1 if exp in ids else None,
+                          "filters": [f["key"] for f in r["applied_filters"]]})
+    s["image_text"]["gallery_control_with_text"] = ctrl_text
 
     # 5. Cắt vùng so với toàn ảnh: trùng top-5 và đổi proxy nhóm.
     crop_rows = []
@@ -237,17 +288,18 @@ def summarize(rows: list[dict], k_proxy: int = 5) -> dict:
                          "items": crop_rows}
 
     # 6. Độ trễ (TestClient, cùng tiến trình; không phải đo trình duyệt).
-    emb = [r["timings_ms"]["embed"] for r in ok]
-    tot = [r["timings_ms"]["total"] for r in ok]
+    # Ca đầu gồm khởi động lười (CUDA/cuDNN), tách riêng để p95 phản ánh trạng thái ấm.
+    emb = [r["timings_ms"]["embed"] for r in ok[1:]]
+    tot = [r["timings_ms"]["total"] for r in ok[1:]]
     s["latency_ms"] = {"embed_p50": pct(emb, 0.5), "embed_p95": pct(emb, 0.95),
                        "api_total_p50": pct(tot, 0.5), "api_total_p95": pct(tot, 0.95),
-                       "first_case_total": tot[0] if tot else None}
+                       "first_case_total": ok[0]["timings_ms"]["total"] if ok else None, "n_warm": len(tot)}
     return s
 
 
-def write_report(name: str, args, res: dict, s: dict, run_dir: Path, report_base: Path) -> None:
+def write_report(name: str, args, res: dict, s: dict, run_dir: Path, report_base: Path, crops: dict) -> None:
     ok = [r for r in res["rows"] if r.get("status") == "ok"]
-    model = ok[0]["model"] if ok else {}
+    model = (ok[0].get("model") if ok else None) or {}
     g, ip, cv, lat = s["gallery_control"], s["image_text"], s["crop_vs_full"], s["latency_ms"]
     lines = [
         f"# Bộ ảnh thử khám phá — {name}", "",
@@ -255,7 +307,8 @@ def write_report(name: str, args, res: dict, s: dict, run_dir: Path, report_base
         "chưa có nhãn relevance, duyệt độc lập hay split; các con số dưới đây là kiểm tra không cần nhãn.", "",
         f"- Adapter: `{args.adapter}` → `{model.get('model_id')}` @ `{model.get('revision')}`",
         f"- Catalog: `{res['catalog_sha256'][:12]}…`; hiển thị mặc định API (published); OCR: "
-        f"`{os.environ.get('VNSTORE_OCR', 'off')}`; top-k {args.top_k}",
+        f"`{os.environ.get('VNSTORE_OCR', 'off')}`; top-k {args.top_k}; ghép ảnh + chữ "
+        f"`visual_text_rank={res['search_config'].get('visual_text_rank')}`",
         f"- Ca: {s['ok']}/{s['cases']} chạy được; lỗi {len(s['errors'])}; bỏ qua {len(s['skipped'])}",
         f"- Chạy lúc {datetime.now(TZ).isoformat(timespec='seconds')}; khởi động app + nạp model/chỉ mục {res['load_s']} s",
         f"- Dữ liệu chi tiết: `{rel(run_dir)}/`", "",
@@ -263,7 +316,7 @@ def write_report(name: str, args, res: dict, s: dict, run_dir: Path, report_base
         f"Đúng sản phẩm ở top 1: **{g['rank1']}/{g['n']}**, trong top 5: **{g['in_top5']}/{g['n']}**. "
         "Ảnh này trùng gallery nên chỉ chứng minh luồng hoạt động.", "",
         "| Ảnh | Sản phẩm kỳ vọng | Hạng | top_similarity |", "|---|---|---:|---:|",
-        *[f"| {c['image_id']} | {c['expected']} | {c['rank'] or '—'} | {c['top_similarity']:.3f} |" for c in g["items"]], "",
+        *[f"| {c['image_id']} | {c['expected']} | {c['rank'] or '—'} | {fmt(c['top_similarity'])} |" for c in g["items"]], "",
         "## 2. Proxy cùng nhóm hàng lớn (ảnh thuần ngoài gallery)", "",
         "Tỷ lệ kết quả thuộc cùng nhóm cấp 1 của catalog (gốm sứ, mây tre, dệt may, gỗ/sơn mài, thực phẩm) với ảnh. "
         "**Không phải relevance**: cùng nhóm chưa chắc giống, khác nhóm có thể vẫn hợp lý (ví dụ hộp sơn mài đựng trà).", "",
@@ -283,26 +336,40 @@ def write_report(name: str, args, res: dict, s: dict, run_dir: Path, report_base
               "## 4. Ảnh + chữ", "",
               f"{ip['n']} ca; {ip['with_hard_filter']} ca có bộ lọc cứng ({', '.join(ip['filters_seen']) or '—'}), "
               f"{ip['with_price']} ca có điều kiện giá. Hết kết quả: {len(ip['zero_results'])} ca. "
-              f"**Vi phạm giá trong kết quả: {len(ip['price_violations'])} ca.**", ""]
+              f"**Vi phạm giá trong kết quả: {len(ip['price_violations'])} ca.** Độ phủ chữ trung bình của top 5 "
+              f"(tỷ lệ IDF câu gõ mà kết quả khớp) {fmt(ip['text_coverage_top5']['mean'])} trên "
+              f"{ip['text_coverage_top5']['n']} ca có từ nội dung; tương đồng ảnh top 5 "
+              f"{fmt(ip['visual_similarity_top5'], '.4f')}.", "",
+              "Ảnh đối chứng + chữ: sản phẩm gốc nên giữ hạng đầu khi chữ đúng với nó. Rơi hạng là đúng khi bộ lọc "
+              "loại sản phẩm (giá/chưa có giá) hoặc chữ đổi loại/chất liệu.", "",
+              "| Ca | Chữ | Bộ lọc | Hạng sản phẩm gốc |", "|---|---|---|---:|",
+              *[f"| {c['case_id']} | {c['text_vi']} | {', '.join(c['filters']) or '—'} | {c['rank'] or '—'} |"
+                for c in ip["gallery_control_with_text"]], ""]
     if ip["zero_results"]:
         lines += ["Ca hết kết quả: " + ", ".join(f"`{c}`" for c in ip["zero_results"]), ""]
     if ip["price_violations"]:
         lines += ["Vi phạm giá: " + json.dumps(ip["price_violations"], ensure_ascii=False), ""]
     lines += ["## 5. Cắt vùng so với toàn ảnh", "",
-              f"{cv['n']} ca, vùng cắt ghi trước khi chạy (`{crops_path(args).name}`). Trùng top-5 trung bình "
+              f"{cv['n']} ca, vùng cắt ghi trước khi chạy (`{crops_path(args).name}`"
+              + (f", duyệt bởi {crops['reviewed_by']} lúc {crops['reviewed_at']}"
+                 + ("" if crops.get("complete") else ", CHƯA đủ") if crops["reviewed"] else ", chưa người duyệt")
+              + f"). Trùng top-5 trung bình "
               f"{cv['mean_top5_overlap']}/5; proxy nhóm tốt hơn ở {cv['group_proxy_better']} ca, kém hơn ở "
               f"{cv['group_proxy_worse']} ca.", "",
               "| Ca | Trùng top-5 | Cùng nhóm top-5 (toàn → cắt) | top_sim (toàn → cắt) |", "|---|---:|---:|---:|",
               *[f"| {c['case_id']} | {c['top5_overlap']} | {c['full_same_group_top5']} → {c['crop_same_group_top5']} | "
-                f"{c['full_top_similarity']:.3f} → {c['crop_top_similarity']:.3f} |" for c in cv["items"]], "",
+                f"{fmt(c['full_top_similarity'])} → {fmt(c['crop_top_similarity'])} |" for c in cv["items"]], "",
               "## 6. Độ trễ (TestClient trong tiến trình)", "",
               f"Embedding p50 {lat['embed_p50']} ms, p95 {lat['embed_p95']} ms; tổng API p50 {lat['api_total_p50']} ms, "
-              f"p95 {lat['api_total_p95']} ms; ca đầu {lat['first_case_total']} ms. Không thay cho đo trình duyệt "
+              f"p95 {lat['api_total_p95']} ms ({lat['n_warm']} ca, không tính ca đầu); ca đầu "
+              f"{lat['first_case_total']} ms. Không thay cho đo trình duyệt "
               "theo `latency_protocol.py`.", "",
               "## Giới hạn", "",
               "- Chưa có nhãn relevance/no-match, duyệt độc lập, quyền ảnh hay split: không tính nDCG/Recall, không dùng để chọn model.",
               "- Ảnh chủ yếu là Wikimedia Commons (bảo tàng, đồ nước ngoài): khác miền ảnh khách hàng chụp sản phẩm Việt.",
-              "- Vùng cắt do trợ lý chọn theo hướng dẫn trong test_cases, chưa được người duyệt xác nhận.", ""]
+              ("- Vùng cắt do trợ lý đề xuất theo hướng dẫn trong test_cases, người duyệt đã xác nhận "
+               f"({crops['reviewed_by']})." if crops["reviewed"] else
+               "- Vùng cắt do trợ lý chọn theo hướng dẫn trong test_cases, chưa được người duyệt xác nhận."), ""]
     report_base.with_suffix(".md").write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -321,11 +388,8 @@ def main() -> int:
     name = args.name or args.adapter.split(":")[-1].lower()
 
     res = run(args)
-    for r in res["rows"]:
-        if r.get("role") == "gallery_control":
-            it = next(i for i in res["manifest"]["images"] if i["id"] == r["image_id"])
-            r["expected_product_id"] = it.get("expected_product_id")
     s = summarize(res["rows"])
+    crops = crops_meta(crops_path(args))
 
     stamp = datetime.now(TZ).strftime("%Y-%m-%d_%H%M%S")
     run_dir = args.results_dir / f"{stamp}_image-exploratory_{name}"
@@ -336,15 +400,15 @@ def main() -> int:
     ok = [r for r in res["rows"] if r.get("status") == "ok"]
     run_info = {
         "kind": "image_exploratory_smoke", "status": "smoke_unreviewed", "benchmark_approved": False,
-        "adapter": args.adapter, "model": ok[0]["model"] if ok else None,
+        "adapter": args.adapter, "model": ok[0].get("model") if ok else None,
         "dataset": rel(args.dataset.resolve()),
         "dataset_version": res["manifest"]["dataset_version"],
         "manifest_sha256": sha256((args.dataset / "manifest.json").read_bytes()),
         "test_cases_sha256": sha256((args.dataset / "test_cases.json").read_bytes()),
-        "crops_file": rel(crops_path(args)),
-        "crops_sha256": sha256(crops_path(args).read_bytes()) if crops_path(args).exists() else None,
+        "crops": crops,
         "catalog_sha256": res["catalog_sha256"], "visibility": "published (API default)",
         "search_env": {k: v for k, v in os.environ.items() if k.startswith("VNSTORE_")},
+        "search_config": res["search_config"],
         "client_preprocess": {"max_side": MAX_UPLOAD_SIDE, "jpeg_quality": JPEG_QUALITY, "exif_transpose": True,
                               "alpha": "white"},
         "top_k": args.top_k, "app_load_s": res["load_s"], "health_image": res["health_image"],
@@ -355,7 +419,8 @@ def main() -> int:
     filled = {"dataset_version": res["manifest"]["dataset_version"], "catalog_sha256": res["catalog_sha256"],
               "model_id": run_info["model"] and run_info["model"]["model_id"],
               "revision": run_info["model"] and run_info["model"]["revision"],
-              "search_config": {"env": run_info["search_env"], "visibility": run_info["visibility"], "top_k": args.top_k},
+              "search_config": {"env": run_info["search_env"], "effective": res["search_config"],
+                                "visibility": run_info["visibility"], "top_k": args.top_k},
               "started_at": run_info["created_at"],
               "cases": [{"case_id": r["case_id"], "result_product_ids": [x["product_id"] for x in r.get("results", [])],
                          "timings_ms": r.get("timings_ms"), "filters_observed": r.get("applied_filters"),
@@ -368,7 +433,7 @@ def main() -> int:
     base = args.report_dir / f"{stamp}_image-exploratory-{name}"
     base.with_suffix(".json").write_text(json.dumps({k: v for k, v in run_info.items()}, ensure_ascii=False, indent=2)
                                          + "\n", encoding="utf-8")
-    write_report(name, args, res, s, run_dir, base)
+    write_report(name, args, res, s, run_dir, base, crops)
     print(f"{s['ok']}/{s['cases']} ca; gallery_control top1 {s['gallery_control']['rank1']}/{s['gallery_control']['n']}; "
           f"proxy top5 {s['group_proxy']['all']['top5_same_group']}; vi phạm giá {len(s['image_text']['price_violations'])}")
     print(base.with_suffix(".md"))

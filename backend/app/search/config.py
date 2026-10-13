@@ -46,6 +46,10 @@ class SearchConfig:
     text_weight: float = 1.0
     ocr_weight: float = 0.0
     generic_text_mode: str = "rrf"  # rrf | visual_only (still applies hard filters)
+    # Hạng nhánh chữ khi gộp với ảnh. coverage (13/10): bậc theo độ phủ IDF, đồng hạng khi khớp như nhau, nên chữ
+    # đúng với món trong ảnh không đẩy ảnh gần trùng xuống (Marou + ảnh Marou: hạng 1, bm25 cũ: ngoài top 10).
+    # bm25: thứ tự điểm BM25 thô như trước 13/10, giữ để so sánh/ablation.
+    visual_text_rank: str = "coverage"  # coverage | bm25
     image_min_similarity: float | None = None
 
     def __post_init__(self):
@@ -67,8 +71,9 @@ class SearchConfig:
         if (any(type(getattr(self, k)) is not bool for k in ("strict_accents", "exact_latin_bonus", "lexicon",
                                                               "typo_correction"))
                 or self.generic_text_mode not in ("rrf", "visual_only")
+                or self.visual_text_rank not in ("coverage", "bm25")
                 or self.semantic_mode not in ("adaptive", "rrf")):
-            raise ValueError("invalid boolean setting/generic_text_mode/semantic_mode")
+            raise ValueError("invalid boolean setting/generic_text_mode/visual_text_rank/semantic_mode")
 
     @classmethod
     def from_dict(cls, data: dict) -> "SearchConfig":

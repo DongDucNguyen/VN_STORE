@@ -52,14 +52,29 @@ _UNIT_CANON = {"g": "g", "gr": "g", "gram": "g", "gam": "g", "kg": "kg", "ml": "
 _NUM_UNIT = re.compile(r"^(\d+(?:[.,]\d+)*)(" + "|".join(sorted(_UNIT_CANON, key=len, reverse=True)) + r")$")
 UNIT_TOKENS = frozenset(_UNIT_CANON.values())
 _NUM = re.compile(r"^\d+(?:[.,]\d+)*$")
+# Kích thước "180x65cm", "180 x 65 cm", "180×65", "40 x 30 x 20" → một token "180x65" (+ "cm"). Trước 13/10 câu
+# "khăn 180 x 65" tách thành "x", "65" và khớp tên sô cô la ("Set Of 6 X 80G", "65%"), còn "180x65" không khớp
+# "180x65cm" trong mô tả. Chữ ngay sau số (80G, 4G) chặn khớp, nên "6 X 80G" vẫn là số lượng × khối lượng.
+# Chỉ số nguyên: token không giữ được dấu thập phân giữa hai số ("1.5x2"), nên "1,5 x 2" giữ cách tách cũ.
+_DIM = re.compile(r"(?<![0-9a-zà-ỹđ.,])(\d+)\s*(cm|mm)?\s*[x×*]\s*(\d+)"
+                  r"(?:\s*(?:cm|mm)?\s*[x×*]\s*(\d+))?\s*(cm|mm)?(?![0-9a-zà-ỹđ]|[.,]\d)")
+
+
+def _dimensions(text: str) -> str:
+    def canon(m: re.Match) -> str:
+        unit = m.group(5) or m.group(2)
+        dims = "x".join(g for g in (m.group(1), m.group(3), m.group(4)) if g)
+        return f" {dims} {unit} " if unit else f" {dims} "
+    return _DIM.sub(canon, text)
 
 
 def tokens(text: str) -> list[str]:
     """Tách theo âm tiết (khoảng trắng/dấu câu). Giữ số có dấu chấm/phẩy như 1.5, 500.000.
 
-    Số dính đơn vị đo được tách và chuẩn hóa đơn vị ("80gr" → "80", "g")."""
+    Số dính đơn vị đo được tách và chuẩn hóa đơn vị ("80gr" → "80", "g"); kích thước gộp thành một token
+    ("180 x 65 cm" → "180x65", "cm")."""
     out: list[str] = []
-    for t in _TOKEN.findall(normalize(text)):
+    for t in _TOKEN.findall(_dimensions(normalize(text))):
         m = _NUM_UNIT.match(t)
         if m:
             out += [m.group(1), _UNIT_CANON[m.group(2)]]

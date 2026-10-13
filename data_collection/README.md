@@ -1,10 +1,14 @@
 # Thu thập dữ liệu sản phẩm
 
-## Snapshot hiện tại — seed-004-hanhsilk-materials (11/10/2026)
+## Snapshot hiện tại — seed-006-enriched (11/10/2026)
+
+`seed-005-published-internal-demo`: chủ dự án xác nhận nguồn, publish 328 sản phẩm cho demo nội bộ; 2 sản phẩm thiếu căn cứ claim Việt giữ draft; quyền ảnh vẫn `unknown` ([báo cáo](../reports/progress/2026-10-11_GD1_publish-demo-noi-bo.md)). `seed-006-enriched`: `enrich_from_archive.py` điền chất liệu/màu có căn cứ từ trang nguồn đã lưu ([báo cáo](../reports/progress/2026-10-11_GD1-2_bo-sung-tu-dong.md)). Hash `b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993`; còn 74 sản phẩm thiếu giá, 6 thiếu chất liệu, 196 thiếu màu.
+
+## Snapshot trước — seed-004-hanhsilk-materials (11/10/2026)
 
 Giống `seed-003-dot-002`, chỉ bổ sung `materials = ["lụa tơ tằm"]` cho 9 sản phẩm Hanhsilk. Căn cứ là câu mô tả của chính sản phẩm trong bản ghi API đã lưu ngày 10/10 (đối chiếu hash từng bản ghi và response gốc); thêm `materials` vào `supports` của nguồn. Sửa qua `safe_import` (2 dry-run, 1 lần áp; 29 mục diff, 0 lỗi). Đây là mô tả của nhà cung cấp, không phải chứng nhận độc lập. Hồ sơ và script chạy lại: [batches/2026-10-11_hanhsilk-materials/](batches/2026-10-11_hanhsilk-materials/README.md). Sản phẩm thiếu chất liệu giảm từ 137 xuống 128.
 
-## Snapshot trước — seed-003-dot-002 (10/10/2026)
+## Snapshot cũ hơn — seed-003-dot-002 (10/10/2026)
 
 **330 sản phẩm draft, 814 ảnh, 7 thương hiệu + 2 nhà sản xuất, 23 danh mục.** Đợt 002 thêm 300 sản phẩm từ 6 website chính thức (Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk), 60 mỗi nhóm PLAN, do một collector riêng thu trong thư mục staging rồi nhập bằng `scripts/import_raw/import_staging.py` (chỉ thêm bản ghi mới qua `safe_import`). Hồ sơ nguồn, ánh xạ ID và sửa đổi: [batches/2026-10-10_dot-002/](batches/2026-10-10_dot-002/README.md). Báo cáo: [GĐ1 — nhập đợt 002](../reports/progress/2026-10-10_GD1_nhap-dot-002.md).
 
