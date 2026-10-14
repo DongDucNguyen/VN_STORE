@@ -9,12 +9,6 @@ async function record(page: import("@playwright/test").Page) {
 }
 
 test("selecting a suggestion preserves original and only searches after confirmation", async ({ page }) => {
-  await page.addInitScript(() => {
-    const revoked: string[] = [];
-    Object.assign(window, { revokedAudioUrls: revoked });
-    const revoke = URL.revokeObjectURL.bind(URL);
-    URL.revokeObjectURL = (url) => { revoked.push(url); revoke(url); };
-  });
   const queries: string[] = [];
   page.on("request", (r) => {
     if (new URL(r.url()).pathname === "/api/search") queries.push(r.postDataJSON().query);
@@ -30,25 +24,18 @@ test("selecting a suggestion preserves original and only searches after confirma
   });
   await page.goto("/");
   await record(page);
-  const playback = page.getByLabel("Nghe lại bản ghi");
-  await expect(playback).toBeVisible();
-  await expect.poll(() => playback.evaluate((el) => (el as HTMLAudioElement).duration)).toBeGreaterThan(0);
-  const playbackUrl = await playback.getAttribute("src");
-  expect(playbackUrl).toMatch(/^blob:/);
+  await expect(page.getByRole("region", { name: "Xác nhận bản chép lời" }).locator("audio")).toHaveCount(0);
   await expect(page.getByText(/Âm lượng nhỏ/)).toBeVisible();
   expect(queries).toEqual([]);
   await page.getByRole("button", { name: "khăn lụa", exact: true }).click();
   await expect(page.getByRole("textbox", { name: "Cụm từ dùng để tìm kiếm" })).toHaveValue("khăn lụa");
   await expect(page.locator(".voice-original")).toHaveText("  khăn nụa  ");
-  await expect(playback).toHaveAttribute("src", playbackUrl!);
   expect(queries).toEqual([]);
   await page.getByRole("region", { name: "Xác nhận bản chép lời" })
     .screenshot({ path: test.info().outputPath("voice-review.png") });
   await page.getByRole("button", { name: "Tìm theo câu này" }).click();
   await expect(cardTitles(page)).toHaveText(["Khăn lụa tơ tằm màu đỏ"]);
   expect(queries).toEqual(["khăn lụa"]);
-  expect(await page.evaluate(() => (window as unknown as { revokedAudioUrls: string[] }).revokedAudioUrls))
-    .toContain(playbackUrl);
   await expect(page.getByText(/Bản chép lời gốc:/)).toContainText("khăn nụa");
 });
 

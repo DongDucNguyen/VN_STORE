@@ -195,7 +195,6 @@ td a + a::before { content: ", "; }
 .voice-review label { display: grid; gap: 6px; }
 .voice-review textarea { width: 100%; padding: 8px; font: inherit; border: 1px solid var(--line); border-radius: 6px; }
 .voice-review .voice-actions { flex-wrap: wrap; margin-left: 0; }
-.voice-playback audio { display: block; width: 100%; max-width: 360px; }
 .voice-original { white-space: pre-wrap; }
 .voice-actions { display: inline-flex; gap: 10px; margin-left: auto; }
 .rec-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--err); animation: pulse 1s infinite; }

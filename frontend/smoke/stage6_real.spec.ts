@@ -56,7 +56,7 @@ test("local models: browser → WAV/image → inference → editable results and
     const body = await res.json();
     expect(body.transcript.model_id).toContain("PhoWhisper-small");
     await expect(page.getByLabel("Cụm từ dùng để tìm kiếm")).toHaveValue(body.transcript.text);
-    await expect(page.getByLabel("Nghe lại bản ghi")).toBeVisible();
+    await expect(page.getByRole("region", { name: "Xác nhận bản chép lời" }).locator("audio")).toHaveCount(0);
     await page.getByRole("button", { name: "Tìm theo câu này" }).click();
     await expect(page.getByRole("searchbox")).toHaveValue(body.transcript.text);
     await expect(page.getByText(/Đã chép lời từ giọng nói/)).toBeVisible();
