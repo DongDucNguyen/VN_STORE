@@ -1,0 +1,170 @@
+{
+  "generated_at": "2026-10-12T15:31:13+07:00",
+  "catalog_file": "C:\\Users\\Dong Duy\\OneDrive\\Desktop\\NguyenPrj\\VN_STORE\\database.json",
+  "catalog_sha256": "52ba684ed1da2381a06cb354ab1c95f458d68b781b52518b59bc65100262265e",
+  "status": "passed",
+  "failures": [],
+  "validation_issues": [
+    {
+      "level": "warning",
+      "code": "image_rights_unverified_demo",
+      "path": "$.publication_policy",
+      "message": "Bỏ qua xác minh quyền ảnh theo publication_policy: 811 ảnh published có quyền 'unknown'"
+    }
+  ],
+  "scope": "Kiểm tra file, hash và hành vi API bằng TestClient; không đối chiếu ảnh bằng mắt, xác minh quyền hay đo benchmark.",
+  "import_check": {
+    "status": "skipped"
+  },
+  "manifest_checks": [],
+  "catalog_version": "seed-006-enriched",
+  "quality": {
+    "catalog_version": "seed-006-enriched",
+    "generated_at": "2026-10-12T15:31:14+07:00",
+    "counts": {
+      "categories": 23,
+      "brands": 7,
+      "makers": 2,
+      "places": 6,
+      "sources": 339,
+      "products": 330,
+      "variants": 332,
+      "images": 814
+    },
+    "status": {
+      "published": 328,
+      "draft": 2
+    },
+    "image_files": {
+      "by_status": {
+        "valid": 814
+      },
+      "with_usable_rights_and_valid_file": 0,
+      "scope": "Kiểm tra đường dẫn, khả năng đọc, file khác rỗng và SHA-256 nếu đã khai báo; không giải mã ảnh hay duyệt nội dung/quyền."
+    },
+    "products_by_root_category": {
+      "gom-su": 66,
+      "may-tre-coi": 67,
+      "go-son-mai": 65,
+      "thuc-pham": 66,
+      "det-may": 66
+    },
+    "products_by_category": {
+      "gom-su-bat-dia": 18,
+      "gom-su-binh-lo": 38,
+      "gom-su-am-chen": 9,
+      "gom-su-coc-ly": 1,
+      "may-tre-coi-gio": 43,
+      "may-tre-coi-noi-that": 14,
+      "may-tre-coi-tui": 1,
+      "go-son-mai": 48,
+      "thuc-pham-banh-keo": 66,
+      "go-son-mai-binh-lo": 17,
+      "may-tre-coi": 9,
+      "det-may-thoi-trang": 24,
+      "det-may-vai-lua": 5,
+      "det-may-khan": 37
+    },
+    "missing": {
+      "khong_co_gia_bien_the": {
+        "count": 74,
+        "total": 332,
+        "pct": 22.3
+      },
+      "khong_co_anh": {
+        "count": 0,
+        "total": 330,
+        "pct": 0.0
+      },
+      "khong_co_file_anh_hop_le": {
+        "count": 0,
+        "total": 330,
+        "pct": 0.0
+      },
+      "khong_co_anh_du_quyen_va_file": {
+        "count": 330,
+        "total": 330,
+        "pct": 100.0
+      },
+      "duoi_2_anh": {
+        "count": 96,
+        "total": 330,
+        "pct": 29.1
+      },
+      "anh_chua_ro_quyen": {
+        "count": 814,
+        "total": 814,
+        "pct": 100.0
+      },
+      "khong_co_mo_ta_ngan": {
+        "count": 0,
+        "total": 330,
+        "pct": 0.0
+      },
+      "khong_co_chat_lieu": {
+        "count": 6,
+        "total": 330,
+        "pct": 1.8
+      },
+      "khong_co_thuong_hieu": {
+        "count": 64,
+        "total": 330,
+        "pct": 19.4
+      },
+      "khong_co_nha_san_xuat": {
+        "count": 260,
+        "total": 330,
+        "pct": 78.8
+      },
+      "khong_co_tieu_chi_viet_true": {
+        "count": 2,
+        "total": 330,
+        "pct": 0.6
+      },
+      "chua_review": {
+        "count": 2,
+        "total": 330,
+        "pct": 0.6
+      }
+    },
+    "origin_claims": {
+      "vn_brand": {
+        "true": 163,
+        "unknown": 147
+      },
+      "made_in_vn": {
+        "unknown": 261,
+        "true": 69
+      },
+      "vn_material": {
+        "true": 89,
+        "unknown": 225
+      },
+      "traditional_craft": {
+        "true": 19,
+        "unknown": 286
+      },
+      "craft_village": {
+        "unknown": 300
+      }
+    },
+    "duplicate_images_sha256": {},
+    "duplicate_image_urls": {},
+    "perceptual_hash": "chưa chạy; SHA-256 chỉ phát hiện file trùng byte, chưa phát hiện ảnh gần giống"
+  },
+  "api_modes": {
+    "published_only": {
+      "expected_products": 328,
+      "listed_products": 328,
+      "pages": 4,
+      "image_requests": 814
+    },
+    "include_drafts": {
+      "expected_products": 330,
+      "listed_products": 330,
+      "pages": 4,
+      "image_requests": 814
+    }
+  },
+  "hash_verified_api_images": 814
+}

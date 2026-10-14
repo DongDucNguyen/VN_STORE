@@ -54,10 +54,11 @@ def test_per_request_language_and_truncation(client, monkeypatch):
     calls = []
     def detailed(clip, language=None):
         calls.append(language)
-        return Recognition("Marou dark chocolate", "en", .55, True)
+        return Recognition("Marou dark chocolate", "en", .55, True, "openai/whisper-small.en", "test-revision")
     monkeypatch.setattr(api.state.voice.adapter, "transcribe_detailed", detailed, raising=False)
     body = client.post("/search/voice?review=true&language=auto", content=wav(1)).json()
     assert calls == ["auto"] and body["transcript"]["language"] == "en"
+    assert body["transcript"]["model_id"] == "openai/whisper-small.en"
     assert body["transcript"]["raw_text"] == "Marou dark chocolate"
     assert len(body["warnings"]) == 2
     assert client.post("/search/voice?language=xx", content=wav(1)).status_code == 422
@@ -174,6 +175,79 @@ def test_whisper_config_and_default_are_explicit(monkeypatch):
     monkeypatch.setenv("VNSTORE_ASR_LANGUAGE", "translate")
     with pytest.raises(ValueError):
         PhoWhisperBase()
+
+
+def test_bilingual_whisper_routes_explicit_and_auto_language(monkeypatch):
+    from app.ml import asr
+
+    calls = []
+
+    class Vietnamese:
+        model_id = "vinai/PhoWhisper-small"
+        revision = "vi-revision"
+        language = "vi"
+        detect_speech = None
+
+        def transcribe_detailed(self, clip, language):
+            calls.append(("vi", language))
+            return Recognition("Vietnamese text" if language == "vi" else "English guessed",
+                               "vi" if language == "vi" else "en", .91 if language == "auto" else None,
+                               model_id="vinai/PhoWhisper-small")
+
+    class English:
+        model_id = "openai/whisper-small.en"
+        revision = "en-revision"
+        def transcribe_detailed(self, clip, language):
+            calls.append(("en", language))
+            return Recognition("English text", "en", model_id="openai/whisper-small.en")
+
+    class Detector:
+        revision = "detector-revision"
+        def detect(self, clip):
+            calls.append(("detector", "auto"))
+            return "en", .91
+
+    monkeypatch.setattr(asr, "PhoWhisperSmall", Vietnamese)
+    monkeypatch.setattr(asr, "WhisperSmallEnglishCpu", English)
+    monkeypatch.setattr(asr, "WhisperTinyLanguageDetector", Detector)
+    monkeypatch.delenv("VNSTORE_ENGLISH_DEVICE", raising=False)
+    router = asr.BilingualWhisper()
+    assert router.transcribe_detailed(object(), "vi").model_id == "vinai/PhoWhisper-small"
+    assert router.transcribe_detailed(object(), "en").text == "English text"
+    auto = router.transcribe_detailed(object(), "auto")
+    assert auto.text == "English text" and auto.language_probability == .91
+    assert calls == [("vi", "vi"), ("en", "en"), ("detector", "auto"), ("en", "en")]
+    monkeypatch.setattr(router.detector, "detect", lambda clip: ("fr", .99))
+    with pytest.raises(MediaError, match="Tự nhận diện chỉ hỗ trợ"):
+        router.transcribe_detailed(object(), "auto")
+    with pytest.raises(ValueError):
+        router.transcribe_detailed(object(), "fr")
+    monkeypatch.setenv("VNSTORE_ENGLISH_DEVICE", "invalid")
+    with pytest.raises(ValueError, match="VNSTORE_ENGLISH_DEVICE"):
+        asr.BilingualWhisper()
+
+
+def test_bilingual_whisper_selects_gpu_encoder_cpu_decoder(monkeypatch):
+    from app.ml import asr
+
+    monkeypatch.setenv("VNSTORE_ENGLISH_DEVICE", "hybrid")
+    adapter = asr.BilingualWhisper()
+    assert isinstance(adapter.en, asr.WhisperSmallEnglishHybrid)
+    assert adapter.en.model_id == "openai/whisper-small.en"
+    assert adapter.en.encoder_force_cpu is False and adapter.en.force_cpu is True
+    assert adapter.en.config["onnx_variant"] == "fp16enc-cuda-int8dec-cpu"
+
+
+def test_bilingual_whisper_preloads_vad_and_english(monkeypatch):
+    from app.ml.asr import BilingualWhisper
+
+    monkeypatch.setenv("VNSTORE_ASR_VAD", "1")
+    adapter = BilingualWhisper()
+    calls = []
+    monkeypatch.setattr(adapter.detect_speech, "preload", lambda: calls.append("vad"))
+    monkeypatch.setattr(adapter.en, "preload", lambda: calls.append("english"))
+    adapter.preload_english()
+    assert calls == ["vad", "english"]
 
 
 def test_evaluator_shares_audio_pipeline_and_groups(snap, tmp_path):

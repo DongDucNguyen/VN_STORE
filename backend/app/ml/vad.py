@@ -14,7 +14,7 @@ import urllib.request
 from pathlib import Path
 
 from ..media import AudioClip
-from . import LOADED_FILES, LazyModel
+from . import LOADED_FILES, LazyModel, ml_device, session
 
 VERSION = "v6.2.3"
 URL = f"https://raw.githubusercontent.com/snakers4/silero-vad/{VERSION}/src/silero_vad/data/silero_vad.onnx"
@@ -51,10 +51,18 @@ class SileroVAD:
         return {"vad": f"silero-vad {VERSION}", "threshold": self.threshold, "min_speech_ms": self.min_speech_ms}
 
     def _load(self):
+        if ml_device() == "cuda":
+            return session(model_path())
         import onnxruntime as ort
         opts = ort.SessionOptions()
         opts.inter_op_num_threads = opts.intra_op_num_threads = 1
         return ort.InferenceSession(str(model_path()), sess_options=opts, providers=["CPUExecutionProvider"])
+
+    def preload(self) -> None:
+        from array import array
+
+        # Warm the recurrent path for a normal short recording, not just one frame.
+        self.probabilities(AudioClip(RATE, array("h", [0]) * (RATE * 2)))
 
     def probabilities(self, clip: AudioClip):
         import numpy as np

@@ -17,6 +17,8 @@ class Recognition:
     language: str | None = None
     language_probability: float | None = None
     truncated: bool = False
+    model_id: str | None = None
+    revision: str | None = None
 
 
 def audio_quality(clip: AudioClip) -> dict:

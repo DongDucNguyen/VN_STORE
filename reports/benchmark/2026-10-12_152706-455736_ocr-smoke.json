@@ -1,0 +1,116 @@
+{
+  "status": "gallery_smoke_not_benchmark",
+  "created_at": "2026-10-12T15:27:06.455736+07:00",
+  "catalog_sha256": "52ba684ed1da2381a06cb354ab1c95f458d68b781b52518b59bc65100262265e",
+  "ocr": {
+    "model_id": "RapidOCR/PP-OCRv3-latin",
+    "revision": "rapidocr-3.4.1",
+    "license": "Apache-2.0",
+    "confidence": 0.6,
+    "file_sha256": {
+      "ch_PP-OCRv4_det_infer.onnx": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9",
+      "ch_ppocr_mobile_v2.0_cls_infer.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+      "latin.ttf": "1562fe5cbdaacab4a5880d6404ba05245d12f3a4478fe16021e976bc725ce5d5",
+      "latin_PP-OCRv3_rec_infer.onnx": "e9d7a33667e8aaa702862975186adf2012e3f390cc0f9422865957125f8071cf"
+    }
+  },
+  "rows": [
+    {
+      "product_id": "p-marou-ben-tre-78-80g",
+      "image_id": "img-marou-ben-tre-78-80g-1",
+      "source_sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+      "transform": "full",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAiGON BENTREZ8 SO.CO-LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 4409.53
+    },
+    {
+      "product_id": "p-marou-ben-tre-78-80g",
+      "image_id": "img-marou-ben-tre-78-80g-1",
+      "source_sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+      "transform": "center85_smoke_only",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON BENTREZ8 SO.CO-LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 1168.01
+    },
+    {
+      "product_id": "p-marou-tien-giang-70-80g",
+      "image_id": "img-marou-tien-giang-70-80g-1",
+      "source_sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+      "transform": "full",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON TIENGIANGZO SO.CO.LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 1138.14
+    },
+    {
+      "product_id": "p-marou-tien-giang-70-80g",
+      "image_id": "img-marou-tien-giang-70-80g-1",
+      "source_sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+      "transform": "center85_smoke_only",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON TIENGIANGZO SO.CO.LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 1200.9
+    },
+    {
+      "product_id": "p-marou-lam-dong-74-80g",
+      "image_id": "img-marou-lam-dong-74-80g-1",
+      "source_sha256": "5fa87a6925e9879a02e9c788c8fb5022331974ac8cd23e5ce1670b83026ab075",
+      "transform": "full",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON LAMDONGZ SO.CO-LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 1135.66
+    },
+    {
+      "product_id": "p-marou-lam-dong-74-80g",
+      "image_id": "img-marou-lam-dong-74-80g-1",
+      "source_sha256": "5fa87a6925e9879a02e9c788c8fb5022331974ac8cd23e5ce1670b83026ab075",
+      "transform": "center85_smoke_only",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAICON LAMDONGZ SO.CO-LADEN SINGLE ORIGIN DARK CHOCOLATE",
+      "elapsed_ms": 1142.94
+    },
+    {
+      "product_id": "p-marou-quat-tien-giang-68-80g",
+      "image_id": "img-marou-quat-tien-giang-68-80g-1",
+      "source_sha256": "ff0ce89ddeda95f8be901ee280e8ee1af16e8b3b13b896d697c7078d20625089",
+      "transform": "full",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON MEKONG KUMQUAT 68-TIENGiANG SINGLEORIGIN VIETNAMESE CHOCOLATE",
+      "elapsed_ms": 1165.02
+    },
+    {
+      "product_id": "p-marou-quat-tien-giang-68-80g",
+      "image_id": "img-marou-quat-tien-giang-68-80g-1",
+      "source_sha256": "ff0ce89ddeda95f8be901ee280e8ee1af16e8b3b13b896d697c7078d20625089",
+      "transform": "center85_smoke_only",
+      "ocr_text": "MAROU FAISEURS DE CHOCOLAT SAIGON MEKONG KUMQUAT 68-TIENGiANG SINGLEORIGIN VIETNAMESE CHOCOLATE",
+      "elapsed_ms": 1248.49
+    },
+    {
+      "product_id": "p-minhlong-chen-com-thach-van-11cm",
+      "image_id": "img-minhlong-chen-com-thach-van-11cm-1",
+      "source_sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+      "transform": "full",
+      "ocr_text": "",
+      "elapsed_ms": 561.56
+    },
+    {
+      "product_id": "p-minhlong-chen-com-thach-van-11cm",
+      "image_id": "img-minhlong-chen-com-thach-van-11cm-1",
+      "source_sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+      "transform": "center85_smoke_only",
+      "ocr_text": "",
+      "elapsed_ms": 345.18
+    },
+    {
+      "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+      "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+      "source_sha256": "dd1743a99ac4c7fc7b267b75fffcd65a82716643e4a291c5e8b92cbcaed6455d",
+      "transform": "full",
+      "ocr_text": "",
+      "elapsed_ms": 588.32
+    },
+    {
+      "product_id": "p-minhlong-binh-hoa-hon-viet-30cm",
+      "image_id": "img-minhlong-binh-hoa-hon-viet-30cm-1",
+      "source_sha256": "dd1743a99ac4c7fc7b267b75fffcd65a82716643e4a291c5e8b92cbcaed6455d",
+      "transform": "center85_smoke_only",
+      "ocr_text": "",
+      "elapsed_ms": 464.62
+    }
+  ],
+  "note": "No human OCR transcription/relevance. Center crop is a mechanical sensitivity check, not a reviewed object crop. First call includes model load."
+}

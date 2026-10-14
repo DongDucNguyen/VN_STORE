@@ -1,0 +1,18 @@
+# RTX 3050 / driver 566.x: isolated Python 3.12 environment for CUDA 12.6.
+# ORT 1.21+ wheels use CUDA 12.8 or 13.0 and cannot run on this driver.
+-r requirements.txt
+
+onnxruntime-gpu==1.20.2
+nvidia-cuda-runtime-cu12==12.6.77
+nvidia-cublas-cu12==12.6.4.1
+nvidia-cudnn-cu12==9.5.1.17
+nvidia-cufft-cu12==11.3.0.4
+nvidia-curand-cu12==10.3.7.77
+nvidia-nvjitlink-cu12==12.6.77
+
+huggingface_hub==2.2.0
+transformers==5.19.0
+tokenizers==0.23.3
+numpy==2.5.3
+scipy==1.18.1
+pillow==12.3.0

@@ -2,7 +2,7 @@
 #   py -3.14 -m venv .venv-ml
 #   .venv-ml/Scripts/python -m pip install -r backend/requirements.txt -r backend/requirements-ml.txt
 # Không dùng PyTorch: trên máy demo, Windows Application Control chặn DLL của torch. ONNX Runtime và
-# runtime CUDA 13/cuDNN 9 của NVIDIA (gói nvidia-*) nạp được; không có GPU thì tự chạy CPU.
+# Bản này dùng CUDA 13, cần driver NVIDIA >=580. Máy driver 566.x dùng requirements-ml-cuda12.txt.
 -r requirements.txt
 onnxruntime-gpu[cuda,cudnn]==1.31.0
 huggingface_hub==2.2.0

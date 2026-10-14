@@ -4,7 +4,9 @@ Cập nhật mới nhất **12/10/2026**: đã triển khai [bốn nhóm cải t
 
 **Việc tiếp theo cho voice:** thu/duyệt pilot có tag English, code_switch, nói nhỏ/xa, nhầm n/l; chấm relevance; chạy `experiments/configs/voice-improvements.json` trên dev. UI review/gợi ý, ngôn ngữ theo request và quality đã xong. Gain/high-pass còn tắt mặc định; không tự tạo nhãn hoặc mở locked test để thay cho dữ liệu thiếu. Xem [protocol](../../docs/voice-improvements/05-evaluation.md).
 
-Cập nhật: 11/10/2026, [GĐ6 tích hợp demo và tiền kiểm](2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md), sau [rà soát GĐ5](2026-10-11_GD5_ra-soat-va-hoan-thien.md). Catalog `seed-004-hanhsilk-materials` (`5448a8f4…`), 330 draft, 814 ảnh. Packet/trang hiện hành: keyword `2026-10-11_seed-004_*`, duyệt họ `2026-10-11_seed-004`. GĐ6 đã xong toàn bộ phần công cụ ([hoàn tất](2026-10-11_GD6_hoan-tat-khoa-locked-test.md)): sổ mở test, `locked_test.py` mở/chạy/báo cáo/ký; tiền kiểm locked test vẫn blocked. Cần P0 do con người → screening GĐ4 → chọn cấu hình GĐ5 → locked test GĐ6. Chưa nghiệm thu GĐ5/GĐ6.
+Cập nhật: 12/10/2026, [rà soát và tải model demo](2026-10-12_GD6_ra-soat-va-tai-model-demo.md), [chạy GPU RTX 3050](2026-10-12_GPU_CUDA12_RTX3050.md). Catalog `seed-006-enriched` (`52ba684e…`), 328 published cho demo nội bộ, 2 draft, 814 ảnh. Đã kiểm chứng keyword/voice/image/OCR với model thật và tạo trang duyệt họ hiện hành `artifacts/family_review/2026-10-12_seed-006/`. GĐ6 đã xong phần công cụ; tiền kiểm locked test vẫn blocked. Cần dữ liệu do con người duyệt → screening GĐ4 → chọn cấu hình GĐ5 → locked test GĐ6. Chưa nghiệm thu GĐ5/GĐ6.
+
+Cập nhật: 11/10/2026, [GĐ6 tích hợp demo và tiền kiểm](2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md), sau [rà soát GĐ5](2026-10-11_GD5_ra-soat-va-hoan-thien.md). Catalog `seed-004-hanhsilk-materials` (`5448a8f4…`), 330 draft, 814 ảnh. Packet/trang hiện hành khi đó: keyword `2026-10-11_seed-004_*`, duyệt họ `2026-10-11_seed-004`. GĐ6 đã xong toàn bộ phần công cụ ([hoàn tất](2026-10-11_GD6_hoan-tat-khoa-locked-test.md)): sổ mở test, `locked_test.py` mở/chạy/báo cáo/ký; tiền kiểm locked test vẫn blocked. Cần P0 do con người → screening GĐ4 → chọn cấu hình GĐ5 → locked test GĐ6. Chưa nghiệm thu GĐ5/GĐ6.
 
 Khác với các báo cáo theo đợt (không sửa lại), file này **được sửa mỗi phiên**: đánh dấu việc xong, thêm việc mới phát hiện, sắp lại thứ tự. Khi làm một mục thì ghi báo cáo đợt như thường lệ ([TEMPLATE](TEMPLATE.md)), rồi cập nhật mục đó ở đây kèm link báo cáo.
 
@@ -16,12 +18,12 @@ Các luồng chính của **mã nguồn demo** đã có; chưa đồng nghĩa ho
 - công cụ thu dữ liệu (`#/collect/voice`, `#/collect/image`), nhập, audit, đánh giá và so sánh có CI;
 - công cụ duyệt nhãn: `#/review/voice` (bản chép lời), packet pool + trang chấm judgment ảnh, packet keyword toàn catalog hoặc theo pool (107 truy vấn dev), `compare_reviews.py` đối chiếu hai người duyệt voice/ảnh; protocol latency cố định.
 
-Điểm nghẽn là **dữ liệu do con người tạo**, chưa có gì:
-- 330/330 sản phẩm còn `draft`, 0 published (catalog `seed-004-hanhsilk-materials`);
+Điểm nghẽn còn lại là **nhãn, dữ liệu truy vấn và bằng chứng quyền do con người xác nhận**:
+- 328/330 sản phẩm `published` cho demo nội bộ, 2 `draft` (catalog `seed-006-enriched`);
 - 814/814 ảnh có quyền `unknown`;
 - 74/330 sản phẩm chưa có giá;
-- 96 sản phẩm có dưới 2 ảnh, 128 thiếu chất liệu (9 Hanhsilk đã bổ sung từ mô tả nguồn ngày 11/10); 2 sản phẩm chưa có claim Việt đủ điều kiện công bố (`p-lys-dia-tron-jasmine-trang-nga-15cm`, `p-vietcraft-gio-may-bau-duc-vh24040`);
-- 12 truy vấn keyword seed + 107 truy vấn dev ứng viên chưa duyệt; packet pool trên catalog seed-004: seed 138 cặp, dev 1.361 cặp (+ no-match chấm đủ catalog) chờ chấm;
+- 96 sản phẩm có dưới 2 ảnh, 6 thiếu chất liệu; 2 sản phẩm chưa có claim Việt đủ điều kiện công bố (`p-lys-dia-tron-jasmine-trang-nga-15cm`, `p-vietcraft-gio-may-bau-duc-vh24040`);
+- 12 truy vấn keyword seed + 107 truy vấn dev ứng viên chưa duyệt; packet pool trên catalog seed-006: seed 138 cặp, dev 1.366 cặp (+ no-match chấm đủ catalog) chờ chấm;
 - **0 clip giọng nói, 0 ảnh query thật**.
 
 Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), chưa chọn được model theo PLAN §8.3. Bảng smoke mới nhất: [voice 4 cấu hình](../model_selection/2026-10-11_104115-083089_voice-screening.md), [ảnh 3 adapter](../benchmark/2026-10-11_103215-244030_image-gallery-sanity.md).
@@ -30,12 +32,12 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 
 | Việc | Lệnh / ghi chú |
 |---|---|
-| Kiểm thử toàn bộ (phải đạt trước và sau khi sửa) | `.venv/Scripts/python scripts/run_all_tests.py` — gần nhất: **8/8, 582 backend (+2 skip), 22 Pillow, typecheck/build, 120 E2E**, typecheck/build ([gợi ý máy 11/10](2026-10-11_GD3_goi-y-may-cham-keyword-va-duyet-ho.md)); riêng **2 smoke browser model thật** đạt ([GĐ6 hoàn tất](2026-10-11_GD6_hoan-tat-khoa-locked-test.md)). Sandbox có thể chặn thư mục tạm/tiến trình trình duyệt: cần chạy trong môi trường được phép. E2E đôi khi hỏng vì `net::ERR_NO_BUFFER_SPACE`: xem log trước khi kết luận |
-| Test model thật (tùy chọn) | `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py` — 6/6 |
-| Hai môi trường Python | `.venv` (API, test, script; không có Pillow/ML) và `.venv-ml` (thêm onnxruntime-gpu, Pillow…, theo `backend/requirements-ml.txt`) |
+| Kiểm thử toàn bộ | 12/10: **603 backend (+4 skip), 22 Pillow, typecheck/build, 120 E2E**, và **2 smoke browser model thật với cache offline** đạt; xem [báo cáo demo](2026-10-12_GD6_ra-soat-va-tai-model-demo.md) và [GPU](2026-10-12_GPU_CUDA12_RTX3050.md). Trên Python cục bộ Windows, khởi động server riêng để Playwright thoát sạch |
+| Test model thật (tùy chọn) | `VNSTORE_ML_DEVICE=cuda VNSTORE_RUN_ML_TESTS=1 .venv-ml-gpu/Scripts/python -m pytest backend/tests/test_ml_adapters.py` — 12/10 đạt 7/7 trên CUDA 12, cache offline; base-fp16 và small-int8 đã smoke riêng trên CPU |
+| Ba môi trường Python | `.venv` (API/test), `.venv-ml` (Python 3.14/ORT CUDA 13, driver hiện tại không chạy GPU), `.venv-ml-gpu` (Python 3.12/ORT CUDA 12.6, chạy GPU; xem README) |
 | **PyTorch bị chặn** | Windows Application Control chặn DLL của torch trên máy này. **Không tìm cách vượt chính sách.** Chỉ dùng ONNX Runtime; việc cần torch (fine-tune, tự export ONNX) phải làm trên máy khác. TensorRT 10.16 (`backend/requirements-ml-trt.txt`) nạp được; bật bằng `VNSTORE_ML_TRT=1` (fp16 bị chặn với ASR vì cho kết quả hỏng) |
 | E2E dùng adapter GIẢ | `tests.fakes:FakeASR`, `ByteHistogramEmbedder` + micro giả của Chrome; số đo E2E không phải benchmark |
-| Chạy demo với model thật | Xem README mục "Model thật (ONNX Runtime)"; chỉ mục ảnh ở `artifacts/indexes/image/` (dựng lại bằng `scripts/build_indexes/build_image_index.py` khi ảnh/model đổi) |
+| Chạy demo với model thật | `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_gpu_cuda12.ps1`; chỉ mục ảnh ở `artifacts/indexes/image/` (dựng lại bằng `scripts/build_indexes/build_image_index.py` khi ảnh/model đổi) |
 | Shell trên Windows | Heredoc chứa một số ký tự đặc biệt (ví dụ `'` trong văn bản tiếng Việt, `\\`) có thể lỗi trong Bash tool; khi đó ghi script Python vào thư mục scratchpad rồi chạy. Thêm `-X utf8` khi in tiếng Việt |
 | Commit | **Chỉ người dùng được commit** (yêu cầu 10/10). Claude không `git commit`/push/amend, không stage; chỉ báo những gì đã đổi |
 | Thư mục staging của collector khác | `tmp_data/` (đợt 002) đã được kiểm tra, nhập và xóa ngày 10/10 theo yêu cầu. Nếu lại có thư mục do chương trình khác đang ghi: **không chạm vào** cho tới khi người dùng cho phép; nhập bằng `scripts/import_raw/import_staging.py` |
@@ -51,18 +53,16 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 ### P0.1 Commit working tree
 - Người dùng đã commit phần duyệt họ và registry tại `8261b59`; lượt xác nhận sau commit đạt. Hồ sơ kiểm chứng mới chưa commit; **người dùng tự commit**, agent không stage/commit/push.
 
-### P0.2 Duyệt 330 sản phẩm draft + quyền ảnh → published đầu tiên
-- **Vì sao**: chế độ mặc định hiện hiển thị 0 sản phẩm; baseline keyword và benchmark ảnh cần catalog ổn định.
-- **Ai**: nhóm dữ liệu (xin phép 7 thương hiệu/nhà sản xuất: Minh Long/Lys, Marou, Hanoia, Kilomet109, Vietcraft, Hanhsilk, SenSilk). Có thể publish dần từng phần, không cần chờ đủ 330.
-- **Cách**: checklist [data_collection/README.md](../../data_collection/README.md) và [docs/huong-dan-nhap-lieu.md](../../docs/huong-dan-nhap-lieu.md). Chạy `.venv/Scripts/python scripts/validate_catalog/readiness.py` để xem từng sản phẩm còn thiếu gì.
-- **Xong khi**: ≥1 sản phẩm `published` có `reviewed_at`, ảnh có quyền kèm bằng chứng; readiness báo đạt.
-- **Lưu ý**: đổi DB sẽ làm lệch `catalog_sha256` của packet keyword và manifest ảnh, nên phải đối chiếu lại nhãn, không chỉ thay hash. Chỉ mục ảnh sẽ báo `index_stale`, cần dựng lại.
+### P0.2 Published cho demo nội bộ — xong; quyền ảnh ngoài demo còn mở
+- Chủ dự án đã duyệt nguồn hiện tại và cho phép bỏ qua xác minh quyền ảnh trong **demo nội bộ**; 328 sản phẩm đã `published`, 2 sản phẩm thiếu tiêu chí Việt giữ `draft`. Xem [báo cáo publish](2026-10-11_GD1_publish-demo-noi-bo.md).
+- 814 ảnh vẫn có `usage_rights.status: unknown`. Nhóm dữ liệu cần bằng chứng quyền từ các thương hiệu/nhà sản xuất trước khi dùng ngoài phạm vi demo nội bộ.
+- Đổi DB làm lệch `catalog_sha256` của packet và chỉ mục ảnh; sau khi chỉnh catalog cần kiểm tra nhãn và dựng lại các dữ liệu dẫn xuất.
 
 ### P0.3 Chấm packet keyword → baseline keyword đầu tiên
 - **Ai**: 2 người chấm + 1 người phân xử.
 - **Cách**:
-  1. Mở packet pool trên catalog `seed-004-hanhsilk-materials`: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool/index.html) và [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool/index.html). Packet seed-003/seed-002 đã lệch hash, audit từ chối. Tạo lại bằng `prepare_review.py --pool-top 10 --random 5` nếu mất. Chấm rồi xuất JSONL; hai người dùng cùng một packet. Nhãn nháp chỉ xét 30 sản phẩm cũ; một số truy vấn "no-match" nháp (ví dụ "bàn ghế mây", "áo dài cưới") nay có thể có đáp án.
-     **Có gợi ý máy (11/10)**: người chấm thứ nhất/người phân xử có thể dùng packet `…_assisted` ([seed](../../artifacts/keyword_review/2026-10-11_seed-006_seed-12-pool_assisted/index.html), [dev](../../artifacts/keyword_review/2026-10-11_seed-006_dev-107-pool_assisted/index.html)): 6.422 cặp đã có điểm gợi ý kèm lý do, chỉ áp khi bấm, export ghi số đã sửa. **Người chấm thứ hai dùng packet không gợi ý.** Xem [benchmarks/keyword/README.md](../../benchmarks/keyword/README.md#packet-có-gợi-ý-máy-thêm-11102026).
+  1. Mở packet pool hiện hành trên catalog `seed-006-enriched`: [seed 12 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_seed-12-pool/index.html) (138 cặp) và [dev 107 truy vấn](../../artifacts/keyword_review/2026-10-12_seed-006_dev-107-pool/index.html) (1.366 cặp). Packet nằm trong `artifacts/` không theo Git; tạo lại bằng `prepare_review.py --include-drafts --pool-top 10 --random 5` nếu mất. Chấm rồi xuất JSONL; hai người dùng cùng một packet. Nhãn nháp chỉ xét 30 sản phẩm cũ; một số truy vấn "no-match" nháp (ví dụ "bàn ghế mây", "áo dài cưới") nay có thể có đáp án.
+     Gợi ý máy keyword ngày 11/10 mang hash catalog cũ, chưa được đối chiếu lại với `seed-006`; **chỉ dùng packet thường hiện hành** cho đến khi gợi ý được rà soát và tạo lại. Người chấm thứ hai luôn dùng packet không gợi ý để giữ độc lập.
   2. `scripts/benchmark/audit_reviews.py` → phân xử theo [review_protocol.md](../../benchmarks/keyword/review_protocol.md).
   3. `eval_keyword.py --split dev`.
 - **Xong khi**: có run keyword `evaluation_status` khác `smoke_unverified` trên dev, kèm nDCG@10/Success@5 (mục tiêu PLAN: Success@5 ≥ 85%).
@@ -77,7 +77,7 @@ Mọi số đo model hiện chỉ là smoke (FLEURS, leave-one-out gallery), ch�
 - **Xong khi (pilot)**: 2–3 người nói, ~60 clip dev đã duyệt. **Mục tiêu PLAN**: 600 clip / 40 người, cân đối Bắc/Trung/Nam, có clip ồn/im lặng/ngoài catalog.
 
 ### P0.7 Duyệt họ sản phẩm → families.json
-- **Ai**: nhóm dữ liệu. Mở [trang hiện hành](../../artifacts/family_review/2026-10-11_seed-006/index.html) hoặc [trang có gợi ý máy](../../artifacts/family_review/2026-10-11_seed-006_assisted/index.html) (126 thẻ đều có gợi ý kèm lý do, đã kiểm nhất quán; xem kỹ thẻ ghi "cần xem ảnh"), xuất quyết định, chạy `scripts/benchmark/apply_family_review.py`. Trang và CLI từ chối mâu thuẫn tách/gộp; nạp được bản nháp của hai trang seed-003 (nội dung đề xuất trùng khớp).
+- **Ai**: nhóm dữ liệu. Mở [trang hiện hành](../../artifacts/family_review/2026-10-12_seed-006/index.html) (126 thẻ có gợi ý máy chỉ áp khi bấm; xem kỹ thẻ ghi "cần xem ảnh"), xuất quyết định, chạy `scripts/benchmark/apply_family_review.py`. Trang và CLI từ chối mâu thuẫn tách/gộp.
 - **Xong khi**: `benchmarks/families/families.json` có `status: reviewed`. Sau đó **khóa split ảnh**: `plan_splits.py propose --families benchmarks/families/families.json [--design-lines …]`, xem `image_families.md`, rồi `plan_splits.py lock … --locked-by <tên>` ([benchmarks/splits/README.md](../../benchmarks/splits/README.md)). Có thể làm cùng P0.6 (thẻ "Ảnh dùng chung").
 
 ### P0.6 Quyết định ảnh minh họa dùng chung trong gallery

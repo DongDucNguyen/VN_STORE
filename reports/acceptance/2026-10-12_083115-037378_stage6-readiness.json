@@ -1,0 +1,58 @@
+{
+  "status": "blocked",
+  "benchmark_approved": false,
+  "inference_executed": false,
+  "inputs": {
+    "catalog": {
+      "path": "C:\\Users\\Dong Duy\\OneDrive\\Desktop\\NguyenPrj\\VN_STORE\\database.json",
+      "sha256": "52ba684ed1da2381a06cb354ab1c95f458d68b781b52518b59bc65100262265e"
+    },
+    "voice_manifest": {
+      "path": "C:\\Users\\Dong Duy\\OneDrive\\Desktop\\NguyenPrj\\VN_STORE\\benchmarks\\voice\\manifest.json",
+      "sha256": "5159930386d1d1e592331b517b6adc42ef3386fdbe2aabcdbf6c0a673659e2c3"
+    },
+    "image_manifest": {
+      "path": "C:\\Users\\Dong Duy\\OneDrive\\Desktop\\NguyenPrj\\VN_STORE\\benchmarks\\image\\manifest.json",
+      "sha256": "fad5ebd0dfa82bba34d5f8e8b1a57aad5d97fcaebc650b1717fa25807badebbb"
+    }
+  },
+  "checks": [
+    {
+      "check": "selected_dev_configuration",
+      "status": "blocked",
+      "detail": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\Dong Duy\\\\OneDrive\\\\Desktop\\\\NguyenPrj\\\\VN_STORE\\\\experiments\\\\configs\\\\selection.json'"
+    },
+    {
+      "check": "keyword_test_data",
+      "status": "blocked",
+      "detail": "requires --keyword-queries with reviewed keyword test labels"
+    },
+    {
+      "check": "voice_test_data",
+      "status": "blocked",
+      "detail": "no reviewed voice test clips; collect and review first"
+    },
+    {
+      "check": "image_test_data",
+      "status": "blocked",
+      "detail": "image audit=invalid; requires reviewed registry and locked split"
+    },
+    {
+      "check": "unchanged_catalog",
+      "status": "passed",
+      "detail": true
+    },
+    {
+      "check": "unchanged_voice_manifest",
+      "status": "passed",
+      "detail": true
+    },
+    {
+      "check": "unchanged_image_manifest",
+      "status": "passed",
+      "detail": true
+    }
+  ],
+  "selected_configuration": null,
+  "note": "Preflight only. Does not prove label completeness at model cutoff or acceptance. Do not tune on test."
+}

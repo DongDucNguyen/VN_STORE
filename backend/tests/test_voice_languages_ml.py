@@ -13,6 +13,7 @@ from app.ml.asr import PhoWhisperBase, PhoWhisperSmall
 
 ROOT = Path(__file__).resolve().parents[2]
 SMOKE = ROOT / "artifacts/voice_smoke/fleurs-vi-dev"
+EN_SMOKE = ROOT / "artifacts/voice_smoke/fleurs-en-dev"
 
 
 @pytest.mark.parametrize("factory", [PhoWhisperBase, PhoWhisperSmall])
@@ -32,3 +33,22 @@ def test_real_onnx_language_prompts_and_detection(factory):
     model.max_new_tokens = 1
     short = model.transcribe_detailed(clip, language="vi")
     assert short.truncated
+
+
+def test_bilingual_adapter_uses_english_model_and_detects_english():
+    if not (EN_SMOKE / "manifest.json").exists():
+        pytest.skip("English FLEURS smoke sample is not cached")
+    import sys
+
+    sys.path.insert(0, str(ROOT / "scripts/benchmark"))
+    from asr_metrics import wer
+    from app.ml.asr import BilingualWhisper
+
+    sample = json.loads((EN_SMOKE / "manifest.json").read_text(encoding="utf-8"))["samples"][0]
+    clip = decode_wav((EN_SMOKE / sample["audio_path"]).read_bytes())
+    adapter = BilingualWhisper()
+    explicit = adapter.transcribe_detailed(clip, "en")
+    automatic = adapter.transcribe_detailed(clip, "auto")
+    assert explicit.model_id == automatic.model_id == "openai/whisper-small.en"
+    assert automatic.language == "en" and automatic.language_probability > .8
+    assert wer(sample["reference_text"], explicit.text) < .2

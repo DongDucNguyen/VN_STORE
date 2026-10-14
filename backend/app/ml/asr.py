@@ -4,12 +4,14 @@
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperBaseFp16    (cùng repo, bản fp16 chính thức; vào/ra vẫn float32)
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmall       (bản ONNX cộng đồng huuquyet/PhoWhisper-small)
     VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmallInt8   (cùng repo, bản lượng tử hóa int8)
+    VNSTORE_ASR_ADAPTER=app.ml.asr:BilingualWhisper      (PhoWhisper-small cho vi, English profile chọn riêng)
 
 Bản small: repo ONNX có pytorch_model.bin trùng SHA-256 với vinai/PhoWhisper-small (đã đối chiếu
 10/10/2026), nhưng không chứng minh được file ONNX xuất từ đúng trọng số đó; tokenizer và cấu hình sinh
 lấy từ repo gốc của VinAI. Bản int8 phải đo lại chất lượng, không dùng điểm của bản fp32 (PLAN.md 8.3).
 
-Giải mã greedy, mặc định prompt <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>; hỗ trợ
+Giải mã greedy; PhoWhisper dùng prompt <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>,
+Whisper English-only dùng <|startoftranscript|><|notimestamps|>. BilingualWhisper định tuyến
 language vi/en/auto theo request (VNSTORE_ASR_LANGUAGE cho evaluator). Auto nhận diện ở mức clip;
 không bảo đảm chuyển ngôn ngữ trong câu. Chặn token
 theo generation_config (suppress_tokens, begin_suppress_tokens) và mọi token timestamp. Không đưa
@@ -20,7 +22,7 @@ from __future__ import annotations
 import os
 from typing import Any
 
-from ..media import AudioClip
+from ..media import AudioClip, MediaError
 from ..voice.pipeline import Recognition
 from . import LazyModel, fill_dims, hf_file, hf_json, session, tensorrt_mode
 from .vad import SileroVAD
@@ -31,19 +33,19 @@ PROMPT_LEN = 4      # <|startoftranscript|><|vi|><|transcribe|><|notimestamps|>
 ENCODER_FRAMES = 1500  # 30 giây audio sau encoder Whisper
 
 
-def whisper_shapes(kind: str, max_new_tokens: int, n_mels: int = 80):
+def whisper_shapes(kind: str, max_new_tokens: int, n_mels: int = 80, prompt_len: int = PROMPT_LEN):
     """Profile TensorRT cho encoder/decoder Whisper: chỉ cache decoder có độ dài đổi theo số token."""
     def shapes(name: str, dims: list):
         if name == "input_ids":
             if kind == "decoder_with_past_model":
                 return "1x1", "1x1", "1x1"
             # Language detection uses the start token alone, transcription four tokens.
-            return "1x1", f"1x{PROMPT_LEN}", f"1x{PROMPT_LEN}"
+            return "1x1", f"1x{prompt_len}", f"1x{prompt_len}"
         if name == "encoder_hidden_states" or ".encoder." in name:
             fixed = fill_dims(dims, {1: ENCODER_FRAMES, 2: ENCODER_FRAMES})
             return fixed, fixed, fixed
         if ".decoder." in name:  # [batch, heads, past_len, head_dim]
-            return tuple(fill_dims(dims, {2: n}) for n in (1, 24, PROMPT_LEN + max_new_tokens))
+            return tuple(fill_dims(dims, {2: n}) for n in (1, 24, prompt_len + max_new_tokens))
         if name == "input_features":  # [batch, mel, frames]; có bản ONNX để cả mel/frames là chiều tượng trưng
             fixed = fill_dims(dims, {1: n_mels, 2: 2 * ENCODER_FRAMES})
             return fixed, fixed, fixed
@@ -74,6 +76,10 @@ class _OnnxWhisper:
     config_revision: str
     suffix = ""            # "" = fp32, "_quantized" = int8
     license = "bsd-3-clause"
+    english_only = False
+    force_cpu = False
+    encoder_force_cpu: bool | None = None
+    variant_label: str | None = None
 
     def __init__(self):
         self._model = LazyModel()
@@ -89,9 +95,11 @@ class _OnnxWhisper:
 
     @property
     def config(self) -> dict[str, Any]:
-        return {"runtime": "onnxruntime", "onnx_repo": self.onnx_repo, "onnx_variant": self.suffix or "fp32",
+        return {"runtime": "onnxruntime", "onnx_repo": self.onnx_repo,
                 "upstream": f"{self.model_id}@{self.upstream_revision}",
                 "config_repo": f"{self.config_repo}@{self.config_revision}", "decoder": "greedy",
+                "onnx_variant": self.variant_label or
+                                ("fp16enc-int8dec-cpu" if self.force_cpu and self.english_only else self.suffix or "fp32"),
                 "language": self.language, "task": "transcribe", "timestamps": False, "max_new_tokens": self.max_new_tokens,
                 "vad": self.detect_speech.config if self.detect_speech else None, "tensorrt": tensorrt_mode()}
 
@@ -107,14 +115,38 @@ class _OnnxWhisper:
         fe = WhisperFeatureExtractor.from_pretrained(cfg_dir)
         tok = Tokenizer.from_file(str(cfg_dir / "tokenizer.json"))
         gen = hf_json(self.config_repo, self.config_revision, "generation_config.json")
-        ids = {t: tok.token_to_id(t) for t in
-               ("<|startoftranscript|>", "<|vi|>", "<|en|>", "<|transcribe|>", "<|notimestamps|>", "<|endoftext|>")}
+        special_tokens = (["<|startoftranscript|>", "<|notimestamps|>", "<|endoftext|>"] if self.english_only else
+                          ["<|startoftranscript|>", "<|vi|>", "<|en|>", "<|transcribe|>",
+                           "<|notimestamps|>", "<|endoftext|>"])
+        ids = {t: tok.token_to_id(t) for t in special_tokens}
         if None in ids.values():
             raise RuntimeError(f"Tokenizer thiếu token đặc biệt: {ids}")
-        sessions = [session(hf_file(self.onnx_repo, self.onnx_revision, f"onnx/{name}{self.suffix}.onnx"),
-                            whisper_shapes(name, self.max_new_tokens, fe.feature_size))
+        sessions = [session(hf_file(self.onnx_repo, self.onnx_revision,
+                                    f"onnx/{name}{getattr(self, name + '_suffix', self.suffix)}.onnx"),
+                            whisper_shapes(name, self.max_new_tokens, fe.feature_size,
+                                           2 if self.english_only else PROMPT_LEN),
+                            force_cpu=(self.encoder_force_cpu if name == "encoder_model" and
+                                       self.encoder_force_cpu is not None else self.force_cpu))
                     for name in ("encoder_model", "decoder_model", "decoder_with_past_model")]
         return fe, tok, gen, ids, sessions
+
+    def preload(self) -> None:
+        import numpy as np
+
+        fe, _, _, ids, (enc, dec, dec_past) = self._model.get(self._load)
+        features = fe(np.zeros(TARGET_RATE * 2, dtype=np.float32), sampling_rate=TARGET_RATE,
+                      return_tensors="np").input_features
+        (hidden,) = enc.run(["last_hidden_state"], {"input_features": features.astype(np.float32)})
+        prompt = ([ids["<|startoftranscript|>"], ids["<|notimestamps|>"]] if self.english_only else
+                  [ids["<|startoftranscript|>"], ids["<|vi|>"], ids["<|transcribe|>"],
+                   ids["<|notimestamps|>"]])
+        outputs = dict(zip((o.name for o in dec.get_outputs()),
+                           dec.run(None, {"input_ids": np.array([prompt], dtype=np.int64),
+                                          "encoder_hidden_states": hidden})))
+        past_inputs = {i.name for i in dec_past.get_inputs()}
+        past = {k.replace("present.", "past_key_values."): v for k, v in outputs.items()
+                if k.startswith("present.") and k.replace("present.", "past_key_values.") in past_inputs}
+        dec_past.run(None, {"input_ids": np.array([[ids["<|endoftext|>"]]], dtype=np.int64), **past})
 
     def transcribe(self, clip: AudioClip) -> str:
         return self.transcribe_detailed(clip).text.strip()
@@ -122,7 +154,7 @@ class _OnnxWhisper:
     def transcribe_detailed(self, clip: AudioClip, language: str | None = None) -> Recognition:
         import numpy as np
         language = language or self.language
-        if language not in {"vi", "en", "auto"}:
+        if language not in ({"en"} if self.english_only else {"vi", "en", "auto"}):
             raise ValueError("Unsupported ASR language")
         fe, tok, gen, ids, (enc, dec, dec_past) = self._model.get(self._load)
         feats = fe(to_float_16k(clip), sampling_rate=TARGET_RATE, return_tensors="np").input_features
@@ -146,7 +178,9 @@ class _OnnxWhisper:
             language_id = language_ids[best]
             language = names[best][2:-2]
             probability = round(float(probs[best]), 4)
-        prompt = [ids["<|startoftranscript|>"], language_id, ids["<|transcribe|>"], no_ts]
+        # English-only Whisper has no language/task tokens in its trained decoder prefix.
+        prompt = ([ids["<|startoftranscript|>"], no_ts] if self.english_only else
+                  [ids["<|startoftranscript|>"], language_id, ids["<|transcribe|>"], no_ts])
 
         def pick(logits, first: bool) -> int:
             row = logits[0, -1].astype(np.float32).copy()
@@ -173,7 +207,8 @@ class _OnnxWhisper:
                          if k.startswith("present.")})
             token = pick(res["logits"], False)
         return Recognition(tok.decode(out, skip_special_tokens=True), language, probability,
-                           truncated=token != eos and len(out) >= self.max_new_tokens)
+                           truncated=token != eos and len(out) >= self.max_new_tokens,
+                           model_id=self.model_id, revision=self.revision)
 
 
 class PhoWhisperBase(_OnnxWhisper):
@@ -200,3 +235,131 @@ class PhoWhisperSmall(_OnnxWhisper):
 class PhoWhisperSmallInt8(PhoWhisperSmall):
     suffix = "_quantized"
     revision = PhoWhisperSmall.onnx_revision + "+int8"
+
+
+class WhisperSmallEnglish(_OnnxWhisper):
+    """English-only Whisper fp16 ONNX GPU candidate."""
+    model_id = "openai/whisper-small.en"
+    upstream_revision = "e8727524f962ee844a7319d92be39ac1bd25655a"
+    onnx_repo = config_repo = "onnx-community/whisper-small.en"
+    onnx_revision = config_revision = "482fb8ba081b6e906f92efe103622316b2a0cc69"
+    revision = onnx_revision + "+fp16"
+    suffix = "_fp16"
+    license = "apache-2.0"
+    english_only = True
+
+    def __init__(self):
+        super().__init__()
+        self.language = "en"
+
+
+class WhisperSmallEnglishCpu(WhisperSmallEnglish):
+    """CPU hybrid: fp16 encoder plus int8 decoder, leaving GPU for Vietnamese ASR and images."""
+    suffix = "_int8"
+    encoder_model_suffix = "_fp16"  # ORT CPU 1.20 lacks ConvInteger for the int8 encoder.
+    revision = WhisperSmallEnglish.onnx_revision + "+fp16enc-int8dec-cpu"
+    force_cpu = True
+
+
+class WhisperSmallEnglishHybrid(WhisperSmallEnglishCpu):
+    """Run the expensive fp16 encoder on CUDA; keep the same int8 decoder on CPU."""
+    encoder_force_cpu = False
+    variant_label = "fp16enc-cuda-int8dec-cpu"
+    revision = WhisperSmallEnglish.onnx_revision + "+fp16enc-cuda-int8dec-cpu"
+
+
+class WhisperBaseEnglishGpu(WhisperSmallEnglish):
+    """Compact English-only GPU model for a 6 GB GPU shared with Vietnamese ASR and images."""
+    model_id = "openai/whisper-base.en"
+    upstream_revision = "911407f4214e0e1d82085af863093ec0b66f9cd6"
+    onnx_repo = config_repo = "onnx-community/whisper-base.en"
+    onnx_revision = config_revision = "51eefc0af78b103839eda9e7e4f4186acc6517fe"
+    revision = onnx_revision + "+fp16"
+
+
+class WhisperTinyLanguageDetector:
+    """Independent multilingual clip detector; PhoWhisper is biased toward Vietnamese."""
+    model_id = "openai/whisper-tiny"
+    onnx_repo = "onnx-community/whisper-tiny"
+    revision = "ff4177021cc41f7db950912b73ea4fdf7d01d8e7"
+
+    def __init__(self):
+        self._model = LazyModel()
+
+    @property
+    def config(self) -> dict[str, Any]:
+        return {"model_id": self.model_id, "revision": self.revision, "device": "cpu",
+                "allowed_languages": ["vi", "en"]}
+
+    def _load(self):
+        from transformers import WhisperFeatureExtractor
+
+        cfg = hf_file(self.onnx_repo, self.revision, "preprocessor_config.json")
+        fe = WhisperFeatureExtractor.from_pretrained(cfg.parent)
+        gen = hf_json(self.onnx_repo, self.revision, "generation_config.json")
+        languages = gen["lang_to_id"]
+        names, ids = zip(*languages.items())
+        enc = session(hf_file(self.onnx_repo, self.revision, "onnx/encoder_model.onnx"), force_cpu=True)
+        dec = session(hf_file(self.onnx_repo, self.revision, "onnx/decoder_model.onnx"), force_cpu=True)
+        return fe, gen["decoder_start_token_id"], names, ids, enc, dec
+
+    def detect(self, clip: AudioClip) -> tuple[str, float]:
+        import numpy as np
+
+        fe, start, names, ids, enc, dec = self._model.get(self._load)
+        features = fe(to_float_16k(clip), sampling_rate=TARGET_RATE, return_tensors="np").input_features
+        (hidden,) = enc.run(["last_hidden_state"], {"input_features": features.astype(np.float32)})
+        logits = dec.run(["logits"], {"input_ids": np.array([[start]], dtype=np.int64),
+                                      "encoder_hidden_states": hidden})[0][0, -1]
+        scores = logits[list(ids)].astype(np.float64)
+        probs = np.exp(scores - scores.max())
+        probs /= probs.sum()
+        best = int(probs.argmax())
+        return names[best][2:-2], round(float(probs[best]), 4)
+
+
+class BilingualWhisper:
+    """Route explicit languages and use independent multilingual detection for auto."""
+
+    def __init__(self):
+        self.vi = PhoWhisperSmall()
+        english_device = os.environ.get("VNSTORE_ENGLISH_DEVICE", "cpu").strip().lower()
+        if english_device not in {"cpu", "cuda", "hybrid"}:
+            raise ValueError("VNSTORE_ENGLISH_DEVICE must be cpu, cuda or hybrid")
+        self.en = {"cpu": WhisperSmallEnglishCpu, "cuda": WhisperBaseEnglishGpu,
+                   "hybrid": WhisperSmallEnglishHybrid}[english_device]()
+        self.detector = WhisperTinyLanguageDetector()
+        self.language = self.vi.language
+        self.detect_speech = self.vi.detect_speech
+        self.model_id = self.vi.model_id + " + " + self.en.model_id
+        self.revision = self.vi.revision + "+" + self.en.revision + "+" + self.detector.revision
+
+    @property
+    def config(self) -> dict[str, Any]:
+        return {"language": self.language, "routing": "explicit_or_clip_auto",
+                "vi": self.vi.config, "en": self.en.config, "detector": self.detector.config}
+
+    def preload_english(self) -> None:
+        if self.detect_speech is not None:
+            self.detect_speech.preload()
+        self.en.preload()
+
+    def transcribe(self, clip: AudioClip) -> str:
+        return self.transcribe_detailed(clip).text.strip()
+
+    def transcribe_detailed(self, clip: AudioClip, language: str | None = None) -> Recognition:
+        from dataclasses import replace
+
+        language = language or self.language
+        if language == "vi":
+            return self.vi.transcribe_detailed(clip, "vi")
+        if language == "en":
+            return self.en.transcribe_detailed(clip, "en")
+        if language == "auto":
+            detected_language, probability = self.detector.detect(clip)
+            if detected_language not in {"vi", "en"}:
+                raise MediaError("language_unsupported", "Tự nhận diện chỉ hỗ trợ tiếng Việt hoặc English. Hãy chọn ngôn ngữ rồi ghi lại.")
+            chosen = self.vi if detected_language == "vi" else self.en
+            return replace(chosen.transcribe_detailed(clip, detected_language),
+                           language_probability=probability)
+        raise ValueError("Unsupported ASR language")

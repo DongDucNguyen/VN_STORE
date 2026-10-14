@@ -1,10 +1,10 @@
 {
  "status": "proposed_unreviewed",
  "catalog_version": "seed-006-enriched",
- "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
- "generated_at": "2026-10-11T15:12:15+07:00",
+ "catalog_sha256": "52ba684ed1da2381a06cb354ab1c95f458d68b781b52518b59bc65100262265e",
+ "generated_at": "2026-10-12T15:00:56+07:00",
  "visual_source": "google/siglip2-base-patch16-224@ba1f3b0843f2",
- "code_sha256": "064782508778a1b7b71a2611d2f3f06c37b2df3e5801cebe6717b8b9ddc4fff5",
+ "code_sha256": "9c5a8f0c41fb873011543efe7d5833fb4629d679eab9bb3f1b2861b6705bf22c",
  "families": [
   {
    "family_id": "fam-hanoia-binh-hoa-bellus-size-m-a25be09",

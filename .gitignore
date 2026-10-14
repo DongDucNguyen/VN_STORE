@@ -1,5 +1,6 @@
 .venv/
 .venv-ml/
+.venv-ml-gpu/
 __pycache__/
 .pytest_cache/
 node_modules/

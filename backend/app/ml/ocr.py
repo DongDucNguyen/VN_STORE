@@ -10,7 +10,7 @@ import os
 import urllib.request
 from pathlib import Path
 
-from . import LOADED_FILES, LazyModel
+from . import LOADED_FILES, LazyModel, ml_device, providers
 
 
 class RapidOCRLatin:
@@ -46,10 +46,34 @@ class RapidOCRLatin:
             if hashlib.sha256(path.read_bytes()).hexdigest() != sha:
                 raise RuntimeError(f"OCR cache checksum mismatch: {path}")
             paths[f"{key}.model_path"] = str(path)
+        # RapidOCR khởi tạo font hiển thị ngay cả khi chỉ cần transcript. Giữ font trong cache
+        # dự án để inference không phải truy cập mạng ở lần gọi đầu.
+        font = root / "latin.ttf"
+        font_sha = "1562fe5cbdaacab4a5880d6404ba05245d12f3a4478fe16021e976bc725ce5d5"
+        if not font.exists():
+            url = "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.4.0/resources/fonts/latin.ttf"
+            with urllib.request.urlopen(url, timeout=60) as response:
+                data = response.read()
+            if hashlib.sha256(data).hexdigest() != font_sha:
+                raise RuntimeError("OCR font download checksum mismatch")
+            font.write_bytes(data)
+        if hashlib.sha256(font.read_bytes()).hexdigest() != font_sha:
+            raise RuntimeError(f"OCR font cache checksum mismatch: {font}")
+        cuda = ml_device() == "cuda"
+        if cuda:
+            providers()  # ORT 1.20 trên Windows cần nạp DLL CUDA 12 trước RapidOCR.
         model = RapidOCR(params={"Rec.lang_type": LangRec.LATIN, "Rec.ocr_version": OCRVersion.PPOCRV4,
+                                 "Global.font_path": str(font),
                                  **paths, "Global.text_score": 0.6,
+                                 "EngineConfig.onnxruntime.use_cuda": cuda,
                                  "EngineConfig.onnxruntime.intra_op_num_threads": 2,
                                  "EngineConfig.onnxruntime.inter_op_num_threads": 1})
+        if cuda:
+            for part in (model.text_det, model.text_cls, model.text_rec):
+                ort_session = part.session.session
+                ort_session.disable_fallback()
+                if ort_session.get_providers()[0] != "CUDAExecutionProvider":
+                    raise RuntimeError("RapidOCR không khởi tạo được CUDA; từ chối CPU fallback")
         for path in sorted(root.rglob("*")):
             if path.is_file():
                 self._files[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()

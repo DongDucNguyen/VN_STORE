@@ -34,7 +34,8 @@ async function recordSession(page: Page, info: TestInfo): Promise<string> {
   await page.getByLabel(/Người nói đã đồng ý/).check();
   for (const id of ["p01", "p05"]) {
     await page.getByRole("button", { name: `Ghi câu ${id}` }).click();
-    await page.waitForTimeout(800);
+    // Cho micro giả đủ thời gian vượt ngưỡng 700 ms kể cả khi Chrome khởi động chậm.
+    await page.waitForTimeout(1200);
     await page.getByRole("button", { name: "Dừng" }).click();
     await expect(page.getByLabel(`Nghe lại câu ${id}`)).toBeVisible();
   }

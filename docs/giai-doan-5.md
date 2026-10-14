@@ -44,7 +44,7 @@ Không tự sửa transcript/tên riêng gần âm; người dùng tiếp tục 
 .venv-ml/Scripts/python -X utf8 scripts/benchmark/smoke_ocr.py
 ```
 
-Dùng `rapidocr==3.4.1` trên ORT GPU đã có (OCR chạy CPU, 2 intra-op threads). Ba file detection/classification/Latin recognition tải về `artifacts/models/rapidocr-3.4.1`, đều kiểm tra SHA-256 được ghim từ metadata gói RapidOCR. Adapter lưu model/revision/license, hash file và ghi dung lượng vào `LOADED_FILES`. Latin recognition là `latin_PP-OCRv3_rec_infer.onnx` nằm dưới nhóm cấu hình PP-OCRv4 của RapidOCR. Không dùng torch.
+Dùng `rapidocr==3.4.1` trên ORT GPU đã có (mặc định OCR chạy CPU, 2 intra-op threads; `VNSTORE_ML_DEVICE=cuda` đưa Det/Cls/Rec lên CUDA và từ chối fallback cả session sang CPU). Ba file detection/classification/Latin recognition và font Latin tải về `artifacts/models/rapidocr-3.4.1`, đều kiểm tra SHA-256 được ghim từ metadata gói RapidOCR. Font được chỉ định bằng đường dẫn local để khởi tạo OCR không cần truy cập mạng. Adapter lưu model/revision/license, hash file và ghi dung lượng vào `LOADED_FILES`. Latin recognition là `latin_PP-OCRv3_rec_infer.onnx` nằm dưới nhóm cấu hình PP-OCRv4 của RapidOCR. Không dùng torch.
 
 Tham khảo [tham số RapidOCR 3.4.1](https://rapidai.github.io/RapidOCRDocs/v3.4.1/install_usage/rapidocr/parameters/). Kết quả đọc ảnh catalog chỉ là smoke, không chứng minh OCR đọc đúng dấu tiếng Việt hay cải thiện retrieval.
 

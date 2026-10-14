@@ -78,10 +78,14 @@ def reload_catalog(path: Path | None = None) -> None:
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    # Adapter khởi tạo rẻ (chưa nạp trọng số); trọng số nạp ở lần dùng đầu.
+    # Adapter khởi tạo rẻ; GPU demo có thể nạp trước English để giảm độ trễ yêu cầu đầu.
     state.voice = VoiceService.from_env()
     state.image_embedder, state.image_status = adapter_from_env("VNSTORE_IMAGE_ADAPTER", ImageEmbedder)
     reload_catalog()
+    if os.environ.get("VNSTORE_ASR_PRELOAD_ENGLISH") == "1" and state.voice.adapter is not None:
+        preload = getattr(state.voice.adapter, "preload_english", None)
+        if callable(preload):
+            await run_in_threadpool(preload)
     yield
 
 
@@ -352,7 +356,8 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100),
     out["warnings"].extend(warnings)
     out["mode"] = "voice"
     out["transcript"] = {"text": text, "raw_text": recognition.text,
-                         "model_id": voice.status.model_id, "revision": voice.status.revision,
+                         "model_id": recognition.model_id or voice.status.model_id,
+                         "revision": recognition.revision or voice.status.revision,
                          "duration_s": round(clip.duration_s, 2), "editable": True,
                          "language": recognition.language, "requested_language": language,
                          "language_probability": recognition.language_probability,
@@ -407,4 +412,7 @@ def image(image_id: str) -> FileResponse:
     fp = bundle().snap.image_path(image_id)
     if fp is None:
         raise HTTPException(404, {"code": "not_found", "message": "Không tìm thấy ảnh"})
-    return FileResponse(fp, headers={"Cache-Control": "public, max-age=3600"})
+    media_type = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+                  ".webp": "image/webp"}.get(fp.suffix.lower())
+    return FileResponse(fp, media_type=media_type,
+                        headers={"Cache-Control": "public, max-age=3600"})

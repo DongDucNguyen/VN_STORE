@@ -3,7 +3,7 @@
 Không dùng PyTorch: trên máy demo, chính sách Application Control của Windows chặn DLL của torch
 (torch_cpu.dll, torch_cuda.dll…), còn onnxruntime và runtime CUDA/cuDNN của NVIDIA có chữ ký thì nạp
 được. Checkpoint ONNX lấy từ Hugging Face, ghim revision; tokenizer/cấu hình lấy từ repo gốc khi có thể.
-Cần môi trường ML riêng (backend/requirements-ml.txt); API thường không import gói này.
+Cần môi trường ML riêng (backend/requirements-ml*.txt); API thường không import gói này.
 Khởi tạo rẻ; model nạp ở lần gọi đầu và giữ trong bộ nhớ.
 
 TensorRT (tùy chọn): VNSTORE_ML_TRT=1 (fp32) hoặc fp16 dùng TensorRT EP, cần gói tensorrt-cu13-libs 10.x trong
@@ -24,6 +24,7 @@ TRT_MODES = {"1": False, "fp32": False, "fp16": True}  # giá trị VNSTORE_ML_T
 ShapeFn = Callable[[str, list], "tuple[str, str, str] | None"]
 _trt_lock = threading.Lock()
 _trt_loaded = False
+_cuda_dll_handles = []  # Windows: giữ os.add_dll_directory có hiệu lực suốt tiến trình.
 # File model/cấu hình mà tiến trình đã nạp (khóa: nguồn ghim revision) để báo kích thước model trong run.
 LOADED_FILES: dict[str, Path] = {}
 
@@ -56,34 +57,71 @@ def _load_tensorrt() -> None:
         if hasattr(os, "add_dll_directory"):
             os.add_dll_directory(str(libdir))
         os.environ["PATH"] = str(libdir) + os.pathsep + os.environ.get("PATH", "")
-        ort.preload_dlls()  # cudart/cuBLAS/cuDNN mà nvinfer phụ thuộc
+        _preload_cuda(ort)  # cudart/cuBLAS/cuDNN mà nvinfer phụ thuộc
         name = "nvinfer_10.dll" if os.name == "nt" else "libnvinfer.so.10"
         (ctypes.WinDLL if os.name == "nt" else ctypes.CDLL)(str(libdir / name))
         _trt_loaded = True
 
 
+def ml_device() -> str:
+    """auto giữ tương thích cũ; cuda yêu cầu CUDA EP thực sự khởi tạo được."""
+    value = os.environ.get("VNSTORE_ML_DEVICE", "auto").strip().lower() or "auto"
+    if value not in {"auto", "cpu", "cuda"}:
+        raise RuntimeError(f"VNSTORE_ML_DEVICE={value!r} không hợp lệ; dùng auto, cpu hoặc cuda")
+    return value
+
+
+def _preload_cuda(ort) -> None:
+    """ORT 1.20 chưa có preload_dlls; thêm DLL CUDA 12 của gói NVIDIA trên Windows."""
+    if hasattr(ort, "preload_dlls"):
+        ort.preload_dlls()
+        return
+    if os.name != "nt" or _cuda_dll_handles:
+        return
+    site = Path(ort.__file__).resolve().parent.parent / "nvidia"
+    for name in ("cuda_runtime", "nvjitlink", "cublas", "cudnn", "cufft", "curand"):
+        folder = site / name / "bin"
+        if folder.is_dir():
+            _cuda_dll_handles.append(os.add_dll_directory(str(folder)))
+            os.environ["PATH"] = str(folder) + os.pathsep + os.environ.get("PATH", "")
+
+
 def providers() -> list[str]:
-    """VNSTORE_ML_DEVICE=cpu ép CPU; mặc định CUDA nếu onnxruntime có provider này."""
+    """Chọn provider; chế độ cuda báo lỗi nếu CUDA không khởi tạo được."""
     import onnxruntime as ort
-    if os.environ.get("VNSTORE_ML_DEVICE", "").lower() == "cpu":
+    device = ml_device()
+    if device == "cpu":
         return ["CPUExecutionProvider"]
     available = ort.get_available_providers()
     if "CUDAExecutionProvider" in available:
         try:
-            ort.preload_dlls()  # nạp cudart/cuBLAS/cuDNN từ các gói nvidia-* trong môi trường
-        except Exception:  # noqa: BLE001 — thiếu DLL thì ORT tự rơi về CPU khi tạo session
-            pass
-        return ["CUDAExecutionProvider", "CPUExecutionProvider"]
+            _preload_cuda(ort)
+        except Exception:
+            if device == "cuda":
+                raise
+        return ["CUDAExecutionProvider"] if device == "cuda" else ["CUDAExecutionProvider", "CPUExecutionProvider"]
+    if device == "cuda":
+        raise RuntimeError("VNSTORE_ML_DEVICE=cuda nhưng ONNX Runtime không có CUDAExecutionProvider")
     return ["CPUExecutionProvider"]
 
 
-def session(path: str | Path, shapes: ShapeFn | None = None):
+def session(path: str | Path, shapes: ShapeFn | None = None, *, force_cpu: bool = False):
     import onnxruntime as ort
     opts = ort.SessionOptions()
     opts.log_severity_level = 3
+    if force_cpu:
+        return ort.InferenceSession(str(path), sess_options=opts, providers=["CPUExecutionProvider"])
     mode = tensorrt_mode()
     if mode is None:
-        return ort.InferenceSession(str(path), sess_options=opts, providers=providers())
+        selected = providers()
+        # Một số graph (SigLIP2/Whisper) cần CPU cho phép tính shape; cấm CPU EP hoàn toàn
+        # khiến session không khởi tạo. Kiểm tra CUDA đứng đầu và tắt runtime fallback.
+        s = ort.InferenceSession(str(path), sess_options=opts, providers=selected)
+        if ml_device() == "cuda":
+            s.disable_fallback()
+            if s.get_providers()[0] != "CUDAExecutionProvider":
+                raise RuntimeError(f"CUDA không khởi tạo được cho {Path(path).name}; từ chối CPU fallback")
+        return s
     _load_tensorrt()
     cache = Path(os.environ.get("VNSTORE_TRT_CACHE", ROOT / "artifacts" / "trt-cache"))
     cache.mkdir(parents=True, exist_ok=True)
@@ -102,6 +140,8 @@ def session(path: str | Path, shapes: ShapeFn | None = None):
                                                                      "CUDAExecutionProvider", "CPUExecutionProvider"])
     if s.get_providers()[0] != "TensorrtExecutionProvider":
         raise RuntimeError(f"Bật VNSTORE_ML_TRT nhưng TensorRT không khởi tạo được cho {Path(path).name}")
+    if ml_device() == "cuda":
+        s.disable_fallback()
     return s
 
 
@@ -112,7 +152,9 @@ def fill_dims(dims: list, symbolic: dict[int, int], default: int = 1) -> str:
 
 def hf_file(repo: str, revision: str, filename: str) -> Path:
     from huggingface_hub import hf_hub_download
-    path = Path(hf_hub_download(repo, filename, revision=revision))
+    # Giữ cache model cùng dự án để các lần chạy API và công cụ offline dùng chung.
+    cache = Path(os.environ.get("VNSTORE_HF_CACHE", ROOT / "artifacts" / "hf-cache"))
+    path = Path(hf_hub_download(repo, filename, revision=revision, cache_dir=cache))
     LOADED_FILES[f"{repo}@{revision[:12]}/{filename}"] = path
     return path
 

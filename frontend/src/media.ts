@@ -5,6 +5,7 @@
 export const MAX_RECORD_SECONDS = 10;
 export const TARGET_RATE = 16000;
 const MIN_RECORD_MS = 700;
+const STOP_TAIL_MS = 300;
 export const MAX_IMAGE_FILE_BYTES = 20 * 1024 * 1024; // ảnh gốc trên máy; ảnh gửi đi nhỏ hơn nhiều
 export const MAX_UPLOAD_SIDE = 1024;
 export const MIN_IMAGE_SIDE = 32;
@@ -71,11 +72,19 @@ export class Recorder {
   async stop(): Promise<Blob> {
     const rec = this.rec;
     if (!rec) throw micError("failed");
-    const done = new Promise<void>((resolve) => (rec.onstop = () => resolve()));
-    if (rec.state !== "inactive") rec.stop();
+    const pressedAt = performance.now();
+    const active = () => rec.state !== "inactive";
+    const done = !active() ? Promise.resolve() :
+      new Promise<void>((resolve) => (rec.onstop = () => resolve()));
+    // Giữ thêm một nhịp ngắn sau khi bấm dừng để không cắt phụ âm cuối.
+    if (active()) {
+      await new Promise<void>((resolve) => setTimeout(resolve, STOP_TAIL_MS));
+      if (active()) rec.stop();
+    }
     await done;
     this.release();
-    if (performance.now() - this.startedAt < MIN_RECORD_MS) throw micError("short");
+    if (this.cancelled) throw micError("failed");
+    if (pressedAt - this.startedAt < MIN_RECORD_MS) throw micError("short");
     const blob = new Blob(this.chunks, { type: rec.mimeType || "audio/webm" });
     if (!blob.size) throw micError("failed");
     return toWav(blob);

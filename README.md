@@ -4,6 +4,8 @@ Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/pr
 
 Cập nhật voice (12/10): thêm xem/sửa/xác nhận bản chép lời trước khi tìm, gợi ý cụm theo catalog, cảnh báo âm nhỏ/vỡ tiếng, lựa chọn Việt/Anh/tự nhận diện và tiền xử lý tùy chọn. Xem [hồ sơ phân tích, tiến độ và kết quả](docs/voice-improvements/README.md). Gain/lọc vẫn tắt mặc định; chưa có clip VNStore đã duyệt để nghiệm thu chất lượng.
 
+Cập nhật 12/10: catalog `seed-006-enriched` có **328 published, 2 draft, 814 ảnh**. Đã tải cache cho profile demo và cả 4 cấu hình voice/3 adapter ảnh trong `screening.json`, dựng chỉ mục SigLIP2; **601 backend, 7 test model thật, 22 Pillow, 120 E2E và 2 smoke browser model thật đạt**. Báo cáo [rà soát và tải model demo](reports/progress/2026-10-12_GD6_ra-soat-va-tai-model-demo.md) ghi chi tiết. Chưa chạy locked test vì thiếu cấu hình và dữ liệu do người duyệt cung cấp.
+
 Cập nhật GĐ6 (11/10): hoàn thiện voice dùng kết quả API, hủy/chặn yêu cầu cũ, trang `#/diagnostics`, đo browser và tiền kiểm locked test. **550 backend, 22 Pillow, 114 E2E và 2 smoke browser model thật đạt**. Chưa nghiệm thu chất lượng hoặc chạy locked test vì thiếu selection/dữ liệu đã duyệt. Xem [báo cáo GĐ6](reports/progress/2026-10-11_GD6_tich-hop-demo-va-tien-kiem.md) và [hướng dẫn demo/đo/tiền kiểm](docs/giai-doan-6.md).
 
 Cập nhật GĐ5 (11/10): đã thêm cấu hình tối ưu tiếng Việt/VAD, weighted RRF, OCR Latin ONNX, crop/multi-view, calibration no-match và ma trận ablation; đã sửa điều kiện sẵn sàng, provenance nhãn/split và cold start OCR. **529 backend, 22 Pillow, 104 E2E và 2 test tích hợp GĐ5 với model thật đạt**; chưa chọn cấu hình cuối vì thiếu dev VNStore đã duyệt. Xem [rà soát và hoàn thiện](reports/progress/2026-10-11_GD5_ra-soat-va-hoan-thien.md), [kết quả triển khai](reports/progress/2026-10-11_GD5_toi-uu-va-ablation.md) và [hướng dẫn GĐ5](docs/giai-doan-5.md).
@@ -86,7 +88,7 @@ Xem [bảng duyệt ảnh](artifacts/image_review/2026-10-10_seed-002-taxonomy/i
 [phân tích dự án và tiến độ](reports/progress/2026-10-10_GD1_ra-soat-du-an-va-anh.md).
 
 Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem ảnh trong chế độ phát triển.
-Chế độ mặc định chỉ hiển thị `published`, hiện có 0 sản phẩm. Quyền ảnh vẫn `unknown` (cả 814 ảnh); việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
+Chế độ mặc định chỉ hiển thị `published`, hiện có 328 sản phẩm cho demo nội bộ. Quyền ảnh vẫn `unknown` (cả 814 ảnh); việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
 
 ```bash
 .venv/Scripts/python scripts/validate_catalog/audit_images.py
@@ -103,7 +105,7 @@ Kiểm tra từng sản phẩm còn thiếu gì trước khi công bố:
 
 Báo cáo Markdown/JSON mới được lưu trong `reports/data_quality/`, kèm hash DB, kiểm tra file ảnh, lỗi chặn công bố và mục cần người duyệt. Lệnh không sửa DB. Xem [hướng dẫn nhập liệu](docs/huong-dan-nhap-lieu.md#báo-cáo-điều-kiện-công-bố).
 
-Đợt mới nhất: [sửa taxonomy và đồng bộ snapshot](reports/progress/2026-10-10_GD1_taxonomy-va-snapshot.md), [checklist công bố 30 sản phẩm](reports/data_quality/2026-10-10_144424-872002_publication-readiness.md).
+Báo cáo giai đoạn đầu: [sửa taxonomy và đồng bộ snapshot](reports/progress/2026-10-10_GD1_taxonomy-va-snapshot.md), [checklist công bố 30 sản phẩm](reports/data_quality/2026-10-10_144424-872002_publication-readiness.md).
 
 Đợt bảo vệ importer đã bổ sung [giữ chỉnh sửa biên tập, diff và snapshot](data_collection/README.md#nhập-lại-dữ-liệu-và-giữ-chỉnh-sửa-biên-tập), với 168 backend test đạt tại thời điểm đó; xem [báo cáo](reports/progress/2026-10-10_GD1_bao-ve-importer.md).
 
@@ -146,18 +148,38 @@ cd backend && VNSTORE_ASR_ADAPTER=my_pkg.asr:PhoWhisperSmall VNSTORE_IMAGE_ADAPT
 
 ### Model thật (ONNX Runtime, môi trường riêng)
 
-Trên máy demo, Windows Application Control chặn DLL của PyTorch. Vì vậy adapter thật chạy bằng ONNX Runtime + CUDA 13 (tự rơi về CPU nếu không có GPU). Xem [báo cáo](reports/progress/2026-10-10_GD4_adapter-onnx-model-that.md).
+Trên máy demo, Windows Application Control chặn DLL của PyTorch. Adapter thật chạy bằng ONNX Runtime. Môi trường CUDA 13 cũ cần driver NVIDIA ≥580; máy RTX 3050/driver 566.14 dùng môi trường CUDA 12.6 bên dưới. Xem [báo cáo adapter](reports/progress/2026-10-10_GD4_adapter-onnx-model-that.md).
 
 ```bash
 py -3.14 -m venv .venv-ml
 .venv-ml/Scripts/python -m pip install -r backend/requirements-ml.txt
-# dựng chỉ mục ảnh (lần đầu tự tải model về cache Hugging Face)
+.venv-ml/Scripts/python -m pip install -r backend/requirements-ocr.txt
+# tải trước profile demo: PhoWhisper-small, SigLIP2, Silero VAD, RapidOCR Latin
+.venv-ml/Scripts/python -X utf8 scripts/download_demo_models.py
+# tùy chọn: tải thêm mọi biến thể trong experiments/configs/screening.json
+.venv-ml/Scripts/python -X utf8 scripts/download_demo_models.py --all-candidates
+# dựng chỉ mục ảnh cho catalog hiện tại
 .venv-ml/Scripts/python scripts/build_indexes/build_image_index.py --adapter app.ml.image:SigLIP2Base
 # API với model thật
 cd backend && VNSTORE_INCLUDE_DRAFTS=1 VNSTORE_ASR_ADAPTER=app.ml.asr:PhoWhisperSmall   VNSTORE_IMAGE_ADAPTER=app.ml.image:SigLIP2Base ../.venv-ml/Scripts/python -m uvicorn app.main:app --port 8000
 ```
 
-Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperBaseFp16 | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt; bản int8/fp16 không nhanh hơn fp32 trên GPU này, xem [profile](reports/progress/2026-10-10_GD4_profile-int8-fp16.md)) và `app.ml.image:SigLIP2Base | DINOv2Base | OpenCLIPViTB32` (OpenCLIP ViT-B-32 laion2B, bản export thị giác của Immich, đã đối chiếu với bản export độc lập của onnx-community). Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU. Tùy chọn TensorRT: cài `backend/requirements-ml-trt.txt` (~1,9 GB) rồi đặt `VNSTORE_ML_TRT=1`; lần nạp đầu mất ~40 giây để dựng engine (cache ở `artifacts/trt-cache`), lợi ích độ trễ nhỏ ([báo cáo](reports/progress/2026-10-10_GD4_tensorrt.md)). Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
+Model Hugging Face được ghim revision và giữ ở `artifacts/hf-cache/` (có thể đổi bằng `VNSTORE_HF_CACHE`); VAD/OCR và manifest SHA-256 ở `artifacts/models/`. Chạy lại lệnh tải để kiểm tra cache. Khi catalog hoặc ảnh đổi, dựng lại chỉ mục ảnh.
+
+#### Chạy GPU trên RTX 3050/driver 566.14 (PowerShell)
+
+Máy này dùng Python 3.12, ONNX Runtime 1.20.2 và CUDA 12.6 trong `.venv-ml-gpu`. Python 3.14/ORT 1.31 cũ dùng CUDA 13 và lỗi 801 với driver 566.14. Cài từ Python 3.12 có sẵn, hoặc dùng gói Python NuGet chính thức đã giải nén tại `artifacts/runtime/python-3.12-nuget/tools/python.exe`:
+
+```powershell
+& .\artifacts\runtime\python-3.12-nuget\tools\python.exe -m venv .venv-ml-gpu
+& .\.venv-ml-gpu\Scripts\python.exe -m pip install -r backend/requirements-ml-cuda12.txt -r backend/requirements-ocr.txt
+& .\.venv-ml-gpu\Scripts\python.exe -X utf8 scripts/download_demo_models.py
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_gpu_cuda12.ps1
+```
+
+Script mặc định chạy PhoWhisper-small cho tiếng Việt và SigLIP2 tìm bằng ảnh trên GPU; English dùng Whisper-small.en với encoder fp16 trên GPU và decoder int8 trên CPU. So với cấu hình English chạy toàn bộ trên CPU, thời gian API sau khởi động nóng giảm từ 1,43 xuống 0,41 giây với câu ngắn và từ 1,79 xuống 0,73 giây với clip FLEURS 6,5 giây, trên máy này. Script nạp trước VAD và model English lúc khởi động backend; lần khởi động vì vậy lâu hơn nhưng yêu cầu English đầu không phải chờ tải model. Whisper-tiny nhận diện ngôn ngữ `auto` trên CPU; RapidOCR và VAD cũng được bật. Chọn English trong giao diện để gửi `language=en`; `auto` chọn một ngôn ngữ cho cả clip. Bộ ghi âm giữ thêm 300 ms sau khi bấm dừng để giảm cắt phụ âm cuối. Lệnh tải cache ở trên chuẩn bị các model English. Nếu thiếu VRAM, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_gpu_cuda12.ps1 -EnglishDevice cpu`; `-EnglishDevice cuda` dùng Whisper-base.en trên GPU nhưng có thể kém chính xác hơn với âm cuối. Xem [báo cáo tối ưu độ trễ English](reports/progress/2026-10-14_english_latency_gpu_encoder.md), [báo cáo cải thiện âm cuối](reports/progress/2026-10-14_english_short_words_tail.md) và [báo cáo GPU trước đó](reports/progress/2026-10-14_gpu_full_demo.md).
+
+Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperBaseFp16 | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt; phép đo int8/fp16 cũ trên RTX 5070 Ti ở [profile](reports/progress/2026-10-10_GD4_profile-int8-fp16.md)) và `app.ml.image:SigLIP2Base | DINOv2Base | OpenCLIPViTB32` (OpenCLIP ViT-B-32 laion2B, bản export thị giác của Immich, đã đối chiếu với bản export độc lập của onnx-community). Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU; `cuda` bắt buộc CUDA EP, từ chối fallback cả session sang CPU. Tùy chọn TensorRT CUDA 13: cài `backend/requirements-ml-trt.txt` (~1,9 GB) rồi đặt `VNSTORE_ML_TRT=1` trên máy/driver tương thích; xem [báo cáo](reports/progress/2026-10-10_GD4_tensorrt.md). Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml-gpu/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
 Smoke đầu tiên (không phải benchmark): PhoWhisper-small có WER chuẩn hóa 0,109 trên 30 câu FLEURS; SigLIP2 đạt Hit@1 0,96 khi tìm lại sản phẩm trong gallery; end-to-end ~0,94 giây cho clip 8,9 giây và ~20 ms cho ảnh trên RTX 5070 Ti. Lựa chọn PhoWhisper-small + SigLIP2 chỉ là cấu hình chạy demo, chưa phải chọn model theo PLAN §8.3.
 
 Thử luồng bằng adapter GIẢ: `VNSTORE_ASR_ADAPTER=tests.fakes:FakeASR`, `VNSTORE_IMAGE_ADAPTER=tests.fakes:ByteHistogramEmbedder VNSTORE_IMAGE_INDEX_AUTOBUILD=1`. FakeASR luôn trả một câu cố định; embedder giả dùng histogram byte và không hiểu ảnh. E2E dùng hai adapter này, nên mọi số đo với chúng **không phải benchmark**.

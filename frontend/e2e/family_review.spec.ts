@@ -12,6 +12,7 @@ const PYTHON = path.join(ROOT, ".venv", process.platform === "win32" ? "Scripts/
 const script = (name: string) => path.join(ROOT, "scripts/benchmark", name);
 
 test("duyệt họ: tách, gộp/không gộp, ảnh dùng chung → xuất → áp thành families.json", async ({ page }) => {
+  test.setTimeout(90_000); // 35 họ và 83 cặp ứng viên trên catalog thật cần thêm thời gian ở mobile.
   const out = path.join(ROOT, "artifacts", `family-review-test-${randomUUID()}`);
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "vnstore-family-"));
   execFileSync(PYTHON, ["-X", "utf8", script("prepare_family_review.py"), "--out", out]);
