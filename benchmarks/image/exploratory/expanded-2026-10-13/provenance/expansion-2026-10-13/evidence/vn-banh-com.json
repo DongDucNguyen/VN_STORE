@@ -1,0 +1,634 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22banh+com%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22banh+com%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:52:00.585030+00:00",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "50465845": {
+          "pageid": 50465845,
+          "ns": 6,
+          "title": "File:Banh com.png",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3108781,
+              "width": 3264,
+              "height": 2448,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Banh_com.png/1280px-Banh_com.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Banh_com.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Banh_com.png/1280px-Banh_com.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Banh_com.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Banh_com.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Banh_com.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50465845",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-08-03 10:06:23",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Banh com",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Sliced cakes|Bánh cốm",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Bánh cốm Hàng Than.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2016-08-03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:P.T.%C4%90\" title=\"User:P.T.Đ\">P.T.Đ</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        },
+        "2745746": {
+          "pageid": 2745746,
+          "ns": 6,
+          "title": "File:Banh com (Vietnam).JPG",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1771523,
+              "width": 2496,
+              "height": 1664,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Banh_com_%28Vietnam%29.JPG/1280px-Banh_com_%28Vietnam%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Banh_com_%28Vietnam%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Banh_com_%28Vietnam%29.JPG/1280px-Banh_com_%28Vietnam%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Banh_com_%28Vietnam%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Banh_com_%28Vietnam%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Banh_com_(Vietnam).JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2745746",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2011-12-25 11:53:36",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Banh com (Vietnam)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon EOS 350D|Wedding ceremonies in Vietnam|Betrothal|Bridewealth|Wedding gifts|Self-published work|PD-self|Cakes of Vietnam|Pictures by Viethavvh|Bánh cốm",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "green rice cake made using cốm with mung bean filling",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006-11-22 14:28:02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "myself made",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Khương Việt Hà",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "93719321": {
+          "pageid": 93719321,
+          "ns": 6,
+          "title": "File:Bánh cốm.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 485528,
+              "width": 1139,
+              "height": 1554,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/B%C3%A1nh_c%E1%BB%91m.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1746,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/B%C3%A1nh_c%E1%BB%91m.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1746
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/B%C3%A1nh_c%E1%BB%91m.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_c%E1%BB%91m.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=93719321",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2008-10-12 13:30:54",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bánh cốm",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|Taken with Canon EOS 350D|License migration redundant|Self-published work|Bánh cốm",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Bánh cốm Nguyên Ninh phố Hàng Than Hà Nội, trong một tráp lễ vật <a href=\"https://vi.wikipedia.org/wiki/%C4%83n_h%E1%BB%8Fi\" class=\"extiw\" title=\"vi:ăn hỏi\">ăn hỏi</a>.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"https://vi.wikipedia.org/wiki/User:Viethavvh\" class=\"extiw\" title=\"vi:User:Viethavvh\">Viethavvh</a> (<a href=\"https://vi.wikipedia.org/wiki/User_talk:Viethavvh\" class=\"extiw\" title=\"vi:User talk:Viethavvh\">thảo luận</a>)",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "124910887": {
+          "pageid": 124910887,
+          "ns": 6,
+          "title": "File:Bánh cốm Nguyên Ninh 1.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 118156,
+              "width": 562,
+              "height": 706,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/B%C3%A1nh_c%E1%BB%91m_Nguy%C3%AAn_Ninh_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1608,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/B%C3%A1nh_c%E1%BB%91m_Nguy%C3%AAn_Ninh_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1608
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/B%C3%A1nh_c%E1%BB%91m_Nguy%C3%AAn_Ninh_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_c%E1%BB%91m_Nguy%C3%AAn_Ninh_1.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=124910887",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-11-02 16:57:20",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bánh cốm Nguyên Ninh 1",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Cuisine of Vietnam|Self-published work",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Bánh cốm Nguyên Ninh",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-11-02",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:GDAE&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:GDAE (page does not exist)\">GDAE</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "16938400": {
+          "pageid": 16938400,
+          "ns": 6,
+          "title": "File:Do le an hoi.JPG",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 518188,
+              "width": 2426,
+              "height": 904,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Do_le_an_hoi.JPG/1280px-Do_le_an_hoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 477,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Do_le_an_hoi.JPG/1280px-Do_le_an_hoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 477,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Do_le_an_hoi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Do_le_an_hoi.JPG",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16938400",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2011-10-09 20:42:58",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Do le an hoi",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon EOS 350D|PD-user|Wedding ceremonies in Vietnam|Betrothal|Bánh|Bridewealth|Wedding gifts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "2 mâm (trầu cau; lợn sữa quay) và 5 tráp (bánh cốm; bánh phu thê; rượu và thuốc lá; chè hộp; bánh đậu xanh) dùng trong một lễ ăn hỏi ở Hà Nội",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "8 March 2008 (original upload date)",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span><br>Transferred from <a class=\"external text\" data-mw-original-href=\"http://vi.wikipedia.org\" href=\"https://vi.wikipedia.org\">vi.wikipedia</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"https://vi.wikipedia.org/wiki/User:Viethavvh\" class=\"extiw\" title=\"vi:User:Viethavvh\">Viethavvh</a> at <a class=\"external text\" data-mw-original-href=\"http://vi.wikipedia.org\" href=\"https://vi.wikipedia.org\">vi.wikipedia</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "52428860": {
+          "pageid": 52428860,
+          "ns": 6,
+          "title": "File:Homard bleu rôti à la coriandre et tomate émulsionnée.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2066593,
+              "width": 5760,
+              "height": 3840,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg/1280px-Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg/3840px-Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg/1280px-Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg/3840px-Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Homard_bleu_r%C3%B4ti_%C3%A0_la_coriandre_et_tomate_%C3%A9mulsionn%C3%A9e.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=52428860",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-10-22 07:56:09",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Homard bleu rôti à la coriandre et tomate émulsionnée",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Haute cuisine|Cuisine des fleurs|Jany Gleize|Traditional food of France|Files from Alpes de Haute Provence Tourisme Flickr stream|Flickr images reviewed by FlickreviewR 2",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Homard bleu rôti à la coriandre et tomate émulsionnée",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-06-26 13:53:24",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/alpesdehauteprovence-tourisme/16287004852/\">https://www.flickr.com/photos/alpesdehauteprovence-tourisme/16287004852/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "ADT 04",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

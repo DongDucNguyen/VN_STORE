@@ -24,6 +24,7 @@
       {"name": "text025", "search": {"text_weight": 0.25}},
       {"name": "rrf20", "search": {"rrf_k": 20}},
       {"name": "generic", "search": {"generic_text_mode": "visual_only"}},
+      {"name": "text-bm25", "search": {"visual_text_rank": "bm25"}},
       {"name": "single-view", "env": {"VNSTORE_IMAGE_MULTI_VIEW": "0"}},
       {"name": "ocr", "env": {"VNSTORE_OCR": "rapidocr-latin"}, "search": {"ocr_weight": 0.35}},
       {"name": "crop", "requires_crops": true}
@@ -35,7 +36,12 @@
       {"name": "baseline"},
       {"name": "coverage050", "search": {"min_token_coverage": 0.5}},
       {"name": "coverage075", "search": {"min_token_coverage": 0.75}},
-      {"name": "accents075", "search": {"min_token_coverage": 0.75, "strict_accents": true}}
+      {"name": "accents075", "search": {"min_token_coverage": 0.75, "strict_accents": true}},
+      {"name": "no-lexicon", "search": {"lexicon": false}},
+      {"name": "no-typo", "search": {"typo_correction": false}},
+      {"name": "no-exact-latin", "search": {"exact_latin_bonus": false}},
+      {"name": "no-brand-boost", "search": {"brand_hint_boost": 0}},
+      {"name": "idf-coverage030", "search": {"min_idf_coverage": 0.3}}
     ]
   }
 }

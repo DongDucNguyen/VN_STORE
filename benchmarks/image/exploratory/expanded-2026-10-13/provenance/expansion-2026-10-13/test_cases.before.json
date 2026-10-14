@@ -1,0 +1,445 @@
+{
+  "benchmark_approved": false,
+  "cases": [
+    {
+      "case_id": "web-000-image",
+      "image_path": "raw/images/similar_candidate/gom-su/web-000.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-001-image",
+      "image_path": "raw/images/similar_candidate/gom-su/web-001.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-005-image",
+      "image_path": "raw/images/similar_candidate/gom-su/web-005.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-006-image",
+      "image_path": "raw/images/similar_candidate/gom-su/web-006.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-008-image",
+      "image_path": "raw/images/similar_candidate/gom-su/web-008.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-010-image",
+      "image_path": "raw/images/similar_candidate/may-tre-coi/web-010.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-011-image",
+      "image_path": "raw/images/similar_candidate/may-tre-coi/web-011.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-017-image",
+      "image_path": "raw/images/similar_candidate/may-tre-coi/web-017.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-019-image",
+      "image_path": "raw/images/similar_candidate/may-tre-coi/web-019.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-021-image",
+      "image_path": "raw/images/similar_candidate/may-tre-coi/web-021.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-022-image",
+      "image_path": "raw/images/similar_candidate/det-may/web-022.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-023-image",
+      "image_path": "raw/images/similar_candidate/det-may/web-023.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-029-image",
+      "image_path": "raw/images/negative_candidate/det-may/web-029.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-030-image",
+      "image_path": "raw/images/negative_candidate/det-may/web-030.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-031-image",
+      "image_path": "raw/images/negative_candidate/det-may/web-031.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-034-image",
+      "image_path": "raw/images/similar_candidate/go-son-mai/web-034.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-036-image",
+      "image_path": "raw/images/similar_candidate/go-son-mai/web-036.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-037-image",
+      "image_path": "raw/images/similar_candidate/go-son-mai/web-037.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-038-image",
+      "image_path": "raw/images/similar_candidate/go-son-mai/web-038.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-039-image",
+      "image_path": "raw/images/similar_candidate/go-son-mai/web-039.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-046-image",
+      "image_path": "raw/images/similar_candidate/thuc-pham/web-046.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-047-image",
+      "image_path": "raw/images/similar_candidate/thuc-pham/web-047.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-049-image",
+      "image_path": "raw/images/similar_candidate/thuc-pham/web-049.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-052-image",
+      "image_path": "raw/images/negative_candidate/thuc-pham/web-052.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-053-image",
+      "image_path": "raw/images/negative_candidate/thuc-pham/web-053.jpg",
+      "task": "similar_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-057-image",
+      "image_path": "raw/images/negative_candidate/ngoai-catalog/web-057.jpg",
+      "task": "negative_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-060-image",
+      "image_path": "raw/images/negative_candidate/ngoai-catalog/web-060.jpg",
+      "task": "negative_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-063-image",
+      "image_path": "raw/images/negative_candidate/ngoai-catalog/web-063.jpg",
+      "task": "negative_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-071-image",
+      "image_path": "raw/images/negative_candidate/ngoai-catalog/web-071.jpg",
+      "task": "negative_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "web-072-image",
+      "image_path": "raw/images/negative_candidate/ngoai-catalog/web-072.jpg",
+      "task": "negative_candidate",
+      "text_vi": "",
+      "suggested_reference_product_id": null,
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-030-image",
+      "image_path": "raw/images/gallery_control/gom-su/control-030.png",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-minhlong-chen-com-thach-van-11cm",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-031-image",
+      "image_path": "raw/images/gallery_control/gom-su/control-031.png",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-032-image",
+      "image_path": "raw/images/gallery_control/may-tre-coi/control-032.png",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-vietcraft-gio-tre-dan-tron-vh24026",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-033-image",
+      "image_path": "raw/images/gallery_control/may-tre-coi/control-033.png",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-034-image",
+      "image_path": "raw/images/gallery_control/go-son-mai/control-034.webp",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-hanoia-binh-hoa-mystery-a18mt01",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-035-image",
+      "image_path": "raw/images/gallery_control/go-son-mai/control-035.webp",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-036-image",
+      "image_path": "raw/images/gallery_control/det-may/control-036.jpg",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-hanhsilk-khan-lanh-to-tam-246",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-037-image",
+      "image_path": "raw/images/gallery_control/det-may/control-037.jpg",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-038-image",
+      "image_path": "raw/images/gallery_control/thuc-pham/control-038.jpg",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-marou-ben-tre-78-80g",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-039-image",
+      "image_path": "raw/images/gallery_control/thuc-pham/control-039.jpg",
+      "task": "gallery_control",
+      "text_vi": "",
+      "suggested_reference_product_id": "p-marou-tien-giang-70-80g",
+      "check": "Quan sát top 5/10, hình dáng và loại vật thể; không suy nguồn gốc từ ảnh.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-030-text-0",
+      "image_path": "raw/images/gallery_control/gom-su/control-030.png",
+      "task": "image_text",
+      "text_vi": "dưới 500k",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-031-text-1",
+      "image_path": "raw/images/gallery_control/gom-su/control-031.png",
+      "task": "image_text",
+      "text_vi": "không lấy màu đỏ",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-032-text-0",
+      "image_path": "raw/images/gallery_control/may-tre-coi/control-032.png",
+      "task": "image_text",
+      "text_vi": "có quai, dưới 400k",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-033-text-1",
+      "image_path": "raw/images/gallery_control/may-tre-coi/control-033.png",
+      "task": "image_text",
+      "text_vi": "bằng tre, không lấy nhựa",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-036-text-0",
+      "image_path": "raw/images/gallery_control/det-may/control-036.jpg",
+      "task": "image_text",
+      "text_vi": "khăn lụa dưới 500k",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-037-text-1",
+      "image_path": "raw/images/gallery_control/det-may/control-037.jpg",
+      "task": "image_text",
+      "text_vi": "không lấy màu đỏ",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-034-text-0",
+      "image_path": "raw/images/gallery_control/go-son-mai/control-034.webp",
+      "task": "image_text",
+      "text_vi": "hộp sơn mài",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-035-text-1",
+      "image_path": "raw/images/gallery_control/go-son-mai/control-035.webp",
+      "task": "image_text",
+      "text_vi": "dưới 500k",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-038-text-0",
+      "image_path": "raw/images/gallery_control/thuc-pham/control-038.jpg",
+      "task": "image_text",
+      "text_vi": "sô cô la dưới 200k",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    },
+    {
+      "case_id": "control-039-text-1",
+      "image_path": "raw/images/gallery_control/thuc-pham/control-039.jpg",
+      "task": "image_text",
+      "text_vi": "Marou",
+      "check": "Kiểm tra interpreted_query, applied_filters và giá/phủ định; có thể không còn đáp án.",
+      "expected_relevance": null
+    }
+  ]
+}

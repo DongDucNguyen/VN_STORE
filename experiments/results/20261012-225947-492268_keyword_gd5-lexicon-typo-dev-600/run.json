@@ -1,0 +1,981 @@
+{
+  "name": "gd5-lexicon-typo-dev-600",
+  "created_at": "2026-10-12T22:59:47+07:00",
+  "queries_file": "benchmarks\\keyword\\machine\\dev_all_machine.jsonl",
+  "queries_sha256": "965fd7e36e6c3930b0c98fb27cb48a14644d8bac2c598159c52d06329029e14a",
+  "catalog_version": "seed-006-enriched",
+  "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+  "include_drafts": true,
+  "split": "dev",
+  "unverified_queries": 180,
+  "locked_test_id": null,
+  "evaluation_status": "machine_labeled",
+  "label_source": "machine",
+  "metric_policy": "Unjudged in top K => metric null; averages use eligible queries only. IDCG/Recall denominator uses known labels, not assumed complete relevance of catalog.",
+  "latency_protocol": {
+    "warmup_rounds": 2,
+    "measured_passes": 1,
+    "scope": "in-process search only, excludes loading/index/API",
+    "p50": "median",
+    "p95": "nearest-rank"
+  },
+  "selected_qids": [
+    "kw-seed-001",
+    "kw-seed-002",
+    "kw-seed-003",
+    "kw-seed-004",
+    "kw-seed-005",
+    "kw-seed-006",
+    "kw-seed-007",
+    "kw-seed-008",
+    "kw-seed-009",
+    "kw-seed-010",
+    "kw-seed-011",
+    "kw-seed-012",
+    "kw-dev-001",
+    "kw-dev-002",
+    "kw-dev-003",
+    "kw-dev-004",
+    "kw-dev-005",
+    "kw-dev-006",
+    "kw-dev-007",
+    "kw-dev-008",
+    "kw-dev-009",
+    "kw-dev-010",
+    "kw-dev-011",
+    "kw-dev-012",
+    "kw-dev-013",
+    "kw-dev-014",
+    "kw-dev-015",
+    "kw-dev-016",
+    "kw-dev-017",
+    "kw-dev-018",
+    "kw-dev-019",
+    "kw-dev-020",
+    "kw-dev-021",
+    "kw-dev-022",
+    "kw-dev-023",
+    "kw-dev-024",
+    "kw-dev-025",
+    "kw-dev-026",
+    "kw-dev-027",
+    "kw-dev-028",
+    "kw-dev-029",
+    "kw-dev-030",
+    "kw-dev-031",
+    "kw-dev-032",
+    "kw-dev-033",
+    "kw-dev-034",
+    "kw-dev-035",
+    "kw-dev-036",
+    "kw-dev-037",
+    "kw-dev-038",
+    "kw-dev-039",
+    "kw-dev-040",
+    "kw-dev-041",
+    "kw-dev-042",
+    "kw-dev-043",
+    "kw-dev-044",
+    "kw-dev-045",
+    "kw-dev-046",
+    "kw-dev-047",
+    "kw-dev-048",
+    "kw-dev-049",
+    "kw-dev-050",
+    "kw-dev-051",
+    "kw-dev-052",
+    "kw-dev-053",
+    "kw-dev-054",
+    "kw-dev-055",
+    "kw-dev-056",
+    "kw-dev-057",
+    "kw-dev-058",
+    "kw-dev-059",
+    "kw-dev-060",
+    "kw-dev-061",
+    "kw-dev-062",
+    "kw-dev-063",
+    "kw-dev-064",
+    "kw-dev-065",
+    "kw-dev-066",
+    "kw-dev-067",
+    "kw-dev-068",
+    "kw-dev-069",
+    "kw-dev-070",
+    "kw-dev-071",
+    "kw-dev-072",
+    "kw-dev-073",
+    "kw-dev-074",
+    "kw-dev-075",
+    "kw-dev-076",
+    "kw-dev-077",
+    "kw-dev-078",
+    "kw-dev-079",
+    "kw-dev-080",
+    "kw-dev-081",
+    "kw-dev-082",
+    "kw-dev-083",
+    "kw-dev-084",
+    "kw-dev-085",
+    "kw-dev-086",
+    "kw-dev-087",
+    "kw-dev-088",
+    "kw-dev-089",
+    "kw-dev-090",
+    "kw-dev-091",
+    "kw-dev-092",
+    "kw-dev-093",
+    "kw-dev-094",
+    "kw-dev-095",
+    "kw-dev-096",
+    "kw-dev-097",
+    "kw-dev-098",
+    "kw-dev-099",
+    "kw-dev-100",
+    "kw-dev-101",
+    "kw-dev-102",
+    "kw-dev-103",
+    "kw-dev-104",
+    "kw-dev-105",
+    "kw-dev-106",
+    "kw-dev-107",
+    "kw-dev-d-dia-camellia-1",
+    "kw-dev-d-dia-camellia-2",
+    "kw-dev-d-chen-11-1",
+    "kw-dev-d-chen-11-2",
+    "kw-dev-d-bo-tra-05-1",
+    "kw-dev-d-bo-tra-05-2",
+    "kw-dev-d-binh-sen-do-1",
+    "kw-dev-d-binh-sen-do-2",
+    "kw-dev-d-binh-dam-sen-1",
+    "kw-dev-d-binh-dam-sen-2",
+    "kw-dev-d-binh-vinh-1",
+    "kw-dev-d-binh-vinh-2",
+    "kw-dev-d-binh-resin-xanh-1",
+    "kw-dev-d-binh-resin-xanh-2",
+    "kw-dev-d-hop-tra-exotic-1",
+    "kw-dev-d-hop-tra-exotic-2",
+    "kw-dev-d-hop-trang-suc-nhung-1",
+    "kw-dev-d-hop-trang-suc-nhung-2",
+    "kw-dev-d-tuong-vet-1",
+    "kw-dev-d-tuong-vet-2",
+    "kw-dev-d-khay-moonbow-1",
+    "kw-dev-d-khay-moonbow-2",
+    "kw-dev-d-socola-bà-ria-1",
+    "kw-dev-d-socola-bà-ria-2",
+    "kw-dev-d-socola-feuillantine-1",
+    "kw-dev-d-socola-feuillantine-2",
+    "kw-dev-d-socola-gao-1",
+    "kw-dev-d-socola-gao-2",
+    "kw-dev-d-socola-dua-1",
+    "kw-dev-d-socola-dua-2",
+    "kw-dev-d-socola-qua-tet-1",
+    "kw-dev-d-socola-qua-tet-2",
+    "kw-dev-d-gio-tre-tron-1",
+    "kw-dev-d-gio-tre-tron-2",
+    "kw-dev-d-khay-may-gom-1",
+    "kw-dev-d-khay-may-gom-2",
+    "kw-dev-d-den-may-den-1",
+    "kw-dev-d-den-may-den-2",
+    "kw-dev-d-gio-seagrass-tre-em-1",
+    "kw-dev-d-gio-seagrass-tre-em-2",
+    "kw-dev-d-khan-tay-theu-mai-1",
+    "kw-dev-d-khan-tay-theu-mai-2",
+    "kw-dev-d-khan-cuc-1",
+    "kw-dev-d-khan-cuc-2",
+    "kw-dev-d-khan-tulip-1",
+    "kw-dev-d-khan-tulip-2",
+    "kw-dev-d-khan-180-1",
+    "kw-dev-d-khan-180-2",
+    "kw-dev-d-khan-thuy-an-1",
+    "kw-dev-d-khan-thuy-an-2",
+    "kw-dev-d-ao-dai-vo-so-1",
+    "kw-dev-d-ao-dai-vo-so-2",
+    "kw-dev-d-ao-dai-tim-1",
+    "kw-dev-d-ao-dai-tim-2",
+    "kw-dev-d-vay-song-1",
+    "kw-dev-d-vay-song-2",
+    "kw-dev-d-nm-son-dau-1",
+    "kw-dev-d-nm-son-dau-2",
+    "kw-dev-d-nm-gom-bau-truc-1",
+    "kw-dev-d-nm-gom-bau-truc-2",
+    "kw-dev-d-nm-xe-dap-1"
+  ],
+  "config": {
+    "TYPE_CHECKING": false,
+    "CLAIM_LABELS": {
+      "vn_brand": "Thương hiệu Việt",
+      "made_in_vn": "Sản xuất tại Việt Nam",
+      "vn_material": "Nguyên liệu Việt",
+      "traditional_craft": "Thủ công/truyền thống",
+      "craft_village": "Làng nghề"
+    },
+    "BRAND_ABBREVIATIONS": {
+      "km109": "brand-kilomet109"
+    },
+    "LEXICON": [
+      {
+        "id": "lex-socola",
+        "relation": "spelling",
+        "terms": [
+          "sô cô la",
+          "socola",
+          "chocolate",
+          "chocolat"
+        ]
+      },
+      {
+        "id": "lex-km109",
+        "relation": "abbreviation",
+        "terms": [
+          "km109",
+          "kilomet109"
+        ]
+      },
+      {
+        "id": "lex-sua",
+        "relation": "translation",
+        "terms": [
+          "sữa",
+          "milk"
+        ]
+      },
+      {
+        "id": "lex-dua",
+        "relation": "translation",
+        "terms": [
+          "dừa",
+          "coconut"
+        ]
+      },
+      {
+        "id": "lex-hat-dieu",
+        "relation": "translation",
+        "terms": [
+          "hạt điều",
+          "cashew",
+          "cashews"
+        ]
+      },
+      {
+        "id": "lex-gung",
+        "relation": "translation",
+        "terms": [
+          "gừng",
+          "ginger"
+        ]
+      },
+      {
+        "id": "lex-ot",
+        "relation": "translation",
+        "terms": [
+          "ớt",
+          "chili"
+        ]
+      },
+      {
+        "id": "lex-thuan-chay",
+        "relation": "translation",
+        "terms": [
+          "thuần chay",
+          "vegan"
+        ]
+      },
+      {
+        "id": "lex-dau-phong",
+        "relation": "translation",
+        "terms": [
+          "đậu phộng",
+          "peanut",
+          "peanuts"
+        ]
+      },
+      {
+        "id": "lex-lac",
+        "relation": "translation",
+        "terms": [
+          "lạc",
+          "đậu phộng",
+          "peanut",
+          "peanuts"
+        ],
+        "sources": [
+          "lạc"
+        ]
+      },
+      {
+        "id": "lex-que",
+        "relation": "translation",
+        "terms": [
+          "quế",
+          "cinnamon"
+        ]
+      },
+      {
+        "id": "lex-vung",
+        "relation": "translation",
+        "terms": [
+          "vừng",
+          "mè",
+          "sesame"
+        ]
+      },
+      {
+        "id": "lex-hat-bi",
+        "relation": "translation",
+        "terms": [
+          "hạt bí",
+          "pumpkin seeds"
+        ]
+      },
+      {
+        "id": "lex-vani",
+        "relation": "translation",
+        "terms": [
+          "vani",
+          "vanilla"
+        ]
+      },
+      {
+        "id": "lex-quat",
+        "relation": "translation",
+        "terms": [
+          "quất",
+          "kumquat"
+        ]
+      },
+      {
+        "id": "lex-ca-phe",
+        "relation": "translation",
+        "terms": [
+          "cà phê",
+          "coffee"
+        ]
+      },
+      {
+        "id": "lex-muoi-bien",
+        "relation": "translation",
+        "terms": [
+          "muối biển",
+          "sea salt"
+        ]
+      },
+      {
+        "id": "lex-matcha",
+        "relation": "translation",
+        "terms": [
+          "trà xanh",
+          "matcha"
+        ]
+      },
+      {
+        "id": "lex-trai-cay",
+        "relation": "translation",
+        "terms": [
+          "trái cây",
+          "hoa quả",
+          "fruit",
+          "fruits"
+        ]
+      },
+      {
+        "id": "lex-com",
+        "relation": "translation",
+        "terms": [
+          "cốm",
+          "popped rice"
+        ]
+      },
+      {
+        "id": "lex-kieu-mach",
+        "relation": "translation",
+        "terms": [
+          "kiều mạch",
+          "buckwheat"
+        ]
+      },
+      {
+        "id": "lex-gia-vi",
+        "relation": "translation",
+        "terms": [
+          "gia vị",
+          "spice",
+          "spices"
+        ]
+      },
+      {
+        "id": "lex-sc-den",
+        "relation": "translation",
+        "terms": [
+          "sô cô la đen",
+          "dark chocolate"
+        ]
+      },
+      {
+        "id": "lex-sc-trang",
+        "relation": "translation",
+        "terms": [
+          "sô cô la trắng",
+          "white chocolate"
+        ]
+      },
+      {
+        "id": "lex-trung-thu",
+        "relation": "translation",
+        "terms": [
+          "trung thu",
+          "mid autumn"
+        ]
+      },
+      {
+        "id": "lex-qua-tang",
+        "relation": "translation",
+        "terms": [
+          "quà tặng",
+          "gift"
+        ]
+      },
+      {
+        "id": "lex-gio",
+        "relation": "translation",
+        "terms": [
+          "giỏ",
+          "basket",
+          "baskets"
+        ]
+      },
+      {
+        "id": "lex-khay",
+        "relation": "translation",
+        "terms": [
+          "khay",
+          "tray"
+        ]
+      },
+      {
+        "id": "lex-bat",
+        "relation": "translation",
+        "terms": [
+          "bát",
+          "bowl",
+          "bowls"
+        ]
+      },
+      {
+        "id": "lex-canh",
+        "relation": "translation",
+        "terms": [
+          "canh",
+          "súp",
+          "soup"
+        ],
+        "sources": [
+          "canh",
+          "soup"
+        ],
+        "note": "Đĩa/bát đựng canh ~ đĩa súp; một chiều để 'súp' không kéo theo nghĩa khác của 'canh'."
+      },
+      {
+        "id": "lex-dia",
+        "relation": "translation",
+        "terms": [
+          "đĩa",
+          "plate",
+          "dish"
+        ]
+      },
+      {
+        "id": "lex-lot-ly",
+        "relation": "translation",
+        "terms": [
+          "lót ly",
+          "coaster"
+        ]
+      },
+      {
+        "id": "lex-binh-hoa",
+        "relation": "translation",
+        "terms": [
+          "bình hoa",
+          "vase",
+          "flower vase"
+        ]
+      },
+      {
+        "id": "lex-chup-den",
+        "relation": "translation",
+        "terms": [
+          "chụp đèn",
+          "lampshade"
+        ]
+      },
+      {
+        "id": "lex-den-long",
+        "relation": "translation",
+        "terms": [
+          "đèn lồng",
+          "lantern"
+        ]
+      },
+      {
+        "id": "lex-de-nen",
+        "relation": "translation",
+        "terms": [
+          "đế nến",
+          "candle holder"
+        ]
+      },
+      {
+        "id": "lex-guong",
+        "relation": "translation",
+        "terms": [
+          "gương",
+          "mirror"
+        ]
+      },
+      {
+        "id": "lex-bo-tra",
+        "relation": "translation",
+        "terms": [
+          "bộ trà",
+          "tea set"
+        ]
+      },
+      {
+        "id": "lex-am-tra",
+        "relation": "translation",
+        "terms": [
+          "ấm trà",
+          "teapot"
+        ]
+      },
+      {
+        "id": "lex-coc",
+        "relation": "translation",
+        "terms": [
+          "cốc",
+          "mug",
+          "cup"
+        ]
+      },
+      {
+        "id": "lex-hop",
+        "relation": "translation",
+        "terms": [
+          "hộp",
+          "box"
+        ]
+      },
+      {
+        "id": "lex-nha-thu-cung",
+        "relation": "translation",
+        "terms": [
+          "thú cưng",
+          "pet"
+        ]
+      },
+      {
+        "id": "lex-do-giat",
+        "relation": "translation",
+        "terms": [
+          "đồ giặt",
+          "quần áo bẩn",
+          "laundry"
+        ]
+      },
+      {
+        "id": "lex-banh-mi",
+        "relation": "translation",
+        "terms": [
+          "bánh mì",
+          "bread"
+        ]
+      },
+      {
+        "id": "lex-tre-em",
+        "relation": "translation",
+        "terms": [
+          "trẻ em",
+          "kid",
+          "kids"
+        ]
+      },
+      {
+        "id": "lex-trang-tri",
+        "relation": "translation",
+        "terms": [
+          "trang trí",
+          "decor",
+          "decorative"
+        ]
+      },
+      {
+        "id": "lex-thu-cong",
+        "relation": "translation",
+        "terms": [
+          "thủ công",
+          "handmade",
+          "handcrafted"
+        ]
+      },
+      {
+        "id": "lex-dan-tay",
+        "relation": "translation",
+        "terms": [
+          "đan tay",
+          "handwoven",
+          "woven"
+        ]
+      },
+      {
+        "id": "lex-ve-tay",
+        "relation": "translation",
+        "terms": [
+          "vẽ tay",
+          "hand painted"
+        ]
+      },
+      {
+        "id": "lex-tre",
+        "relation": "translation",
+        "terms": [
+          "tre",
+          "bamboo"
+        ]
+      },
+      {
+        "id": "lex-may",
+        "relation": "translation",
+        "terms": [
+          "mây",
+          "rattan",
+          "wicker"
+        ]
+      },
+      {
+        "id": "lex-co-bien",
+        "relation": "translation",
+        "terms": [
+          "cỏ biển",
+          "seagrass"
+        ]
+      },
+      {
+        "id": "lex-luc-binh",
+        "relation": "translation",
+        "terms": [
+          "lục bình",
+          "water hyacinth"
+        ]
+      },
+      {
+        "id": "lex-xa-cu",
+        "relation": "translation",
+        "terms": [
+          "xà cừ",
+          "mother of pearl"
+        ]
+      },
+      {
+        "id": "lex-son-mai",
+        "relation": "translation",
+        "terms": [
+          "sơn mài",
+          "lacquer"
+        ]
+      },
+      {
+        "id": "lex-gom",
+        "relation": "translation",
+        "terms": [
+          "gốm",
+          "ceramic"
+        ]
+      },
+      {
+        "id": "lex-su",
+        "relation": "translation",
+        "terms": [
+          "sứ",
+          "porcelain"
+        ]
+      },
+      {
+        "id": "lex-lua",
+        "relation": "translation",
+        "terms": [
+          "lụa",
+          "silk"
+        ]
+      },
+      {
+        "id": "lex-khan",
+        "relation": "translation",
+        "terms": [
+          "khăn",
+          "scarf",
+          "scarves",
+          "shawl"
+        ]
+      },
+      {
+        "id": "lex-khan-tay",
+        "relation": "translation",
+        "terms": [
+          "khăn tay",
+          "handkerchief"
+        ]
+      },
+      {
+        "id": "lex-theu",
+        "relation": "translation",
+        "terms": [
+          "thêu",
+          "embroidery"
+        ]
+      },
+      {
+        "id": "lex-vay",
+        "relation": "translation",
+        "terms": [
+          "váy",
+          "dress"
+        ]
+      },
+      {
+        "id": "lex-dam",
+        "relation": "translation",
+        "terms": [
+          "đầm",
+          "váy",
+          "dress"
+        ],
+        "sources": [
+          "đầm"
+        ],
+        "note": "Đầm = váy liền; một chiều để 'váy' không kéo bình hoa 'Đầm Sen'."
+      },
+      {
+        "id": "lex-chan-vay",
+        "relation": "translation",
+        "terms": [
+          "chân váy",
+          "skirt"
+        ]
+      },
+      {
+        "id": "lex-ao-khoac",
+        "relation": "translation",
+        "terms": [
+          "áo khoác",
+          "jacket",
+          "coat"
+        ]
+      },
+      {
+        "id": "lex-ao-so-mi",
+        "relation": "translation",
+        "terms": [
+          "áo sơ mi",
+          "shirt"
+        ]
+      },
+      {
+        "id": "lex-vong-co",
+        "relation": "translation",
+        "terms": [
+          "vòng cổ",
+          "necklace"
+        ]
+      },
+      {
+        "id": "lex-tui-xach",
+        "relation": "translation",
+        "terms": [
+          "túi xách",
+          "handbag"
+        ]
+      },
+      {
+        "id": "lex-trang-suc",
+        "relation": "translation",
+        "terms": [
+          "trang sức",
+          "jewelry",
+          "jewellery"
+        ]
+      },
+      {
+        "id": "lex-trang",
+        "relation": "translation",
+        "terms": [
+          "white",
+          "trắng"
+        ],
+        "sources": [
+          "white"
+        ]
+      },
+      {
+        "id": "lex-den",
+        "relation": "translation",
+        "terms": [
+          "black",
+          "đen"
+        ],
+        "sources": [
+          "black"
+        ]
+      },
+      {
+        "id": "lex-do",
+        "relation": "translation",
+        "terms": [
+          "red",
+          "đỏ"
+        ],
+        "sources": [
+          "red"
+        ]
+      }
+    ],
+    "UNIT_TOKENS": [
+      "cm",
+      "g",
+      "kg",
+      "l",
+      "ml",
+      "mm"
+    ],
+    "FIELD_WEIGHTS": {
+      "name": 3.0,
+      "brand": 2.5,
+      "sku": 2.5,
+      "aliases": 2.0,
+      "category": 1.5,
+      "materials": 1.5,
+      "place": 1.5,
+      "attrs": 1.0,
+      "description": 0.5,
+      "category_parent": 0.4
+    },
+    "ACCENT_EXACT_WEIGHT": 0.5,
+    "RELATIVE_CUTOFF": 0.25,
+    "HINT_BOOST": 0.3,
+    "EVIDENCE_BOOST": 0.02,
+    "TEXT_EXCLUSION_PENALTY": 0.3,
+    "EXPANSION_WEIGHTS": {
+      "synonym": 0.6,
+      "regional": 0.6,
+      "broader": 0.4,
+      "translation": 0.8,
+      "spelling": 1.0,
+      "abbreviation": 1.0
+    },
+    "EXPANSION_NO_CONTEXT_FACTOR": 0.5,
+    "PHRASE_FIELDS": [
+      "brand",
+      "maker",
+      "place"
+    ],
+    "COVERED_UNIGRAM_WEIGHT": 0.2,
+    "TYPO_WEIGHT": 0.8,
+    "LEXICON_MAX_DF_RATIO": 0.05,
+    "PARTIAL_MATCH_NOTICE": 0.6,
+    "PARTIAL_MATCH_TOP": 5,
+    "BASE_COLORS": [
+      "bạc",
+      "cam",
+      "hồng",
+      "nâu",
+      "trắng",
+      "tím",
+      "vàng",
+      "xanh",
+      "xám",
+      "đen",
+      "đỏ"
+    ],
+    "RRF_K": 60,
+    "IMAGE_TOP_K": 50,
+    "search": {
+      "accent_weight": 0.5,
+      "min_token_coverage": 0.0,
+      "min_idf_coverage": 0.0,
+      "exact_latin_bonus": true,
+      "brand_hint_boost": 0.5,
+      "lexicon": true,
+      "typo_correction": true,
+      "strict_accents": false,
+      "rrf_k": 60,
+      "image_top_k": 50,
+      "text_weight": 1.0,
+      "ocr_weight": 0.0,
+      "generic_text_mode": "rrf",
+      "image_min_similarity": null
+    },
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    }
+  },
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "code_commit": null,
+  "code_sha256": "1f7d82086a70519352ebba66b76a8ab32ebfd8804082ff7ea44e62cfa1eeac8c",
+  "code_files_sha256": {
+    "backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/adapters.py": "4c6fdf85485a16728ddfdd19dcef19a06e5b70b1c6e743aaf1b543d3e6d61e31",
+    "backend/app/catalog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/catalog/present.py": "b8d4c20b7a23eceb8abbe091553629cbedf2f8a485cf4e3c4eecb6556c8480c4",
+    "backend/app/catalog/readiness.py": "2c583f96dbc016819b52b622a1eeca3de71489f6433ae6dcde2dbad585c33976",
+    "backend/app/catalog/store.py": "c653f07cdcf269935ecefee103122045a6d5cc5a15d0165a319d41be1910303c",
+    "backend/app/catalog/validation.py": "33186ed936080a6e7c89280c5c4edf74b958e71d67f7d7141579e8de76f85e50",
+    "backend/app/image/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/image/index.py": "80b4c285275039544bdbbc6761a5387509ea8e6bcffedc27873e060a346df5e4",
+    "backend/app/image/pipeline.py": "33a018d9e68e5de36cc1be3ffe07c167f71930a0000c39e63e58a198a61678fd",
+    "backend/app/main.py": "960099a4ff6163f39674ed15a34386a11545d6d17b719916d4ad3e7a893a2867",
+    "backend/app/media.py": "6e1ed697a61aa38bd1e2babf38b58aba38210c1821799ebbad92028cc10e1928",
+    "backend/app/ml/__init__.py": "4ef2f51d6b5e9fcd9e19be6e0cf0f1b16e5fa1f074ce5efe16cba3ca659c9f3b",
+    "backend/app/ml/asr.py": "b160f2bb53a2d6a7d6ab5a662fde92b998e3cd8826948edae320ec18724e3eca",
+    "backend/app/ml/image.py": "690c5e5ab9af61bfcbe26f23206868452b40684e0d46455e9c5009db4f9577ed",
+    "backend/app/ml/ocr.py": "e09635e9fcfb88533f1722e4eede060c4dbe847699fa26621ff77102ee6d1076",
+    "backend/app/ml/vad.py": "86b7882c5608010597191713086b5394d26d62c1f6fc3c509d5fa8f9c0b8a019",
+    "backend/app/modalities.py": "835839e1f8e3cc7be7ba8db09bb340329b457128e969486402d5f05fa6a1556a",
+    "backend/app/search/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/search/bm25.py": "75216baec9086be8e3808096b0a90294bdb75472194249f9889f0cdd47386ed7",
+    "backend/app/search/config.py": "3b75f66ade216b77daa46f6b968629537d096919d008de22345d462be548075b",
+    "backend/app/search/engine.py": "7a835e021f9fd68e85030b4fb9b40e0d3d0023d22c1cce1311fc8993485d6dd0",
+    "backend/app/search/lexicon.py": "7ea5c46d714254174c3c39adbe75096543c40796e0a728d0cdadb3b9b4600fa0",
+    "backend/app/search/normalize.py": "23325f368d8a4be50a9def458ed20070ced4a1ed39df595565ea75a4ddbdf353",
+    "backend/app/search/query_parser.py": "82fcd87aa51a704a826c621c2b63b4e14b24f87012363ee7dd082f8228ac43c0",
+    "backend/app/voice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/app/voice/pipeline.py": "a27832850b8409ae5f370a596fa105fcec129f9026c1fc9f579b3dad94ba05e4",
+    "backend/app/voice/suggestions.py": "bea8b3afbde40e5e00d7d72bc9d14b46cd26be5c5b73fe1e88f33574f0f492fa",
+    "scripts/benchmark/eval_keyword.py": "705c26ca1ac4d56271dc8bebc4c3be962a3c512e3e454adecf73c65a46635fda",
+    "scripts/benchmark/locked_ledger.py": "2095cc4134eb97766a3b6333c97b1227524f14bbcb54eef376a08f33f806b8bc",
+    "database.schema.json": "134c0ddd132695d998ce6905fe0727f1e93a2d1e0b3ab29e973d9b09af1edaa0"
+  },
+  "metrics": {
+    "n_queries": 180,
+    "n_with_answer": 162,
+    "n_no_answer": 18,
+    "ndcg_10": 0.8948,
+    "success_5": 0.9484,
+    "mrr_10": 0.9146,
+    "recall_20": 0.9217,
+    "eligible_queries": {
+      "ndcg_10": 140,
+      "success_5": 155,
+      "rr_10": 140,
+      "recall_20": 104
+    },
+    "queries_with_unjudged_results": 58,
+    "no_match_false_accept_rate": 1.0,
+    "judged_at_10": 0.9633,
+    "latency_ms_p50": 5.837,
+    "latency_ms_p95": 11.627
+  }
+}

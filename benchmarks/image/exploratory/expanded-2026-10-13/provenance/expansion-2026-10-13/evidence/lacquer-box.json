@@ -1,0 +1,913 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=lacquer+box+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=lacquer+box+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:30.842282+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "76009394": {
+          "pageid": 76009394,
+          "ns": 6,
+          "title": "File:Clevelandart 1966.464.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 4253715,
+              "width": 3400,
+              "height": 2209,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Clevelandart_1966.464.jpg/1280px-Clevelandart_1966.464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 832,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/35/Clevelandart_1966.464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Clevelandart_1966.464.jpg/1280px-Clevelandart_1966.464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 832,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/35/Clevelandart_1966.464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Clevelandart_1966.464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Clevelandart_1966.464.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=76009394",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-01-21 15:34:02",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nLacquer Box</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Fabergé Lacquer Box|Uploaded with pattypan|Artworks without Wikidata item|Artworks with known accession number|Images from Cleveland Museum of Art|Images with extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Peter_Carl_Faberg%C3%A9\" class=\"extiw\" title=\"w:en:Peter Carl Fabergé\"><span title=\"Russian jeweller (1846–1920)\">Peter Carl Fabergé</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1885<div style=\"display: none;\">date QS:P571,+1885-00-00T00:00:00Z/9</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://clevelandart.org/art/1966.464\">https://clevelandart.org/art/1966.464</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "76033648": {
+          "pageid": 76033648,
+          "ns": 6,
+          "title": "File:Clevelandart 1966.464 (cropped).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2803798,
+              "width": 2720,
+              "height": 1767,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Clevelandart_1966.464_%28cropped%29.jpg/1280px-Clevelandart_1966.464_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 832,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/60/Clevelandart_1966.464_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Clevelandart_1966.464_%28cropped%29.jpg/1280px-Clevelandart_1966.464_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 832,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/60/Clevelandart_1966.464_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Clevelandart_1966.464_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Clevelandart_1966.464_(cropped).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=76033648",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-01-22 21:13:04",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nLacquer Box</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Fabergé Lacquer Box|Uploaded with pattypan|Artworks without Wikidata item|Artworks with known accession number|Images from Cleveland Museum of Art|Extracted images",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Peter_Carl_Faberg%C3%A9\" class=\"extiw\" title=\"w:en:Peter Carl Fabergé\"><span title=\"Russian jeweller (1846–1920)\">Peter Carl Fabergé</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1885<div style=\"display: none;\">date QS:P571,+1885-00-00T00:00:00Z/9</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://clevelandart.org/art/1966.464\">https://clevelandart.org/art/1966.464</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "152910736": {
+          "pageid": 152910736,
+          "ns": 6,
+          "title": "File:Lacquer box with silver mouth.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2072677,
+              "width": 4000,
+              "height": 3000,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Lacquer_box_with_silver_mouth.jpg/1280px-Lacquer_box_with_silver_mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Lacquer_box_with_silver_mouth.jpg/3840px-Lacquer_box_with_silver_mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Lacquer_box_with_silver_mouth.jpg/1280px-Lacquer_box_with_silver_mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Lacquer_box_with_silver_mouth.jpg/3840px-Lacquer_box_with_silver_mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Lacquer_box_with_silver_mouth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lacquer_box_with_silver_mouth.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=152910736",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-09-20 11:51:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Lacquer box with silver mouth",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Files with coordinates missing SDC location of creation|Lacquer boxes",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "31.811390",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "119.966621",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Lacquer box with silver mouth",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-09-20 16:50:54",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Fumikas_Sagisavas\" title=\"User:Fumikas Sagisavas\">Fumikas Sagisavas</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "174755422": {
+          "pageid": 174755422,
+          "ns": 6,
+          "title": "File:Lacquer writing and trinket box, British Museum 01.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1635966,
+              "width": 4978,
+              "height": 1769,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg/1280px-Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 455,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg/3840px-Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg/1280px-Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 455,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg/3840px-Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Lacquer_writing_and_trinket_box%2C_British_Museum_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Lacquer_writing_and_trinket_box,_British_Museum_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=174755422",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-09-09 15:32:45",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Lacquer writing and trinket box, British Museum 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|Lacquer writing and trinket box, British Museum|British Museum photographs by 14GTR",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Lacquer writing and trinket box, made Beijing about 1723-1800, British Museum item 1891, 0617.13",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-08-25 13:06:43",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:14GTR\" title=\"User:14GTR\">14GTR</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "77135176": {
+          "pageid": 77135176,
+          "ns": 6,
+          "title": "File:Peter Carl Fabergé - Lacquer Box - 1966.464 - Cleveland Museum of Art.tif",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 49804302,
+              "width": 5054,
+              "height": 3283,
+              "pagecount": 1,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 831,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif/lossy-page1-3840px-Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif/lossy-page1-1280px-Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 831,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif/lossy-page1-3840px-Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Peter_Carl_Faberg%C3%A9_-_Lacquer_Box_-_1966.464_-_Cleveland_Museum_of_Art.tif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=77135176",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-03-06 15:57:20",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nLacquer Box</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Fabergé Lacquer Box|Uploaded with pattypan|Artworks without Wikidata item|Unsupported object|Artworks with known accession number|Images from Cleveland Museum of Art",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Peter_Carl_Faberg%C3%A9\" class=\"extiw\" title=\"w:en:Peter Carl Fabergé\"><span title=\"Russian jeweller (1846–1920)\">Peter Carl Fabergé</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "circa 1890<div style=\"display: none;\">date QS:P571,+1890-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://clevelandart.org/art/1966.464\">https://clevelandart.org/art/1966.464</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/tiff"
+            }
+          ]
+        },
+        "75279068": {
+          "pageid": 75279068,
+          "ns": 6,
+          "title": "File:Tsarist diplomatic gift 02 - Faberge (41869978334).jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2801012,
+              "width": 4828,
+              "height": 2739,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg/1280px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 726,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg/3840px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg/1280px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 726,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg/3840px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tsarist_diplomatic_gift_02_-_Faberge_(41869978334).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=75279068",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-12-23 16:35:20",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tsarist diplomatic gift 02 - Faberge (41869978334)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Fabergé Lacquer Box|Lapis Lazuli Hen (Fabergé egg)|Images with extracted images|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Photographs by Tim Evanson|Fabergé in the Cleveland Museum of Art|Fabergé cases",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "41.508611",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-81.611667",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Diplomatic gifts designed by Fabergé for the Czar of Russia",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-05-26 15:54",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/timevanson/41869978334/\">Tsarist diplomatic gift 02 - Faberge</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/23165290@N00\">Tim Evanson</a> from Cleveland Heights, Ohio, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "75457412": {
+          "pageid": 75457412,
+          "ns": 6,
+          "title": "File:Tsarist diplomatic gift 02 - Faberge (41869978334) (cropped)2.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 442685,
+              "width": 1952,
+              "height": 1109,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg/1280px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 727,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg/1280px-Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 727,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Tsarist_diplomatic_gift_02_-_Faberge_%2841869978334%29_%28cropped%292.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tsarist_diplomatic_gift_02_-_Faberge_(41869978334)_(cropped)2.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=75457412",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-12-31 04:15:12",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tsarist diplomatic gift 02 - Faberge (41869978334) (cropped)2",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Fabergé Lacquer Box|Extracted images|Files with coordinates missing SDC location of creation",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "41.508611",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-81.611667",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p>Diplomatic gifts designed by Fabergé for the Czar of Russia\n</p>\n<a rel=\"nofollow\" class=\"external free\" href=\"http://www.clevelandart.org/art/1966.464?f%5B0%5D=object_location%3A211%20Faberg%C3%A9\">http://www.clevelandart.org/art/1966.464?f%5B0%5D=object_location%3A211%20Fabergé</a>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-05-26 15:54",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/timevanson/41869978334/\">Tsarist diplomatic gift 02 - Faberge</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/23165290@N00\">Tim Evanson</a> from Cleveland Heights, Ohio, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "75424435": {
+          "pageid": 75424435,
+          "ns": 6,
+          "title": "File:Tsarist diplomatic gift 04 - Faberge (42539626892).jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 5566036,
+              "width": 3964,
+              "height": 2988,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg/1280px-Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 965,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg/3840px-Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg/1280px-Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 965,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg/3840px-Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Tsarist_diplomatic_gift_04_-_Faberge_%2842539626892%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tsarist_diplomatic_gift_04_-_Faberge_(42539626892).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=75424435",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-12-30 03:37:42",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tsarist diplomatic gift 04 - Faberge (42539626892)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Fabergé Lacquer Box|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Fabergé Candelabra (Cleveland Museum of Art)|Photographs by Tim Evanson|Fabergé tableware",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "41.508611",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "-81.611667",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p>Eyeglass case (left), candelabrum, and music box (right) designed by Fabergé for the Czar of Russia, date unknown.\n</p>\nThe Czars routinely commissioned small but incredibly luxurious items from Fabergé (a Russian jewelry company until the Communist revolution of 1918), and gave them to foreign heads of state as diplomatic gifts.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-06-03 15:41",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/timevanson/42539626892/\">Tsarist diplomatic gift 04 - Faberge</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/23165290@N00\">Tim Evanson</a> from Cleveland Heights, Ohio, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -39,8 +39,10 @@ if (!fs.existsSync(FAKE_AUDIO)) writeTone(FAKE_AUDIO);
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
-  // Giới hạn tải Chrome trên máy phát triển; CLI --workers vẫn có thể ghi đè.
-  workers: 2,
+  // Two Chrome workers intermittently exhaust Windows network buffers on this
+  // demo machine (ERR_NO_BUFFER_SPACE). Keep local checks reproducible; CI or a
+  // larger machine can opt in to concurrency with CLI --workers.
+  workers: 1,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"], ["html", { outputFolder: "../artifacts/e2e-report", open: "never" }]],

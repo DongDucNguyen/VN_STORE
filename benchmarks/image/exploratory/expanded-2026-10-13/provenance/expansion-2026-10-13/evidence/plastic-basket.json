@@ -1,0 +1,881 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=plastic+basket+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=plastic+basket+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:51:11.205074+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "45299393": {
+          "pageid": 45299393,
+          "ns": 6,
+          "title": "File:A broken handle supposed to hold the plastic basket.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2394591,
+              "width": 4160,
+              "height": 2340,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/A_broken_handle_supposed_to_hold_the_plastic_basket.jpg/1280px-A_broken_handle_supposed_to_hold_the_plastic_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 720,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/A_broken_handle_supposed_to_hold_the_plastic_basket.jpg/3840px-A_broken_handle_supposed_to_hold_the_plastic_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/A_broken_handle_supposed_to_hold_the_plastic_basket.jpg/1280px-A_broken_handle_supposed_to_hold_the_plastic_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 720,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/A_broken_handle_supposed_to_hold_the_plastic_basket.jpg/3840px-A_broken_handle_supposed_to_hold_the_plastic_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A_broken_handle_supposed_to_hold_the_plastic_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_broken_handle_supposed_to_hold_the_plastic_basket.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=45299393",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-11-28 17:32:57",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "A broken handle supposed to hold the plastic basket",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Colorful baskets|Collapsible objects|Plastic baskets|Damaged baskets|Damaged containers",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A broken handle supposed to hold the plastic basket",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-10-26 19:20:16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Sima_shimony\" title=\"User:Sima shimony\">Sima shimony</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "191465619": {
+          "pageid": 191465619,
+          "ns": 6,
+          "title": "File:Great Barracuda in a plastic basket at a landing site in Chanthaburi, Thailand.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3488986,
+              "width": 2953,
+              "height": 4263,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg/1280px-Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1848,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg/1280px-Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1848,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Great_Barracuda_in_a_plastic_basket_at_a_landing_site_in_Chanthaburi,_Thailand.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=191465619",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-05-07 13:37:11",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Great Barracuda in a plastic basket at a landing site in Chanthaburi, Thailand",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Actinopterygii|Sphyraenidae|Sphyraena|Sphyraena barracuda|Self-published work|Files with coordinates missing SDC location of creation",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "12.480294",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "102.068175",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Great Barracuda (Sphyraena barracuda) in a plastic basket at a landing site in Chanthaburi, Thailand",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-12-19 12:40:27",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:MejiroTitan570&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:MejiroTitan570 (page does not exist)\">MejiroTitan570</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "56198120": {
+          "pageid": 56198120,
+          "ns": 6,
+          "title": "File:HK food blue plastic basket 生果 fresh fruit 啤梨 pears Feb 2017 IX1 001.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 800789,
+              "width": 2048,
+              "height": 1368,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg/1280px-HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 855,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg/1280px-HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 855,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_001.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=56198120",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2017-02-12 04:21:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "HK food blue plastic basket 生果 fresh fruit 啤梨 pears Feb 2017 IX1 001",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Yellow fruit|February 2017 in Hong Kong|Hong Kong photographs taken on 2017-02-11|Photographs by Anonymous Hong Kong Photographer 1|Plastic containers in blue|Pear trade|Fruit products in Hong Kong|Plastic baskets in Hong Kong",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "HK food blue plastic basket <a href=\"https://zh.wikipedia.org/wiki/%E7%94%9F%E6%9E%9C\" class=\"extiw\" title=\"zh:生果\">zh:生果</a> fresh fruit <a href=\"https://zh.wikipedia.org/wiki/%E5%95%A4%E6%A2%A8\" class=\"extiw\" title=\"zh:啤梨\">zh:啤梨</a> pears in Feb 2017",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017-02-11 13:45:23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Doriaviadicmeih\" title=\"User:Doriaviadicmeih\">Doriaviadicmeih</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "56198121": {
+          "pageid": 56198121,
+          "ns": 6,
+          "title": "File:HK food blue plastic basket 生果 fresh fruit 啤梨 pears Feb 2017 IX1 002.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 860558,
+              "width": 2048,
+              "height": 1368,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg/1280px-HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 855,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/a/a6/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg/1280px-HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 855,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/a/a6/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:HK_food_blue_plastic_basket_%E7%94%9F%E6%9E%9C_fresh_fruit_%E5%95%A4%E6%A2%A8_pears_Feb_2017_IX1_002.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=56198121",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2017-02-12 04:21:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "HK food blue plastic basket 生果 fresh fruit 啤梨 pears Feb 2017 IX1 002",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Yellow food|February 2017 in Hong Kong|Blue baskets|Hong Kong photographs taken on 2017-02-11|Photographs by Anonymous Hong Kong Photographer 1|Plastic containers in blue|Pear trade|Fruit products in Hong Kong|Plastic baskets in Hong Kong",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "HK food blue plastic basket <a href=\"https://zh.wikipedia.org/wiki/%E7%94%9F%E6%9E%9C\" class=\"extiw\" title=\"zh:生果\">zh:生果</a> fresh fruit <a href=\"https://zh.wikipedia.org/wiki/%E5%95%A4%E6%A2%A8\" class=\"extiw\" title=\"zh:啤梨\">zh:啤梨</a> pears in Feb 2017",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017-02-11 13:45:23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Doriaviadicmeih\" title=\"User:Doriaviadicmeih\">Doriaviadicmeih</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "154007497": {
+          "pageid": 154007497,
+          "ns": 6,
+          "title": "File:Plastic Basket.png",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 287128,
+              "width": 745,
+              "height": 335,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Plastic_Basket.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 576,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/0/03/Plastic_Basket.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 576
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Plastic_Basket.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Plastic_Basket.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=154007497",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-10-17 09:21:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Plastic Basket",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Self-published work|All media needing categories as of 2024|Media needing categories as of 17 October 2024",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Plastic Basket,Basket",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-10-17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Kuttykrishnan_Photos&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kuttykrishnan Photos (page does not exist)\">Kuttykrishnan Photos</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        },
+        "68782362": {
+          "pageid": 68782362,
+          "ns": 6,
+          "title": "File:Plastic bins.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2634715,
+              "width": 3264,
+              "height": 2448,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Plastic_bins.jpg/1280px-Plastic_bins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/17/Plastic_bins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Plastic_bins.jpg/1280px-Plastic_bins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/17/Plastic_bins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Plastic_bins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Plastic_bins.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68782362",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-05-04 08:16:23",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Plastic bins",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Stacks of baskets|Plastic baskets",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Assortment of plastic bins/baskets",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-05-03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Mindanao_Glassware&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Mindanao Glassware (page does not exist)\">Mindanao Glassware</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "26197520": {
+          "pageid": 26197520,
+          "ns": 6,
+          "title": "File:Plastic laundry basket.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 649481,
+              "width": 2346,
+              "height": 1500,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Plastic_laundry_basket.jpg/1280px-Plastic_laundry_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 818,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/b/be/Plastic_laundry_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Plastic_laundry_basket.jpg/1280px-Plastic_laundry_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 818,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/b/be/Plastic_laundry_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Plastic_laundry_basket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Plastic_laundry_basket.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=26197520",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-05-20 15:31:57",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Plastic laundry basket",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Obround|Self-published work|Blue baskets|Plastic laundry baskets",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A blue pvc injection moulded laundry basket",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-05-20 17:28:42",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dodger67\" title=\"User:Dodger67\">Dodger67</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "195232216": {
+          "pageid": 195232216,
+          "ns": 6,
+          "title": "File:Plastic waste basket 2026-05-03.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2213989,
+              "width": 3021,
+              "height": 3021,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Plastic_waste_basket_2026-05-03.jpg/1280px-Plastic_waste_basket_2026-05-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Plastic_waste_basket_2026-05-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Plastic_waste_basket_2026-05-03.jpg/1280px-Plastic_waste_basket_2026-05-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Plastic_waste_basket_2026-05-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Plastic_waste_basket_2026-05-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Plastic_waste_basket_2026-05-03.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=195232216",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-07-06 12:29:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Plastic waste basket 2026-05-03",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Creative Commons CC0 1.0 Universal Public Domain Dedication missing SDC copyright license|Self-published work|Self-published work missing SDC copyright license|Plastic waste containers in Japan",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "密閉蓋付き プラスチック製 ごみバケツ\n<ul><li>生ごみ廃棄用に日本で使われているもの</li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-05-03 13:34:37",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Asanagi\" title=\"User:Asanagi\">Asanagi</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

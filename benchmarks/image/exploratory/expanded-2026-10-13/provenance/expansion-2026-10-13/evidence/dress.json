@@ -1,0 +1,840 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=silk+dress+mannequin+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=silk+dress+mannequin+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:11.588744+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "117743271": {
+          "pageid": 117743271,
+          "ns": 6,
+          "title": "File:1884 reception dress, silk satin and brocade with chenille fringe 01.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 77803,
+              "width": 619,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1861,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1861
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1884_reception_dress,_silk_satin_and_brocade_with_chenille_fringe_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117743271",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-06 18:33:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Female mannequins in the United States|1884 cream silk satin reception dress with chenille fringe, RISD Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe\nRISDM 60-068-2 ab",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2005-04-19 12:21:55",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/reception-dress-600682\">https://risdmuseum.org/art-design/collection/reception-dress-600682</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Staff photographer for the Rhode Island School of Design Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117743272": {
+          "pageid": 117743272,
+          "ns": 6,
+          "title": "File:1884 reception dress, silk satin and brocade with chenille fringe 02.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 97517,
+              "width": 591,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1949,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1949
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1884_reception_dress,_silk_satin_and_brocade_with_chenille_fringe_02.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117743272",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-06 18:33:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe 02",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Headless mannequins|Female mannequins in the United States|1884 cream silk satin reception dress with chenille fringe, RISD Museum|Fringed dresses",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe\nRISDM 60-068-2 ab",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2016-01-12 16:07:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/reception-dress-600682\">https://risdmuseum.org/art-design/collection/reception-dress-600682</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Staff photographer for the Rhode Island School of Design Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117743273": {
+          "pageid": 117743273,
+          "ns": 6,
+          "title": "File:1884 reception dress, silk satin and brocade with chenille fringe 03.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 89857,
+              "width": 543,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/3/37/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 2122,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/3/37/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2122
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1884_reception_dress,_silk_satin_and_brocade_with_chenille_fringe_03.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117743273",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-06 18:33:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe 03",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Headless mannequins|Female mannequins in the United States|1884 cream silk satin reception dress with chenille fringe, RISD Museum|Fringed dresses",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe\nRISDM 60-068-2 ab",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2016-01-12 15:24:58",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/reception-dress-600682\">https://risdmuseum.org/art-design/collection/reception-dress-600682</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Staff photographer for the Rhode Island School of Design Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117743275": {
+          "pageid": 117743275,
+          "ns": 6,
+          "title": "File:1884 reception dress, silk satin and brocade with chenille fringe 04.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 85911,
+              "width": 540,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 2133,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2133
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1884_reception_dress%2C_silk_satin_and_brocade_with_chenille_fringe_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1884_reception_dress,_silk_satin_and_brocade_with_chenille_fringe_04.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117743275",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-06 18:33:52",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe 04",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Headless mannequins|Female mannequins in the United States|1884 cream silk satin reception dress with chenille fringe, RISD Museum|Fringed dresses",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "1884 reception dress, silk satin and brocade with chenille fringe\nRISDM 60-068-2 ab",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2016-01-12 15:37:46",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/reception-dress-600682\">https://risdmuseum.org/art-design/collection/reception-dress-600682</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Staff photographer for the Rhode Island School of Design Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117301860": {
+          "pageid": 117301860,
+          "ns": 6,
+          "title": "File:1949 Norman Norell red silk dress with cartridge pleated skirt 01.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 60296,
+              "width": 689,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1672,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b6/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1672
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117301860",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-04-24 23:19:15",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1949 Norman Norell red silk dress with cartridge pleated skirt 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Red dresses|Fashion in 1949|Red bows (knot)|1940s dresses|Female mannequins in the United States|Silk dresses|Highnecks|Velvet dresses|Pleated dresses|Clothing designed by Norman Norell|Fashion in the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Norman Norell for Traina-Norell dress, red silk with cut velvet pattern and cartridge-pleated skirt, 1949\ntl 46-2009 v05",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2009-10-01 15:04:11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712\">https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Photographer for the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117301871": {
+          "pageid": 117301871,
+          "ns": 6,
+          "title": "File:1949 Norman Norell red silk dress with cartridge pleated skirt 02.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 70178,
+              "width": 689,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1672,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1672
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_02.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117301871",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-04-24 23:19:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1949 Norman Norell red silk dress with cartridge pleated skirt 02",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Red dresses|Fashion in 1949|Red bows (knot)|1940s dresses|Female mannequins in the United States|Silk dresses|Highnecks|Velvet dresses|Pleated dresses|Clothing designed by Norman Norell|Fashion in the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Norman Norell for Traina-Norell dress, red silk with cut velvet pattern and cartridge-pleated skirt, 1949\ntl 46-2009 v05",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2009-10-01 14:23:21",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712\">https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Photographer for the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "117301873": {
+          "pageid": 117301873,
+          "ns": 6,
+          "title": "File:1949 Norman Norell red silk dress with cartridge pleated skirt 03.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 70849,
+              "width": 689,
+              "height": 900,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/1/10/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1672,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/10/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1672
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:1949_Norman_Norell_red_silk_dress_with_cartridge_pleated_skirt_03.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117301873",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-04-24 23:19:28",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "1949 Norman Norell red silk dress with cartridge pleated skirt 03",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Red dresses|Fashion in 1949|1940s dresses|Female mannequins in the United States|Silk dresses|Highnecks|Velvet dresses|Pleated dresses|Clothing designed by Norman Norell|Fashion in the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Norman Norell for Traina-Norell dress, red silk with cut velvet pattern and cartridge-pleated skirt, 1949\ntl 46-2009 v05",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2009-10-01 14:29:18",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712\">https://risdmuseum.org/art-design/collection/red-silk-dress-cartridge-pleated-skirt-2009712</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Photographer for the Rhode Island School of Design - Museum of Art",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "49443054": {
+          "pageid": 49443054,
+          "ns": 6,
+          "title": "File:Silk satin dress by Jacques Fath.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 185754,
+              "width": 683,
+              "height": 1024,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Silk_satin_dress_by_Jacques_Fath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1919,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Silk_satin_dress_by_Jacques_Fath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1919
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Silk_satin_dress_by_Jacques_Fath.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Silk_satin_dress_by_Jacques_Fath.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=49443054",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-06-14 08:05:11",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Silk satin dress by Jacques Fath",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Mannequins|Cocktail dresses|Red dresses|Fashion in 1952|Flickr images reviewed by FlickreviewR|1950s dresses|Satin dresses|Clothing designed by Jacques Fath|Collection of the Museum at the Fashion Institute of Technology",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Jacques Fath for Joseph Halpert cocktail dress<br>\n<p>Silk satin<br>\nFall 1952, USA.<br>\nMuseum purchase, 2013.19.1<br>\n</p><p>Faking It: Originals, Copies &amp; Counterfeits<br>\nPhotograph by Eileen Costa<br>\n</p>\nThe Museum at FIT<br>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-01-05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/museumatfit/15585697824/\">https://www.flickr.com/photos/museumatfit/15585697824/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Museum at FIT",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Mục tiêu PLAN §8: 600 ảnh query độc lập, khoảng 200 họ sản phẩm; chia theo họ 120/40/40 cho train/dev/test. Ảnh + text là bộ bổ sung 120 truy vấn. Đây là mục tiêu, chưa phải số liệu đã thu.
 
-Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-004-hanhsilk-materials` (11/10) và bật draft để bao phủ 330 sản phẩm (rà soát 11/10/2026). Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2 và evaluator, nhưng chưa có benchmark ảnh thật. Xem [báo cáo hiện trạng](../../reports/progress/2026-10-11_GD3_ra-soat-va-bao-ve-duyet-ho.md).
+Hiện [manifest.json](manifest.json) có **0 query**, gắn với `seed-006-enriched` (`b98b859a…`, 13/10/2026) và bật draft để bao phủ cả 330 sản phẩm. Không dùng 814 ảnh gallery làm query đánh giá độc lập. Đã có adapter SigLIP2/DINOv2/OpenCLIP và evaluator, nhưng chưa có benchmark ảnh thật. Bộ ảnh Internet để thử luồng nằm riêng ở [exploratory/](exploratory/expanded-2026-10-13/README.md), không thuộc manifest này. Xem [backlog](../../reports/progress/BACKLOG.md).
 
 **Kế hoạch split theo họ (11/10/2026):** trước khi chụp, lập và khóa kế hoạch bằng `scripts/benchmark/plan_splits.py`. `--split-plan benchmarks/splits/image_families.json` (cùng `--families`) có trong `audit_image_queries.py`, `import_image_session.py`, `apply_image_judgments.py`, `eval_image.py` và báo `split_plan_mismatch` khi query của một họ nằm khác split đã lập. `eval_image.py --split test` bắt buộc kế hoạch `locked`. Xem [benchmarks/splits/README.md](../splits/README.md).
 
@@ -48,7 +48,10 @@ benchmarks/image/
   manifest.json           danh sách query và trạng thái review, hiện rỗng
   manifest.schema.json    hợp đồng dữ liệu 1.0.0
   raw/                    file do người thu thập cung cấp, bị .gitignore loại trừ
+  exploratory/<phiên bản>/  bộ ảnh thử khám phá, KHÔNG thuộc manifest này (không nhãn, không split)
 ```
+
+[`exploratory/expanded-2026-10-13/`](exploratory/expanded-2026-10-13/README.md) (13/10/2026): 100 ảnh Internet + 10 ảnh đối chứng gallery, 250 ca ảnh/ảnh + chữ/cắt vùng; chạy bằng `scripts/benchmark/run_image_exploratory.py`. Chỉ dùng để thử luồng và quan sát, không dùng làm query độc lập hay để chọn model.
 
 Ảnh query, ảnh gốc và văn bản đồng ý có thể chứa thông tin riêng tư; manifest chỉ cần mã người/phiên và tham chiếu hồ sơ bằng chứng, không cần tên thật, email hoặc địa chỉ nhà. Giữ bản gốc và bằng chứng quyền trong kho được nhóm dữ liệu quản lý. Không tự ghi `owned` hoặc người duyệt thay cho người cung cấp.
 

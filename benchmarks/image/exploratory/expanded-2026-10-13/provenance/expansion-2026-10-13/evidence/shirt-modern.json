@@ -1,0 +1,867 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22shirt%22+-DPLA+-Museum+-MET+-drawing+-engraving+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22shirt%22+-DPLA+-Museum+-MET+-drawing+-engraving+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:51:33.161734+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "221007": {
+          "pageid": 221007,
+          "ns": 6,
+          "title": "File:Blue Business Shirt.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 212906,
+              "width": 2124,
+              "height": 1392,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Blue_Business_Shirt.jpg/1280px-Blue_Business_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 839,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Blue_Business_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Blue_Business_Shirt.jpg/1280px-Blue_Business_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 839,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Blue_Business_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Blue_Business_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Blue_Business_Shirt.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=221007",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2005-07-11 21:28:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Blue Business Shirt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|Dress shirts|Files with no machine-readable author|Files with no machine-readable source|License migration completed|Media missing infobox template|Objects on yellow background|Blue shirts",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "157318663": {
+          "pageid": 157318663,
+          "ns": 6,
+          "title": "File:Bodysuit worn with sheer tights (pantyhose) and Shirt worn with opaque tights.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 19621541,
+              "width": 5399,
+              "height": 6749,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg/1280px-Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1600,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg/3840px-Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg/1280px-Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1600,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg/3840px-Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Bodysuit_worn_with_sheer_tights_%28pantyhose%29_and_Shirt_worn_with_opaque_tights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Bodysuit_worn_with_sheer_tights_(pantyhose)_and_Shirt_worn_with_opaque_tights.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=157318663",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-12-30 16:09:50",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Bodysuit worn with sheer tights (pantyhose) and Shirt worn with opaque tights",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Couches in Germany|Shirts|Taken with Sony FE 35mm F2.8 ZA|Taken with Sony ILCE-7RM4|Personality rights warning|Tights|Self-published work|Full consent|Pictures by Tobias \"ToMar\" Maier|Bodysuits with top part typical worn as outer clothes|Women's bodysuits|Thong bodysuits|Bodysuits layered with underwear|Wolford bodysuits|Filodoro|Wolford clothing|Seamless tights",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Short explanation of the image content: The scene is considered  intimate in a private space. On the left we see a black garment whose transparent section is partly covered by a  red garment exposing most of the leg including the buttocks while hiding the more intimate parts. On the right the black garment has the same fiber density from the toes to the waistband. In addition the part in the crotch is less stretched and also denser making covering by another garment optional.\n<p>Model on the left is wearing a thong bodysuit with long sleeves and turtle neck made in Austria by “Wolford” of the “Santa Barbara” series. Product name is “String Body”. Number “70958”. Color “\"pupur red / black, 9744\". Size “S”. Sold in Vienna, late in the year of 2002 for 179 Euro.\nThe mock hold up tights made in Europe are of the “Fiore” brand. Model “Sense”. Size “M”. Fiber wight advertised as 60 denier. Sold in Germany for 5 Euro in the year of 2024. \n</p><p>Model on the right is wearing a long sleeve shirt with horseshoe neckline made in Austria by Wolford of the “Santa Barbara” series. Product name is “Sweater”. Number “50948”. Size “XS”\n</p>\nThe seamless tights made in Europe are of the “Filodoro” brand. model “Velluto”. Size “M”. Fiber wight advertised as 60 denier. Sold in Germany via Amazon from Italy for about 8 to 12 Euros.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-11-16 09:33:38",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tobias_ToMar_Maier\" title=\"User:Tobias ToMar Maier\">Tobias ToMar Maier</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "I personally created this media. All identifiable persons shown specifically consented to publication of this photograph or video under a free license.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "personality",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "109475568": {
+          "pageid": 109475568,
+          "ns": 6,
+          "title": "File:Boy closet.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3962946,
+              "width": 3264,
+              "height": 2448,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Boy_closet.jpg/1280px-Boy_closet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/4/46/Boy_closet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Boy_closet.jpg/1280px-Boy_closet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/4/46/Boy_closet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Boy_closet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Boy_closet.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=109475568",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-08-30 07:18:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Boy closet",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "2006 in Massachusetts|Shirts|CC-Zero|Closets|Self-published work|Uploaded with Mobile/Android|Photographs taken on 2006-01-04|Photos by User:Aavindraa",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A boys closet",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "4 January 2006 (according to <span lang=\"en\" dir=\"ltr\"><a href=\"https://en.wikipedia.org/wiki/Exif\" class=\"extiw\" title=\"en:Exif\">Exif</a></span> data)",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Aavindraa\" title=\"User:Aavindraa\">Aavindraa</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "6812460": {
+          "pageid": 6812460,
+          "ns": 6,
+          "title": "File:Homeless man, Tokyo, 2008.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2194110,
+              "width": 2734,
+              "height": 2075,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Homeless_man%2C_Tokyo%2C_2008.jpg/1280px-Homeless_man%2C_Tokyo%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 971,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/25/Homeless_man%2C_Tokyo%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Homeless_man%2C_Tokyo%2C_2008.jpg/1280px-Homeless_man%2C_Tokyo%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 971,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/25/Homeless_man%2C_Tokyo%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Homeless_man%2C_Tokyo%2C_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Homeless_man,_Tokyo,_2008.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6812460",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2009-05-18 18:32:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Homeless man, Tokyo, 2008",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Canon EOS 20D|Personality rights warning|Self-published work|Photographs by Michael Maggs|Featured pictures of Tokyo|Featured pictures on Wikipedia, Persian|Featured pictures on Wikipedia, Spanish|Featured pictures on Wikipedia, Turkish|Homeless people in Tokyo|Japan photographs taken on 2008-11-02|Supine humans|Assessment tagged pages marked as POTY candidates|User:MichaelMaggs/Gallery",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "featured|potd|poty",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Elderly homeless man, Tokyo.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Taken on 2 November 2008",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:MichaelMaggs\" title=\"User:MichaelMaggs\">MichaelMaggs</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "I, the copyright holder of this work, hereby publish it under the following license:",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "personality",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "116879863": {
+          "pageid": 116879863,
+          "ns": 6,
+          "title": "File:LIMEX long sleeve shirt.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3662485,
+              "width": 4032,
+              "height": 3024,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/LIMEX_long_sleeve_shirt.jpg/1280px-LIMEX_long_sleeve_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/LIMEX_long_sleeve_shirt.jpg/3840px-LIMEX_long_sleeve_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/LIMEX_long_sleeve_shirt.jpg/1280px-LIMEX_long_sleeve_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/LIMEX_long_sleeve_shirt.jpg/3840px-LIMEX_long_sleeve_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/LIMEX_long_sleeve_shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:LIMEX_long_sleeve_shirt.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=116879863",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-04-14 11:47:01",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "LIMEX long sleeve shirt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Shirts|Labels|CC-Zero|Self-published work|Uploaded with Mobile/Android",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "LIMEX long sleeve shirt <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:LIMEX_long_sleeve_shirt.jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Syced\" title=\"User:Syced\">Syced</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "116879902": {
+          "pageid": 116879902,
+          "ns": 6,
+          "title": "File:LIMEX long sleeve shirt 2.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3910881,
+              "width": 4032,
+              "height": 3024,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/LIMEX_long_sleeve_shirt_2.jpg/1280px-LIMEX_long_sleeve_shirt_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/LIMEX_long_sleeve_shirt_2.jpg/3840px-LIMEX_long_sleeve_shirt_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/LIMEX_long_sleeve_shirt_2.jpg/1280px-LIMEX_long_sleeve_shirt_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/LIMEX_long_sleeve_shirt_2.jpg/3840px-LIMEX_long_sleeve_shirt_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/LIMEX_long_sleeve_shirt_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:LIMEX_long_sleeve_shirt_2.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=116879902",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-04-14 11:47:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "LIMEX long sleeve shirt 2",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Shirts|Labels|CC-Zero|Self-published work|Uploaded with Mobile/Android",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "LIMEX long sleeve shirt <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"//commons.wikimedia.org/wiki/File:LIMEX_long_sleeve_shirt_2.jpg#ooui-php-4\" title=\"Edit this at Structured Data on Commons\"><img alt=\"Edit this at Structured Data on Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Syced\" title=\"User:Syced\">Syced</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "132049748": {
+          "pageid": 132049748,
+          "ns": 6,
+          "title": "File:OKM Shirt Back.png",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 185774,
+              "width": 433,
+              "height": 577,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/OKM_Shirt_Back.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1706,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/7/7a/OKM_Shirt_Back.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1706
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/OKM_Shirt_Back.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:OKM_Shirt_Back.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=132049748",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2023-05-17 19:36:01",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "OKM Shirt Back",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Shirts|Self-published work",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Photo taken after 2 summers of use",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2023-05-17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Prerobnem&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Prerobnem (page does not exist)\">Prerobnem</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        },
+        "70056226": {
+          "pageid": 70056226,
+          "ns": 6,
+          "title": "File:Patagonia, OutDoor 2018, Friedrichshafen (1X7A0346).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 9266072,
+              "width": 3884,
+              "height": 4855,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg/1280px-Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1600,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg/3840px-Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg/1280px-Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1600,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg/3840px-Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Patagonia%2C_OutDoor_2018%2C_Friedrichshafen_%281X7A0346%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Patagonia,_OutDoor_2018,_Friedrichshafen_(1X7A0346).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=70056226",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-06-30 23:46:18",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Patagonia, OutDoor 2018, Friedrichshafen (1X7A0346)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Shirts|Patagonia (company)|Lyocell|Taken with Canon EOS 5D Mark IV and Canon EF 24-70mm F2.8L II USM|Uploaded with LrMediaWiki|User MB-one supported by Wikimedia Deutschland/Lightroom|OutDoor 2018 (Supported by Wikimedia Deutschland)|Parrots in textile art",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "47.678733",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "9.508413",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Patagonia lyocell shirt, OutDoor 2018",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-06-17",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:MB-one\" title=\"User:MB-one\">Matti Blume</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

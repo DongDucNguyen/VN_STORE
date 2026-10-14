@@ -19,9 +19,9 @@ from .media import AudioClip, MediaError, check_speech, decode_wav, inspect_imag
 STATE_MESSAGES = {
     "unavailable": "model chưa được chọn qua benchmark (PLAN.md mục 8)",
     "error": "model không nạp được",
-    "index_missing": "chưa dựng chỉ mục ảnh cho model này",
-    "index_stale": "chỉ mục ảnh không còn khớp catalog/model, cần dựng lại",
-    "index_invalid": "chỉ mục ảnh bị hỏng, cần dựng lại",
+    "index_missing": "chưa dựng chỉ mục cho model này",
+    "index_stale": "chỉ mục không còn khớp catalog/model, cần dựng lại",
+    "index_invalid": "chỉ mục bị hỏng, cần dựng lại",
 }
 
 

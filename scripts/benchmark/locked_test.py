@@ -32,10 +32,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import compare_runs as cr  # noqa: E402
 import locked_ledger as ledger  # noqa: E402
 import stage6_readiness as stage6  # noqa: E402
-from app.search.config import SearchConfig  # noqa: E402
+from app.search.config import TEXT_SETTINGS, SearchConfig  # noqa: E402
 
 EVAL = {m: Path(__file__).with_name(f"eval_{m}.py") for m in ledger.MODALITIES}
-LANGUAGE = ("accent_weight", "min_token_coverage", "strict_accents")
+LANGUAGE = TEXT_SETTINGS
 KEEP_ENV = {"VNSTORE_MODEL_DIR", "VNSTORE_TRT_CACHE"}  # cache locations, not behaviour
 BROWSER_MIN_N = 20
 # PLAN §8.4. Hypotheses to revise after the pilot, reported with N and uncertainty.

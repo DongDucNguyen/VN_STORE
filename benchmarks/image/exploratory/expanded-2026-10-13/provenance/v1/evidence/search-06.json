@@ -1,0 +1,707 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=porcelain+vase+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:30:53.889223+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "99273324": {
+          "pageid": 99273324,
+          "ns": 6,
+          "title": "File:Ming Porcelain Vase 01.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1538282,
+              "width": 2592,
+              "height": 3888,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Ming_Porcelain_Vase_01.jpg/1280px-Ming_Porcelain_Vase_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ming_Porcelain_Vase_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Ming_Porcelain_Vase_01.jpg/1280px-Ming_Porcelain_Vase_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ming_Porcelain_Vase_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ming_Porcelain_Vase_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ming_Porcelain_Vase_01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=99273324",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-01-26 06:53:59",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Ming Porcelain Vase 01",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Ceramics in the Capital Museum|Blue and white porcelain of the Ming Dynasty",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "39.905140",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "116.335645",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Capital Museum, Beijing. Complete indexed photo collection at WorldHistoryPics.com.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2008-04-18 15:15:51",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/101561334@N08/9886459946/\">https://www.flickr.com/photos/101561334@N08/9886459946/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gary Todd",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "148743926": {
+          "pageid": 148743926,
+          "ns": 6,
+          "title": "File:Porcelain vase with loops in white glaze.tif",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 21008477,
+              "width": 2294,
+              "height": 3049,
+              "pagecount": 1,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Porcelain_vase_with_loops_in_white_glaze.tif/lossy-page1-1280px-Porcelain_vase_with_loops_in_white_glaze.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1701,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Porcelain_vase_with_loops_in_white_glaze.tif/lossy-page1-1920px-Porcelain_vase_with_loops_in_white_glaze.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Porcelain_vase_with_loops_in_white_glaze.tif/lossy-page1-1280px-Porcelain_vase_with_loops_in_white_glaze.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1701,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Porcelain_vase_with_loops_in_white_glaze.tif/lossy-page1-1920px-Porcelain_vase_with_loops_in_white_glaze.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Porcelain_vase_with_loops_in_white_glaze.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Porcelain_vase_with_loops_in_white_glaze.tif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148743926",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-05-26 17:19:44",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>White porcelain vase with loops</i></div></div><div style=\"display: none;\">label QS:Len,\"White porcelain vase with loops\"</div><div style=\"display: none;\">label QS:Lzh-hant,\"白瓷穿帶壺\"</div><div style=\"display: none;\">label QS:Lzh,\"白瓷穿帶壺\"</div><div style=\"display: none;\">label QS:Lzh-tw,\"白瓷穿帶壺\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Xing ware|Artworks with Wikidata item|Artworks with known accession number|Porcelain vases|Artworks with accession number from Wikidata|National Palace Museum Open Data|Porcelain of the Tang Dynasty|Ceramics of the Tang dynasty in the National Palace Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\n<table cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td><a href=\"https://www.wikidata.org/wiki/Q4233718\" class=\"extiw\" title=\"d:Q4233718\"><span title='unknown creator of a work (do not use as value of P50; use \"unknown value\" instead)'>anonymous</span></a></td><td valign=\"top\"> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q126119563#P170\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></td></tr></tbody></table></div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "Porcelain vase with loops in white glaze, Xing ware, Tang dynasty (618-907). National Palace Museum, accession number 故瓷004012",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "618-907",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://theme.npm.edu.tw/opendata/DigitImageSets.aspx?sNo=04014252\">https://theme.npm.edu.tw/opendata/DigitImageSets.aspx?sNo=04014252</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/tiff"
+            }
+          ]
+        },
+        "97250036": {
+          "pageid": 97250036,
+          "ns": 6,
+          "title": "File:Qing Porcelain Vase.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 563378,
+              "width": 960,
+              "height": 1280,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Qing_Porcelain_Vase.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1707,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Qing_Porcelain_Vase.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1707
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Qing_Porcelain_Vase.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Qing_Porcelain_Vase.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=97250036",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-12-04 08:19:23",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Qing Porcelain Vase",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Qing Dynasty|CC-Zero|Porcelains of the Qing Dynasty|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Ceramics of the Qing Dynasty in the Zhengzhou Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "34.746519",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "113.621238",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Zhengzhou City Museum. Complete indexed photo collection at WorldHistoryPics.com.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006-11-10 15:36:20",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/101561334@N08/10324321395/\">https://www.flickr.com/photos/101561334@N08/10324321395/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gary Todd",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "99273343": {
+          "pageid": 99273343,
+          "ns": 6,
+          "title": "File:Qing Porcelain Vase 14.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1364120,
+              "width": 2592,
+              "height": 3888,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Qing_Porcelain_Vase_14.jpg/1280px-Qing_Porcelain_Vase_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/59/Qing_Porcelain_Vase_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Qing_Porcelain_Vase_14.jpg/1280px-Qing_Porcelain_Vase_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/59/Qing_Porcelain_Vase_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Qing_Porcelain_Vase_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Qing_Porcelain_Vase_14.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=99273343",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-01-26 06:54:22",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Qing Porcelain Vase 14",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Porcelains of the Qing Dynasty|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Ceramics in the Capital Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "39.905140",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "116.335645",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Capital Museum, Beijing. Complete indexed photo collection at WorldHistoryPics.com.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2008-04-18 15:19:55",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/101561334@N08/9887109413/\">https://www.flickr.com/photos/101561334@N08/9887109413/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gary Todd",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "99273345": {
+          "pageid": 99273345,
+          "ns": 6,
+          "title": "File:Qing Porcelain Vase 15.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1289272,
+              "width": 2592,
+              "height": 3888,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Qing_Porcelain_Vase_15.jpg/1280px-Qing_Porcelain_Vase_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Qing_Porcelain_Vase_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Qing_Porcelain_Vase_15.jpg/1280px-Qing_Porcelain_Vase_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Qing_Porcelain_Vase_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Qing_Porcelain_Vase_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Qing_Porcelain_Vase_15.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=99273345",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-01-26 06:54:25",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Qing Porcelain Vase 15",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Porcelains of the Qing Dynasty|Files with coordinates missing SDC location of creation|Flickr images reviewed by FlickreviewR 2|Ceramics in the Capital Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "39.905140",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "116.335645",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Capital Museum, Beijing. Complete indexed photo collection at WorldHistoryPics.com.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2008-04-18 15:20:18",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/101561334@N08/9886999306/\">https://www.flickr.com/photos/101561334@N08/9886999306/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Gary Todd",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "148683406": {
+          "pageid": 148683406,
+          "ns": 6,
+          "title": "File:White porcelain vase with double dragon-shaped handles.tif",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 21007895,
+              "width": 2276,
+              "height": 3073,
+              "pagecount": 1,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/White_porcelain_vase_with_double_dragon-shaped_handles.tif/lossy-page1-1280px-White_porcelain_vase_with_double_dragon-shaped_handles.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1728,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/White_porcelain_vase_with_double_dragon-shaped_handles.tif/lossy-page1-1920px-White_porcelain_vase_with_double_dragon-shaped_handles.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/White_porcelain_vase_with_double_dragon-shaped_handles.tif/lossy-page1-1280px-White_porcelain_vase_with_double_dragon-shaped_handles.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1728,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/White_porcelain_vase_with_double_dragon-shaped_handles.tif/lossy-page1-1920px-White_porcelain_vase_with_double_dragon-shaped_handles.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/White_porcelain_vase_with_double_dragon-shaped_handles.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_porcelain_vase_with_double_dragon-shaped_handles.tif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148683406",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-05-24 16:48:22",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>White porcelain vase with double dragon-shaped handles</i></div></div><div style=\"display: none;\">label QS:Len,\"White porcelain vase with double dragon-shaped handles\"</div><div style=\"display: none;\">label QS:Lzh,\"白瓷雙龍耳瓶\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Artworks with Wikidata item|Artworks with known accession number|Porcelain vases|Artworks with accession number from Wikidata|National Palace Museum Open Data|Artworks with Wikidata item missing genre|Porcelain of the Tang Dynasty|Ceramics of the Tang dynasty in the National Palace Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\n<table cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td><a href=\"https://www.wikidata.org/wiki/Q4233718\" class=\"extiw\" title=\"d:Q4233718\"><span title='unknown creator of a work (do not use as value of P50; use \"unknown value\" instead)'>anonymous</span></a></td><td valign=\"top\"> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q126088126#P170\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></td></tr></tbody></table></div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "White porcelain vase with double dragon-shaped handles, Tang dynasty, 618-907 C.E. National Palace Museum, accession number 故瓷012455",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "618-907",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://theme.npm.edu.tw/opendata/DigitImageSets.aspx?sNo=04014462\">https://theme.npm.edu.tw/opendata/DigitImageSets.aspx?sNo=04014462</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/tiff"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

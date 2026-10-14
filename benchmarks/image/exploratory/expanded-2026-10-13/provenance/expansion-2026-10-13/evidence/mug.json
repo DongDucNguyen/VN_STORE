@@ -1,0 +1,846 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=ceramic+mug+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=ceramic+mug+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:49:59.133033+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "155646318": {
+          "pageid": 155646318,
+          "ns": 6,
+          "title": "File:02024 1733 ceramic mugs.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1437032,
+              "width": 3963,
+              "height": 2642,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/02024_1733_ceramic_mugs.jpg/1280px-02024_1733_ceramic_mugs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/02024_1733_ceramic_mugs.jpg/3840px-02024_1733_ceramic_mugs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/02024_1733_ceramic_mugs.jpg/1280px-02024_1733_ceramic_mugs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/02024_1733_ceramic_mugs.jpg/3840px-02024_1733_ceramic_mugs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/02024_1733_ceramic_mugs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:02024_1733_ceramic_mugs.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=155646318",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2024-11-23 22:18:16",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "02024 1733 ceramic mugs",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|2024 works in Poland|Mugs in Poland",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "ceramic mugs",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2024-11-23 14:11:55",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Silar&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Silar (page does not exist)\">Silar</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "184735752": {
+          "pageid": 184735752,
+          "ns": 6,
+          "title": "File:Ceramic mug printed with Wikipedia 25th anniversary branding.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 17923610,
+              "width": 6936,
+              "height": 9248,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg/1280px-Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1707,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg/3840px-Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg/1280px-Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1707,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg/3840px-Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Ceramic_mug_printed_with_Wikipedia_25th_anniversary_branding.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=184735752",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-02-22 06:42:01",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Ceramic mug printed with Wikipedia 25th anniversary branding",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Wikipedia 25 merchandise|Wikipedia 25 in Vietnam",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A ceramic mug printed with Wikipedia's 25th anniversary branding will be given as a souvenir at the Vietnamese Wikipedia meetup in January 2026.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-02-04 10:02:16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Tr%C6%B0%C6%A1ng_Minh_Kh%E1%BA%A3i\" title=\"User:Trương Minh Khải\">Trương Minh Khải</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "200509963": {
+          "pageid": 200509963,
+          "ns": 6,
+          "title": "File:Handmade Ceramic Mugs (made and photographed by Liina Potter).jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 768492,
+              "width": 1536,
+              "height": 2304,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg/1280px-Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg/1280px-Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Handmade_Ceramic_Mugs_%28made_and_photographed_by_Liina_Potter%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Handmade_Ceramic_Mugs_(made_and_photographed_by_Liina_Potter).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=200509963",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-09-28 17:41:46",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Handmade Ceramic Mugs (made and photographed by Liina Potter)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Ceramic objects|Creative Commons Attribution-Share Alike missing SDC copyright status|Self-published work|Creative Commons Attribution-Share Alike 4.0 missing SDC copyright license|Self-published work missing SDC copyright license|Ceramic mugs|Ceramic dishes",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Four 6 oz. stackable mugs, handmade by potter and ceramicist Liina Potter living in Denver, Colorado. Sold during an online sale on February 6, 2025, under her studio name Salty Bean Studios for $33 each.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2025-02-05 23:17:09",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Liinbean&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Liinbean (page does not exist)\">Liinbean</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "118350403": {
+          "pageid": 118350403,
+          "ns": 6,
+          "title": "File:Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo.jpeg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 457522,
+              "width": 1585,
+              "height": 1676,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg/1280px-Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1353,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/81/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg/1280px-Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1353,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/81/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo.jpeg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=118350403",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-26 13:05:18",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Mugs with logos|Acronym logos (3 letters)|DCD letter combinations|Ceramic mugs|Black and white mugs|Promotion/merchandising articles of Dead Can Dance|Dead Can Dance logos",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-05-26 14:55:58",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Pittigrilli\" title=\"User:Pittigrilli\">Pittigrilli</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "118375454": {
+          "pageid": 118375454,
+          "ns": 6,
+          "title": "File:Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo - black.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 572442,
+              "width": 1458,
+              "height": 1722,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg/1280px-Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1512,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg/1280px-Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1512,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Merchandising_Coffee_mug_from_band_Dead_Can_Dance_with_%27DCD%27_logo_-_black.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=118375454",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-05-27 10:41:34",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo - black",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Mugs with logos|Black mugs|Acronym logos (3 letters)|DCD letter combinations|Ceramic mugs|Black and white mugs|Promotion/merchandising articles of Dead Can Dance|Dead Can Dance logos",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Merchandising Coffee mug from band Dead Can Dance with 'DCD' logo",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2022-05-27 12:28:45",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Pittigrilli\" title=\"User:Pittigrilli\">Pittigrilli</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "15573749": {
+          "pageid": 15573749,
+          "ns": 6,
+          "title": "File:Mug Wikipedia Malayalam.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 181701,
+              "width": 1300,
+              "height": 1132,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Mug_Wikipedia_Malayalam.jpg/1280px-Mug_Wikipedia_Malayalam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1115,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mug_Wikipedia_Malayalam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Mug_Wikipedia_Malayalam.jpg/1280px-Mug_Wikipedia_Malayalam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1115,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mug_Wikipedia_Malayalam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Mug_Wikipedia_Malayalam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mug_Wikipedia_Malayalam.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=15573749",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2011-06-21 12:35:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mug Wikipedia Malayalam",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|License migration redundant|Self-published work|Featured pictures on Wikipedia, Malayalam|Trademarks and logos of Wikimedia|Files with Assessments template missing SDC Commons no value quality assessment|Wikipedia mugs|Malayalam Wikipedia logo variants|Malayalam Wikimeetup 4 - Kannur 11Jun2011|Taken with Olive Pad V-T100",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A Mug Embossed with wikipedia emblem",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2011-06-21",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Ranjithsiji\" title=\"User:Ranjithsiji\">Ranjithsiji</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "GFDL",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "trademarked",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "1236079": {
+          "pageid": 1236079,
+          "ns": 6,
+          "title": "File:Mug and Torus morph.gif",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 508851,
+              "width": 240,
+              "height": 240,
+              "duration": 11.599999999999989,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mug_and_Torus_morph.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mug_and_Torus_morph.gif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1236079",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2007-03-02 00:56:04",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Mug and Torus morph",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Animated GIF files|Isosurfaces|Self-published work|Featured pictures on Wikipedia, English|PD-self|Created with Persistence of Vision|Images with Povray source code|Featured pictures on Wikipedia, Turkish|Basics of topology|Files with Assessments template missing SDC Commons no value quality assessment|Animations of toruses|Animations with Povray source code|Animated GIF geometry with white background",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A coffee <a href=\"https://en.wikipedia.org/wiki/mug\" class=\"extiw\" title=\"w:mug\">mug</a> morphing into a <a href=\"https://en.wikipedia.org/wiki/torus\" class=\"extiw\" title=\"w:torus\">torus</a>, a popular example in <a href=\"https://en.wikipedia.org/wiki/topology\" class=\"extiw\" title=\"w:topology\">topology</a>.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:LucasVB\" title=\"User:LucasVB\">Lucas Vieira</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/gif"
+            }
+          ]
+        },
+        "53091": {
+          "pageid": 53091,
+          "ns": 6,
+          "title": "File:Wikipedia mug.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 6990,
+              "width": 240,
+              "height": 240,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Wikipedia_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Wikipedia_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Wikipedia_mug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Wikipedia_mug.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=53091",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2005-02-04 03:16:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Wikipedia mug",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Files with no machine-readable author|Files with no machine-readable source|Media missing infobox template|Files with derivative versions|Mugs with designs|Trademarks and logos of Wikimedia|Wikipedia mugs|Black and white mugs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "trademarked",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

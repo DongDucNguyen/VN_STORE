@@ -1,0 +1,633 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=wooden+decorative+box+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:11.914210+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "178441309": {
+          "pageid": 178441309,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p01.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 4386760,
+              "width": 5566,
+              "height": 4912,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1130,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1130,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p01.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441309",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:28:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178441313": {
+          "pageid": 178441313,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p02.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 6071206,
+              "width": 4453,
+              "height": 7291,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 2096,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2096,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p02.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441313",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:28:56",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178441317": {
+          "pageid": 178441317,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p03.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 6148476,
+              "width": 4775,
+              "height": 7039,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1887,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1887,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p03.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441317",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:29:03",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178441320": {
+          "pageid": 178441320,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p04.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1387183,
+              "width": 4288,
+              "height": 2848,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 850,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 850,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p04.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441320",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:29:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178441325": {
+          "pageid": 178441325,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p05.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3392547,
+              "width": 4088,
+              "height": 3408,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1067,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1067,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p05.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441325",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:29:14",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "178441328": {
+          "pageid": 178441328,
+          "ns": 6,
+          "title": "File:Decorative wooden panel with glass inlays of a scene of offering - Museo Egizio (Turin) S 18155 p06.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1457867,
+              "width": 4288,
+              "height": 2848,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 850,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg/1280px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 850,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg/3840px-Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_%28Turin%29_S_18155_p06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Decorative_wooden_panel_with_glass_inlays_of_a_scene_of_offering_-_Museo_Egizio_(Turin)_S_18155_p06.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=178441328",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-11-14 10:29:20",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><div style=\"display: none;\">title QS:P1476,en:\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Len,\"Decorative wooden panel with glass inlays of a scene of offering <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lit,\"Parete di cassetta decorata con le figure intarsiate di un re e tre divinità\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Files with no machine-readable author|Uploaded with OpenRefine|Piece of box with inlays depicting a king and Egyptian gods, Wood, glass, semiprecious stones S 18155 Museo Egizio (Turin)|Artworks with Wikidata item|Artworks with known accession number|Pages with complex technique templates|Artworks with accession number from Wikidata|Artworks with Wikidata item missing genre|Artworks digital representation of unknown type of work|Media from Museo Egizio (Turin)",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Many wooden objects were decorated with inlaid glass. An example is this fragment of a piece of furniture from Tebtynis, in the oasis of Fayum, dating from the late Ptolemaic Period. Glass inlays were a typically Egyptian art. They were used to decorate objects of wood or stone. Boxes with inlaid glass pictures became widespread from the end of the Late Period onward. Inlaid glass hieroglyphs are typical of the Ptolemaic Period.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 332 and 30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0500-00-00T00:00:00Z/6,P1319,-0332-00-00T00:00:00Z/9,P1326,-0030-00-00T00:00:00Z/9</div> <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span><br><a href=\"https://www.wikidata.org/wiki/Q133842511\" class=\"extiw\" title=\"d:Q133842511\"><span title=\"Hellenistic kingdom in ancient Egypt, from Macedonian to Ptolemaic dynasty (from 323 to 30 BC)\">Egyptian Hellenistic period</span></a> (323 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0323-00-00T00:00:00Z/9</div>–30 <a href=\"https://en.wikipedia.org/wiki/en:Ante_Christum_Natum\" class=\"extiw\" title=\"w:en:Ante Christum Natum\">BC</a><div style=\"display: none;\">date QS:P,-0030-00-00T00:00:00Z/9</div>) <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q117425038#P2348\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Museo_Egizio\" class=\"extiw\" title=\"w:en:Museo Egizio\"><span title=\"ancient Egyptian art and history museum in Turin, Italy\">Museo Egizio</span></a>\n</bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

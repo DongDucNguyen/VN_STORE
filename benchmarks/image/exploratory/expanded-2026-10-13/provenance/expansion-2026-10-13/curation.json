@@ -1,0 +1,587 @@
+{
+  "review_method": "Assistant inspected contact sheets for every selected addition and full-size replacements. This is subject/utility screening, not human benchmark labeling.",
+  "row_notes": {
+    "web-029": {
+      "role": "negative_candidate",
+      "scenario_tags": [
+        "unsupported_product_type"
+      ],
+      "content_note_vi": "Nón; catalog hiện không có mặt hàng nón. Không mặc định có đáp án tương tự phù hợp."
+    },
+    "web-030": {
+      "role": "negative_candidate",
+      "scenario_tags": [
+        "unsupported_product_type",
+        "small_object",
+        "busy_background"
+      ],
+      "content_note_vi": "Nón trong cảnh phố; thử crop hoặc kết quả ngoài loại hàng đang có."
+    },
+    "web-031": {
+      "role": "negative_candidate",
+      "scenario_tags": [
+        "unsupported_product_type"
+      ],
+      "content_note_vi": "Nón trưng bày, không phải mặt hàng nón đã có trong catalog."
+    },
+    "web-052": {
+      "role": "negative_candidate",
+      "scenario_tags": [
+        "unsupported_product_type",
+        "packaging",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Gói cà phê; catalog chưa có sản phẩm cà phê."
+    },
+    "web-053": {
+      "role": "negative_candidate",
+      "scenario_tags": [
+        "unsupported_product_type",
+        "packaging"
+      ],
+      "content_note_vi": "Gói cà phê ngoài loại thực phẩm hiện có."
+    },
+    "add-128816963": {
+      "scenario_tags": [
+        "single_object",
+        "side_view"
+      ],
+      "content_note_vi": "Bát xanh nhạt chụp ngang; cùng vật thể với add-128816961."
+    },
+    "add-128816961": {
+      "scenario_tags": [
+        "single_object",
+        "top_view",
+        "same_object_other_view"
+      ],
+      "content_note_vi": "Bát xanh nhạt chụp từ trên; không tính là họ độc lập với ảnh ngang."
+    },
+    "add-149255276": {
+      "scenario_tags": [
+        "damaged_object",
+        "museum"
+      ],
+      "content_note_vi": "Bát/đồ gốm cổ có phần khuyết; dùng như ca hình dạng khó, không đại diện hàng mới."
+    },
+    "add-54071586": {
+      "scenario_tags": [
+        "object_contains_food",
+        "partial_occlusion",
+        "natural_background"
+      ],
+      "content_note_vi": "Bát chứa hạt; quan sát mô hình tập trung vào bát hay đồ bên trong."
+    },
+    "add-1103201": {
+      "scenario_tags": [
+        "multiple_objects",
+        "indoor",
+        "small_object"
+      ],
+      "content_note_vi": "Nhiều chồng đĩa trên kệ; chọn một chồng/chiếc làm mục tiêu."
+    },
+    "add-104101424": {
+      "scenario_tags": [
+        "object_contains_food",
+        "partial_occlusion"
+      ],
+      "content_note_vi": "Đĩa có bánh; vùng crop phải còn thấy đường viền đĩa."
+    },
+    "add-15573749": {
+      "scenario_tags": [
+        "printed_text",
+        "natural_background"
+      ],
+      "content_note_vi": "Cốc in logo/chữ; không suy đây là thương hiệu trong catalog."
+    },
+    "add-155646318": {
+      "scenario_tags": [
+        "multiple_objects",
+        "busy_background",
+        "partial_occlusion"
+      ],
+      "content_note_vi": "Nhiều cốc tại quầy; vật thể chồng/che nhau."
+    },
+    "add-200509963": {
+      "scenario_tags": [
+        "multiple_objects",
+        "hand_in_frame",
+        "colored_background"
+      ],
+      "content_note_vi": "Cốc đỏ xếp chồng trên nền ô màu; nguồn ghi người làm/chụp, giữ nguyên ảnh tải."
+    },
+    "add-165476060": {
+      "scenario_tags": [
+        "full_garment",
+        "plain_background",
+        "museum"
+      ],
+      "content_note_vi": "Áo vải lanh trải phẳng, thay ảnh chỉ thấy nhãn áo; kiểu cổ cần phân biệt với áo hiện đại."
+    },
+    "add-221007": {
+      "scenario_tags": [
+        "full_garment",
+        "plain_background"
+      ],
+      "content_note_vi": "Áo sơ mi xanh treo, thấy rõ phần thân và tay."
+    },
+    "add-61832768": {
+      "scenario_tags": [
+        "full_garment",
+        "plain_background"
+      ],
+      "content_note_vi": "Áo làm việc dài màu sáng; chất liệu theo mô tả nguồn, không phải SKU VNStore."
+    },
+    "add-117301860": {
+      "scenario_tags": [
+        "full_garment",
+        "mannequin"
+      ],
+      "content_note_vi": "Váy đỏ trên mannequin; kiểm hình dáng/màu, không gán đúng chất liệu chỉ từ ảnh."
+    },
+    "add-49443054": {
+      "scenario_tags": [
+        "full_garment",
+        "mannequin"
+      ],
+      "content_note_vi": "Váy satin đỏ, một thiết kế khác ảnh váy đỏ còn lại."
+    },
+    "add-96222759": {
+      "scenario_tags": [
+        "garment_worn",
+        "outdoor",
+        "partial_garment",
+        "watermark"
+      ],
+      "content_note_vi": "Áo dài đỏ có người mặc; chủ yếu nửa trên, ảnh có watermark gốc."
+    },
+    "add-96222760": {
+      "scenario_tags": [
+        "garment_worn",
+        "outdoor",
+        "partial_garment",
+        "watermark",
+        "same_photo_series"
+      ],
+      "content_note_vi": "Ảnh khác trong cùng bộ áo dài đỏ; gom nhóm nguồn cùng add-96222759."
+    },
+    "add-128249802": {
+      "scenario_tags": [
+        "garment_worn",
+        "outdoor",
+        "partial_garment"
+      ],
+      "content_note_vi": "Áo dài trắng có người mặc, có cây/hoa trong khung."
+    },
+    "add-86677017": {
+      "scenario_tags": [
+        "garment_worn",
+        "rear_view",
+        "busy_background",
+        "small_object"
+      ],
+      "content_note_vi": "Áo dài nhìn từ sau trong đám đông; ca crop khó, không dùng để chấm hoa văn mặt trước."
+    },
+    "add-176361070": {
+      "scenario_tags": [
+        "multiple_objects",
+        "woven_texture"
+      ],
+      "content_note_vi": "Đế/chụp đèn đan nhiều hình dáng trong cùng khung."
+    },
+    "add-200006254": {
+      "scenario_tags": [
+        "warm_light",
+        "in_use",
+        "busy_background",
+        "small_object"
+      ],
+      "content_note_vi": "Đèn đan đang dùng trong quán; khác ảnh sản phẩm nền trơn."
+    },
+    "add-25572832": {
+      "scenario_tags": [
+        "craft_workshop",
+        "multiple_objects",
+        "sunlight"
+      ],
+      "content_note_vi": "Đồ đan dạng cầu trong xưởng; chọn một vật thể, không mặc định mọi khung đan đều là đèn hoàn chỉnh."
+    },
+    "add-92722732": {
+      "scenario_tags": [
+        "craft_workshop",
+        "busy_background",
+        "small_object",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Xưởng đan và đồ trang trí treo; dùng quan sát nền/crop, không phải ảnh một chụp đèn tách nền."
+    },
+    "add-157784089": {
+      "scenario_tags": [
+        "single_object",
+        "museum",
+        "woven_texture"
+      ],
+      "content_note_vi": "Ghế thiết kế bằng vật liệu đan theo nguồn; thử hình dáng/texture."
+    },
+    "add-61026736": {
+      "scenario_tags": [
+        "natural_background",
+        "worn_object"
+      ],
+      "content_note_vi": "Ghế đan tựa tường; ảnh đời thường với vật thể đã sử dụng."
+    },
+    "add-97560214": {
+      "scenario_tags": [
+        "outdoor",
+        "busy_background",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Ghế xếp trước cửa hàng, có xe phía sau."
+    },
+    "add-182122765": {
+      "scenario_tags": [
+        "multiple_objects",
+        "outdoor",
+        "color_variants"
+      ],
+      "content_note_vi": "Nhiều túi đan tròn khác màu; thích hợp chọn vùng và yêu cầu đổi màu."
+    },
+    "add-145194232": {
+      "scenario_tags": [
+        "single_object",
+        "woven_texture"
+      ],
+      "content_note_vi": "Túi đan tròn với dây/quai trên nền vải tối."
+    },
+    "add-130384936": {
+      "scenario_tags": [
+        "multiple_objects",
+        "printed_text",
+        "woven_texture"
+      ],
+      "content_note_vi": "Túi, nón và đồ đan cùng bàn; túi có chữ BELIZE, không suy nguồn gốc Việt."
+    },
+    "add-158743602": {
+      "scenario_tags": [
+        "bag_worn",
+        "partial_occlusion",
+        "woven_texture"
+      ],
+      "content_note_vi": "Túi dạng lưới đeo trên người; vật liệu/họ chưa được duyệt."
+    },
+    "add-1749501": {
+      "role": "contrast_candidate",
+      "scenario_tags": [
+        "scale_mismatch",
+        "worn_object"
+      ],
+      "content_note_vi": "Rương/thùng gỗ lớn; dùng đối chiếu khác kích thước/công dụng với hộp trang trí nhỏ."
+    },
+    "add-174755422": {
+      "scenario_tags": [
+        "open_container",
+        "multiple_objects",
+        "museum"
+      ],
+      "content_note_vi": "Hộp sơn mài mở, có đồ bên trong; so toàn cảnh/vùng hộp."
+    },
+    "add-142825819": {
+      "scenario_tags": [
+        "open_container",
+        "partial_occlusion",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Hộp gỗ chứa bi; mô hình có thể chú ý viên bi thay vì hộp."
+    },
+    "add-65489283": {
+      "scenario_tags": [
+        "single_object",
+        "wood_grain"
+      ],
+      "content_note_vi": "Hộp gỗ trang trí chụp thực trên nền vải; thay ảnh có hình thức giống bản dựng."
+    },
+    "add-107298222": {
+      "scenario_tags": [
+        "packaging",
+        "printed_text",
+        "other_brand",
+        "opened_product"
+      ],
+      "content_note_vi": "Chocolate và vỏ Milka; tương tự loại hàng nhưng khác thương hiệu Marou."
+    },
+    "add-197069913": {
+      "scenario_tags": [
+        "packaging",
+        "printed_text",
+        "other_brand",
+        "busy_background"
+      ],
+      "content_note_vi": "Bao bì chocolate Kazakhstan trên bàn, có nền rối."
+    },
+    "add-182488430": {
+      "scenario_tags": [
+        "packaging",
+        "printed_text",
+        "other_brand",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Sáu thanh chocolate Tupla nhiều biến thể; chọn một bao bì làm mục tiêu."
+    },
+    "add-57364758": {
+      "scenario_tags": [
+        "different_food_type",
+        "unpackaged_food"
+      ],
+      "content_note_vi": "Bánh đậu xanh đã bày ra; không có SKU tương ứng xác nhận trong catalog Marou."
+    },
+    "add-61012136": {
+      "scenario_tags": [
+        "different_food_type",
+        "unpackaged_food"
+      ],
+      "content_note_vi": "Bánh đậu xanh không có nhãn; dùng đối chiếu khác loại đồ ăn, không phải OCR bao bì."
+    },
+    "add-73647162": {
+      "scenario_tags": [
+        "different_food_type",
+        "packaging",
+        "vietnamese_text",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Bánh đậu xanh/đồ trà với bao bì Hoàng Gia theo ảnh; OCR cần chấm riêng, không phải sản phẩm Marou."
+    },
+    "add-124910887": {
+      "scenario_tags": [
+        "different_food_type",
+        "packaging",
+        "vietnamese_text",
+        "partial_occlusion"
+      ],
+      "content_note_vi": "Bánh cốm che một phần hộp Nguyên Ninh; kiểm chữ trên phần bao bì còn thấy."
+    },
+    "add-2745746": {
+      "scenario_tags": [
+        "different_food_type",
+        "packaging",
+        "vietnamese_text",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Nhiều hộp bánh cốm với nơ; chữ nhỏ, bị che và nghiêng."
+    },
+    "add-93719321": {
+      "scenario_tags": [
+        "different_food_type",
+        "packaging",
+        "vietnamese_text",
+        "multiple_objects"
+      ],
+      "content_note_vi": "Chồng hộp bánh cốm xanh; chọn một mặt hộp để thử đọc chữ."
+    },
+    "add-93543923": {
+      "scenario_tags": [
+        "different_food_type",
+        "unpackaged_food",
+        "food_preparation"
+      ],
+      "content_note_vi": "Công đoạn làm kẹo dừa; không có bao bì thành phẩm. Dùng đối chiếu ảnh thực phẩm xa catalog."
+    },
+    "add-4277425": {
+      "scenario_tags": [
+        "different_food_type",
+        "unpackaged_food",
+        "small_object"
+      ],
+      "content_note_vi": "Kẹo trên bàn/đĩa; không phải ảnh bao bì hoặc exact chocolate."
+    },
+    "add-25833176": {
+      "scenario_tags": [
+        "material_contrast",
+        "transparent_object"
+      ],
+      "content_note_vi": "Cốc thủy tinh; ca yêu cầu đổi sang cốc sứ không có đáp án mặc định từ nguồn."
+    },
+    "add-175764939": {
+      "scenario_tags": [
+        "material_contrast",
+        "multiple_objects",
+        "busy_background"
+      ],
+      "content_note_vi": "Cốc thủy tinh xanh giữa nhiều đồ gốm; chọn đúng cốc cần thử."
+    },
+    "add-136181860": {
+      "scenario_tags": [
+        "material_contrast",
+        "blur",
+        "low_contrast"
+      ],
+      "content_note_vi": "Cốc thủy tinh mờ/thiếu tương phản; giữ như ca khó tự nhiên, không tạo blur nhân tạo."
+    },
+    "add-158749173": {
+      "scenario_tags": [
+        "material_contrast",
+        "transparent_object",
+        "object_contains_liquid"
+      ],
+      "content_note_vi": "Cốc thủy tinh có đồ uống; thử khác vật liệu với ly sứ."
+    },
+    "add-26197520": {
+      "scenario_tags": [
+        "material_contrast",
+        "single_object"
+      ],
+      "content_note_vi": "Giỏ nhựa xanh có quai; hình dạng gần giỏ đan nhưng vật liệu khác theo nguồn."
+    },
+    "add-154007497": {
+      "scenario_tags": [
+        "material_contrast",
+        "woven_like_pattern"
+      ],
+      "content_note_vi": "Giỏ nhựa họa tiết giống đan; vật liệu lấy theo nguồn, cần đối chiếu khi gán nhãn."
+    },
+    "add-56198121": {
+      "scenario_tags": [
+        "material_contrast",
+        "partial_occlusion",
+        "object_contains_food"
+      ],
+      "content_note_vi": "Giỏ nhựa bị lê che gần hết; ca khó về chọn mục tiêu và vật liệu."
+    },
+    "add-18058526": {
+      "scenario_tags": [
+        "material_contrast",
+        "other_brand"
+      ],
+      "content_note_vi": "Túi da có quai, đối chiếu với túi đan trong catalog."
+    },
+    "add-18059365": {
+      "scenario_tags": [
+        "material_contrast",
+        "low_light",
+        "angled_view"
+      ],
+      "content_note_vi": "Túi da đỏ chụp góc nghiêng/ánh sáng khó; không suy texture tương tự nghĩa là cùng chất liệu."
+    },
+    "add-156899075": {
+      "scenario_tags": [
+        "material_contrast",
+        "natural_background"
+      ],
+      "content_note_vi": "Túi da màu nâu; thử yêu cầu túi đan/loại da bằng ràng buộc chữ."
+    }
+  },
+  "source_groups": [
+    {
+      "id": "candidate-scarf-india-series",
+      "image_ids": [
+        "web-022",
+        "web-023"
+      ],
+      "reason": "Same named photo series; preserve grouping pending review."
+    },
+    {
+      "id": "candidate-light-green-bowl",
+      "image_ids": [
+        "add-128816963",
+        "add-128816961"
+      ],
+      "reason": "Side/top views of the same named bowl."
+    },
+    {
+      "id": "candidate-red-ao-dai-zeus-series",
+      "image_ids": [
+        "add-96222759",
+        "add-96222760"
+      ],
+      "reason": "Same garment/model/photo series; not separate independent families."
+    },
+    {
+      "id": "candidate-museum-round-ritual-boxes",
+      "image_ids": [
+        "web-038",
+        "web-039"
+      ],
+      "reason": "Conservative grouping pending identity/family review."
+    }
+  ],
+  "crop_cases": [
+    {
+      "image_id": "web-010",
+      "instruction_vi": "Chọn cả giỏ và quai, giữ lại ít trứng; tránh chỉ chọn đồ bên trong."
+    },
+    {
+      "image_id": "web-011",
+      "instruction_vi": "Chọn giỏ có quai; so với toàn ảnh có nền cỏ/nấm."
+    },
+    {
+      "image_id": "web-030",
+      "instruction_vi": "Chọn một chiếc nón; giữ vai trò ngoài loại hàng đang có."
+    },
+    {
+      "image_id": "control-037",
+      "instruction_vi": "Chọn vùng khăn lộ ra cạnh hộp; ghi đây vẫn là ảnh gallery."
+    },
+    {
+      "image_id": "add-54071586",
+      "instruction_vi": "Chọn bát gồm cả thành và miệng, không chỉ chọn hạt."
+    },
+    {
+      "image_id": "add-1103201",
+      "instruction_vi": "Chọn một chồng đĩa ở phía trước, không lấy toàn kệ."
+    },
+    {
+      "image_id": "add-104101424",
+      "instruction_vi": "Chọn vùng vẫn thấy viền đĩa quanh bánh."
+    },
+    {
+      "image_id": "add-155646318",
+      "instruction_vi": "Chọn một cốc rõ quai trong cụm cốc ở quầy."
+    },
+    {
+      "image_id": "add-200509963",
+      "instruction_vi": "Chọn một cốc đỏ ở dưới; giữ cả quai."
+    },
+    {
+      "image_id": "add-96222759",
+      "instruction_vi": "Chọn phần thân áo dài có họa tiết, hạn chế mặt/nền; không xóa watermark file gốc."
+    },
+    {
+      "image_id": "add-86677017",
+      "instruction_vi": "Chọn người mặc áo dài đứng quay lưng, giữ tà áo."
+    },
+    {
+      "image_id": "add-176361070",
+      "instruction_vi": "Chọn một đèn/chụp đèn riêng ở cạnh ảnh."
+    },
+    {
+      "image_id": "add-200006254",
+      "instruction_vi": "Chọn một chụp đèn treo phía trên quầy."
+    },
+    {
+      "image_id": "add-25572832",
+      "instruction_vi": "Chọn khung đan dạng cầu phía trái, ghi đúng mục tiêu chưa hoàn thiện."
+    },
+    {
+      "image_id": "add-97560214",
+      "instruction_vi": "Chọn ghế ở phía trước, loại phần xe/nền nếu có thể."
+    },
+    {
+      "image_id": "add-182122765",
+      "instruction_vi": "Chọn một túi tròn với toàn bộ quai."
+    },
+    {
+      "image_id": "add-130384936",
+      "instruction_vi": "Chọn túi có chữ BELIZE; không chọn nón/miếng lót."
+    },
+    {
+      "image_id": "add-174755422",
+      "instruction_vi": "Chọn một hộp mở, giữ thân/nắp, ghi đồ bên trong còn thấy."
+    },
+    {
+      "image_id": "add-182488430",
+      "instruction_vi": "Chọn một thanh chocolate và toàn bộ bao bì của nó."
+    },
+    {
+      "image_id": "add-175764939",
+      "instruction_vi": "Chọn cốc thủy tinh xanh ở giữa ảnh; tránh lẫn cốc gốm bên cạnh."
+    }
+  ]
+}

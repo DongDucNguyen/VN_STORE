@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-12T19:37:14.329374+00:00",
+  "files_before": 28565,
+  "files_after": 28565,
+  "content_hashes_checked": 2745,
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "scope": "Every regular file outside tmp_data: size/mtime. SHA256 additionally for project source/docs/data/assets; excludes .git, venvs, node_modules, artifacts, pytest cache from hashing.",
+  "unchanged": true
+}

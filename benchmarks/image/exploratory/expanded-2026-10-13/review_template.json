@@ -1,0 +1,3159 @@
+{
+  "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+  "status": "template_unreviewed",
+  "instructions_vi": "Không tự coi nháp này là nhãn đã duyệt. Chấm relevance theo từng case, vì thêm chữ/crop có thể đổi đáp án. Giữ cùng nhóm nguồn qua mọi case.",
+  "images": [
+    {
+      "image_id": "web-000",
+      "sha256": "98dd81131db3d712f288e5593005183e1f9aede698d448d2b67563c9efd5cff6",
+      "source_group_candidate": "commons:94885653",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-001",
+      "sha256": "534e755474c19115c0fa2e2af134068376afd5a9aec2fbc6a54e0ae13c552b1c",
+      "source_group_candidate": "commons:98052731",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-005",
+      "sha256": "10ac8e256b019ab116c2df507c67e14a845fc56652c2e42c533b4742684b8dc3",
+      "source_group_candidate": "commons:98076156",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-006",
+      "sha256": "5bfd29e66f82494ca1d74abd9d7e59bce971a5258075df885c14b2d69690bb18",
+      "source_group_candidate": "commons:99273343",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-008",
+      "sha256": "8b64c75b974e93bea0a07b55adcc8e8e2175736f1d0e94810b2bb29f1e33deff",
+      "source_group_candidate": "commons:99273324",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-010",
+      "sha256": "c2fc36baacd7d4945bbab0133340683b90e4e7b140010ab8b937d3f673d37d62",
+      "source_group_candidate": "commons:93178466",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-011",
+      "sha256": "e5e5d0d74b9b925c3b4dde87151f483ef0bc261c3b075012a978b6740b6eff31",
+      "source_group_candidate": "commons:20032063",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-017",
+      "sha256": "1f08de1cab0ca5a6417560e49d532b0c25025a2283a7a0664a2528414983c79f",
+      "source_group_candidate": "commons:184933870",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-019",
+      "sha256": "0b96de3d61b25c3590eba9c374732037676215461f67d41be5e9e67b42a11821",
+      "source_group_candidate": "commons:179064346",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-021",
+      "sha256": "6e1a88519e9a840c95002daca7cc24e18cb482fe1efb037d12839c6399053a3f",
+      "source_group_candidate": "commons:73882912",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-022",
+      "sha256": "db97517e548d84dcc7963b6b95e62ae3bf5d53d9b2c86c877b740ab1e5cb05d4",
+      "source_group_candidate": "candidate-scarf-india-series",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-023",
+      "sha256": "ef55dbf4cb701248a53b042220fc2337923f82ec54879e179128d239f0fcdf0d",
+      "source_group_candidate": "candidate-scarf-india-series",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-029",
+      "sha256": "85fbced0587f508b7f5831fc17d9fe2acaa24417f99d42fcc054e0e8f9d25b56",
+      "source_group_candidate": "commons:5605238",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-030",
+      "sha256": "98de6572b40b47f46b0387175376e1a8a27f308ba53d2fdef8b07a601a83620c",
+      "source_group_candidate": "commons:10185064",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-031",
+      "sha256": "2c45e7b9bf2bfa90e3fe8145f628326f570a0183127464ae0fb3fbd27a71aa62",
+      "source_group_candidate": "commons:39803139",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-034",
+      "sha256": "2ceda3f4286c4250ab900b42de098774addcf6a0a1d76eac4aabba2afa1ee6c4",
+      "source_group_candidate": "commons:40073426",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-036",
+      "sha256": "3515de1cf067350027ebc5049144193b4f3ca345dfe22f597a1a44560eb3863f",
+      "source_group_candidate": "commons:40100632",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-037",
+      "sha256": "9d8a51504b84387439ff1c6ad6803db9e77199c08e0c8832b4bbf58efb22f1f1",
+      "source_group_candidate": "commons:40100630",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-038",
+      "sha256": "63df7b9a625d01f9f899d0f3fa5977705aa380038df27d3525e78bf9d6cbe8d8",
+      "source_group_candidate": "candidate-museum-round-ritual-boxes",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-039",
+      "sha256": "077c0edc73fbe73c4cb1e7cf3e13ebb2c853ddc520ac12091a14827657d4f8cc",
+      "source_group_candidate": "candidate-museum-round-ritual-boxes",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-046",
+      "sha256": "346142c9403ada3816bce0ead7a61836fc981dd7ee6398283a1f316be5893f5f",
+      "source_group_candidate": "commons:91157418",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-047",
+      "sha256": "aafc95636d0f3bab33b0cae8c177e14153ab40206ae36307959277e2b9cf7c5b",
+      "source_group_candidate": "commons:15195900",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-049",
+      "sha256": "14e8481d28f36e563957ff8f284d75bed813202dfad355506aa8332e15b78568",
+      "source_group_candidate": "commons:33759049",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-052",
+      "sha256": "f9db929577befdaa2fc31ba69bd6907258f7461a1dbb4f323da9212c70404d23",
+      "source_group_candidate": "commons:157386284",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-053",
+      "sha256": "cd365261077c3f57cf7cedae4e59fccc324cb62a735728d5666cd5f699a17173",
+      "source_group_candidate": "commons:45687464",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-057",
+      "sha256": "bb9395bd2ad584ed21bcc3dfe7e5008ba6c944a8bb86d0385caf79e16d2d15ed",
+      "source_group_candidate": "commons:17306",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-060",
+      "sha256": "f24c50697e4c66195b749373cc5c2a58053a5ae051511004e540bdbd9d93abbb",
+      "source_group_candidate": "commons:95147120",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-063",
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "source_group_candidate": "commons:148796159",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-071",
+      "sha256": "1641529fa3e78a4586556def1512bde4f7fc4e0e28bb3d52446d86cb5f3af93d",
+      "source_group_candidate": "commons:113450405",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "web-072",
+      "sha256": "29c2cfd3c006f09a4f4e4bfd24f4392beedd8f7d514bec95a0a4f0287dd64f94",
+      "source_group_candidate": "commons:8481748",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-030",
+      "sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+      "source_group_candidate": "img-minhlong-chen-com-thach-van-11cm-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-031",
+      "sha256": "975d6f58025bcc58abdad75d8336bc6d1dba434982e8281152b2a8d5f5c52cd5",
+      "source_group_candidate": "img-minhlong-bo-tra-camellia-chi-vang-05l-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-032",
+      "sha256": "39cccecf983bcacbce160fe4161ffb315ccb5f64a0b8102ed420f078ed532d7d",
+      "source_group_candidate": "img-vietcraft-gio-tre-dan-tron-vh24026-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-033",
+      "sha256": "78fbbfc973b8a3195ef1d0cbeee8908c65793da08f1fb7c9daa6071615b0d023",
+      "source_group_candidate": "img-vietcraft-tui-luc-binh-vo-so-vh24032-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-034",
+      "sha256": "6251d34f613d0e8087593e3798d82b9a59a2f0e31365d6d50fb1c4d1ab0cb705",
+      "source_group_candidate": "img-hanoia-binh-hoa-mystery-a18mt01-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-035",
+      "sha256": "9db9369d4af501ab73605a273f094358cdb8edb76516ae4a882125e2c410debc",
+      "source_group_candidate": "img-hanoia-hop-vuong-botanica-s-af26bt03-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-036",
+      "sha256": "ba76aed6b1565d1080abea2ef27b7ec268c71c99757fefc5ec3e55fffecd095b",
+      "source_group_candidate": "img-hanhsilk-khan-lanh-to-tam-246-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-037",
+      "sha256": "533c2fd6b79c9b9790d29880046b5bf1e36f8f6d6cff29945cfd9e1be8d3608d",
+      "source_group_candidate": "img-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-038",
+      "sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+      "source_group_candidate": "img-marou-ben-tre-78-80g-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "control-039",
+      "sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+      "source_group_candidate": "img-marou-tien-giang-70-80g-1",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-128816963",
+      "sha256": "0c887083e70e0855c4b998a845f5075aead377ec6c4a078d720bf10f0714f9f4",
+      "source_group_candidate": "candidate-light-green-bowl",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-149255276",
+      "sha256": "8a123e6db406a491a710f665a8248645bc90c925275be0702a068d8f23de7c6d",
+      "source_group_candidate": "commons:149255276",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-54071586",
+      "sha256": "893feb9d18a9ddae991298c0c5bc1b56d294a92c9b99f2fd9c7c6928808342f4",
+      "source_group_candidate": "commons:54071586",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-128816961",
+      "sha256": "2973c698bda3c4a014c56cbc8f2db4df301343403e681701f98f5804393d0481",
+      "source_group_candidate": "candidate-light-green-bowl",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-153092103",
+      "sha256": "eead80c26cc1629021fa9723421f104cda68d9796b8b0db95598defc12f11d2b",
+      "source_group_candidate": "commons:153092103",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-98051226",
+      "sha256": "e076a3e4412d78a7a09ef7256cff4f526c38a3f3785693060d773ed185ca05dd",
+      "source_group_candidate": "commons:98051226",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-1103201",
+      "sha256": "dbf8cb5f9194b1ae897bcff500dbc9039733998a85c604695d5eb12ee4fac4ba",
+      "source_group_candidate": "commons:1103201",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-104101424",
+      "sha256": "a1982fdbd47e23d1ce2bbc6cff2c3fe26767fd24e79d624811223d2dfe4f6a8e",
+      "source_group_candidate": "commons:104101424",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-15573749",
+      "sha256": "3f5844e558412ed5231d5210ff7fca9730eb3ccb515e65e5975592b89eb9fea6",
+      "source_group_candidate": "commons:15573749",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-155646318",
+      "sha256": "2123b2b08531a49d3657be40c1651408ac408fe780e83d7be0192e57f5b564e4",
+      "source_group_candidate": "commons:155646318",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-118375454",
+      "sha256": "61b6abb9c7bdc0d0abed7ed1bb01da561b0c20149de8752e49a6a3f0de0d0b21",
+      "source_group_candidate": "commons:118375454",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-200509963",
+      "sha256": "fe03624084727efe8fca2489e50992043c3d1a9ffde4ecfd2ac40558627d5937",
+      "source_group_candidate": "commons:200509963",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-117301860",
+      "sha256": "337e172ad67d2f5edc09582723b13651132c139d91a00f792f4f9f5c250304f9",
+      "source_group_candidate": "commons:117301860",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-49443054",
+      "sha256": "cf7c1334f9285542c01b9384c76b7e879d5d6b8efa7e9b9193a4227ee6bcc0ee",
+      "source_group_candidate": "commons:49443054",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-221007",
+      "sha256": "c776ca626990d4368cb0024cc5ea34f08b862e3983ffd707f789377c1f7cef7e",
+      "source_group_candidate": "commons:221007",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-165476060",
+      "sha256": "0ab74298d016f5c2fbd137c730b4ecd7ef44270a8935b9a6b2d31b9d4291fc67",
+      "source_group_candidate": "commons:165476060",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-61832768",
+      "sha256": "4c4990a4bd7eeeb1b389f0abb92dfca71c9076d8c32d1c6a0c18c477f13c7853",
+      "source_group_candidate": "commons:61832768",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-96222759",
+      "sha256": "4efd71a16b551a64d0e7622372ae2cc6280a7e99b25f8073bc70b248e9d6515b",
+      "source_group_candidate": "candidate-red-ao-dai-zeus-series",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-96222760",
+      "sha256": "714e1edadcd73102a17f3d8f1984020c28cf96bb39a7e66919feaaa6d315feb6",
+      "source_group_candidate": "candidate-red-ao-dai-zeus-series",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-86677017",
+      "sha256": "cfd2f8bdba2bb660e1b3b56c4a8f85472836e218bbc3c5e49a450c47d0fba302",
+      "source_group_candidate": "commons:86677017",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-176361070",
+      "sha256": "cb88b4595ed296fc1544fad191301887b131ec84fc5d5a9c4b796f6fbdf9a3be",
+      "source_group_candidate": "commons:176361070",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-200006254",
+      "sha256": "c711c7ecf4b41eaee31cc7563cc223c64f1061611e9b26bffca222fcb3baa668",
+      "source_group_candidate": "commons:200006254",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-25572832",
+      "sha256": "a25549cb49eb2a160d9e5da0e6026f67e5c90caf331c54141eda16419ae07289",
+      "source_group_candidate": "commons:25572832",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-157784089",
+      "sha256": "7f435a27898e02af6e758df4ec3c228263f91734828826f53a2a84f18a48fdac",
+      "source_group_candidate": "commons:157784089",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-61026736",
+      "sha256": "65d7607b74f5927c3ffae0ef9f7e34d0b746ea69a7ba2e004c76bb07297113e6",
+      "source_group_candidate": "commons:61026736",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-97560214",
+      "sha256": "edb94d69523e066b89a626ea0f37a047d9d56f65430a4667e180d44907b36dc3",
+      "source_group_candidate": "commons:97560214",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-182122765",
+      "sha256": "0cd20c95e734981df92f20574d97a53b2d40003e1298626a0ca86d7b4d548642",
+      "source_group_candidate": "commons:182122765",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-145194232",
+      "sha256": "a656ea5b9a972995c07422cfe7b95e7afcbb67989883c018ed9b808e1ff53cd4",
+      "source_group_candidate": "commons:145194232",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-130384936",
+      "sha256": "eb4e49d34d41095fc99dbbc924a6214aba34ac33bdffbe6443b67c0e9754c535",
+      "source_group_candidate": "commons:130384936",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-152910736",
+      "sha256": "986a9667b5870c2d5c2cce6725db58e8dadebcad2d072772cae2f04bec3c6c9b",
+      "source_group_candidate": "commons:152910736",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-1749501",
+      "sha256": "afc0bd2f084aaf68e89f37b3545a7023336c6cacaa0b3b1ef5c5a3a5a0b7fb48",
+      "source_group_candidate": "commons:1749501",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-65489283",
+      "sha256": "adf4e16e318adb62c021523a8aa125a1e26d5ba87afb3c42f9b4b181f2c14139",
+      "source_group_candidate": "commons:65489283",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-174755422",
+      "sha256": "161215a35716d1288787a6ecac9b2a2310d3d809c33eadd04cbe9fed4b352b9d",
+      "source_group_candidate": "commons:174755422",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-142825819",
+      "sha256": "df3a8029c0e3d2f7696010048860449ea3a9412e3804f181e34785060218c827",
+      "source_group_candidate": "commons:142825819",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-107298222",
+      "sha256": "033c9adc90c122d86239113f88cba72ab6711ea70198d2d581a1f93dbe1a1af7",
+      "source_group_candidate": "commons:107298222",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-197069913",
+      "sha256": "1ba9c79d583966257192e8f190a4531855f6dba7b6a49b23a6aba8c62aa1c71d",
+      "source_group_candidate": "commons:197069913",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-182488430",
+      "sha256": "e3dee88b62d5f6ca454d60973c69f3c73f8685012983eb0af0407a5d8bcf5ffc",
+      "source_group_candidate": "commons:182488430",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-57364758",
+      "sha256": "3dc0848cc74f3e942ad1a36a296016df54b5164faef71de8307d6843740b5be2",
+      "source_group_candidate": "commons:57364758",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-61012136",
+      "sha256": "d2e97323368eef0b3f159cff10bc7445d26dc625f899d0c9cd07e7580ae3d032",
+      "source_group_candidate": "commons:61012136",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-73647162",
+      "sha256": "78626fc00855878adeb09a82529c084b403e160cd2b4b6f66a27ffc95658a659",
+      "source_group_candidate": "commons:73647162",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-124910887",
+      "sha256": "2f84f52deb6ab587b738e6a99f95d941ac57208abfca6334c02b69b67dff52c6",
+      "source_group_candidate": "commons:124910887",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-2745746",
+      "sha256": "b4a52ef8374c499a6662ec05bdeae24f7e4760e249524d668ffeebfee6f1a8c8",
+      "source_group_candidate": "commons:2745746",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-93543923",
+      "sha256": "9938717615c0b74cdace4b23456c57902bc5a4e6f59431db735c62d51ae1c43a",
+      "source_group_candidate": "commons:93543923",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-4277425",
+      "sha256": "abad891f7265f6990f81fd388cbcbe2e7a094d9b7dc30b5e386daa7158b64dab",
+      "source_group_candidate": "commons:4277425",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-25833176",
+      "sha256": "aa41179b1f08533a45d8e751d4318ab1277df8133a93727ab1d3079dfa65acf2",
+      "source_group_candidate": "commons:25833176",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-175764939",
+      "sha256": "761900a76babf6bd127821162364e0883a8901fa4dd713f3ec948bc373a3f395",
+      "source_group_candidate": "commons:175764939",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-136181860",
+      "sha256": "a80d676904545246007986e23ec687f0150ed5f764783e996f6d1ffea67383f5",
+      "source_group_candidate": "commons:136181860",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-158749173",
+      "sha256": "88199f1266596db492ddb3f683b01c8362780f5b20d6d855d7c70d96b2b2e694",
+      "source_group_candidate": "commons:158749173",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-26197520",
+      "sha256": "4626f0cb52f32454915365f685939aa5cd74cc7e81ee2c098c91c421c888fdb9",
+      "source_group_candidate": "commons:26197520",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-154007497",
+      "sha256": "f865fa92d200925d209e3a5d6a81dd76b7ca63cf9f43a474d7d814d1d55ee887",
+      "source_group_candidate": "commons:154007497",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-56198121",
+      "sha256": "22f116ca4d6b325d8b25113be3f9dc3d864c3884f0705bad445eb96fa8a8f852",
+      "source_group_candidate": "commons:56198121",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-18058526",
+      "sha256": "21bfbb4c5fadd0711c7e995d9fd878ab1a6c9b18c668fd62592660cdff660646",
+      "source_group_candidate": "commons:18058526",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-18059365",
+      "sha256": "f9e1325ae40a457ae7685fb73fd582337890d05103c638d89c05d018c51da5c4",
+      "source_group_candidate": "commons:18059365",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-156899075",
+      "sha256": "4df808b4b6139302b172d6fc569098ec1e5cfdf75631e0dbc2daa934fae4b248",
+      "source_group_candidate": "commons:156899075",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-53091",
+      "sha256": "d1c4dff165da56c4cbc713fe0d69d41d1a5f17cd0937d0231c3485ade1fea4ed",
+      "source_group_candidate": "commons:53091",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-152726723",
+      "sha256": "05002362e54025069c24631458d4b4f0db2202911baea30335a8e041c391e26a",
+      "source_group_candidate": "commons:152726723",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-128249802",
+      "sha256": "b9ef5c5c46697411353dcd8209151622a965a643b29eb5e6a50d7c5c896a3b18",
+      "source_group_candidate": "commons:128249802",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-92722732",
+      "sha256": "4548cfcd23b2a8aaa5e7c05500f06092f39d5487694bf44583a0c579d8c76757",
+      "source_group_candidate": "commons:92722732",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-158743602",
+      "sha256": "2a5580c38cfe6098a5959cac25f69d7f4e308c5f9173e3895027b0aa08e16f84",
+      "source_group_candidate": "commons:158743602",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    },
+    {
+      "image_id": "add-93719321",
+      "sha256": "dc5c10531a02ff060b9a23a7301beac6ad2ce8ac3b0b1726ee41ddd09e80f596",
+      "source_group_candidate": "commons:93719321",
+      "family_id": null,
+      "capture_session_id": null,
+      "independence_review": null,
+      "rights_review": null
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "web-000-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-001-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-005-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-006-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-008-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-010-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-011-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-017-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-019-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-021-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-022-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-023-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-029-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-030-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-031-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-034-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-036-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-037-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-038-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-039-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-046-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-047-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-049-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-052-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-053-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-057-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-060-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-063-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-071-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-072-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-030-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-031-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-032-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-033-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-034-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-035-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-036-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-037-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-038-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-039-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-030-text-0",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-031-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-032-text-0",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-033-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-036-text-0",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-037-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-034-text-0",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-035-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-038-text-0",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-039-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816963-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816963-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816963-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-149255276-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-149255276-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-149255276-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-54071586-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-54071586-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-54071586-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816961-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816961-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128816961-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-153092103-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-153092103-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-153092103-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-98051226-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-98051226-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-98051226-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1103201-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1103201-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1103201-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-104101424-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-104101424-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-104101424-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-15573749-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-15573749-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-15573749-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-155646318-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-155646318-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-155646318-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-118375454-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-118375454-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-118375454-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200509963-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200509963-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200509963-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-117301860-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-117301860-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-117301860-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-49443054-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-49443054-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-49443054-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-221007-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-221007-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-221007-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-165476060-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-165476060-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-165476060-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61832768-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61832768-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61832768-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222759-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222759-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222759-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222760-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222760-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222760-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-86677017-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-86677017-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-86677017-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-176361070-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-176361070-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-176361070-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200006254-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200006254-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200006254-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25572832-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25572832-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25572832-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-157784089-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-157784089-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-157784089-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61026736-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61026736-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61026736-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-97560214-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-97560214-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-97560214-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182122765-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182122765-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182122765-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-145194232-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-145194232-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-145194232-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-130384936-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-130384936-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-130384936-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152910736-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152910736-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152910736-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1749501-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1749501-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1749501-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-65489283-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-65489283-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-65489283-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-174755422-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-174755422-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-174755422-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-142825819-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-142825819-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-142825819-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-107298222-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-107298222-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-107298222-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-197069913-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-197069913-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-197069913-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182488430-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182488430-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182488430-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-57364758-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-57364758-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-57364758-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61012136-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61012136-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-61012136-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-73647162-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-73647162-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-73647162-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-124910887-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-124910887-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-124910887-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-2745746-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-2745746-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-2745746-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93543923-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93543923-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93543923-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-4277425-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-4277425-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-4277425-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25833176-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25833176-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25833176-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-175764939-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-175764939-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-175764939-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-136181860-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-136181860-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-136181860-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158749173-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158749173-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158749173-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-26197520-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-26197520-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-26197520-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-154007497-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-154007497-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-154007497-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-56198121-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-56198121-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-56198121-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18058526-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18058526-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18058526-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18059365-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18059365-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-18059365-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-156899075-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-156899075-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-156899075-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-53091-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-53091-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-53091-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152726723-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152726723-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-152726723-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128249802-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128249802-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-128249802-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-92722732-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-92722732-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-92722732-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158743602-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158743602-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-158743602-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93719321-image",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93719321-text-1",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-93719321-text-2",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-010-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-011-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "web-030-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "control-037-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-54071586-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-1103201-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-104101424-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-155646318-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200509963-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-96222759-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-86677017-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-176361070-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-200006254-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-25572832-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-97560214-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182122765-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-130384936-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-174755422-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-182488430-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    },
+    {
+      "case_id": "add-175764939-crop",
+      "has_answer": null,
+      "relevance": {},
+      "exact_product_id": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "notes": null
+    }
+  ]
+}

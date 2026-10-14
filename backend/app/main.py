@@ -9,6 +9,9 @@ Biến môi trường:
     VNSTORE_IMAGE_ADAPTER   adapter embedding ảnh dạng module:thuộc_tính (mặc định: chưa có → 503)
     VNSTORE_IMAGE_INDEX_DIR thư mục chỉ mục ảnh (mặc định ../artifacts/indexes/image)
     VNSTORE_IMAGE_INDEX_AUTOBUILD  1 = tự dựng chỉ mục ảnh trong bộ nhớ khi thiếu/cũ (chỉ khi phát triển)
+    VNSTORE_TEXT_ADAPTER    adapter embedding văn bản cho nhánh ngữ nghĩa (vd. app.ml.text:BGEM3); chỉ có tác dụng khi
+                            VNSTORE_SEARCH_CONFIG đặt semantic_weight > 0. Lỗi/thiếu chỉ mục → tìm bằng chữ dùng BM25
+    VNSTORE_TEXT_INDEX_DIR  thư mục chỉ mục văn bản (mặc định ../artifacts/indexes/text)
 """
 from __future__ import annotations
 
@@ -31,6 +34,7 @@ from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot
 from .media import MAX_AUDIO_BYTES, MAX_IMAGE_BYTES, MediaError
 from .modalities import STATE_MESSAGES, ImageService, Status, VoiceService, adapter_from_env
 from .search.engine import SearchEngine, SearchFilters
+from .search.semantic import SemanticSearch, TextEmbedder, TextIndexUnavailable
 from .voice.suggestions import PhraseSuggester
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -51,6 +55,8 @@ class AppState:
     voice: VoiceService = VoiceService(None, Status("unavailable"))
     image_embedder: ImageEmbedder | None = None
     image_status: Status = Status("unavailable")
+    text_embedder: TextEmbedder | None = None
+    text_status: Status = Status("unavailable")
 
 
 state = AppState()
@@ -67,7 +73,7 @@ def reload_catalog(path: Path | None = None) -> None:
         old = state.bundle.images if isinstance(state.bundle, Bundle) else None
         images = ImageService.for_snapshot(snap, state.image_embedder, state.image_status,
                                            old.gate if old else None)
-        state.bundle = Bundle(snap, SearchEngine(snap), images, PhraseSuggester(snap))
+        state.bundle = Bundle(snap, SearchEngine(snap, semantic=_semantic_for(snap)), images, PhraseSuggester(snap))
         state.error = None
     except CatalogError as e:
         state.error = e
@@ -76,11 +82,29 @@ def reload_catalog(path: Path | None = None) -> None:
         raise
 
 
+def _semantic_for(snap: CatalogSnapshot) -> SemanticSearch | None:
+    """Nhánh ngữ nghĩa khớp snapshot, hoặc None (BM25) khi chưa cấu hình/lỗi model/chỉ mục thiếu hay cũ."""
+    emb = state.text_embedder
+    if emb is None:
+        return None
+    try:
+        semantic = SemanticSearch.for_snapshot(snap, emb)
+    except TextIndexUnavailable as e:
+        state.text_status = Status(e.code, emb.model_id, emb.revision, str(e))
+        return None
+    except Exception as e:  # noqa: BLE001 — lỗi model khi dựng chỉ mục chỉ tắt nhánh ngữ nghĩa
+        state.text_status = Status("error", emb.model_id, emb.revision, f"{type(e).__name__}: {e}")
+        return None
+    state.text_status = Status("ok", emb.model_id, emb.revision)
+    return semantic
+
+
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     # Adapter khởi tạo rẻ; GPU demo có thể nạp trước English để giảm độ trễ yêu cầu đầu.
     state.voice = VoiceService.from_env()
     state.image_embedder, state.image_status = adapter_from_env("VNSTORE_IMAGE_ADAPTER", ImageEmbedder)
+    state.text_embedder, state.text_status = adapter_from_env("VNSTORE_TEXT_ADAPTER", TextEmbedder)
     reload_catalog()
     if os.environ.get("VNSTORE_ASR_PRELOAD_ENGLISH") == "1" and state.voice.adapter is not None:
         preload = getattr(state.voice.adapter, "preload_english", None)
@@ -137,7 +161,9 @@ def health() -> dict[str, Any]:
         },
         "search": {"keyword": "ok", "index_build_ms": state.bundle.engine.build_ms,
                    "voice": state.voice.status.state, "image": _image_status().state,
-                   "models": {"voice": state.voice.status.public(), "image": _image_status().public()}},
+                   "semantic": state.text_status.state if state.bundle.engine.config.semantic_weight else "off",
+                   "models": {"voice": state.voice.status.public(), "image": _image_status().public(),
+                              "text": state.text_status.public()}},
     }
 
 

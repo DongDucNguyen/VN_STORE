@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "backend"))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from app.catalog.store import load_snapshot
-from app.search.config import SearchConfig
+from app.search.config import TEXT_SETTINGS, SearchConfig
 import audit_image_queries as ai
 import eval_voice as ev
 import eval_keyword as ek
@@ -103,7 +103,7 @@ def check_selection(path, catalog_hash):
                         "queries_sha256": (run.get("retrieval") or {}).get("queries_sha256"),
                         "split_plan": run.get("split_plan"), "requires_crops": entry.get("requires_crops", False)}
     # Keyword settings must stay identical after ASR and in the image text branch.
-    for key in ("accent_weight", "min_token_coverage", "strict_accents"):
+    for key in TEXT_SETTINGS:
         if models["voice"]["search"][key] != models["image"]["search"][key]:
             raise ValueError("voice/image keyword backend settings differ")
     return selection, models

@@ -36,25 +36,31 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
 
   useEffect(() => {
     const term = q.trim();
-    if (term.length < 2) {
-      setSugs([]);
+    const id = ++reqId.current;
+    setSugs([]);
+    setActive(-1);
+    if (term.length < 2 || term.length > 200) {
       return;
     }
-    const id = ++reqId.current;
+    const controller = new AbortController();
     const t = setTimeout(() => {
       api
-        .suggest(term)
+        .suggest(term, controller.signal)
         .then((r) => id === reqId.current && setSugs(r))
         .catch(() => id === reqId.current && setSugs([]));
     }, 150);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      controller.abort();
+      reqId.current++;
+    };
   }, [q]);
 
   function submit(e?: React.FormEvent) {
     e?.preventDefault();
     voice.cancel();
     setOpen(false);
-    if (active >= 0 && sugs[active]) {
+    if (open && active >= 0 && sugs[active]) {
       window.location.hash = suggestionHref(sugs[active]).slice(1);
       return;
     }
@@ -67,6 +73,7 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
         <input
           type="search"
           value={q}
+          maxLength={300}
           autoFocus={autoFocus}
           placeholder="Tìm: bình gốm Bát Tràng dưới 500k…"
           aria-label="Tìm sản phẩm"
@@ -80,9 +87,15 @@ export function SearchBar({ initial = "", autoFocus = false }: { initial?: strin
           onFocus={() => setOpen(true)}
           onBlur={() => setTimeout(() => setOpen(false), 150)}
           onKeyDown={(e) => {
-            if (e.key === "ArrowDown") setActive((a) => Math.min(a + 1, sugs.length - 1));
-            else if (e.key === "ArrowUp") setActive((a) => Math.max(a - 1, -1));
-            else if (e.key === "Escape") setOpen(false);
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+              e.preventDefault();
+              setOpen(true);
+              setActive((a) => e.key === "ArrowDown" ? Math.min(a + 1, sugs.length - 1) : Math.max(a - 1, -1));
+            } else if (e.key === "Escape") {
+              e.preventDefault();
+              setOpen(false);
+              setActive(-1);
+            }
           }}
         />
         <button

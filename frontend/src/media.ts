@@ -43,10 +43,16 @@ export class Recorder {
   private rec: MediaRecorder | null = null;
   private chunks: Blob[] = [];
   private startedAt = 0;
+  private endedAt = 0;
   private cancelled = false;
+  private finished: Promise<void> | null = null;
+  private finish: (() => void) | null = null;
+  private failed = false;
 
   async start(): Promise<void> {
     this.cancelled = false;
+    this.failed = false;
+    this.endedAt = 0;
     if (!canRecord()) throw micError("unsupported");
     try {
       // Không bật khử ồn mặc định: có thể làm mất phụ âm/dấu thanh (PLAN.md mục 6.2).
@@ -62,29 +68,53 @@ export class Recorder {
       throw micError("failed");
     }
     this.chunks = [];
-    try { this.rec = new MediaRecorder(this.stream); }
-    catch { this.release(); throw micError("failed"); }
-    this.rec.ondataavailable = (ev) => ev.data.size > 0 && this.chunks.push(ev.data);
-    this.rec.start(250);
-    this.startedAt = performance.now();
+    try {
+      const rec = new MediaRecorder(this.stream);
+      this.rec = rec;
+      this.finished = new Promise<void>((resolve) => { this.finish = resolve; });
+      rec.ondataavailable = (ev) => {
+        if (!this.cancelled && ev.data.size > 0) this.chunks.push(ev.data);
+      };
+      rec.onstop = () => {
+        this.endedAt ||= performance.now();
+        this.release();
+        this.finish?.();
+      };
+      rec.onerror = () => {
+        this.failed = true;
+        this.release();
+        this.finish?.();
+      };
+      this.startedAt = performance.now();
+      rec.start(250);
+    } catch {
+      this.release();
+      this.rec = null;
+      this.finish?.();
+      throw micError("failed");
+    }
   }
 
   async stop(): Promise<Blob> {
     const rec = this.rec;
     if (!rec) throw micError("failed");
     const pressedAt = performance.now();
-    const active = () => rec.state !== "inactive";
-    const done = !active() ? Promise.resolve() :
-      new Promise<void>((resolve) => (rec.onstop = () => resolve()));
-    // Giữ thêm một nhịp ngắn sau khi bấm dừng để không cắt phụ âm cuối.
-    if (active()) {
-      await new Promise<void>((resolve) => setTimeout(resolve, STOP_TAIL_MS));
-      if (active()) rec.stop();
+    try {
+      // Giữ âm cuối nhưng không thay handler stop/error đã đăng ký khi start().
+      if (rec.state !== "inactive" && !this.failed && !this.cancelled) {
+        await new Promise<void>((resolve) => setTimeout(resolve, STOP_TAIL_MS));
+      }
+      if (rec.state !== "inactive") rec.stop();
+      await this.finished;
+    } catch {
+      throw micError("failed");
+    } finally {
+      this.release();
+      this.rec = null;
     }
-    await done;
-    this.release();
-    if (this.cancelled) throw micError("failed");
-    if (pressedAt - this.startedAt < MIN_RECORD_MS) throw micError("short");
+    if (this.cancelled || this.failed) throw micError("failed");
+    // Không tính 300 ms đệm; thiết bị dừng sớm thì dùng thời điểm dừng thực tế.
+    if (Math.min(this.endedAt, pressedAt) - this.startedAt < MIN_RECORD_MS) throw micError("short");
     const blob = new Blob(this.chunks, { type: rec.mimeType || "audio/webm" });
     if (!blob.size) throw micError("failed");
     return toWav(blob);
@@ -92,8 +122,15 @@ export class Recorder {
 
   cancel() {
     this.cancelled = true;
-    if (this.rec && this.rec.state !== "inactive") this.rec.stop();
-    this.release();
+    try {
+      if (this.rec && this.rec.state !== "inactive") this.rec.stop();
+    } catch {
+      // A device may have disappeared before the browser emits its stop event.
+    } finally {
+      this.release();
+      this.chunks = [];
+      this.finish?.();
+    }
   }
 
   private release() {

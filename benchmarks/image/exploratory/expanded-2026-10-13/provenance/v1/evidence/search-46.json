@@ -1,0 +1,653 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=chocolate+bar+packaging+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:16.144835+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "33759049": {
+          "pageid": 33759049,
+          "ns": 6,
+          "title": "File:Cooking chocolate with packaging.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 498663,
+              "width": 1960,
+              "height": 1470,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Cooking_chocolate_with_packaging.jpg/1280px-Cooking_chocolate_with_packaging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cooking_chocolate_with_packaging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Cooking_chocolate_with_packaging.jpg/1280px-Cooking_chocolate_with_packaging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cooking_chocolate_with_packaging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Cooking_chocolate_with_packaging.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Cooking_chocolate_with_packaging.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=33759049",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2014-07-05 10:50:07",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Cooking chocolate with packaging",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Chocolate bars|Baking chocolate|Self-published work",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A few pieces of dark cooking chocolate, looming from their packaging. This type of product is a cheap, somewhat coarse chocolate intended for cooking and baking, sold on the German market as „Blockschokolade“. This particular specimen was made by Müller &amp; Müller GmbH, Münchweiler (a subsidiary of Wawi Group), and has a minimum cocoa content of 40 %. The reflective blue-white packaging with giant letters is typical for cooking chocolate in the German retail market and is used in different forms by several brands.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-07-05 12:30:04",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:SKopp\" title=\"User:SKopp\">SKopp</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "91157418": {
+          "pageid": 91157418,
+          "ns": 6,
+          "title": "File:HERSHEY'S Chocolate Bar Greatest Milk Chocolate.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 99088,
+              "width": 600,
+              "height": 240,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/HERSHEY%27S_Chocolate_Bar_Greatest_Milk_Chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 512,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/2f/HERSHEY%27S_Chocolate_Bar_Greatest_Milk_Chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 512
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/HERSHEY%27S_Chocolate_Bar_Greatest_Milk_Chocolate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:HERSHEY%27S_Chocolate_Bar_Greatest_Milk_Chocolate.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=91157418",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-06-12 19:32:45",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "HERSHEY'S Chocolate Bar Greatest Milk Chocolate",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Self-published work|Chocolate candy bars|Hershey's chocolate bars|Milk chocolate bars|Hershey's chocolate packaging",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "HERSHEY'S Milk Chocolate Bar wrapper features their logo, the flavor variety and the calories. It is a brown wrapper with silver edges and silver writing.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2020-06-12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Kfarren23&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Kfarren23 (page does not exist)\">Kfarren23</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "The design is too simple to get a copyright protection",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "15195900": {
+          "pageid": 15195900,
+          "ns": 6,
+          "title": "File:Hersheys Bar with Chocolate Bloom.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 159631,
+              "width": 640,
+              "height": 538,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Hersheys_Bar_with_Chocolate_Bloom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1076,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Hersheys_Bar_with_Chocolate_Bloom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1076
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Hersheys_Bar_with_Chocolate_Bloom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hersheys_Bar_with_Chocolate_Bloom.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=15195900",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2011-05-13 20:03:48",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Hersheys Bar with Chocolate Bloom",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Chocolate bloom|Flickr images reviewed by trusted users|Chocolate packaging|Hershey's chocolate bars",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p>have you ever gotten a hershey's bar that looked old? this one i opened today looked awful. i haven't even tasted it... not sure if i want to. it's not even brown, it's more like a beigey color... the date says june 2008. i've never seen one look like this before.\n</p><p>i went to hersheys.com and found this:\nQ.My chocolate sometimes turns tan or white. What causes this?\n</p>\nA. Chocolate contains cocoa butter, a vegetable fat that is sensitive to heat and humidity. Temperatures above 75°F will cause chocolate to melt. The cocoa butter can rise to the surface and form a discoloration called \"cocoa butter bloom.\" Condensation on milk or semi-sweet chocolate may cause the sugar to dissolve and rise to the surface as \"sugar bloom.\" Chocolate that has \"bloomed\" is certainly safe to use, but flavor loss and texture changes may be noticed.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2008-10-01 17:30",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/jelene/2905033961/\">weird hershey's bar</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/70831250@N00\">Jelene Morris</a> from Columbia SC, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "67040367": {
+          "pageid": 67040367,
+          "ns": 6,
+          "title": "File:Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)) LCCN2014691036.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2371776,
+              "width": 4172,
+              "height": 5766,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg/1280px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1769,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg/3840px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg/1280px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1769,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg/3840px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_(Compagnie_d%27Alimentation))_LCCN2014691036.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=67040367",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-09-19 11:20:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)) LCCN2014691036",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Chocolate|Images from the Library of Congress|PD-Bain|George Grantham Bain Collection|PD-old-70-expired|Images uploaded by Fæ|CC-PD-Mark|Library of Congress-no known copyright restrictions|1910s food packaging",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<i>Title:</i> Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)]\n<i>Abstract/medium:</i> 1 negative : glass ; 5 x 7 in. or smaller.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1910",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p>Library of Congress\n</p>\n<ul><li><i>Catalog:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://lccn.loc.gov/2014691036\">https://lccn.loc.gov/2014691036</a></li>\n<li><i>Image download:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://cdn.loc.gov/service/pnp/ggbain/11500/11594v.jpg\">https://cdn.loc.gov/service/pnp/ggbain/11500/11594v.jpg</a></li>\n<li><i>Original url:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://www.loc.gov/pictures/item/2014691036/\">https://www.loc.gov/pictures/item/2014691036/</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Bain News Service, publisher",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image  is available from the United States <a href=\"//commons.wikimedia.org/wiki/Library_of_Congress\" title=\"Library of Congress\">Library of Congress</a>'s <a rel=\"nofollow\" class=\"external text\" href=\"//www.loc.gov/rr/print/\">Prints and Photographs division</a><br> under the digital ID <a rel=\"nofollow\" class=\"external text\" href=\"https://hdl.loc.gov/loc.pnp/ggbain.11594\">ggbain.11594</a>.<br><small>This tag does not indicate the copyright status of the attached work. <span style=\"white-space:nowrap\">A normal <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags\" title=\"Special:MyLanguage/Commons:Copyright tags\">copyright tag</a> is still required.</span> <span style=\"white-space:nowrap\">See <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">Commons:Licensing</a>.</span></small>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "67040419": {
+          "pageid": 67040419,
+          "ns": 6,
+          "title": "File:Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)) LCCN2014691036.tif",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 24056042,
+              "width": 4172,
+              "height": 5766,
+              "pagecount": 1,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif/lossy-page1-1280px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1769,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif/lossy-page1-3840px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif/lossy-page1-1280px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1769,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif/lossy-page1-3840px-Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_%28Compagnie_d%27Alimentation%29%29_LCCN2014691036.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Packaging_for_chocolate_bars_by_Belgian_candymaker_CIDA_(Compagnie_d%27Alimentation))_LCCN2014691036.tif",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=67040419",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-03-04 09:22:43",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)) LCCN2014691036",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Chocolate|Images from the Library of Congress|PD-Bain|George Grantham Bain Collection|PD-old-70-expired|Images uploaded by Fæ|CC-PD-Mark|Library of Congress-no known copyright restrictions|1910s food packaging",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<i>Title:</i> Packaging for chocolate bars by Belgian candymaker CIDA (Compagnie d'Alimentation)]\n<i>Abstract/medium:</i> 1 negative : glass ; 5 x 7 in. or smaller.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1910",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p>Library of Congress\n</p>\n<ul><li><i>Catalog:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://lccn.loc.gov/2014691036\">https://lccn.loc.gov/2014691036</a></li>\n<li><i>Image download:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://cdn.loc.gov/master/pnp/ggbain/11500/11594u.tif\">https://cdn.loc.gov/master/pnp/ggbain/11500/11594u.tif</a></li>\n<li><i>Original url:</i> <a rel=\"nofollow\" class=\"external free\" href=\"https://www.loc.gov/pictures/item/2014691036/\">https://www.loc.gov/pictures/item/2014691036/</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Bain News Service, publisher",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image  is available from the United States <a href=\"//commons.wikimedia.org/wiki/Library_of_Congress\" title=\"Library of Congress\">Library of Congress</a>'s <a rel=\"nofollow\" class=\"external text\" href=\"//www.loc.gov/rr/print/\">Prints and Photographs division</a><br> under the digital ID <a rel=\"nofollow\" class=\"external text\" href=\"https://hdl.loc.gov/loc.pnp/ggbain.11594\">ggbain.11594</a>.<br><small>This tag does not indicate the copyright status of the attached work. <span style=\"white-space:nowrap\">A normal <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Copyright_tags\" title=\"Special:MyLanguage/Commons:Copyright tags\">copyright tag</a> is still required.</span> <span style=\"white-space:nowrap\">See <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">Commons:Licensing</a>.</span></small>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/tiff"
+            }
+          ]
+        },
+        "40691473": {
+          "pageid": 40691473,
+          "ns": 6,
+          "title": "File:Tupla axi chocolate bar.png",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 440789,
+              "width": 500,
+              "height": 504,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tupla_axi_chocolate_bar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1290,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tupla_axi_chocolate_bar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1290
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Tupla_axi_chocolate_bar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Tupla_axi_chocolate_bar.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=40691473",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-06-03 08:16:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Tupla axi chocolate bar",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Finnish language|Food packaging|Tupla|Self-published work|Chocolate packaging",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Tupla Maxi chocolate countline, chocolate bar",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2015-06-03",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Jjanhone\" title=\"User:Jjanhone\">Jjanhone</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

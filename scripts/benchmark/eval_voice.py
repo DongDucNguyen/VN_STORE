@@ -298,6 +298,7 @@ def main(argv: list[str] | None = None) -> int:
         # ASR-only keeps the historical full-catalog vocabulary. Retrieval visibility is explicit.
         snap = load_snapshot(args.catalog, include_drafts=args.include_drafts if args.queries else True)
         engine = SearchEngine(snap)
+        engine.require_consistent_semantic()  # nhánh ngữ nghĩa chưa hỗ trợ trong evaluator voice
         if args.queries:
             if not snap.products:
                 raise ValueError("Catalog không có sản phẩm hiển thị; kiểm tra --include-drafts")

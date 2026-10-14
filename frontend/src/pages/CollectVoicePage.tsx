@@ -37,8 +37,20 @@ export function CollectVoicePage() {
   const [exported, setExported] = useState<string | null>(null);
   const rec = useRef<Recorder | null>(null);
   const session = useRef(stamp());
+  const alive = useRef(true);
+  const busy = useRef(false);
+  const [working, setWorking] = useState(false);
+  const takeUrls = useRef(new Map<string, string>());
 
-  useEffect(() => () => rec.current?.cancel(), []);
+  useEffect(() => {
+    alive.current = true;
+    return () => {
+      alive.current = false;
+      rec.current?.cancel();
+      for (const url of takeUrls.current.values()) URL.revokeObjectURL(url);
+      takeUrls.current.clear();
+    };
+  }, []);
   // Tự dừng sau thời lượng tối đa, giống nút micro ở trang tìm kiếm.
   useEffect(() => {
     if (!active) return;
@@ -52,15 +64,23 @@ export function CollectVoicePage() {
   const prompts = isSplit(split) ? PROMPT_SETS[split] : [];
 
   async function start(id: string) {
+    if (!ready || busy.current) return;
+    busy.current = true;
+    setWorking(true);
     setError(null);
     const r = new Recorder();
+    rec.current = r;
     try {
       await r.start();
     } catch (e) {
+      if (!alive.current) return;
+      rec.current = null;
+      busy.current = false;
+      setWorking(false);
       setError(e instanceof MicError ? e.message : "Không ghi âm được.");
       return;
     }
-    rec.current = r;
+    if (!alive.current) { r.cancel(); return; }
     setActive(id);
   }
 
@@ -68,16 +88,22 @@ export function CollectVoicePage() {
     const r = rec.current;
     const id = active;
     if (!r || !id) return;
-    rec.current = null;
     setActive(null);
     try {
       const wav = await r.stop();
-      setTakes((t) => {
-        if (t[id]) URL.revokeObjectURL(t[id].url);
-        return { ...t, [id]: { wav, url: URL.createObjectURL(wav), seconds: (wav.size - 44) / (16000 * 2) } };
-      });
+      if (!alive.current) return;
+      const previous = takeUrls.current.get(id);
+      if (previous) URL.revokeObjectURL(previous);
+      const url = URL.createObjectURL(wav);
+      takeUrls.current.set(id, url);
+      setTakes((t) => ({ ...t, [id]: { wav, url, seconds: (wav.size - 44) / (16000 * 2) } }));
     } catch (e) {
+      if (!alive.current) return;
       setError(e instanceof MicError ? e.message : "Không xử lý được đoạn ghi âm.");
+    } finally {
+      rec.current = null;
+      busy.current = false;
+      if (alive.current) setWorking(false);
     }
   }
 
@@ -119,7 +145,7 @@ export function CollectVoicePage() {
         email. Âm thanh chỉ nằm trong trình duyệt này cho đến khi bạn tải file zip.
       </Notice>
 
-      <fieldset className="collect-form" disabled={!!active}>
+      <fieldset className="collect-form" disabled={working}>
         <legend>Thông tin phiên</legend>
         <label>Mã người nói<input value={speaker} onChange={(e) => setSpeaker(e.target.value.trim().toLowerCase())}
                                    placeholder="vd. s012" /></label>
@@ -168,7 +194,7 @@ export function CollectVoicePage() {
                 {live ? (
                   <button className="btn btn-primary" onClick={() => void stop()}>Dừng</button>
                 ) : (
-                  <button className="btn" disabled={!ready || !!active} onClick={() => void start(p.id)}
+                  <button className="btn" disabled={!ready || working} onClick={() => void start(p.id)}
                           aria-label={`${t ? "Ghi lại" : "Ghi"} câu ${p.id}`}>
                     {t ? "Ghi lại" : "🎤 Ghi"}
                   </button>
@@ -187,7 +213,7 @@ export function CollectVoicePage() {
 
       <div className="collect-export">
         <p>Đã ghi {done}/{prompts.length} câu.</p>
-        <button className="btn btn-primary" disabled={!ready || !done || !!active} onClick={() => void exportZip()}>
+        <button className="btn btn-primary" disabled={!ready || !done || working} onClick={() => void exportZip()}>
           Tải file zip của phiên
         </button>
         {exported && (

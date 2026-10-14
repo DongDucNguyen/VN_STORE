@@ -1,4 +1,4 @@
-import { readFileSync, rmSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import path from "node:path";
@@ -54,6 +54,52 @@ test("review: lưu và khôi phục nháp, không trộn catalog", async ({ page
   await page.locator("#restore").setInputFiles({ name: "wrong.json", mimeType: "application/json",
     buffer: Buffer.from(JSON.stringify({ key: "another-catalog", state: {} })) });
   await expect(page.getByRole("status")).toContainText("không khớp catalog");
+});
+
+test("review: bản nháp chuyển catalog giữ cặp không đổi, bắt chấm phần mới và xác nhận lại", async ({ page }) => {
+  const output = path.join(ROOT, "artifacts", `keyword-draft-test-${randomUUID()}`);
+  const python = path.join(ROOT, ".venv", process.platform === "win32" ? "Scripts/python.exe" : "bin/python");
+  const updated = structuredClone(packet);
+  updated.catalog_sha256 = "fixture-migrated";
+  updated.products[1].description = "Nội dung đã sửa";
+  updated.products.push({ ...updated.products[0], id: "c", name: "Sản phẩm c" });
+  updated.candidate_order.q1.push("c");
+  mkdirSync(output);
+  try {
+    writeFileSync(path.join(output, "old.json"), JSON.stringify(packet));
+    writeFileSync(path.join(output, "new.json"), JSON.stringify(updated));
+    writeFileSync(path.join(output, "draft.json"), JSON.stringify({
+      key: "vnstore-review:fixture-review:fixture-queries", state: {
+        reviewer: "synthetic-migration", labels: { q1: { a: 3, b: 0 } }, confirmed: { q1: true }, groups: {},
+      },
+    }));
+    const converted = path.join(output, "converted.json");
+    execFileSync(python, [path.join(ROOT, "scripts/benchmark/migrate_keyword_draft.py"),
+      "--old-packet", path.join(output, "old.json"), "--new-packet", path.join(output, "new.json"),
+      "--draft", path.join(output, "draft.json"), "--out", converted]);
+    await page.goto("/");
+    await page.setContent(template.replace("__PACKET_JSON__", JSON.stringify(updated)));
+    await page.locator("#restore").setInputFiles(converted);
+    await expect(page.getByRole("status")).toContainText("Đã nạp bản nháp");
+    await expect(page.getByLabel("Mức phù hợp: Sản phẩm a", { exact: true })).toHaveValue("3");
+    await expect(page.getByLabel("Mức phù hợp: Sản phẩm b", { exact: true })).toHaveValue("");
+    await expect(page.getByLabel("Mức phù hợp: Sản phẩm c", { exact: true })).toHaveValue("");
+    await expect(page.locator("#confirmed")).not.toBeChecked();
+    await page.locator("#confirmed").click();
+    await expect(page.locator("#confirmed")).not.toBeChecked();
+    await page.getByLabel("Mức phù hợp: Sản phẩm b", { exact: true }).selectOption("0");
+    await page.getByLabel("Mức phù hợp: Sản phẩm c", { exact: true }).selectOption("2");
+    await page.locator("#confirmed").check();
+    const exported = page.waitForEvent("download");
+    await page.getByRole("button", { name: "Xuất nhãn đã duyệt" }).click();
+    const stream = await (await exported).createReadStream();
+    const chunks: Buffer[] = [];
+    for await (const chunk of stream!) chunks.push(Buffer.from(chunk));
+    expect(JSON.parse(Buffer.concat(chunks).toString("utf8"))).toMatchObject({
+      catalog_sha256: updated.catalog_sha256, verified: true, labeled_by: "synthetic-migration",
+      relevance: { a: 3, b: 0, c: 2 },
+    });
+  } finally { rmSync(output, { recursive: true, force: true }); }
 });
 
 test("review: packet thật đủ sản phẩm catalog và ảnh local", async ({ page }) => {

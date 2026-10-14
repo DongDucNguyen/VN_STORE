@@ -1,0 +1,893 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22dinner+plate%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22dinner+plate%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:51:46.022658+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "28077530": {
+          "pageid": 28077530,
+          "ns": 6,
+          "title": "File:13-09-01-kochtreffen-wien-RalfR-02.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 7009885,
+              "width": 3651,
+              "height": 2277,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/13-09-01-kochtreffen-wien-RalfR-02.jpg/1280px-13-09-01-kochtreffen-wien-RalfR-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 798,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/3/36/13-09-01-kochtreffen-wien-RalfR-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/13-09-01-kochtreffen-wien-RalfR-02.jpg/1280px-13-09-01-kochtreffen-wien-RalfR-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 798,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/3/36/13-09-01-kochtreffen-wien-RalfR-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/13-09-01-kochtreffen-wien-RalfR-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:13-09-01-kochtreffen-wien-RalfR-02.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=28077530",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-09-05 15:02:01",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "13-09-01-kochtreffen-wien-RalfR-02",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|Taken with Nikon D300s|License migration redundant|Self-published work|Commons featured widescreen desktop backgrounds|Featured images by Ralf Roletschek|Images by Ralf Roletschek/x|Featured pictures of fruit|Featured pictures on Wikipedia, Vietnamese|Supported by Wikimedia Österreich in 2013|2013 in agriculture|Files with coordinates missing SDC location of creation|Austria photographs taken on 2013-09-01|Plates of fruit|Featured pictures on Wikipedia, Hindi|Green lemon|Organic fruit|Featured images supported by Wikimedia Österreich|Supported by Wikimedia Deutschland 2013|Redaktionstreffen Essen und Trinken Wien 2013|গোলনেমু",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "48.198127",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "16.314120",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Lemons from organic farming",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-09-01 09:31:23",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\">Self-photographed</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q15080600\" class=\"extiw\" title=\"d:Q15080600\"><span title=\"German civil engineer and photographer\">Ralf Roletschek</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "50636740": {
+          "pageid": 50636740,
+          "ns": 6,
+          "title": "File:A Brazilian family in Rio de Janeiro by Jean-Baptiste Debret 1839.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 5353564,
+              "width": 2816,
+              "height": 2028,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg/1280px-A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 922,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/14/A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg/1280px-A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 922,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/14/A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:A_Brazilian_family_in_Rio_de_Janeiro_by_Jean-Baptiste_Debret_1839.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50636740",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-08-12 16:50:18",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i><i>Le dîner</i></i></div></div><div style=\"display: none;\">label QS:Les,\"<i>Le dîner</i>\"</div><div style=\"display: none;\">label QS:Lfr,\"<i>Le dîner</i>\"</div><div style=\"display: none;\">label QS:Lpt,\"<i>Le dîner</i>\"</div><div style=\"display: none;\">label QS:Len,\"<i>Le dîner</i>\"</div><div style=\"display: none;\">label QS:Luk,\"<i>Le dîner</i>\"</div><div style=\"display: none;\">label QS:Lid,\"<i>Le dîner</i>\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "1839 in Brazil|Food sharing|PD-Art (PD-old-100)|Artworks with Wikidata item|1839 lithographs|Eating in art|PD Brazil Media|Dining rooms in art|Featured pictures by User:Wilfredor|Artworks with Wikidata item missing dimensions|Featured pictures on Wikipedia, Persian|Featured pictures of Rio de Janeiro|CC-PD-Mark|Owners of enslaved people|African women in art|Lithographs from France|Dimensions of people|Featured pictures of Brazil by User:Wilfredor|Featured pictures of people of Brazil|Collections of the Itaú Cultural|People eating in Brazil|Slavery in Brazil by Jean-Baptiste Debret|Black slaves in art by Jean-Baptiste Debret|Artworks with Wikidata item missing genre|Featured pictures of paintings by Jean-Baptiste Debret|Slave children in art|Artworks digital representation of 2D work|Artworks with digital representation of different depicts|People sitting at tables in art|Rio de Janeiro by Jean-Baptiste Debret|Photographs of paintings by Wilfredor|Featured pictures of painting by User:Wilfredor|Itaú Cultural by Wilfredor",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Jean-Baptiste_Debret\" class=\"extiw\" title=\"w:en:Jean-Baptiste Debret\"><span title=\"French painter (1768–1848)\">Jean-Baptiste Debret</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "The Dinner, a white couple being served and fanned by black slaves",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "before 1830<div style=\"display: none;\">date QS:P571,+1830-00-00T00:00:00Z/7,P1326,+1830-00-00T00:00:00Z/9</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q115464159\" class=\"extiw\" title=\"d:Q115464159\"><span title=\"developer analyst and photographer from Venezuela\">Wilfredor</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "According to <a href=\"//commons.wikimedia.org/wiki/Brazil\" class=\"mw-redirect\" title=\"Brazil\">Brazilian</a> copyright law (<a rel=\"nofollow\" class=\"external text\" href=\"http://www.planalto.gov.br/ccivil_03/leis/l9610.htm\">Law 9.610</a> of February 19, 1998; see <a rel=\"nofollow\" class=\"external text\" href=\"http://www.wipo.int/wipolex/en/details.jsp?id=514\">translation</a>):\n<ul><li>Article 41: The author’s economic rights shall be protected for a period of 70 years as from the first of January of the year following his death, subject to observance of the order of succession under civil law;</li>\n<li>Article 43: The term of protection of the economic rights in anonymous or pseudonymous works shall be 70 years, counted from the first of January of the year following that of first publication;</li>\n<li>Article 44: The economic rights in <b>audiovisual</b> and <b>photographic works</b> shall be protected for a period of <b>70 years from the first of January of the year following that of their disclosure</b>;</li>\n<li>Article 45: In addition to the works in respect of which the protection of the economic rights has expired, the following shall pass into the public domain:\n<ul><li>I. the works of authors <b>deceased without heir</b>;</li>\n<li>II. the works of <b>unknown authors</b>, subject to the <b>legal protection</b> of <b>ethnic and traditional lore</b>.</li></ul></li>\n<li>Article 96: The term of protection of neighboring rights shall be 70 years from the first of January of the year following fixation for <b>phonograms</b>, transmission for the broadcasts of broadcasting organizations and public performance in other cases.  <i>Hence, this media file is under no copyrights.</i> <i>See <a href=\"https://pt.wikipedia.org/wiki/Wikipedia:Recursos_no_dom%C3%ADnio_p%C3%BAblico\" class=\"extiw\" title=\"pt:Wikipedia:Recursos no domínio público\">Recursos no domínio público</a>.</i></li>\n<li class=\"mw-empty-elt\"></ul>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "65642131": {
+          "pageid": 65642131,
+          "ns": 6,
+          "title": "File:Christmas table (Serbian cuisine).jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3710124,
+              "width": 4592,
+              "height": 3320,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Christmas_table_%28Serbian_cuisine%29.jpg/1280px-Christmas_table_%28Serbian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 925,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Christmas_table_%28Serbian_cuisine%29.jpg/3840px-Christmas_table_%28Serbian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Christmas_table_%28Serbian_cuisine%29.jpg/1280px-Christmas_table_%28Serbian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 925,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Christmas_table_%28Serbian_cuisine%29.jpg/3840px-Christmas_table_%28Serbian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Christmas_table_%28Serbian_cuisine%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Christmas_table_(Serbian_cuisine).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=65642131",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-01-19 11:03:27",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Christmas table (Serbian cuisine)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Olivier salad|Strudel|Tzatziki|Taken with Panasonic Lumix DMC-G85/G80|Cuisine of Serbia|Images with annotations|Self-published work|Featured pictures of objects|Christmas food of Serbia|Featured photos of PetarM|F-number f/4.5|Lens focal length 20 mm|Christmas pork|Table settings with food|Focus stacking images of food|Featured pictures of Christmas food",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Christmas table (<a href=\"https://en.wikipedia.org/wiki/Cuisine_of_Serbia\" class=\"extiw\" title=\"en:Cuisine of Serbia\">Cuisine of Serbia</a>); grilled pork, <a href=\"//commons.wikimedia.org/wiki/Category:Russian_salad\" title=\"Category:Russian salad\">Olivier salad</a> (also called Russian salad), <a href=\"https://en.wikipedia.org/wiki/tzatziki\" class=\"extiw\" title=\"en:tzatziki\">tzatziki salad</a>, red wine <a href=\"https://en.wikipedia.org/wiki/Vranac\" class=\"extiw\" title=\"en:Vranac\">Vranac</a>, <a href=\"https://en.wikipedia.org/wiki/kifli\" class=\"extiw\" title=\"en:kifli\">kifli</a> and <a href=\"https://en.wikipedia.org/wiki/strudel\" class=\"extiw\" title=\"en:strudel\">strudel</a> sweets.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2018-01-07 16:04:25",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:PetarM\" title=\"User:PetarM\">Petar Milošević</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div style=\"clear:both; border: var(--border-style-base, 1px solid #999); margin: 1em; padding: 1em; background-color: var(--background-color-progressive-subtle, #F0F8FF); color: inherit;\">\n<p><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Right-pointing_hand_in_green_octagon.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Right-pointing_hand_in_green_octagon.svg/40px-Right-pointing_hand_in_green_octagon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"38\" height=\"38\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Right-pointing_hand_in_green_octagon.svg/120px-Right-pointing_hand_in_green_octagon.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></a></span> You can use this picture according to license. For use outside of Wikipedia I would appreciate it if you let me know by sending e-mail to <b><a rel=\"nofollow\" class=\"external text\" href=\"mailto:petarmslo@gmail.com\">petarmslo@gmail.com</a></b> <span typeof=\"mw:File\"><a href=\"mailto:petarmslo@gmail.com\" rel=\"nofollow\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Nuvola_apps_email.png/40px-Nuvola_apps_email.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Nuvola_apps_email.png/60px-Nuvola_apps_email.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"128\" data-file-height=\"128\"></a></span>.  Thank you in advance.\n</p>\n<div align=\"right\"><i><a href=\"//commons.wikimedia.org/wiki/User:PetarM\" title=\"User:PetarM\">Petar Milošević</a> <small> (author)</small></i></div></div>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "20034536": {
+          "pageid": 20034536,
+          "ns": 6,
+          "title": "File:Clara Peeters - Still Life with Cheeses, Almonds and Pretzels.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3857207,
+              "width": 2500,
+              "height": 1757,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg/1280px-Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 900,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg/1280px-Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 900,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Clara_Peeters_-_Still_Life_with_Cheeses%2C_Almonds_and_Pretzels.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Clara_Peeters_-_Still_Life_with_Cheeses,_Almonds_and_Pretzels.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=20034536",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2014-12-10 09:18:49",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\n<div style=\"font-size:0.9em;display:inline-block;\">Dutch:  <div style=\"display:inline-block\" dir=\"ltr\" lang=\"nl\"><i>Stilleven met kazen, amandelen en krakelingen <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q19318363#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span></i></div></div><br><div style=\"font-weight:bold;display:inline-block;\"><div style=\"display:inline-block\" dir=\"ltr\" lang=\"en\"><i>Still Life with Cheeses, Almonds and Pretzels</i></div></div><div style=\"display: none;\">title QS:P1476,nl:\"Stilleven met kazen, amandelen en krakelingen <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q19318363#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Lnl,\"Stilleven met kazen, amandelen en krakelingen <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q19318363#P1476\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>\"</div><div style=\"display: none;\">label QS:Les,\"Bodegón con queso, pan y utensilios para beber\"</div><div style=\"display: none;\">label QS:Lfr,\"Nature morte aux fromages, amandes et bretzels\"</div><div style=\"display: none;\">label QS:Lpl,\"Martwa natura z serem, migdałami i preclami\"</div><div style=\"display: none;\">label QS:Luk,\"Натюрморт з сирами, мигдалем і кренделями\"</div><div style=\"display: none;\">label QS:Lhe,\"טבע דומם עם גבינות, שקדים ובייגלה\"</div><div style=\"display: none;\">label QS:Lel,\"Νεκρή φύση με Τυριά, Αμύγδαλα και Πρέτζελς\"</div><div style=\"display: none;\">label QS:Lit,\"Natura morta con formaggi, mandorle e salatini\"</div><div style=\"display: none;\">label QS:Len,\"Still Life with Cheeses, Almonds and Pretzels\"</div><div style=\"display: none;\">label QS:Lde,\"Stilleben mit Käse, Mandeln und Bretzeln\"</div><div style=\"display: none;\">label QS:Lca,\"Natura morta amb formatge, pa i recipients per beure\"</div></div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Still Life with Cheeses, Almonds and Pretzels by Clara Peeters|PD-old-100-expired|Featured pictures on Wikipedia, English|PD-Art (PD-old-100-expired)|Artworks with Wikidata item|Artworks with known accession number|Images with extracted images|CC-PD-Mark|Artworks digital representation of 2D work|Files with Assessments template missing SDC Commons no value quality assessment|Artworks with digital representation of different depicts|Paintings purchased with support from Vereniging Rembrandt",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Clara_Peeters\" class=\"extiw\" title=\"w:en:Clara Peeters\"><span title=\"Flemish painter (1594-1657)\">Clara Peeters</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1615",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "www.mauritshuis.nl : <a rel=\"nofollow\" class=\"external text\" href=\"http://www.mauritshuis.nl\">Home</a> : <a rel=\"nofollow\" class=\"external text\" href=\"http://www.mauritshuis.nl/en/explore/the-collection/artworks/still-life-with-cheeses-almonds-and-pretzels-1203/detailgegevens/\">Info</a> : <a rel=\"nofollow\" class=\"external text\" href=\"http://www.mauritshuis.nl/-/media/8c21c4ba692049a0a20115a973550f0f.ashx\">Pic</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "91770503": {
+          "pageid": 91770503,
+          "ns": 6,
+          "title": "File:Kehtna Kutsehariduskeskus 005-kokad pano.jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 46793749,
+              "width": 18384,
+              "height": 9192,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg/1280px-Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 640,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg/3840px-Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg/1280px-Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 640,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg/3840px-Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Kehtna_Kutsehariduskeskus_005-kokad_pano.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=91770503",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-07-01 05:17:26",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Kehtna Kutsehariduskeskus 005-kokad pano",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "360° panoramas|Items with VRTS permission confirmed|Large images|Photographs by Lauri Veerde|Featured pictures of building interiors in Estonia|Featured pictures of Rapla County|360 panoramics of Kehtna Vocational Education Centre",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "featured",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "360° view on the kitchen of the training restaurant of the Kehtna Vocational Education Centre, <a href=\"https://en.wikipedia.org/wiki/Estonia\" class=\"extiw\" title=\"en:Estonia\">Estonia</a>.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2016-10-05 11:30:53",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "SA Innove",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Lauri Veerde",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<p><span class=\"layouttemplateargs\" style=\"display:none;speak:none;\" title=\"template=PermissionTicket 1%3Dhttps%3A%2F%2Fticket.wikimedia.org%2Fotrs%2Findex.pl%3FAction%3DAgentTicketZoom%26TicketNumber%3D2020102510006793 2%3D2020102510006793\"> </span>\n</p>\n<style data-mw-deduplicate=\"TemplateStyles:r1254222110\">.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}</style><table class=\"plainlinks messagebox mbox-notice layouttemplate\" role=\"presentation\" style=\"margin:0.3em 0;width:100%;\"><tbody><tr><td class=\"mbox-image\"><span typeof=\"mw:File\"><span title=\"VRT Wikimedia\"><img alt=\"VRT Wikimedia\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/120px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"75\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Permission_logo_2021.svg/250px-Permission_logo_2021.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"935\" data-file-height=\"600\"></span></span></td><td class=\"mbox-text\">This work is <a href=\"https://freedomdefined.org/Definition\" class=\"extiw\" title=\"freedomdefined:Definition\">free</a> and may be used by anyone for any purpose. If you wish to <b><a href=\"//commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia\" title=\"Commons:Reusing content outside Wikimedia\">use this content</a></b>, you do not need to request permission as long as you follow any licensing requirements mentioned on this page.\n<p>The Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been <b><span style=\"background:transparent;color:#0f7f1f;font-weight:400;\" title=\"transparent\">reviewed</span></b> by a <a href=\"//commons.wikimedia.org/wiki/Template:PermissionTicket/Users\" title=\"Template:PermissionTicket/Users\">Volunteer Response Team (VRT) member</a> and stored in our <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team\" title=\"Commons:Volunteer Response Team\">permission archive</a>. The correspondence is available to trusted volunteers as <b><a href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2020102510006793\" class=\"extiw\" title=\"ticket:2020102510006793\">ticket #2020102510006793</a></b>.\n</p><p><small>If you have questions about the archived correspondence, please use the <a href=\"//commons.wikimedia.org/wiki/Commons:Volunteer_Response_Team/Noticeboard\" title=\"Commons:Volunteer Response Team/Noticeboard\">VRT noticeboard</a>.</small>\n<small>Ticket link: <a class=\"external free\" href=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2020102510006793\">https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2020102510006793</a></small>\n<br><small>Find other files from the same ticket:</small> <span typeof=\"mw:File\"><a href=\"https://wcqs-beta.wmflabs.org/#%23defaultView%3AImageGrid%09%0ASELECT%20%3Fimage%20%20%20%7B%0A%20%20%3Ffile%20wdt%3AP6305%20%222020102510006793%22%20.%0A%20%20%3Ffile%20schema%3Aurl%20%3Fimage.%0A%7D%20%0A\" title=\"SDC query (SPARQL)\" rel=\"nofollow\"><img alt=\"SDC query (SPARQL)\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/20px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"15\" height=\"20\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Wikimedia_Commons_Query_Service_Logo.svg/40px-Wikimedia_Commons_Query_Service_Logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"688\"></a></span>\n</p>\n<span id=\"field-otrs\" title=\"https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2020102510006793\"></span></td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "104101424": {
+          "pageid": 104101424,
+          "ns": 6,
+          "title": "File:Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 10191483,
+              "width": 5536,
+              "height": 3766,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg/1280px-Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 871,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg/3840px-Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg/1280px-Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 871,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg/3840px-Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=104101424",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-04-29 18:59:13",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Piece of chocolate cake on a white plate decorated with chocolate sauce",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Chocolate sauce|Featured pictures on Wikipedia, Persian|Chocolate shavings|Featured pictures of food|Featured pictures on Wikipedia, Bengali|Images from Pixabay|Photographs taken on 2017-01-11|1 sliced cake on plates|Featured photographs in the public domain|Food on white plates|Cocoa powder as garnish|Chocolate-based pastries|Black, brown, cream, white",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Piece of chocolate cake, sprinkled with <a href=\"https://en.wikipedia.org/wiki/Cocoa_solids\" class=\"extiw\" title=\"en:Cocoa solids\">cocoa powder</a>, on a white plate decorated with chocolate sauce.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017-01-11",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<ol><li><a rel=\"nofollow\" class=\"external text\" href=\"https://pixabay.com/photos/cake-piece-plate-dessert-pastry-1971552/\">https://pixabay.com/photos/cake-piece-plate-dessert-pastry-1971552/</a></li>\n<li><a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20170308034704if_/https://pixabay.com/en/photos/cake/\">https://web.archive.org/web/20170308034704if_/https://pixabay.com/en/photos/cake/</a></li>\n<li><a rel=\"nofollow\" class=\"external text\" href=\"https://medicalxpress.com/news/2018-11-obesity-food-restrictions-proven-enjoyment.html\">https://medicalxpress.com/news/2018-11-obesity-food-restrictions-proven-enjoyment.html</a> (<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20190704125000/https://medicalxpress.com/news/2018-11-obesity-food-restrictions-proven-enjoyment.html\">archived version</a>)</li></ol>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://pixabay.com/fr/users/daria-yakovleva-3938704/\">Daria Yakovleva</a><br><small>Minor edits made by <a href=\"//commons.wikimedia.org/wiki/User:Subsidiary_account\" title=\"User:Subsidiary account\">Subsidiary account</a></small>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "1103201": {
+          "pageid": 1103201,
+          "ns": 6,
+          "title": "File:Unglazed plates.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 446520,
+              "width": 1365,
+              "height": 2048,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Unglazed_plates.jpg/1280px-Unglazed_plates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1920,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Unglazed_plates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Unglazed_plates.jpg/1280px-Unglazed_plates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1920,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Unglazed_plates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Unglazed_plates.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Unglazed_plates.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1103201",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2006-08-28 05:23:50",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Unglazed plates",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Kodak EasyShare C300|Ceramic tableware|Ceramic plates|Flickr images reviewed by FlickreviewR",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A set of plates ready to be glazed at a ceramics shop.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2006-07-16",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.flickr.com/photos/egansnow/191426414/\">https://www.flickr.com/photos/egansnow/191426414/</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/egansnow/\">Egan Snow</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Free content licence.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "106092414": {
+          "pageid": 106092414,
+          "ns": 6,
+          "title": "File:Vegetarian Pizza.jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3739169,
+              "width": 4216,
+              "height": 3344,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Vegetarian_Pizza.jpg/1280px-Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1015,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Vegetarian_Pizza.jpg/3840px-Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Vegetarian_Pizza.jpg/1280px-Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1015,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Vegetarian_Pizza.jpg/3840px-Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Vegetarian_Pizza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Vegetarian_Pizza.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=106092414",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-05-29 18:49:40",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Vegetarian Pizza",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Panasonic Lumix DMC-G85/G80|Self-published work|F-number f/4|Featured photos of PetarM|Featured pictures on Wikipedia, Vietnamese|Lens focal length 20 mm|Featured pictures of food|Plan views of food|Vegetarian pizzas",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Vegetarian Pizza",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2021-05-28 15:27:37",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:PetarM\" title=\"User:PetarM\">Petar Milošević</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

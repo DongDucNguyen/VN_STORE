@@ -1,0 +1,684 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=football+ball+filetype%3Abitmap&gsrnamespace=6&gsrlimit=6&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:31:33.307055+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 6,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "36044207": {
+          "pageid": 36044207,
+          "ns": 6,
+          "title": "File:Algérie - Arménie - 20140531 - Yacine Brahimi (Alg) face à Taron Voskanyan (Arm).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 6434409,
+              "width": 2898,
+              "height": 1795,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg/1280px-Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 793,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg/1280px-Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 793,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_%28Alg%29_face_%C3%A0_Taron_Voskanyan_%28Arm%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Alg%C3%A9rie_-_Arm%C3%A9nie_-_20140531_-_Yacine_Brahimi_(Alg)_face_%C3%A0_Taron_Voskanyan_(Arm).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=36044207",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2014-10-11 08:36:02",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Algérie - Arménie - 20140531 - Yacine Brahimi (Alg) face à Taron Voskanyan (Arm)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Taken with Pentax K-5 II|Featured pictures of Armenia|Yacine Brahimi|Featured pictures of Switzerland|Taron Voskanyan|Edgar Manucharyan|Self-published work|Featured pictures on Wikipedia, English|Featured pictures of Algeria|Images with extracted images|All media supported by Wikimedia CH|Featured pictures supported by Wikimedia CH|Featured pictures by Pleclown|Files by Pleclown|Featured pictures of association football|Files with coordinates missing SDC location of creation|Algeria - Armenia, 31 May 2014|Number 4 on association football kits|Number 11 on association football kits|Sport files by Pleclown|Algeria - Armenia, 31 May 2014 - Supported by Wikimedia CH",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "featured",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "46.233372",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "7.375174",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Algérie - Arménie - 20140531 - Yacine Brahimi (Alg) face à Taron Voskanyan (Arm).",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2014-05-31 17:21:47",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Pleclown\" title=\"User:Pleclown\">Clément Bucco-Lechat</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "83490009": {
+          "pageid": 83490009,
+          "ns": 6,
+          "title": "File:Daniel Souček U21 Czech Republic vs Greece 10-10-2019.jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 11156045,
+              "width": 4927,
+              "height": 3285,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg/1280px-Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg/3840px-Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg/1280px-Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg/3840px-Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Daniel_Sou%C4%8Dek_U21_Czech_Republic_vs_Greece_10-10-2019.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=83490009",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-03-16 10:53:21",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Daniel Souček U21 Czech Republic vs Greece 10-10-2019",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Rain in the Czech Republic|Featured pictures of the Czech Republic|Czech Republic photographs taken on 2019-10-10|Association football players from the Czech Republic in 2019|Throw-in|Personality rights warning|Daniel Souček|Self-published work|Images with extracted images|Supported by Wikimedia Österreich in 2019|Featured pictures of association football|Czech Republic vs Greece (U21, 10 October 2019)|People with association football balls of Puma|Number 15 on association football kits|Rain in October 2019|Files by Plánovací kalendář|Association football players in the rain|Sport images supported by Wikimedia Österreich|Images used in WM CZ - Annual Report 2019|WMCZ Photocontest 2019:Člověk|Featured pictures by Plánovací kalendář|Uploaded via Campaign:wmcz-photocontest19",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "49.844931",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "18.560660",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Daniel Souček playing for Czechia in European Under-21 Championship 2021 Qualifying Round between Czechia and Greece [1:1] (10 October 2019, City stadium Karviná, Karviná District, Moravian-Silesian Region, Czechia)",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Taken on 10 October 2019, 17:06:12",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q99692082\" class=\"extiw\" title=\"d:Q99692082\"><span title=\"Czech photographer and chronicler\">Tadeáš Bednarz</span></a></bdi>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "personality",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "8481748": {
+          "pageid": 8481748,
+          "ns": 6,
+          "title": "File:Football Pallo valmiina-cropped.jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 166898,
+              "width": 296,
+              "height": 285,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1232,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1232
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Football_Pallo_valmiina-cropped.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=8481748",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2016-04-14 20:28:12",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Football Pallo valmiina-cropped",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Extracted images|Uploaded with derivativeFX|Telstar like footballs",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A soccer/football ball.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2003-10-29 11:22",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"http://www.sxc.hu/photo/66561\">sxc.hu</a>\n</p>\n<ul><li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Sir_James\" title=\"User:Sir James\">Sir James</a> (<a href=\"//commons.wikimedia.org/wiki/User_talk:Sir_James\" title=\"User talk:Sir James\"><span class=\"signature-talk\">talk</span></a>)</li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Pallo_valmiina.jpg\" title=\"File:Pallo valmiina.jpg\">Pallo_valmiina.jpg</a>: <a rel=\"nofollow\" class=\"external text\" href=\"http://www.sxc.hu/browse.phtml?f=profile&amp;l=vxdigital\">Christopher Bruno</a></li></ul>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "53837": {
+          "pageid": 53837,
+          "ns": 6,
+          "title": "File:Jakarta old football.jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 3024420,
+              "width": 2560,
+              "height": 1920,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Jakarta_old_football.jpg/1280px-Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 960,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Jakarta_old_football.jpg/1280px-Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 960,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Jakarta_old_football.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Jakarta_old_football.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=53837",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2005-02-05 13:21:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Jakarta old football",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Personality rights warning|Commons featured desktop backgrounds|Picture of week on the Czech Wikipedia|Featured pictures on Wikipedia, German|Featured pictures on Wikipedia, Turkish|Featured pictures on Wikipedia, Vietnamese|2004 in Jakarta|Boys of Indonesia in 2004|Slums in Jakarta|Boys with association football balls",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A young boy, in Jakarta <a href=\"//commons.wikimedia.org/wiki/Indonesia\" title=\"Indonesia\">Indonesia</a>, holds a tattered football (soccer ball).",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2004-05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "Picture taken by <a href=\"//commons.wikimedia.org/wiki/User:Thehero\" title=\"User:Thehero\">Jonathan McIntosh</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Thehero\" title=\"User:Thehero\">Jonathan McIntosh</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<div class=\"responsive-license-cc layouttemplate licensetpl\" dir=\"ltr\" lang=\"en\"><div class=\"rlicense-icons\"><span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"w:en:Creative Commons\"><img alt=\"w:en:Creative Commons\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/120px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"90\" height=\"36\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/CC_some_rights_reserved.svg/250px-CC_some_rights_reserved.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"744\" data-file-height=\"300\"></span></span><br>\n<span class=\"skin-invert\" typeof=\"mw:File\"><span title=\"attribution\"><img alt=\"attribution\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/40px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Cc-by_new_white.svg/60px-Cc-by_new_white.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"64\" data-file-height=\"64\"></span></span></div><div class=\"rlicense-text\"><div class=\"rlicense-declaration\">This file is licensed under the <a href=\"https://en.wikipedia.org/wiki/en:Creative_Commons\" class=\"extiw\" title=\"w:en:Creative Commons\">Creative Commons</a> <a href=\"//creativecommons.org/licenses/by/2.0/deed.en\" class=\"extiw\" title=\"creativecommons:by/2.0/deed.en\">Attribution 2.0 Generic</a> license.</div><div class=\"rlicense-desc\" style=\"text-align:start;\" dir=\"ltr\" lang=\"en\">\n<dl><dd>You are free:\n<ul><li><b>to share</b> – to copy, distribute and transmit the work</li>\n<li><b>to remix</b> – to adapt the work</li></ul></dd>\n<dd>Under the following conditions:\n<ul><li><b>attribution</b> – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</li></ul></dd></dl>\n</div><span class=\"licensetpl_link\" style=\"display:none;\">https://creativecommons.org/licenses/by/2.0</span><span class=\"licensetpl_short\" style=\"display:none;\">CC BY 2.0 </span><span class=\"licensetpl_long\" style=\"display:none;\">Creative Commons Attribution 2.0 </span><span class=\"licensetpl_link_req\" style=\"display:none;\">true</span><span class=\"licensetpl_attr_req\" style=\"display:none;\">true</span></div></div>\n<table style=\"width:100%; clear:both; margin:0.5em auto; border-spacing:8px; background-color:var(--background-color-neutral-subtle,#f7f8ff); border:2px solid #8888aa;color: inherit;\" lang=\"en\" dir=\"ltr\" class=\"layouttemplate restrictiontemplate restriction-personality\">\n<tbody><tr>\n<td style=\"border:none; width:64px;\"><figure class=\"mw-halign-center\" typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/Commons:Non-copyright_restrictions\" title=\"Personality rights\"><img alt=\"Personality rights\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Dialog-warning-yellow.svg/120px-Dialog-warning-yellow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Dialog-warning-yellow.svg/250px-Dialog-warning-yellow.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"48\" data-file-height=\"48\"></a><figcaption>Personality rights</figcaption></figure>\n</td>\n<td style=\"border:none;\"><span class=\"commons-template-name\" style=\"display:none\" id=\"commons-template-personality-rights\">Personality rights</span><div style=\"font-size:120%;font-weight:bold;\"><a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Photographs_of_identifiable_people\" title=\"Special:MyLanguage/Commons:Photographs of identifiable people\">Personality rights warning</a></div>Although this work is <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Licensing\" title=\"Special:MyLanguage/Commons:Licensing\">freely licensed</a> or in the <a href=\"https://en.wikipedia.org/wiki/Public_domain\" class=\"extiw\" title=\"en:Public domain\">public domain</a>, the <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Photographs_of_identifiable_persons\" title=\"Special:MyLanguage/Commons:Photographs of identifiable persons\">person(s) shown</a> may have <a href=\"https://en.wikipedia.org/wiki/personality_rights\" class=\"extiw\" title=\"en:personality rights\">rights</a> that <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:Country_specific_consent_requirements\" title=\"Special:MyLanguage/Commons:Country specific consent requirements\">legally restrict certain re-uses</a> unless those depicted consent to such uses. In these cases, a <a href=\"https://en.wikipedia.org/wiki/model_release\" class=\"extiw\" title=\"en:model release\">model release</a> or other evidence of consent could protect you from infringement claims. Though not obliged to do so, the uploader may be able to help you to obtain such evidence. See our <a href=\"//commons.wikimedia.org/wiki/Special:MyLanguage/Commons:General_disclaimer\" title=\"Special:MyLanguage/Commons:General disclaimer\">general disclaimer</a> for more information.\n</td></tr></tbody></table>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "personality",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "113450405": {
+          "pageid": 113450405,
+          "ns": 6,
+          "title": "File:Just a soccer ball (34782492153).jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 958464,
+              "width": 5184,
+              "height": 3456,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Just_a_soccer_ball_%2834782492153%29.jpg/1280px-Just_a_soccer_ball_%2834782492153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Just_a_soccer_ball_%2834782492153%29.jpg/3840px-Just_a_soccer_ball_%2834782492153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Just_a_soccer_ball_%2834782492153%29.jpg/1280px-Just_a_soccer_ball_%2834782492153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Just_a_soccer_ball_%2834782492153%29.jpg/3840px-Just_a_soccer_ball_%2834782492153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Just_a_soccer_ball_%2834782492153%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Just_a_soccer_ball_(34782492153).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=113450405",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2021-12-18 05:40:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Just a soccer ball (34782492153)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Association football balls|Flickr images reviewed by FlickreviewR 2|Flickr files uploaded by Nguyenhai314",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<p>This is pretty much a fun picture.  I saw this soccer ball in the parking lot where some kids had been playing.  I shot the picture to see what I could do with it.\n</p>\n It is just \"sitting\" there, waiting for someone to come along and kick the crap out of it.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017-06-10 13:27",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/17367470@N05/34782492153/\">Just a soccer ball</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/17367470@N05\">bluesbby</a> from Mountain View, USA",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "27321595": {
+          "pageid": 27321595,
+          "ns": 6,
+          "title": "File:Valais Cup 2013 - OM-FC Porto 13-07-2013 - Brice Samba en extension.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 9334200,
+              "width": 3197,
+              "height": 2118,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg/1280px-Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 848,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg/1280px-Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 848,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Valais_Cup_2013_-_OM-FC_Porto_13-07-2013_-_Brice_Samba_en_extension.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=27321595",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2013-08-13 16:41:16",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Valais Cup 2013 - OM-FC Porto 13-07-2013 - Brice Samba en extension",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "GFDL|Taken with Pentax K-5 II|Association football goals|Brice Samba|License migration redundant|Uploaded with KIPI uploader|Self-published work|Images with extracted images|Featured pictures of the canton of Valais|Featured pictures supported by Wikimedia CH|Featured pictures by Pleclown|Files by Pleclown|OM vs FC Porto 13 july 2013|Featured pictures of association football|Featured pictures on Wikipedia, Bengali|Sport files by Pleclown",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "quality|featured|potd",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Goalie Brice Samba and an incoming ball at the 2013 Valais Cup",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2013-07-13 19:59:26",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:Pleclown\" title=\"User:Pleclown\">Clément Bucco-Lechat</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 3.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 3.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/3.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-3.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

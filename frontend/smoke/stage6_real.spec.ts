@@ -49,12 +49,15 @@ test("local models: browser → WAV/image → inference → editable results and
     await page.getByRole("button", { name: "Tìm bằng giọng nói" }).click();
     await expect(page.getByText("Đang nghe…")).toBeVisible();
     await page.waitForTimeout(4000); // FLEURS replay, not a VNStore query or a live participant
-    const response = page.waitForResponse("**/api/search/voice");
-    await page.getByRole("button", { name: "Dừng và tìm" }).click();
+    const response = page.waitForResponse("**/api/search/voice?*");
+    await page.getByRole("button", { name: "Dừng và xem lời" }).click();
     const res = await response;
     expect(res.status()).toBe(200);
     const body = await res.json();
     expect(body.transcript.model_id).toContain("PhoWhisper-small");
+    await expect(page.getByLabel("Cụm từ dùng để tìm kiếm")).toHaveValue(body.transcript.text);
+    await expect(page.getByLabel("Nghe lại bản ghi")).toBeVisible();
+    await page.getByRole("button", { name: "Tìm theo câu này" }).click();
     await expect(page.getByRole("searchbox")).toHaveValue(body.transcript.text);
     await expect(page.getByText(/Đã chép lời từ giọng nói/)).toBeVisible();
     await page.waitForTimeout(150);

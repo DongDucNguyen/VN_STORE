@@ -23,7 +23,7 @@ import eval_keyword as ek
 import screen_models as sm
 import latency_protocol as lp
 from app.catalog.store import load_snapshot
-from app.search.config import SearchConfig
+from app.search.config import TEXT_SETTINGS, SearchConfig
 from app.search.engine import SearchEngine
 
 DEFAULTS = {"VNSTORE_SEARCH_CONFIG": "{}", "VNSTORE_ASR_VAD": "1", "VNSTORE_VAD_THRESHOLD": "0.5",
@@ -38,7 +38,7 @@ ENV_BY_MODALITY = {
               "VNSTORE_ASR_LANGUAGE", "VNSTORE_VOICE_MAX_GAIN_DB", "VNSTORE_VOICE_HIGHPASS"},
     "image": {"VNSTORE_OCR", "VNSTORE_IMAGE_MULTI_VIEW", "VNSTORE_ML_TRT", "VNSTORE_ML_DEVICE"},
 }
-LANGUAGE_SETTINGS = {"accent_weight", "min_token_coverage", "strict_accents"}
+LANGUAGE_SETTINGS = set(TEXT_SETTINGS)
 
 
 def load_matrix(path: Path, modality: str) -> tuple[dict, list[dict]]:
@@ -130,6 +130,7 @@ def keyword_runs(configs, args, out):
     results = []
     for cfg in configs:
         engine = SearchEngine(snap, SearchConfig.from_dict(json.loads(cfg["env"]["VNSTORE_SEARCH_CONFIG"])))
+        engine.require_consistent_semantic()
         rows, metrics = ek.evaluate(queries, engine, args.warmup)
         timing = [[r["latency_ms"] for r in rows]]
         for _ in range(args.latency_rounds - 1):

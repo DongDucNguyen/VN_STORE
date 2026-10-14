@@ -1,0 +1,1000 @@
+{
+  "checked_at": "2026-10-12T19:42:30.471083+00:00",
+  "all_image_files": 44,
+  "inventory_groups": {
+    "excluded": 2,
+    "images": 40,
+    "preview": 2
+  },
+  "active_images": 40,
+  "active_bytes": 13414892,
+  "active_formats": {
+    "JPEG": 34,
+    "PNG": 4,
+    "WEBP": 2
+  },
+  "roles": {
+    "similar_candidate": 25,
+    "negative_candidate": 5,
+    "gallery_control": 10
+  },
+  "all_image_bytes": 14645918,
+  "missing_or_unlisted_active_images": [],
+  "byte_duplicate_groups": [],
+  "normalized_pixel_duplicate_groups": [],
+  "gallery_match_count": 10,
+  "gallery_reference_count": 814,
+  "current_catalog_version": "seed-006-enriched",
+  "catalog_sha256": "b98b859afa91577469b02476f2a3fe3747ccd8df8612790c07fc22d63ef2a993",
+  "manifest_catalog_matches": true,
+  "published_products": 328,
+  "published_category_counts": {
+    "gom-su-bat-dia": 17,
+    "gom-su-binh-lo": 38,
+    "gom-su-am-chen": 9,
+    "gom-su-coc-ly": 1,
+    "may-tre-coi-gio": 42,
+    "may-tre-coi-noi-that": 14,
+    "may-tre-coi-tui": 1,
+    "go-son-mai": 48,
+    "thuc-pham-banh-keo": 66,
+    "go-son-mai-binh-lo": 17,
+    "may-tre-coi": 9,
+    "det-may-thoi-trang": 24,
+    "det-may-vai-lua": 5,
+    "det-may-khan": 37
+  },
+  "official_image_queries": 0,
+  "cases": 50,
+  "image_text_cases": 10,
+  "image_text_cases_using_gallery": 10,
+  "relevance_judgments_recorded": 0,
+  "independent_true_recorded": 0,
+  "split_assignments": 0,
+  "rights_status": {
+    "source_declared": 30,
+    "unknown": 10
+  },
+  "licenses_declared": {
+    "CC BY-SA 4.0": 11,
+    "CC0": 11,
+    "Public domain": 2,
+    "CC BY-SA 2.0": 1,
+    "CC BY 2.0": 3,
+    "CC BY-SA 3.0": 2,
+    "unknown": 10
+  },
+  "source_declared_empty_author": [
+    "web-000",
+    "web-001",
+    "web-005"
+  ],
+  "model_inference_performed": false,
+  "benchmark_approved": false,
+  "records": [
+    {
+      "id": "web-000",
+      "path": "raw/images/similar_candidate/gom-su/web-000.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "98dd81131db3d712f288e5593005183e1f9aede698d448d2b67563c9efd5cff6",
+      "normalized_pixel_sha256": "f1c383a0501b05c184dc86a739e18015e7fa296a08fd28f188c7e51cdbbd250d",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1065,
+      "bytes": 285990
+    },
+    {
+      "id": "web-001",
+      "path": "raw/images/similar_candidate/gom-su/web-001.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "534e755474c19115c0fa2e2af134068376afd5a9aec2fbc6a54e0ae13c552b1c",
+      "normalized_pixel_sha256": "3262f18ac9bef0d8d884a83eca45ecce09e4150b3dad6ff730f091d6c6381947",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1028,
+      "bytes": 127193
+    },
+    {
+      "id": "web-005",
+      "path": "raw/images/similar_candidate/gom-su/web-005.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "10ac8e256b019ab116c2df507c67e14a845fc56652c2e42c533b4742684b8dc3",
+      "normalized_pixel_sha256": "c434dd70690e0b4e8808fe43e8405216457ddbf84c574065eda15e560d728e43",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 893,
+      "bytes": 135340
+    },
+    {
+      "id": "web-006",
+      "path": "raw/images/similar_candidate/gom-su/web-006.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "5bfd29e66f82494ca1d74abd9d7e59bce971a5258075df885c14b2d69690bb18",
+      "normalized_pixel_sha256": "003f73aa63dd9561bb0aa472ef17a8afb9ed8f0512bb43f7d214b79d98bd0d1a",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1920,
+      "bytes": 306178
+    },
+    {
+      "id": "web-008",
+      "path": "raw/images/similar_candidate/gom-su/web-008.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "8b64c75b974e93bea0a07b55adcc8e8e2175736f1d0e94810b2bb29f1e33deff",
+      "normalized_pixel_sha256": "9d0b98beb623150b41febe33dcdabed5e6c8ba43caa200aec9e34f89db975d9f",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1920,
+      "bytes": 325586
+    },
+    {
+      "id": "web-010",
+      "path": "raw/images/similar_candidate/may-tre-coi/web-010.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "c2fc36baacd7d4945bbab0133340683b90e4e7b140010ab8b937d3f673d37d62",
+      "normalized_pixel_sha256": "cb7f94e4cc72317ce9d49f60cb6989a2a360ec376f17cb3ff752261f5ece0ebc",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1280,
+      "bytes": 540057
+    },
+    {
+      "id": "web-011",
+      "path": "raw/images/similar_candidate/may-tre-coi/web-011.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "e5e5d0d74b9b925c3b4dde87151f483ef0bc261c3b075012a978b6740b6eff31",
+      "normalized_pixel_sha256": "f4af5602cbcce630fe766220c21cf6088514b160df331e39930d970a58afe513",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 959,
+      "bytes": 495421
+    },
+    {
+      "id": "web-017",
+      "path": "raw/images/similar_candidate/may-tre-coi/web-017.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "1f08de1cab0ca5a6417560e49d532b0c25025a2283a7a0664a2528414983c79f",
+      "normalized_pixel_sha256": "0c06778e61fb56719b0ec436b8bb0befd07a891ddf3e4448cc56377f1931783b",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 2275,
+      "bytes": 705474
+    },
+    {
+      "id": "web-019",
+      "path": "raw/images/similar_candidate/may-tre-coi/web-019.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "0b96de3d61b25c3590eba9c374732037676215461f67d41be5e9e67b42a11821",
+      "normalized_pixel_sha256": "f0d63a377c57e12f4d35c243c76820103401c49649ad2caf196d1b6367e84ff6",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1200,
+      "height": 1600,
+      "bytes": 248275
+    },
+    {
+      "id": "web-021",
+      "path": "raw/images/similar_candidate/may-tre-coi/web-021.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "6e1a88519e9a840c95002daca7cc24e18cb482fe1efb037d12839c6399053a3f",
+      "normalized_pixel_sha256": "af3bbf9f57c3f883bf865d5dd7097eab1d608114a12c5fdeca28757bbb8c5509",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 853,
+      "bytes": 324161
+    },
+    {
+      "id": "web-022",
+      "path": "raw/images/similar_candidate/det-may/web-022.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "db97517e548d84dcc7963b6b95e62ae3bf5d53d9b2c86c877b740ab1e5cb05d4",
+      "normalized_pixel_sha256": "b881fee020feedb099d5dcd3a831810d2ca9a36b1a44a7c7718259c8bc030eaa",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 853,
+      "bytes": 644630
+    },
+    {
+      "id": "web-023",
+      "path": "raw/images/similar_candidate/det-may/web-023.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "ef55dbf4cb701248a53b042220fc2337923f82ec54879e179128d239f0fcdf0d",
+      "normalized_pixel_sha256": "10330329c4ba1e08f74770a802b6074b5f3ce18a5e297c0f59d99114bc2695b7",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 853,
+      "bytes": 689273
+    },
+    {
+      "id": "web-029",
+      "path": "raw/images/negative_candidate/det-may/web-029.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "85fbced0587f508b7f5831fc17d9fe2acaa24417f99d42fcc054e0e8f9d25b56",
+      "normalized_pixel_sha256": "e781e3bf9e7c40b4a13f01f38a72e0ae13e5094654074d7823750c8461a6f895",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1013,
+      "bytes": 480218
+    },
+    {
+      "id": "web-030",
+      "path": "raw/images/negative_candidate/det-may/web-030.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "98de6572b40b47f46b0387175376e1a8a27f308ba53d2fdef8b07a601a83620c",
+      "normalized_pixel_sha256": "9e323eeac45ffc0e595ed1ab639218a7937c30791caf5ba63aa6dc73845b88b1",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 911,
+      "height": 757,
+      "bytes": 569556
+    },
+    {
+      "id": "web-031",
+      "path": "raw/images/negative_candidate/det-may/web-031.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "2c45e7b9bf2bfa90e3fe8145f628326f570a0183127464ae0fb3fbd27a71aa62",
+      "normalized_pixel_sha256": "4ce7a528d93ef53db956b7f48cc761db059514108fa804eb69c1285e12d4ca84",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1310,
+      "bytes": 328994
+    },
+    {
+      "id": "web-034",
+      "path": "raw/images/similar_candidate/go-son-mai/web-034.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "2ceda3f4286c4250ab900b42de098774addcf6a0a1d76eac4aabba2afa1ee6c4",
+      "normalized_pixel_sha256": "9c7cf7f2e87cfa0a9d7ac841a620c06c5b343b0883a681a9427cb9c94997a051",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 958,
+      "bytes": 411427
+    },
+    {
+      "id": "web-036",
+      "path": "raw/images/similar_candidate/go-son-mai/web-036.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "3515de1cf067350027ebc5049144193b4f3ca345dfe22f597a1a44560eb3863f",
+      "normalized_pixel_sha256": "b97bcdacb01789b59c01c739744af07a3792130e8cdb1911002a1ae7d55052cc",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1510,
+      "bytes": 485902
+    },
+    {
+      "id": "web-037",
+      "path": "raw/images/similar_candidate/go-son-mai/web-037.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "9d8a51504b84387439ff1c6ad6803db9e77199c08e0c8832b4bbf58efb22f1f1",
+      "normalized_pixel_sha256": "7966161fa3bb64e4c532b0ac4ba0f60eaad2679e06a1f317da0723d5276ddb74",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1153,
+      "bytes": 377651
+    },
+    {
+      "id": "web-038",
+      "path": "raw/images/similar_candidate/go-son-mai/web-038.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "63df7b9a625d01f9f899d0f3fa5977705aa380038df27d3525e78bf9d6cbe8d8",
+      "normalized_pixel_sha256": "77938fbd730f4e78f6c4894d8753c930def2e45c47ebed0a9eec1cd4a9340eff",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 949,
+      "bytes": 262539
+    },
+    {
+      "id": "web-039",
+      "path": "raw/images/similar_candidate/go-son-mai/web-039.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "077c0edc73fbe73c4cb1e7cf3e13ebb2c853ddc520ac12091a14827657d4f8cc",
+      "normalized_pixel_sha256": "4d843aa43390656cc6149913dc41caadbdc947e966507f0e1bd46335213d333a",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1060,
+      "bytes": 237937
+    },
+    {
+      "id": "web-046",
+      "path": "raw/images/similar_candidate/thuc-pham/web-046.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "346142c9403ada3816bce0ead7a61836fc981dd7ee6398283a1f316be5893f5f",
+      "normalized_pixel_sha256": "ecf735daa421d03042cdd02fc1c2a05588f79caaaf98bd1726f5373c4eaff671",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 600,
+      "height": 240,
+      "bytes": 99088
+    },
+    {
+      "id": "web-047",
+      "path": "raw/images/similar_candidate/thuc-pham/web-047.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "aafc95636d0f3bab33b0cae8c177e14153ab40206ae36307959277e2b9cf7c5b",
+      "normalized_pixel_sha256": "e147cf763836499eb4bf7ce596ed4e46e73f71176b049ab139f548d7eddcafdc",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 640,
+      "height": 538,
+      "bytes": 159631
+    },
+    {
+      "id": "web-049",
+      "path": "raw/images/similar_candidate/thuc-pham/web-049.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "14e8481d28f36e563957ff8f284d75bed813202dfad355506aa8332e15b78568",
+      "normalized_pixel_sha256": "863936e57fe7fc0e1da4b07f190557842d0dbe3561dff8c11425ad34e2bbc289",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 960,
+      "bytes": 157277
+    },
+    {
+      "id": "web-052",
+      "path": "raw/images/negative_candidate/thuc-pham/web-052.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "f9db929577befdaa2fc31ba69bd6907258f7461a1dbb4f323da9212c70404d23",
+      "normalized_pixel_sha256": "6945d9d1b2c23eb51b815f4a567b78a4c6535b587ff1fe0bc6e3c970d78e864b",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 960,
+      "bytes": 415602
+    },
+    {
+      "id": "web-053",
+      "path": "raw/images/negative_candidate/thuc-pham/web-053.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "cd365261077c3f57cf7cedae4e59fccc324cb62a735728d5666cd5f699a17173",
+      "normalized_pixel_sha256": "a0e8d37a65b0d12111feb94a356f31f9811c60082d33e681bca2a48d45c32ce0",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1678,
+      "bytes": 337047
+    },
+    {
+      "id": "web-057",
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-057.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "bb9395bd2ad584ed21bcc3dfe7e5008ba6c944a8bb86d0385caf79e16d2d15ed",
+      "normalized_pixel_sha256": "9b65f603b556f8f2123f9025171fb2849e704d4c19aa95b7a3e6bb1844e0f662",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 1190,
+      "bytes": 241405
+    },
+    {
+      "id": "web-060",
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-060.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "f24c50697e4c66195b749373cc5c2a58053a5ae051511004e540bdbd9d93abbb",
+      "normalized_pixel_sha256": "9bab461765187fc806afbce0c764f6c27ac03a90e893db8fe85922fa9aac1eaf",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 523,
+      "bytes": 89174
+    },
+    {
+      "id": "web-063",
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-063.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0",
+      "normalized_pixel_sha256": "44dce4d6dbd628b7b3ff914ea8de89e68453c5c242ffb97a8c944c7d39c5e2f9",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 966,
+      "bytes": 502854
+    },
+    {
+      "id": "web-071",
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-071.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "1641529fa3e78a4586556def1512bde4f7fc4e0e28bb3d52446d86cb5f3af93d",
+      "normalized_pixel_sha256": "0d0c1500f7539782846e9033b90a0e2d31c00c551a9eb455fa78fe9b7199405f",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 1280,
+      "height": 853,
+      "bytes": 129187
+    },
+    {
+      "id": "web-072",
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-072.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "29c2cfd3c006f09a4f4e4bfd24f4392beedd8f7d514bec95a0a4f0287dd64f94",
+      "normalized_pixel_sha256": "9102b554670fb67fb0679b103a4429ed30091b7f6dee9ab6a5fc9276751eb29b",
+      "mode": "RGB",
+      "gallery_matches": [],
+      "width": 296,
+      "height": 285,
+      "bytes": 166898
+    },
+    {
+      "id": "control-030",
+      "path": "raw/images/gallery_control/gom-su/control-030.png",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3",
+      "normalized_pixel_sha256": "d3add598f753ad7bfd31d8f581cd60fb8597d9836c9ce5933cb0e5fa01d45e27",
+      "mode": "RGBA",
+      "gallery_matches": [
+        {
+          "product_id": "p-minhlong-chen-com-thach-van-11cm",
+          "image_id": "img-minhlong-chen-com-thach-van-11cm-1"
+        }
+      ],
+      "width": 1025,
+      "height": 1024,
+      "bytes": 274833
+    },
+    {
+      "id": "control-031",
+      "path": "raw/images/gallery_control/gom-su/control-031.png",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "975d6f58025bcc58abdad75d8336bc6d1dba434982e8281152b2a8d5f5c52cd5",
+      "normalized_pixel_sha256": "8f6169d3d53aca1656319276e8ea3e667582209b79182c9229cfc31a6cefb061",
+      "mode": "RGBA",
+      "gallery_matches": [
+        {
+          "product_id": "p-minhlong-bo-tra-camellia-chi-vang-05l",
+          "image_id": "img-minhlong-bo-tra-camellia-chi-vang-05l-1"
+        }
+      ],
+      "width": 1024,
+      "height": 1024,
+      "bytes": 227154
+    },
+    {
+      "id": "control-032",
+      "path": "raw/images/gallery_control/may-tre-coi/control-032.png",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "39cccecf983bcacbce160fe4161ffb315ccb5f64a0b8102ed420f078ed532d7d",
+      "normalized_pixel_sha256": "f8b23b3ae0f62cee001171cc22d4a52bcabf5d7d46aac48b9697d223e7f31434",
+      "mode": "P",
+      "gallery_matches": [
+        {
+          "product_id": "p-vietcraft-gio-tre-dan-tron-vh24026",
+          "image_id": "img-vietcraft-gio-tre-dan-tron-vh24026-1"
+        }
+      ],
+      "width": 510,
+      "height": 600,
+      "bytes": 99983
+    },
+    {
+      "id": "control-033",
+      "path": "raw/images/gallery_control/may-tre-coi/control-033.png",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "78fbbfc973b8a3195ef1d0cbeee8908c65793da08f1fb7c9daa6071615b0d023",
+      "normalized_pixel_sha256": "aa291244ea33d529e009e091a05da8e10b1ef20a383986bc8641a538df497f80",
+      "mode": "P",
+      "gallery_matches": [
+        {
+          "product_id": "p-vietcraft-tui-luc-binh-vo-so-vh24032",
+          "image_id": "img-vietcraft-tui-luc-binh-vo-so-vh24032-1"
+        }
+      ],
+      "width": 510,
+      "height": 600,
+      "bytes": 127601
+    },
+    {
+      "id": "control-034",
+      "path": "raw/images/gallery_control/go-son-mai/control-034.webp",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "6251d34f613d0e8087593e3798d82b9a59a2f0e31365d6d50fb1c4d1ab0cb705",
+      "normalized_pixel_sha256": "aadc36e6c42526ebe7cfa984336e568264da10cfd429e817ee24eaf2282f52c3",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-hanoia-binh-hoa-mystery-a18mt01",
+          "image_id": "img-hanoia-binh-hoa-mystery-a18mt01-1"
+        }
+      ],
+      "width": 3000,
+      "height": 3000,
+      "bytes": 243920
+    },
+    {
+      "id": "control-035",
+      "path": "raw/images/gallery_control/go-son-mai/control-035.webp",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "9db9369d4af501ab73605a273f094358cdb8edb76516ae4a882125e2c410debc",
+      "normalized_pixel_sha256": "dfa2d441decdc9928103af237b9d7ee039709e3ceeea608803d3dd08717e9411",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-hanoia-hop-vuong-botanica-s-af26bt03",
+          "image_id": "img-hanoia-hop-vuong-botanica-s-af26bt03-1"
+        }
+      ],
+      "width": 1200,
+      "height": 1200,
+      "bytes": 25352
+    },
+    {
+      "id": "control-036",
+      "path": "raw/images/gallery_control/det-may/control-036.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "ba76aed6b1565d1080abea2ef27b7ec268c71c99757fefc5ec3e55fffecd095b",
+      "normalized_pixel_sha256": "f1f4bdad31e26500a2f29f8e260ecc0ec7f67c158e7cc4772661e3c9cda9bd6c",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-hanhsilk-khan-lanh-to-tam-246",
+          "image_id": "img-hanhsilk-khan-lanh-to-tam-246-1"
+        }
+      ],
+      "width": 1954,
+      "height": 2558,
+      "bytes": 649078
+    },
+    {
+      "id": "control-037",
+      "path": "raw/images/gallery_control/det-may/control-037.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "533c2fd6b79c9b9790d29880046b5bf1e36f8f6d6cff29945cfd9e1be8d3608d",
+      "normalized_pixel_sha256": "d34297df06136d800771f7f4405e7c99c0c4b7a51f2e47a9d151f05e5bbd2e75",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786",
+          "image_id": "img-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786-1"
+        }
+      ],
+      "width": 1536,
+      "height": 1533,
+      "bytes": 348041
+    },
+    {
+      "id": "control-038",
+      "path": "raw/images/gallery_control/thuc-pham/control-038.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429",
+      "normalized_pixel_sha256": "a7684a16a081cb2df10f9dae75c587453339461cf841248ba24b9a1c4370f120",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-marou-ben-tre-78-80g",
+          "image_id": "img-marou-ben-tre-78-80g-1"
+        }
+      ],
+      "width": 2500,
+      "height": 2500,
+      "bytes": 595965
+    },
+    {
+      "id": "control-039",
+      "path": "raw/images/gallery_control/thuc-pham/control-039.jpg",
+      "file_validation": "passed",
+      "source_metadata_consistent": true,
+      "sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b",
+      "normalized_pixel_sha256": "a31f7ff24cedcfde7596f108935c73a7cc98277800a0844fd8a1c94c13c0c506",
+      "mode": "RGB",
+      "gallery_matches": [
+        {
+          "product_id": "p-marou-tien-giang-70-80g",
+          "image_id": "img-marou-tien-giang-70-80g-1"
+        }
+      ],
+      "width": 2500,
+      "height": 2500,
+      "bytes": 543000
+    }
+  ],
+  "inventory": [
+    {
+      "path": "raw/excluded/web-024.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 960,
+      "bytes": 270258,
+      "sha256": "11847d3e7de4a897d8733f7c4eef13be201ed32a2c1e92987a7d5f600f53736c"
+    },
+    {
+      "path": "raw/excluded/web-068.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 960,
+      "bytes": 292064,
+      "sha256": "ec220d3b66c4a621322da67289caed720469a3a3cb6d9ee6d54e4a1c648664d9"
+    },
+    {
+      "path": "raw/images/gallery_control/det-may/control-036.jpg",
+      "format": "JPEG",
+      "width": 1954,
+      "height": 2558,
+      "bytes": 649078,
+      "sha256": "ba76aed6b1565d1080abea2ef27b7ec268c71c99757fefc5ec3e55fffecd095b"
+    },
+    {
+      "path": "raw/images/gallery_control/det-may/control-037.jpg",
+      "format": "JPEG",
+      "width": 1536,
+      "height": 1533,
+      "bytes": 348041,
+      "sha256": "533c2fd6b79c9b9790d29880046b5bf1e36f8f6d6cff29945cfd9e1be8d3608d"
+    },
+    {
+      "path": "raw/images/gallery_control/go-son-mai/control-034.webp",
+      "format": "WEBP",
+      "width": 3000,
+      "height": 3000,
+      "bytes": 243920,
+      "sha256": "6251d34f613d0e8087593e3798d82b9a59a2f0e31365d6d50fb1c4d1ab0cb705"
+    },
+    {
+      "path": "raw/images/gallery_control/go-son-mai/control-035.webp",
+      "format": "WEBP",
+      "width": 1200,
+      "height": 1200,
+      "bytes": 25352,
+      "sha256": "9db9369d4af501ab73605a273f094358cdb8edb76516ae4a882125e2c410debc"
+    },
+    {
+      "path": "raw/images/gallery_control/gom-su/control-030.png",
+      "format": "PNG",
+      "width": 1025,
+      "height": 1024,
+      "bytes": 274833,
+      "sha256": "c955dc18dadaf5a7d0bf94083dc68e6e83c8029d4aee545a9a45bd5c50f26eb3"
+    },
+    {
+      "path": "raw/images/gallery_control/gom-su/control-031.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 227154,
+      "sha256": "975d6f58025bcc58abdad75d8336bc6d1dba434982e8281152b2a8d5f5c52cd5"
+    },
+    {
+      "path": "raw/images/gallery_control/may-tre-coi/control-032.png",
+      "format": "PNG",
+      "width": 510,
+      "height": 600,
+      "bytes": 99983,
+      "sha256": "39cccecf983bcacbce160fe4161ffb315ccb5f64a0b8102ed420f078ed532d7d"
+    },
+    {
+      "path": "raw/images/gallery_control/may-tre-coi/control-033.png",
+      "format": "PNG",
+      "width": 510,
+      "height": 600,
+      "bytes": 127601,
+      "sha256": "78fbbfc973b8a3195ef1d0cbeee8908c65793da08f1fb7c9daa6071615b0d023"
+    },
+    {
+      "path": "raw/images/gallery_control/thuc-pham/control-038.jpg",
+      "format": "JPEG",
+      "width": 2500,
+      "height": 2500,
+      "bytes": 595965,
+      "sha256": "51e6d92029a0108e9c427f316febd105ecca487b72131108d7f3de19fe815429"
+    },
+    {
+      "path": "raw/images/gallery_control/thuc-pham/control-039.jpg",
+      "format": "JPEG",
+      "width": 2500,
+      "height": 2500,
+      "bytes": 543000,
+      "sha256": "3653e7321799c233df2591f39251f412527baaca812362cb65f25802d02c264b"
+    },
+    {
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-057.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1190,
+      "bytes": 241405,
+      "sha256": "bb9395bd2ad584ed21bcc3dfe7e5008ba6c944a8bb86d0385caf79e16d2d15ed"
+    },
+    {
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-060.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 523,
+      "bytes": 89174,
+      "sha256": "f24c50697e4c66195b749373cc5c2a58053a5ae051511004e540bdbd9d93abbb"
+    },
+    {
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-063.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 966,
+      "bytes": 502854,
+      "sha256": "e0fa05019d587cc62b1d4d5a82d7440216b5d88ef0f2149a69f2eb2ee640fca0"
+    },
+    {
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-071.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 853,
+      "bytes": 129187,
+      "sha256": "1641529fa3e78a4586556def1512bde4f7fc4e0e28bb3d52446d86cb5f3af93d"
+    },
+    {
+      "path": "raw/images/negative_candidate/ngoai-catalog/web-072.jpg",
+      "format": "JPEG",
+      "width": 296,
+      "height": 285,
+      "bytes": 166898,
+      "sha256": "29c2cfd3c006f09a4f4e4bfd24f4392beedd8f7d514bec95a0a4f0287dd64f94"
+    },
+    {
+      "path": "raw/images/similar_candidate/det-may/web-022.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 853,
+      "bytes": 644630,
+      "sha256": "db97517e548d84dcc7963b6b95e62ae3bf5d53d9b2c86c877b740ab1e5cb05d4"
+    },
+    {
+      "path": "raw/images/similar_candidate/det-may/web-023.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 853,
+      "bytes": 689273,
+      "sha256": "ef55dbf4cb701248a53b042220fc2337923f82ec54879e179128d239f0fcdf0d"
+    },
+    {
+      "path": "raw/images/negative_candidate/det-may/web-029.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1013,
+      "bytes": 480218,
+      "sha256": "85fbced0587f508b7f5831fc17d9fe2acaa24417f99d42fcc054e0e8f9d25b56"
+    },
+    {
+      "path": "raw/images/negative_candidate/det-may/web-030.jpg",
+      "format": "JPEG",
+      "width": 911,
+      "height": 757,
+      "bytes": 569556,
+      "sha256": "98de6572b40b47f46b0387175376e1a8a27f308ba53d2fdef8b07a601a83620c"
+    },
+    {
+      "path": "raw/images/negative_candidate/det-may/web-031.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1310,
+      "bytes": 328994,
+      "sha256": "2c45e7b9bf2bfa90e3fe8145f628326f570a0183127464ae0fb3fbd27a71aa62"
+    },
+    {
+      "path": "raw/images/similar_candidate/go-son-mai/web-034.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 958,
+      "bytes": 411427,
+      "sha256": "2ceda3f4286c4250ab900b42de098774addcf6a0a1d76eac4aabba2afa1ee6c4"
+    },
+    {
+      "path": "raw/images/similar_candidate/go-son-mai/web-036.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1510,
+      "bytes": 485902,
+      "sha256": "3515de1cf067350027ebc5049144193b4f3ca345dfe22f597a1a44560eb3863f"
+    },
+    {
+      "path": "raw/images/similar_candidate/go-son-mai/web-037.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1153,
+      "bytes": 377651,
+      "sha256": "9d8a51504b84387439ff1c6ad6803db9e77199c08e0c8832b4bbf58efb22f1f1"
+    },
+    {
+      "path": "raw/images/similar_candidate/go-son-mai/web-038.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 949,
+      "bytes": 262539,
+      "sha256": "63df7b9a625d01f9f899d0f3fa5977705aa380038df27d3525e78bf9d6cbe8d8"
+    },
+    {
+      "path": "raw/images/similar_candidate/go-son-mai/web-039.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1060,
+      "bytes": 237937,
+      "sha256": "077c0edc73fbe73c4cb1e7cf3e13ebb2c853ddc520ac12091a14827657d4f8cc"
+    },
+    {
+      "path": "raw/images/similar_candidate/gom-su/web-000.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1065,
+      "bytes": 285990,
+      "sha256": "98dd81131db3d712f288e5593005183e1f9aede698d448d2b67563c9efd5cff6"
+    },
+    {
+      "path": "raw/images/similar_candidate/gom-su/web-001.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1028,
+      "bytes": 127193,
+      "sha256": "534e755474c19115c0fa2e2af134068376afd5a9aec2fbc6a54e0ae13c552b1c"
+    },
+    {
+      "path": "raw/images/similar_candidate/gom-su/web-005.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 893,
+      "bytes": 135340,
+      "sha256": "10ac8e256b019ab116c2df507c67e14a845fc56652c2e42c533b4742684b8dc3"
+    },
+    {
+      "path": "raw/images/similar_candidate/gom-su/web-006.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1920,
+      "bytes": 306178,
+      "sha256": "5bfd29e66f82494ca1d74abd9d7e59bce971a5258075df885c14b2d69690bb18"
+    },
+    {
+      "path": "raw/images/similar_candidate/gom-su/web-008.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1920,
+      "bytes": 325586,
+      "sha256": "8b64c75b974e93bea0a07b55adcc8e8e2175736f1d0e94810b2bb29f1e33deff"
+    },
+    {
+      "path": "raw/images/similar_candidate/may-tre-coi/web-010.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1280,
+      "bytes": 540057,
+      "sha256": "c2fc36baacd7d4945bbab0133340683b90e4e7b140010ab8b937d3f673d37d62"
+    },
+    {
+      "path": "raw/images/similar_candidate/may-tre-coi/web-011.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 959,
+      "bytes": 495421,
+      "sha256": "e5e5d0d74b9b925c3b4dde87151f483ef0bc261c3b075012a978b6740b6eff31"
+    },
+    {
+      "path": "raw/images/similar_candidate/may-tre-coi/web-017.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 2275,
+      "bytes": 705474,
+      "sha256": "1f08de1cab0ca5a6417560e49d532b0c25025a2283a7a0664a2528414983c79f"
+    },
+    {
+      "path": "raw/images/similar_candidate/may-tre-coi/web-019.jpg",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 248275,
+      "sha256": "0b96de3d61b25c3590eba9c374732037676215461f67d41be5e9e67b42a11821"
+    },
+    {
+      "path": "raw/images/similar_candidate/may-tre-coi/web-021.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 853,
+      "bytes": 324161,
+      "sha256": "6e1a88519e9a840c95002daca7cc24e18cb482fe1efb037d12839c6399053a3f"
+    },
+    {
+      "path": "raw/images/similar_candidate/thuc-pham/web-046.jpg",
+      "format": "JPEG",
+      "width": 600,
+      "height": 240,
+      "bytes": 99088,
+      "sha256": "346142c9403ada3816bce0ead7a61836fc981dd7ee6398283a1f316be5893f5f"
+    },
+    {
+      "path": "raw/images/similar_candidate/thuc-pham/web-047.jpg",
+      "format": "JPEG",
+      "width": 640,
+      "height": 538,
+      "bytes": 159631,
+      "sha256": "aafc95636d0f3bab33b0cae8c177e14153ab40206ae36307959277e2b9cf7c5b"
+    },
+    {
+      "path": "raw/images/similar_candidate/thuc-pham/web-049.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 960,
+      "bytes": 157277,
+      "sha256": "14e8481d28f36e563957ff8f284d75bed813202dfad355506aa8332e15b78568"
+    },
+    {
+      "path": "raw/images/negative_candidate/thuc-pham/web-052.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 960,
+      "bytes": 415602,
+      "sha256": "f9db929577befdaa2fc31ba69bd6907258f7461a1dbb4f323da9212c70404d23"
+    },
+    {
+      "path": "raw/images/negative_candidate/thuc-pham/web-053.jpg",
+      "format": "JPEG",
+      "width": 1280,
+      "height": 1678,
+      "bytes": 337047,
+      "sha256": "cd365261077c3f57cf7cedae4e59fccc324cb62a735728d5666cd5f699a17173"
+    },
+    {
+      "path": "raw/preview/contact-01.jpg",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 1175,
+      "bytes": 385234,
+      "sha256": "5b027accfb8508afc7070e68f053a831e4a56862a62ec50a9b41d04ee4bffe3c"
+    },
+    {
+      "path": "raw/preview/contact-02.jpg",
+      "format": "JPEG",
+      "width": 1200,
+      "height": 1175,
+      "bytes": 283470,
+      "sha256": "a1e692412d6a099fc7d10b3ff52ebb08d1336d4c93f1a2af352ea4259a3ad59d"
+    }
+  ]
+}

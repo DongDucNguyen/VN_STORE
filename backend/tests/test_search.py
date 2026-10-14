@@ -130,3 +130,19 @@ def test_material_preposition_and_image_refinement_words_are_not_keywords(engine
     # "bằng" (làm bằng) từng khớp BM25 với tên "… bằng lụa" khi tinh chỉnh tìm bằng ảnh.
     assert engine.search("túi bằng cói")["interpreted_query"]["keywords"] == "túi cói"
     assert engine.search("giống mẫu này nhưng màu đỏ")["interpreted_query"]["keywords"] == "mẫu màu đỏ"
+
+
+
+def test_dimension_query_does_not_match_quantity_times_weight(snap):
+    """'khăn 180 x 65' từng đưa sô cô la 'Set Of 6 X 80G' lên đầu qua token 'x'/'65' (13/10/2026)."""
+    import copy  # noqa: PLC0415
+    from app.search.engine import SearchEngine  # noqa: PLC0415
+    snap = copy.deepcopy(snap)
+    snap.products["fx-khan-lua-do"]["description_vi"] += " Kích thước 180x65cm."
+    snap.products["fx-tra-thai-nguyen"]["name_vi"] = "Trà búp Thái Nguyên Set Of 6 X 80G 65%"
+    engine = SearchEngine(snap)
+    for q in ("khăn 180 x 65", "khăn 180x65", "khăn 180×65 cm", "180x65"):
+        ids = [r["id"] for r in engine.search(q)["results"]]
+        assert ids[0] == "fx-khan-lua-do", q
+        assert "fx-tra-thai-nguyen" not in ids, q
+    assert [r["id"] for r in engine.search("trà 6 x 80g")["results"]][0] == "fx-tra-thai-nguyen"

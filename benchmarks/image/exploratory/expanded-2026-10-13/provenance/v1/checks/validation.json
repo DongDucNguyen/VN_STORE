@@ -1,0 +1,807 @@
+{
+  "checked_at": "2026-10-12T20:03:04.593412+00:00",
+  "dataset_version": "expanded-2026-10-13",
+  "active_images": 100,
+  "added_images": 60,
+  "all_image_files_in_tmp_data": 110,
+  "active_image_bytes": 32535885,
+  "formats": {
+    "JPEG": 92,
+    "PNG": 6,
+    "WEBP": 2
+  },
+  "roles": {
+    "similar_candidate": 61,
+    "negative_candidate": 10,
+    "gallery_control": 10,
+    "contrast_candidate": 19
+  },
+  "groups": {
+    "gom-su": 25,
+    "may-tre-coi": 24,
+    "det-may": 16,
+    "go-son-mai": 12,
+    "thuc-pham": 18,
+    "ngoai-catalog": 5
+  },
+  "added_topics": {
+    "bowl": 4,
+    "plate": 3,
+    "dinner-plate": 2,
+    "mug": 5,
+    "dress": 2,
+    "shirt-modern": 1,
+    "shirt": 2,
+    "ao-dai-street": 4,
+    "lamp": 2,
+    "wicker-lampshade": 2,
+    "chair": 3,
+    "woven-bag": 2,
+    "straw-bag": 2,
+    "lacquer-box": 2,
+    "wood-box-simple": 2,
+    "jewellery-box": 1,
+    "chocolate": 3,
+    "vietnam-cake": 3,
+    "vn-banh-com": 3,
+    "vn-keo-dua": 2,
+    "glass-mug": 4,
+    "plastic-basket": 3,
+    "leather-bag": 3
+  },
+  "cases": 250,
+  "case_tasks": {
+    "similar_candidate": 61,
+    "negative_candidate": 10,
+    "gallery_control": 10,
+    "image_text": 130,
+    "contrast_candidate": 19,
+    "manual_crop_comparison": 20
+  },
+  "image_text_non_gallery": 120,
+  "byte_duplicates": [],
+  "pixel_duplicates": [],
+  "near_duplicate_candidates": [
+    {
+      "a": "control-038",
+      "b": "control-039",
+      "distance": 3
+    },
+    {
+      "a": "control-038",
+      "b": "add-154007497",
+      "distance": 5
+    },
+    {
+      "a": "control-039",
+      "b": "add-154007497",
+      "distance": 4
+    }
+  ],
+  "gallery_matches": 10,
+  "original_40_images_unchanged": true,
+  "benchmark_approved": false,
+  "model_inference_performed": false,
+  "checks": [
+    {
+      "id": "web-000",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-001",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-005",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-006",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-008",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-010",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-011",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-017",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-019",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-021",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-022",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-023",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-029",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-030",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-031",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-034",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-036",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-037",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-038",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-039",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-046",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-047",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-049",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-052",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-053",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-057",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-060",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-063",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-071",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "web-072",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "control-030",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-minhlong-chen-com-thach-van-11cm-1"
+      ]
+    },
+    {
+      "id": "control-031",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-minhlong-bo-tra-camellia-chi-vang-05l-1"
+      ]
+    },
+    {
+      "id": "control-032",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-vietcraft-gio-tre-dan-tron-vh24026-1"
+      ]
+    },
+    {
+      "id": "control-033",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-vietcraft-tui-luc-binh-vo-so-vh24032-1"
+      ]
+    },
+    {
+      "id": "control-034",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-hanoia-binh-hoa-mystery-a18mt01-1"
+      ]
+    },
+    {
+      "id": "control-035",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-hanoia-hop-vuong-botanica-s-af26bt03-1"
+      ]
+    },
+    {
+      "id": "control-036",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-hanhsilk-khan-lanh-to-tam-246-1"
+      ]
+    },
+    {
+      "id": "control-037",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-hanhsilk-khan-lua-satin-ve-hoa-silk-satin-scarf-hand-2786-1"
+      ]
+    },
+    {
+      "id": "control-038",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-marou-ben-tre-78-80g-1"
+      ]
+    },
+    {
+      "id": "control-039",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": [
+        "img-marou-tien-giang-70-80g-1"
+      ]
+    },
+    {
+      "id": "add-128816963",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-149255276",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-54071586",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-128816961",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-153092103",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-98051226",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-1103201",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-104101424",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-15573749",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-155646318",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-118375454",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-200509963",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-117301860",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-49443054",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-221007",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-165476060",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-61832768",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-96222759",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-96222760",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-86677017",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-176361070",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-200006254",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-25572832",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-157784089",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-61026736",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-97560214",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-182122765",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-145194232",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-130384936",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-152910736",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-1749501",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-65489283",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-174755422",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-142825819",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-107298222",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-197069913",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-182488430",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-57364758",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-61012136",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-73647162",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-124910887",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-2745746",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-93543923",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-4277425",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-25833176",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-175764939",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-136181860",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-158749173",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-26197520",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-154007497",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-56198121",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-18058526",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-18059365",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-156899075",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-53091",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-152726723",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-128249802",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-92722732",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-158743602",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    },
+    {
+      "id": "add-93719321",
+      "decode": "passed",
+      "api_media_check": "passed",
+      "sha256": "passed",
+      "gallery_matches": []
+    }
+  ]
+}

@@ -2,6 +2,14 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+Cập nhật demo 14/10: [gộp 4 commit main và kiểm chứng tích hợp](reports/progress/2026-10-14_GD6_merge-main-demo.md), giữ tối ưu English/GPU và đệm âm cuối. Backend 774 test đạt; browser với model thật đạt trên desktop/mobile. English sau warmup khoảng 0,35 giây với câu ngắn và 0,66 giây với clip 6,5 giây trên máy demo.
+
+Mới nhất 13/10 (sáng): [bộ ảnh thử khám phá, ghép ảnh + chữ theo độ phủ, token kích thước](reports/progress/2026-10-13_GD5_bo-anh-kham-pha-va-gop-anh-chu.md) — sửa lỗi ảnh gần trùng + chữ đúng với món rơi khỏi top 10 và "khăn 180 x 65" trả sô cô la. Kiểm chứng: **771 backend, 28 Pillow, 142 E2E đạt**.
+
+Công cụ và độ ổn định (13/10): đã hoàn thành [chuyển bản nháp keyword khi catalog đổi](reports/progress/2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md), giữ điểm có nội dung không đổi và yêu cầu xác nhận lại. Kiểm chứng cuối: **735 backend, 22 Pillow, 140 E2E đạt**; 3 test tùy chọn được bỏ qua. Catalog hiện có 328/330 sản phẩm published; nghiệm thu model vẫn chờ dữ liệu thật.
+
+Cập nhật 13/10: thêm **nghe lại bản ghi trước khi tìm**, sửa lỗi micro/ghi âm bị treo, chặn WAV thiếu dữ liệu, củng cố gợi ý tiếng Việt và ngăn autocomplete hiển thị phản hồi cũ. Xem [phân tích và kết quả đợt rà soát](reports/progress/2026-10-13_GD5-6_ra-soat-va-cung-co-tim-kiem.md).
+
 Cập nhật voice (12/10): thêm xem/sửa/xác nhận bản chép lời trước khi tìm, gợi ý cụm theo catalog, cảnh báo âm nhỏ/vỡ tiếng, lựa chọn Việt/Anh/tự nhận diện và tiền xử lý tùy chọn. Xem [hồ sơ phân tích, tiến độ và kết quả](docs/voice-improvements/README.md). Gain/lọc vẫn tắt mặc định; chưa có clip VNStore đã duyệt để nghiệm thu chất lượng.
 
 Cập nhật 12/10: catalog `seed-006-enriched` có **328 published, 2 draft, 814 ảnh**. Đã tải cache cho profile demo và cả 4 cấu hình voice/3 adapter ảnh trong `screening.json`, dựng chỉ mục SigLIP2; **601 backend, 7 test model thật, 22 Pillow, 120 E2E và 2 smoke browser model thật đạt**. Báo cáo [rà soát và tải model demo](reports/progress/2026-10-12_GD6_ra-soat-va-tai-model-demo.md) ghi chi tiết. Chưa chạy locked test vì thiếu cấu hình và dữ liệu do người duyệt cung cấp.
@@ -75,19 +83,21 @@ E2E tự bật backend (cổng 8010, dữ liệu fixture) và Vite (cổng 5180)
 Đặt `PW_CHANNEL=""` để dùng Chromium của Playwright, sau khi cài bằng `npx playwright install chromium`.
 Test E2E thất bại nếu trang có lỗi JS hoặc `console.error` ngoài lỗi được mô phỏng có chủ đích. `npm run test:e2e` tạo báo cáo HTML trong `artifacts/e2e-report/`; `run_all_tests.py` dùng reporter dòng, không cập nhật HTML. Ảnh chụp và trace khi test thất bại nằm trong `artifacts/e2e-results/`.
 
-Biến môi trường backend: `VNSTORE_CATALOG`, `VNSTORE_INCLUDE_DRAFTS=1` (xem cả draft khi phát triển), `VNSTORE_CORS_ORIGINS`, `VNSTORE_ASR_ADAPTER`, `VNSTORE_IMAGE_ADAPTER`, `VNSTORE_IMAGE_INDEX_DIR`, `VNSTORE_IMAGE_INDEX_AUTOBUILD=1`.
+Biến môi trường backend: `VNSTORE_CATALOG`, `VNSTORE_INCLUDE_DRAFTS=1` (xem cả draft khi phát triển), `VNSTORE_CORS_ORIGINS`, `VNSTORE_ASR_ADAPTER`, `VNSTORE_IMAGE_ADAPTER`, `VNSTORE_IMAGE_INDEX_DIR`, `VNSTORE_IMAGE_INDEX_AUTOBUILD=1`, `VNSTORE_TEXT_ADAPTER`, `VNSTORE_TEXT_INDEX_DIR`, `VNSTORE_TEXT_INDEX_AUTOBUILD=1`, `VNSTORE_SEARCH_CONFIG` (JSON, xem [GĐ5](docs/giai-doan-5.md)).
 E2E bật adapter giả và micro giả của Chrome (phát file âm 440 Hz sinh trong `artifacts/e2e-media/`).
 Frontend gọi `/api/*` và `/images/*`, Vite proxy sang `VNSTORE_API` (mặc định `http://127.0.0.1:8000`).
 
-## Dữ liệu và ảnh hiện tại — 10/10/2026
+## Dữ liệu và ảnh hiện tại — 13/10/2026
 
-Catalog `seed-004-hanhsilk-materials` (= `seed-003-dot-002` + 9 chất liệu Hanhsilk từ mô tả nguồn, 11/10): **330 sản phẩm draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, 60 sản phẩm mới mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Xem [báo cáo nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) và [hồ sơ nguồn](data_collection/batches/2026-10-10_dot-002/README.md). Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh); hai bình Hanoia nằm trong nhánh “Bình, lọ trang trí”.
+Catalog `seed-006-enriched` (`b98b859a…`): **330 sản phẩm, 328 published (demo nội bộ), 2 draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, khoảng 60 sản phẩm mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Các bước: [nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) (`seed-003`), chất liệu Hanhsilk (`seed-004`), [publish demo nội bộ](reports/progress/2026-10-11_GD1_publish-demo-noi-bo.md) (`seed-005`), [bổ sung chất liệu/màu có căn cứ](reports/progress/2026-10-11_GD1-2_bo-sung-tu-dong.md) (`seed-006`). Quyền ảnh vẫn `unknown`, chưa công bố công khai. Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh).
+
+Bộ ảnh thử tìm bằng ảnh (không phải benchmark): [benchmarks/image/exploratory/](benchmarks/image/exploratory/expanded-2026-10-13/README.md), 100 ảnh / 250 ca, chạy bằng `scripts/benchmark/run_image_exploratory.py`.
 Ảnh nằm tại `assets/products/<product-id>/`; DB có đường dẫn, kích thước và SHA-256.
 Xem [bảng duyệt ảnh](artifacts/image_review/2026-10-10_seed-002-taxonomy/index.html),
 [manifest nguồn và quyết định chọn/loại](data_collection/images/2026-10-10/manifest.json),
 [phân tích dự án và tiến độ](reports/progress/2026-10-10_GD1_ra-soat-du-an-va-anh.md).
 
-Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem ảnh trong chế độ phát triển.
+Chạy backend với `VNSTORE_INCLUDE_DRAFTS=1` để xem cả 2 sản phẩm draft trong chế độ phát triển.
 Chế độ mặc định chỉ hiển thị `published`, hiện có 328 sản phẩm cho demo nội bộ. Quyền ảnh vẫn `unknown` (cả 814 ảnh); việc tải và đối chiếu không đồng nghĩa với giấy phép công bố.
 
 ```bash
@@ -180,6 +190,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_gpu_cuda12.ps1
 Script mặc định chạy PhoWhisper-small cho tiếng Việt và SigLIP2 tìm bằng ảnh trên GPU; English dùng Whisper-small.en với encoder fp16 trên GPU và decoder int8 trên CPU. So với cấu hình English chạy toàn bộ trên CPU, thời gian API sau khởi động nóng giảm từ 1,43 xuống 0,41 giây với câu ngắn và từ 1,79 xuống 0,73 giây với clip FLEURS 6,5 giây, trên máy này. Script nạp trước VAD và model English lúc khởi động backend; lần khởi động vì vậy lâu hơn nhưng yêu cầu English đầu không phải chờ tải model. Whisper-tiny nhận diện ngôn ngữ `auto` trên CPU; RapidOCR và VAD cũng được bật. Chọn English trong giao diện để gửi `language=en`; `auto` chọn một ngôn ngữ cho cả clip. Bộ ghi âm giữ thêm 300 ms sau khi bấm dừng để giảm cắt phụ âm cuối. Lệnh tải cache ở trên chuẩn bị các model English. Nếu thiếu VRAM, chạy `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run_gpu_cuda12.ps1 -EnglishDevice cpu`; `-EnglishDevice cuda` dùng Whisper-base.en trên GPU nhưng có thể kém chính xác hơn với âm cuối. Xem [báo cáo tối ưu độ trễ English](reports/progress/2026-10-14_english_latency_gpu_encoder.md), [báo cáo cải thiện âm cuối](reports/progress/2026-10-14_english_short_words_tail.md) và [báo cáo GPU trước đó](reports/progress/2026-10-14_gpu_full_demo.md).
 
 Adapter có sẵn: `app.ml.asr:PhoWhisperBase | PhoWhisperBaseFp16 | PhoWhisperSmall | PhoWhisperSmallInt8` (kèm Silero VAD; `VNSTORE_ASR_VAD=0` để tắt; phép đo int8/fp16 cũ trên RTX 5070 Ti ở [profile](reports/progress/2026-10-10_GD4_profile-int8-fp16.md)) và `app.ml.image:SigLIP2Base | DINOv2Base | OpenCLIPViTB32` (OpenCLIP ViT-B-32 laion2B, bản export thị giác của Immich, đã đối chiếu với bản export độc lập của onnx-community). Revision đều được ghim. `VNSTORE_ML_DEVICE=cpu` ép chạy CPU; `cuda` bắt buộc CUDA EP, từ chối fallback cả session sang CPU. Tùy chọn TensorRT CUDA 13: cài `backend/requirements-ml-trt.txt` (~1,9 GB) rồi đặt `VNSTORE_ML_TRT=1` trên máy/driver tương thích; xem [báo cáo](reports/progress/2026-10-10_GD4_tensorrt.md). Test model thật: `VNSTORE_RUN_ML_TESTS=1 .venv-ml-gpu/Scripts/python -m pytest backend/tests/test_ml_adapters.py`.
+
+**Tìm theo ngữ nghĩa (thử nghiệm, mặc định tắt):** `app.ml.text:BGEM3` (bản ONNX chính thức trong repo `BAAI/bge-m3`, MIT, ~2,3 GB). Dựng chỉ mục rồi bật bằng cấu hình:
+
+```bash
+.venv-ml/Scripts/python scripts/build_indexes/build_text_index.py --adapter app.ml.text:BGEM3
+cd backend && VNSTORE_TEXT_ADAPTER=app.ml.text:BGEM3 VNSTORE_SEARCH_CONFIG='{"semantic_weight": 1, "semantic_top_k": 10}' ../.venv-ml/Scripts/python -m uvicorn app.main:app --port 8000
+```
+
+Nhánh này gộp hạng với BM25 và giảm trọng số khi BM25 đã khớp đủ ý. Nó không lấp chỗ trống khi bộ lọc cứng đã loại hết hàng khớp từ khóa. Thiếu model hoặc chỉ mục thì API quay về BM25 và báo trong `/health` (`search.semantic`). Trên dev nhãn máy chưa thấy lợi ích nên chưa bật ([báo cáo](reports/progress/2026-10-12_GD5_tim-theo-ngu-nghia.md)).
+
 Smoke đầu tiên (không phải benchmark): PhoWhisper-small có WER chuẩn hóa 0,109 trên 30 câu FLEURS; SigLIP2 đạt Hit@1 0,96 khi tìm lại sản phẩm trong gallery; end-to-end ~0,94 giây cho clip 8,9 giây và ~20 ms cho ảnh trên RTX 5070 Ti. Lựa chọn PhoWhisper-small + SigLIP2 chỉ là cấu hình chạy demo, chưa phải chọn model theo PLAN §8.3.
 
 Thử luồng bằng adapter GIẢ: `VNSTORE_ASR_ADAPTER=tests.fakes:FakeASR`, `VNSTORE_IMAGE_ADAPTER=tests.fakes:ByteHistogramEmbedder VNSTORE_IMAGE_INDEX_AUTOBUILD=1`. FakeASR luôn trả một câu cố định; embedder giả dùng histogram byte và không hiểu ảnh. E2E dùng hai adapter này, nên mọi số đo với chúng **không phải benchmark**.

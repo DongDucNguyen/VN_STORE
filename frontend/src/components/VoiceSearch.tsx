@@ -8,7 +8,7 @@ type VoiceState =
   | { kind: "checking" }
   | { kind: "recording"; startedAt: number }
   | { kind: "processing" }
-  | { kind: "review"; response: VoiceReviewResponse; query: string }
+  | { kind: "review"; response: VoiceReviewResponse; query: string; audio: Blob }
   | { kind: "searching" }
   | { kind: "error"; message: string; canRetry: boolean };
 
@@ -100,7 +100,7 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
       if (superseded()) return;
       busy.current = false;
       reviewTiming.current = { measure, at: performance.now() };
-      set({ kind: "review", response: res, query: res.transcript.text });
+      set({ kind: "review", response: res, query: res.transcript.text, audio: wav });
     } catch (e) {
       if (superseded()) return;
       endMeasure(measure, "error");
@@ -124,7 +124,7 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
   async function confirm() {
     if (state.kind !== "review" || busy.current || !state.query.trim() || state.query.trim().length > 300) return;
     busy.current = true;
-    const { response, query } = state;
+    const { response, query, audio } = state;
     const id = generation.current;
     const controller = new AbortController();
     request.current = controller;
@@ -149,7 +149,7 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
       reviewTiming.current = { at: performance.now() };
       busy.current = false;
       set({ kind: "review", response: { ...response, warnings: [...response.warnings,
-        e instanceof Error ? e.message : "Chưa tìm được. Hãy thử lại."] }, query });
+        e instanceof Error ? e.message : "Chưa tìm được. Hãy thử lại."] }, query, audio });
     }
   }
 
@@ -168,6 +168,14 @@ export function useVoiceSearch(onResult: (response: SearchResponse, measure?: Me
 export function VoicePanel({ voice }: { voice: VoiceSearch }) {
   const { state } = voice;
   const [now, setNow] = useState(Date.now());
+  const audio = state.kind === "review" ? state.audio : null;
+  const [audioUrl, setAudioUrl] = useState<string>();
+  useEffect(() => {
+    if (!audio) { setAudioUrl(undefined); return; }
+    const url = URL.createObjectURL(audio);
+    setAudioUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [audio]);
   useEffect(() => {
     if (state.kind !== "recording") return;
     const t = setInterval(() => setNow(Date.now()), 250);
@@ -178,11 +186,15 @@ export function VoicePanel({ voice }: { voice: VoiceSearch }) {
     <select aria-label="Ngôn ngữ giọng nói" value={voice.language}
       onChange={(e) => voice.setLanguage(e.target.value as VoiceLanguage)}>
       <option value="vi">Tiếng Việt</option><option value="en">English</option>
-      <option value="auto">Tự nhận diện / Việt–Anh</option>
+      <option value="auto">Tự nhận diện ngôn ngữ</option>
     </select></label>;
   if (state.kind === "idle") return languageChoice;
   if (state.kind === "review") return <section className="voice-panel voice-review" aria-label="Xác nhận bản chép lời">
     <strong>Kiểm tra lời nói trước khi tìm</strong>
+    {audioUrl && <div className="voice-playback">
+      <p>Nghe lại bản ghi để đối chiếu:</p>
+      <audio controls src={audioUrl} aria-label="Nghe lại bản ghi" />
+    </div>}
     <p>Bản chép lời gốc: <span className="voice-original">{state.response.transcript.raw_text ?? state.response.transcript.text}</span></p>
     {state.response.transcript.language && <p>Ngôn ngữ nhận dạng: {state.response.transcript.language}</p>}
     {state.response.warnings.map((w, i) => <p className="notice notice-warn" key={i}>{w}</p>)}

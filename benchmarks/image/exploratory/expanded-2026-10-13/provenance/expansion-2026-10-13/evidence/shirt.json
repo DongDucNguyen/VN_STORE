@@ -1,0 +1,816 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=linen+shirt+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=linen+shirt+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:50:07.490932+00:00",
+  "response": {
+    "batchcomplete": "",
+    "continue": {
+      "gsroffset": 8,
+      "continue": "gsroffset||"
+    },
+    "query": {
+      "pages": {
+        "86706705": {
+          "pageid": 86706705,
+          "ns": 6,
+          "title": "File:Josiah Williams, militiaman of Llwynypia (NLW MS 23203B, 20r).jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 65317,
+              "width": 819,
+              "height": 1123,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Josiah_Williams%2C_militiaman_of_Llwynypia_%28NLW_MS_23203B%2C_20r%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1755,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/4/45/Josiah_Williams%2C_militiaman_of_Llwynypia_%28NLW_MS_23203B%2C_20r%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1755
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Josiah_Williams%2C_militiaman_of_Llwynypia_%28NLW_MS_23203B%2C_20r%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Josiah_Williams,_militiaman_of_Llwynypia_(NLW_MS_23203B,_20r).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=86706705",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2020-02-06 15:54:33",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nJosiah Williams, militiaman of Llwynypia</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Uploaded with pattypan|Artworks with Wikidata item|Template Unknown (author)|Images uploaded as part of NLW - WMUK collaboration|Artworks digital representation of 2D work|NLW MS 23203B Cardiganshire Constabulary register of criminals",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nUnknown author<span style=\"display: none;\">Unknown author</span></div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "Photograph from a register of Cardiganshire criminals, 1897-1933. Josiah Williams, militiaman of Llwynypia. Charged with stealing a linen shirt.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1902 <span class=\"mw-valign-text-top noprint\" typeof=\"mw:File/Frameless\"><a href=\"https://www.wikidata.org/wiki/Q84268662#P571\" title=\"Edit this at Wikidata\"><img alt=\"Edit this at Wikidata\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"10\" height=\"10\" class=\"mw-file-element\" data-file-width=\"20\" data-file-height=\"20\"></a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<table style=\"width:100%;border:1px red solid; background:#f6f6f4; padding:0; margin:auto;\">\n\n<tbody><tr>\n<td align=\"left\"><span typeof=\"mw:File\"><span><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/500px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"400\" height=\"61\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Library_of_Wales_logo.svg/960px-National_Library_of_Wales_logo.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"78\"></span></span>\n</td>\n<td>This image is available from the <big><b><a rel=\"nofollow\" class=\"external text\" href=\"https://www.library.wales/\">National Library of Wales</a></b></big><br> You can view this image in its original context on the <a rel=\"nofollow\" class=\"external text\" href=\"http://hdl.handle.net/10107/4389767\"><b>NLW Catalogue</b></a>\n</td></tr></tbody></table>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "38861573": {
+          "pageid": 38861573,
+          "ns": 6,
+          "title": "File:Linen Shirt Waist Suit (1904).jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 660069,
+              "width": 712,
+              "height": 1940,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Linen_Shirt_Waist_Suit_%281904%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 3488,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Linen_Shirt_Waist_Suit_%281904%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 3488
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Linen_Shirt_Waist_Suit_%281904%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Linen_Shirt_Waist_Suit_(1904).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=38861573",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2015-03-11 15:48:04",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Linen Shirt Waist Suit (1904)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Fashion in 1904|Extracted images|Template Unknown (author)|Images from The Tacoma Times|Female fashion in the 1900s|Tacoma Times, Vol. 1, No. 77|Line art of shirt waists|Line art of women at full length",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "\"This attractive shirt <a href=\"https://en.wikipedia.org/wiki/Waist_(clothing)\" class=\"extiw\" title=\"w:Waist (clothing)\">waist</a> is of blue and white linen, trimmed with shaped bands of the same material, The buttons are hand-painted with dots of blue and are made so that they can be sewed through. The hat is a simple blue and white straw with touches of crimson velvet.\"  From Tacoma Times, Vol. 1, No. 77, Saturday, March 19, 1904, page 2.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1904-03-19",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://chroniclingamerica.loc.gov/lccn/sn88085187/1904-03-19/ed-1/seq-2/\">http://chroniclingamerica.loc.gov/lccn/sn88085187/1904-03-19/ed-1/seq-2/</a>     (<a href=\"https://en.wikipedia.org/wiki/The_Tacoma_Times\" class=\"extiw\" title=\"w:The Tacoma Times\">The Tacoma Times</a>)",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "61832768": {
+          "pageid": 61832768,
+          "ns": 6,
+          "title": "File:Men's Linen Work Shirt.jpg",
+          "index": 8,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 2561851,
+              "width": 2911,
+              "height": 5316,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Men%27s_Linen_Work_Shirt.jpg/1280px-Men%27s_Linen_Work_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 2338,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Men%27s_Linen_Work_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Men%27s_Linen_Work_Shirt.jpg/1280px-Men%27s_Linen_Work_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 2338,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Men%27s_Linen_Work_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Men%27s_Linen_Work_Shirt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Men%27s_Linen_Work_Shirt.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=61832768",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2017-08-21 13:34:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Men's Linen Work Shirt",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images uploaded by Fæ|Attribution only license|White shirts|Template Unknown (author)|Clothing in the collections of the Missouri History Museum|1850s men's undress|Linen objects|Photographs from the Missouri History Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Men's linen work shirt, similar in style to those worn by riverboat workers.<br>Title: Men's Linen Work Shirt",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "circa 1850<div style=\"display: none;\">date QS:P,+1850-00-00T00:00:00Z/9,P1480,Q5727902</div>",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "Missouri History Museum<br>URL: <a rel=\"nofollow\" class=\"external free\" href=\"http://images.mohistory.org/image/A25D533C-DD36-1445-380E-E4CAA9C0BAE3/original.jpg\">http://images.mohistory.org/image/A25D533C-DD36-1445-380E-E4CAA9C0BAE3/original.jpg</a><br>Gallery: <a rel=\"nofollow\" class=\"external free\" href=\"http://collections.mohistory.org/resource/409629\">http://collections.mohistory.org/resource/409629</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "<p>UND - <a rel=\"nofollow\" class=\"external text\" href=\"http://rightsstatements.org/page/UND/1.0/?language=en\">Copyright undetermined</a><br>\n</p>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20170809113156/http://data.mohistory.org/molabapps/CCSearchNew/open-access.html\">MHS Open Access Policy</a>: <i>You are welcome to download and utilize any digital file that the Missouri Historical believes is likely in the public domain or is free of other known restrictions. This content is available free of charge and may be used without seeking permission from the Missouri Historical Society.</i>",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Attribution",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Courtesy of the Missouri Historical Society, St. Louis",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "165476060": {
+          "pageid": 165476060,
+          "ns": 6,
+          "title": "File:Seto linen shirt (Saatse Museum).jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 9204977,
+              "width": 6561,
+              "height": 4374,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Seto_linen_shirt_%28Saatse_Museum%29.jpg/1280px-Seto_linen_shirt_%28Saatse_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 853,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Seto_linen_shirt_%28Saatse_Museum%29.jpg/3840px-Seto_linen_shirt_%28Saatse_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Seto_linen_shirt_%28Saatse_Museum%29.jpg/1280px-Seto_linen_shirt_%28Saatse_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 853,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Seto_linen_shirt_%28Saatse_Museum%29.jpg/3840px-Seto_linen_shirt_%28Saatse_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Seto_linen_shirt_%28Saatse_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Seto_linen_shirt_(Saatse_Museum).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=165476060",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2025-05-17 19:44:08",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Seto linen shirt (Saatse Museum)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Template Unknown (author)|Files with coordinates missing SDC location of creation|Traditional clothing of Setomaa",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "GPSLatitude": {
+                  "value": "57.883915",
+                  "source": "commons-desc-page"
+                },
+                "GPSLongitude": {
+                  "value": "27.766349",
+                  "source": "commons-desc-page"
+                },
+                "GPSMapDatum": {
+                  "value": "WGS-84",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "traditional linen shirt worn by Seto women, Setu naise hame, STM SSM 16 E, Setomaa Muuseumid, Saatse Muuseum, <a rel=\"nofollow\" class=\"external free\" href=\"https://opendata.muis.ee/object/2811990\">https://opendata.muis.ee/object/2811990</a>, <a rel=\"nofollow\" class=\"external free\" href=\"https://reprexbase.eu/textilebase/index.php?title=Item:Q276\">https://reprexbase.eu/textilebase/index.php?title=Item:Q276</a>",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2017",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.muis.ee/en_GB/museaalview/2811990\">https://www.muis.ee/en_GB/museaalview/2811990</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Unknown author<span style=\"display: none;\">Unknown author</span>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "120665581": {
+          "pageid": 120665581,
+          "ns": 6,
+          "title": "File:White linen shirt - DPLA - 49305c2d44ff85895b8361c57c330e51 (page 1).jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 70272,
+              "width": 1062,
+              "height": 1436,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1731,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1731
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_(page_1).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120665581",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-07-18 15:10:28",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "White linen shirt - DPLA - 49305c2d44ff85895b8361c57c330e51 (page 1)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Files with no machine-readable author|Media contributed by Indiana Memory|Media contributed by the Digital Public Library of America|Media contributed by Conner Prairie|Digital Public Library of America files missing creator",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Linen shirt w/ placket at front, opening 3 3/4\" wide 15 1/4\" long w/ 3 buttons at opening vertical button holes; has a 5/8\" horizontal placket at bottom of front opening - 1 1/4\" pleats on each side w/ easing between; yoke on back of neck 3 1/2\" x 19 1/2\"; 2 piece collar has a stand of 1 1/4\"; patch on back extends from yoke to waist 17 3/4\" square; cuffs are 2 1/3\" x 8 3/4\" w/ one button and buttonhole; sleeve is gathered onto cuff reinforced weaving stitches in various places on shirt, top of sleeve, main body of back-underpatch, etc.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/40px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/60px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"20\" data-file-height=\"20\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://cdm17475.contentdm.oclc.org/iiif/2/CPClothing:874/full/full/0/default.jpg\">File URL</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/40px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/60px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"460\" data-file-height=\"460\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/iiif/info/CPClothing/877/manifest.json\">IIIF manifest</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/40px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/60px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/cdm/ref/collection/CPClothing/id/877\">Catalog record</a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image might not be in the public domain outside of the United States; this especially applies in the countries and areas that do not apply the <a href=\"https://en.wikipedia.org/wiki/rule_of_the_shorter_term\" class=\"extiw\" title=\"w:rule of the shorter term\">rule of the shorter term</a> for US works, such as Canada, Mainland China (not Hong Kong or Macao), Germany, Mexico, and Switzerland. The creator and year of publication are essential information and must be provided. See <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Public_domain\" class=\"extiw\" title=\"w:Wikipedia:Public domain\">Wikipedia:Public domain</a> and <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Copyrights\" class=\"extiw\" title=\"w:Wikipedia:Copyrights\">Wikipedia:Copyrights</a> for more details.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "120665592": {
+          "pageid": 120665592,
+          "ns": 6,
+          "title": "File:White linen shirt - DPLA - 49305c2d44ff85895b8361c57c330e51 (page 2).jpg",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 67145,
+              "width": 1062,
+              "height": 1436,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1731,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/8/8c/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1731
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_linen_shirt_-_DPLA_-_49305c2d44ff85895b8361c57c330e51_(page_2).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120665592",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-07-18 15:10:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "White linen shirt - DPLA - 49305c2d44ff85895b8361c57c330e51 (page 2)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Files with no machine-readable author|Media contributed by Indiana Memory|Media contributed by the Digital Public Library of America|Media contributed by Conner Prairie|Digital Public Library of America files missing creator",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Linen shirt w/ placket at front, opening 3 3/4\" wide 15 1/4\" long w/ 3 buttons at opening vertical button holes; has a 5/8\" horizontal placket at bottom of front opening - 1 1/4\" pleats on each side w/ easing between; yoke on back of neck 3 1/2\" x 19 1/2\"; 2 piece collar has a stand of 1 1/4\"; patch on back extends from yoke to waist 17 3/4\" square; cuffs are 2 1/3\" x 8 3/4\" w/ one button and buttonhole; sleeve is gathered onto cuff reinforced weaving stitches in various places on shirt, top of sleeve, main body of back-underpatch, etc.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/40px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/60px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"20\" data-file-height=\"20\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://cdm17475.contentdm.oclc.org/iiif/2/CPClothing:875/full/full/0/default.jpg\">File URL</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/40px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/60px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"460\" data-file-height=\"460\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/iiif/info/CPClothing/877/manifest.json\">IIIF manifest</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/40px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/60px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/cdm/ref/collection/CPClothing/id/877\">Catalog record</a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image might not be in the public domain outside of the United States; this especially applies in the countries and areas that do not apply the <a href=\"https://en.wikipedia.org/wiki/rule_of_the_shorter_term\" class=\"extiw\" title=\"w:rule of the shorter term\">rule of the shorter term</a> for US works, such as Canada, Mainland China (not Hong Kong or Macao), Germany, Mexico, and Switzerland. The creator and year of publication are essential information and must be provided. See <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Public_domain\" class=\"extiw\" title=\"w:Wikipedia:Public domain\">Wikipedia:Public domain</a> and <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Copyrights\" class=\"extiw\" title=\"w:Wikipedia:Copyrights\">Wikipedia:Copyrights</a> for more details.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "120706181": {
+          "pageid": 120706181,
+          "ns": 6,
+          "title": "File:White linen shirt - DPLA - 98a0086f55b5e7cbbdc779ee97df5beb (page 1).jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 64331,
+              "width": 1074,
+              "height": 1379,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1644,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1644
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_(page_1).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120706181",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-07-18 22:13:21",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "White linen shirt - DPLA - 98a0086f55b5e7cbbdc779ee97df5beb (page 1)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Files with no machine-readable author|Media contributed by Indiana Memory|Media contributed by the Digital Public Library of America|Media contributed by Conner Prairie|Digital Public Library of America files missing creator",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Linen shirt made w/ selvedge at top and bottom - only 1 seam around gussets at neck, underarms and bottom openings; placket at front neck opening, 5/8\" wide 9 4/8\" long; button hole and button collar finer woven linen w/ button and button hold stroke gathers at neckline - front and back and sleeve cuff pleats placed evenly around arm hole; lower left side backstitches \"+x\" w/ \"x\" in lower right section; placket along shoulders 3/4\" x 7\" sewn over neck gussets.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/40px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/60px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"20\" data-file-height=\"20\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://cdm17475.contentdm.oclc.org/iiif/2/CPClothing:990/full/full/0/default.jpg\">File URL</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/40px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/60px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"460\" data-file-height=\"460\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/iiif/info/CPClothing/993/manifest.json\">IIIF manifest</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/40px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/60px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/cdm/ref/collection/CPClothing/id/993\">Catalog record</a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image might not be in the public domain outside of the United States; this especially applies in the countries and areas that do not apply the <a href=\"https://en.wikipedia.org/wiki/rule_of_the_shorter_term\" class=\"extiw\" title=\"w:rule of the shorter term\">rule of the shorter term</a> for US works, such as Canada, Mainland China (not Hong Kong or Macao), Germany, Mexico, and Switzerland. The creator and year of publication are essential information and must be provided. See <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Public_domain\" class=\"extiw\" title=\"w:Wikipedia:Public domain\">Wikipedia:Public domain</a> and <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Copyrights\" class=\"extiw\" title=\"w:Wikipedia:Copyrights\">Wikipedia:Copyrights</a> for more details.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "120706189": {
+          "pageid": 120706189,
+          "ns": 6,
+          "title": "File:White linen shirt - DPLA - 98a0086f55b5e7cbbdc779ee97df5beb (page 2).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 61894,
+              "width": 1074,
+              "height": 1379,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1644,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/f/f3/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1644
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:White_linen_shirt_-_DPLA_-_98a0086f55b5e7cbbdc779ee97df5beb_(page_2).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=120706189",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2022-07-18 22:13:26",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "White linen shirt - DPLA - 98a0086f55b5e7cbbdc779ee97df5beb (page 2)",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "PD US|Files with no machine-readable author|Media contributed by Indiana Memory|Media contributed by the Digital Public Library of America|Media contributed by Conner Prairie|Digital Public Library of America files missing creator",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Linen shirt made w/ selvedge at top and bottom - only 1 seam around gussets at neck, underarms and bottom openings; placket at front neck opening, 5/8\" wide 9 4/8\" long; button hole and button collar finer woven linen w/ button and button hold stroke gathers at neckline - front and back and sleeve cuff pleats placed evenly around arm hole; lower left side backstitches \"+x\" w/ \"x\" in lower right section; placket along shoulders 3/4\" x 7\" sewn over neck gussets.",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/40px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Codex_icon_download_color-progressive.svg/60px-Codex_icon_download_color-progressive.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"20\" data-file-height=\"20\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"https://cdm17475.contentdm.oclc.org/iiif/2/CPClothing:991/full/full/0/default.jpg\">File URL</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/40px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/International_Image_Interoperability_Framework_logo.png/60px-International_Image_Interoperability_Framework_logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"460\" data-file-height=\"460\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/iiif/info/CPClothing/993/manifest.json\">IIIF manifest</a></span><span style=\"display:inline-block; padding: 4px 16px; vertical-align: middle; border-left: 2px solid #a2a9b1;\"><span class=\"skin-invert\" typeof=\"mw:File\"><span><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/40px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"24\" height=\"24\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Breezeicons-actions-22-database-index.svg/60px-Breezeicons-actions-22-database-index.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></span></span> <a rel=\"nofollow\" class=\"external text\" href=\"http://iuidigital.contentdm.oclc.org/cdm/ref/collection/CPClothing/id/993\">Catalog record</a></span>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image might not be in the public domain outside of the United States; this especially applies in the countries and areas that do not apply the <a href=\"https://en.wikipedia.org/wiki/rule_of_the_shorter_term\" class=\"extiw\" title=\"w:rule of the shorter term\">rule of the shorter term</a> for US works, such as Canada, Mainland China (not Hong Kong or Macao), Germany, Mexico, and Switzerland. The creator and year of publication are essential information and must be provided. See <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Public_domain\" class=\"extiw\" title=\"w:Wikipedia:Public domain\">Wikipedia:Public domain</a> and <a href=\"https://en.wikipedia.org/wiki/Wikipedia:Copyrights\" class=\"extiw\" title=\"w:Wikipedia:Copyrights\">Wikipedia:Copyrights</a> for more details.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Public domain",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Copyrighted": {
+                  "value": "False",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "pd",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

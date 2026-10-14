@@ -1,0 +1,793 @@
+{
+  "requested_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22wooden%22+%22jewellery+box%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "final_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22wooden%22+%22jewellery+box%22+filetype%3Abitmap&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url%7Csize%7Cmime%7Cextmetadata&iiurlwidth=1280",
+  "retrieved_at": "2026-10-12T19:56:30.007662+00:00",
+  "response": {
+    "batchcomplete": "",
+    "query": {
+      "pages": {
+        "65489283": {
+          "pageid": 65489283,
+          "ns": 6,
+          "title": "File:Box, jewellery (AM 1998.54.1-10).jpg",
+          "index": 1,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1861811,
+              "width": 2272,
+              "height": 1296,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg/1280px-Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 730,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg/1280px-Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 730,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Box%2C_jewellery_%28AM_1998.54.1-10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Box,_jewellery_(AM_1998.54.1-10).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=65489283",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-01-13 14:37:41",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nBox, jewellery</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images uploaded by Fæ|Artworks without Wikidata item|Images from Auckland Museum|Unsupported object|Artworks with known accession number|Jewellery boxes in Auckland Museum|1930s in Auckland Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nWilliam Seuffert; John Park</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "Box, inlaid - hinged lid depicts flower inlay wide border, centre rectangular image people in a rowing boat houses on the shore, sides of mottled wood, spiral shapes inlaid on edges. centre front key hole and inlay initials \"J.P.\" felt on bottom of box, interior blue velvet lined box and lid. Inside box two metal keys tied together with string",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "George V (1910 - 1936)-House of Windsor-English reign; 1930s; thirties; 22 Jul 1998; 21 Sep 1998",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"http://api.aucklandmuseum.com/id/humanhistory/object/55056\">API data</a><br>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://www.aucklandmuseum.com/collection/object/am_humanhistory-object-55056\">Catalogue record</a>\n</p>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://api.aucklandmuseum.com/id/media/v/24003\">Photo</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image has been released as \"CCBY\" by Auckland Museum. For details refer to the <a href=\"//commons.wikimedia.org/wiki/Commons:Batch_uploading/AucklandMuseumCCBY\" title=\"Commons:Batch uploading/AucklandMuseumCCBY\">Commons project page</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Auckland Museum",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "65489290": {
+          "pageid": 65489290,
+          "ns": 6,
+          "title": "File:Box, jewellery (AM 1998.54.1-12).jpg",
+          "index": 2,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1574903,
+              "width": 1683,
+              "height": 1704,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg/1280px-Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 1296,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/77/Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg/1280px-Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1296,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/77/Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Box%2C_jewellery_%28AM_1998.54.1-12%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Box,_jewellery_(AM_1998.54.1-12).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=65489290",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-01-13 14:37:52",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nBox, jewellery</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images uploaded by Fæ|Artworks without Wikidata item|Images from Auckland Museum|Unsupported object|Artworks with known accession number|Jewellery boxes in Auckland Museum|1930s in Auckland Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nWilliam Seuffert; John Park</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "Box, inlaid - hinged lid depicts flower inlay wide border, centre rectangular image people in a rowing boat houses on the shore, sides of mottled wood, spiral shapes inlaid on edges. centre front key hole and inlay initials \"J.P.\" felt on bottom of box, interior blue velvet lined box and lid. Inside box two metal keys tied together with string",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "George V (1910 - 1936)-House of Windsor-English reign; 1930s; thirties; 22 Jul 1998; 21 Sep 1998",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"http://api.aucklandmuseum.com/id/humanhistory/object/55056\">API data</a><br>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://www.aucklandmuseum.com/collection/object/am_humanhistory-object-55056\">Catalogue record</a>\n</p>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://api.aucklandmuseum.com/id/media/v/24004\">Photo</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image has been released as \"CCBY\" by Auckland Museum. For details refer to the <a href=\"//commons.wikimedia.org/wiki/Commons:Batch_uploading/AucklandMuseumCCBY\" title=\"Commons:Batch uploading/AucklandMuseumCCBY\">Commons project page</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Auckland Museum",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "65367461": {
+          "pageid": 65367461,
+          "ns": 6,
+          "title": "File:Chest, table (AM 2017.43.8).jpg",
+          "index": 6,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 401676,
+              "width": 1072,
+              "height": 854,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Chest%2C_table_%28AM_2017.43.8%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1020,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Chest%2C_table_%28AM_2017.43.8%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1020
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Chest%2C_table_%28AM_2017.43.8%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chest,_table_(AM_2017.43.8).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=65367461",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2018-01-08 07:27:17",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nChest, table</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Images uploaded by Fæ|Artworks without Wikidata item|Images from Auckland Museum|Unsupported object|Artworks with known accession number|1960s in Auckland Museum|Furniture in Auckland Museum|Conscientious objecter in Auckland Museum",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nDuffy, Lionel Vernon</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "Wooden table chest Made by Lionel Vernon Duffy while interned as a conscientious objecter during WW2. small wooden chest with two pull-out wooden drawers; inlaid wood on lid and inblaid paua on lid and on the front of each drawer, possibly representing letters \"VI\"; slots at back of each drawer for opening",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "Late 1940s-1960s; 06 Jun 2017; World War 2-wars; 26 May 2017; (1942-1945); 1942-1945",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<p><a rel=\"nofollow\" class=\"external text\" href=\"http://api.aucklandmuseum.com/id/humanhistory/object/821747\">API data</a><br>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://www.aucklandmuseum.com/collection/object/am_humanhistory-object-821747\">Catalogue record</a>\n</p>\n<a rel=\"nofollow\" class=\"external text\" href=\"https://api.aucklandmuseum.com/id/media/v/509349\">Photo</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "This image has been released as \"CCBY\" by Auckland Museum. For details refer to the <a href=\"//commons.wikimedia.org/wiki/Commons:Batch_uploading/AucklandMuseumCCBY\" title=\"Commons:Batch uploading/AucklandMuseumCCBY\">Commons project page</a>.",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "Auckland Museum",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "84936216": {
+          "pageid": 84936216,
+          "ns": 6,
+          "title": "File:Juwelenkist Juwelenkist met gebombeerd deksel en bekleed met perkament, BK-NM-9498.jpg",
+          "index": 3,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1529935,
+              "width": 6117,
+              "height": 4499,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg/1280px-Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 941,
+              "responsiveUrls": {
+                "2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg/3840px-Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg/1280px-Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 941,
+                "srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg/3840px-Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament%2C_BK-NM-9498.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Juwelenkist_Juwelenkist_met_gebombeerd_deksel_en_bekleed_met_perkament,_BK-NM-9498.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=84936216",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2019-12-16 01:04:53",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Juwelenkist Juwelenkist met gebombeerd deksel en bekleed met perkament, BK-NM-9498",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "CC-Zero|Velvet in the Rijksmuseum Amsterdam|Wooden boxes in the Rijksmuseum Amsterdam|Jewellery boxes in the Rijksmuseum Amsterdam",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "<br><br><big><b>Identificatie</b></big><br><b>Titel(s): </b>Juwelenkist. Juwelenkist met gebombeerd deksel en bekleed met perkament<br><b>Objecttype:</b> kist juwelenkist juwelendoos <br><b>Objectnummer:</b> BK-NM-9498<br><b>Omschrijving:</b> Juwelenkist met gebombeerd deksel en bekleed met groen en geel perkament waarin vergulde geperste ornamenten. Van binnen bekleed met fluweel en zijde. Op het deksel het jaartal 1740.<br><br><big><b>Vervaardiging</b></big><br><b>Vervaardiger:</b> vervaardiger: anoniem<br><b>Plaats vervaardiging:</b> Nederland (mogelijk)<br><b>Datering:</b> 1740<br><b>Fysieke kenmerken:</b> hout, perkament, leer, fluweel en zijde<br><b>Materiaal:</b> hout perkament leer fluweel zijde <br><b>Techniek:</b> persen<br><b>Afmetingen:</b> h 8,0 cm.  × b 12,5 cm.  × d 6,5 mm × l 22,8 cm.  (Overgenomen uit het inventarisboek.) × h 8 cm.  (Overgenomen uit het inventarisboek.)<br><br><big><b>Verwerving en rechten</b></big><br><b>Verwerving:</b> aankoop 1892<br><b>Copyright:</b> Publiek domein",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "1740",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://hdl.handle.net/10934/RM0001.COLLECT.356753\">http://hdl.handle.net/10934/RM0001.COLLECT.356753</a>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "Rijksmuseum",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Zero, Public Domain Dedication",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "false",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "196848128": {
+          "pageid": 196848128,
+          "ns": 6,
+          "title": "File:Naqshli yog‘och quti 2.png",
+          "index": 5,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 1779196,
+              "width": 1920,
+              "height": 1080,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Naqshli_yog%E2%80%98och_quti_2.png/1280px-Naqshli_yog%E2%80%98och_quti_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 720,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/7/72/Naqshli_yog%E2%80%98och_quti_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Naqshli_yog%E2%80%98och_quti_2.png/1280px-Naqshli_yog%E2%80%98och_quti_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 720,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/7/72/Naqshli_yog%E2%80%98och_quti_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Naqshli_yog%E2%80%98och_quti_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Naqshli_yog%E2%80%98och_quti_2.png",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=196848128",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-08-05 13:21:06",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Naqshli yog‘och quti 2",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Wooden boxes|Jewellery boxes|Self-published work",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "A decorative wooden box representing contemporary Uzbek craftsmanship. It has a square form and hinged lid, with carved floral and paisley motifs enhanced by white inlay. Intended for storing jewelry and other small valuables.",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-08-05",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:AIDEPCUL&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:AIDEPCUL (page does not exist)\">AIDEPCUL</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/png"
+            }
+          ]
+        },
+        "55587041": {
+          "pageid": 55587041,
+          "ns": 6,
+          "title": "File:Roman box mount (FindID 34644).jpg",
+          "index": 7,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 381072,
+              "width": 3215,
+              "height": 1444,
+              "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Roman_box_mount_%28FindID_34644%29.jpg/1280px-Roman_box_mount_%28FindID_34644%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+              "thumbwidth": 1280,
+              "thumbheight": 575,
+              "responsiveUrls": {
+                "2": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Roman_box_mount_%28FindID_34644%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+              },
+              "thumbattribs": {
+                "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Roman_box_mount_%28FindID_34644%29.jpg/1280px-Roman_box_mount_%28FindID_34644%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 575,
+                "srcset": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Roman_box_mount_%28FindID_34644%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Roman_box_mount_%28FindID_34644%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Roman_box_mount_(FindID_34644).jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=55587041",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2017-01-30 10:25:51",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "<div class=\"fn\">\nRoman box mount</div>",
+                  "source": "commons-desc-page"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Portable Antiquities Scheme|Images uploaded by Fæ|Portable Antiquities Scheme, SF|Earrings in the Portable Antiquities Scheme",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Artist": {
+                  "value": "<div class=\"fn value\">\nSuffolk County Council Archaeology Service, Faye Minter, 2003-09-24 16:41:27</div>",
+                  "source": "commons-desc-page"
+                },
+                "ImageDescription": {
+                  "value": "A copper-alloy complete mount, in very good condition. It is roughly oval-shaped in plan measuring 40mm in length and 36.5mm in width.  The front face depicts a strong featured womans face, the eyes are oval-shaped with grooves delimiting them and a circular indentation in their centre. The nose is projecting and fairly large and the lips open. Above the face an almost triangular-shaped elaborate head dress is present, it projects forward over the face at about a 45 degree angle. This hair dress consists of a transverse row of longditudinal grooves with circular indentations at their ends and above this a band of overhanging hair ? also formed of longditudinal grooves. Above this band of 'hair' the pinicle of the head dress is smooth and has an irregularly shaped hole in its top, this hole has not been made recently but is unlikley to have been part of the original design of the mount. Beneath the triangular-shaped hair style and to either side of the face there is more hair, it is swept back with decorative transverse wavy grooves. Beneath this hair there is one circular perforation, or attachment hole, on both side of the face. Below these perforations there are oval-shaped lobes, which each have a circular indentation in their centre. These could be representing the ears of the woman and perhaps the indentations are ear-rings. The back face is undecorated and hollow. There is a 90 degree projection from the top edge of the head dress which runs down to the base of the hair and  is 22mm in width. Inside this projection it is hollow and the rest of the back face is concave where the face is convex on the front. Ralph Jackson of the British Museum was consulted about the use of this mount as the attachment holes and its shape imply that it is not a vessel/ handle mount. He confirmed that is Roman in date and believes that  it may have been a mount from a wooden casket or jewellery box - hence the small nail holes -, similar to the more ubiquitous lion head studs. In view of the fact that a hair-ornament and ?ear-rings seem to be depicted these would not be inappropriate to such a proposed use (Ralph Jackson Pers.comm 2003).",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "between 43 and 410",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://finds.org.uk/database/ajax/download/id/9354\">https://finds.org.uk/database/ajax/download/id/9354</a><br>Catalog: <a rel=\"nofollow\" class=\"external free\" href=\"https://finds.org.uk/database/images/image/id/9354\">https://finds.org.uk/database/images/image/id/9354</a><br>Artefact: <a rel=\"nofollow\" class=\"external free\" href=\"https://finds.org.uk/database/artefacts/record/id/34644\">https://finds.org.uk/database/artefacts/record/id/34644</a>",
+                  "source": "commons-desc-page"
+                },
+                "Permission": {
+                  "value": "Attribution-ShareAlike License",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 2.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 2.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Attribution": {
+                  "value": "The Portable Antiquities Scheme/ The Trustees of the British Museum",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/2.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-2.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        },
+        "186867691": {
+          "pageid": 186867691,
+          "ns": 6,
+          "title": "File:Small wooden jewellery box, New Kingdom 1500-1000 BCE Birmingham Museum and Art Gallery ... less.jpg",
+          "index": 4,
+          "imagerepository": "local",
+          "imageinfo": [
+            {
+              "size": 55899,
+              "width": 1002,
+              "height": 1002,
+              "thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Small_wooden_jewellery_box%2C_New_Kingdom_1500-1000_BCE_Birmingham_Museum_and_Art_Gallery_..._less.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+              "thumbwidth": 1280,
+              "thumbheight": 1280,
+              "thumbattribs": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/6/69/Small_wooden_jewellery_box%2C_New_Kingdom_1500-1000_BCE_Birmingham_Museum_and_Art_Gallery_..._less.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+                "decoding": "async",
+                "loading": "lazy",
+                "width": 1280,
+                "height": 1280
+              },
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Small_wooden_jewellery_box%2C_New_Kingdom_1500-1000_BCE_Birmingham_Museum_and_Art_Gallery_..._less.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+              "descriptionurl": "https://commons.wikimedia.org/wiki/File:Small_wooden_jewellery_box,_New_Kingdom_1500-1000_BCE_Birmingham_Museum_and_Art_Gallery_..._less.jpg",
+              "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=186867691",
+              "extmetadata": {
+                "DateTime": {
+                  "value": "2026-03-24 08:09:26",
+                  "source": "mediawiki-metadata",
+                  "hidden": ""
+                },
+                "ObjectName": {
+                  "value": "Small wooden jewellery box, New Kingdom 1500-1000 BCE Birmingham Museum and Art Gallery ... less",
+                  "source": "mediawiki-metadata"
+                },
+                "CommonsMetadataExtension": {
+                  "value": 1.2,
+                  "source": "extension",
+                  "hidden": ""
+                },
+                "Categories": {
+                  "value": "Birmingham Museum and Art Gallery|Jewellery boxes|Self-published work|Ancient Egyptian jewellery",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "Assessments": {
+                  "value": "",
+                  "source": "commons-categories",
+                  "hidden": ""
+                },
+                "ImageDescription": {
+                  "value": "Small wooden jewellery box, New Kingdom 1500-1000 BCE Birmingham Museum and Art Gallery  ... less",
+                  "source": "commons-desc-page"
+                },
+                "DateTimeOriginal": {
+                  "value": "2026-03-24",
+                  "source": "commons-desc-page"
+                },
+                "Credit": {
+                  "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                  "source": "commons-desc-page"
+                },
+                "Artist": {
+                  "value": "<a href=\"//commons.wikimedia.org/wiki/User:SpeakingArch\" title=\"User:SpeakingArch\">SpeakingArch</a>",
+                  "source": "commons-desc-page"
+                },
+                "LicenseShortName": {
+                  "value": "CC BY-SA 4.0",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "UsageTerms": {
+                  "value": "Creative Commons Attribution-Share Alike 4.0",
+                  "source": "commons-desc-page"
+                },
+                "AttributionRequired": {
+                  "value": "true",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "LicenseUrl": {
+                  "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                  "source": "commons-desc-page"
+                },
+                "Copyrighted": {
+                  "value": "True",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "Restrictions": {
+                  "value": "",
+                  "source": "commons-desc-page",
+                  "hidden": ""
+                },
+                "License": {
+                  "value": "cc-by-sa-4.0",
+                  "source": "commons-templates",
+                  "hidden": ""
+                }
+              },
+              "mime": "image/jpeg"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

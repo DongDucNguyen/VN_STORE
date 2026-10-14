@@ -119,6 +119,36 @@ def test_protected_brand_tokens(snap):
     assert PhraseSuggester(modified).suggest("khăn nụa") == []
 
 
+def test_protected_names_include_accentless_spellings(snap):
+    import copy
+    modified = copy.deepcopy(snap)
+    # Fixture SKUs contain "lua"; use unrelated SKUs so this specifically checks
+    # name protection instead of passing because of the existing SKU guard.
+    for product in modified.products.values():
+        for index, variant in enumerate(product.get("variants", [])):
+            variant["sku"] = f"item-{index}"
+    assert PhraseSuggester(modified).suggest("khăn lua")
+    modified.brands["test-brand"] = {"name": "Lúa", "aliases": []}
+    assert PhraseSuggester(modified).suggest("khăn lua") == []
+
+
+def test_decomposed_vietnamese_keeps_original_spans(snap):
+    import unicodedata
+    original = unicodedata.normalize("NFD", "Tìm khăn nụa dưới 300k!")
+    suggestions = PhraseSuggester(snap).suggest(original)
+    assert suggestions
+    expected = original.replace(unicodedata.normalize("NFD", "nụa"), "lụa")
+    assert suggestions[0]["text"] == expected
+    assert unicodedata.normalize("NFC", suggestions[0]["text"]) == "Tìm khăn lụa dưới 300k!"
+
+
+def test_broken_wav_does_not_reach_asr(client):
+    response = client.post("/search/voice?review=true", content=wav(1)[:-100])
+    assert response.status_code == 422
+    assert response.json()["detail"]["code"] == "audio_invalid"
+    assert not api.state.voice.adapter.calls
+
+
 def test_category_material_pair_is_supported_without_adding_words(snap):
     import copy
     modified = copy.deepcopy(snap)
