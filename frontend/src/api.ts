@@ -151,14 +151,15 @@ export interface ModelStatus {
   model_id: string | null;
   revision: string | null;
   reason: string | null;
+  detail?: string | null;
 }
 
 export interface Health {
   status: string;
   catalog: { version: string; products_visible: number; include_drafts: boolean;
     publication_mode?: "standard" | "internal_demo" } | null;
-  search?: { keyword: string; voice: string; image: string; semantic?: string;
-    models?: { voice: ModelStatus; image: ModelStatus; text?: ModelStatus } };
+  search?: { keyword: string; voice: string; image: string; semantic?: string; assistant?: string;
+    models?: { voice: ModelStatus; image: ModelStatus; text?: ModelStatus; assistant?: ModelStatus | null } };
 }
 
 export class ApiError extends Error {
@@ -259,4 +260,133 @@ export async function modalityProblem(kind: Modality, refresh = false): Promise<
   if (h.search?.[kind] === "ok") return null;
   const reason = st?.reason ?? "model chưa được chọn qua benchmark";
   return `Tìm bằng ${MODALITY_NAME[kind]} chưa sẵn sàng: ${reason}. Bạn vẫn có thể tìm bằng chữ.`;
+}
+
+// ---------- Trợ lý tư vấn ----------
+
+export type ConsentLevel = "none" | "history" | "memory";
+
+export interface ReviewStats { count: number; average: number | null }
+export interface ReviewSummary extends ReviewStats {
+  distribution: Record<string, number>;
+  verified_share: number | null;
+  aspects: { aspect: string; positive: number; negative: number; review_ids: string[] }[];
+  excerpts: { review_id: string; rating: number | null; text: string; origin: string; source_url: string | null;
+    verified_purchase: boolean; created_at: string }[];
+  note_vi: string;
+}
+export type ChatCard = ProductSummary & { reason: string; rank: number; review_stats?: ReviewStats };
+export interface Evaluation {
+  product_id: string;
+  rows: { label: string; value: string; field: string }[];
+  origin: { label: string; status: string; detail: string | null }[];
+  missing: string[];
+  description: string;
+  reviews: ReviewSummary;
+  card: ChatCard;
+}
+export interface Assessment { suits: string[]; not_suits: string[]; ask_seller: string[] }
+export interface Comparison { products: ChatCard[]; rows: { label: string; values: (string | null)[] }[] }
+
+export interface AssistantSession {
+  session_id: string;
+  consent_level: ConsentLevel;
+  consent_needed: boolean;
+  consent_options: Record<ConsentLevel, string>;
+  greeting_vi: string;
+  assistant: { state: "ok" | "basic" | "off"; model: ModelStatus; prompt_version: string };
+}
+export interface MemoryFact { id: number; kind: string; kind_label: string; label_vi: string; origin: string;
+  last_confirmed_at: string; expires_at: string | null }
+export interface AssistantMe {
+  consent_level: ConsentLevel;
+  consent_needed: boolean;
+  consent_options: Record<ConsentLevel, string>;
+  facts: MemoryFact[];
+  sessions: { id: string; started_at: string; ended_at: string | null; summary_vi: string | null;
+    first_message: string | null }[];
+  assistant: AssistantSession["assistant"];
+}
+
+export type AssistantEvent =
+  | { kind: "session"; data: { session_id: string; mode: string } }
+  | { kind: "status"; data: { stage: string; label: string } }
+  | { kind: "delta"; data: { text: string } }
+  | { kind: "cards"; data: { items: ChatCard[] } }
+  | { kind: "clarify"; data: { question: string } }
+  | { kind: "evaluation"; data: Evaluation }
+  | { kind: "assessment"; data: Assessment }
+  | { kind: "comparison"; data: Comparison }
+  | { kind: "saved"; data: { recommendation_ids: number[] } }
+  | { kind: "error"; data: { code: string; message: string } }
+  | { kind: "done"; data: { intent: string; message: string; fallback: boolean; mode: string;
+      timings_ms: Record<string, number> } };
+
+const json = (body: unknown): RequestInit => ({
+  method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+});
+
+export const assistantApi = {
+  createSession: (productId?: string) =>
+    request<AssistantSession>("/assistant/sessions", json({ product_id: productId ?? null })),
+  session: (sid: string) =>
+    request<{ session_id: string; ended_at: string | null; messages: { role: "user" | "assistant"; content: string;
+      payload?: { recommendations?: { product_id: string; reason: string }[] } | null }[] }>(
+      `/assistant/sessions/${sid}`),
+  end: (sid: string) => request<{ ended: boolean }>(`/assistant/sessions/${sid}/end`, { method: "POST" }),
+  deleteSession: (sid: string) => request<{ deleted: boolean }>(`/assistant/sessions/${sid}`, { method: "DELETE" }),
+  me: () => request<AssistantMe>("/assistant/me"),
+  setConsent: (level: ConsentLevel) =>
+    request<{ consent_level: ConsentLevel }>("/assistant/me/consent", { ...json({ level }), method: "PUT" }),
+  editFact: (id: number, label: string) =>
+    request<{ ok: boolean }>(`/assistant/me/facts/${id}`, { ...json({ label_vi: label }), method: "PATCH" }),
+  deleteFact: (id: number) => request<{ ok: boolean }>(`/assistant/me/facts/${id}`, { method: "DELETE" }),
+  deleteMe: () => request<{ deleted: boolean }>("/assistant/me", { method: "DELETE" }),
+  exportMe: () => request<unknown>("/assistant/me/export"),
+  recEvent: (id: number, event: "clicked" | "favorited" | "feedback", value?: number) =>
+    request<{ ok: boolean }>(`/assistant/recommendations/${id}/event`, json({ event, value: value ?? null })),
+  reviews: (pid: string) => request<ReviewSummary>(`/products/${encodeURIComponent(pid)}/reviews`),
+  addReview: (pid: string, body: { rating: number; body_vi: string; author_display?: string }) =>
+    request<{ status: string; message: string }>(`/products/${encodeURIComponent(pid)}/reviews`, json(body)),
+};
+
+/** Gửi tin nhắn và đọc luồng SSE. Lỗi HTTP (429/503/404…) ném ApiError như các lời gọi khác. */
+export async function chatStream(sid: string, body: { text: string; input_mode?: "text" | "voice";
+  context_product_id?: string | null }, onEvent: (e: AssistantEvent) => void, signal?: AbortSignal): Promise<void> {
+  let res: Response;
+  try {
+    res = await fetch(`/api/assistant/sessions/${sid}/messages`, { ...json(body), signal });
+  } catch (error) {
+    if (signal?.aborted) throw error;
+    throw new ApiError(0, "network", "Không kết nối được máy chủ. Kiểm tra backend đã chạy chưa.");
+  }
+  if (!res.ok || !res.body) {
+    let code = "http_error";
+    let message = `Lỗi máy chủ (${res.status})`;
+    try {
+      const b = await res.json();
+      if (b?.detail?.message) { code = b.detail.code ?? code; message = b.detail.message; }
+    } catch { /* giữ mặc định */ }
+    throw new ApiError(res.status, code, message);
+  }
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += decoder.decode(value, { stream: true });
+    let cut: number;
+    while ((cut = buf.indexOf("\n\n")) !== -1) {
+      const block = buf.slice(0, cut);
+      buf = buf.slice(cut + 2);
+      let kind = "message";
+      let data = "";
+      for (const line of block.split("\n")) {
+        if (line.startsWith("event: ")) kind = line.slice(7);
+        else if (line.startsWith("data: ")) data += line.slice(6);
+      }
+      if (data) onEvent({ kind, data: JSON.parse(data) } as AssistantEvent);
+    }
+  }
 }

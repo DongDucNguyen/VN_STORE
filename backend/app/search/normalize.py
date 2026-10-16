@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from decimal import Decimal, InvalidOperation
 
 _WS = re.compile(r"\s+")
 _TOKEN = re.compile(r"[0-9a-zà-ỹđ]+(?:[.,][0-9]+)*", re.IGNORECASE)
@@ -101,6 +102,29 @@ def has_accents(text: str) -> bool:
 
 def ngrams(toks: list[str], n: int = 2) -> list[str]:
     return ["_".join(toks[i:i + n]) for i in range(len(toks) - n + 1)]
+
+
+def measurement_terms(toks: list[str]) -> list[str]:
+    """Comparable quantities for retrieval, while preserving tokens used by the parser.
+
+    0.8 L and 800 ml share a term; a bare 800, a price, and 800 g do not.
+    """
+    units = {"l": ("volume", 1000), "ml": ("volume", 1),
+             "kg": ("mass", 1000), "g": ("mass", 1),
+             "cm": ("length", 10), "mm": ("length", 1)}
+    out = []
+    for number, unit in zip(toks, toks[1:]):
+        if unit not in units or not re.fullmatch(r"\d+(?:[.,]\d+)?", number):
+            continue
+        try:
+            dimension, factor = units[unit]
+            value = format(Decimal(number.replace(",", ".")) * factor, "f")
+        except InvalidOperation:
+            continue
+        if "." in value:
+            value = value.rstrip("0").rstrip(".")
+        out.append(f"measure_{dimension}_{value}")
+    return out
 
 
 def analyze(text: str, drop_stopwords: bool = False) -> tuple[list[str], list[str]]:

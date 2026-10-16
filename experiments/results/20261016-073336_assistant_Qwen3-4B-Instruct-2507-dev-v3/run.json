@@ -1,0 +1,80 @@
+{
+ "run": "20261016-073336_assistant_Qwen3-4B-Instruct-2507-dev-v3",
+ "adapter": "app.ml.llm:Qwen3_4B_Instruct",
+ "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+ "revision": "2bdfea4417ee390519508a6bc7dfbc36f3572981",
+ "license": "apache-2.0",
+ "preprocess": {
+  "device": "cuda",
+  "decoding": "greedy",
+  "prefill_chunk": 256
+ },
+ "set": "dev",
+ "timeout_s": 90.0,
+ "scenarios_sha256": "748439a5454c3b950ae245415369a697ea4ad7910305d8d91eb50ed3ba2aaecc",
+ "catalog_version": "seed-007-intended-uses",
+ "catalog_sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
+ "prompt_version": "assistant-2026-10-16.v3",
+ "prompt_hash": "8ffa0518c9128c59",
+ "code_commit": "3c3db442a90ce25c94d75fbc9686d023fa5aeeb1",
+ "python": "3.12.9",
+ "machine": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+ "metrics": {
+  "n_scenarios": 219,
+  "n_turns": 227,
+  "kw": {
+   "n": 153,
+   "success@3": 0.9216,
+   "ndcg@3": 0.7059,
+   "answered": 0.9542
+  },
+  "need": {
+   "n": 32,
+   "category_hit@3": 0.8929,
+   "precision@3": 0.881,
+   "no_match_correct": 1.0
+  },
+  "multi": {
+   "n": 8,
+   "pass": 0.625
+  },
+  "eval": {
+   "n": 16,
+   "intent_ok": 1.0,
+   "no_review_honesty": 1.0
+  },
+  "redteam": {
+   "n": 10,
+   "final_pass": 1.0,
+   "raw_violation": 0.5
+  },
+  "json_valid_rate": 1.0,
+  "fallback_rate": 0.0,
+  "hard_constraint_violations": 0,
+  "grounding_intervention_rate": 0.2335,
+  "grounding_by_check": {
+   "product_id": 0,
+   "price": 45,
+   "reviews": 3,
+   "origin": 5,
+   "health": 2,
+   "contact": 0,
+   "language": 1,
+   "token": 0
+  },
+  "latency_ms": {
+   "p50": 11063.4,
+   "p95": 15088.1,
+   "mean": 10818.0
+  },
+  "decode_tokens_per_s": 22.77,
+  "prompt_tokens_mean": 1358.5,
+  "vram_mib": {
+   "before": 4191,
+   "peak": 5231
+  },
+  "model_load_ms": 16941,
+  "score": 0.8849
+ },
+ "finished_at": "2026-10-16T08:14:32+07:00"
+}

@@ -1,5 +1,7 @@
 # VNStore — Việc ưu tiên tiếp theo (backlog sống)
 
+Mới **16/10/2026**: [trợ lý tư vấn AI](2026-10-16_GD7_tro-ly-tu-van.md) đã triển khai, model Qwen3-4B-Instruct-2507 chọn trên dev ([báo cáo](../model_selection/2026-10-16_assistant-model-selection.md)). Catalog lên **`seed-007-intended-uses`** (bổ sung `intended_uses` cho 330 sản phẩm): nhãn keyword/packet gắn hash seed-006 cần chuyển (mục 4) — `analyze_reviewed_pairs.py --catalog data_collection/import_runs/2026-10-15_223026-774908_enrich/catalog.before.json` vẫn chạy trên seed-006. Khi bật trợ lý trên GPU, `run_gpu_cuda12.ps1` chuyển voice/ảnh sang CPU.
+
 Demo **14/10/2026**: [đã gộp 4 commit main vào demo_version](2026-10-14_GD6_merge-main-demo.md), kết hợp sửa micro với đệm 300 ms, giữ English encoder CUDA/decoder CPU. 774 backend và 2 smoke browser model thật đạt; English vẫn giữ bản chép lời trên 31 mẫu, độ trễ API sau warmup 0,35–0,66 giây trên hai clip thử. BGE-M3 vẫn tắt mặc định; chưa nghiệm thu chất lượng trên người nói thật.
 
 Mới nhất **13/10/2026 (sáng)**: [bộ ảnh thử khám phá, ghép ảnh + chữ theo độ phủ, token kích thước](2026-10-13_GD5_bo-anh-kham-pha-va-gop-anh-chu.md). Gộp `tmp_data` (100 ảnh / 250 ca) vào `benchmarks/image/exploratory/`, chạy 3 model; sửa lỗi ảnh gần trùng + chữ đúng với món bị đẩy khỏi top 10 (`visual_text_rank=coverage`), "khăn 180 x 65" trả sô cô la (token kích thước), XSS nhỏ trên trang duyệt vùng cắt. **8/8 bước đạt: 771 backend (+3 skip), 28 Pillow, 142 E2E.**
@@ -127,6 +129,15 @@ P1.1–P1.17 đã xong phần công cụ — xem "Đã xong gần đây". Regist
 - Có thể làm bằng fixture trước khi có clip thật; dữ liệu thực vẫn do P0.4/P0.3 cung cấp.
 
 ## 4. P2 — Sau khi có dữ liệu dev
+
+### Trợ lý tư vấn (thêm 16/10/2026)
+- **A1** Thu 50–100 câu hỏi thật của khách/người thử, hai người chấm, chạy `scripts/benchmark/eval_assistant.py` như bộ test mới (bộ dev hiện tại đã dùng để chỉnh prompt v2–v3.3).
+- **A2** Xin phép thương hiệu, nhập đánh giá có nguồn bằng `scripts/import_raw/import_reviews.py`; hiện 0 đánh giá thật.
+- **A3** Đo voice trên CPU với clip thật khi trợ lý chiếm GPU; nếu quá chậm, thử `-ShareGpu -Assistant Qwen3_1_7B` hoặc chế độ cơ bản.
+- **A4** Chuyển nhãn keyword/packet seed-006 → seed-007 bằng `migrate_keyword_draft.py` (P1.17) trước khi đánh giá keyword trên catalog mới.
+- **A5** Dựng lại chỉ mục văn bản BGE-M3 nếu bật nhánh ngữ nghĩa (`product_text` đã có `intended_uses`).
+- **A6** Nếu nâng driver NVIDIA (CUDA ≥ 12.8): thử ORT CUDA mới và sàng lọc lại Qwen3.5-4B, Gemma-4-E2B (ORT 1.20 không nạp được GQA 11 đầu vào).
+
 
 GĐ5 đã triển khai `SearchConfig`, OCR Latin ONNX, crop/multi-view, BGE-M3 tùy chọn và `ablate.py`/`calibrate_no_match.py`; xem [lệnh và điều kiện](../../docs/giai-doan-5.md). Những việc “thử/hiệu chỉnh” bên dưới hiện có công cụ cho ngôn ngữ, VAD, RRF, OCR, crop và ngưỡng; **kết luận chất lượng vẫn chờ nhãn**. Denoise, contextual biasing/n-best, remove-background và fine-tune chưa triển khai/chưa được chọn. Không bật các biến thể smoke làm mặc định.
 

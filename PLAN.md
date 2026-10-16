@@ -2,6 +2,8 @@
 
 Ngày lập: 09/10/2026. Định hướng đã xác nhận: demo trước, ưu tiên mã nguồn mở và chi phí thấp.
 
+Mở rộng 16/10/2026: **trợ lý tư vấn AI chạy cục bộ** — [kế hoạch](docs/ke-hoach-tro-ly-ai.md), [báo cáo triển khai](reports/progress/2026-10-16_GD7_tro-ly-tu-van.md), [chọn model](reports/model_selection/2026-10-16_assistant-model-selection.md). Giữ nguyên các nguyên tắc của tài liệu này: không bịa giá/đánh giá/nguồn gốc, chọn model bằng đo đạc, tìm kiếm vẫn chạy khi model lỗi.
+
 Kiểm chứng 13/10/2026: [đối chứng hiệu quả sửa chữa](reports/progress/2026-10-13_GD5-6_kiem-chung-hieu-qua-sua-chua.md) đã tái hiện lỗi với mã trước sửa và siết ca kiểm tra micro bất đồng bộ. Kết quả kiểm thử phần mềm không thay cho nghiệm thu chất lượng trên dữ liệu thật.
 
 Ưu tiên hiện tại 13/10/2026: **hoàn thiện công cụ và độ ổn định trước**. Đã hoàn thành [P1.17 chuyển bản nháp keyword và đồng bộ trạng thái](reports/progress/2026-10-13_GD3_hoan-thanh-chuyen-nhap-va-cap-nhat-trang-thai.md); kiểm chứng cuối đạt 735 backend, 22 Pillow, 140 E2E. Phần nghiệm thu model/locked test còn cần nhãn và dữ liệu thật đã duyệt.

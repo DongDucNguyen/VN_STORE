@@ -1,5 +1,7 @@
 # Benchmark keyword
 
+Phân tích nhãn theo cặp 15/10: [83.999 cặp có bằng chứng duyệt, sửa tìm kiếm và đo trước/sau](../../reports/benchmark/2026-10-15_reviewed-pairs-analysis.md). Công cụ `scripts/benchmark/analyze_reviewed_pairs.py` đọc hai file ở thư mục gốc, tách xác nhận trực tiếp/suy ra/chưa duyệt và kiểm tra với nguồn. Đây là chẩn đoán train/dev; không chuyển export theo cặp thành benchmark `verified=true`.
+
 Định dạng JSONL, mỗi dòng một truy vấn:
 
 | Trường | Ý nghĩa |

@@ -59,6 +59,8 @@ LEXICON: list[dict] = [
     {"id": "lex-am-tra", "relation": "translation", "terms": ["ấm trà", "teapot"]},
     {"id": "lex-coc", "relation": "translation", "terms": ["cốc", "mug", "cup"]},
     {"id": "lex-hop", "relation": "translation", "terms": ["hộp", "box"]},
+    {"id": "lex-hop-but", "relation": "translation",
+     "terms": ["hộp đựng bút", "hộp bút", "ống cắm bút", "pen holder"]},
     {"id": "lex-nha-thu-cung", "relation": "translation", "terms": ["thú cưng", "pet"]},
     {"id": "lex-do-giat", "relation": "translation", "terms": ["đồ giặt", "quần áo bẩn", "laundry"]},
     {"id": "lex-banh-mi", "relation": "translation", "terms": ["bánh mì", "bread"]},

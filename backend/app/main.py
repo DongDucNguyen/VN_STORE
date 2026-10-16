@@ -12,6 +12,8 @@ Biến môi trường:
     VNSTORE_TEXT_ADAPTER    adapter embedding văn bản cho nhánh ngữ nghĩa (vd. app.ml.text:BGEM3); chỉ có tác dụng khi
                             VNSTORE_SEARCH_CONFIG đặt semantic_weight > 0. Lỗi/thiếu chỉ mục → tìm bằng chữ dùng BM25
     VNSTORE_TEXT_INDEX_DIR  thư mục chỉ mục văn bản (mặc định ../artifacts/indexes/text)
+    VNSTORE_LLM_ADAPTER     model của trợ lý tư vấn (vd. app.ml.llm:Qwen3_4B_Instruct); không đặt → trợ lý chế độ cơ bản.
+                            Các biến khác của trợ lý: xem app/assistant/service.py
 """
 from __future__ import annotations
 
@@ -29,6 +31,9 @@ from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, Field, ValidationError
 
 from .adapters import Busy, ImageEmbedder
+from .assistant.router import build_router as build_assistant_router
+from .assistant.service import AssistantService
+from .assistant.tools import Catalog
 from .catalog.present import product_detail, product_summary
 from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot
 from .media import MAX_AUDIO_BYTES, MAX_IMAGE_BYTES, MediaError
@@ -57,6 +62,7 @@ class AppState:
     image_status: Status = Status("unavailable")
     text_embedder: TextEmbedder | None = None
     text_status: Status = Status("unavailable")
+    assistant: AssistantService | None = None
 
 
 state = AppState()
@@ -106,19 +112,26 @@ async def lifespan(_: FastAPI):
     state.image_embedder, state.image_status = adapter_from_env("VNSTORE_IMAGE_ADAPTER", ImageEmbedder)
     state.text_embedder, state.text_status = adapter_from_env("VNSTORE_TEXT_ADAPTER", TextEmbedder)
     reload_catalog()
+    state.assistant = AssistantService.from_env()
+    state.assistant.catalog_provider = _assistant_catalog
+    if os.environ.get("VNSTORE_LLM_PRELOAD") == "1":
+        await run_in_threadpool(state.assistant.preload)
     if os.environ.get("VNSTORE_ASR_PRELOAD_ENGLISH") == "1" and state.voice.adapter is not None:
         preload = getattr(state.voice.adapter, "preload_english", None)
         if callable(preload):
             await run_in_threadpool(preload)
     yield
+    if state.assistant is not None:
+        state.assistant.store.close()
 
 
 app = FastAPI(title="VNStore API", version="0.1.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=os.environ.get("VNSTORE_CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(","),
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
     allow_headers=["*"],
+    allow_credentials=True,  # cookie khách ẩn danh của trợ lý
 )
 
 
@@ -129,6 +142,19 @@ def bundle() -> Bundle:
             detail["errors"] = [str(i) for i in state.error.issues[:20]] or [str(state.error)]
         raise HTTPException(503, detail)
     return state.bundle
+
+
+def _assistant_catalog() -> Catalog | None:
+    b = state.bundle
+    return Catalog(b.snap, b.engine, state.assistant.store if state.assistant else None) if b else None
+
+
+def _assistant_catalog_or_503() -> Catalog:
+    b = bundle()
+    return Catalog(b.snap, b.engine, state.assistant.store if state.assistant else None)
+
+
+app.include_router(build_assistant_router(lambda: state.assistant, _assistant_catalog_or_503))
 
 
 def _product_or_404(snap: CatalogSnapshot, key: str) -> dict[str, Any]:
@@ -162,8 +188,10 @@ def health() -> dict[str, Any]:
         "search": {"keyword": "ok", "index_build_ms": state.bundle.engine.build_ms,
                    "voice": state.voice.status.state, "image": _image_status().state,
                    "semantic": state.text_status.state if state.bundle.engine.config.semantic_weight else "off",
+                   "assistant": state.assistant.mode if state.assistant else "off",
                    "models": {"voice": state.voice.status.public(), "image": _image_status().public(),
-                              "text": state.text_status.public()}},
+                              "text": state.text_status.public(),
+                              "assistant": state.assistant.status.public() if state.assistant else None}},
     }
 
 

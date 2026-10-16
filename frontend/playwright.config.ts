@@ -74,6 +74,9 @@ export default defineConfig({
         VNSTORE_IMAGE_ADAPTER: "tests.fakes:ByteHistogramEmbedder",
         VNSTORE_IMAGE_INDEX_DIR: path.join(ROOT, "artifacts", "e2e-indexes"),
         VNSTORE_IMAGE_INDEX_AUTOBUILD: "1",
+        // LLM GIẢ có kịch bản cho trợ lý; DB trợ lý trong bộ nhớ, mất khi tắt server.
+        VNSTORE_LLM_ADAPTER: "tests.fakes:FakeLLM",
+        VNSTORE_ASSISTANT_DB: ":memory:",
       },
       url: `http://127.0.0.1:${API_PORT}/health`,
       reuseExistingServer: false,

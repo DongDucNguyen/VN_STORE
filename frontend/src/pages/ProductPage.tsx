@@ -2,6 +2,8 @@ import { Fragment, useEffect, useState } from "react";
 import { api, ApiError, type ProductDetail, type ProductSummary } from "../api";
 import { ErrorBox, Loading, OriginBadges } from "../components/common";
 import { ProductGrid } from "../components/ProductCard";
+import { ProductReviews } from "../components/ProductReviews";
+import { openAssistant } from "../assistant/useAssistant";
 import { useFavorites } from "../favorites";
 import { formatDate, formatPrice, formatVnd } from "../format";
 import { href } from "../router";
@@ -106,6 +108,9 @@ export function ProductPage({ id }: { id: string }) {
           <p>{p.short_description_vi}</p>
           <button className={`btn ${fav.has(p.id) ? "btn-primary" : ""}`} onClick={() => fav.toggle(p.id)}>
             {fav.has(p.id) ? "♥ Đã yêu thích" : "♡ Yêu thích"}
+          </button>{" "}
+          <button className="btn" onClick={() => openAssistant({ productId: p.id, text: "Sản phẩm này có phù hợp với mình không?" })}>
+            💬 Hỏi trợ lý về sản phẩm này
           </button>
         </div>
       </div>
@@ -209,6 +214,8 @@ export function ProductPage({ id }: { id: string }) {
           Cập nhật {formatDate(p.updated_at)} · Biên tập viên kiểm tra {formatDate(p.reviewed_at)}
         </p>
       </section>
+
+      <ProductReviews productId={p.id} />
 
       {similar.length > 0 && (
         <section>

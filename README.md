@@ -2,6 +2,8 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+**Mới 16/10: [trợ lý tư vấn AI chạy cục bộ](#trợ-lý-tư-vấn-16102026)** — gợi ý theo nhu cầu, nhận xét khách quan (catalog + đánh giá), ghi nhớ sở thích theo đồng ý; model Qwen3-4B chọn qua benchmark. Xem [báo cáo](reports/progress/2026-10-16_GD7_tro-ly-tu-van.md).
+
 Cập nhật demo 14/10: [gộp 4 commit main và kiểm chứng tích hợp](reports/progress/2026-10-14_GD6_merge-main-demo.md), giữ tối ưu English/GPU và đệm âm cuối. Backend 774 test đạt; browser với model thật đạt trên desktop/mobile. English sau warmup khoảng 0,35 giây với câu ngắn và 0,66 giây với clip 6,5 giây trên máy demo.
 
 Mới nhất 13/10 (sáng): [bộ ảnh thử khám phá, ghép ảnh + chữ theo độ phủ, token kích thước](reports/progress/2026-10-13_GD5_bo-anh-kham-pha-va-gop-anh-chu.md) — sửa lỗi ảnh gần trùng + chữ đúng với món rơi khỏi top 10 và "khăn 180 x 65" trả sô cô la. Kiểm chứng: **771 backend, 28 Pillow, 142 E2E đạt**.
@@ -224,3 +226,22 @@ Duyệt nhãn: `#/review/voice` để nghe và sửa bản chép lời rồi xu�
 | `POST /search/voice` | Body WAV → `transcript` + kết quả như `/search`; 503 `model_unavailable` khi chưa cấu hình adapter, 422/413 khi audio không hợp lệ/im lặng, 429 khi bận |
 | `POST /search/image?text=&filters=` | Body JPEG/PNG/WebP → kết quả "mẫu tương tự" kèm `visual`, `similarity`; `text` là yêu cầu bổ sung, `filters` là JSON bộ lọc cùng dạng `/search` (sai → 422 `invalid_filters`). 503 khi chưa có adapter/chỉ mục khớp |
 | `GET /images/{image_id}` | Ảnh của sản phẩm đang hiển thị |
+| `POST /assistant/sessions` | Mở phiên trợ lý; đặt cookie khách ẩn danh `vnstore_cid` (HttpOnly) → `session_id`, mức đồng ý, trạng thái model |
+| `POST /assistant/sessions/{id}/messages` | `{text, input_mode, context_product_id}` → **SSE**: `status`, `delta` (câu đã kiểm), `cards`, `clarify`, `evaluation`, `assessment`, `comparison`, `saved`, `error`, `done`. 429 `busy`/`rate_limited`, 404 phiên của người khác |
+| `GET /assistant/sessions/{id}`, `POST …/end`, `DELETE …` | Lịch sử phiên (theo mức đồng ý), kết thúc (tóm tắt + ghi nhớ), xóa |
+| `GET /assistant/me`, `PUT /assistant/me/consent`, `PATCH`/`DELETE /assistant/me/facts/{id}`, `GET /assistant/me/export`, `DELETE /assistant/me` | Khách xem/đổi mức lưu, sửa/xóa sở thích đã ghi nhớ, xuất hoặc xóa toàn bộ dữ liệu |
+| `POST /assistant/recommendations/{id}/event` | `clicked` / `favorited` / `feedback` (−1, 1) cho một gợi ý |
+| `GET`/`POST /products/{id}/reviews` | Đánh giá đã duyệt + thống kê; gửi đánh giá (kiểm duyệt tự động bằng luật, nghi vấn thì chờ duyệt) |
+
+## Trợ lý tư vấn (16/10/2026)
+
+Khung chat 💬 ở mọi trang (desktop: ngăn kéo; điện thoại: toàn màn hình) gợi ý sản phẩm theo nhu cầu, nhận xét khách quan một sản phẩm (thông tin catalog, nguồn gốc có căn cứ, đánh giá của khách, nhận định của trợ lý), so sánh 2–3 món, nhận câu nói qua micro. Kế hoạch: [docs/ke-hoach-tro-ly-ai.md](docs/ke-hoach-tro-ly-ai.md); kết quả chọn model: [reports/model_selection/](reports/model_selection/).
+
+- **Model chọn qua benchmark dev 16/10: Qwen3-4B-Instruct-2507** (ONNX q4f16, Apache-2.0) + luồng/prompt `v3.3` — điểm 0,877 so với 0,778 của chế độ không model; hơn hẳn Qwen3-1.7B và Llama-3.2-3B; Qwen3.5-4B/Gemma-4 không chạy được trên ORT 1.20 của máy demo ([báo cáo chọn model](reports/model_selection/2026-10-16_assistant-model-selection.md)). Mỗi lượt p50 ~11 s / p95 ~15 s trên RTX 3050.
+- **Chạy demo**: `scripts/run_gpu_cuda12.ps1` mặc định bật trợ lý trên GPU và chuyển voice/ảnh/OCR sang CPU (GPU 6 GB không chứa đủ cả ba); `-Assistant basic|off|Qwen3_1_7B`, `-ShareGpu`.
+- **Model chạy cục bộ** bằng ONNX Runtime (`app/ml/llm.py`, không torch): `VNSTORE_LLM_ADAPTER=app.ml.llm:<Class>`, `VNSTORE_LLM_DEVICE=cuda|cpu`, `VNSTORE_LLM_PRELOAD=1`, `VNSTORE_ASSISTANT_PROMPT=v3.3` (mặc định). Không đặt adapter → **chế độ cơ bản** (hiểu yêu cầu bằng luật, gợi ý từ kết quả tìm kiếm). `VNSTORE_ASSISTANT=off` tắt hẳn; tìm kiếm không bị ảnh hưởng.
+- **Không bịa**: giá/nguồn gốc trong câu trả lời là token do backend thay bằng dữ liệu catalog; câu có số tiền tự viết, khen đánh giá khi chưa có đánh giá, khẳng định nguồn gốc không có claim, công dụng chữa bệnh, liên hệ… bị cắt trước khi hiển thị (`app/assistant/grounding.py`). Ràng buộc giá/phủ định lấy từ lời khách bằng `query_parser`, không do model quyết.
+- **Lưu dữ liệu theo đồng ý** (mặc định không lưu): SQLite `var/assistant/assistant.db` (`VNSTORE_ASSISTANT_DB`). Mức "ghi nhớ" trích sở thích bằng luật (ngân sách, người nhận, dịp, chất liệu/màu thích/không thích), không lưu dữ liệu nhạy cảm, có thời hạn; trang `#/assistant/memory` để xem/sửa/xóa/xuất.
+- **Đánh giá sản phẩm**: catalog nguồn chưa có đánh giá thật nào (đã kiểm 183 trang có dữ liệu cấu trúc), nên trợ lý nói "chưa có đánh giá". Khách gửi đánh giá ở trang sản phẩm; nhập đánh giá có nguồn bằng `scripts/import_raw/import_reviews.py`.
+- **Tải model**: `.venv-ml-gpu/Scripts/python -X utf8 scripts/download_llm_models.py --only <Class> [--mirror https://hf-mirror.com]` (tải song song nhiều đoạn, kiểm SHA-256). Cần thêm `jinja2` trong môi trường ML (đã ghi trong requirements).
+- **Benchmark**: [benchmarks/assistant/](benchmarks/assistant/README.md), `scripts/benchmark/eval_assistant.py`, `compare_assistant_runs.py`. E2E dùng `tests.fakes:FakeLLM` (không phải model).

@@ -1,0 +1,391 @@
+{
+ "set": "dev",
+ "scenarios_sha256": "748439a5454c3b950ae245415369a697ea4ad7910305d8d91eb50ed3ba2aaecc",
+ "catalog_sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
+ "ranking": [
+  {
+   "run": "20261016-095132_assistant_Qwen3-4B-Instruct-2507-dev-v3.2",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v3.2",
+   "score": 0.8854,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9216,
+     "ndcg@3": 0.7059,
+     "answered": 0.9542
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8929,
+     "precision@3": 0.881,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2291,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 45,
+     "reviews": 3,
+     "origin": 4,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11117.2,
+     "p95": 15307.9,
+     "mean": 10849.7
+    },
+    "decode_tokens_per_s": 22.72,
+    "prompt_tokens_mean": 1359.5,
+    "vram_mib": {
+     "before": 3675,
+     "peak": 5739
+    },
+    "model_load_ms": 54115,
+    "score": 0.8854
+   }
+  },
+  {
+   "run": "20261016-073336_assistant_Qwen3-4B-Instruct-2507-dev-v3",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v3",
+   "score": 0.8849,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9216,
+     "ndcg@3": 0.7059,
+     "answered": 0.9542
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8929,
+     "precision@3": 0.881,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2335,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 45,
+     "reviews": 3,
+     "origin": 5,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11063.4,
+     "p95": 15088.1,
+     "mean": 10818.0
+    },
+    "decode_tokens_per_s": 22.77,
+    "prompt_tokens_mean": 1358.5,
+    "vram_mib": {
+     "before": 4191,
+     "peak": 5231
+    },
+    "model_load_ms": 16941,
+    "score": 0.8849
+   }
+  },
+  {
+   "run": "20261016-081618_assistant_Qwen3-4B-Instruct-2507-dev-v4",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v4",
+   "score": 0.8849,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9216,
+     "ndcg@3": 0.7017,
+     "answered": 0.9542
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8929,
+     "precision@3": 0.881,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2335,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 45,
+     "reviews": 3,
+     "origin": 5,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 10984.9,
+     "p95": 15004.9,
+     "mean": 10814.1
+    },
+    "decode_tokens_per_s": 22.79,
+    "prompt_tokens_mean": 1358.6,
+    "vram_mib": {
+     "before": 4187,
+     "peak": 5227
+    },
+    "model_load_ms": 19568,
+    "score": 0.8849
+   }
+  },
+  {
+   "run": "20261016-103845_assistant_Qwen3-4B-Instruct-2507-dev-v3.3",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v3.3",
+   "score": 0.8774,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9346,
+     "ndcg@3": 0.7167,
+     "answered": 0.9673
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8929,
+     "precision@3": 0.881,
+     "no_match_correct": 0.75
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.75
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2291,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 45,
+     "reviews": 3,
+     "origin": 4,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11158.1,
+     "p95": 15033.6,
+     "mean": 10868.3
+    },
+    "decode_tokens_per_s": 22.72,
+    "prompt_tokens_mean": 1357.3,
+    "vram_mib": {
+     "before": 4189,
+     "peak": 5238
+    },
+    "model_load_ms": 18640,
+    "score": 0.8774
+   }
+  },
+  {
+   "run": "20261016-090802_assistant_Qwen3-4B-Instruct-2507-dev-v3.1",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v3.1",
+   "score": 0.8764,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9216,
+     "ndcg@3": 0.7024,
+     "answered": 0.9542
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.8452,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2291,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 45,
+     "reviews": 3,
+     "origin": 4,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11026.6,
+     "p95": 15210.7,
+     "mean": 10849.3
+    },
+    "decode_tokens_per_s": 22.71,
+    "prompt_tokens_mean": 1360.5,
+    "vram_mib": {
+     "before": 4187,
+     "peak": 5229
+    },
+    "model_load_ms": 16282,
+    "score": 0.8764
+   }
+  },
+  {
+   "run": "20261015-224327_assistant_basic-baseline-dev",
+   "model": "none/basic",
+   "prompt": "assistant-2026-10-15.v1",
+   "score": 0.7778,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 219,
+    "n_turns": 227,
+    "kw": {
+     "n": 153,
+     "success@3": 0.9673,
+     "ndcg@3": 0.866,
+     "answered": 0.9935
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.75,
+     "no_match_correct": 0.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.25
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.0
+    },
+    "json_valid_rate": null,
+    "fallback_rate": 0.9956,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.0,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 0,
+     "reviews": 0,
+     "origin": 0,
+     "health": 0,
+     "contact": 0,
+     "language": 0,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 9.4,
+     "p95": 16.9,
+     "mean": 9.4
+    },
+    "decode_tokens_per_s": null,
+    "prompt_tokens_mean": null,
+    "vram_mib": {
+     "before": 3435,
+     "peak": 3435
+    },
+    "model_load_ms": 0,
+    "score": 0.7778
+   }
+  }
+ ]
+}

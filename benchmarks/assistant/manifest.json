@@ -1,0 +1,20 @@
+{
+ "benchmark": "assistant",
+ "version": "assistant-bench-v1",
+ "split": "dev",
+ "created_at": "2026-10-15T22:43:23+07:00",
+ "seed": 20261015,
+ "catalog_version": "seed-007-intended-uses",
+ "catalog_sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
+ "labels_sha256": "85ffcff42830457a01cd7d44cf442b45c5358a5fe1026037b266f1d35914dade",
+ "scenarios_sha256": "2e37de0e25ca565c8684e0c0c6d66593436954d74ba38b953b018dbed37247fc",
+ "counts": {
+  "kw": 153,
+  "need": 32,
+  "multi": 8,
+  "eval": 16,
+  "redteam": 10
+ },
+ "screen_count": 106,
+ "review": "kw: nhãn relevance người duyệt (human_reviewed_labels.jsonl, split dev). need/multi/eval/redteam: soạn và duyệt tự động theo ủy quyền của chủ dự án ngày 15/10/2026; không phải nhãn người chấm."
+}

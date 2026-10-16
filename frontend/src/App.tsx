@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { api, type Health } from "./api";
+import { AssistantPanel } from "./components/AssistantPanel";
 import { useFavorites } from "./favorites";
 import { BrandsPage, FavoritesPage, PlacesPage } from "./pages/BrowsePages";
+import { AssistantMemoryPage } from "./pages/AssistantMemoryPage";
 import { CollectImagePage } from "./pages/CollectImagePage";
 import { CollectVoicePage } from "./pages/CollectVoicePage";
 import { HomePage } from "./pages/HomePage";
@@ -35,6 +37,8 @@ function Page() {
       return <PlacesPage />;
     case "/favorites":
       return <FavoritesPage />;
+    case "/assistant/memory":
+      return <AssistantMemoryPage />;
     case "/":
       return <HomePage />;
     default:
@@ -76,6 +80,7 @@ export default function App() {
       <main>
         <Page />
       </main>
+      <AssistantPanel />
       <footer className="footer muted small">
         VNStore demo · Catalog {health?.catalog?.version ?? "—"} · Nhãn nguồn gốc lấy từ catalog đã kiểm tra, không suy
         ra từ hình ảnh.

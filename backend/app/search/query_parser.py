@@ -32,7 +32,7 @@ class PriceConstraint:
 
 @dataclass
 class VocabEntry:
-    field: str  # category | material | color | place | brand | maker
+    field: str  # category | material | color | place | brand | maker | motif
     value: str  # dạng hiển thị
     id: str | None = None
 
@@ -49,7 +49,7 @@ class Hint:
 
 @dataclass
 class Exclusion:
-    field: str  # material | color | category | brand | text
+    field: str  # material | color | category | brand | motif | text
     value: str
     id: str | None
     text: str
@@ -450,10 +450,19 @@ def parse_negations(toks: list[str], used: set[int], vocab: Vocabulary) -> tuple
         j = i + len(trig)
         while j < len(toks) and j not in used and _is_filler(toks[j]):
             j += 1
+        # Explicit motif negation: do not negate just "họa"/"vẽ" and then
+        # search positively for "tiết sen"/"sen". "Vẽ tay" is a technique.
+        motif = next((p for p in (("họa", "tiết"), ("hoa", "văn"), ("vẽ",))
+                      if _match_phrase(toks, j, p)
+                      and not any(k in used for k in range(j, j + len(p)))
+                      and not (p == ("vẽ",) and j + 1 < len(toks)
+                               and _match_phrase(toks, j + 1, ("tay",)))), None)
+        if motif:
+            j += len(motif)
         if j >= len(toks) or j in used:
             i += 1
             continue
-        n, entries = vocab.match_at(toks, j, {"material", "color", "category", "brand"})
+        n, entries = vocab.match_at(toks, j, {"motif"} if motif else {"material", "color", "category", "brand"})
         if n:
             text = " ".join(toks[j:j + n])
             for e in entries:
@@ -463,7 +472,7 @@ def parse_negations(toks: list[str], used: set[int], vocab: Vocabulary) -> tuple
             if is_stopword(toks[j]):
                 i += 1
                 continue
-            out.append(Exclusion("text", toks[j], None, toks[j]))
+            out.append(Exclusion("motif" if motif else "text", toks[j], None, toks[j]))
             end = j + 1
         consumed.update(range(i, end))
         i = end
@@ -487,7 +496,7 @@ def parse_query(raw: str, vocab: Vocabulary) -> ParsedQuery:
         if i in used:
             i += 1
             continue
-        n, entries = vocab.match_at(toks, i)
+        n, entries = vocab.match_at(toks, i, {"category", "material", "color", "place", "brand", "maker"})
         if n and not any(k in used for k in range(i, i + n)):
             text = " ".join(toks[i:i + n])
             hints.extend(Hint(e.field, e.value, e.id, text, pos[i], n) for e in entries)

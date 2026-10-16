@@ -1,6 +1,7 @@
 .venv/
 .venv-ml/
 .venv-ml-gpu/
+.venv-llm-dml/
 __pycache__/
 .pytest_cache/
 node_modules/
@@ -9,3 +10,5 @@ frontend/dist/
 artifacts/
 # Audio/ảnh benchmark thô có quyền riêng; chỉ commit manifest.
 benchmarks/**/raw/
+# Dữ liệu chạy của trợ lý (lịch sử chat, bộ nhớ khách, đánh giá): không commit.
+var/

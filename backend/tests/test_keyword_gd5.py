@@ -7,7 +7,7 @@ import pytest
 from app.catalog.store import load_snapshot
 from app.search.config import TEXT_SETTINGS, SearchConfig
 from app.search.engine import SearchEngine
-from app.search.normalize import tokens, tone_key
+from app.search.normalize import measurement_terms, tokens, tone_key
 from app.search.query_parser import parse_price, parse_query, price_tokens
 from tests.conftest import FIXTURE
 
@@ -250,3 +250,64 @@ def test_new_settings_validated(values):
 def test_text_settings_cover_every_text_backend_switch():
     assert set(TEXT_SETTINGS) <= set(SearchConfig().to_dict())
     assert {"lexicon", "typo_correction", "exact_latin_bonus", "brand_hint_boost", "min_idf_coverage"} <= set(TEXT_SETTINGS)
+
+
+@pytest.mark.parametrize("left,right", [("0.8 L", "800ml"), ("0,65 lít", "650 ml"),
+                                       ("0.2kg", "200g"), ("40 cm", "400mm")])
+def test_equivalent_measurements_share_retrieval_terms(left, right):
+    assert measurement_terms(tokens(left)) == measurement_terms(tokens(right))
+    assert measurement_terms(tokens(left))
+
+
+def test_measurements_do_not_confuse_dimensions_prices_or_plain_numbers():
+    assert measurement_terms(tokens("800ml")) != measurement_terms(tokens("800g"))
+    assert measurement_terms(tokens("800 800k 24k 180x65cm")) == []
+
+
+@pytest.mark.parametrize("query", ["bộ trà 800ml", "bộ trà 0,8 lít", "bo tra 800 ml"])
+def test_volume_query_ranks_equivalent_litres_above_different_capacity(edited, query):
+    def change(p):
+        p["fx-binh-gom-men-lam"]["name_vi"] = "Bộ trà 0.8 L"
+        p["fx-binh-gom-men-ran"]["name_vi"] = "Bộ trà 0.5 L"
+    eng = edited(change)
+    ranked = ids(eng.search(query))
+    assert ranked.index("fx-binh-gom-men-lam") < ranked.index("fx-binh-gom-men-ran")
+    assert eng.search(query)["interpreted_query"]["price"] is None
+
+
+@pytest.mark.parametrize("query", ["bình hoa không có họa tiết sen", "binh hoa khong ve sen",
+                                   "bình hoa không có hoa văn sen"])
+def test_explicit_motif_negation_removes_motif_from_query_and_results(edited, query):
+    def change(p):
+        p["fx-binh-gom-men-lam"].update(name_vi="Bình hoa vẽ sen", motifs=["sen"])
+        p["fx-binh-gom-men-ran"].update(name_vi="Bình hoa vẽ cúc", motifs=["cúc"])
+    eng = edited(change)
+    res = eng.search(query)
+    assert "fx-binh-gom-men-lam" not in ids(res)
+    assert "fx-binh-gom-men-ran" in ids(res)
+    assert res["interpreted_query"]["text"] == " ".join(query.split()[:2])
+    assert res["applied_filters"][0]["key"] == "not_motif:sen"
+
+
+def test_motif_exclusion_matches_full_phrase_and_structured_evidence(edited):
+    def change(p):
+        p["fx-binh-gom-men-lam"].update(name_vi="Bình hoa men lam", motifs=["hoa hồng"])
+        p["fx-binh-gom-men-ran"].update(name_vi="Bình hoa vẽ hoa cúc", motifs=["hoa cúc"])
+    res = edited(change).search("bình hoa không có họa tiết hoa hồng")
+    assert "fx-binh-gom-men-lam" not in ids(res)
+    assert "fx-binh-gom-men-ran" in ids(res)
+    assert res["interpreted_query"]["text"] == "bình hoa"
+
+
+def test_hand_painted_negation_does_not_become_a_motif(engine):
+    parsed = parse_query("bình hoa không vẽ tay", engine.vocab)
+    assert all(e.field != "motif" for e in parsed.exclusions)
+
+
+def test_pen_holder_variants_expand_without_product_ids(edited):
+    def change(p):
+        p["fx-hop-son-mai"]["name_vi"] = "Hộp bút sơn mài"
+    eng = edited(change)
+    result = eng.search("ống cắm bút")
+    assert ids(result)[0] == "fx-hop-son-mai"
+    assert any(e["relation_id"] == "lex-hop-but" for e in result["interpreted_query"]["expansions"])

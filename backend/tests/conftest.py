@@ -8,6 +8,7 @@ BACKEND = Path(__file__).resolve().parents[1]
 FIXTURE = BACKEND / "tests" / "fixtures" / "catalog.fixture.json"
 sys.path.insert(0, str(BACKEND))
 os.environ["VNSTORE_CATALOG"] = str(FIXTURE)
+os.environ.setdefault("VNSTORE_ASSISTANT_DB", ":memory:")
 
 from app.catalog.store import load_snapshot  # noqa: E402
 from app.search.engine import SearchEngine  # noqa: E402

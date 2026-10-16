@@ -1,0 +1,519 @@
+{
+ "set": "screen",
+ "scenarios_sha256": "748439a5454c3b950ae245415369a697ea4ad7910305d8d91eb50ed3ba2aaecc",
+ "catalog_sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
+ "ranking": [
+  {
+   "run": "20261016-070206_assistant_Qwen3-4B-Instruct-2507-screen-v3",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-16.v3",
+   "score": 0.8849,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.925,
+     "ndcg@3": 0.7465,
+     "answered": 0.975
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8929,
+     "precision@3": 0.881,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2456,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 20,
+     "reviews": 3,
+     "origin": 4,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11870.0,
+     "p95": 15736.5,
+     "mean": 11298.7
+    },
+    "decode_tokens_per_s": 23.22,
+    "prompt_tokens_mean": 1280.4,
+    "vram_mib": {
+     "before": 4185,
+     "peak": 5227
+    },
+    "model_load_ms": 18672,
+    "score": 0.8849
+   }
+  },
+  {
+   "run": "20261016-063008_assistant_Qwen3-4B-Instruct-2507-screen-v2",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-15.v2",
+   "score": 0.8401,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.8,
+     "ndcg@3": 0.6532,
+     "answered": 0.875
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.8214,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.1667,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 12,
+     "reviews": 3,
+     "origin": 3,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 11787.5,
+     "p95": 15445.5,
+     "mean": 11126.1
+    },
+    "decode_tokens_per_s": 23.55,
+    "prompt_tokens_mean": 1257.3,
+    "vram_mib": {
+     "before": 4253,
+     "peak": 5295
+    },
+    "model_load_ms": 18600,
+    "score": 0.8401
+   }
+  },
+  {
+   "run": "20261016-051725_assistant_Qwen3-4B-Instruct-2507-screen-v1",
+   "model": "Qwen/Qwen3-4B-Instruct-2507",
+   "prompt": "assistant-2026-10-15.v1",
+   "score": 0.7938,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.8,
+     "ndcg@3": 0.6408,
+     "answered": 0.85
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.75,
+     "precision@3": 0.7321,
+     "no_match_correct": 1.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.5
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2368,
+    "grounding_by_check": {
+     "product_id": 5,
+     "price": 10,
+     "reviews": 3,
+     "origin": 7,
+     "health": 2,
+     "contact": 0,
+     "language": 1,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 15217.3,
+     "p95": 24669.0,
+     "mean": 15591.4
+    },
+    "decode_tokens_per_s": 22.62,
+    "prompt_tokens_mean": 1146.7,
+    "vram_mib": {
+     "before": 4193,
+     "peak": 5235
+    },
+    "model_load_ms": 18028,
+    "score": 0.7938
+   }
+  },
+  {
+   "run": "20261016-051702_assistant_basic-screen-v1",
+   "model": "none/basic",
+   "prompt": "assistant-2026-10-15.v1",
+   "score": 0.7718,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.95,
+     "ndcg@3": 0.8522,
+     "answered": 1.0
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.75,
+     "no_match_correct": 0.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.25
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 1.0
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.0
+    },
+    "json_valid_rate": null,
+    "fallback_rate": 0.9912,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.0,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 0,
+     "reviews": 0,
+     "origin": 0,
+     "health": 0,
+     "contact": 0,
+     "language": 0,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 8.9,
+     "p95": 15.0,
+     "mean": 8.1
+    },
+    "decode_tokens_per_s": null,
+    "prompt_tokens_mean": null,
+    "vram_mib": {
+     "before": 0,
+     "peak": 0
+    },
+    "model_load_ms": 0,
+    "score": 0.7718
+   }
+  },
+  {
+   "run": "20261016-065130_assistant_Qwen3-1.7B-screen-v2",
+   "model": "Qwen/Qwen3-1.7B",
+   "prompt": "assistant-2026-10-15.v2",
+   "score": 0.7522,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.9,
+     "ndcg@3": 0.6973,
+     "answered": 0.975
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8214,
+     "precision@3": 0.8036,
+     "no_match_correct": 0.5
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.25
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 0.875,
+     "no_review_honesty": 0.7
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.1316,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 9,
+     "reviews": 1,
+     "origin": 3,
+     "health": 2,
+     "contact": 0,
+     "language": 0,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 4588.7,
+     "p95": 7155.0,
+     "mean": 4756.8
+    },
+    "decode_tokens_per_s": 50.25,
+    "prompt_tokens_mean": 1300.0,
+    "vram_mib": {
+     "before": 2393,
+     "peak": 3435
+    },
+    "model_load_ms": 11266,
+    "score": 0.7522
+   }
+  },
+  {
+   "run": "20261016-072349_assistant_Qwen3-1.7B-screen-v3",
+   "model": "Qwen/Qwen3-1.7B",
+   "prompt": "assistant-2026-10-16.v3",
+   "score": 0.741,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.85,
+     "ndcg@3": 0.5952,
+     "answered": 0.975
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.8095,
+     "no_match_correct": 0.25
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.5
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 0.7
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.6
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.1579,
+    "grounding_by_check": {
+     "product_id": 0,
+     "price": 11,
+     "reviews": 2,
+     "origin": 3,
+     "health": 2,
+     "contact": 0,
+     "language": 0,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 4858.7,
+     "p95": 6883.3,
+     "mean": 4791.7
+    },
+    "decode_tokens_per_s": 50.53,
+    "prompt_tokens_mean": 1311.4,
+    "vram_mib": {
+     "before": 2649,
+     "peak": 3691
+    },
+    "model_load_ms": 11854,
+    "score": 0.741
+   }
+  },
+  {
+   "run": "20261016-060332_assistant_Qwen3-1.7B-screen-v1",
+   "model": "Qwen/Qwen3-1.7B",
+   "prompt": "assistant-2026-10-15.v1",
+   "score": 0.6972,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.875,
+     "ndcg@3": 0.6621,
+     "answered": 0.925
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8214,
+     "precision@3": 0.7917,
+     "no_match_correct": 0.0
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.375
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 0.9375,
+     "no_review_honesty": 0.7
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.5
+    },
+    "json_valid_rate": 1.0,
+    "fallback_rate": 0.0,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.2193,
+    "grounding_by_check": {
+     "product_id": 7,
+     "price": 14,
+     "reviews": 2,
+     "origin": 1,
+     "health": 2,
+     "contact": 0,
+     "language": 0,
+     "token": 0
+    },
+    "latency_ms": {
+     "p50": 6367.6,
+     "p95": 11442.6,
+     "mean": 6340.9
+    },
+    "decode_tokens_per_s": 48.82,
+    "prompt_tokens_mean": 1158.6,
+    "vram_mib": {
+     "before": 2653,
+     "peak": 3695
+    },
+    "model_load_ms": 11487,
+    "score": 0.6972
+   }
+  },
+  {
+   "run": "20261016-054723_assistant_Llama-3.2-3B-Instruct-screen-v1",
+   "model": "meta-llama/Llama-3.2-3B-Instruct",
+   "prompt": "assistant-2026-10-15.v1",
+   "score": 0.6777,
+   "gates_failed": [],
+   "metrics": {
+    "n_scenarios": 106,
+    "n_turns": 114,
+    "kw": {
+     "n": 40,
+     "success@3": 0.8,
+     "ndcg@3": 0.5599,
+     "answered": 0.925
+    },
+    "need": {
+     "n": 32,
+     "category_hit@3": 0.8571,
+     "precision@3": 0.7857,
+     "no_match_correct": 0.25
+    },
+    "multi": {
+     "n": 8,
+     "pass": 0.625
+    },
+    "eval": {
+     "n": 16,
+     "intent_ok": 1.0,
+     "no_review_honesty": 0.1
+    },
+    "redteam": {
+     "n": 10,
+     "final_pass": 1.0,
+     "raw_violation": 0.3
+    },
+    "json_valid_rate": 0.863,
+    "fallback_rate": 0.2632,
+    "hard_constraint_violations": 0,
+    "grounding_intervention_rate": 0.1404,
+    "grounding_by_check": {
+     "product_id": 3,
+     "price": 6,
+     "reviews": 1,
+     "origin": 2,
+     "health": 1,
+     "contact": 0,
+     "language": 0,
+     "token": 4
+    },
+    "latency_ms": {
+     "p50": 8218.7,
+     "p95": 14262.8,
+     "mean": 8371.1
+    },
+    "decode_tokens_per_s": 35.0,
+    "prompt_tokens_mean": 1116.0,
+    "vram_mib": {
+     "before": 4189,
+     "peak": 5229
+    },
+    "model_load_ms": 18507,
+    "score": 0.6777
+   }
+  }
+ ]
+}

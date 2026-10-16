@@ -13,7 +13,7 @@ from ..catalog.store import CatalogSnapshot
 from .bm25 import MultiFieldBM25
 from .config import SearchConfig
 from .lexicon import BRAND_ABBREVIATIONS, LEXICON
-from .normalize import UNIT_TOKENS, analyze, has_accents, is_stopword, strip_accents, tokens, tone_key
+from .normalize import UNIT_TOKENS, analyze, has_accents, is_stopword, measurement_terms, strip_accents, tokens, tone_key
 from .query_parser import ParsedQuery, PriceConstraint, Vocabulary, VocabEntry, parse_query
 
 if TYPE_CHECKING:
@@ -98,6 +98,9 @@ class SearchEngine:
         self._coverage_tokens = {}
         self.index = MultiFieldBM25(FIELD_WEIGHTS)
         self.index_acc = MultiFieldBM25(FIELD_WEIGHTS)
+        # Keep quantity terms separate so non-measurement queries retain their
+        # document lengths and BM25 scores.
+        self.index_measurements = MultiFieldBM25(FIELD_WEIGHTS)
         self._plain_blob: dict[str, str] = {}
         for p in snap.products.values():
             self._coverage_tokens[p["id"]] = set(tokens(" ".join(self._field_texts(p).values())))
@@ -106,12 +109,15 @@ class SearchEngine:
                 acc_fields[f], plain_fields[f] = analyze(text)
             self.index.add(p["id"], plain_fields)
             self.index_acc.add(p["id"], acc_fields)
+            self.index_measurements.add(p["id"], {
+                f: measurement_terms(tokens(text)) for f, text in self._field_texts(p).items()})
             self._plain_blob[p["id"]] = " ".join(
                 strip_accents(" ".join(tokens(t))) for t in
                 [p["name_vi"], " ".join(p.get("materials", [])), " ".join(p.get("tags", [])),
                  " ".join(p.get("colors", []))])
         self.index.finalize()
         self.index_acc.finalize()
+        self.index_measurements.finalize()
         self._coverage_keys = {d: {tone_key(t) for t in toks} for d, toks in self._coverage_tokens.items()}
         self._coverage_plain = {d: {strip_accents(t) for t in toks} for d, toks in self._coverage_tokens.items()}
         # Âm tiết catalog viết không dấu ("Ca Phe Sua", "Dak Lak"): người dùng gõ có dấu vẫn được tính là khớp.
@@ -197,6 +203,8 @@ class SearchEngine:
         for p in s.products.values():
             materials.update(p.get("materials", []))
             colors.update(p.get("colors", []))
+        for motif in sorted({m for p in s.products.values() for m in p.get("motifs", [])}):
+            yield motif, VocabEntry("motif", motif)
         for m in materials:
             yield m, VocabEntry("material", m, None)
         for c in colors:
@@ -341,6 +349,8 @@ class SearchEngine:
             q_plain[f"{strip_accents(a)}_{strip_accents(b)}"] = 1.0
             if has_accents(a) or has_accents(b):
                 q_acc[f"{a}_{b}"] = 1.0
+        for term in measurement_terms(text_toks):
+            q_plain[term] = 1.0
         expansions = []
         fixed = {}
         user_forms = list(text_toks)  # dạng người dùng gõ, thay bằng dạng đã sửa lỗi gõ nếu có
@@ -480,6 +490,22 @@ class SearchEngine:
             elif e.field == "brand" and e.id:
                 out.append(_Constraint(f"not_brand:{e.id}", f"Không lấy thương hiệu {e.value}", "query",
                                        lambda p, b=e.id: p["brand_id"] != b))
+            elif e.field == "motif":
+                # Use product evidence, not brand/category/description mentions.
+                # Accent-aware matching prevents "hồng" excluding "hông".
+                wanted = tokens(e.value)
+
+                def without_motif(p, wanted=wanted):
+                    texts = [p["name_vi"], *p.get("aliases", []), *p.get("motifs", [])]
+                    return not any(
+                        all(tone_key(a) == tone_key(b) if has_accents(a)
+                            else strip_accents(a) == strip_accents(b)
+                            for a, b in zip(wanted, ts[i:i + len(wanted)]))
+                        for text in texts for ts in [tokens(text)]
+                        for i in range(len(ts) - len(wanted) + 1))
+
+                out.append(_Constraint(f"not_motif:{e.value}", f"Không lấy họa tiết {e.value}", "query",
+                                       without_motif))
         if f.category_ids:
             sub = set().union(*(s.category_subtree(c) for c in f.category_ids))
             names = ", ".join(s.categories[c]["name_vi"] for c in f.category_ids if c in s.categories)
@@ -538,6 +564,10 @@ class SearchEngine:
         has_text = bool(q_plain)
         if has_text:
             s_plain, matched = self.index.score(q_plain, candidates)
+            s_measures, matched_measures = self.index_measurements.score(q_plain, candidates)
+            for d, score in s_measures.items():
+                s_plain[d] = s_plain.get(d, 0.0) + score
+                matched[d].update(matched_measures[d])
             s_acc, matched_acc = self.index_acc.score(q_acc, candidates)
             scores = {d: s_plain.get(d, 0.0) + self.config.accent_weight * s_acc.get(d, 0.0)
                       for d in set(s_plain) | set(s_acc)}

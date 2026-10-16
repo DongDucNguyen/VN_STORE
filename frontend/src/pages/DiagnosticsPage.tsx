@@ -23,7 +23,10 @@ export function DiagnosticsPage() {
     <ul>{(["voice", "image"] as const).map((kind) => <li key={kind}>
       {kind}: {health?.search?.[kind] ?? "—"} · {health?.search?.models?.[kind]?.model_id ?? "chưa cấu hình"}
       {health?.search?.models?.[kind]?.reason && ` · ${health.search.models[kind].reason}`}
-    </li>)}</ul>
+    </li>)}
+      <li>trợ lý: {health?.search?.assistant ?? "—"} · {health?.search?.models?.assistant?.model_id ?? "chưa cấu hình model (chế độ cơ bản)"}
+        {health?.search?.models?.assistant?.detail && ` · ${health.search.models.assistant.detail}`}</li>
+    </ul>
     <h2>Đo độ trễ trên trình duyệt</h2>
     <p>Chỉ bật trong phiên đo. Lưu tối đa 200 lượt thành công trong bộ nhớ tab; tải lại trang sẽ xóa.
       Không lưu câu tìm, bản chép lời, ảnh, âm thanh hoặc danh tính sản phẩm; không gửi số đo về máy chủ.</p>

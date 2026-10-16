@@ -1,0 +1,159 @@
+{
+ "method": "Cùng engine/config, cùng nhãn human_reviewed_labels.jsonl; catalog trước = bản importer lưu (import_runs/2026-10-15_223026-774908_enrich/catalog.before.json), sau = seed-007-intended-uses. judged: chỉ truy vấn có top-10 được chấm đủ ở cả hai phía; condensed: bỏ món chưa chấm.",
+ "results": {
+  "kw-dev": {
+   "queries": 168,
+   "judged_both": 131,
+   "before": {
+    "ndcg@10_judged": 0.8496,
+    "success@5_judged": 0.8779,
+    "ndcg@10_condensed_all": 0.8367,
+    "success@5_condensed_all": 0.8929,
+    "unjudged_in_top10": 63
+   },
+   "after": {
+    "ndcg@10_judged": 0.8538,
+    "success@5_judged": 0.8779,
+    "ndcg@10_condensed_all": 0.8389,
+    "success@5_condensed_all": 0.8988,
+    "unjudged_in_top10": 73
+   },
+   "changed_condensed": [
+    [
+     "kw-dev-023",
+     "đèn thả trần đan cói",
+     1.0,
+     0.936
+    ],
+    [
+     "kw-dev-037",
+     "hộp đan tre Ethnic",
+     0.944,
+     0.891
+    ],
+    [
+     "kw-dev-044",
+     "chocolate đen Bà Rịa",
+     0.877,
+     1.0
+    ],
+    [
+     "kw-dev-069",
+     "đồ trang trí phòng khách",
+     0.915,
+     0.785
+    ],
+    [
+     "kw-dev-071",
+     "đồ đựng trái cây",
+     0,
+     0.256
+    ],
+    [
+     "kw-dev-081",
+     "quà tặng dưới năm trăm nghìn",
+     0.612,
+     0.468
+    ],
+    [
+     "kw-dev-088",
+     "áo không nhuộm chàm",
+     0.828,
+     0.756
+    ],
+    [
+     "kw-dev-093",
+     "sô cô là đen",
+     0.864,
+     0.941
+    ],
+    [
+     "kw-dev-d-gio-seagrass-tre-em-2",
+     "gio do choi cho be",
+     0.531,
+     1.0
+    ],
+    [
+     "kw-dev-d-khan-tay-theu-mai-2",
+     "khan tay mai vang",
+     0.975,
+     0.894
+    ],
+    [
+     "kw-dev-d-khan-cuc-2",
+     "khan cuc vang",
+     0.851,
+     0.953
+    ]
+   ]
+  },
+  "kw-train": {
+   "queries": 174,
+   "judged_both": 174,
+   "before": {
+    "ndcg@10_judged": 0.87,
+    "success@5_judged": 0.9713,
+    "ndcg@10_condensed_all": 0.87,
+    "success@5_condensed_all": 0.9713,
+    "unjudged_in_top10": 0
+   },
+   "after": {
+    "ndcg@10_judged": 0.8745,
+    "success@5_judged": 0.9713,
+    "ndcg@10_condensed_all": 0.8745,
+    "success@5_condensed_all": 0.9713,
+    "unjudged_in_top10": 0
+   },
+   "changed_condensed": [
+    [
+     "kw-train-bo-do-an-1",
+     "bộ đồ ăn sứ",
+     0.5,
+     1.0
+    ],
+    [
+     "kw-train-binh-cao-40-1",
+     "bình hoa cao 40 cm",
+     0.792,
+     0.846
+    ],
+    [
+     "kw-train-binh-lon-1",
+     "bình hoa lớn trang trí sảnh",
+     0.328,
+     0.246
+    ],
+    [
+     "kw-train-lo-hoa-regional-1",
+     "lọ cắm hoa",
+     0.881,
+     1.0
+    ],
+    [
+     "kw-train-dong-thau-1",
+     "đồ trang trí bằng đồng",
+     0.35,
+     0.493
+    ],
+    [
+     "kw-train-la-vang-1",
+     "dát lá vàng 24k",
+     0.906,
+     0.733
+    ],
+    [
+     "kw-train-trang-tri-do-1",
+     "đồ sơn mài màu đỏ",
+     0.152,
+     0.213
+    ],
+    [
+     "kw-train-ironbar-1",
+     "thanh năng lượng ironbar",
+     0.793,
+     0.928
+    ]
+   ]
+  }
+ }
+}
