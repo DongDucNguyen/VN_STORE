@@ -1,0 +1,34 @@
+{
+  "scope": "V2 standalone design preview only; no application E2E or performance/FPS claim",
+  "browser": "155.0.8059.84",
+  "checks": [
+    "All three v2 concept images decode; no v1 image in current gallery",
+    "Six placement chapters present",
+    "No horizontal page overflow at 320px",
+    "No horizontal page overflow at 390px",
+    "No horizontal page overflow at 768px",
+    "No horizontal page overflow at 1440px",
+    "All four motion samples respond to play",
+    "Manual stop and reduced motion preserve interaction without animation",
+    "OS reduced motion overrides normal setting at runtime",
+    "No JavaScript page errors"
+  ],
+  "images": [
+    {
+      "file": "mockups/05-v2-home-artistic-full.png",
+      "width": 814,
+      "height": 1931
+    },
+    {
+      "file": "mockups/06-v2-search-product-artistic.png",
+      "width": 1109,
+      "height": 1418
+    },
+    {
+      "file": "mockups/07-v2-mobile-artistic-full.png",
+      "width": 783,
+      "height": 2009
+    }
+  ],
+  "errors": []
+}

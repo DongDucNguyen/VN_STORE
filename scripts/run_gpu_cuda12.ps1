@@ -24,9 +24,14 @@ $env:VNSTORE_OCR = 'rapidocr-latin'
 $env:HF_HUB_OFFLINE = '1'
 if ($Assistant -eq 'off') {
     $env:VNSTORE_ASSISTANT = 'off'
-} elseif ($Assistant -eq 'basic') {
     Remove-Item Env:VNSTORE_LLM_ADAPTER -ErrorAction SilentlyContinue
+    $env:VNSTORE_LLM_PRELOAD = '0'
+} elseif ($Assistant -eq 'basic') {
+    $env:VNSTORE_ASSISTANT = 'on'
+    Remove-Item Env:VNSTORE_LLM_ADAPTER -ErrorAction SilentlyContinue
+    $env:VNSTORE_LLM_PRELOAD = '0'
 } else {
+    $env:VNSTORE_ASSISTANT = 'on'
     $env:VNSTORE_LLM_ADAPTER = "app.ml.llm:$Assistant"
     $env:VNSTORE_LLM_DEVICE = $AssistantDevice
     $env:VNSTORE_LLM_PRELOAD = '1'

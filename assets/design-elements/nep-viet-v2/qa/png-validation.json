@@ -1,0 +1,113 @@
+[
+  {
+    "file": "cutouts/bamboo-opening-branch.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "cutouts/bamboo-shadow-clean.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      253
+    ]
+  },
+  {
+    "file": "cutouts/ceramic-opening-still-life.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "cutouts/non-la-section-cutout.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "cutouts/textile-edge.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "botanical/lotus-botanical-01.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "botanical/lotus-botanical-02.png",
+    "mode": "RGBA",
+    "alphaExtrema": [
+      0,
+      254
+    ]
+  },
+  {
+    "file": "scenes/footer-landscape.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "scenes/lotus-midpage-desktop.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "scenes/lotus-midpage-mobile.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "textures/bamboo-weave-macro.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "editorial/craft-hands-editorial.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "editorial/craft-workbench.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "categories/category-ceramics.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "categories/category-specialties.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "categories/category-textiles.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "categories/category-weaving.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  },
+  {
+    "file": "categories/category-wood-lacquer.png",
+    "mode": "RGB",
+    "alphaExtrema": null
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "file": "bamboo-branch.webp",
+    "source": "cutouts/bamboo-opening-branch.png",
+    "width": 480,
+    "height": 720,
+    "bytes": 70728
+  },
+  {
+    "file": "bamboo-shadow.webp",
+    "source": "cutouts/bamboo-shadow-clean.png",
+    "width": 820,
+    "height": 547,
+    "bytes": 97082
+  },
+  {
+    "file": "ceramic-still-life.webp",
+    "source": "cutouts/ceramic-opening-still-life.png",
+    "width": 340,
+    "height": 363,
+    "bytes": 17618
+  },
+  {
+    "file": "non-la.webp",
+    "source": "cutouts/non-la-section-cutout.png",
+    "width": 720,
+    "height": 480,
+    "bytes": 38922
+  },
+  {
+    "file": "textile-edge.webp",
+    "source": "cutouts/textile-edge.png",
+    "width": 360,
+    "height": 540,
+    "bytes": 12868
+  },
+  {
+    "file": "lotus-botanical-01.webp",
+    "source": "botanical/lotus-botanical-01.png",
+    "width": 360,
+    "height": 540,
+    "bytes": 39014
+  },
+  {
+    "file": "lotus-botanical-02.webp",
+    "source": "botanical/lotus-botanical-02.png",
+    "width": 560,
+    "height": 373,
+    "bytes": 49008
+  },
+  {
+    "file": "footer-landscape.webp",
+    "source": "scenes/footer-landscape.png",
+    "width": 2172,
+    "height": 724,
+    "bytes": 99274
+  },
+  {
+    "file": "footer-landscape-sm.webp",
+    "source": "scenes/footer-landscape.png",
+    "width": 1100,
+    "height": 367,
+    "bytes": 28528
+  },
+  {
+    "file": "lotus-midpage.webp",
+    "source": "scenes/lotus-midpage-desktop.png",
+    "width": 2172,
+    "height": 724,
+    "bytes": 125618
+  },
+  {
+    "file": "lotus-midpage-md.webp",
+    "source": "scenes/lotus-midpage-desktop.png",
+    "width": 1280,
+    "height": 427,
+    "bytes": 61558
+  },
+  {
+    "file": "lotus-midpage-mobile.webp",
+    "source": "scenes/lotus-midpage-mobile.png",
+    "width": 820,
+    "height": 1025,
+    "bytes": 69334
+  },
+  {
+    "file": "weave-macro.webp",
+    "source": "textures/bamboo-weave-macro.png",
+    "width": 300,
+    "height": 450,
+    "bytes": 27388
+  },
+  {
+    "file": "weave-strip.webp",
+    "source": "textures/bamboo-weave-macro.png",
+    "width": 900,
+    "height": 243,
+    "bytes": 34362
+  },
+  {
+    "file": "craft-hands.webp",
+    "source": "editorial/craft-hands-editorial.png",
+    "width": 1100,
+    "height": 825,
+    "bytes": 65022
+  },
+  {
+    "file": "craft-workbench.webp",
+    "source": "editorial/craft-workbench.png",
+    "width": 760,
+    "height": 570,
+    "bytes": 55544
+  },
+  {
+    "file": "category-ceramics.webp",
+    "source": "categories/category-ceramics.png",
+    "width": 640,
+    "height": 640,
+    "bytes": 26360
+  },
+  {
+    "file": "category-weaving.webp",
+    "source": "categories/category-weaving.png",
+    "width": 640,
+    "height": 640,
+    "bytes": 45986
+  },
+  {
+    "file": "category-textiles.webp",
+    "source": "categories/category-textiles.png",
+    "width": 640,
+    "height": 640,
+    "bytes": 19642
+  },
+  {
+    "file": "category-wood-lacquer.webp",
+    "source": "categories/category-wood-lacquer.png",
+    "width": 640,
+    "height": 640,
+    "bytes": 17966
+  },
+  {
+    "file": "category-specialties.webp",
+    "source": "categories/category-specialties.png",
+    "width": 640,
+    "height": 640,
+    "bytes": 28846
+  }
+]

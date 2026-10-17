@@ -11,11 +11,12 @@ import queue
 import secrets
 import threading
 import time
-from collections.abc import Callable, Iterator
+from collections.abc import Callable, AsyncIterator
 from typing import Any, Literal
 
 from fastapi import APIRouter, HTTPException, Request, Response
 from fastapi.responses import JSONResponse, StreamingResponse
+from starlette.concurrency import run_in_threadpool
 from pydantic import BaseModel, Field
 
 from . import memory, moderation, prompts
@@ -143,7 +144,9 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
             return _error(409, "session_full", "Phiên này đã dài, hãy mở phiên mới để tiếp tục.")
         catalog = get_catalog()
         text = redact(" ".join(body.text.split()))
-        state = svc.store.session_state(sid)
+        if not text:
+            return _error(422, "empty_message", "Bạn hãy nhập nội dung tin nhắn.")
+        state = svc.session_state(sid)
         cust = svc.store.customer(cid)
         level = cust["consent_level"]
         profile = memory.profile_block(svc.store, cid, exclude_session=sid) if level == "memory" else ""
@@ -163,22 +166,32 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
             try:
                 res = Turn(catalog, llm, emit, turn_timeout()).run(text, history, state, profile, context_pid)
                 latency = int((time.perf_counter() - t0) * 1000)
-                persisted = bool(svc.store.session(sid)["persisted"])
                 cat = (catalog.snap.version, catalog.snap.sha256)
                 rec_ids: list[int] = []
-                if persisted:
-                    svc.store.add_message(sid, "user", text, None, body.input_mode, cat)
-                    mid = svc.store.add_message(sid, "assistant", res.message, res.payload(), None, cat,
-                                                {"prompt_tokens": res.prompt_tokens,
-                                                 "output_tokens": res.output_tokens}, latency)
-                    rec_ids = svc.store.add_recommendations(mid, res.recommendations) if res.intent in (
-                        "recommend", "compare") else []
-                else:
-                    svc.append_transient(sid, "user", text)
-                    svc.append_transient(sid, "assistant", res.message)
-                svc.store.save_session_state(sid, res.state)
-                for check, action, detail in res.events:
-                    svc.store.grounding_event(sid if persisted else None, check, action, detail)
+                with svc.session_lock:
+                    current = svc.store.session(sid)
+                    if cancelled.is_set() or current is None or current["ended_at"]:
+                        return
+                    latest_customer = svc.store.customer(cid)
+                    if latest_customer is None or latest_customer["consent_at"] != cust["consent_at"]:
+                        events.put(("error", {"code": "consent_changed",
+                                             "message": "Lựa chọn lưu đã thay đổi. Bạn gửi lại tin nhắn nhé."}))
+                        return
+                    persisted = bool(current["persisted"])
+                    if persisted:
+                        svc.store.add_message(sid, "user", text, None, body.input_mode, cat)
+                        mid = svc.store.add_message(sid, "assistant", res.message, res.payload(), None, cat,
+                                                   {"prompt_tokens": res.prompt_tokens,
+                                                    "output_tokens": res.output_tokens}, latency)
+                        rec_ids = svc.store.add_recommendations(mid, res.recommendations) if res.intent in (
+                            "recommend", "compare") else []
+                    else:
+                        svc.append_transient(sid, "user", text)
+                        svc.append_transient(sid, "assistant", res.message)
+                    svc.save_session_state(sid, res.state)
+                    for check, action, detail in res.events:
+                        # Details may contain generated text; private sessions leave only counters.
+                        svc.store.grounding_event(sid if persisted else None, check, action, detail if persisted else "")
                 svc.store.turn_metric(getattr(llm, "model_id", None), res.intent, not res.fallback, res.fallback,
                                       latency, res.prompt_tokens, res.output_tokens)
                 if rec_ids:
@@ -203,13 +216,22 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
             slot.__enter__()
         except Exception:  # noqa: BLE001 — Busy
             return _error(429, "busy", "Trợ lý đang trả lời người khác. Thử lại sau vài giây.")
-        threading.Thread(target=work, daemon=True).start()
+        try:
+            threading.Thread(target=work, daemon=True).start()
+        except Exception:
+            slot.__exit__(None, None, None)
+            raise
 
-        def stream() -> Iterator[str]:
-            yield _sse("session", {"session_id": sid, "mode": svc.mode})
+        async def stream() -> AsyncIterator[str]:
             try:
+                yield _sse("session", {"session_id": sid, "mode": svc.mode})
                 while True:
-                    item = events.get()
+                    if await request.is_disconnected():
+                        break
+                    try:
+                        item = await run_in_threadpool(events.get, True, 0.5)
+                    except queue.Empty:
+                        continue
                     if item is None:
                         break
                     yield _sse(*item)
@@ -231,8 +253,9 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
         svc = service()
         cid = customer(request, create=False)
         own_session(svc, sid, cid)
-        svc.transient.pop(sid, None)
-        return {"deleted": svc.store.delete_session(sid, cid)}
+        with svc.session_lock:
+            svc.forget_transient(sid)
+            return {"deleted": svc.store.delete_session(sid, cid)}
 
     @r.post("/assistant/recommendations/{rid}/event")
     def rec_event(rid: int, body: RecEventIn, request: Request) -> dict[str, Any]:
@@ -261,9 +284,7 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
     def set_consent(body: ConsentIn, request: Request, response: Response) -> dict[str, Any]:
         svc = service()
         cid = customer(request, response)
-        svc.store.set_consent(cid, body.level)
-        for s in svc.store.q("SELECT id FROM sessions WHERE customer_id = ? AND ended_at IS NULL", (cid,)):
-            svc.store.x("UPDATE sessions SET persisted = ? WHERE id = ?", (int(body.level != "none"), s["id"]))
+        svc.set_consent(cid, body.level)
         return {"consent_level": body.level}
 
     @r.patch("/assistant/me/facts/{fid}")
@@ -285,9 +306,10 @@ def build_router(get_service: Callable[[], AssistantService], get_catalog: Calla
         svc = service()
         cid = customer(request, create=False)
         if cid:
-            for s in svc.store.q("SELECT id FROM sessions WHERE customer_id = ?", (cid,)):
-                svc.transient.pop(s["id"], None)
-            svc.store.delete_customer(cid)
+            with svc.session_lock:
+                for s in svc.store.q("SELECT id FROM sessions WHERE customer_id = ?", (cid,)):
+                    svc.forget_transient(s["id"])
+                svc.store.delete_customer(cid)
         response.delete_cookie(COOKIE)
         return {"deleted": True}
 

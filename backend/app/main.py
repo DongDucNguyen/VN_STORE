@@ -18,6 +18,7 @@ Biến môi trường:
 from __future__ import annotations
 
 import os
+import logging
 import time
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
@@ -392,6 +393,7 @@ async def search_voice(request: Request, limit: int = Query(24, ge=1, le=100),
     except Busy:
         return _error(429, "busy", BUSY_MESSAGE)
     except Exception as e:  # noqa: BLE001 — lỗi model không làm sập API
+        logging.getLogger(__name__).exception("Voice inference failed (language=%s)", language)
         return _error(503, "model_error", f"Model giọng nói gặp lỗi ({type(e).__name__}). Thử lại hoặc gõ chữ.")
     text = " ".join(recognition.text.split())
     warnings = []

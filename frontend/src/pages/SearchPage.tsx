@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import { api, ApiError, emptyFilters, hasFilters, type Filters, type SearchResponse } from "../api";
 import { voiceResult } from "../voiceResult";
 import { afterResultPaint, beginMeasure, endMeasure, type Measure } from "../measurements";
-import { ErrorBox, Loading, Notice } from "../components/common";
+import { ArtSection, MarginArtwork } from "../components/brand/Art";
+import { BambooLines, NonLaLines } from "../components/brand/Motifs";
+import { EmptyState, ErrorBox, GridSkeleton, Notice } from "../components/common";
 import { ProductGrid } from "../components/ProductCard";
 import { SearchBar } from "../components/SearchBar";
+import { Icon } from "../components/ui/Icon";
+import { ART } from "../content/editorialAssets";
 import { formatVnd } from "../format";
 import { navigate, type Route } from "../router";
 
@@ -123,140 +127,184 @@ export function SearchPage({ route }: { route: Route }) {
 
   return (
     <div className="page search-page">
-      <SearchBar initial={q} />
-      {route.params.get("via") === "voice" && q && (
-        <Notice>
-          Đã chép lời từ giọng nói: “{q}”. Nếu chưa đúng, sửa trong ô tìm rồi bấm Tìm, hoặc bấm 🎤 để nói lại.
-          {data?.transcript?.raw_text && <div>Bản chép lời gốc: “{data.transcript.raw_text}”</div>}
-        </Notice>
-      )}
-
-      {data && iq && (q || userFilters.length > 0) && (
-        <section className="interpret" aria-label="Cách hệ thống hiểu truy vấn">
-          <h2 className="sr-only">Cách hiểu truy vấn</h2>
-          <div className="chips">
-            {iq.keywords && (
-              <span className="chip chip-static">
-                Từ khóa: <b>{iq.keywords}</b>
-              </span>
-            )}
-            {queryFilters.map((a) => (
-              <span key={a.key} className="chip chip-hard" title="Ràng buộc bạn nêu trong câu tìm">
-                {a.label}
-              </span>
-            ))}
-            {userFilters.map((a) => (
-              <span key={a.key} className="chip chip-hard">
-                {a.label}
-              </span>
-            ))}
-            {userFilters.length > 0 && (
-              <button className="chip chip-clear" onClick={() => navigate("/search", { q })}>
-                Xóa bộ lọc
-              </button>
-            )}
-          </div>
-          {data.suggested_filters.length > 0 && (
-            <div className="chips">
-              <span className="chips-label">Có phải bạn muốn lọc:</span>
-              {data.suggested_filters.map((h) => {
-                const m = HINT_PARAM[h.field];
-                const v = m && (m.key === "id" ? h.id : h.value);
-                if (!m || !v) return null;
-                const already = route.params.getAll(m.param).includes(v);
-                return (
-                  <button
-                    key={`${h.field}:${v}`}
-                    className={`chip chip-suggest ${already ? "chip-on" : ""}`}
-                    aria-pressed={already}
-                    onClick={() => toggle(PARAM[m.param], v)}
-                  >
-                    {already ? "✓ " : "+ "}
-                    {h.value}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-          {/* Sửa lỗi gõ đã có cảnh báo riêng "Hiểu … là …". */}
-          {iq.expansions.some((e) => e.relation !== "typo") && (
-            <p className="muted small">
-              Tìm thêm cách gọi khác:{" "}
-              {iq.expansions.filter((e) => e.relation !== "typo").map((e) => e.term).join(", ")}
-            </p>
-          )}
-          {data.warnings.map((w) => (
-            <Notice key={w} tone="warn">
-              {w}
+      <ArtSection className="task-masthead" art={<BambooLines className="masthead-bamboo" />}>
+        <div className="container">
+          <h1 className="task-title">Tìm một món hợp ý<span className="editorial-mark" aria-hidden="true" /></h1>
+          <SearchBar initial={q} />
+          {route.params.get("via") === "voice" && q && (
+            <Notice>
+              Đã chép lời từ giọng nói: “{q}”. Bạn có thể sửa câu vừa nói trong ô tìm rồi bấm Tìm, hoặc bấm nút micro
+              để nói lại.
+              {data?.transcript?.raw_text && <div>Bản chép lời gốc: “{data.transcript.raw_text}”</div>}
             </Notice>
-          ))}
-        </section>
-      )}
+          )}
+        </div>
+      </ArtSection>
 
-      <div className="search-layout">
-        <details
-          className="filters"
-          open={filtersOpen}
-          onToggle={(e) => setFiltersOpen((e.currentTarget as HTMLDetailsElement).open)}
-        >
-          <summary>Bộ lọc</summary>
-          {data && <FilterPanel key={key} data={data} filters={filters} toggle={toggle} update={update} />}
-        </details>
-
-        <section className="results" aria-live="polite">
-          {loading && !data && <Loading label="Đang tìm…" />}
-          {error && <ErrorBox message={error} onRetry={() => setRetry((r) => r + 1)} />}
-          {data && !error && (
-            <>
-              <p className="muted small">
-                {data.total} kết quả · {data.timings_ms.total} ms
+      <ArtSection className="search-body" art={<MarginArtwork asset={ART.lotusBotanical02} className="search-lotus" />}>
+        <div className="container">
+          {data && iq && (q || userFilters.length > 0) && (
+            <section className="interpret" aria-label="Cách hệ thống hiểu truy vấn">
+              <h2 className="sr-only">Cách hiểu truy vấn</h2>
+              <p className="interpret-lead">
+                Bạn đang tìm{q ? <> “<b>{q}</b>”</> : " theo bộ lọc"}
               </p>
-              {data.total === 0 ? (
-                <div className="state">
-                  <p>Không tìm thấy sản phẩm phù hợp.</p>
-                  {data.relaxations.length > 0 && (
-                    <>
-                      <p>Điều kiện đang hạn chế kết quả:</p>
-                      <ul className="relax">
-                        {data.relaxations.map((r) => {
-                          const clear = RELAX_CLEAR[r.key];
-                          return (
-                            <li key={r.key}>
-                              {clear ? (
-                                <button className="link" onClick={() => update(clear)}>
-                                  Bỏ “{r.label}”
-                                </button>
-                              ) : (
-                                <>“{r.label}” (sửa câu tìm để nới)</>
-                              )}{" "}
-                              → {r.count} kết quả
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </>
-                  )}
-                  {q && (
-                    <a className="btn" href={`#/search?q=${encodeURIComponent(q)}`}>
-                      Tìm lại không kèm bộ lọc
-                    </a>
-                  )}
+              <div className="chips">
+                {iq.keywords && (
+                  <span className="chip chip-static">
+                    Từ khóa: <b>{iq.keywords}</b>
+                  </span>
+                )}
+                {queryFilters.map((a) => (
+                  <span key={a.key} className="chip chip-hard chip-query" title="Ràng buộc bạn nêu trong câu tìm">
+                    {a.label}
+                  </span>
+                ))}
+                {userFilters.map((a) => (
+                  <span key={a.key} className="chip chip-hard chip-user" title="Bộ lọc bạn chọn">
+                    {a.label}
+                  </span>
+                ))}
+                {userFilters.length > 0 && (
+                  <button className="chip chip-clear" onClick={() => navigate("/search", { q })}>
+                    Xóa bộ lọc
+                  </button>
+                )}
+              </div>
+              {data.suggested_filters.length > 0 && (
+                <div className="chips">
+                  <span className="chips-label">Có phải bạn muốn lọc:</span>
+                  {data.suggested_filters.map((h) => {
+                    const m = HINT_PARAM[h.field];
+                    const v = m && (m.key === "id" ? h.id : h.value);
+                    if (!m || !v) return null;
+                    const already = route.params.getAll(m.param).includes(v);
+                    return (
+                      <button
+                        key={`${h.field}:${v}`}
+                        className={`chip chip-suggest ${already ? "chip-on" : ""}`}
+                        aria-pressed={already}
+                        onClick={() => toggle(PARAM[m.param], v)}
+                      >
+                        {already ? "✓ " : "+ "}
+                        {h.value}
+                      </button>
+                    );
+                  })}
                 </div>
-              ) : (
+              )}
+              {/* Sửa lỗi gõ đã có cảnh báo riêng "Hiểu … là …". */}
+              {iq.expansions.some((e) => e.relation !== "typo") && (
+                <p className="muted small">
+                  Tìm thêm cách gọi khác:{" "}
+                  {iq.expansions.filter((e) => e.relation !== "typo").map((e) => e.term).join(", ")}
+                </p>
+              )}
+              {data.warnings.map((w) => (
+                <Notice key={w} tone="warn">
+                  {w}
+                </Notice>
+              ))}
+            </section>
+          )}
+
+          <div className="search-layout">
+            <aside className="search-aside">
+              <details
+                className="filters"
+                open={filtersOpen}
+                onToggle={(e) => setFiltersOpen((e.currentTarget as HTMLDetailsElement).open)}
+              >
+                <summary><Icon name="filter" /> Bộ lọc<span className="editorial-mark" aria-hidden="true" /></summary>
+                {data && <FilterPanel key={key} data={data} filters={filters} toggle={toggle} update={update} />}
+              </details>
+              <NonLaLines className="aside-ribs" />
+            </aside>
+
+            <section className="results" aria-label="Kết quả tìm kiếm" aria-busy={loading}>
+              {loading && !data && <GridSkeleton count={6} label="Đang tìm…" />}
+              {error && <ErrorBox message={error} onRetry={() => setRetry((r) => r + 1)} />}
+              {data && !error && (
                 <>
-                  <ProductGrid items={data.results} />
-                  {data.results.length < data.total && (
-                    <button className="btn btn-block" disabled={loading} onClick={() => setLimit((l) => l + PAGE)}>
-                      {loading ? "Đang tải…" : "Xem thêm"}
-                    </button>
+                  <div className="results-head">
+                    <p className="results-count" role="status">
+                      {data.total} kết quả{q && <> cho “{q}”</>}
+                    </p>
+                    {loading && (
+                      <p className="results-updating" role="status">
+                        <span className="spinner" aria-hidden /> Đang cập nhật kết quả…
+                      </p>
+                    )}
+                  </div>
+                  {data.total === 0 ? (
+                    <EmptyState title="Không tìm thấy sản phẩm phù hợp.">
+                      <p>Mình chưa tìm thấy món phù hợp với các điều kiện này.</p>
+                      {data.relaxations.length > 0 && (
+                        <>
+                          <p>Điều kiện đang hạn chế kết quả:</p>
+                          <ul className="relax">
+                            {data.relaxations.map((r) => {
+                              const clear = RELAX_CLEAR[r.key];
+                              return (
+                                <li key={r.key}>
+                                  {clear ? (
+                                    <button className="link" onClick={() => update(clear)}>
+                                      Bỏ “{r.label}”
+                                    </button>
+                                  ) : (
+                                    <>“{r.label}” (sửa câu tìm để nới)</>
+                                  )}{" "}
+                                  → {r.count} kết quả
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </>
+                      )}
+                      {q && (
+                        <a className="btn" href={`#/search?q=${encodeURIComponent(q)}`}>
+                          Tìm lại không kèm bộ lọc
+                        </a>
+                      )}
+                    </EmptyState>
+                  ) : (
+                    <>
+                      <ProductGrid items={data.results} busy={loading} />
+                      {data.results.length < data.total && (
+                        <p className="load-more">
+                          <button className="btn" disabled={loading} onClick={() => setLimit((l) => l + PAGE)}>
+                            {loading ? "Đang tải…" : "Xem thêm"} <Icon name="chevron" size={18} />
+                          </button>
+                        </p>
+                      )}
+                    </>
                   )}
                 </>
               )}
-            </>
-          )}
-        </section>
-      </div>
+            </section>
+          </div>
+        </div>
+      </ArtSection>
+
+      <MaterialBand />
     </div>
+  );
+}
+
+/** Dải chất liệu cuối trang tìm kiếm: ảnh nan đan cận cảnh + lối sang làng nghề. */
+export function MaterialBand() {
+  return (
+    <section className="material-band" aria-labelledby="material-band-title">
+      <div className="material-band-art" aria-hidden="true">
+        <img src={ART.weaveStrip.src} width={ART.weaveStrip.width} height={ART.weaveStrip.height} alt="" loading="lazy"
+          decoding="async" />
+      </div>
+      <div className="material-band-copy">
+        <h2 id="material-band-title">Từ những sợi mộc<span className="editorial-mark" aria-hidden="true" /></h2>
+        <p>Mỗi sợi đan là một câu chuyện về bàn tay, thời gian và nếp sống. Xem sản phẩm theo nơi làm ra chúng.</p>
+        <a className="text-link" href="#/places">Khám phá làng nghề <Icon name="arrow" size={18} /></a>
+      </div>
+    </section>
   );
 }
 
@@ -274,6 +322,7 @@ export function FilterPanel({
   const f = data.facets;
   const [pmin, setPmin] = useState(filters.price_min?.toString() ?? "");
   const [pmax, setPmax] = useState(filters.price_max?.toString() ?? "");
+  const [priceError, setPriceError] = useState<string | null>(null);
 
   // Giữ các giá trị đang chọn hiển thị dù tập kết quả hiện tại không còn chúng.
   const withSelected = <T extends { count: number }>(items: T[], selected: string[], idOf: (x: T) => string,
@@ -327,18 +376,39 @@ export function FilterPanel({
         <legend>Khoảng giá (đ)</legend>
         <form
           className="price-form"
+          noValidate
           onSubmit={(e) => {
             e.preventDefault();
+            const lo = /^\d+$/.test(pmin) ? Number(pmin) : null;
+            const hi = /^\d+$/.test(pmax) ? Number(pmax) : null;
+            if ((pmin && lo == null) || (pmax && hi == null)) {
+              setPriceError("Giá chỉ gồm chữ số, ví dụ 300000.");
+              return;
+            }
+            if (lo != null && hi != null && lo > hi) {
+              setPriceError("Giá “Từ” đang lớn hơn giá “Đến”.");
+              return;
+            }
+            setPriceError(null);
             update((x) => {
-              x.price_min = /^\d+$/.test(pmin) ? Number(pmin) : null;
-              x.price_max = /^\d+$/.test(pmax) ? Number(pmax) : null;
+              x.price_min = lo;
+              x.price_max = hi;
             });
           }}
         >
-          <input inputMode="numeric" placeholder="Từ" value={pmin} onChange={(e) => setPmin(e.target.value)} />
-          <input inputMode="numeric" placeholder="Đến" value={pmax} onChange={(e) => setPmax(e.target.value)} />
-          <button className="btn">Áp dụng</button>
+          <label className="price-field">
+            <span>Từ</span>
+            <input inputMode="numeric" placeholder="Từ" value={pmin} aria-invalid={!!priceError}
+              onChange={(e) => setPmin(e.target.value.trim())} />
+          </label>
+          <label className="price-field">
+            <span>Đến</span>
+            <input inputMode="numeric" placeholder="Đến" value={pmax} aria-invalid={!!priceError}
+              onChange={(e) => setPmax(e.target.value.trim())} />
+          </label>
+          <button className="btn btn-small">Áp dụng</button>
         </form>
+        {priceError && <p className="field-error" role="alert">{priceError}</p>}
         {f.price.min_vnd != null && (
           <p className="muted small">
             Trong kết quả: {formatVnd(f.price.min_vnd)} – {formatVnd(f.price.max_vnd ?? f.price.min_vnd)}

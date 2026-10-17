@@ -1,0 +1,958 @@
+{
+  "name": "Nếp Việt v2",
+  "design": "../../../design.md",
+  "assetCount": 36,
+  "excluded": [
+    {
+      "file": "cutouts/bamboo-shadow.png",
+      "reason": "Bản đầu giữ mảng nền trắng; chỉ tham khảo QA. Dùng bamboo-shadow-clean.png."
+    }
+  ],
+  "assets": [
+    {
+      "id": "bamboo-opening-branch",
+      "title": "Nhánh tre",
+      "file": "cutouts/bamboo-opening-branch.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1553869,
+      "sha256": "10cce8240e7171f4bad045779ad9f51a32be9bac2ff2eba1e4153f98ef8e5e7c",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "opening-margin",
+      "note": "Mép phải mở đầu; rộng 180–320px desktop, 90–140px mobile.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "bamboo-shadow-clean",
+      "title": "Bóng tre · bản sạch",
+      "file": "cutouts/bamboo-shadow-clean.png",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1487768,
+      "sha256": "9b29455416e2c5b2f1cda0dbe99dfcccc1687a0be70cc109673411f1afef32ae",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "opening-margin",
+      "note": "Opacity 0.08–0.16; multiply trong lớp cô lập; không phủ ô tìm kiếm.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "ceramic-opening-still-life",
+      "title": "Tĩnh vật gốm",
+      "file": "cutouts/ceramic-opening-still-life.png",
+      "format": "png",
+      "width": 1214,
+      "height": 1295,
+      "bytes": 1441695,
+      "sha256": "b2062e5abf04c40a2795e1c01299309fb3b1a9b6ebeb7c58fa66d596ee58c9a7",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "opening-margin",
+      "note": "Điểm nhỏ ở góc thấp; rộng 100–160px, mobile 64–90px.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "non-la-section-cutout",
+      "title": "Nón lá",
+      "file": "cutouts/non-la-section-cutout.png",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2162576,
+      "sha256": "bfb73bfa7196d9c86131a8351911879606a5f6698d9d545ea3b9c6b8cd195237",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "chapter-edge",
+      "note": "Chỉ tại chương danh mục; crop 30–45% ở mép, mobile giảm còn 96–140px.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "textile-edge",
+      "title": "Mép lụa",
+      "file": "cutouts/textile-edge.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1589534,
+      "sha256": "6fe28448a2f54581d2a6bface66e5829e8173b4769f6987b6c8055bd25f13b0e",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "chapter-edge",
+      "note": "Mép phải chương nghề; desktop 120–180px, mobile ẩn nếu chật.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "lotus-botanical-01",
+      "title": "Sen nở · nét khắc",
+      "file": "botanical/lotus-botanical-01.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2294794,
+      "sha256": "c9e4cd45d4b3b05f600492116b579692d49c659107a5f96ad6522b0e9dfcbd06",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "content-gutter",
+      "note": "Lề nhóm sản phẩm; 100–160px, không nằm sau chữ.",
+      "allowedRoutes": [
+        "home",
+        "product",
+        "brands",
+        "places"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "lotus-botanical-02",
+      "title": "Lá sen & gương sen",
+      "file": "botanical/lotus-botanical-02.png",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2513287,
+      "sha256": "6882b788d7c337fea085b8ea9b3a4df654192aa2a1eb3e19f42c289e967d2eaa",
+      "hasAlphaChannel": true,
+      "role": "decoration",
+      "alt": "",
+      "placement": "content-gutter",
+      "note": "Lề câu chuyện nguồn gốc; không lặp cùng sen nở trong một vùng nhìn.",
+      "allowedRoutes": [
+        "home",
+        "product",
+        "brands",
+        "places"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "footer-landscape",
+      "title": "Phong cảnh · nét mực",
+      "file": "scenes/footer-landscape.png",
+      "format": "png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 1974433,
+      "sha256": "29f76d77a4ad0b312d3f20dd4549fbf89c5f79ad37a96dac1ba5e6aaf8bfe820",
+      "hasAlphaChannel": false,
+      "role": "decoration",
+      "alt": "",
+      "placement": "footer-scene",
+      "note": "Cảnh ở đáy; liên kết nằm trên vùng nền đặc phía trên.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "lotus-midpage-desktop",
+      "title": "Đầm sen · ngang",
+      "file": "scenes/lotus-midpage-desktop.png",
+      "format": "png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 2320947,
+      "sha256": "6b75297bb0db3cdeaf7d2a44a445594044cc42e64e1e94e967b97b743e245a55",
+      "hasAlphaChannel": false,
+      "role": "decoration",
+      "alt": "",
+      "placement": "midpage-scene",
+      "note": "Khoảng nghỉ giữa trang, không đưa lên opening. Focal point 67% 50%.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.67,
+        0.5
+      ],
+      "mobileVariant": "lotus-midpage-mobile",
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "lotus-midpage-mobile",
+      "title": "Đầm sen · dọc",
+      "file": "scenes/lotus-midpage-mobile.png",
+      "format": "png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2167529,
+      "sha256": "90fcc213f3587379e7fc041857953d76b7e54b95715b8769fbf03bb65a1a43af",
+      "hasAlphaChannel": false,
+      "role": "decoration",
+      "alt": "",
+      "placement": "midpage-scene",
+      "note": "Bố cục riêng cho màn hình hẹp; dùng picture thay ảnh ngang.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "bamboo-weave-macro",
+      "title": "Nhịp đan · macro",
+      "file": "textures/bamboo-weave-macro.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 3876080,
+      "sha256": "02eb9b6aae7a19d6ce14cb4b18308613d42701e79ec7bab3d5ce88ebf8aa9b0c",
+      "hasAlphaChannel": false,
+      "role": "decoration",
+      "alt": "",
+      "placement": "content-gutter",
+      "note": "Crop dải dọc 64–120px desktop hoặc dải ngang mobile; không tile.",
+      "allowedRoutes": [
+        "home",
+        "product",
+        "brands",
+        "places"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "craft-hands-editorial",
+      "title": "Bàn tay đan",
+      "file": "editorial/craft-hands-editorial.png",
+      "format": "png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 2165988,
+      "sha256": "404712e3072741a1fd4fe084a2a69b7bd977d90cc439a720289199badcb49e69",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Bàn tay đan — minh họa AI",
+      "placement": "editorial-story",
+      "note": "Ảnh chính chương nghề; caption “Minh họa bằng AI về thao tác đan”.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "craft-workbench",
+      "title": "Góc bàn nghề",
+      "file": "editorial/craft-workbench.png",
+      "format": "png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 2303610,
+      "sha256": "f36c3f763dea66715f20718076a7f36c852f90d28e48e9f2b958c8ac19bc05eb",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Góc bàn nghề — minh họa AI",
+      "placement": "editorial-story",
+      "note": "Ảnh phụ/chuyển cảnh chương nghề; không gắn làng nghề cụ thể.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "category-ceramics",
+      "title": "Gốm",
+      "file": "categories/category-ceramics.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2100960,
+      "sha256": "9700f137d2a52e01ca14d2c8fa1414fbb26a2aaab6e120c3a2ea15ac04d7c1a8",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Gốm — minh họa AI",
+      "placement": "category-card",
+      "note": "Ảnh vuông, object-fit: contain; dùng trong danh mục gốm.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "category-specialties",
+      "title": "Đặc sản đóng gói",
+      "file": "categories/category-specialties.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2231443,
+      "sha256": "5b89d4874d86acc31abff13fe973e13524438b6f30ddf85617de58de133ef23b",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Đặc sản đóng gói — minh họa AI",
+      "placement": "category-card",
+      "note": "Minh họa nhóm thực phẩm; không suy ra thương hiệu/xuất xứ.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "category-textiles",
+      "title": "Dệt & lụa",
+      "file": "categories/category-textiles.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2149469,
+      "sha256": "7a196060bfd5aa2d2a5418d97af293a1c62c51d80c9537b99b74264d87d28969",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Dệt & lụa — minh họa AI",
+      "placement": "category-card",
+      "note": "Ảnh vuông; không crop sát mép khăn.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "category-weaving",
+      "title": "Đan lát",
+      "file": "categories/category-weaving.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2336757,
+      "sha256": "108d28e9a43210099b7b68185da4906f024b9f7e3f3afae019d1f9294d18388b",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Đan lát — minh họa AI",
+      "placement": "category-card",
+      "note": "Ảnh vuông; giữ nguyên quai túi và miệng khay.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "category-wood-lacquer",
+      "title": "Gỗ & sơn",
+      "file": "categories/category-wood-lacquer.png",
+      "format": "png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 2009174,
+      "sha256": "1dc39523f1c0df534361ddc2eb3beba1cb53541260002f1b065cb1f32a29db05",
+      "hasAlphaChannel": false,
+      "role": "illustrative-editorial",
+      "alt": "Gỗ & sơn — minh họa AI",
+      "placement": "category-card",
+      "note": "Ảnh vuông; giữ cả hộp và bát.",
+      "allowedRoutes": [
+        "home"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "built-in-imagegen",
+      "rights": "AI-generated illustration; not a licensed documentary photograph or catalog product",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "bamboo-divider",
+      "title": "bamboo divider",
+      "file": "svg/bamboo-divider.svg",
+      "format": "svg",
+      "width": 640,
+      "height": 32,
+      "bytes": 377,
+      "sha256": "6270a1ee8dbbe0f3a13c9859725646e6c6987da91b493f54eb840abea4b1b70b",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "bamboo-motion",
+      "title": "bamboo motion",
+      "file": "svg/bamboo-motion.svg",
+      "format": "svg",
+      "width": 360,
+      "height": 480,
+      "bytes": 821,
+      "sha256": "aa64b5d7925b18643b60c6eaed4400c2c63c2a88ce67ff8b50fb1a139fc214b9",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-arrow",
+      "title": "arrow",
+      "file": "svg/icon-arrow.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 217,
+      "sha256": "a8983086874cb1ccc73933d37e3b8c5365fc7d5e9b96ad6b253257d0e8bf4c35",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-camera",
+      "title": "camera",
+      "file": "svg/icon-camera.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 251,
+      "sha256": "190cc0dd9ea4685a4600c15b3fc024f8bddf38ff41617acaa137f4162f686af1",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-chat",
+      "title": "chat",
+      "file": "svg/icon-chat.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 244,
+      "sha256": "04f639ff104f6159cf83fdc0cd6859c13c8f1b9b39cc4d02cc2bc6de74606e41",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-check",
+      "title": "check",
+      "file": "svg/icon-check.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 210,
+      "sha256": "b42e467450befa5451d7bf1ad7b1710454b4cb7d2b950acde1ab6caadba8dbda",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-close",
+      "title": "close",
+      "file": "svg/icon-close.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 216,
+      "sha256": "c2e75fd4b61e18a0e4c61740640b890d4800a3d8433d12974955ce0c0451d6e5",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-filter",
+      "title": "filter",
+      "file": "svg/icon-filter.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 218,
+      "sha256": "1cebda3f298a6ee1a24953142494a5037ccc3da9ee2f06636b97a6511931f3c6",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-heart",
+      "title": "heart",
+      "file": "svg/icon-heart.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 246,
+      "sha256": "020a17c060e27826448b1a51dc241081185c4734685c5c425db37b4cf54972dc",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-home",
+      "title": "home",
+      "file": "svg/icon-home.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 231,
+      "sha256": "174889cff7cb07a25c3fdd5f3c7ed8bf4d40bb53b0f3fa44445b259d067a898e",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-menu",
+      "title": "menu",
+      "file": "svg/icon-menu.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 219,
+      "sha256": "ab8f9972aac4b39dec49d4d5c2f290822189c9eb9dd8f9901c5e903471e16bee",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-microphone",
+      "title": "microphone",
+      "file": "svg/icon-microphone.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 284,
+      "sha256": "744ef9b20d8f1e3b308b7e83c42530215e1833af99ae7aa6445630baf982a5cb",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-search",
+      "title": "search",
+      "file": "svg/icon-search.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 243,
+      "sha256": "a68cf284d013b389fc358c866d02bde53b4e5fbdeae9b87a90606bad23b94f40",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "icon-source",
+      "title": "source",
+      "file": "svg/icon-source.svg",
+      "format": "svg",
+      "width": 24,
+      "height": 24,
+      "bytes": 231,
+      "sha256": "a9f23c10a4b0bb2727d3428862e9b30fb43384e6c2f3fd5535cb9c7b36b2a80c",
+      "hasAlphaChannel": null,
+      "role": "functional-icon",
+      "alt": "",
+      "placement": "ui-control",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "lotus-mark",
+      "title": "lotus mark",
+      "file": "svg/lotus-mark.svg",
+      "format": "svg",
+      "width": 48,
+      "height": 48,
+      "bytes": 463,
+      "sha256": "d180398fef11ba63e7202f254f6aaf77e4eee4ba3b2ce37bfd2b3aac56b60fad",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "non-la-lines",
+      "title": "non la lines",
+      "file": "svg/non-la-lines.svg",
+      "format": "svg",
+      "width": 240,
+      "height": 140,
+      "bytes": 480,
+      "sha256": "7c22f4227fe78f255ca9bad6da7f3ba0acaa0496bb529a3deebd995f59a416b2",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "water-ripple",
+      "title": "water ripple",
+      "file": "svg/water-ripple.svg",
+      "format": "svg",
+      "width": 240,
+      "height": 80,
+      "bytes": 437,
+      "sha256": "5533ca3239d6cc055c5f456d3f753f79ce0732194c801dc49f54fe91d8f99878",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    },
+    {
+      "id": "weave-divider",
+      "title": "weave divider",
+      "file": "svg/weave-divider.svg",
+      "format": "svg",
+      "width": 320,
+      "height": 48,
+      "bytes": 456,
+      "sha256": "6d9419abd1a9faf83558d23f4ae319006eac63b903800940c5a98cc8bcf1b751",
+      "hasAlphaChannel": null,
+      "role": "decorative-vector",
+      "alt": "",
+      "placement": "micro-motion",
+      "note": "SVG currentColor; nhúng inline để đổi màu hoặc animate từng nhóm.",
+      "allowedRoutes": [
+        "shared-ui"
+      ],
+      "focalPoint": [
+        0.5,
+        0.5
+      ],
+      "mobileVariant": null,
+      "source": "authored-svg",
+      "rights": "Project-authored vector",
+      "reviewStatus": "visually-reviewed-master; web-optimization-pending"
+    }
+  ]
+}

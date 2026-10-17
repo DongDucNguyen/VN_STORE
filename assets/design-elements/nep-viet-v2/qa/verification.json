@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-17T06:15:41.964Z",
+  "browser": "155.0.8059.84",
+  "assetCount": 36,
+  "imagesDecoded": 38,
+  "localLinksChecked": 76,
+  "widths": [
+    {
+      "viewport": 1440,
+      "scroll": 1440
+    },
+    {
+      "viewport": 768,
+      "scroll": 768
+    },
+    {
+      "viewport": 390,
+      "scroll": 390
+    },
+    {
+      "viewport": 320,
+      "scroll": 320
+    }
+  ],
+  "alphaSurfaceToggle": "passed",
+  "motionTrigger": "passed",
+  "manualReducedMotion": "passed",
+  "systemReducedMotion": "passed",
+  "pageErrors": [],
+  "scope": "Offline asset gallery only; not production app performance"
+}

@@ -2,6 +2,8 @@
 
 Kế hoạch: [PLAN.md](PLAN.md) · Tiến độ: [reports/progress/](reports/progress/README.md) · Việc tiếp theo: [BACKLOG](reports/progress/BACKLOG.md)
 
+**Máy hiện tại — RTX 5070 Ti / RAM 32 GB:** đã tích hợp toàn bộ `demo_version` vào `main`, sửa lỗi hội thoại/quyền lưu dữ liệu, stream và runtime; nhánh demo giữ nguyên. Chạy `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_local.ps1`, rồi `npm.cmd --prefix frontend run dev`. Xem [hướng dẫn workstation](docs/local-workstation.md) và [phân tích, kiểm thử, số đo](reports/progress/2026-10-16_tich-hop-demo-toi-uu-workstation.md): **878 backend, 28 Pillow, 160 E2E**, thêm smoke model thật desktop/mobile đạt.
+
 **Mới 16/10: [trợ lý tư vấn AI chạy cục bộ](#trợ-lý-tư-vấn-16102026)** — gợi ý theo nhu cầu, nhận xét khách quan (catalog + đánh giá), ghi nhớ sở thích theo đồng ý; model Qwen3-4B chọn qua benchmark. Xem [báo cáo](reports/progress/2026-10-16_GD7_tro-ly-tu-van.md).
 
 Cập nhật demo 14/10: [gộp 4 commit main và kiểm chứng tích hợp](reports/progress/2026-10-14_GD6_merge-main-demo.md), giữ tối ưu English/GPU và đệm âm cuối. Backend 774 test đạt; browser với model thật đạt trên desktop/mobile. English sau warmup khoảng 0,35 giây với câu ngắn và 0,66 giây với clip 6,5 giây trên máy demo.
@@ -91,7 +93,7 @@ Frontend gọi `/api/*` và `/images/*`, Vite proxy sang `VNSTORE_API` (mặc đ
 
 ## Dữ liệu và ảnh hiện tại — 13/10/2026
 
-Catalog `seed-006-enriched` (`b98b859a…`): **330 sản phẩm, 328 published (demo nội bộ), 2 draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, khoảng 60 sản phẩm mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Các bước: [nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) (`seed-003`), chất liệu Hanhsilk (`seed-004`), [publish demo nội bộ](reports/progress/2026-10-11_GD1_publish-demo-noi-bo.md) (`seed-005`), [bổ sung chất liệu/màu có căn cứ](reports/progress/2026-10-11_GD1-2_bo-sung-tu-dong.md) (`seed-006`). Quyền ảnh vẫn `unknown`, chưa công bố công khai. Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh).
+Catalog hiện tại `seed-007-intended-uses` (`2a5d1a7e…`, checkout LF): **330 sản phẩm, 328 published (demo nội bộ), 2 draft, 814 ảnh đã tải từ nguồn chính thức, 23 danh mục**, khoảng 60 sản phẩm mỗi nhóm PLAN (gốm sứ, mây tre, dệt may, gỗ/trang trí, thực phẩm) từ Minh Long, Hanoia, Marou, Vietcraft, Hanhsilk, SenSilk. Các bước: [nhập đợt 002](reports/progress/2026-10-10_GD1_nhap-dot-002.md) (`seed-003`), chất liệu Hanhsilk (`seed-004`), [publish demo nội bộ](reports/progress/2026-10-11_GD1_publish-demo-noi-bo.md) (`seed-005`), [bổ sung chất liệu/màu có căn cứ](reports/progress/2026-10-11_GD1-2_bo-sung-tu-dong.md) (`seed-006`), [bổ sung intended uses cho trợ lý](reports/progress/2026-10-16_GD7_tro-ly-tu-van.md) (`seed-007`). Quyền ảnh vẫn `unknown`, chưa công bố công khai. Trước đó: `seed-002-taxonomy` (30 sản phẩm, 45 ảnh).
 
 Bộ ảnh thử tìm bằng ảnh (không phải benchmark): [benchmarks/image/exploratory/](benchmarks/image/exploratory/expanded-2026-10-13/README.md), 100 ảnh / 250 ca, chạy bằng `scripts/benchmark/run_image_exploratory.py`.
 Ảnh nằm tại `assets/products/<product-id>/`; DB có đường dẫn, kích thước và SHA-256.
@@ -180,7 +182,7 @@ Model Hugging Face được ghim revision và giữ ở `artifacts/hf-cache/` (c
 
 #### Chạy GPU trên RTX 3050/driver 566.14 (PowerShell)
 
-Máy này dùng Python 3.12, ONNX Runtime 1.20.2 và CUDA 12.6 trong `.venv-ml-gpu`. Python 3.14/ORT 1.31 cũ dùng CUDA 13 và lỗi 801 với driver 566.14. Cài từ Python 3.12 có sẵn, hoặc dùng gói Python NuGet chính thức đã giải nén tại `artifacts/runtime/python-3.12-nuget/tools/python.exe`:
+Phần này dành cho **máy demo RTX 3050 trước đây**, dùng Python 3.12, ONNX Runtime 1.20.2 và CUDA 12.6 trong `.venv-ml-gpu`. Máy RTX 5070 Ti hiện tại dùng [hướng dẫn workstation](docs/local-workstation.md). Python 3.14/ORT 1.31 dùng CUDA 13 và đã gặp lỗi 801 với driver 566.14 của máy demo. Cài từ Python 3.12 có sẵn, hoặc dùng gói Python NuGet chính thức đã giải nén tại `artifacts/runtime/python-3.12-nuget/tools/python.exe`:
 
 ```powershell
 & .\artifacts\runtime\python-3.12-nuget\tools\python.exe -m venv .venv-ml-gpu

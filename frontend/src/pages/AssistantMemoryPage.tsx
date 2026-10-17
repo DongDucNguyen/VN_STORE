@@ -91,7 +91,7 @@ export function AssistantMemoryPage() {
           <button className="btn" onClick={() => assistantApi.exportMe().then((d) => setExported(JSON.stringify(d, null, 2)))
             .catch(() => setError("Không xuất được dữ liệu."))}>Xem toàn bộ dữ liệu (JSON)</button>{" "}
           {!confirmAll ? (
-            <button className="btn" onClick={() => setConfirmAll(true)}>Xóa mọi thứ trợ lý biết về tôi</button>
+            <button className="btn btn-danger-outline" onClick={() => setConfirmAll(true)}>Xóa mọi thứ trợ lý biết về tôi</button>
           ) : (
             <span className="confirm">
               Xóa vĩnh viễn lịch sử trò chuyện và sở thích? Đánh giá sản phẩm bạn đã gửi được giữ lại ở dạng

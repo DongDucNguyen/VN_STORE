@@ -50,10 +50,13 @@ export function useAssistant() {
   const sid = useRef<string | null>(null);
   const controller = useRef<AbortController | null>(null);
   const alive = useRef(true);
+  const epoch = useRef(0);
+  const opening = useRef<Promise<string | null> | null>(null);
+  const sending = useRef(false);
 
   useEffect(() => {
     alive.current = true;
-    return () => { alive.current = false; controller.current?.abort(); };
+    return () => { alive.current = false; epoch.current++; controller.current?.abort(); };
   }, []);
 
   const patch = useCallback((id: string, f: (m: ChatMessage) => ChatMessage) => {
@@ -63,51 +66,68 @@ export function useAssistant() {
   /** Mở (hoặc khôi phục) phiên. Trả về id phiên, null nếu trợ lý không dùng được. */
   const ensure = useCallback(async (productId?: string): Promise<string | null> => {
     if (sid.current) return sid.current;
-    setError(null);
-    const saved = readSession();
-    try {
-      if (saved) {
-        // Tải lại trang: dùng tiếp phiên còn mở của tab này (mở phiên mới sẽ kết thúc phiên cũ).
-        try {
-          const old = await assistantApi.session(saved);
-          if (!old.ended_at) {
-            const me = await assistantApi.me();
-            const s: AssistantSession = { session_id: saved, consent_level: me.consent_level,
-              consent_needed: me.consent_needed, consent_options: me.consent_options, greeting_vi: "",
-              assistant: me.assistant };
-            if (alive.current) {
-              setMessages(old.messages.map((m) => ({ id: nextId(), role: m.role, text: m.content, done: true })));
-              setSession(s);
+    if (opening.current) return opening.current;
+    const version = epoch.current;
+    const current = () => alive.current && epoch.current === version;
+    const task = (async () => {
+      setError(null);
+      const saved = readSession();
+      try {
+        if (saved) {
+          // Tải lại trang: dùng tiếp phiên còn mở của tab này (mở phiên mới sẽ kết thúc phiên cũ).
+          try {
+            const old = await assistantApi.session(saved);
+            if (!old.ended_at) {
+              const me = await assistantApi.me();
+              const s: AssistantSession = { session_id: saved, consent_level: me.consent_level,
+                consent_needed: me.consent_needed, consent_options: me.consent_options, greeting_vi: "",
+                assistant: me.assistant };
+              if (!current()) return null;
+              if (current()) {
+                setMessages(old.messages.map((m) => ({ id: nextId(), role: m.role, text: m.content, done: true })));
+                setSession(s);
+              }
+              sid.current = saved;
+              return saved;
             }
-            sid.current = saved;
-            return saved;
+          } catch (e) {
+            if (!(e instanceof ApiError) || ![404, 409].includes(e.status)) throw e;
           }
-        } catch { /* phiên cũ đã hết hạn hoặc bị xóa */ }
+        }
+        if (!current()) return null;
+        const s = await assistantApi.createSession(productId);
+        if (!current()) {
+          await assistantApi.end(s.session_id).catch(() => {});
+          return null;
+        }
+        sid.current = s.session_id;
+        writeSession(s.session_id);
+        if (alive.current) setSession(s);
+        return s.session_id;
+      } catch (e) {
+        if (current()) setError(e instanceof ApiError ? e.message : "Không mở được trợ lý.");
+        return null;
       }
-      const s = await assistantApi.createSession(productId);
-      sid.current = s.session_id;
-      writeSession(s.session_id);
-      if (alive.current) setSession(s);
-      return s.session_id;
-    } catch (e) {
-      if (alive.current) setError(e instanceof ApiError ? e.message : "Không mở được trợ lý.");
-      return null;
-    }
+    })();
+    opening.current = task;
+    try { return await task; } finally { if (opening.current === task) opening.current = null; }
   }, []);
 
   const send = useCallback(async (text: string, opts: { inputMode?: "text" | "voice"; productId?: string | null } = {}) => {
     const clean = text.trim();
-    if (!clean || busy) return;
-    const id = await ensure(opts.productId ?? undefined);
-    if (!id) return;
+    if (!clean || sending.current) return;
+    sending.current = true;
+    setBusy(true);
     controller.current?.abort();
     const ctrl = new AbortController();
     controller.current = ctrl;
     const reply: ChatMessage = { id: nextId(), role: "assistant", text: "", status: "Đang gửi…" };
-    setMessages((ms) => [...ms, { id: nextId(), role: "user", text: clean, done: true }, reply]);
-    setBusy(true);
-    setError(null);
     try {
+      const id = await ensure(opts.productId ?? undefined);
+      if (!id || ctrl.signal.aborted || !alive.current) return;
+      setMessages((ms) => [...ms, { id: nextId(), role: "user", text: clean, done: true }, reply]);
+      setBusy(true);
+      setError(null);
       await chatStream(id, { text: clean, input_mode: opts.inputMode ?? "text", context_product_id: opts.productId ?? null },
         (e) => {
           if (ctrl.signal.aborted) return;
@@ -138,19 +158,24 @@ export function useAssistant() {
     } finally {
       if (controller.current === ctrl) {
         controller.current = null;
+        sending.current = false;
         if (alive.current) setBusy(false);
       }
     }
-  }, [busy, ensure, patch]);
+  }, [ensure, patch]);
 
   const reset = useCallback(async () => {
+    epoch.current++;
     controller.current?.abort();
+    controller.current = null;
+    sending.current = false;
     const old = sid.current;
     sid.current = null;
     writeSession(null);
     setMessages([]);
     setBusy(false);
     setSession(null);
+    await opening.current;
     if (old) {
       try { await assistantApi.end(old); } catch { /* đã kết thúc */ }
     }

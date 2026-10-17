@@ -1,0 +1,6 @@
+const {chromium}=require('../../../frontend/node_modules/@playwright/test');
+const {pathToFileURL}=require('node:url');
+const fs=require('node:fs');const path=require('node:path');
+(async()=>{const b=await chromium.launch({channel:'chrome',headless:true});try{const page=await b.newPage({viewport:{width:1400,height:1000}});const files=fs.readdirSync(path.join(__dirname,'cutouts')).map(f=>'cutouts/'+f).concat(fs.readdirSync(path.join(__dirname,'botanical')).map(f=>'botanical/'+f));
+const html='<!doctype html><meta charset="utf-8"><style>body{font:14px system-ui;background:#ddd}main{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}article{min-width:0}img{width:100%;height:230px;object-fit:contain}.light{background:#F7F3E8}.dark{background:#183E33}</style><main>'+files.map(f=>'<article><b>'+f+'</b><div class="light"><img src="'+f+'"></div><div class="dark"><img src="'+f+'"></div></article>').join('')+'</main>';
+fs.writeFileSync(path.join(__dirname,'alpha-inspection.html'),html);await page.goto(pathToFileURL(path.join(__dirname,'alpha-inspection.html')).href);await page.locator('img').evaluateAll(a=>Promise.all(a.map(i=>i.decode())));await page.screenshot({path:path.join(__dirname,'alpha-inspection.png'),fullPage:true});console.log('Alpha contact sheet saved');}finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1});

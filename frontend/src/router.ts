@@ -1,5 +1,6 @@
 // Router dựa trên hash, đủ cho demo: #/ , #/search?q=..., #/image, #/p/:id, #/brands, #/places, #/favorites
 import { useEffect, useState } from "react";
+import { transitionPage } from "./motion/transitions";
 
 export interface Route {
   path: string;
@@ -20,10 +21,17 @@ export function useRoute(): Route {
     let lastPath = parse().path;
     const onChange = () => {
       const next = parse();
-      setRoute(next);
-      // Chỉ cuộn lên đầu khi đổi trang, không cuộn khi chỉ đổi bộ lọc.
-      if (next.path !== lastPath) window.scrollTo(0, 0);
+      // Chỉ đổi bộ lọc: cập nhật đồng bộ, không cuộn, không chuyển cảnh.
+      if (next.path === lastPath) {
+        setRoute(next);
+        return;
+      }
       lastPath = next.path;
+      // Đổi trang: chuyển cảnh “Qua hiên”; luôn đọc URL hiện tại để lượt bấm sau cùng thắng.
+      transitionPage(() => {
+        setRoute(parse());
+        window.scrollTo(0, 0);
+      }, next.path.startsWith("/p/"));
     };
     window.addEventListener("hashchange", onChange);
     window.addEventListener(NAVIGATE_EVENT, onChange);

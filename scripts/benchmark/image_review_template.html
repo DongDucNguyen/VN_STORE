@@ -8,6 +8,35 @@ body{font:16px/1.5 system-ui;background:#f3f5f1;color:#203129;margin:0}header,ma
 *{box-sizing:border-box}.query>div,article>div{min-width:0}label{max-width:100%}input,select{max-width:calc(100% - 8px)}#family-product{width:100%}#family-status,#family-unavailable{overflow-wrap:anywhere}
 article{display:grid;grid-template-columns:160px 1fr;gap:16px;background:white;border:1px solid #dce4db;border-radius:12px;padding:14px;margin:12px 0}article.graded{border-color:#7fa98c}article .imgs img{width:160px;height:160px;object-fit:contain;background:#f6f7f4;display:block;margin-bottom:4px}article .imgs img+img{width:76px;height:76px;display:inline-block;margin-right:4px}h3{margin:0}p{margin:4px 0}
 footer{padding:24px;border-top:1px solid #ccd5cb}@media(max-width:700px){.query,article{grid-template-columns:1fr}header{position:static}article .imgs img{width:100%}}
+
+/* nep-viet-theme:start */
+/* Nếp Việt — theme cho trang duyệt offline (design.md §5.12). Nguồn duy nhất; nhúng vào template bằng
+   scripts/design/sync_offline_theme.py. Chỉ đổi màu/chữ/khung; không đổi id, handler hay bố cục nghiệp vụ.
+   Không tải font từ mạng: dùng Be Vietnam Pro/Newsreader nếu máy đã có, nếu không thì font hệ thống. */
+:root{--nv-bg:#f7f3e8;--nv-surface:#fffdf7;--nv-well:#f0ebdd;--nv-text:#22352b;--nv-muted:#616b60;--nv-primary:#214b3b;--nv-primary-hover:#183e33;--nv-on-primary:#fff;--nv-soft:#e7ede1;--nv-line:#dbdece;--nv-control:#7b8474;--nv-mark:#a84432;--nv-warning:#79530e;--nv-warning-soft:#f5ecd2;--nv-danger:#a02d2d;--nv-straw:#d8bd7a;--nv-focus:#214b3b;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--nv-bg:#15271f;--nv-surface:#20372c;--nv-well:#1b3127;--nv-text:#ececdf;--nv-muted:#bbc5b7;--nv-primary:#b8d4b6;--nv-primary-hover:#cfe3cd;--nv-on-primary:#15271f;--nv-soft:#2c4839;--nv-line:#42594a;--nv-control:#9caa94;--nv-mark:#e3a392;--nv-warning:#f3d48f;--nv-warning-soft:#3a3220;--nv-danger:#ffa6a0;--nv-straw:#ccb982;--nv-focus:#e3d29c;color-scheme:dark}}
+body{background:var(--nv-bg);color:var(--nv-text);font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+header{background:var(--nv-bg);border-bottom:1px solid var(--nv-line);box-shadow:0 3px 0 -2px var(--nv-straw)}
+h1{font-family:"Newsreader",Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.01em}
+h1::after{content:"";display:inline-block;width:.38em;height:.38em;margin-left:.3em;background:var(--nv-mark);vertical-align:.12em}
+h2,h3{color:var(--nv-text)}
+a{color:var(--nv-primary);text-underline-offset:3px}
+small,.muted,.ev{color:var(--nv-muted)}
+:focus-visible{outline:3px solid var(--nv-focus);outline-offset:3px}
+button,select,input,textarea{border-radius:8px;border-color:var(--nv-control);min-height:40px}
+select,input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea{background:var(--nv-surface);color:var(--nv-text)}
+input[type=checkbox],input[type=radio]{accent-color:var(--nv-primary);min-height:0}
+button{transition:background-color 100ms linear,border-color 100ms linear}
+#notice{color:var(--nv-warning)}
+.sug{background:var(--nv-warning-soft);border-left-color:var(--nv-straw);color:var(--nv-text)}
+article,.card,.box,.help{background:var(--nv-surface);border-color:var(--nv-line);color:var(--nv-text)}
+.query{background:var(--nv-surface);border-color:var(--nv-primary)}
+.query img,.prod img,article .imgs img,img{background:var(--nv-well)}
+footer{border-top-color:var(--nv-line)}
+progress{accent-color:var(--nv-primary)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+button{background:var(--nv-primary);border-color:var(--nv-primary);color:var(--nv-on-primary)}button:hover{background:var(--nv-primary-hover)}button.tab,button.secondary{background:var(--nv-surface);color:var(--nv-primary);border-color:var(--nv-control)}button.tab[aria-pressed=true]{background:var(--nv-primary);color:var(--nv-on-primary)}article.graded,.card.done{border-color:var(--nv-primary);background:color-mix(in srgb,var(--nv-soft) 55%,var(--nv-surface))}
+/* nep-viet-theme:end */
 </style>
 <header><h1>Chấm query ảnh trên gallery catalog</h1><div id="summary"></div>
 <label>Người chấm <input id="reviewer" placeholder="Tên hoặc mã người chấm"></label>

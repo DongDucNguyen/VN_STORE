@@ -2,6 +2,7 @@ param(
     [string]$OutputDir = 'artifacts/voice_smoke/synthetic-en-tail'
 )
 
+$ErrorActionPreference = 'Stop'
 $repo = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if (-not [IO.Path]::IsPathRooted($OutputDir)) {
     $OutputDir = Join-Path $repo $OutputDir
@@ -36,7 +37,8 @@ foreach ($speaker in @(@{ name = 'david'; index = 0 }, @{ name = 'zira'; index =
         finally {
             $stream.Close()
         }
-        $samples.Add(@{ speaker = $speaker.name; audio_path = $filename;
+        if ((Get-Item -LiteralPath $path).Length -le 44) { throw "Empty synthesized audio: $path" }
+        $samples.Add(@{ speaker = $voice.Voice.GetDescription(); audio_path = $filename;
                         reference_text = $sentences[$i]; sentence_id = $i + 1 })
     }
 }

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>VNStore — Nếp Việt / Thiết kế v2</title>
+<style>
+:root{--bg:#f7f3e8;--paper:#fffdf7;--ink:#22352b;--green:#214b3b;--muted:#616b60;--line:#dbdece;--rose:#97485f;--ease:cubic-bezier(.22,1,.36,1);font-family:system-ui,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}body{margin:0}a{color:var(--green);text-underline-offset:4px}button,input{font:inherit}button{min-height:44px;padding:10px 17px;background:var(--green);color:white;border:1px solid var(--green);border-radius:8px;cursor:pointer}button:disabled{opacity:.55;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--rose);outline-offset:4px}button.secondary{background:var(--paper);color:var(--green)}
+header,main,footer{max-width:1280px;margin:auto;padding:24px 40px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}header b{font:32px Georgia,serif}header span{font-size:13px;letter-spacing:.12em}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}h1{font-size:clamp(40px,5vw,72px);line-height:1.13;margin:14px 0 20px;max-width:850px}h2{font-size:34px;margin:0 0 16px}h3{font-size:26px;margin:0 0 8px}p{line-height:1.65}small,.muted{color:var(--muted)}.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--green)}.intro{padding:28px 0 30px}.intro p{max-width:760px}.links{display:flex;gap:20px;flex-wrap:wrap}.section{margin:40px 0 72px}.controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:18px 20px;background:var(--paper);border:1px solid var(--line);border-radius:12px}.controls label{display:flex;gap:10px;align-items:center;min-height:44px;cursor:pointer}.controls input{width:20px;height:20px;accent-color:var(--green)}#motion-status{font-size:14px;margin:10px 0 22px;min-height:24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.demo{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}.stage{height:244px;position:relative;display:grid;place-items:center;overflow:hidden;background:#e7ede1}.demo:nth-child(2) .stage{background:#eee8db}.demo:nth-child(3) .stage{background:#f0ede3}.demo:nth-child(4) .stage{background:#e5eadd}.description{padding:22px 24px}.description p{font-size:14px;margin:8px 0 16px}.description button{font-size:14px}.demo svg{height:210px;width:100%;overflow:visible}.bamboo-group{transform-origin:180px 220px}.playing .bamboo-group{animation:bamboo 4s ease-in-out both}@keyframes bamboo{0%,100%{transform:rotate(0)}25%{transform:rotate(1.2deg)}70%{transform:rotate(-1.2deg)}}
+.water-btn{position:relative;isolation:isolate;overflow:visible;padding:16px 36px;min-height:56px;border-radius:12px}.water-btn:after{content:"";position:absolute;inset:-12px;border:2px solid #214b3b66;border-radius:50%;pointer-events:none;opacity:0}.playing .water-btn:after{animation:water 480ms var(--ease) both}@keyframes water{from{transform:scale(.75);opacity:.2}to{transform:scale(1.45);opacity:0}}.water-note{position:absolute;bottom:28px;font-size:14px;color:var(--green)}
+.woven-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:84%}.mini-card{padding:10px;background:var(--paper);border:1px solid #cbd4c2;border-radius:10px;font-size:13px;text-align:center}.mini-card .object{height:94px;display:grid;place-items:center;background:#e7e1d0;border-radius:6px;margin-bottom:10px}.mini-card svg{height:70px;width:85px}.playing .mini-card{animation:weave 240ms var(--ease) both;animation-delay:calc(var(--i)*24ms)}@keyframes weave{from{opacity:.25;transform:translateY(8px)}to{opacity:1;transform:none}}
+.lotus-button{display:flex;gap:12px;align-items:center;padding:13px 24px;border-radius:99px}.lotus-button svg{width:34px;height:34px;stroke:currentColor;fill:none;stroke-width:1.6}.petal-left,.petal-right{transform-origin:24px 38px}.playing .petal-left{animation:petal-left 240ms var(--ease)}.playing .petal-right{animation:petal-right 240ms var(--ease)}@keyframes petal-left{from{transform:rotate(6deg)}to{transform:rotate(0)}}@keyframes petal-right{from{transform:rotate(-6deg)}to{transform:rotate(0)}}.assistant-mini{position:absolute;right:18px;bottom:16px;left:18px;padding:12px 16px;background:var(--paper);border:1px solid #cbd4c2;border-radius:10px;font-size:13px}.assistant-mini[hidden]{display:none}.assistant-mini strong{display:block;margin-bottom:4px}.playing .assistant-mini{animation:panel 320ms var(--ease) both}@keyframes panel{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+figure{margin:0 0 32px;padding:12px;background:var(--paper);border:1px solid var(--line);border-radius:16px}figure img{display:block;width:100%;height:auto;border-radius:8px}figcaption{padding:14px 8px 6px;font-size:14px;line-height:1.6}.label{font-size:12px;letter-spacing:.1em;color:var(--rose);text-transform:uppercase}.note{padding:18px 22px;border-left:3px solid var(--rose);background:#eee8db;font-size:14px;line-height:1.6}.swatches{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0}.swatch{display:flex;align-items:center;gap:8px;font-size:13px}.swatch i{display:block;width:28px;height:28px;border-radius:50%;border:1px solid #7b8474}footer{border-top:1px solid var(--line);font-size:13px;color:var(--muted);padding-bottom:40px}.skip{position:absolute;left:12px;top:-100px;background:white;padding:12px}.skip:focus{top:12px;z-index:5}
+html[data-reduced="true"] .playing *,html[data-reduced="true"] .playing *:after{animation:none!important;transition:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){.playing *, .playing *:after{animation:none!important;transition:none!important;transform:none!important}}
+@media(max-width:720px){header,main,footer{padding:20px}header span{font-size:10px;letter-spacing:.05em}.grid{grid-template-columns:1fr}.section{margin:28px 0 48px}.stage{height:220px}h2{font-size:29px}.description{padding:18px}.controls{align-items:flex-start;flex-direction:column}.mini-card{font-size:12px}.intro{padding:16px 0}.links{gap:14px}}
+
+/* V2: restrained editorial presentation; the artwork is shown before motion studies. */
+:root{--bg:#f5f0e5;--green:#183e33;--rose:#a84432}
+header{padding-top:32px;padding-bottom:28px}header b{font-size:38px}
+h1{letter-spacing:-.035em}h2{letter-spacing:-.02em}
+.intro{padding:46px 0 28px}.section{margin-bottom:88px}
+figure{border-radius:2px;padding:0;border:0;background:transparent;margin-bottom:56px}
+figure img{border-radius:0}figcaption{border-bottom:1px solid var(--line);padding:18px 0 24px}
+.mobile-concept{max-width:540px;margin-left:auto;margin-right:auto}
+.placement-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--line);background:var(--line)}
+.placement-grid article{padding:28px;background:var(--paper)}
+.placement-grid article>span{font-size:11px;letter-spacing:.13em;color:var(--rose)}
+.placement-grid h3{margin-top:18px}.placement-grid p{font-size:14px;margin-bottom:0}
+.placement-grid .forest{background:#183e33;color:#f7f3e8}
+.placement-grid .forest>span{color:#d8bd7a}
+@media(max-width:720px){.placement-grid{grid-template-columns:1fr}.intro{padding-top:26px}header b{font-size:30px}.section{margin-bottom:52px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Đến nội dung</a>
+<header><b>VNStore</b><span>THIẾT KẾ V2 · 17.10.2026</span></header>
+<main id="main">
+<section class="intro">
+<div class="eyebrow">NẾP VIỆT / MỘT ẤN PHẨM CÓ THỂ TƯƠNG TÁC</div>
+<h1>Nghệ thuật nằm trong<br>cách đặt để.</h1>
+<p>Bóng tre mở trang. Nón lá gợi một nhịp cong ở phần khám phá. Đầm sen nằm giữa hành trình. Sợi đan, bàn tay và nét mực tiếp nối xuống chân trang. Phiên bản 2 phân bố hình ảnh Việt qua toàn bộ bố cục, với khoảng lặng giữa các điểm nhấn.</p>
+<div class="links"><a href="#mockups">Xem hình mô phỏng ↓</a><a href="#motion">Thử chuyển động ↓</a><a href="../../design.md">Đọc design.md</a><a href="image-prompts-v2.md">Prompt tạo ảnh v2</a></div>
+<div class="swatches"><span class="swatch"><i style="background:#214b3b"></i>Xanh tre</span><span class="swatch"><i style="background:#f7f3e8"></i>Giấy ngà</span><span class="swatch"><i style="background:#ad586c"></i>Hồng sen</span><span class="swatch"><i style="background:#d8bd7a"></i>Vàng rơm</span></div>
+<div class="note">Hướng thiết kế v2 thay thế v1. Ba ảnh dưới đây mô phỏng toàn chiều dài của trang chủ desktop, trang tìm kiếm/chi tiết và trang chủ mobile. Các chi tiết nội dung sinh trong ảnh là minh họa; design.md quy định nội dung triển khai. Ứng dụng hiện tại chưa thay đổi.</div>
+</section>
+<section class="section" id="mockups">
+<div class="eyebrow">01 / TOÀN BỘ HÀNH TRÌNH</div><h2>Từ bóng tre đến nét sen cuối trang.</h2>
+<p class="muted">Nhấp ảnh để xem nguyên bản. Các ảnh dài cho thấy cách đổi tỷ lệ, khoảng trống, chất liệu và màu sắc qua từng đoạn.</p>
+<figure><a href="mockups/05-v2-home-artistic-full.png" target="_blank" rel="noopener"><img src="mockups/05-v2-home-artistic-full.png" alt="Toàn trang chủ v2: mở đầu với bóng tre; nón lá ở danh mục; đầm sen ở giữa; sản phẩm, bàn tay đan và footer cảnh sen nối tiếp." loading="eager"></a><figcaption><span class="label">V2 / Trang chủ desktop</span><br>Sáu chương có điểm nhìn riêng. Ảnh đầu tiên không chứa toàn bộ biểu tượng; phần giữa và chân trang tiếp tục mang bản sắc Việt.</figcaption></figure>
+<figure><a href="mockups/06-v2-search-product-artistic.png" target="_blank" rel="noopener"><img src="mockups/06-v2-search-product-artistic.png" alt="Hai trang con v2: tìm kiếm và chi tiết sản phẩm, hình nón, bóng tre, vải và nét sen được đặt ở nhiều cao độ ngoài vùng đọc." loading="lazy"></a><figcaption><span class="label">V2 / Tìm kiếm và chi tiết</span><br>Nón, vải, nét sen và cảnh footer tạo nhịp dọc trang. Bộ lọc, sản phẩm và chứng cứ nằm trên lớp đọc rõ. Các nhãn giá/chất liệu trong ảnh là minh họa, dùng API thật khi triển khai.</figcaption></figure>
+<figure class="mobile-concept"><a href="mockups/07-v2-mobile-artistic-full.png" target="_blank" rel="noopener"><img src="mockups/07-v2-mobile-artistic-full.png" alt="Trang chủ mobile v2 toàn chiều dài: tre ở đầu, nón tại danh mục, sen ở giữa, dải đan và ảnh tay làm nghề phía dưới, footer nét mực." loading="lazy"></a><figcaption><span class="label">V2 / Toàn trang mobile</span><br>Giữ nhịp hình ảnh ở giữa và cuối trang. Khi dựng thật, dải đan chuyển thành dải hẹp hoặc ngang để card không dưới 156px; không thu nhỏ nguyên bố cục desktop.</figcaption></figure>
+<div class="note">Hiệu chỉnh khi triển khai: bỏ năm 2024 và icon/link không có thật trong footer concept; dùng facets và nguồn gốc từ API. Dấu đỏ là điểm nhấn biên tập, không phải chứng nhận. Ảnh nguyên trang là tài liệu thiết kế, không dùng thay HTML.</div>
+</section>
+<section class="section" id="placement">
+<div class="eyebrow">02 / BẢN ĐỒ SẮP ĐẶT</div><h2>Mỗi hình có một chỗ để thuộc về.</h2>
+<div class="placement-grid">
+<article><span>00 / MỞ</span><h3>Bóng tre</h3><p>Ánh sáng chéo và một nhánh ở lề. Chữ lớn, search và vùng đọc đứng yên.</p></article>
+<article><span>01 / KHÁM PHÁ</span><h3>Đường cong nón lá</h3><p>Cắt cúp một phần ở mép chương danh mục. Ảnh và chữ vẫn theo lưới.</p></article>
+<article class="forest"><span>02 / KHOẢNG NGHỈ</span><h3>Một đầm sen</h3><p>Cảnh rộng ở giữa hành trình. Chữ sáng trên mảng xanh đặc, không đè mặt nước.</p></article>
+<article><span>03 / SẢN PHẨM</span><h3>Nhịp sợi đan</h3><p>Macro ở ngoài lưới; sản phẩm thật và caption có đủ khoảng trắng.</p></article>
+<article><span>04 / CON NGƯỜI</span><h3>Theo dấu bàn tay</h3><p>Ảnh nghề lệch cỡ, chú thích rõ; một mép vải khép góc trống.</p></article>
+<article class="forest"><span>05 / KHÉP</span><h3>Cảnh bằng nét mực</h3><p>Sen tiền cảnh và tre phía xa tạo đoạn kết. Liên kết ở vùng nền đặc.</p></article>
+</div>
+<p class="muted">Khoảng cách hình đặc với chữ: tối thiểu 32px desktop, 20px mobile. Đồ họa neo theo chương, không bám cố định màn hình và không phủ lên input, giá hay nguồn gốc.</p>
+</section>
+<section class="section" id="motion">
+<div class="eyebrow">03 / NHỊP TƯƠNG TÁC</div><h2>Nhẹ, ngắn, có điểm dừng.</h2>
+<div class="controls"><button id="play-all">Phát cả bốn mẫu</button><button id="stop-all" class="secondary">Dừng chuyển động</button><label><input type="checkbox" id="reduce">Giảm chuyển động</label></div>
+<p id="motion-status" role="status" aria-live="polite"></p>
+<div class="grid">
+<article class="demo" id="bamboo"><div class="stage">
+<svg viewBox="0 0 360 240" aria-hidden="true"><g fill="none" stroke="#b5c3a5" stroke-width="1"><path d="M24 220H336M38 227H320"/></g><g class="bamboo-group" fill="none" stroke="#214b3b" stroke-width="5" stroke-linecap="round"><path d="M178 222Q173 124 188 16M207 220Q206 123 222 54"/><path d="M172 174l13-1m-13-48 13 1m-7-51 13 2m13 102 12-1m-11-45 13 1m-6-43 13 2" stroke="#8a9a6a" stroke-width="3"/><path d="M181 121Q127 100 91 59M211 151Q263 125 286 86M184 76Q226 59 262 33" stroke-width="2"/><g fill="#47764c" stroke="none"><path d="M134 98Q93 95 80 71Q110 75 134 98M118 86Q118 49 101 35Q96 67 118 86M155 108Q143 68 127 61Q123 90 155 108M241 134Q279 128 303 103Q265 106 241 134M261 113Q258 76 275 56Q281 89 261 113M216 63Q223 31 237 20Q242 47 216 63M237 49Q274 49 292 29Q262 29 237 49"/></g></g></svg>
+</div><div class="description"><h3>Gió qua tre</h3><p>Lá nghiêng ±1,2° trong 4 giây, trở về gốc rồi đứng yên. Dành cho một góc hero; nội dung và ảnh không lắc theo.</p><button data-play="bamboo" class="secondary">Thử gió qua tre</button></div></article>
+<article class="demo" id="water"><div class="stage"><button class="water-btn" data-play="water">Chạm mặt sen</button><span class="water-note" id="water-note" role="status">Một gợn nhỏ sau thao tác.</span></div><div class="description"><h3>Gợn mặt sen</h3><p>Vòng nước lan trong 480ms. Nút phản hồi ngay, không chờ gợn tan mới thực hiện tác vụ.</p><button data-play="water" class="secondary">Thử gợn nước</button></div></article>
+<article class="demo" id="weave"><div class="stage"><div class="woven-list">
+<div class="mini-card" style="--i:0"><div class="object"><svg viewBox="0 0 100 85" aria-hidden="true"><path d="M31 23h38l-5 12q15 40-14 42Q21 75 36 35z" fill="#fdfbf3" stroke="#7b8474"/><ellipse cx="50" cy="23" rx="19" ry="5" fill="#e0e6d4" stroke="#7b8474"/><path d="M33 53q16 12 34-1" fill="none" stroke="#47764c"/></svg></div>Gốm sứ</div>
+<div class="mini-card" style="--i:1"><div class="object"><svg viewBox="0 0 100 85" aria-hidden="true"><path d="M31 34v-8a19 19 0 0 1 38 0v8" fill="none" stroke="#987d47" stroke-width="5"/><path d="M17 32h66l-7 45H24z" fill="#d8bd7a" stroke="#987d47"/><path d="M21 43h58M23 55h54M25 67h50M35 33v44M48 33v44M61 33v44" stroke="#ad9258"/></svg></div>Mây tre đan</div>
+<div class="mini-card" style="--i:2"><div class="object"><svg viewBox="0 0 100 85" aria-hidden="true"><path d="M24 13l54 7-13 58-48-9z" fill="#edddd3" stroke="#b39786"/><path d="M42 22q18 20-5 43m8-17q-8-19-15-9m15 9q19-9 15-16" fill="none" stroke="#97485f" stroke-width="2"/></svg></div>Dệt may</div>
+</div></div><div class="description"><h3>Nhịp đan</h3><p>Thẻ mới đi lên 8px trong 240ms, lệch nhau 24ms. Chỉ chạy nhóm đầu; giữ thứ tự đọc và bố cục.</p><button data-play="weave" class="secondary">Thử nhịp đan</button></div></article>
+<article class="demo" id="lotus"><div class="stage"><button class="lotus-button" data-play="lotus"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 38Q7 25 24 6Q41 25 24 38Z"/><path class="petal-left" d="M24 38Q3 38 5 15Q23 19 24 38Z"/><path class="petal-right" d="M24 38Q45 38 43 15Q25 19 24 38Z"/><path d="M4 30Q7 43 24 42Q41 43 44 30"/></svg>Trợ lý VNStore</button><div class="assistant-mini" hidden><strong>Sen mở · 320ms</strong>Panel xuất hiện nhẹ. Nội dung sẵn sàng ngay.</div></div><div class="description"><h3>Sen mở</h3><p>Cánh sen mở 6°, panel tiến 12px. Một dấu hiệu chào đón nhỏ, không gõ chữ giả hoặc kéo dài thời gian chờ.</p><button data-play="lotus" class="secondary">Thử sen mở</button></div></article>
+</div>
+<p class="muted">Các mẫu này kiểm tra tương tác nhỏ, chưa mô phỏng chuyển cảnh của toàn bộ sáu chương. Chỉ chạy khi bạn bấm. Tùy chọn của hệ điều hành luôn được ưu tiên; khi giảm chuyển động, trạng thái vẫn thay đổi đầy đủ. Rời tab sẽ dừng các hiệu ứng.</p>
+</section>
+</main><footer>VNStore · Nếp Việt / Thiết kế v2 · Concept và prototype, chưa triển khai vào ứng dụng. Font hệ thống phục vụ xem offline; font production được đặc tả trong design.md.</footer>
+<script>
+const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const checkbox = document.querySelector('#reduce');
+const status = document.querySelector('#motion-status');
+const timers = new Map();
+let taps = 0;
+function isReduced(){return preference.matches || checkbox.checked;}
+function stop(){for(const timer of timers.values())clearTimeout(timer);timers.clear();document.querySelectorAll('.playing').forEach(el=>el.classList.remove('playing'));}
+function update(){stop();document.documentElement.dataset.reduced=String(isReduced());status.textContent=preference.matches?'Hệ điều hành đang yêu cầu giảm chuyển động. Các mẫu sẽ đổi trạng thái ngay.':checkbox.checked?'Đã giảm chuyển động: không dịch chuyển hoặc phóng to, giữ phản hồi bằng chữ.':'Chuyển động đầy đủ · Chỉ phát khi bấm · Không chạy lặp.';}
+function play(id){const demo=document.getElementById(id);clearTimeout(timers.get(id));demo.classList.remove('playing');if(id==='water')document.querySelector('#water-note').textContent='Đã nhận thao tác '+(++taps)+' — phản hồi ngay.';if(id==='lotus')demo.querySelector('.assistant-mini').hidden=false;if(!isReduced()){void demo.offsetWidth;demo.classList.add('playing');timers.set(id,setTimeout(()=>{demo.classList.remove('playing');timers.delete(id);},id==='bamboo'?4100:650));}}
+document.querySelectorAll('[data-play]').forEach(btn=>btn.addEventListener('click',()=>play(btn.dataset.play)));
+document.querySelector('#play-all').addEventListener('click',()=>['bamboo','water','weave','lotus'].forEach(play));
+document.querySelector('#stop-all').addEventListener('click',()=>{stop();status.textContent='Đã dừng chuyển động. Bạn vẫn có thể dùng mọi nút.';});
+checkbox.addEventListener('change',update);preference.addEventListener('change',update);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+update();
+</script>
+</body></html>

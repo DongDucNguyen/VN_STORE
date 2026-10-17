@@ -63,13 +63,11 @@ class ReviewSummary:
 
 
 def summarize(store: Store | None, product_id: str, origins: tuple[str, ...] | None = None) -> ReviewSummary:
-    rows = store.reviews(product_id, origins or allowed_origins()) if store else []
+    origins = allowed_origins() if origins is None else origins
+    rows = store.reviews(product_id, origins) if store else []
     if not rows:
         return ReviewSummary(0, None, {}, None, note_vi="Sản phẩm chưa có đánh giá nào trên VNStore.")
-    ratings = [r["rating"] for r in rows if r["rating"] is not None]
-    dist = {k: sum(1 for x in ratings if x == k) for k in range(5, 0, -1)}
-    s = ReviewSummary(len(rows), round(sum(ratings) / len(ratings), 2) if ratings else None, dist,
-                      round(sum(r["verified_purchase"] for r in rows) / len(rows), 2))
+    s = ReviewSummary(**store.review_totals(product_id, origins))
     s.excerpts = [{"review_id": r["id"], "rating": r["rating"], "text": r["body_vi"][:300],
                    "origin": r["origin"], "source_url": r["source_url"], "verified_purchase": bool(r["verified_purchase"]),
                    "created_at": r["created_at"][:10]} for r in rows[:8]]
@@ -95,5 +93,6 @@ def summarize(store: Store | None, product_id: str, origins: tuple[str, ...] | N
     s.aspects = sorted(({"aspect": a, "positive": len(v["positive"]), "negative": len(v["negative"]),
                          "review_ids": v["positive"] + v["negative"]} for a, v in tally.items()),
                        key=lambda x: -(x["positive"] + x["negative"]))
-    s.note_vi = f"Tổng hợp tự động theo từ khóa từ {len(rows)} đánh giá đã duyệt."
+    s.note_vi = f"Tổng hợp tự động theo từ khóa từ {len(rows)} đánh giá đã duyệt"
+    s.note_vi += (f" gần nhất trong tổng số {s.count} đánh giá." if s.count > len(rows) else ".")
     return s

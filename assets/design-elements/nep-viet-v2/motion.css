@@ -1,0 +1,14 @@
+/* Nếp Việt: trigger once on interaction/viewport entry; never block an action. */
+:root{--ease-bamboo:cubic-bezier(.22,1,.36,1);--ease-water:cubic-bezier(.2,.65,.3,1)}
+.nv-bamboo.is-playing{transform-origin:80% 100%;animation:nv-bamboo 4s ease-in-out both}
+.nv-ripple.is-playing{animation:nv-ripple 480ms var(--ease-water) both}
+.nv-weave.is-playing>*{animation:nv-reveal 240ms var(--ease-bamboo) both;animation-delay:calc(min(var(--i,0),5)*24ms)}
+.nv-lotus.is-playing #petal-left{transform-origin:24px 40px;animation:nv-left 240ms var(--ease-bamboo) both}
+.nv-lotus.is-playing #petal-right{transform-origin:24px 40px;animation:nv-right 240ms var(--ease-bamboo) both}
+@keyframes nv-bamboo{0%,100%{transform:rotate(0)}25%{transform:rotate(1.2deg)}70%{transform:rotate(-1.2deg)}}
+@keyframes nv-ripple{from{transform:scale(.75);opacity:.2}to{transform:scale(1.45);opacity:0}}
+@keyframes nv-reveal{from{transform:translateY(8px);opacity:.55}to{transform:translateY(0);opacity:1}}
+@keyframes nv-left{from{transform:rotate(6deg)}to{transform:rotate(0)}}
+@keyframes nv-right{from{transform:rotate(-6deg)}to{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.nv-motion,.nv-motion *{animation:none!important;transition:none!important;transform:none!important}}
+[data-reduced=true] .nv-motion,[data-reduced=true] .nv-motion *{animation:none!important;transition:none!important;transform:none!important}

@@ -29,7 +29,8 @@ def test_cuda_required_rejects_ort_session_fallback(monkeypatch):
         def get_providers(self):
             return ["CPUExecutionProvider"]
 
-    fake_ort = SimpleNamespace(SessionOptions=lambda: SimpleNamespace(log_severity_level=0),
+    fake_ort = SimpleNamespace(SessionOptions=lambda: SimpleNamespace(log_severity_level=0,
+                               add_session_config_entry=lambda *args: None),
                                InferenceSession=FakeSession,
                                get_available_providers=lambda: ["CUDAExecutionProvider", "CPUExecutionProvider"])
     monkeypatch.setitem(sys.modules, "onnxruntime", fake_ort)

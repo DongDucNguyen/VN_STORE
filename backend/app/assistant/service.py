@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import os
+import copy
 import threading
 import time
 import uuid
@@ -49,7 +50,10 @@ class AssistantService:
         self._rate_lock = threading.Lock()
         # Mức "không lưu": lịch sử chỉ nằm trong RAM của tiến trình, mất khi phiên kết thúc/hết hạn.
         self.transient: OrderedDict[str, list[dict[str, Any]]] = OrderedDict()
-        self._transient_lock = threading.Lock()
+        self._transient_lock = threading.RLock()
+        self.transient_state: dict[str, dict[str, Any]] = {}
+        # Serialize short persistence/consent operations, never model inference.
+        self.session_lock = threading.RLock()
         self._last_purge = 0.0
 
     @classmethod
@@ -86,6 +90,9 @@ class AssistantService:
         limit, window = RATE_LIMIT
         t = time.monotonic()
         with self._rate_lock:
+            # Expire abandoned clients instead of retaining a deque forever.
+            for key in [key for key, values in self._rate.items() if not values or t - values[-1] > window]:
+                del self._rate[key]
             q = self._rate.setdefault(cid, deque())
             while q and t - q[0] > window:
                 q.popleft()
@@ -126,9 +133,48 @@ class AssistantService:
             self.transient.setdefault(sid, []).append({"role": role, "content": content})
             self.transient.move_to_end(sid)
             while len(self.transient) > TRANSIENT_SESSIONS:
-                self.transient.popitem(last=False)
+                old, _ = self.transient.popitem(last=False)
+                self.transient_state.pop(old, None)
+
+    def forget_transient(self, sid: str) -> None:
+        with self._transient_lock:
+            self.transient.pop(sid, None)
+            self.transient_state.pop(sid, None)
+
+    def session_state(self, sid: str) -> dict[str, Any]:
+        s = self.store.session(sid)
+        if s is None:
+            return {}
+        if s["persisted"]:
+            return self.store.session_state(sid)
+        with self._transient_lock:
+            return copy.deepcopy(self.transient_state.get(sid, {}))
+
+    def save_session_state(self, sid: str, state: dict[str, Any]) -> None:
+        s = self.store.session(sid)
+        if s is None or s["ended_at"]:
+            return
+        if s["persisted"]:
+            self.store.save_session_state(sid, state)
+        else:
+            with self._transient_lock:
+                self.transient_state[sid] = copy.deepcopy(state)
+            from .store import iso, now
+            self.store.x("UPDATE sessions SET state_json = '{}', last_active_at = ? WHERE id = ?", (iso(now()), sid))
+
+    def set_consent(self, cid: str, level: str) -> None:
+        with self.session_lock:
+            self.store.set_consent(cid, level)
+            for s in self.store.q("SELECT id FROM sessions WHERE customer_id = ? AND ended_at IS NULL", (cid,)):
+                # A new consent applies prospectively; old private context is not promoted to disk.
+                self.forget_transient(s["id"])
+                self.store.x("UPDATE sessions SET persisted = ? WHERE id = ?", (int(level != "none"), s["id"]))
 
     def end_session(self, sid: str) -> None:
+        with self.session_lock:
+            self._end_session(sid)
+
+    def _end_session(self, sid: str) -> None:
         s = self.store.session(sid)
         if s is None or s["ended_at"]:
             return
@@ -153,8 +199,7 @@ class AssistantService:
         elif level == "history":
             self.store.end_session(sid, None)
         else:
-            with self._transient_lock:
-                self.transient.pop(sid, None)
+            self.forget_transient(sid)
             self.store.x("DELETE FROM sessions WHERE id = ?", (sid,))
 
     def catalog_provider(self):

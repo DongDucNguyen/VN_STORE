@@ -1,0 +1,11 @@
+# Catalogs, manifests and code are fingerprinted by bytes. Keep checkouts reproducible on Windows.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.wav binary
+*.onnx binary
+# Archived source responses retain their original bytes for provenance checks.
+data_collection/**/pages/* -text

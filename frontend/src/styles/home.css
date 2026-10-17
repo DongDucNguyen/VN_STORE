@@ -1,0 +1,151 @@
+/* Trang chủ — sáu chương (design.md §3.3, §5.2). Ảnh trang trí neo theo chương, cách chữ ≥32px desktop / 20px mobile. */
+
+.chapter { padding-block: var(--chapter-pad); }
+.chapter-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.5rem); line-height: 1.12; margin: 0 0 var(--space-4); letter-spacing: -0.01em; }
+.chapter-lede { color: var(--color-muted); max-width: 36ch; font-size: 1.0625rem; }
+.chapter-head { position: relative; }
+.chapter-more { margin-top: var(--space-7); }
+
+/* ---------- Mở ---------- */
+.opening { padding-block: clamp(40px, 7vw, 96px) clamp(48px, 8vw, 112px); min-height: min(720px, calc(100svh - var(--header-h))); }
+.opening-inner { position: relative; }
+.opening-inner > * { max-width: 720px; }
+.display { font-family: var(--font-display); font-weight: 400; font-size: clamp(3rem, 1.6rem + 6.4vw, 7rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0; }
+.display-sub { display: block; font-size: clamp(1.5rem, 1.05rem + 2.1vw, 3rem); line-height: 1.14; letter-spacing: -0.01em; margin-top: var(--space-2); }
+.opening .lede { font-size: 1.0625rem; color: var(--color-muted); max-width: 46ch; margin-bottom: var(--space-6); }
+.opening-examples { margin-top: var(--space-4); }
+.opening-examples .chip { background: transparent; }
+
+/* Bóng tre và nhánh ở mép phải; tĩnh vật gốm thấp bên phải. Không có gì nằm sau ô tìm kiếm. */
+.opening-shadow { top: -40px; right: -80px; width: clamp(360px, 52vw, 820px); opacity: var(--decor-shadow-opacity); mix-blend-mode: var(--decor-blend); }
+.opening-branch { top: -24px; right: -36px; width: clamp(110px, 21vw, 320px); transform-origin: 85% 0%; }
+.opening-ceramic { bottom: clamp(24px, 5vw, 72px); right: clamp(16px, 9vw, 180px); width: clamp(64px, 10vw, 150px); filter: drop-shadow(-6px 10px 12px rgb(60 50 30 / 18%)); }
+@media (max-width: 1023px) {
+  .opening-shadow { right: -200px; opacity: calc(var(--decor-shadow-opacity) * .8); }
+  .opening-ceramic { display: none; }
+}
+@media (max-width: 767px) {
+  .opening { min-height: 0; }
+  .opening-branch { width: 120px; right: -40px; top: -40px; }
+  .opening-shadow { width: 420px; top: -60px; right: -220px; }
+  /* Chữ lớn cần chỗ: giữ nhánh tre ngoài vùng tiêu đề. */
+  .opening .eyebrow { max-width: calc(100% - 72px); }
+}
+
+/* ---------- 01 Danh mục ---------- */
+.chapter-categories { border-top: 1px solid var(--color-line); }
+.chapter-grid { display: grid; gap: var(--space-6); }
+.chapter-nonla { left: -140px; top: 20px; width: 300px; filter: drop-shadow(10px 18px 18px rgb(60 50 30 / 18%)); }
+.chapter-ribs { width: 120px; color: var(--color-straw); margin-top: var(--space-5); opacity: .9; }
+.chapter-ribs .ribs-a, .chapter-ribs .ribs-b { transition: opacity var(--motion-base) var(--ease-bamboo); }
+.chapter-categories.is-playing .chapter-ribs .ribs-a { animation: nv-ribs var(--motion-base) var(--ease-bamboo) both; }
+.chapter-categories.is-playing .chapter-ribs .ribs-b { animation: nv-ribs var(--motion-base) var(--ease-bamboo) 80ms both; }
+.cat-windows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); align-items: start; }
+.cat { color: var(--color-text); text-decoration: none; }
+.cat:hover { color: var(--color-text); }
+.cat-window { display: grid; gap: var(--space-2); }
+.cat-figure { display: block; overflow: hidden; background: var(--color-well); border-radius: var(--radius-photo); aspect-ratio: 4 / 5; }
+.cat-figure img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--motion-story) var(--ease-bamboo); }
+.cat-window:hover .cat-figure img { transform: scale(1.03); }
+.cat-name { display: inline-flex; align-items: center; gap: var(--space-2); font-family: var(--font-display); font-size: 1.375rem; line-height: 1.25; border-bottom: 1px solid currentColor; width: fit-content; padding-bottom: 2px; }
+.cat-count { color: var(--color-muted); font-size: 0.8125rem; }
+.cat-links { display: grid; margin-top: var(--space-5); border-top: 1px solid var(--color-line); }
+.cat-link { display: flex; align-items: center; gap: var(--space-3); min-height: 56px; border-bottom: 1px solid var(--color-line); }
+.cat-link .cat-name { border: 0; font-size: 1.25rem; }
+.cat-link .cat-count { margin-left: auto; }
+.art-credit { margin-top: var(--space-4); font-size: 0.75rem; color: var(--color-muted); }
+/* Mobile: hai ô ảnh chính + ba liên kết (ô thứ ba thành liên kết chữ). */
+@media (max-width: 767px) {
+  .chapter-nonla { width: 200px; left: -150px; top: 8px; }
+  .chapter-head { padding-left: 44px; }
+  .cat-window:nth-child(3) { grid-column: 1 / -1; display: flex; align-items: center; gap: var(--space-3); min-height: 56px; border-top: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); margin-top: var(--space-2); }
+  .cat-window:nth-child(3) .cat-figure { display: none; }
+  .cat-window:nth-child(3) .cat-name { border: 0; font-size: 1.25rem; }
+  .cat-window:nth-child(3) .cat-count { margin-left: auto; }
+  .cat-links { margin-top: 0; border-top: 0; }
+}
+@media (min-width: 768px) {
+  .cat-windows { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .cat-window:nth-child(2) .cat-figure { aspect-ratio: 3 / 4; }
+  .cat-window:nth-child(3) .cat-figure { aspect-ratio: 5 / 6; margin-top: var(--space-7); }
+  .cat-links { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-6); border-top: 0; }
+  .cat-link { border-top: 1px solid var(--color-line); border-bottom: 0; }
+}
+@media (min-width: 1024px) {
+  .chapter-grid { grid-template-columns: minmax(300px, 4fr) 8fr; gap: var(--space-8); align-items: start; }
+  /* Nón thấy 80–150px ở mép trái; cột chữ lùi vào để giữ khoảng bảo vệ ≥32px. */
+  .chapter-categories { --nonla-visible: clamp(80px, calc((100vw - 1280px) / 2 + 40px), 150px); }
+  .chapter-categories .chapter-head { padding-top: var(--space-6); padding-left: max(0px, calc(var(--nonla-visible) + 32px - var(--gutter) - max(0px, (100vw - 1280px) / 2))); }
+  .chapter-nonla { width: 320px; left: calc(var(--nonla-visible) - 320px); top: 24px; }
+}
+
+/* ---------- 02 Khoảng sen ---------- */
+.chapter-lotus { background: var(--color-forest-scene); color: var(--color-on-scene); padding: 0; display: grid; overflow: clip; }
+.lotus-scene { position: relative; min-height: 260px; }
+.lotus-scene img { width: 100%; height: 100%; object-fit: cover; object-position: 67% 50%; position: absolute; inset: 0; }
+.lotus-copy { position: relative; padding-block: var(--space-7) var(--space-8); }
+.lotus-copy .chapter-no { color: var(--color-straw); }
+.lotus-copy .chapter-title { color: var(--color-on-scene); }
+.lotus-copy p { color: var(--color-on-scene-muted); max-width: 38ch; font-size: 1.0625rem; }
+.lotus-ripple { width: 160px; color: var(--color-straw); opacity: .5; margin-top: var(--space-5); }
+.chapter-lotus.is-playing .lotus-ripple { animation: nv-fade var(--motion-panel) var(--ease-water) both; }
+.chapter-lotus :focus-visible { outline-color: var(--color-straw); }
+@media (max-width: 767px) {
+  .lotus-scene { aspect-ratio: 4 / 3; }
+  .lotus-scene img { object-position: 50% 60%; }
+}
+@media (min-width: 768px) {
+  /* Cảnh bắt đầu tại --scene-start; cột chữ dừng trước đó ít nhất 40px. */
+  .chapter-lotus { --scene-start: 46vw; grid-template-columns: 1fr; min-height: clamp(420px, 38vw, 560px); }
+  .chapter-lotus > * { grid-area: 1 / 1; }
+  .lotus-scene { margin-left: var(--scene-start); }
+  .lotus-scene::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 22%; z-index: 1;
+    background: linear-gradient(to right, var(--color-forest-scene), transparent);
+  }
+  .lotus-copy { align-self: center; }
+  .lotus-copy > *, .lotus-copy p { max-width: calc(var(--scene-start) - max(0px, (100vw - 1280px) / 2) - var(--gutter) - 40px); }
+}
+@media (min-width: 1024px) { .chapter-lotus { --scene-start: 40vw; } }
+@media (min-width: 1440px) { .chapter-lotus { --scene-start: 36vw; } }
+
+/* ---------- 03 Sản phẩm ---------- */
+.chapter-products { overflow-x: clip; }
+.chapter-head-wide { margin-bottom: var(--space-7); }
+.products-weave { display: none; top: var(--chapter-pad); right: 0; width: 64px; height: calc(100% - 2 * var(--chapter-pad)); max-height: 820px; object-fit: cover; border-radius: var(--radius-photo) 0 0 var(--radius-photo); }
+.products-weave-strip { left: 0; top: 0; width: 100%; height: 32px; object-fit: cover; }
+.products-lotus { display: none; left: 8px; top: 38%; width: 116px; opacity: .9; mix-blend-mode: var(--decor-blend); }
+@media (min-width: 1280px) {
+  .products-weave { display: block; }
+  .products-weave-strip { display: none; }
+}
+@media (min-width: 1400px) {
+  .products-weave { width: 80px; }
+  .products-lotus { display: block; }
+}
+
+/* ---------- 04 Bàn tay ---------- */
+.chapter-craft { background: var(--color-bg-deep); }
+.craft-grid { display: grid; gap: var(--space-6); max-width: 1440px; margin: 0 auto; }
+.craft-copy { padding-inline: var(--gutter); }
+.craft-copy p { color: var(--color-muted); max-width: 40ch; }
+.craft-hands img, .craft-bench img { width: 100%; height: auto; object-fit: cover; }
+.craft-hands { margin: 0; }
+.craft-hands img { aspect-ratio: 4 / 3; }
+.craft-bench { display: none; margin: 0; }
+.editorial-photo figcaption { font-size: 0.75rem; color: var(--color-muted); margin-top: var(--space-2); padding-inline: var(--gutter); }
+.craft-places { list-style: none; padding: 0; margin: var(--space-5) 0; border-top: 1px solid var(--color-line); max-width: 420px; }
+.craft-places a { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); min-height: 48px; border-bottom: 1px solid var(--color-line); color: var(--color-text); text-decoration: none; }
+.craft-places a:hover span { text-decoration: underline; }
+.craft-places small { color: var(--color-muted); }
+.craft-textile { display: none; right: -40px; bottom: 6%; width: 150px; filter: drop-shadow(-6px 8px 10px rgb(60 50 30 / 15%)); }
+@media (min-width: 1024px) {
+  .craft-grid { grid-template-columns: 5fr 4fr 3fr; align-items: center; gap: var(--space-7); padding-right: 140px; }
+  .craft-hands figcaption { padding-inline: var(--space-4) 0; }
+  .craft-copy { padding: 0; }
+  .craft-bench { display: block; align-self: start; margin-top: var(--space-6); }
+  .craft-bench img { aspect-ratio: 4 / 3; }
+  .craft-bench figcaption { padding: 0; }
+  .craft-textile { display: block; }
+}
+@media (min-width: 1600px) { .craft-grid { padding-right: 180px; } }

@@ -372,21 +372,31 @@ export async function chatStream(sid: string, body: { text: string; input_mode?:
   const reader = res.body.getReader();
   const decoder = new TextDecoder();
   let buf = "";
-  for (;;) {
-    const { value, done } = await reader.read();
-    if (done) break;
-    buf += decoder.decode(value, { stream: true });
-    let cut: number;
-    while ((cut = buf.indexOf("\n\n")) !== -1) {
-      const block = buf.slice(0, cut);
-      buf = buf.slice(cut + 2);
-      let kind = "message";
-      let data = "";
-      for (const line of block.split("\n")) {
-        if (line.startsWith("event: ")) kind = line.slice(7);
-        else if (line.startsWith("data: ")) data += line.slice(6);
+  let terminal = false;
+  try {
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      let boundary: RegExpExecArray | null;
+      while ((boundary = /\r?\n\r?\n/.exec(buf)) !== null) {
+        const block = buf.slice(0, boundary.index);
+        buf = buf.slice(boundary.index + boundary[0].length);
+        let kind = "message";
+        const data: string[] = [];
+        for (const line of block.split(/\r?\n/)) {
+          if (line.startsWith("event:")) kind = line.slice(6).trimStart();
+          else if (line.startsWith("data:")) data.push(line.slice(5).replace(/^ /, ""));
+        }
+        if (data.length) {
+          onEvent({ kind, data: JSON.parse(data.join("\n")) } as AssistantEvent);
+          if (kind === "done" || kind === "error") terminal = true;
+        }
       }
-      if (data) onEvent({ kind, data: JSON.parse(data) } as AssistantEvent);
     }
+    if (!terminal) throw new ApiError(0, "stream_incomplete", "Mất kết nối trước khi trợ lý trả lời xong. Bạn thử lại nhé.");
+  } finally {
+    await reader.cancel().catch(() => {});
+    reader.releaseLock();
   }
 }

@@ -181,7 +181,8 @@ class Store:
     def x(self, sql: str, args: tuple = ()) -> int:
         with self._lock:
             cur = self._db.execute(sql, args)
-            return cur.lastrowid or cur.rowcount
+            # lastrowid survives UPDATE/DELETE on SQLite connections.
+            return cur.lastrowid if sql.lstrip().upper().startswith("INSERT") else cur.rowcount
 
     def close(self) -> None:
         with self._lock:
@@ -206,7 +207,7 @@ class Store:
         if level not in CONSENT_LEVELS:
             raise ValueError(level)
         old = self.ensure_customer(cid)["consent_level"]
-        t = iso(now())
+        t = now().isoformat(timespec="microseconds")
         with self._lock:
             self._db.execute("BEGIN")
             self._db.execute("UPDATE customers SET consent_level = ?, consent_text_version = ?, consent_at = ? "
@@ -217,10 +218,12 @@ class Store:
                 self._db.execute("UPDATE sessions SET summary_vi = NULL, summary_at = NULL WHERE customer_id = ?",
                                  (cid,))
             if level == "none":
+                self._db.execute("DELETE FROM grounding_events WHERE session_id IN "
+                                 "(SELECT id FROM sessions WHERE customer_id = ?)", (cid,))
                 self._db.execute("DELETE FROM sessions WHERE customer_id = ? AND ended_at IS NOT NULL", (cid,))
                 self._db.execute("DELETE FROM messages WHERE session_id IN (SELECT id FROM sessions "
                                  "WHERE customer_id = ?)", (cid,))
-                self._db.execute("UPDATE sessions SET persisted = 0 WHERE customer_id = ?", (cid,))
+                self._db.execute("UPDATE sessions SET persisted = 0, state_json = '{}' WHERE customer_id = ?", (cid,))
             self._db.execute("COMMIT")
         if old != level:
             self.x("INSERT INTO deletion_log (customer_hash, scope, deleted_at) VALUES (?, ?, ?)",
@@ -269,6 +272,8 @@ class Store:
                       "LIMIT ?", (cid, limit))
 
     def delete_session(self, sid: str, cid: str) -> bool:
+        self.x("DELETE FROM grounding_events WHERE session_id IN "
+               "(SELECT id FROM sessions WHERE id = ? AND customer_id = ?)", (sid, cid))
         n = self.x("DELETE FROM sessions WHERE id = ? AND customer_id = ?", (sid, cid))
         if n:
             self.x("INSERT INTO deletion_log (customer_hash, scope, deleted_at) VALUES (?, ?, ?)",
@@ -368,6 +373,7 @@ class Store:
 
     def purge_expired(self) -> dict[str, int]:
         t = iso(now())
+        self.x("DELETE FROM grounding_events WHERE session_id IN (SELECT id FROM sessions WHERE expires_at < ?)", (t,))
         out = {"sessions": self.x("DELETE FROM sessions WHERE expires_at < ?", (t,)),
                "facts": self.x("DELETE FROM memory_facts WHERE expires_at IS NOT NULL AND expires_at < ?", (t,)),
                "events": self.x("DELETE FROM grounding_events WHERE created_at < ?",
@@ -419,6 +425,19 @@ class Store:
         return {r[0]: (r[1], r[2]) for r in self.q(
             f"SELECT product_id, COUNT(*), AVG(rating) FROM reviews WHERE status = 'approved' AND origin IN ({marks}) "
             "GROUP BY product_id", origins)}
+
+    def review_totals(self, product_id: str, origins: tuple[str, ...]) -> dict:
+        marks = ",".join("?" * len(origins)) or "''"
+        rows = self.q(f"SELECT rating, COUNT(*) AS n, SUM(verified_purchase) AS verified FROM reviews "
+                      f"WHERE product_id = ? AND status = 'approved' AND origin IN ({marks}) GROUP BY rating",
+                      (product_id, *origins))
+        count = sum(r["n"] for r in rows)
+        rated = sum(r["n"] for r in rows if r["rating"] is not None)
+        return {"count": count,
+                "average": round(sum(r["rating"] * r["n"] for r in rows if r["rating"] is not None) / rated, 2)
+                if rated else None,
+                "distribution": {k: sum(r["n"] for r in rows if r["rating"] == k) for k in range(5, 0, -1)},
+                "verified_share": round(sum(r["verified"] for r in rows) / count, 2) if count else None}
 
     def moderate_review(self, review_id: str, status: str, note: str | None = None) -> bool:
         return bool(self.x("UPDATE reviews SET status = ?, moderation_note = ?, moderated_at = ? WHERE id = ?",

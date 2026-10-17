@@ -240,15 +240,21 @@ def test_apply_keeps_valid_assist_and_rejects_malformed():
         afr.apply(p, sha, decisions(assist={"applied": -1}), CAT)
 
 
-def test_project_family_suggestions_are_consistent():
+def test_project_family_suggestions_are_consistent(tmp_path):
     path = REPO_ROOT / "benchmarks/families/suggestions/claude_assist_v1.json"
-    packet = REPO_ROOT / "artifacts/family_review/2026-10-11_seed-006/packet.json"
-    if not packet.exists():
-        pytest.skip("review packet not present")
     raw = (REPO_ROOT / "benchmarks/families/proposal.json").read_bytes()
-    module = bfs.load(REPO_ROOT / "benchmarks/families/suggestions/claude_assist_v1_decisions.py")
-    rebuilt = bfs.build(module, json.loads(packet.read_text(encoding="utf-8")), json.loads(raw),
-                        hashlib.sha256(raw).hexdigest())
+    snap = load_snapshot(REPO_ROOT / "database.json", include_drafts=True)
+    packet = pfr.make_packet(json.loads(raw), hashlib.sha256(raw).hexdigest(), snap, tmp_path)
     saved = json.loads(path.read_text(encoding="utf-8"))
-    assert {k: saved[k] for k in ("families", "candidates", "shared")} == \
-        {k: rebuilt[k] for k in ("families", "candidates", "shared")}
+    # Validate by stable product IDs. The historical module uses row numbers from seed-006;
+    # reapplying those numbers after proposal sorting changes silently moves decisions.
+    pfr.attach_suggestions(packet, path.read_bytes())
+    trial = {"kind": "family_review_decisions", "proposal_sha256": saved["proposal_sha256"],
+             "catalog_sha256": snap.sha256, "reviewed_by": "consistency-check (not a reviewer)",
+             "reviewed_at": "2026-10-16T00:00:00Z",
+             "families": {k: {n: v[n] for n in ("action", "groups") if n in v}
+                          for k, v in saved["families"].items()},
+             "candidates": {k: v["decision"] for k, v in saved["candidates"].items()},
+             "shared": {k: v["decision"] for k, v in saved["shared"].items()}}
+    result = afr.apply(json.loads(raw), hashlib.sha256(raw).hexdigest(), trial, snap.sha256)
+    assert result["stats"]["products"] == len(snap.products)

@@ -42,6 +42,7 @@ def test_real_ocr_shared_retrieval_path():
     ocr = RapidOCRLatin()
     result, diag = retrieve(data, emb, index, SearchEngine(snap, SearchConfig(ocr_weight=.35)), ocr=ocr)
     assert diag["ocr_error"] is None and "MAROU" in diag["ocr_text"].upper()
-    assert len(ocr.config["file_sha256"]) == 3 and result["results"]
+    assert len([name for name in ocr.config["file_sha256"] if name.endswith(".onnx")]) == 3
+    assert "latin.ttf" in ocr.config["file_sha256"] and result["results"]
     assert any("ocr" in r["matched_fields"] for r in result["results"])
     assert result["applied_filters"] == []

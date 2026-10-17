@@ -1,0 +1,174 @@
+{
+  "purpose": "unreviewed_smoke_only",
+  "runtime": "1.31.0",
+  "threads": 4,
+  "startup_ms": 13462.3,
+  "vram_mib": {
+    "before": 1067,
+    "peak": 14722
+  },
+  "health": {
+    "status": "ok",
+    "catalog": {
+      "path": "database.json",
+      "version": "seed-007-intended-uses",
+      "sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
+      "loaded_at": "2026-10-16T23:29:01+07:00",
+      "products_visible": 328,
+      "products_total": 330,
+      "include_drafts": false,
+      "publication_mode": "internal_demo",
+      "warnings": 1
+    },
+    "search": {
+      "keyword": "ok",
+      "index_build_ms": 146.16,
+      "voice": "ok",
+      "image": "ok",
+      "semantic": "off",
+      "assistant": "ok",
+      "models": {
+        "voice": {
+          "state": "ok",
+          "model_id": "vinai/PhoWhisper-small + openai/whisper-small.en",
+          "revision": "515c6b55639f2944aa8b64f2b0268b41c944353c+482fb8ba081b6e906f92efe103622316b2a0cc69+fp16enc-cuda-int8dec-cpu+ff4177021cc41f7db950912b73ea4fdf7d01d8e7",
+          "detail": null,
+          "reason": null
+        },
+        "image": {
+          "state": "ok",
+          "model_id": "google/siglip2-base-patch16-224",
+          "revision": "ba1f3b0843f24bc5417d38e19c37b287d719b2f4",
+          "detail": null,
+          "reason": null
+        },
+        "text": {
+          "state": "unavailable",
+          "model_id": null,
+          "revision": null,
+          "detail": null,
+          "reason": "model chưa được chọn qua benchmark (PLAN.md mục 8)"
+        },
+        "assistant": {
+          "state": "ok",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "revision": "2bdfea4417ee390519508a6bc7dfbc36f3572981",
+          "detail": null,
+          "reason": null
+        }
+      }
+    }
+  },
+  "ocr": {
+    "text": "MAROU FAISEURS DE CHOCOLAT SAIGON BARIAZG SO.CO-LADEN SINGLE ORIGIN DARK CHOCOLATE",
+    "providers": [
+      "CUDAExecutionProvider",
+      "CUDAExecutionProvider",
+      "CUDAExecutionProvider"
+    ]
+  },
+  "requests": [
+    {
+      "label": "voice_vi_0",
+      "ms": 3043.0,
+      "status": 200,
+      "transcript": "một số loài động vật như vôi và hũ cao cổ thường hay lại gần xa và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "reference": "Một số loài động vật như voi và hươu cao cổ thường hay lại gần xe và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "wer": 0.08823529411764706
+    },
+    {
+      "label": "voice_vi_1",
+      "ms": 1178.7,
+      "status": 200,
+      "transcript": "một số loài động vật như vôi và hũ cao cổ thường hay lại gần xa và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "reference": "Một số loài động vật như voi và hươu cao cổ thường hay lại gần xe và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "wer": 0.08823529411764706
+    },
+    {
+      "label": "voice_vi_2",
+      "ms": 1155.7,
+      "status": 200,
+      "transcript": "một số loài động vật như vôi và hũ cao cổ thường hay lại gần xa và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "reference": "Một số loài động vật như voi và hươu cao cổ thường hay lại gần xe và chỉ với các dụng cụ bình thường chúng ta cũng sẽ quan sát một cách dễ dàng.",
+      "wer": 0.08823529411764706
+    },
+    {
+      "label": "voice_en_0",
+      "ms": 683.9,
+      "status": 200,
+      "transcript": "Show me a red bag.",
+      "reference": "Show me a red bag.",
+      "wer": 0.0
+    },
+    {
+      "label": "voice_en_1",
+      "ms": 239.0,
+      "status": 200,
+      "transcript": "Show me a red bag.",
+      "reference": "Show me a red bag.",
+      "wer": 0.0
+    },
+    {
+      "label": "voice_en_2",
+      "ms": 250.4,
+      "status": 200,
+      "transcript": "Show me a red bag.",
+      "reference": "Show me a red bag.",
+      "wer": 0.0
+    },
+    {
+      "label": "image_0",
+      "ms": 2442.1,
+      "status": 200,
+      "top_id": "p-marou-ba-ria-76-80g",
+      "ocr_ms": 2019.64
+    },
+    {
+      "label": "image_1",
+      "ms": 394.4,
+      "status": 200,
+      "top_id": "p-marou-ba-ria-76-80g",
+      "ocr_ms": 310.95
+    },
+    {
+      "label": "image_2",
+      "ms": 398.6,
+      "status": 200,
+      "top_id": "p-marou-ba-ria-76-80g",
+      "ocr_ms": 313.72
+    },
+    {
+      "label": "image_parallel",
+      "ms": 754.8,
+      "status": 200,
+      "top_id": "p-marou-ba-ria-76-80g",
+      "ocr_ms": 575.56
+    },
+    {
+      "label": "assistant_parallel",
+      "ms": 1565.9,
+      "status": 200,
+      "done": {
+        "intent": "recommend",
+        "message": "VNStore hiện chưa có sản phẩm giỏ mây trong danh sách. Bạn có muốn điều chỉnh tiêu chí không?",
+        "fallback": false,
+        "mode": "ok",
+        "catalog_version": "seed-007-intended-uses",
+        "timings_ms": {
+          "plan": 752.0,
+          "retrieve": 10.4,
+          "total": 1554
+        },
+        "usage": {
+          "prompt_tokens": 1809,
+          "output_tokens": 102
+        }
+      }
+    },
+    {
+      "label": "voice_parallel",
+      "ms": 2475.5,
+      "status": 200
+    }
+  ]
+}

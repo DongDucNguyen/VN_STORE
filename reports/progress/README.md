@@ -2,6 +2,8 @@
 
 Thư mục này ghi lại tiến độ triển khai [PLAN.md](../../PLAN.md) theo từng giai đoạn.
 
+**Tích hợp workstation 16/10/2026:** [phân tích main/demo_version, sửa lỗi và tối ưu RTX 5070 Ti](2026-10-16_tich-hop-demo-toi-uu-workstation.md). Đưa toàn bộ demo vào main, giữ nguyên nhánh nguồn; 878 backend, 28 Pillow, 160 E2E và smoke model thật đạt. [Cách chạy](../../docs/local-workstation.md).
+
 **Mới 16/10/2026:** [trợ lý tư vấn AI chạy cục bộ](2026-10-16_GD7_tro-ly-tu-van.md) — gợi ý theo nhu cầu, nhận xét khách quan, ghi nhớ theo đồng ý; chọn Qwen3-4B-Instruct-2507 qua benchmark dev ([chọn model](../model_selection/2026-10-16_assistant-model-selection.md)); catalog lên `seed-007-intended-uses`. Chưa nghiệm thu với người dùng thật.
 
 **Demo 14/10/2026:** [gộp 4 commit main vào demo_version](2026-10-14_GD6_merge-main-demo.md), kết hợp sửa vòng đời micro với đệm âm cuối, giữ English hybrid GPU/CPU. 774 backend, 28 Pillow, typecheck/build đạt; 146 ca E2E đã được kiểm chứng sau sửa một ca chờ micro, 2 smoke browser model thật đạt.

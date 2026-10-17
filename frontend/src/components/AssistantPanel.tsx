@@ -5,15 +5,17 @@ import {
 } from "../api";
 import { OPEN_EVENT, useAssistant, type ChatMessage } from "../assistant/useAssistant";
 import { formatPrice } from "../format";
+import { isNarrow, useDialogFocus } from "../hooks/useDialogFocus";
 import { MicError, Recorder } from "../media";
 import { href } from "../router";
+import { LotusMark, WaterRipple } from "./brand/Motifs";
 import { ProductImage } from "./ProductImage";
+import { Icon } from "./ui/Icon";
 
 const STARTERS = [
   "Gợi ý quà tặng mẹ khoảng 500k",
   "Tìm giỏ mây có quai để đi chợ",
   "Đồ gốm trang trí phòng khách dưới 1 triệu",
-  "Sô cô la làm quà cho đồng nghiệp",
 ];
 
 function Stars({ stats }: { stats?: { count: number; average: number | null } }) {
@@ -46,8 +48,12 @@ function CardRow({ c, recId, onOpen }: { c: ChatCard; recId?: number; onOpen: ()
       </a>
       {recId != null && (
         <div className="chat-vote" role="group" aria-label="Gợi ý này có hữu ích không?">
-          <button className={`icon-btn ${vote === 1 ? "on" : ""}`} aria-pressed={vote === 1} aria-label="Hữu ích" onClick={() => send(1)}>👍</button>
-          <button className={`icon-btn ${vote === -1 ? "on" : ""}`} aria-pressed={vote === -1} aria-label="Không hữu ích" onClick={() => send(-1)}>👎</button>
+          <button className={`vote-btn ${vote === 1 ? "on" : ""}`} aria-pressed={vote === 1} aria-label="Hữu ích" onClick={() => send(1)}>
+            <Icon name="check" size={16} /> <span aria-hidden="true">Hữu ích</span>
+          </button>
+          <button className={`vote-btn ${vote === -1 ? "on" : ""}`} aria-pressed={vote === -1} aria-label="Không hữu ích" onClick={() => send(-1)}>
+            <Icon name="close" size={16} /> <span aria-hidden="true">Không</span>
+          </button>
         </div>
       )}
     </li>
@@ -128,7 +134,7 @@ function Bubble({ m, onRetry, onClose, onQuick }: { m: ChatMessage; onRetry: () 
         </ul>
       )}
       {m.question && (
-        <p className="msg-question">❓ {m.question}</p>
+        <p className="msg-question"><Icon name="info" size={16} /> {m.question}</p>
       )}
       {m.done && m.cards && m.cards.length > 0 && !m.evaluation && (
         <div className="chips">
@@ -142,7 +148,8 @@ function Bubble({ m, onRetry, onClose, onQuick }: { m: ChatMessage; onRetry: () 
       )}
       {m.error && (
         <div className="notice notice-warn" role="alert">
-          {m.error} <button className="link" onClick={onRetry}>Thử lại</button>
+          <Icon name="alert" size={18} className="notice-icon" />
+          <div>{m.error} <button className="link" onClick={onRetry}>Thử lại</button></div>
         </div>
       )}
     </div>
@@ -155,6 +162,7 @@ function ConsentBox({ options, current, onChoose }: { options: Record<ConsentLev
   return (
     <form className="consent" onSubmit={(e) => { e.preventDefault(); onChoose(level); }}>
       <p><strong>Trợ lý có nên lưu cuộc trò chuyện không?</strong></p>
+      <p className="small muted">Mặc định không lưu. Bạn chọn một mức rồi bấm Lưu lựa chọn.</p>
       {(["none", "history", "memory"] as ConsentLevel[]).map((l) => (
         <label key={l} className="check">
           <input type="radio" name="consent" value={l} checked={level === l} onChange={() => setLevel(l)} />
@@ -167,22 +175,31 @@ function ConsentBox({ options, current, onChoose }: { options: Record<ConsentLev
   );
 }
 
-export function AssistantPanel() {
+export function AssistantPanel({ hideLauncher = false }: { hideLauncher?: boolean }) {
   const a = useAssistant();
   const [open, setOpen] = useState(false);
+  const [modal, setModal] = useState(false);
   const [input, setInput] = useState("");
   const [inputMode, setInputMode] = useState<"text" | "voice">("text");
   const [context, setContext] = useState<{ id: string; name: string } | null>(null);
   const [voice, setVoice] = useState<"idle" | "recording" | "processing">("idle");
   const [voiceError, setVoiceError] = useState<string | null>(null);
+  const [unseen, setUnseen] = useState(false);
+  const [announce, setAnnounce] = useState("");
   const rec = useRef<Recorder | null>(null);
+  const panelRef = useRef<HTMLElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const nearBottom = useRef(true);
   const last = useRef<{ text: string; mode: "text" | "voice"; pid: string | null } | null>(null);
+
+  // Desktop: nonmodal, vẫn xem sản phẩm bên cạnh. Màn hình hẹp: toàn màn hình, modal, giữ focus trong panel.
+  useDialogFocus(open, panelRef, () => setOpen(false), modal);
 
   useEffect(() => {
     const onOpen = (e: Event) => {
       const d = (e as CustomEvent<{ productId?: string; text?: string }>).detail ?? {};
+      setModal(isNarrow());
       setOpen(true);
       if (d.productId) {
         api.product(d.productId).then((p) => setContext({ id: p.id, name: p.name_vi })).catch(() => setContext(null));
@@ -198,22 +215,42 @@ export function AssistantPanel() {
     if (open) a.ensure(context?.id).catch(() => {});
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Nền phía sau không cuộn khi panel phủ toàn màn hình.
   useEffect(() => {
-    listRef.current?.scrollTo({ top: listRef.current.scrollHeight });
+    if (!open || !modal) return;
+    document.body.classList.add("is-locked");
+    return () => document.body.classList.remove("is-locked");
+  }, [open, modal]);
+
+  // Chỉ tự cuộn khi người dùng đang ở gần cuối; đang đọc lịch sử thì giữ vị trí và báo có tin mới.
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el) return;
+    if (nearBottom.current) el.scrollTo({ top: el.scrollHeight });
+    else setUnseen(true);
   }, [a.messages]);
 
+  // Báo ngắn cho trình đọc màn hình khi một câu trả lời hoàn chỉnh, không đọc lại từng token. Lỗi đã có role=alert.
+  const lastMsg = a.messages[a.messages.length - 1];
   useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+    if (lastMsg?.role === "assistant" && lastMsg.done && !lastMsg.error) {
+      setAnnounce(lastMsg.cards?.length ? `Trợ lý đã trả lời, kèm ${lastMsg.cards.length} gợi ý.` : "Trợ lý đã trả lời.");
+    }
+  }, [lastMsg?.id, lastMsg?.done]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => () => rec.current?.cancel(), []);
+
+  const show = () => {
+    setModal(isNarrow());
+    nearBottom.current = true;
+    setOpen(true);
+  };
 
   const submit = (text = input, mode = inputMode) => {
     if (!text.trim() || a.busy) return;
     last.current = { text, mode, pid: context?.id ?? null };
+    nearBottom.current = true;
+    setUnseen(false);
     a.send(text, { inputMode: mode, productId: context?.id ?? null });
     setInput("");
     setInputMode("text");
@@ -253,27 +290,44 @@ export function AssistantPanel() {
   const s = a.session;
   return (
     <>
-      {!open && (
-        <button className="assistant-fab" onClick={() => setOpen(true)} aria-label="Mở trợ lý mua sắm">
-          💬 <span>Trợ lý</span>
+      {!open && !hideLauncher && (
+        <button className="assistant-fab" onClick={show} aria-label="Mở trợ lý mua sắm">
+          <LotusMark size={22} /> <span>Trợ lý</span>
         </button>
       )}
       {open && (
-        <section className="assistant-panel" role="dialog" aria-label="Trợ lý mua sắm" aria-modal="false">
+        <section className={`assistant-panel ${modal ? "is-modal" : ""}`} role="dialog" aria-label="Trợ lý mua sắm"
+          aria-modal={modal} ref={panelRef}>
           <header className="assistant-head">
-            <strong>Trợ lý mua sắm</strong>
-            {s?.assistant.state === "basic" && <span className="chip">cơ bản</span>}
+            <span className="assistant-title">
+              <LotusMark size={26} className="nv-lotus is-playing" />
+              <strong>Trợ lý VNStore</strong>
+              {s?.assistant.state === "basic" && <span className="chip chip-static">Cơ bản</span>}
+            </span>
             <span className="assistant-actions">
               <button className="link" onClick={() => a.reset()} disabled={!a.messages.length}>Cuộc trò chuyện mới</button>
               <a href={href("/assistant/memory")} onClick={() => setOpen(false)}>Ghi nhớ</a>
-              <button className="icon-btn" aria-label="Đóng trợ lý" onClick={() => setOpen(false)}>✕</button>
+              <button className="icon-link" aria-label="Đóng trợ lý" onClick={() => setOpen(false)}>
+                <Icon name="close" size={22} />
+              </button>
             </span>
           </header>
-          <div className="assistant-body" ref={listRef} aria-live="polite">
-            {a.error && <div className="notice notice-warn" role="alert">{a.error} <a href={href("/search")}>Tìm bằng ô tìm kiếm</a></div>}
+          <div className="assistant-body" ref={listRef}
+            onScroll={(e) => {
+              const el = e.currentTarget;
+              nearBottom.current = el.scrollHeight - el.scrollTop - el.clientHeight < 80;
+              if (nearBottom.current) setUnseen(false);
+            }}>
+            {a.error && (
+              <div className="notice notice-warn" role="alert">
+                <Icon name="alert" size={18} className="notice-icon" />
+                <div>{a.error} <a href={href("/search")}>Tìm bằng ô tìm kiếm</a></div>
+              </div>
+            )}
             {s?.consent_needed && <ConsentBox options={s.consent_options} current={s.consent_level} onChoose={(l) => a.setConsent(l).catch(() => {})} />}
             {!a.messages.length && (
-              <div className="msg msg-bot">
+              <div className="msg msg-bot msg-welcome">
+                <LotusMark size={40} className="welcome-lotus" />
                 <p className="msg-text">{s?.greeting_vi || "Chào bạn, mình có thể giúp bạn tìm sản phẩm hợp nhu cầu."}</p>
                 <div className="chips">
                   {STARTERS.map((t) => (
@@ -284,28 +338,46 @@ export function AssistantPanel() {
               </div>
             )}
             {a.messages.map((m) => (
-              <Bubble key={m.id} m={m} onClose={() => { if (window.matchMedia("(max-width: 640px)").matches) setOpen(false); }}
+              <Bubble key={m.id} m={m} onClose={() => { if (isNarrow()) setOpen(false); }}
                 onRetry={() => last.current && a.send(last.current.text, { inputMode: last.current.mode, productId: last.current.pid })}
                 onQuick={(t) => submit(t, "text")} />
             ))}
           </div>
+          <p className="sr-only" aria-live="polite">{announce}</p>
+          {unseen && (
+            <button type="button" className="new-messages" onClick={() => {
+              listRef.current?.scrollTo({ top: listRef.current.scrollHeight });
+              nearBottom.current = true;
+              setUnseen(false);
+            }}>
+              Có tin nhắn mới <Icon name="chevron" size={16} />
+            </button>
+          )}
           <form className="assistant-input" onSubmit={(e) => { e.preventDefault(); submit(); }}>
+            <WaterRipple className="composer-water" />
             {context && (
               <div className="chips">
                 <span className="chip chip-hard">Đang hỏi về: {context.name}
-                  <button type="button" className="link" aria-label="Bỏ sản phẩm đang hỏi" onClick={() => setContext(null)}> ✕</button>
+                  <button type="button" className="chip-x" aria-label="Bỏ sản phẩm đang hỏi" onClick={() => setContext(null)}>
+                    <Icon name="close" size={14} />
+                  </button>
                 </span>
               </div>
             )}
-            {voiceError && <p className="small state-error">{voiceError}</p>}
-            {inputMode === "voice" && <p className="small muted">Bản chép lời từ giọng nói — sửa nếu cần rồi gửi.</p>}
+            {voiceError && <p className="small field-error" role="alert">{voiceError}</p>}
+            {voice === "recording" && <p className="small voice-live-line"><span className="rec-dot" aria-hidden /> Đang ghi âm — bấm nút dừng khi nói xong.</p>}
+            {voice === "processing" && <p className="small muted">Đang chép lời…</p>}
+            {inputMode === "voice" && <p className="small muted">Bản chép lời từ giọng nói — bạn có thể sửa câu vừa nói rồi bấm Gửi.</p>}
             <div className="assistant-row">
               <textarea ref={inputRef} rows={2} maxLength={1000} value={input} placeholder="Bạn cần tìm gì? Ví dụ: quà tân gia dưới 500k"
                 aria-label="Tin nhắn cho trợ lý" onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submit(); } }} />
-              <button type="button" className={`icon-btn ${voice === "recording" ? "on" : ""}`} onClick={toggleVoice}
+                onKeyDown={(e) => {
+                  // Không gửi khi bộ gõ tiếng Việt (IME) đang ghép chữ.
+                  if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) { e.preventDefault(); submit(); }
+                }} />
+              <button type="button" className={`icon-link composer-mic ${voice === "recording" ? "is-live" : ""}`} onClick={toggleVoice}
                 disabled={voice === "processing"} aria-label={voice === "recording" ? "Dừng ghi âm" : "Nói với trợ lý"}>
-                {voice === "recording" ? "⏹" : voice === "processing" ? "…" : "🎤"}
+                <Icon name={voice === "recording" ? "stop" : "microphone"} size={22} />
               </button>
               <button className="btn btn-primary" type="submit" disabled={a.busy || !input.trim()}>Gửi</button>
             </div>

@@ -1,7 +1,7 @@
 {
  "kind": "family_review_suggestions",
  "version": "claude-assist-v1",
- "proposal_sha256": "7413c0ec12735a76752cc63eeca100ac105037082de00d128aa563aef0c387bf",
+ "proposal_sha256": "9139a307ceb3de83c858725605fc01576f646ff0ed94c2b81ee5b7f6142e0aca",
  "catalog_sha256": "2a5d1a7e379bc9478b1d7c6b79ad36d7c9d3a4914722aea43e6ced4257d83fe0",
  "author": "Claude (AI) — gợi ý máy, không phải quyết định",
  "policy": "Người duyệt xem từng thẻ và ảnh; chỉ file do người duyệt xuất mới được apply_family_review.py nhận.",

@@ -107,8 +107,7 @@ def providers() -> list[str]:
 
 def session(path: str | Path, shapes: ShapeFn | None = None, *, force_cpu: bool = False):
     import onnxruntime as ort
-    opts = ort.SessionOptions()
-    opts.log_severity_level = 3
+    opts = session_options()
     if force_cpu:
         return ort.InferenceSession(str(path), sess_options=opts, providers=["CPUExecutionProvider"])
     mode = tensorrt_mode()
@@ -129,7 +128,7 @@ def session(path: str | Path, shapes: ShapeFn | None = None, *, force_cpu: bool 
            "trt_timing_cache_path": str(cache), "trt_fp16_enable": TRT_MODES[mode]}
     if shapes is not None:
         # Shape động (cache của decoder dài dần) phải khai báo profile; thiếu thì TensorRT dựng lại engine liên tục.
-        meta = ort.InferenceSession(str(path), providers=["CPUExecutionProvider"])
+        meta = ort.InferenceSession(str(path), sess_options=opts, providers=["CPUExecutionProvider"])
         prof = [(i.name, shapes(i.name, i.shape)) for i in meta.get_inputs()]
         del meta
         prof = [(n, s) for n, s in prof if s]
@@ -143,6 +142,26 @@ def session(path: str | Path, shapes: ShapeFn | None = None, *, force_cpu: bool 
     if ml_device() == "cuda":
         s.disable_fallback()
     return s
+
+
+def session_options(*, llm: bool = False):
+    """Bound each model's CPU pool; idle models must not spin on all CPU cores."""
+    import onnxruntime as ort
+    key = "VNSTORE_LLM_THREADS" if llm else "VNSTORE_ML_THREADS"
+    raw = os.environ.get(key, "").strip()
+    try:
+        threads = int(raw) if raw else min(4, os.cpu_count() or 1)
+    except ValueError as e:
+        raise ValueError(f"{key} must be an integer from 1 to 64") from e
+    if not 1 <= threads <= 64:
+        raise ValueError(f"{key} must be an integer from 1 to 64")
+    opts = ort.SessionOptions()
+    opts.log_severity_level = 3
+    opts.intra_op_num_threads = threads
+    opts.inter_op_num_threads = 1
+    opts.add_session_config_entry("session.intra_op.allow_spinning", "0")
+    opts.add_session_config_entry("session.inter_op.allow_spinning", "0")
+    return opts
 
 
 def fill_dims(dims: list, symbolic: dict[int, int], default: int = 1) -> str:

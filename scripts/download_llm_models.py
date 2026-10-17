@@ -72,6 +72,7 @@ def fetch_parallel(urls: list[tuple[str, int]], size: int, dest: Path) -> None:
         done = set()
     chunks = [i for i in range((size + CHUNK - 1) // CHUNK) if i not in done]
     lock = threading.Lock()
+    errors: list[Exception] = []
     progress = {"bytes": len(done) * CHUNK, "t0": time.time(), "last": 0.0}
 
     def worker(url: str):
@@ -104,14 +105,18 @@ def fetch_parallel(urls: list[tuple[str, int]], size: int, dest: Path) -> None:
                 except Exception as e:  # noqa: BLE001 — mạng chập chờn: thử lại đoạn này
                     time.sleep(min(30, 2 + attempt * 2))
                     if attempt == 29:
-                        raise RuntimeError(f"Không tải được đoạn {idx} của {dest.name}: {e}") from e
+                        with lock:
+                            errors.append(RuntimeError(f"Không tải được đoạn {idx} của {dest.name}: {e}"))
+                        return
 
     threads = [threading.Thread(target=worker, args=(u,), daemon=True) for u, n in urls for _ in range(n)]
     for t in threads:
         t.start()
     for t in threads:
         t.join()
-    if len(done) * CHUNK < size - CHUNK:
+    if errors:
+        raise errors[0]
+    if done != set(range((size + CHUNK - 1) // CHUNK)):
         raise RuntimeError(f"{dest.name}: thiếu đoạn")
     part.replace(dest)
     state_file.unlink(missing_ok=True)

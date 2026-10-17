@@ -22,7 +22,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from . import LazyModel, _preload_cuda, hf_file, ml_device
+from . import LazyModel, _preload_cuda, hf_file, ml_device, session_options
 
 PREFILL_CHUNK = 256
 
@@ -106,16 +106,15 @@ class OnnxCausalLM:
 
     def _session(self, path: Path, cpu_only: bool = False):
         import onnxruntime as ort
-        opts = ort.SessionOptions()
-        opts.log_severity_level = 3
+        opts = session_options(llm=True)
         if self.device == "cuda" and not cpu_only:
             _preload_cuda(ort)
             s = ort.InferenceSession(str(path), sess_options=opts,
                                      providers=["CUDAExecutionProvider", "CPUExecutionProvider"])
             if s.get_providers()[0] != "CUDAExecutionProvider":
                 raise RuntimeError(f"CUDA không khởi tạo được cho {path.name}")
+            s.disable_fallback()
             return s
-        opts.intra_op_num_threads = int(os.environ.get("VNSTORE_LLM_THREADS", "0") or 0)
         return ort.InferenceSession(str(path), sess_options=opts, providers=["CPUExecutionProvider"])
 
     def _graph(self, path: Path, cpu_only: bool = False) -> _Graph:
@@ -167,15 +166,11 @@ class OnnxCausalLM:
             return cache[token]
         import numpy as np
         import onnxruntime as ort
-        cpu = self.__dict__.get("_cpu")
-        if cpu is None:
-            opts = ort.SessionOptions()
-            opts.log_severity_level = 3
-            dec = ort.InferenceSession(str(self._decoder_path), opts, providers=["CPUExecutionProvider"])
-            emb = (ort.InferenceSession(str(self._embed_path), opts, providers=["CPUExecutionProvider"])
-                   if self._embed_path else None)
-            cpu = self._cpu = (dec, emb)
-        dec, emb = cpu
+        # Keep only the tiny seed KV, never a second full model after a lazy first request.
+        opts = session_options(llm=True)
+        dec = ort.InferenceSession(str(self._decoder_path), opts, providers=["CPUExecutionProvider"])
+        emb = (ort.InferenceSession(str(self._embed_path), opts, providers=["CPUExecutionProvider"])
+               if self._embed_path else None)
         ids = np.array([[token]], dtype=np.int64)
         feed: dict[str, Any] = {}
         if emb is None:
@@ -296,6 +291,8 @@ class OnnxCausalLM:
                 state[name] = ortv(first[name])
             total, start = 1, 1
         for i in range(start, len(prompt), PREFILL_CHUNK):
+            if deadline_s is not None and time.perf_counter() >= deadline_s:
+                raise TimeoutError("LLM prefill exceeded deadline")
             step(prompt[i:i + PREFILL_CHUNK])
         t1 = time.perf_counter()
         reason = "length"

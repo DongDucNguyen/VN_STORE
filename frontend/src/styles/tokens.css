@@ -1,0 +1,141 @@
+/* Nếp Việt v2 — token màu, chữ, khoảng cách, lớp nổi, chuyển động (design.md §4, §7.2). */
+:root {
+  --color-bg: #f7f3e8;
+  --color-bg-deep: #efe9da;
+  --color-surface: #fffdf7;
+  --color-well: #f0ebdd; /* nền trung tính sau ảnh catalog (contain) */
+  --color-text: #22352b;
+  --color-muted: #616b60;
+  --color-primary: #214b3b;
+  --color-primary-hover: #183e33;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e7ede1;
+  --color-line: #dbdece;
+  --color-control-border: #7b8474;
+  --color-lotus: #ad586c;
+  --color-lotus-text: #97485f;
+  --color-straw: #d8bd7a;
+  --color-forest-scene: #183e33;
+  --color-on-scene: #ecece0;
+  --color-on-scene-muted: #c3ccbf;
+  --color-editorial-mark: #a84432;
+  --color-danger: #a02d2d;
+  --color-danger-soft: #f6e4df;
+  --color-warning: #79530e;
+  --color-warning-soft: #f5ecd2;
+  --color-focus: #214b3b;
+  --shadow-soft: 0 1px 2px rgb(34 53 43 / 8%), 0 8px 24px rgb(34 53 43 / 8%);
+  --shadow-panel: 0 2px 6px rgb(24 40 32 / 10%), 0 18px 48px rgb(24 40 32 / 18%);
+  --decor-shadow-opacity: 0.14;
+  --decor-blend: multiply;
+
+  --font-ui: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px; --space-10: 128px;
+
+  --container: 1280px;
+  --container-narrow: 1120px;
+  --gutter: 16px;
+  --chapter-pad: clamp(48px, 9vw, 128px);
+  --radius-control: 8px;
+  --radius-panel: 12px;
+  --radius-photo: 2px;
+  --header-h: 60px;
+  --bottomnav-h: 64px;
+
+  --z-header: 20; --z-dropdown: 30; --z-bottom: 40; --z-overlay: 60; --z-dialog: 70; --z-toast: 80;
+
+  --motion-instant: 100ms;
+  --motion-fast: 160ms;
+  --motion-base: 240ms;
+  --motion-panel: 320ms;
+  --motion-story: 480ms;
+  --ease-bamboo: cubic-bezier(.22, 1, .36, 1);
+  --ease-water: cubic-bezier(.2, .65, .3, 1);
+  --ease-return: cubic-bezier(.4, 0, .2, 1);
+
+  /* Alias chuyển tiếp cho mã cũ (design.md §11.1); bỏ khi không còn chỗ dùng. */
+  --bg: var(--color-bg);
+  --surface: var(--color-surface);
+  --text: var(--color-text);
+  --muted: var(--color-muted);
+  --line: var(--color-line);
+  --accent: var(--color-primary);
+  --accent-soft: var(--color-primary-soft);
+  --ok: var(--color-primary);
+  --ok-soft: var(--color-primary-soft);
+  --warn: var(--color-warning);
+  --warn-soft: var(--color-warning-soft);
+  --err: var(--color-danger);
+  --radius: var(--radius-control);
+
+  color-scheme: light;
+}
+
+@media (min-width: 768px) { :root { --gutter: 24px; } }
+@media (min-width: 1024px) { :root { --gutter: 32px; --header-h: 72px; } }
+@media (min-width: 1280px) { :root { --gutter: 48px; } }
+
+/* Theme tối: đêm trong vườn. Ảnh giữ nguyên màu trong khung tối, không invert. */
+:root[data-theme="dark"] {
+  --color-bg: #15271f;
+  --color-bg-deep: #112019;
+  --color-surface: #20372c;
+  --color-well: #1b3127;
+  --color-text: #ececdf;
+  --color-muted: #bbc5b7;
+  --color-primary: #b8d4b6;
+  --color-primary-hover: #cfe3cd;
+  --color-on-primary: #15271f;
+  --color-primary-soft: #2c4839;
+  --color-line: #42594a;
+  --color-control-border: #9caa94;
+  --color-lotus: #dea5b2;
+  --color-lotus-text: #e7bac5;
+  --color-straw: #ccb982;
+  --color-forest-scene: #102a23;
+  --color-editorial-mark: #e3a392;
+  --color-danger: #ffa6a0;
+  --color-danger-soft: #3b2423;
+  --color-warning: #f3d48f;
+  --color-warning-soft: #3a3220;
+  --color-focus: #e3d29c;
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
+  --shadow-panel: 0 2px 6px rgb(0 0 0 / 35%), 0 18px 48px rgb(0 0 0 / 45%);
+  --decor-shadow-opacity: 0.18;
+  --decor-blend: screen;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #15271f;
+    --color-bg-deep: #112019;
+    --color-surface: #20372c;
+    --color-well: #1b3127;
+    --color-text: #ececdf;
+    --color-muted: #bbc5b7;
+    --color-primary: #b8d4b6;
+    --color-primary-hover: #cfe3cd;
+    --color-on-primary: #15271f;
+    --color-primary-soft: #2c4839;
+    --color-line: #42594a;
+    --color-control-border: #9caa94;
+    --color-lotus: #dea5b2;
+    --color-lotus-text: #e7bac5;
+    --color-straw: #ccb982;
+    --color-forest-scene: #102a23;
+    --color-editorial-mark: #e3a392;
+    --color-danger: #ffa6a0;
+    --color-danger-soft: #3b2423;
+    --color-warning: #f3d48f;
+    --color-warning-soft: #3a3220;
+    --color-focus: #e3d29c;
+    --shadow-soft: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
+    --shadow-panel: 0 2px 6px rgb(0 0 0 / 35%), 0 18px 48px rgb(0 0 0 / 45%);
+    --decor-shadow-opacity: 0.18;
+    --decor-blend: screen;
+    color-scheme: dark;
+  }
+}

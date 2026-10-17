@@ -24,6 +24,34 @@ async function send(page: Page, text: string) {
 }
 
 test.describe("Trợ lý mua sắm", () => {
+  test("báo lỗi khi luồng kết thúc trước done và cho phép gửi lại", async ({ page }) => {
+    await page.goto("/");
+    const panel = await openPanel(page);
+    await chooseConsent(page, /Không lưu/);
+    await page.route("**/api/assistant/sessions/*/messages", (route) => route.fulfill({
+      status: 200, contentType: "text/event-stream",
+      body: 'event: delta\ndata: {"text":"Đang trả lời"}\n\n',
+    }));
+    await send(page, "tìm giỏ mây");
+    await expect(panel.getByText(/Mất kết nối trước khi trợ lý trả lời xong/)).toBeVisible();
+    await panel.getByRole("textbox", { name: "Tin nhắn cho trợ lý" }).fill("thử lại");
+    await expect(panel.getByRole("button", { name: "Gửi", exact: true })).toBeEnabled();
+  });
+
+  test("đọc SSE dùng CRLF và giữ nguyên tiếng Việt", async ({ page }) => {
+    await page.goto("/");
+    const panel = await openPanel(page);
+    await chooseConsent(page, /Không lưu/);
+    await page.route("**/api/assistant/sessions/*/messages", (route) => route.fulfill({
+      status: 200, contentType: "text/event-stream",
+      body: 'event:delta\r\ndata:{"text":"Khăn lụa Việt Nam"}\r\n\r\n' +
+        'event:done\r\ndata:{"message":"Khăn lụa Việt Nam", "mode":"basic", "fallback":false}\r\n\r\n',
+    }));
+    await send(page, "tìm khăn");
+    await expect(panel.getByText("Khăn lụa Việt Nam", { exact: true })).toBeVisible();
+    await expect(panel.getByText(/Mất kết nối/)).toHaveCount(0);
+  });
+
   test("gợi ý có thẻ sản phẩm, lý do, giá từ catalog; so sánh hai món", async ({ page }) => {
     await page.goto("/");
     const panel = await openPanel(page);

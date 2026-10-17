@@ -12,6 +12,8 @@
     "test:e2e:report": "playwright show-report ../artifacts/e2e-report"
   },
   "dependencies": {
+    "@fontsource/be-vietnam-pro": "5.3.0",
+    "@fontsource/newsreader": "5.3.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
