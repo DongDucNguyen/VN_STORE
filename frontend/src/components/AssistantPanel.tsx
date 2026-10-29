@@ -6,6 +6,7 @@ import {
 import { OPEN_EVENT, useAssistant, type ChatMessage } from "../assistant/useAssistant";
 import { formatPrice } from "../format";
 import { isNarrow, useDialogFocus } from "../hooks/useDialogFocus";
+import { usePresence } from "../hooks/usePresence";
 import { MicError, Recorder } from "../media";
 import { href } from "../router";
 import { LotusMark, WaterRipple } from "./brand/Motifs";
@@ -195,6 +196,7 @@ export function AssistantPanel({ hideLauncher = false }: { hideLauncher?: boolea
 
   // Desktop: nonmodal, vẫn xem sản phẩm bên cạnh. Màn hình hẹp: toàn màn hình, modal, giữ focus trong panel.
   useDialogFocus(open, panelRef, () => setOpen(false), modal);
+  const presence = usePresence(open, 220);
 
   useEffect(() => {
     const onOpen = (e: Event) => {
@@ -295,9 +297,9 @@ export function AssistantPanel({ hideLauncher = false }: { hideLauncher?: boolea
           <LotusMark size={22} /> <span>Trợ lý</span>
         </button>
       )}
-      {open && (
-        <section className={`assistant-panel ${modal ? "is-modal" : ""}`} role="dialog" aria-label="Trợ lý mua sắm"
-          aria-modal={modal} ref={panelRef}>
+      {presence.mounted && (
+        <section className={`assistant-panel ${modal ? "is-modal" : ""} ${presence.closing ? "is-closing" : ""}`}
+          role="dialog" aria-label="Trợ lý mua sắm" aria-modal={modal} ref={panelRef} inert={presence.closing || undefined}>
           <header className="assistant-head">
             <span className="assistant-title">
               <LotusMark size={26} className="nv-lotus is-playing" />

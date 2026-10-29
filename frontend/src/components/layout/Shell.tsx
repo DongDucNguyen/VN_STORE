@@ -3,6 +3,8 @@ import { openAssistant } from "../../assistant/useAssistant";
 import { ART } from "../../content/editorialAssets";
 import { useDialogFocus } from "../../hooks/useDialogFocus";
 import { type MotionChoice, type ThemeChoice, usePreferences } from "../../hooks/useMotionPreference";
+import { usePresence } from "../../hooks/usePresence";
+import { crossfade } from "../../motion/transitions";
 import { BambooDivider, LotusMark } from "../brand/Motifs";
 import { Icon } from "../ui/Icon";
 
@@ -21,6 +23,7 @@ function FavCount({ n }: { n: number }) {
 export function AppHeader({ path, favCount, kind }: { path: string; favCount: number; kind: RouteKind }) {
   const [menu, setMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const sheet = usePresence(menu, 220);
   useDialogFocus(menu, menuRef, () => setMenu(false), true);
   useEffect(() => setMenu(false), [path]);
   useEffect(() => {
@@ -71,10 +74,11 @@ export function AppHeader({ path, favCount, kind }: { path: string; favCount: nu
         </div>
       </div>
       {kind === "internal" && <BambooDivider className="header-rule" />}
-      {menu && (
+      {sheet.mounted && (
         <>
-          <div className="sheet-backdrop" onClick={() => setMenu(false)} aria-hidden="true" />
-          <div className="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu" ref={menuRef}>
+          <div className={`sheet-backdrop ${sheet.closing ? "is-closing" : ""}`} onClick={() => setMenu(false)} aria-hidden="true" />
+          <div className={`site-menu ${sheet.closing ? "is-closing" : ""}`} id="site-menu" role="dialog" aria-modal="true"
+            aria-label="Menu" ref={menuRef} inert={sheet.closing || undefined}>
             <div className="sheet-head">
               <span className="wordmark">VNStore</span>
               <button type="button" className="icon-link" aria-label="Đóng menu" onClick={() => setMenu(false)}>
@@ -120,7 +124,10 @@ export function DisplayPrefs({ className = "" }: { className?: string }) {
     <div className={`display-prefs ${className}`}>
       <label>
         <span>Giao diện</span>
-        <select value={p.theme} onChange={(e) => p.setTheme(e.target.value as ThemeChoice)}>
+        <select value={p.theme} onChange={(e) => {
+          const v = e.target.value as ThemeChoice;
+          crossfade(() => p.setTheme(v));
+        }}>
           <option value="system">Theo hệ thống</option>
           <option value="light">Sáng</option>
           <option value="dark">Tối</option>

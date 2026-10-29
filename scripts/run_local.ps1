@@ -35,7 +35,8 @@ if ($Profile -eq 'cpu' -and $Assistant -notin @('off', 'basic')) {
 }
 
 $settings = @{
-    VNSTORE_CATALOG = (Join-Path $repo 'database.json')
+    # Co VNSTORE_DATABASE_URL thi doc catalog va luu tro ly o PostgreSQL; khong thi dung file nhu truoc.
+    VNSTORE_CATALOG = $(if ($env:VNSTORE_DATABASE_URL) { $null } else { (Join-Path $repo 'database.json') })
     VNSTORE_INCLUDE_DRAFTS = '0'
     VNSTORE_SEARCH_CONFIG = '{"ocr_weight":0.35}'
     VNSTORE_TEXT_ADAPTER = $null

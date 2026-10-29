@@ -35,6 +35,12 @@
 @keyframes nv-msg-user { from { opacity: 0; transform: translateX(14px) scale(.97); } to { opacity: 1; transform: none; } }
 @keyframes nv-msg-bot { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @keyframes nv-tap { 0% { transform: scale(1); } 40% { transform: scale(.84); } 100% { transform: scale(1); } }
+@keyframes nv-fade-out { to { opacity: 0; } }
+@keyframes nv-sheet-out { to { transform: translateX(32px); opacity: 0; } }
+@keyframes nv-panel-out { to { transform: translateY(14px) scale(.97); opacity: 0; } }
+@keyframes nv-drop-out { to { transform: translateY(24px); opacity: 0; } }
+@keyframes nv-sheen { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes nv-busy { from { background-position: 100% 0; } to { background-position: 0 0; } }
 /* Scroll-driven */
 @keyframes nv-par-slow { from { translate: 0 -24px; } to { translate: 0 56px; } }
 @keyframes nv-par-rise { from { translate: 0 40px; } to { translate: 0 -30px; } }
@@ -65,6 +71,11 @@
   height: 100%; object-fit: contain; animation-duration: 560ms; animation-timing-function: var(--ease-bamboo);
 }
 
+/* Đổi sáng/tối: hòa màu cả trang trong một nhịp, header/nav đi cùng thay vì chạy riêng. */
+:root[data-vt="theme"]::view-transition-group(*) { animation-duration: 420ms; }
+:root[data-vt="theme"]::view-transition-old(*) { animation: nv-fade-out 420ms var(--ease-return) both; }
+:root[data-vt="theme"]::view-transition-new(*) { animation: nv-fade 420ms var(--ease-return) both; }
+
 /* ======================= Header & menu ======================= */
 .app-header { transition: box-shadow var(--motion-panel) var(--ease-return), border-color var(--motion-panel) linear; }
 :root.is-scrolled .app-header { box-shadow: 0 10px 30px -18px rgb(24 40 32 / 38%); border-bottom-color: transparent; }
@@ -86,6 +97,9 @@
 .site-menu .menu-links a:nth-child(4) { animation-delay: 120ms; }
 .site-menu .menu-links a:nth-child(5) { animation-delay: 160ms; }
 .site-menu .display-prefs { animation: nv-fade 400ms 200ms backwards; }
+/* Đóng menu: sheet lùi về mép phải, nền mờ tan; DOM gỡ sau 220ms (usePresence), focus đã trả về ngay. */
+.site-menu.is-closing { animation: nv-sheet-out 220ms var(--ease-return) both; pointer-events: none; }
+.sheet-backdrop.is-closing { animation: nv-fade-out 220ms linear both; pointer-events: none; }
 .menu-links a { transition: padding-left var(--motion-base) var(--ease-bamboo), color var(--motion-fast) linear; }
 .menu-links a:hover { padding-left: 8px; }
 
@@ -154,6 +168,40 @@
 .motion-ready [data-reveal-group]:not(.is-in) > .card { opacity: 0; }
 [data-reveal-group].is-in > .card { animation: nv-card-in 680ms var(--ease-bamboo) backwards; animation-delay: calc(var(--i, 0) * 55ms); }
 
+/* Danh sách làng nghề / thương hiệu / danh mục: từng mục trồi lên theo thứ tự đọc thay vì cả khối một lần. */
+.motion-ready :is(.entry-list, .cat-links)[data-reveal]:not(.is-in) { opacity: 1; transform: none; }
+.motion-ready :is(.entry-list, .cat-links):not(.is-in) > * { opacity: 0; transform: translateY(18px); }
+:is(.entry-list, .cat-links)[data-reveal] > * { transition: opacity 640ms var(--ease-water), transform 760ms var(--ease-bamboo); }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(2) { transition-delay: 50ms; }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(3) { transition-delay: 100ms; }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(4) { transition-delay: 150ms; }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(5) { transition-delay: 200ms; }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(6) { transition-delay: 250ms; }
+:is(.entry-list, .cat-links)[data-reveal] > :nth-child(n + 7) { transition-delay: 300ms; }
+
+/* Chi tiết sản phẩm: cột thông tin vào so le khi dữ liệu tới, ảnh chính đã có hiệu ứng riêng. */
+.product-info > * { animation: nv-rise 640ms var(--ease-bamboo) backwards; }
+.product-info > :nth-child(2) { animation-delay: 60ms; }
+.product-info > :nth-child(3) { animation-delay: 120ms; }
+.product-info > :nth-child(4) { animation-delay: 180ms; }
+.product-info > :nth-child(n + 5) { animation-delay: 240ms; }
+
+/* Khung chờ: vệt lụa sáng lướt chậm qua ô ảnh và dòng chữ, lệch nhịp theo cột. */
+.skeleton-card :is(.sk-img, .sk-line) { position: relative; overflow: hidden; }
+.motion-ready .skeleton-card :is(.sk-img, .sk-line)::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(100deg, transparent 20%, color-mix(in srgb, var(--color-surface) 70%, transparent) 50%, transparent 80%);
+  animation: nv-sheen 1600ms var(--ease-water) infinite; animation-delay: calc(var(--i, 0) * 120ms);
+}
+
+/* Kết quả đang cập nhật (đổi bộ lọc, xem thêm): một sợi rơm chạy ở mép trên, lưới cũ vẫn đọc/bấm được. */
+.results { position: relative; }
+.results[aria-busy="true"]::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 2px; border-radius: 2px; pointer-events: none;
+  background: linear-gradient(90deg, transparent 0 30%, var(--color-straw) 45%, var(--color-primary) 55%, transparent 70% 100%);
+  background-size: 250% 100%; animation: nv-busy 1100ms var(--ease-return) infinite;
+}
+
 /* Vòng nước ở chương sen lan ra lần lượt. */
 .lotus-ripple path { transform-box: fill-box; transform-origin: center; }
 .chapter-lotus.is-playing .lotus-ripple { animation: none; }
@@ -196,11 +244,19 @@
 .suggest a { transition: background-color var(--motion-fast) linear, padding-left var(--motion-base) var(--ease-bamboo); }
 .suggest a:hover, .suggest a.active { padding-left: calc(var(--space-4) + 4px); }
 
-/* Thẻ sản phẩm: ảnh lắng nhẹ, vệt sáng theo con trỏ, nhãn “Xem chi tiết” trượt lên, nhấn có độ lún. */
-.card-img { position: relative; isolation: isolate; transition: transform var(--motion-fast) var(--ease-return); }
-.card-img img { transition: transform 900ms var(--ease-bamboo); }
+/* Thẻ sản phẩm: ảnh hiện dần khi tải xong, nhấc nhẹ khi rê, vệt sáng theo con trỏ, nhãn “Xem chi tiết” trượt lên,
+   nhấn có độ lún. Ảnh chỉ chờ ẩn khi JS sẵn sàng; ảnh đã đệm được đánh dấu xong trước lần vẽ đầu. */
+.card-img { position: relative; isolation: isolate;
+  transition: transform 420ms var(--ease-bamboo), box-shadow 420ms var(--ease-return); }
+.card-img img, .chat-card-img img { transition: transform 900ms var(--ease-bamboo), opacity 520ms var(--ease-water), scale 900ms var(--ease-bamboo); }
+.motion-ready .img-fade:not(.is-loaded) { opacity: 0; scale: 1.035; }
 .card-link:hover .card-img img { transform: scale(1.045); }
-.card-link:active .card-img { transform: scale(.985); }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card-img { transform: translateY(-4px); box-shadow: 0 20px 34px -24px rgb(24 40 32 / 55%); }
+  /* Nút tim nằm ngoài khung ảnh: đi theo bằng `translate` để không đè scale khi rê vào chính nút. */
+  .card:hover .fav { translate: 0 -4px; }
+}
+.card-link:active .card-img { transform: scale(.985); transition-duration: 120ms; }
 .card-img::after {
   content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0;
   background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgb(255 255 255 / 26%), transparent 62%);
@@ -221,7 +277,7 @@
 .card-link:hover .card-title { color: var(--color-primary); }
 
 /* Trái tim “Giữ một món”: nhún và bung sáu cánh sen nhỏ. */
-.fav { transition: transform var(--motion-base) var(--ease-bamboo), color var(--motion-fast) linear; }
+.fav { transition: transform var(--motion-base) var(--ease-bamboo), translate 420ms var(--ease-bamboo), color var(--motion-fast) linear; }
 .fav:hover { transform: scale(1.08); }
 .fav:active { transform: scale(.92); }
 .fav-heart { display: grid; place-items: center; }
@@ -291,13 +347,16 @@ input[type="checkbox"]:active, input[type="radio"]:active { transform: scale(.86
   .assistant-panel { transform-origin: 100% 100%; animation: nv-panel 380ms var(--ease-bamboo); }
 }
 .assistant-panel.is-modal { animation: nv-rise 320ms var(--ease-bamboo); }
+/* Đóng trợ lý: panel thu về góc nút mở (desktop) hoặc hạ xuống (mobile); gỡ khỏi DOM sau 220ms. */
+.assistant-panel.is-closing { animation: nv-panel-out 220ms var(--ease-return) both; pointer-events: none; }
+.assistant-panel.is-modal.is-closing { animation-name: nv-drop-out; }
 .msg { animation: nv-msg-bot 300ms var(--ease-bamboo) backwards; }
 .msg-user { animation-name: nv-msg-user; }
 .chat-card { animation: nv-rise 420ms var(--ease-bamboo) backwards; }
 .chat-card:nth-child(2) { animation-delay: 60ms; }
 .chat-card:nth-child(3) { animation-delay: 120ms; }
 .chat-card:nth-child(n + 4) { animation-delay: 180ms; }
-.chat-card-img img { transition: transform 600ms var(--ease-bamboo); }
+.chat-card-img img { transition: transform 600ms var(--ease-bamboo), opacity 520ms var(--ease-water), scale 900ms var(--ease-bamboo); }
 .chat-card > a:hover .chat-card-img img { transform: scale(1.06); }
 .new-messages { animation: nv-pop 320ms var(--ease-bamboo) backwards; }
 .vote-btn { transition: transform var(--motion-base) var(--ease-bamboo), background-color var(--motion-fast) linear; }
@@ -356,6 +415,9 @@ input[type="checkbox"]:active, input[type="radio"]:active { transform: scale(.86
   .spinner { animation: none !important; border-top-color: var(--color-primary); border-right-color: var(--color-primary); }
   .rec-dot::after, .is-rippling::before, .petal-burst { display: none; }
   .gallery-main.is-zoom img { transform: none; }
+  .card:hover .card-img { transform: none; }
+  .card:hover .fav { translate: none; }
+  .results[aria-busy="true"]::before { background: var(--color-straw); opacity: .7; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after {
@@ -365,3 +427,6 @@ input[type="checkbox"]:active, input[type="radio"]:active { transform: scale(.86
 :root[data-motion="reduce"] .spinner { animation: none !important; border-top-color: var(--color-primary); border-right-color: var(--color-primary); }
 :root[data-motion="reduce"] .rec-dot::after, :root[data-motion="reduce"] .is-rippling::before, :root[data-motion="reduce"] .petal-burst { display: none; }
 :root[data-motion="reduce"] .gallery-main.is-zoom img { transform: none; }
+:root[data-motion="reduce"] .card:hover .card-img { transform: none; }
+:root[data-motion="reduce"] .card:hover .fav { translate: none; }
+:root[data-motion="reduce"] .results[aria-busy="true"]::before { background: var(--color-straw); opacity: .7; }

@@ -1,4 +1,4 @@
-"""Trợ lý: kho SQLite, lọc dữ liệu cá nhân, đọc JSON, grounding, bộ nhớ, đánh giá, điều phối với LLM giả."""
+"""Trợ lý: kho SQLite/PostgreSQL, lọc dữ liệu cá nhân, đọc JSON, grounding, bộ nhớ, đánh giá, điều phối với LLM giả."""
 from __future__ import annotations
 
 import pytest
@@ -11,12 +11,13 @@ from app.assistant.privacy import REDACTED, is_sensitive, redact
 from app.assistant.reviews import summarize
 from app.assistant.store import Store
 from app.assistant.tools import Catalog
+from tests.conftest import store_path
 from tests.fakes import FakeLLM
 
 
-@pytest.fixture()
-def store():
-    s = Store(":memory:")
+@pytest.fixture(params=["sqlite", "postgres"])
+def store(request):
+    s = Store(store_path(request.param))
     yield s
     s.close()
 
@@ -129,8 +130,7 @@ def test_review_summary_levels(catalog, store):
 
 
 def test_review_import_requires_source(store):
-    import sqlite3
-    with pytest.raises(sqlite3.IntegrityError):
+    with pytest.raises(store.integrity_errors):
         store.x("INSERT INTO reviews (id, product_id, origin, body_vi, status, created_at, content_sha256) "
                 "VALUES ('x', 'p', 'imported_source', 'b', 'approved', 't', 'h')")
     r = {"product_id": "p", "origin": "vnstore_customer", "rating": 5, "body_vi": "giống nhau", "status": "pending"}

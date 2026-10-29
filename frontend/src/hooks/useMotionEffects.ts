@@ -23,13 +23,14 @@ export function useMotionEffects() {
   useEffect(() => {
     const root = document.documentElement;
     root.classList.toggle("has-vt", supportsViewTransitions());
+    // Mốc theo mép trên của khối thay vì tỷ lệ diện tích: khối cao hơn vài màn hình vẫn hiện khi cuộn tới.
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (!e.isIntersecting) continue;
         e.target.classList.add("is-in");
         io.unobserve(e.target);
       }
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0 });
 
     const scan = () => {
       const reduce = prefersReducedMotion();

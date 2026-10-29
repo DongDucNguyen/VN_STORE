@@ -32,6 +32,25 @@ function waitForPage(expectsReady: boolean): Promise<void> {
   });
 }
 
+/** Đổi giao diện sáng/tối bằng một lớp hòa màu ngắn thay vì nháy. Không hỗ trợ hoặc giảm chuyển động: đổi ngay.
+ *  `update` phải đổi DOM đồng bộ (chạy trong flushSync). */
+export function crossfade(update: () => void) {
+  const doc = document as DocVT;
+  if (!supportsViewTransitions() || prefersReducedMotion() || document.hidden || pendingHero) {
+    update();
+    return;
+  }
+  const root = document.documentElement;
+  root.dataset.vt = "theme";
+  const vt = doc.startViewTransition!(() => flushSync(update));
+  const end = () => {
+    if (root.dataset.vt === "theme") delete root.dataset.vt;
+  };
+  vt.ready.catch(() => {});
+  vt.updateCallbackDone.catch(() => {});
+  vt.finished.then(end, end);
+}
+
 let pendingHero = false;
 
 /** Gọi khi bấm một thẻ sản phẩm: ảnh của thẻ sẽ bay sang vị trí ảnh chính ở trang chi tiết. */

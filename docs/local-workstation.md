@@ -113,3 +113,5 @@ Thông báo thiếu PyTorch của transformers cũng không ngăn các adapter O
 
 SQLite trợ lý nằm tại `var/assistant/assistant.db`. Mức “không lưu” giữ nội dung/ngữ cảnh trong RAM;
 chọn lưu lịch sử hoặc ghi nhớ mới lưu nội dung vào SQLite. Xem/xuất/xóa dữ liệu trong giao diện trợ lý.
+Đặt `VNSTORE_DATABASE_URL` trước khi chạy `run_local.ps1` thì catalog và dữ liệu trợ lý dùng PostgreSQL thay cho
+`database.json`/SQLite (xem mục PostgreSQL trong README).

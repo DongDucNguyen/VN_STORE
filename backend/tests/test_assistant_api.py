@@ -6,6 +6,8 @@ import json
 import pytest
 from fastapi.testclient import TestClient
 
+from tests.conftest import store_path
+
 
 def sse(text: str) -> list[tuple[str, dict]]:
     out = []
@@ -16,9 +18,9 @@ def sse(text: str) -> list[tuple[str, dict]]:
     return out
 
 
-@pytest.fixture()
-def client(monkeypatch):
-    monkeypatch.setenv("VNSTORE_ASSISTANT_DB", ":memory:")
+@pytest.fixture(params=["sqlite", "postgres"])
+def client(monkeypatch, request):
+    monkeypatch.setenv("VNSTORE_ASSISTANT_DB", store_path(request.param))
     monkeypatch.setenv("VNSTORE_LLM_ADAPTER", "tests.fakes:FakeLLM")
     monkeypatch.delenv("VNSTORE_ASSISTANT", raising=False)
     from app.main import app

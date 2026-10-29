@@ -1,4 +1,4 @@
-"""Snapshot catalog bất biến, dựng từ database.json đã validate (PLAN.md mục 3.3)."""
+"""Snapshot catalog bất biến, dựng từ database.json hoặc PostgreSQL rồi validate (PLAN.md mục 3.3)."""
 from __future__ import annotations
 
 import hashlib
@@ -25,6 +25,7 @@ class CatalogSnapshot:
     sha256: str
     loaded_at: str
     include_drafts: bool
+    source: str = "file"  # "file" | "postgresql"
     products: dict[str, dict[str, Any]] = field(default_factory=dict)  # chỉ sản phẩm hiển thị
     categories: dict[str, dict[str, Any]] = field(default_factory=dict)
     category_children: dict[str, list[str]] = field(default_factory=dict)
@@ -37,6 +38,7 @@ class CatalogSnapshot:
 
     @property
     def base_dir(self) -> Path:
+        # Snapshot từ DB đặt path = <thư mục gốc ảnh>/database.json để local_path tính như với file.
         return self.path.parent
 
     @property
@@ -88,18 +90,40 @@ def load_snapshot(path: Path, include_drafts: bool = False) -> CatalogSnapshot:
         data = json.loads(raw.decode("utf-8"))
     except (OSError, UnicodeDecodeError, json.JSONDecodeError) as e:
         raise CatalogError(f"Không đọc được catalog {path}: {e}") from e
+    return build_snapshot(data, path, hashlib.sha256(raw).hexdigest(), include_drafts)
 
+
+def load_snapshot_from_db(url: str, assets_root: Path, include_drafts: bool = False) -> CatalogSnapshot:
+    """Đọc catalog từ PostgreSQL; ảnh vẫn là file, local_path tính từ assets_root (thư mục gốc repo)."""
+    from ..db import connect
+    from .pg import content_sha256, read_catalog
+
+    try:
+        with connect(url) as conn:
+            data = read_catalog(conn)
+    except LookupError as e:
+        raise CatalogError(str(e)) from e
+    except Exception as e:  # noqa: BLE001 — lỗi kết nối/SQL thành lỗi catalog, API trả 503 thay vì sập
+        raise CatalogError(f"Không đọc được catalog từ PostgreSQL: {type(e).__name__}: {e}") from e
+    return build_snapshot(data, assets_root.resolve() / "database.json", content_sha256(data), include_drafts,
+                          source="postgresql")
+
+
+def build_snapshot(data: dict[str, Any], path: Path, sha256: str, include_drafts: bool = False,
+                   source: str = "file") -> CatalogSnapshot:
     result = validate_catalog(data, path.parent)
     if not result.ok:
-        raise CatalogError(f"Catalog {path.name} có {len(result.errors)} lỗi", result.errors)
+        raise CatalogError(f"Catalog {path.name if source == 'file' else source} có {len(result.errors)} lỗi",
+                           result.errors)
 
     visible = ("published", "draft") if include_drafts else ("published",)
     snap = CatalogSnapshot(
         data=data,
         path=path,
-        sha256=hashlib.sha256(raw).hexdigest(),
+        sha256=sha256,
         loaded_at=datetime.now().astimezone().isoformat(timespec="seconds"),
         include_drafts=include_drafts,
+        source=source,
         warnings=result.warnings,
     )
     snap.products = {p["id"]: p for p in data["products"] if p["status"] in visible}

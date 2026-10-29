@@ -11,14 +11,14 @@ export function Loading({ label = "Đang tải…" }: { label?: string }) {
   );
 }
 
-/** Khung chờ đúng kích thước lưới thẻ; tĩnh, không shimmer. Trạng thái chữ luôn có. */
+/** Khung chờ đúng kích thước lưới thẻ; một vệt lụa sáng lướt chậm (tắt khi giảm chuyển động). Trạng thái chữ luôn có. */
 export function GridSkeleton({ count = 8, label = "Đang tải sản phẩm…" }: { count?: number; label?: string }) {
   return (
     <div className="skeleton-wrap">
       <p className="state-line" role="status"><span className="spinner" aria-hidden /> {label}</p>
       <div className="grid" aria-hidden="true">
         {Array.from({ length: count }, (_, i) => (
-          <div key={i} className="skeleton-card"><div className="sk-img" /><div className="sk-line" /><div className="sk-line short" /></div>
+          <div key={i} className="skeleton-card" style={{ "--i": i % 4 } as React.CSSProperties}><div className="sk-img" /><div className="sk-line" /><div className="sk-line short" /></div>
         ))}
       </div>
     </div>

@@ -33,14 +33,15 @@ Tiếp theo trong ngày 11/10: đã [nối registry họ đã duyệt vào bench
 ## Cấu trúc
 
 ```text
-database.json            catalog (nguồn sự thật duy nhất)
+database.json            catalog nguồn; nhập vào PostgreSQL bằng scripts/db/import_json.py
 database.schema.json     hợp đồng dữ liệu (JSON Schema 2020-12)
 assets/products/         ảnh gốc; quyền sử dụng được ghi riêng trong database.json
-backend/app/catalog/     validate, snapshot, trình bày dữ liệu
+backend/app/catalog/     validate, snapshot (file hoặc PostgreSQL: pg.py), trình bày dữ liệu
 backend/app/search/      chuẩn hóa tiếng Việt, phân tích truy vấn, BM25, gộp hạng ảnh+chữ
 backend/app/image/       chỉ mục vector ảnh theo phiên bản
 backend/app/media.py     kiểm tra WAV/ảnh tải lên; adapters.py, modalities.py: hợp đồng và trạng thái model
 scripts/build_indexes/   dựng chỉ mục ảnh vào artifacts/indexes/
+scripts/db/              nhập database.json (và SQLite trợ lý cũ) vào PostgreSQL, xuất ngược ra JSON
 backend/tests/           test + fixture GIẢ (catalog.fixture.json)
 frontend/                React + TypeScript + Vite
 scripts/validate_catalog kiểm tra catalog, ghi reports/data_quality/
@@ -72,6 +73,30 @@ cd backend && VNSTORE_CATALOG=tests/fixtures/catalog.fixture.json ../.venv/Scrip
 cd frontend && npm install && npm run dev
 # mở http://localhost:5173
 ```
+
+## PostgreSQL
+
+Đặt `VNSTORE_DATABASE_URL` thì API đọc catalog từ schema `catalog` và lưu mọi dữ liệu trợ lý (khách, phiên, tin nhắn,
+gợi ý, bộ nhớ, đánh giá) vào schema `assistant`. Không đặt thì chạy như cũ: catalog từ `database.json`, trợ lý
+SQLite. Ảnh sản phẩm vẫn là file trong `assets/`; DB chỉ giữ `local_path`.
+
+```bash
+# một lần: tạo DB và user (psql với quyền postgres)
+#   CREATE USER vnstore WITH PASSWORD '...';  CREATE DATABASE vnstore OWNER vnstore;
+export VNSTORE_DATABASE_URL=postgresql://vnstore:MAT_KHAU@127.0.0.1:5432/vnstore
+
+# nhập catalog (validate trước, đọc ngược để so với file) + chuyển dữ liệu trợ lý cũ từ SQLite
+.venv/Scripts/python -X utf8 scripts/db/import_json.py --assistant-sqlite var/assistant/assistant.db
+
+# chạy API như bình thường; /health trả catalog.source = "postgresql"
+cd backend && ../.venv/Scripts/python -m uvicorn app.main:app --port 8000
+```
+
+- Sửa `database.json` (các script `scripts/import_raw/`, benchmark vẫn làm việc với file) rồi chạy lại `import_json.py`
+  để thay catalog trong DB; khởi động lại API để nạp. `--export out.json` ghi catalog trong DB ra file.
+- `VNSTORE_CATALOG` đặt rõ thì API đọc file đó dù có DB; `VNSTORE_ASSISTANT_DB` đặt rõ thì trợ lý dùng đường dẫn đó.
+- Test PostgreSQL chạy khi đặt `VNSTORE_TEST_DATABASE_URL` tới một DB **riêng cho test** (test xóa và dựng lại schema
+  `catalog`/`assistant`); không đặt thì các test đó được bỏ qua.
 
 ## Kiểm thử tự động
 

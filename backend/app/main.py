@@ -2,7 +2,11 @@
 
 Chạy: cd backend && ../.venv/Scripts/uvicorn app.main:app --reload
 Biến môi trường:
-    VNSTORE_CATALOG         đường dẫn catalog (mặc định ../database.json)
+    VNSTORE_DATABASE_URL    PostgreSQL (postgresql://user:pass@host:5432/db): đọc catalog từ schema `catalog` và lưu dữ liệu
+                            trợ lý vào schema `assistant`. Nạp dữ liệu: scripts/db/import_json.py
+    VNSTORE_CATALOG         đường dẫn file catalog; đặt biến này thì đọc file dù có VNSTORE_DATABASE_URL (mặc định
+                            ../database.json khi không có DB)
+    VNSTORE_ASSETS_DIR      thư mục gốc chứa assets/ khi đọc catalog từ DB (mặc định thư mục repo)
     VNSTORE_INCLUDE_DRAFTS  1 = hiển thị cả sản phẩm draft (chỉ dùng khi phát triển)
     VNSTORE_CORS_ORIGINS    danh sách origin, phân tách bằng dấu phẩy
     VNSTORE_ASR_ADAPTER     adapter ASR dạng module:thuộc_tính (mặc định: chưa có → 503)
@@ -36,7 +40,8 @@ from .assistant.router import build_router as build_assistant_router
 from .assistant.service import AssistantService
 from .assistant.tools import Catalog
 from .catalog.present import product_detail, product_summary
-from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot
+from .catalog.store import CatalogError, CatalogSnapshot, load_snapshot, load_snapshot_from_db
+from .db import database_url
 from .media import MAX_AUDIO_BYTES, MAX_IMAGE_BYTES, MediaError
 from .modalities import STATE_MESSAGES, ImageService, Status, VoiceService, adapter_from_env
 from .search.engine import SearchEngine, SearchFilters
@@ -73,10 +78,18 @@ def catalog_path() -> Path:
     return Path(os.environ.get("VNSTORE_CATALOG", REPO_ROOT / "database.json"))
 
 
+def _load_snapshot(path: Path | None) -> CatalogSnapshot:
+    drafts = os.environ.get("VNSTORE_INCLUDE_DRAFTS") == "1"
+    url = database_url()
+    if path is None and url and not os.environ.get("VNSTORE_CATALOG"):
+        return load_snapshot_from_db(url, Path(os.environ.get("VNSTORE_ASSETS_DIR", REPO_ROOT)), drafts)
+    return load_snapshot(path or catalog_path(), include_drafts=drafts)
+
+
 def reload_catalog(path: Path | None = None) -> None:
     """Dựng snapshot mới; chỉ thay khi thành công, giữ bản cũ nếu lỗi."""
     try:
-        snap = load_snapshot(path or catalog_path(), include_drafts=os.environ.get("VNSTORE_INCLUDE_DRAFTS") == "1")
+        snap = _load_snapshot(path)
         old = state.bundle.images if isinstance(state.bundle, Bundle) else None
         images = ImageService.for_snapshot(snap, state.image_embedder, state.image_status,
                                            old.gate if old else None)
@@ -176,7 +189,8 @@ def health() -> dict[str, Any]:
     return {
         "status": "ok",
         "catalog": {
-            "path": s.path.name,
+            "source": s.source,
+            "path": s.path.name if s.source == "file" else None,
             "version": s.version,
             "sha256": s.sha256,
             "loaded_at": s.loaded_at,
