@@ -1,13 +1,13 @@
 # Mã nguồn dựng video “Nét đẹp Việt”
 
-Video `../VNStore_Net_dep_Viet_2phut.mp4` dựng hoàn toàn bằng đồ họa 2D. Mỗi khung hình là trạng thái của một trang HTML
+Video `../VNStore_Net_dep_Viet_2phut.mp4`: đoạn 0:00–0:35 dùng ảnh chụp thật lấy từ catalog (Vietcraft, Minh Long, Hanhsilk, SenSilk, Hanoia, Marou); phần còn lại là đồ họa 2D. Mỗi khung hình là trạng thái của một trang HTML
 (`stage.html`), tính theo thời gian `t`. Chromium chụp lần lượt từng khung, ffmpeg ghép lại. Hiệu ứng âm thanh được
 tổng hợp bằng code (`sfx.py`), không dùng thư viện âm có bản quyền.
 
 | File | Vai trò |
 |---|---|
 | `lib.js` | Đường cong chuyển động (`ease-bamboo`, `ease-water`), vẽ nét, chữ “mực thấm”, gợn mặt sen |
-| `s_intro.js` | 0:00–0:55: giọt nước, năm nghề, áo dài, montage, thời gian, lý do ra đời, cành tre |
+| `s_intro.js` | 0:00–0:55: giọt nước, năm nghề và montage bằng ảnh thật, tà áo bằng ảnh lụa thật, thời gian, lý do ra đời, cành tre |
 | `s_features.js` | 0:54–1:41: trang chủ thật, tiếng Việt, giọng nói, cánh cò, năm châu, ảnh, nguồn gốc, trợ lý, chi tiết nhỏ |
 | `s_outro.js` | 1:41–2:00: cánh sen, đầm sen, logo |
 | `sfx.py` | Hiệu ứng âm thanh + trộn với `../nhac_nen_2phut.mp3` |
@@ -22,6 +22,7 @@ Các thư mục tài sản không đưa vào git vì tạo lại được. Đặ
 - `art/`: ảnh từ `assets/design-elements/nep-viet-v2/`.
 - `img/`, `data.js`: chạy `prep.py`.
 - `shots/`: chạy `capture*.cjs` khi backend và frontend đang chạy.
+- `photos/`: ảnh catalog số 632, 595, 24, 697, 627, 29, 48, 655, 336, 250, 742, 248 (thứ tự theo `products[].images[]` của `database.json`), lưu thành `p<số>.jpg`, cạnh dài tối đa 2600px.
 
 Sau đó chạy từng bước:
 

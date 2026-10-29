@@ -159,29 +159,18 @@ PENTA = [587.33, 659.25, 783.99, 880.0, 1046.5]  # D5 E5 G5 A5 C6
 place(fade(crickets(4.6), 1.0, 1.4) * 0.6 + fade(wind(4.6), 1.0, 1.4) * 0.5, 0.0, -36)
 place(drop(650, 1750, 0.6), 3.2 - 0.004, -9, 0, rev=0.9)
 place(drop(900, 2300, 0.3) * 0.5, 3.33, -22, 0.2, rev=0.6)
-# Gốm: bàn xoay ù ù
-w = lownoise(2.2, 220) * (0.7 + 0.3 * np.sin(2 * np.pi * 2.2 * tt(2.2)))
-place(fade(w, 0.5, 0.6), 4.5, -32)
-place(fade(swish(0.9, 0.45, 150, 1200), 0.05, 0.3), 6.05, -30)  # lò nung
-for a, b in zip([6.95, 7.25, 7.55, 7.85, 8.15, 8.45, 8.7, 9.05], [7.25, 7.55, 7.85, 8.15, 8.45, 8.7, 9.05, 9.25]):
-    place(fade(bandnoise(b - a, 2500, 7000) * np.sin(np.pi * tt(b - a) / (b - a)), 0.01, 0.05), a, -40, -0.2)
-# Tơ / khung cửi: thoi gỗ chạm hai mép khung
-k = 0
-while 10.5 + k * 0.526 < 12.2:
-    place(wood(820, 0.15, 0.03), 10.5 + k * 0.526, -34, 0.3 if k % 2 else -0.3)
-    k += 1
-# Đan: mỗi nan ngang vào chỗ một tiếng gỗ khẽ
-for j in range(9):
-    place(wood(1250 + 40 * (j % 3), 0.1, 0.015), 12.95 + j * 0.17 + 0.4, -34, -0.3 + j * 0.07)
-# Sơn mài: tiếng mài nước theo từng đường
-sd = 1.8
-sand = bandnoise(sd, 1200, 5000) * (0.55 + 0.45 * np.abs(np.sin(2 * np.pi * 1.6 * tt(sd))))
-place(fade(sand, 0.2, 0.4), 15.7, -40, 0.15)
+# Năm nghề (ảnh thật): gió sớm, chim xa, mỗi lần lộ ảnh một tiếng lướt như lật trang giấy
+place(fade(wind(14.0, 150, 900), 1.5, 2.0), 3.6, -40)
+for at, f, pan in ((5.6, 3500, -0.5), (5.8, 3800, -0.5), (11.4, 3300, 0.5), (11.6, 3600, 0.5), (14.9, 3400, -0.3)):
+    place(birdchirp(f, 0.13), at, -38, pan, rev=0.4)
+for at in (6.6, 9.6, 12.4, 15.3):
+    place(fade(swish(0.9, 0.45, 500, 4200), 0.02, 0.3), at - 0.2, -32, 0.2)
 # Tà áo dài lướt qua, đỉnh 17.9
 place(swish(1.2, 0.72, 250, 3500), 17.9 - 0.72, -12)
-place(fade(rustle(3.0, 1.2, 160), 0.5, 1.5), 18.2, -38, 0.6)  # gió qua tre ở tiêu đề
-# Đèn lồng: gió đêm nhẹ
-place(fade(wind(2.8, 200, 1200), 0.4, 0.8), 28.6, -38)
+place(fade(wind(4.0, 200, 1100), 0.6, 1.5), 18.2, -40, 0.6)  # gió nhẹ ở tiêu đề
+# Montage ảnh: tiếng lướt khẽ ở mỗi lần đổi ảnh
+for at in (26.0, 28.6, 31.2, 33.8):
+    place(fade(swish(0.8, 0.4, 400, 3500), 0.02, 0.3), at - 0.15, -34, -0.2)
 # Thời gian và bàn tay: gió đồng nội, chim xa
 place(fade(wind(11.0, 150, 900), 1.5, 2.0), 35.6, -40)
 for at, f, pan in ((38.2, 3400, -0.6), (38.45, 3700, -0.6), (43.1, 3100, 0.5), (43.3, 3500, 0.5)):
