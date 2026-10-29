@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>VNStore — Nét đẹp Việt</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  html, body { margin: 0; background: #000; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #F7F3E8;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif; color: #22352B; -webkit-font-smoothing: antialiased; }
+  .layer { position: absolute; inset: 0; }
+  .scene { position: absolute; inset: 0; overflow: hidden; }
+  .serif { font-family: "Newsreader", Georgia, serif; }
+  .abs { position: absolute; }
+  #grain { position: absolute; inset: -20px; pointer-events: none; opacity: .07; mix-blend-mode: multiply; z-index: 50; }
+  #vignette { position: absolute; inset: 0; pointer-events: none; z-index: 49;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 62%, rgba(40,30,10,.16) 100%); }
+
+  /* Chữ dẫn */
+  .cap { position: absolute; font-family: "Newsreader", serif; font-weight: 400; font-size: 58px; line-height: 1.22; letter-spacing: -.005em; }
+  .cap.sm { font-size: 44px; }
+  .cap i, .it { font-style: italic; }
+  .eyebrow { position: absolute; font-size: 19px; letter-spacing: .22em; text-transform: uppercase; color: #616B60; font-weight: 500; display: flex; align-items: center; gap: 14px; }
+  .mark { width: 12px; height: 12px; background: #A84432; display: inline-block; }
+  .chno { position: absolute; display: flex; align-items: center; gap: 18px; font-family: "Newsreader", serif; font-size: 30px; color: #A84432; }
+  .chno .rule { width: 64px; height: 2px; background: #A84432; transform-origin: left center; }
+  .ftitle { position: absolute; font-family: "Newsreader", serif; font-size: 92px; line-height: 1.04; letter-spacing: -.015em; color: #22352B; }
+  .fsub { position: absolute; font-size: 30px; line-height: 1.5; color: #616B60; }
+  .note { position: absolute; font-family: "Newsreader", serif; font-style: italic; font-size: 26px; color: #97485F; white-space: nowrap; }
+  .mask { display: block; overflow: hidden; padding-bottom: .08em; }
+  .mask > span { display: block; will-change: transform; }
+
+  /* Thành phần giao diện dựng lại theo token của VNStore */
+  .ui-search { position: absolute; display: flex; gap: 12px; align-items: stretch; }
+  .ui-field { position: relative; flex: 1; display: flex; align-items: center; gap: 16px; background: #FFFDF7; border: 1.5px solid #7B8474; border-radius: 10px; padding: 0 22px; font-size: 30px; color: #22352B; }
+  .ui-field .ph { color: #8b928a; }
+  .ui-field .caret { display: inline-block; width: 2px; height: 34px; background: #214B3B; margin-left: 2px; vertical-align: middle; }
+  .ui-btn { position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; font-weight: 500; font-size: 28px; padding: 0 34px; background: #214B3B; color: #fff; }
+  .ui-btn.ghost { background: #FFFDF7; color: #22352B; border: 1.5px solid #7B8474; }
+  .ui-btn .rip { position: absolute; left: 50%; top: 50%; width: 10px; height: 10px; border-radius: 50%; background: #fff; opacity: 0; pointer-events: none; }
+  .ui-btn.ghost .rip { background: #214B3B; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 9px 20px; font-size: 22px; border: 1.5px solid #7B8474; background: #F7F3E8; color: #22352B; white-space: nowrap; }
+  .chip.hard { border-color: #214B3B; background: #E7EDE1; }
+  .chip.sug { border-style: dashed; }
+  .notice { display: flex; gap: 14px; align-items: center; background: #F5ECD2; color: #79530E; border-radius: 10px; padding: 14px 20px; font-size: 22px; }
+  .card { position: absolute; background: transparent; }
+  .card .img { width: 100%; aspect-ratio: 1 / 1; background: #F0EBDD; overflow: hidden; border-radius: 4px; position: relative; }
+  .card .img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .nm { font-size: 20px; line-height: 1.35; margin-top: 12px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card .br { font-size: 17px; color: #616B60; margin-top: 4px; }
+  .card .pr { font-size: 21px; font-weight: 600; margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .card .bd { display: inline-block; margin-top: 8px; font-size: 15px; border: 1px solid #DBDECE; border-radius: 4px; padding: 3px 8px; color: #616B60; }
+  .heart { position: absolute; right: 12px; top: 12px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,253,247,.92); display: flex; align-items: center; justify-content: center; }
+  .panel { position: absolute; background: #FFFDF7; border: 1px solid #DBDECE; border-radius: 16px; box-shadow: 0 30px 80px -30px rgba(34,53,43,.35), 0 2px 8px rgba(34,53,43,.06); }
+  .browser { position: absolute; border-radius: 14px; overflow: hidden; background: #FFFDF7; box-shadow: 0 40px 120px -40px rgba(20,40,30,.55), 0 0 0 1px rgba(34,53,43,.12); }
+  .browser .bar { height: 44px; background: #EFE9DA; display: flex; align-items: center; gap: 9px; padding: 0 18px; }
+  .browser .bar i { width: 13px; height: 13px; border-radius: 50%; background: #D3CBB5; display: block; }
+  .browser .bar .url { margin-left: 18px; height: 26px; border-radius: 13px; background: #F7F3E8; flex: 0 0 420px; font-size: 15px; color: #616B60; display: flex; align-items: center; padding-left: 16px; }
+  .browser .view { position: relative; overflow: hidden; }
+  .browser .view img { position: absolute; left: 0; top: 0; width: 100%; display: block; }
+  table.origin { border-collapse: collapse; width: 100%; font-size: 18px; white-space: nowrap; }
+  table.origin th { text-align: left; font-weight: 500; color: #616B60; font-size: 16px; padding: 12px 12px; border-bottom: 1px solid #DBDECE; background: #F7F3E8; }
+  table.origin td { padding: 12px 12px; border-bottom: 1px solid #DBDECE; }
+  .claim { display: inline-block; border-radius: 999px; padding: 3px 12px; font-size: 16px; }
+  .claim.yes { background: #E7EDE1; color: #214B3B; }
+  .claim.unk { background: #F0EBDD; color: #616B60; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="vignette"></div>
+  <div id="grain"></div>
+</div>
+<script src="lib.js"></script>
+<script src="data.js"></script>
+<script src="s_intro.js"></script>
+<script src="s_features.js"></script>
+<script src="s_outro.js"></script>
+<script>
+  // Hạt giấy tĩnh, tạo một lần.
+  (function () {
+    const c = document.createElement("canvas"); c.width = c.height = 256;
+    const g = c.getContext("2d"), d = g.createImageData(256, 256);
+    for (let i = 0; i < d.data.length; i += 4) { const v = 128 + (Math.random() - .5) * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; }
+    g.putImageData(d, 0, 0);
+    document.getElementById("grain").style.backgroundImage = `url(${c.toDataURL()})`;
+  })();
+  // Lớp hạt và vignette luôn ở trên cùng.
+  const st = document.getElementById("stage");
+  st.appendChild(document.getElementById("vignette")); st.appendChild(document.getElementById("grain"));
+  window.ready = (async () => {
+    await document.fonts.ready;
+    await Promise.all([...document.images].map((i) => i.decode().catch(() => {})));
+    renderAt(0);
+    return true;
+  })();
+  window.renderAt = renderAt;
+  const q = new URLSearchParams(location.search);
+  if (q.has("t")) window.ready.then(() => renderAt(parseFloat(q.get("t"))));
+</script>
+</body>
+</html>
