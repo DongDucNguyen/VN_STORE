@@ -46,72 +46,47 @@ function label(parent, txt, x, y, color = C.muted) {
   return e;
 }
 
-// ---------- S1 · Giọt nước (0 – 4.6) ----------
-scene(0, 4.6, (root) => {
+// ---------- S1 · Sớm mai làng nghề (0 – 3.9) ----------
+scene(0, 3.9, (root) => {
   const s = svg(root);
   const defs = el("defs", {}, s);
-  const bg = el("radialGradient", { id: "s1bg", cx: "50%", cy: "58%", r: "75%" }, defs);
-  el("stop", { offset: "0", "stop-color": "#1f4a3b" }, bg); el("stop", { offset: "1", "stop-color": "#0a1d17" }, bg);
-  const wg = el("linearGradient", { id: "s1w", x1: 0, y1: 0, x2: 0, y2: 1 }, defs);
-  el("stop", { offset: "0", "stop-color": "#1a4134" }, wg); el("stop", { offset: "1", "stop-color": "#0b2019" }, wg);
-  const dg = el("radialGradient", { id: "s1d", cx: "40%", cy: "60%", r: "70%" }, defs);
-  el("stop", { offset: "0", "stop-color": "#ffffff" }, dg); el("stop", { offset: ".6", "stop-color": "#e8efe6" }, dg); el("stop", { offset: "1", "stop-color": "#9fb7aa" }, dg);
-  const gl = el("radialGradient", { id: "s1g" }, defs);
-  el("stop", { offset: "0", "stop-color": "#F7F3E8", "stop-opacity": ".55" }, gl); el("stop", { offset: "1", "stop-color": "#F7F3E8", "stop-opacity": "0" }, gl);
-  el("rect", { width: W, height: H, fill: "url(#s1bg)" }, s);
-  el("rect", { y: 640, width: W, height: 440, fill: "url(#s1w)" }, s);
-  el("ellipse", { cx: 960, cy: 641, rx: 980, ry: 6, fill: "#F7F3E8", opacity: 0.06 }, s);
-  const streaks = [];
-  for (let i = 0; i < 12; i++) streaks.push(el("line", { y1: 670 + i * 32, y2: 670 + i * 32, stroke: "#F7F3E8", "stroke-width": 2, "stroke-linecap": "round", opacity: 0.05 + 0.03 * rand(i) }, s));
-  // Mép lá sen phía trên, có chóp nhỏ nơi giọt nước tụ lại.
-  const leaf = el("path", { d: "M 60 -20 C 420 150, 780 126, 932 134 Q 960 152 988 134 C 1140 126, 1500 150, 1860 -20 Z", fill: "#1d463a", stroke: "#2e5d4c", "stroke-width": 2 }, s);
-  for (let i = 0; i < 9; i++) {
-    const x = 200 + i * 190;
-    el("path", { d: `M 960 -120 Q ${(960 + x) / 2} 40 ${x} ${110 - Math.abs(x - 960) * 0.1}`, stroke: "#2e5d4c", "stroke-width": 1.5, fill: "none", opacity: 0.8 }, s);
-  }
-  const rings = [];
-  for (let k = 0; k < 5; k++) rings.push(el("ellipse", { cx: 960, cy: 640, fill: "none", stroke: "#F7F3E8" }, s));
-  const glow = el("circle", { cx: 960, cy: 640, r: 360, fill: "url(#s1g)" }, s);
-  const drops = [];
-  for (let i = 0; i < 9; i++) drops.push(el("circle", { r: 3 + rand(i, 3) * 3, fill: "#e8efe6" }, s));
-  const jet = el("ellipse", { cx: 960, rx: 6, fill: "#e8efe6" }, s);
-  const drop = el("g", {}, s);
-  el("path", { d: "M0,-34 C9,-15 18,-3 18,9 A18,18 0 0 1 -18,9 C-18,-3 -9,-15 0,-34 Z", fill: "url(#s1d)" }, drop);
-  el("ellipse", { cx: -6, cy: 6, rx: 4, ry: 7, fill: "#fff", opacity: 0.9 }, drop);
-
+  const sun = el("radialGradient", { id: "dawnSun", cx: "78%", cy: "8%", r: "75%" }, defs);
+  el("stop", { offset: 0, "stop-color": "#FFF1CF", "stop-opacity": .95 }, sun); el("stop", { offset: .45, "stop-color": "#F6DDB0", "stop-opacity": .35 }, sun); el("stop", { offset: 1, "stop-color": "#F6DDB0", "stop-opacity": 0 }, sun);
+  const ray = el("linearGradient", { id: "ray", x1: 0, y1: 0, x2: 1, y2: 0 }, defs);
+  el("stop", { offset: 0, "stop-color": "#FFF4DA", "stop-opacity": 0 }, ray); el("stop", { offset: .5, "stop-color": "#FFF4DA", "stop-opacity": .55 }, ray); el("stop", { offset: 1, "stop-color": "#FFF4DA", "stop-opacity": 0 }, ray);
+  const bg = el("rect", { width: W, height: H, fill: "#0c1813" }, s);
+  const glow = el("rect", { width: W, height: H, fill: "url(#dawnSun)", opacity: 0 }, s);
+  const rays = [0, 1, 2, 3].map((i) => el("rect", { x: -200, y: -60, width: 260 + i * 70, height: 1900, fill: "url(#ray)", transform: `translate(${1150 + i * 210} -300) rotate(32)` }, s));
+  const motes = []; for (let i = 0; i < 46; i++) motes.push(el("circle", { r: 1.2 + rand(i, 41) * 2.4, fill: "#FFF6E0" }, s));
+  const shadow = el("img", { src: "art/bamboo-shadow-clean.png", class: "abs", style: { left: "380px", top: "160px", width: "1700px", opacity: 0, mixBlendMode: "multiply", transformOrigin: "80% 0%" } }, root);
+  const branch = el("img", { src: "art/bamboo-opening-branch.png", class: "abs", style: { left: "1360px", top: "-170px", width: "660px", transformOrigin: "85% 0%", opacity: 0 } }, root);
+  const mark = el("div", { class: "abs", style: { left: "170px", top: "300px", width: "64px", height: "2px", background: C.mark, transformOrigin: "left" } }, root);
+  const line = caption(root, "<i>Mỗi sớm mai,</i><br>ở một làng nghề nào đó…", 170, 400);
   return (t) => {
-    streaks.forEach((l, i) => {
-      const w = 140 + 260 * rand(i, 2), x = 960 + (rand(i, 5) - 0.5) * 1300 + Math.sin(t * 0.6 + i) * 30;
-      l.setAttribute("x1", x - w / 2); l.setAttribute("x2", x + w / 2);
+    const dawn = eIO(prog(t, 0.1, 2.6));
+    bg.setAttribute("fill", dawn < 0.5 ? mix("#0c1813", "#6b5a3e", dawn * 2) : mix("#6b5a3e", "#F5EBD6", (dawn - 0.5) * 2));
+    glow.style.opacity = Math.min(1, prog(t, 0.2, 1.6)) * (1 - 0.6 * prog(t, 2.2, 3.4));
+    rays.forEach((r, i) => {
+      r.setAttribute("transform", `translate(${1150 + i * 210 - t * 18} -300) rotate(${32 + Math.sin(t * 0.6 + i) * 1.2})`);
+      r.style.opacity = Math.sin(Math.PI * prog(t, 0.3, 3.6)) * (0.55 - i * 0.08);
     });
-    // Giọt tụ ở chóp lá rồi rơi chậm (quay chậm).
-    let dy = 152, sc = 0, sy = 1;
-    if (t < 1.9) { sc = eW(prog(t, 0.5, 1.8)); sy = 1 + 0.18 * prog(t, 1.3, 1.9); dy = 152 + 14 * prog(t, 0.5, 1.9); }
-    else if (t < 3.2) { const p = prog(t, 1.9, 3.2); dy = 166 + 474 * Math.pow(p, 1.7); sc = 1; sy = 1.12 + 0.12 * p; }
-    drop.setAttribute("transform", `translate(960 ${dy}) scale(${sc * 0.95} ${sc * sy})`);
-    drop.style.opacity = t < 3.2 ? 1 : 0;
-    // Vương miện nước và cột bật.
-    drops.forEach((d, i) => {
-      const tau = t - 3.2 - rand(i, 9) * 0.04;
-      if (tau < 0 || tau > 0.9) { d.style.opacity = 0; return; }
-      const a = (i / drops.length) * Math.PI * 2, v = 160 + 120 * rand(i, 4), up = 260 + 200 * rand(i, 7);
-      const x = 960 + Math.cos(a) * v * tau * 1.6, y = 640 + Math.sin(a) * v * tau * 0.35 - (up * tau - 700 * tau * tau);
-      d.setAttribute("cx", x); d.setAttribute("cy", y); d.style.opacity = y > 646 ? 0 : 0.9;
+    motes.forEach((m, i) => {
+      const x = 1000 + (rand(i, 42) - 0.3) * 1100 + Math.sin(t * 0.7 + i) * 30, y = 1080 * rand(i, 43) - t * (14 + 20 * rand(i, 44));
+      m.setAttribute("cx", x); m.setAttribute("cy", y);
+      m.style.opacity = Math.sin(Math.PI * prog(t, 0.4, 3.7)) * (0.25 + 0.6 * Math.abs(noise1(t * 1.5 + i, i)));
     });
-    const jp = prog(t, 3.24, 3.85);
-    const jh = 78 * Math.sin(Math.PI * jp);
-    jet.setAttribute("cy", 640 - jh / 2); jet.setAttribute("ry", Math.max(0.1, jh / 2)); jet.style.opacity = jp > 0 && jp < 1 ? 0.85 : 0;
-    ripplesAt(t, 3.2).forEach((r, k) => {
-      const e = rings[k];
-      e.setAttribute("rx", r.r); e.setAttribute("ry", r.r * 0.24);
-      e.setAttribute("stroke-width", 2.6 * (1 - r.p) + 0.6);
-      e.style.opacity = r.on ? Math.pow(1 - r.p, 1.2) * 0.85 : 0;
-    });
-    glow.style.opacity = t >= 3.2 ? 0.9 * (1 - eOut(prog(t, 3.2, 4.2))) : 0;
-    leaf.style.opacity = 1;
-    root.style.opacity = 1;
+    shadow.style.opacity = 0.34 * eW(prog(t, 1.0, 2.6));
+    shadow.style.transform = `translateX(${Math.sin(t * 0.9) * 30}px) rotate(${Math.sin(t * 0.8) * 1.6}deg)`;
+    branch.style.opacity = eW(prog(t, 1.2, 2.4)) * (1 - eIO(prog(t, 2.9, 3.6)));
+    branch.style.transform = `rotate(${Math.sin(t * 1.5) * 1.3}deg) translateY(${(1 - eW(prog(t, 1.2, 2.6))) * -30}px)`;
+    mark.style.transform = `scaleX(${eB(prog(t, 0.9, 1.6))})`;
+    mark.style.opacity = 1;
+    inkText(line, t, 1.0, 3.55, { fo: 0.45 });
+    line.style.color = mix("#ECECE0", C.ink, eIO(prog(t, 1.0, 2.4)));
+    // Khi khung ảnh đầu tiên lộ ra, nền sớm mai lui đi, trang giấy ngà của chuỗi ảnh nghề ở lại.
+    root.style.opacity = 1 - eIO(prog(t, 3.05, 3.85));
   };
-});
+}, 2);
 
 // ---------- Ảnh thật: khung ảnh kiểu ấn phẩm, Ken Burns, lộ ảnh bằng mặt nạ ----------
 function photoEl(parent, src, style = {}, pos = "50% 50%") {
@@ -128,8 +103,8 @@ function maskPhoto(ph, t, a, b, { d = 0.95, z0 = 1.09, z1 = 1.0, dx = 0, dy = 0 
   ph.wrap.style.display = t >= a && t < b + 1.2 ? "block" : "none";
 }
 
-// ---------- S2 · Năm nghề, ảnh thật (3.25 – 17.95) ----------
-scene(3.25, 17.95, (root) => {
+// ---------- S2 · Năm nghề, ảnh thật (2.95 – 17.95) ----------
+scene(2.95, 17.95, (root) => {
   root.style.background = C.ivory;
   const FX = 900, FY = 120, FW = 860, FH = 830;
   const frameShadow = el("div", { class: "abs", style: { left: FX + "px", top: FY + "px", width: FW + "px", height: FH + "px", boxShadow: "0 40px 90px -45px rgba(34,53,43,.55)" } }, root);
@@ -149,13 +124,10 @@ scene(3.25, 17.95, (root) => {
   const lines = ["Một nét men.", "Một sợi tơ.", "Một nan tre.", "Một lớp sơn."].map((txt, i) => caption(root, txt, 170, 360 + i * 84, "cap sm"));
   return (t) => {
     // Vòng gợn từ điểm giọt nước chạm mặt nước mở ra cả trang giấy.
-    const rp = eW(prog(t, 3.25, 4.7));
-    const r = lerp(0, 2300, rp);
-    root.style.webkitMaskImage = root.style.maskImage = rp < 1 ? `radial-gradient(ellipse ${r}px ${r * 0.78}px at 960px 640px, #000 0%, #000 82%, transparent 100%)` : "none";
-    frameShadow.style.opacity = eW(prog(t, 3.6, 4.6));
+    frameShadow.style.opacity = eW(prog(t, 3.5, 4.4));
     P.forEach(({ ph, a, b, lb, i }) => {
       if (i === 0) {
-        ph.wrap.style.clipPath = "none"; ph.wrap.style.display = "block";
+        ph.wrap.style.clipPath = `inset(${(1 - eB(prog(t, 3.2, 4.15))) * 100}% 0 0 0)`; ph.wrap.style.display = "block";
         ph.img.style.transform = `scale(${lerp(1.32, 1.18, eOut(prog(t, 3.25, 7.0)))})`;
       } else maskPhoto(ph, t, a, b, { dx: i % 2 ? -18 : 18, z0: i === 3 || i === 4 ? 1.3 : 1.09, z1: i === 3 || i === 4 ? 1.2 : 1.0 });
       inkText(lb, t, a + 0.5, b + 0.1, { dy: 6, blur: 2, fi: 0.5, fo: 0.35 });
@@ -234,7 +206,36 @@ scene(17.86, 23.8, (root) => {
     title.style.transform = `translateY(${-out * 20}px)`;
   };
 });
-silkWipe(17.15);
+// ---------- Cánh sen lướt qua rồi hiện “Nét đẹp Việt” (17.45 – 21.8) ----------
+const OPEN_PETAL = "M 0 -120 C 46 -86 62 -20 42 40 C 30 78 12 104 0 120 C -12 104 -30 78 -42 40 C -62 -20 -46 -86 0 -120 Z";
+function openPetal(parent, id) {
+  const defs = el("defs", {}, parent);
+  const g = el("radialGradient", { id, cx: "50%", cy: "85%", r: "90%" }, defs);
+  el("stop", { offset: 0, "stop-color": "#FBEFF0" }, g); el("stop", { offset: .55, "stop-color": "#E7AEBB" }, g); el("stop", { offset: 1, "stop-color": "#B9637A" }, g);
+  const p = el("g", {}, parent);
+  el("path", { d: OPEN_PETAL, fill: `url(#${id})`, stroke: "#97485F", "stroke-width": 1.6 }, p);
+  for (let k = -2; k <= 2; k++) el("path", { d: `M 0 110 C ${k * 10} 40 ${k * 16} -30 ${k * 8} -100`, fill: "none", stroke: "#B9637A", "stroke-width": 1, opacity: .45 }, p);
+  return p;
+}
+scene(17.45, 21.8, (root) => {
+  const s = svg(root);
+  const big = openPetal(s, "opBig");
+  const smalls = [openPetal(s, "opS1"), openPetal(s, "opS2")];
+  return (t) => {
+    const bp = prog(t, 17.45, 18.35);
+    big.setAttribute("transform", `translate(${lerp(-1400, 3200, bp)} ${lerp(-500, 1500, bp)}) rotate(${lerp(52, 68, bp)}) scale(${lerp(15, 17, bp)})`);
+    op(big, bp < 1 ? 1 : 0);
+    // hai cánh nhỏ còn trôi theo gió qua trang tiêu đề
+    smalls.forEach((p, i) => {
+      const a = 18.2 + i * 0.45, q = prog(t, a, a + 3.0);
+      const x = lerp(-80 + i * 60, 2000, eIO(q)), y = lerp(160 + i * 380, 520 + i * 260, q) + Math.sin(q * 8 + i) * 40;
+      p.setAttribute("transform", `translate(${x} ${y}) rotate(${70 + q * 220 + i * 40}) scale(${0.34 - i * 0.08}, ${0.22 - i * 0.04})`);
+      op(p, q > 0 && q < 1 ? Math.sin(Math.PI * q) * 0.95 : 0);
+    });
+  };
+}, 10);
+
+
 
 // ---------- S4b · Montage ảnh thật toàn khung (23.4 – 36.1) ----------
 scene(23.4, 36.1, (root) => {

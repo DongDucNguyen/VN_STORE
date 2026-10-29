@@ -1,6 +1,6 @@
 # Mã nguồn dựng video “Nét đẹp Việt”
 
-Video `../VNStore_Net_dep_Viet_2phut.mp4`: đoạn 0:00–0:35 dùng ảnh chụp thật lấy từ catalog (Vietcraft, Minh Long, Hanhsilk, SenSilk, Hanoia, Marou); phần còn lại là đồ họa 2D. Mỗi khung hình là trạng thái của một trang HTML
+Video `../VNStore_Net_dep_Viet_2phut.mp4`: mở đầu bằng cảnh sớm mai làng nghề (ánh nắng, bóng tre); đoạn 0:03–0:35 dùng ảnh chụp thật lấy từ catalog (Vietcraft, Minh Long, Hanhsilk, SenSilk, Hanoia, Marou); phần còn lại là đồ họa 2D. Mỗi khung hình là trạng thái của một trang HTML
 (`stage.html`), tính theo thời gian `t`. Chromium chụp lần lượt từng khung, ffmpeg ghép lại. Hiệu ứng âm thanh được
 tổng hợp bằng code (`sfx.py`), không dùng thư viện âm có bản quyền.
 
@@ -11,6 +11,7 @@ tổng hợp bằng code (`sfx.py`), không dùng thư viện âm có bản quy�
 | `s_features.js` | 0:54–1:41: trang chủ thật, tiếng Việt, giọng nói, cánh cò, năm châu, ảnh, nguồn gốc, trợ lý, chi tiết nhỏ |
 | `s_outro.js` | 1:41–2:00: cánh sen, đầm sen, logo |
 | `sfx.py` | Hiệu ứng âm thanh + trộn với `../nhac_nen_2phut.mp3` |
+| `voiceover.py` | Lời thuyết minh theo mốc thời gian → `../thuyet_minh.mp3`, `../thuyet_minh.srt` (giọng eSpeak NG, chạy cục bộ) |
 | `prep.py`, `capture*.cjs` | Lấy dữ liệu và ảnh sản phẩm thật từ catalog; chụp giao diện web đang chạy |
 | `render.cjs`, `preview.cjs` | Render một đoạn khung hình ra mp4; xem nhanh vài thời điểm |
 
